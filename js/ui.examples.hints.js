@@ -3,7 +3,7 @@
  * Файл: ui.examples.hints.js
  * Назначение: Пример использования текущего слова
  *            в зоне .home-hints под сетами
- * Версия: 1.5 (подсветка леммы, безопасный observer)
+ * Версия: 1.6 (подсветка леммы, без observer'ов)
  * Обновлено: 2025-11-21
  * ========================================================== */
 
@@ -38,7 +38,7 @@
     return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  // Подсветка: ИЩЕМ только точное совпадение леммы (без угадывания форм)
+  // Подсветка: ищем только точное совпадение леммы (без угадывания форм)
   function highlightSentence(sentence, wordObj) {
     if (!sentence) return '';
     const raw = String(sentence);
@@ -51,7 +51,7 @@
     const re = new RegExp('\\b' + escapeRegExp(lemma) + '\\b', 'i');
     const m = raw.match(re);
     if (!m) {
-      // нет точного совпадения — просто возвращаем текст без подсветки
+      // нет точного совпадения — текст без подсветки
       return escapeHtml(raw);
     }
 
@@ -67,7 +67,7 @@
     );
   }
 
-  // Обеспечиваем наличие заголовка "Пример использования / Приклад вживання"
+  // Заголовок "Пример использования / Приклад вживання"
   function ensureTitle(section) {
     const bodyEl = section.querySelector('#hintsBody');
     if (!bodyEl) return;
@@ -126,7 +126,7 @@
       '</div>';
   }
 
-  /* ----------------------------- Инициализация / подписки ----------------------------- */
+  /* ----------------------------- Подписки ----------------------------- */
 
   // Клик по немецкому примеру — показать/скрыть перевод
   function attachClickHandler() {
@@ -144,42 +144,31 @@
     });
   }
 
-  // Наблюдаем за DOM:
-  // как только появляется home-hints + trainer-word + App.__currentWord,
-  // и внутри hintsBody ещё НЕТ .hint-example — рисуем подсказку.
-  function setupGlobalObserver() {
-    if (typeof MutationObserver === 'undefined') {
-      // старая среда — хотя бы один раз попробуем
-      renderExampleHint();
-      return;
-    }
-
-    const observer = new MutationObserver(function () {
-      const section = document.querySelector('.home-hints');
-      const trainer = document.querySelector('.trainer-word');
-      const body = document.getElementById('hintsBody');
-      if (!section || !trainer || !body || !A.__currentWord) return;
-
-      // если подсказка уже отрисована — ничего не делаем, чтобы не зациклиться
-      if (body.querySelector('.hint-example')) return;
-
-      renderExampleHint();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    // первый рендер (если домашний уже смонтирован к этому моменту)
-    renderExampleHint();
+  // Обёртка: подключаемся к существующим глобальным функциям тренера
+  function safeHook(globalName, after) {
+    const w = window;
+    if (typeof w[globalName] !== 'function') return;
+    const orig = w[globalName];
+    w[globalName] = function () {
+      const r = orig.apply(this, arguments);
+      try { after(); } catch (_e) {}
+      return r;
+    };
   }
 
   function init() {
     attachClickHandler();
-    setupGlobalObserver();
 
-    // ручной вызов на всякий случай, если понадобится
+    // После любого действия тренера – обновить пример
+    safeHook('renderTrainer', renderExampleHint);
+    safeHook('onChoice',      renderExampleHint);
+    safeHook('onIDontKnow',   renderExampleHint);
+    safeHook('nextWord',      renderExampleHint);
+
+    // Первый рендер (если слово уже выбрано)
+    setTimeout(renderExampleHint, 0);
+
+    // ручной вызов на всякий случай
     (A.HintsExamples = A.HintsExamples || {}).refresh = renderExampleHint;
   }
 
