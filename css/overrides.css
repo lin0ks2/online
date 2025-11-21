@@ -60,6 +60,6 @@ html.is-ios-safari #app.content{
   padding-bottom: calc(
     var(--footer-h-actual, 60px)   /* как задано в теме */
     + var(--safe-bottom, 0px)      /* учёт home-бара */
-    + 0px                          /* небольшой визуальный запас */
+    - 10px                          /* небольшой визуальный запас */
   );
 }
