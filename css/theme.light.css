@@ -896,8 +896,7 @@ body.modal-open { overflow: hidden;}
   font-size:14px;
   text-align: center;
   font-weight:700;
-  opacity:.8;
-  text-align:left;}
+  opacity:.8;}
 
 .home-hints .hints-body{
   min-height:3.9em;                 /* «две строки» пустого места */
