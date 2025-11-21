@@ -1,9 +1,9 @@
 /* ==========================================================
  * Проект: MOYAMOVA
  * Файл: ui.examples.hints.js
- * Назначение: Пример использования текущего слова
+ * Назначение: Вывод примера использования текущего слова
  *            в зоне .home-hints под сетами
- * Версия: 1.6 (подсветка леммы, без observer'ов)
+ * Версия: 1.1
  * Обновлено: 2025-11-21
  * ========================================================== */
 
@@ -38,7 +38,7 @@
     return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
-  // Подсветка: ищем только точное совпадение леммы (без угадывания форм)
+  // Подсвечиваем целевое слово в немецком примере (только точное совпадение леммы)
   function highlightSentence(sentence, wordObj) {
     if (!sentence) return '';
     const raw = String(sentence);
@@ -48,10 +48,10 @@
     const lemma = w.trim().split(/\s+/).pop(); // отбрасываем артикль у существительных
     if (!lemma) return escapeHtml(raw);
 
-    const re = new RegExp('\\b' + escapeRegExp(lemma) + '\\b', 'i');
-    const m = raw.match(re);
+    const pattern = new RegExp('\\b' + escapeRegExp(lemma) + '\\b', 'i');
+    const m = raw.match(pattern);
     if (!m) {
-      // нет точного совпадения — текст без подсветки
+      // если точного совпадения нет – просто вернём экранированный текст без подсветки
       return escapeHtml(raw);
     }
 
@@ -67,7 +67,7 @@
     );
   }
 
-  // Заголовок "Пример использования / Приклад вживання"
+  // Обеспечиваем наличие заголовка "Пример использования / Приклад вживання"
   function ensureTitle(section) {
     const bodyEl = section.querySelector('#hintsBody');
     if (!bodyEl) return;
@@ -115,7 +115,7 @@
     const deHtml = highlightSentence(de, word);
     const trHtml = escapeHtml(tr);
 
-    // По умолчанию показываем только немецкий пример,
+    // ВАЖНО: по умолчанию показываем только немецкий пример,
     // перевод скрыт (CSS: display:none), кликом по примеру — показываем.
     body.innerHTML =
       '<div class="hint-example">' +
@@ -126,7 +126,7 @@
       '</div>';
   }
 
-  /* ----------------------------- Подписки ----------------------------- */
+  /* ----------------------------- Инициализация / подписки ----------------------------- */
 
   // Клик по немецкому примеру — показать/скрыть перевод
   function attachClickHandler() {
@@ -144,29 +144,48 @@
     });
   }
 
-  // Обёртка: подключаемся к существующим глобальным функциям тренера
-  function safeHook(globalName, after) {
-    const w = window;
-    if (typeof w[globalName] !== 'function') return;
-    const orig = w[globalName];
-    w[globalName] = function () {
-      const r = orig.apply(this, arguments);
-      try { after(); } catch (_e) {}
-      return r;
-    };
+  function setupObserver() {
+    const wordEl = document.querySelector('.trainer-word');
+    if (!wordEl || typeof MutationObserver === 'undefined') {
+      renderExampleHint();
+      return;
+    }
+
+    let last = wordEl.textContent || '';
+    const obs = new MutationObserver(function () {
+      const t = wordEl.textContent || '';
+      if (t === last) return;
+      last = t;
+      renderExampleHint();
+    });
+
+    obs.observe(wordEl, { childList: true, subtree: true, characterData: true });
+
+    // первый рендер для уже выведенного слова
+    renderExampleHint();
   }
 
   function init() {
     attachClickHandler();
 
-    // После любого действия тренера – обновить пример
-    safeHook('renderTrainer', renderExampleHint);
-    safeHook('onChoice',      renderExampleHint);
-    safeHook('onIDontKnow',   renderExampleHint);
-    safeHook('nextWord',      renderExampleHint);
+    // ждём появления trainer-word (home уже смонтирован и отрисован)
+    if (document.querySelector('.trainer-word')) {
+      setupObserver();
+      return;
+    }
 
-    // Первый рендер (если слово уже выбрано)
-    setTimeout(renderExampleHint, 0);
+    const maxMs = 5000;
+    const start = Date.now();
+    const timer = setInterval(function () {
+      if (document.querySelector('.trainer-word')) {
+        clearInterval(timer);
+        setupObserver();
+        return;
+      }
+      if (Date.now() - start > maxMs) {
+        clearInterval(timer);
+      }
+    }, 150);
 
     // ручной вызов на всякий случай
     (A.HintsExamples = A.HintsExamples || {}).refresh = renderExampleHint;
