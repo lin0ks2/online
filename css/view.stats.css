@@ -55,7 +55,7 @@
 .stats-ring-sets {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 /* Один набор колец (основные / другие части речи) */
