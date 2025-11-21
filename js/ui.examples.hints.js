@@ -3,7 +3,7 @@
  * Файл: ui.examples.hints.js
  * Назначение: Пример использования текущего слова
  *            в зоне .home-hints под сетами
- * Версия: 1.2 (без подсветки формы слова)
+ * Версия: 1.3 (глобальный observer, без подсветки форм)
  * Обновлено: 2025-11-21
  * ========================================================== */
 
@@ -11,6 +11,8 @@
   'use strict';
 
   const A = (window.App = window.App || {});
+
+  let isRendering = false; // защита от циклов MutationObserver
 
   /* ----------------------------- Вспомогательные функции ----------------------------- */
 
@@ -47,50 +49,61 @@
 
     const lang = getUiLang();
     titleEl.textContent = (lang === 'uk')
-      ? 'Приклад'
-      : 'Пример';
+      ? 'Приклад вживання'
+      : 'Пример использования';
   }
 
   /* ----------------------------- Основной рендер ----------------------------- */
 
   function renderExampleHint() {
-    const section = document.querySelector('.home-hints');
-    const body = document.getElementById('hintsBody');
-    if (!section || !body) return;
+    if (isRendering) return;
+    isRendering = true;
 
-    ensureTitle(section);
+    try {
+      const section = document.querySelector('.home-hints');
+      const body = document.getElementById('hintsBody');
+      if (!section || !body) {
+        isRendering = false;
+        return;
+      }
 
-    const word = A.__currentWord;
-    if (!word || !Array.isArray(word.examples) || !word.examples.length) {
-      body.innerHTML = '';
-      return;
+      ensureTitle(section);
+
+      const word = A.__currentWord;
+      if (!word || !Array.isArray(word.examples) || !word.examples.length) {
+        body.innerHTML = '';
+        isRendering = false;
+        return;
+      }
+
+      const ex = word.examples[0] || {};
+      const de = ex.L2 || ex.de || ex.deu || '';
+      if (!de) {
+        body.innerHTML = '';
+        isRendering = false;
+        return;
+      }
+
+      const uiLang = getUiLang();
+      const tr = (uiLang === 'uk')
+        ? (ex.uk || ex.ru || '')
+        : (ex.ru || ex.uk || '');
+
+      const deHtml = escapeHtml(de);
+      const trHtml = escapeHtml(tr);
+
+      // По умолчанию показываем только немецкий пример,
+      // перевод скрыт (CSS: display:none), кликом по примеру — показываем.
+      body.innerHTML =
+        '<div class="hint-example">' +
+          '<p class="hint-de">' + deHtml + '</p>' +
+          (trHtml
+            ? '<p class="hint-tr">' + trHtml + '</p>'
+            : '') +
+        '</div>';
+    } finally {
+      isRendering = false;
     }
-
-    const ex = word.examples[0] || {};
-    const de = ex.L2 || ex.de || ex.deu || '';
-    if (!de) {
-      body.innerHTML = '';
-      return;
-    }
-
-    const uiLang = getUiLang();
-    const tr = (uiLang === 'uk')
-      ? (ex.uk || ex.ru || '')
-      : (ex.ru || ex.uk || '');
-
-    // БЕЗ подсветки: просто аккуратно экранированный текст
-    const deHtml = escapeHtml(de);
-    const trHtml = escapeHtml(tr);
-
-    // По умолчанию показываем только немецкий пример,
-    // перевод скрыт (CSS: display:none), кликом по примеру — показываем.
-    body.innerHTML =
-      '<div class="hint-example">' +
-        '<p class="hint-de">' + deHtml + '</p>' +
-        (trHtml
-          ? '<p class="hint-tr">' + trHtml + '</p>'
-          : '') +
-      '</div>';
   }
 
   /* ----------------------------- Инициализация / подписки ----------------------------- */
@@ -111,50 +124,32 @@
     });
   }
 
-  function setupObserver() {
-    const wordEl = document.querySelector('.trainer-word');
-    if (!wordEl || typeof MutationObserver === 'undefined') {
-      renderExampleHint();
-      return;
-    }
+  // Глобальный observer: следим за тем, появилось ли на экране
+  // комбо "home-hints + trainer-word + App.__currentWord"
+  function setupGlobalObserver() {
+    const observer = new MutationObserver(function () {
+      const hasHome = document.querySelector('.home-hints');
+      const trainer = document.querySelector('.trainer-word');
+      if (!hasHome || !trainer || !A.__currentWord) return;
 
-    let last = wordEl.textContent || '';
-    const obs = new MutationObserver(function () {
-      const t = wordEl.textContent || '';
-      if (t === last) return;
-      last = t;
+      // как только все три сущности на месте — перерисовываем подсказку
       renderExampleHint();
     });
 
-    obs.observe(wordEl, { childList: true, subtree: true, characterData: true });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
 
-    // первый рендер для уже выведенного слова
+    // первый рендер на стартовом экране
     renderExampleHint();
   }
 
   function init() {
     attachClickHandler();
+    setupGlobalObserver();
 
-    // ждём появления trainer-word (home уже смонтирован и отрисован)
-    if (document.querySelector('.trainer-word')) {
-      setupObserver();
-      return;
-    }
-
-    const maxMs = 5000;
-    const start = Date.now();
-    const timer = setInterval(function () {
-      if (document.querySelector('.trainer-word')) {
-        clearInterval(timer);
-        setupObserver();
-        return;
-      }
-      if (Date.now() - start > maxMs) {
-        clearInterval(timer);
-      }
-    }, 150);
-
-    // ручной вызов на всякий случай
+    // ручной вызов на всякий случай, если понадобится
     (A.HintsExamples = A.HintsExamples || {}).refresh = renderExampleHint;
   }
 
