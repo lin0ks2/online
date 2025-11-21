@@ -893,7 +893,7 @@ body.modal-open { overflow: hidden;}
 
 .home-hints .hints-title{
   margin:0 0 6px;
-  font-size:12px;
+  font-size:14px;
   text-align:left;
   font-weight:700;
   opacity:.8;
@@ -901,15 +901,15 @@ body.modal-open { overflow: hidden;}
 
 /* тело подсказки — фиксированная высота + скролл */
 .home-hints .hints-body{
-  min-height:2.2em;                 /* базовая высота, как было */
-  max-height:3.3em;                 /* максимум ~3–4 строки */
+  min-height:2.5em;                 /* базовая высота, как было */
+  max-height:3.5em;                 /* максимум ~3–4 строки */
   overflow-y:auto;                  /* лишний текст прокручивается */
   -webkit-overflow-scrolling:touch; /* плавный скролл на iOS */
 
   /* обычный поток, без флексов */
   text-align:center;
   opacity:.75;
-  font-size:12px;
+  font-size:14px;
   line-height:1.4;
 }
 
