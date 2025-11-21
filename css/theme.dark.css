@@ -641,7 +641,7 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
 
   text-align:center;
   opacity:.75;
-  font-size:14px;
+  font-size:16px;
   line-height:1.4;
 }
 
