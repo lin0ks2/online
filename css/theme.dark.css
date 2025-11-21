@@ -630,15 +630,15 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
 
 /* тело подсказки — фиксированная высота + скролл */
 .home-hints .hints-body{
-  min-height:2.6em;                 /* базовая высота, как было */
-  max-height:3.9em;                 /* максимум ~3–4 строки */
+  min-height:2.2em;                 /* базовая высота, как было */
+  max-height:3.3em;                 /* максимум ~3–4 строки */
   overflow-y:auto;                  /* лишний текст прокручивается */
   -webkit-overflow-scrolling:touch; /* плавный скролл на iOS */
 
   /* обычный поток, без флексов */
   text-align:center;
   opacity:.75;
-  font-size:14px;
+  font-size:12px;
   line-height:1.4;
 }
 
