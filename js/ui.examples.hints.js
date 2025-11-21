@@ -33,20 +33,42 @@
       .replace(/'/g, '&#39;');
   }
 
-  // Подсвечиваем целевое слово в немецком примере
+  // Подсвечиваем целевое слово в немецком   // Подсвечиваем целевое слово в немецком примере
   function highlightSentence(sentence, wordObj) {
     if (!sentence) return '';
     const raw = String(sentence);
+
+    // исходное немецкое слово из словаря
     const w = wordObj && wordObj.word ? String(wordObj.word) : '';
-    const base = w.trim().split(/\s+/).pop(); // отбрасываем артикль у существительных
-    if (!base) return escapeHtml(raw);
+    const main = w.trim().split(/\s+/).pop(); // отбрасываем артикль у существительных
+    if (!main) return escapeHtml(raw);
 
-    const idx = raw.indexOf(base);
-    if (idx === -1) return escapeHtml(raw);
+    // приводим к нижнему регистру и режем типичные окончания
+    let lemma = main.toLowerCase();
+    let stem = lemma;
 
+    if (stem.length > 4) {
+      if (/(en|er|es)$/.test(stem)) {
+        stem = stem.slice(0, -2);
+      } else if (/(e|n|s)$/.test(stem)) {
+        stem = stem.slice(0, -1);
+      }
+    }
+
+    if (!stem || stem.length < 3) {
+      return escapeHtml(raw);
+    }
+
+    // Ищем любое слово, начинающееся с этого ствола:
+    // nenn -> nennst, nennt, nennen, genannt и т.п.
+    const re = new RegExp('\\b' + stem + '\\w*', 'i');
+    const m = raw.match(re);
+    if (!m) return escapeHtml(raw);
+
+    const idx = m.index;
+    const match = m[0];
     const before = raw.slice(0, idx);
-    const match  = raw.slice(idx, idx + base.length);
-    const after  = raw.slice(idx + base.length);
+    const after  = raw.slice(idx + match.length);
 
     return (
       escapeHtml(before) +
