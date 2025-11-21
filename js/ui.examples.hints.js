@@ -3,7 +3,7 @@
  * Файл: ui.examples.hints.js
  * Назначение: Пример использования текущего слова
  *            в зоне .home-hints под сетами
- * Версия: 1.8 (база 1.7 + подсветка + автопоказ перевода)
+ * Версия: 1.9 (автопоказ перевода по клику на ответ)
  * Обновлено: 2025-11-21
  * ========================================================== */
 
@@ -82,8 +82,8 @@
 
     const lang = getUiLang();
     titleEl.textContent = (lang === 'uk')
-      ? 'Приклад вживання'
-      : 'Пример использования';
+      ? 'Приклад'
+      : 'Пример';
   }
 
   /* ----------------------------- Основной рендер ----------------------------- */
@@ -221,45 +221,43 @@
     });
   }
 
-  /* ----------------------------- Подсказка по клику ----------------------------- */
+  /* ----------------------------- Обработка кликов ----------------------------- */
 
-  function attachClickHandler() {
+  function attachClickHandlers() {
     document.addEventListener('click', function (evt) {
-      const deEl = evt.target.closest('.hint-de');
-      if (!deEl) return;
+      const target = evt.target;
 
-      const root = deEl.closest('.hint-example');
-      if (!root) return;
+      // 1) Клик по немецкому примеру — показать/скрыть перевод вручную
+      const deEl = target.closest('.hint-de');
+      if (deEl) {
+        const root = deEl.closest('.hint-example');
+        if (!root) return;
 
-      const trEl = root.querySelector('.hint-tr');
-      if (!trEl) return;
+        const trEl = root.querySelector('.hint-tr');
+        if (!trEl) return;
 
-      trEl.classList.toggle('is-visible');
+        trEl.classList.toggle('is-visible');
+        return;
+      }
+
+      // 2) Клик по варианту ответа или по кнопке "Не знаю" —
+      //    автоматически раскрываем перевод (после того, как тренер обработает клик)
+      const isAnswerBtn = target.closest('.answers-grid button');
+      const isIdkBtn = target.closest('.idk-btn');
+
+      if (isAnswerBtn || isIdkBtn) {
+        // даём тренеру обработать клик и чуть позже открываем перевод
+        setTimeout(showTranslation, 0);
+      }
     });
-  }
-
-  /* ----------------------------- Хук к onChoice ----------------------------- */
-
-  function safeHook(globalName, after) {
-    const w = window;
-    if (typeof w[globalName] !== 'function') return;
-    const orig = w[globalName];
-    w[globalName] = function () {
-      const r = orig.apply(this, arguments);
-      try { after(); } catch (_e) {}
-      return r;
-    };
   }
 
   /* ----------------------------- Инициализация ----------------------------- */
 
   function init() {
-    attachClickHandler();
+    attachClickHandlers();
     setupWordObserver();       // следим за сменой слова в тренере
     setupGlobalHomeObserver(); // восстанавливаем observer после навигации
-
-    // после выбора ответа тренером — автоматически показываем перевод
-    safeHook('onChoice', showTranslation);
 
     // ручной хук, если понадобится
     (A.HintsExamples = A.HintsExamples || {}).refresh = renderExampleHint;
