@@ -616,43 +616,31 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
 /* поддержка половинок: базовый символ + наложение левой половины золотом */
 .trainer-stars .star { position: relative; line-height: 1; }
 
-/* === Зона 2: строка-индикатор режима === */
-.home-hints { position: relative; }
+/* ==========================================================
+ * ЗОНА 2: Подсказки
+ * ========================================================== */
+
+.home-hints .hints-title{
+  margin:0 0 6px;
+  font-size:14px;
+  text-align:center;
+  font-weight:700;
+  opacity:.8;
+}
+
+/* тело подсказки */
 .home-hints .hints-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;              /* чтобы зона не схлопывалась */
-  text-align: center;
-}
-
-.hints-line{
-  display: inline-block;
-  margin: .25rem auto 0;
-  text-align: center;
-  font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  opacity: 0;
-  transform: translateY(-2px);
-  transition: opacity .2s ease, transform .2s ease;
-  color: var(--fg-muted, rgba(0,0,0,.65));
-}
-.hints-line.show{ opacity: 1; transform: translateY(0); }
-
-.hints-line .mode{ font-weight: 600; }
-.hints-line .sub{ opacity: .8; }
-
-.hints-line.hard .mode{ color: var(--star-gold, #fbbf24); }
-
-@media (prefers-color-scheme: dark){
-  .hints-line{ color: rgba(255,255,255,.85); }
-}
-
-/* --- Подсказка: пример использования слова (dark) --- */
-.home-hints .hints-body{
+  min-height:3.9em;                 /* «две строки» пустого места */
+  display:flex;
   align-items:flex-start;
   justify-content:flex-start;
   text-align:left;
+  opacity:.75;
+  font-size:14px;
+  line-height:1.4;
 }
+
+/* --- Подсказка: пример использования слова --- */
 
 .home-hints .hint-example{
   width:100%;
@@ -664,20 +652,23 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
   text-align:left;
 }
 
+/* Немецкий пример: чуть жирнее + кликабелен */
 .home-hints .hint-de{
   font-weight:600;
   margin-bottom:2px;
+  cursor:pointer;
 }
 
+/* Перевод по умолчанию скрыт */
 .home-hints .hint-tr{
   opacity:.9;
+  display:none;
 }
 
-.home-hints .hint-word{
-  font-weight:700;
-  color:var(--brand,#35b6ff);
+/* Когда показан */
+.home-hints .hint-tr.is-visible{
+  display:block;
 }
-
 /* === MOYAMOVA modal (dark) === */
 .mm-modal-open { overflow: hidden; }
 
