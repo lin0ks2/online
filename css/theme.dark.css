@@ -647,6 +647,37 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
   .hints-line{ color: rgba(255,255,255,.85); }
 }
 
+/* --- Подсказка: пример использования слова (dark) --- */
+.home-hints .hints-body{
+  align-items:flex-start;
+  justify-content:flex-start;
+  text-align:left;
+}
+
+.home-hints .hint-example{
+  width:100%;
+}
+
+.home-hints .hint-de,
+.home-hints .hint-tr{
+  margin:0;
+  text-align:left;
+}
+
+.home-hints .hint-de{
+  font-weight:500;
+  margin-bottom:2px;
+}
+
+.home-hints .hint-tr{
+  opacity:.9;
+}
+
+.home-hints .hint-word{
+  font-weight:700;
+  color:var(--brand,#35b6ff);
+}
+
 /* === MOYAMOVA modal (dark) === */
 .mm-modal-open { overflow: hidden; }
 
