@@ -893,7 +893,7 @@ body.modal-open { overflow: hidden;}
 
 .home-hints .hints-title{
   margin:0 0 6px;
-  font-size:14px;
+  font-size:12px;
   text-align:left;
   font-weight:700;
   opacity:.8;
@@ -907,7 +907,7 @@ body.modal-open { overflow: hidden;}
   justify-content:flex-start;
   text-align:center;
   opacity:.75;
-  font-size:14px;
+  font-size:16px;
   line-height:1.4;
 }
 
