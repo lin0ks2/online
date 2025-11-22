@@ -880,8 +880,8 @@ body.modal-open { overflow: hidden;}
 .set-pill{
   aspect-ratio:1/1;
 
-  /* ширина одного квадрата = 1/10 доступной ширины минус зазоры */
-  flex:0 0 calc((100% - 9 * var(--sets-gap)) / 10);
+  /* ширина одного квадрата ≈ как раньше, но чуть меньше на 2px */
+  flex:0 0 calc((100% - 9 * var(--sets-gap)) / 10 - 2px);
 
   border-radius: var(--radius-sm);
   border:1px solid var(--border);
