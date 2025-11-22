@@ -540,7 +540,7 @@ function activeDeckKey() {
 
     let penalized = false;
     let solved = false;
-    const ADV_DELAY = 600;
+    const ADV_DELAY = 750;
 
     function afterAnswer() {
       try { A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender(); } catch(_){}
