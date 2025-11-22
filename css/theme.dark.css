@@ -634,14 +634,14 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
   display:block;
 
   /* фиксированная высота блока */
-  height:3em;                     /* подгони под вкус: 3.2–4em */
+  height:2.6em;                     /* подгони под вкус: 3.2–4em */
 
   overflow-y:auto;                  /* лишний текст прокручивается */
   -webkit-overflow-scrolling:touch; /* плавный скролл на iOS */
 
   text-align:center;
   opacity:.75;
-  font-size:14px;
+  font-size:15px;
   line-height:1.4;
 }
 
