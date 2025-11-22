@@ -2,8 +2,8 @@
    Проект: MOYAMOVA
    Файл: view.stats.css
    Назначение: Стили экрана статистики
-   Версия: 1.0
-   Обновлено: 2025-11-17
+   Версия: 1.1 (трёхэкранная статистика + крупный индикатор)
+   Обновлено: 2025-11-21
    ========================================================== */
 
 /* Общий контейнер карточки статистики (поверх стандартной card/dicts-card) */
@@ -97,12 +97,12 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .stats-page-dot {
-  width: 18px;
-  height: 6px;
+  width: 22px;
+  height: 7px;
   border-radius: 999px;
   border: none;
   padding: 0;
@@ -112,8 +112,8 @@
 }
 
 .stats-page-dot.is-active {
-  width: 36px;
-  height: 6px;
+  width: 44px;
+  height: 7px;
   opacity: 1;
   background: var(--brand, #35b6ff);
 }
@@ -132,16 +132,21 @@
   gap: 8px;
 }
 
-/* Визуальный круг-набор */
+/* Визуальный круг-набор — общий размер для всех страниц */
 .stats-ring-set__circle {
   position: relative;
   margin: 0 auto;
-  max-width: 360px;
-  width: 100%;
+  width: min(100%, 340px);   /* единый размер для core/other */
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* На всякий случай закрепляем тот же размер и для модификаторов */
+.stats-ring-set--core  .stats-ring-set__circle,
+.stats-ring-set--other .stats-ring-set__circle {
+  width: min(100%, 340px);
 }
 
 /* Внутренний контейнер для слоёв-колец */
@@ -303,4 +308,5 @@
     transform: scale(1.25);
   }
 }
+
 /* ========================= Конец файла: view.stats.css ========================= */
