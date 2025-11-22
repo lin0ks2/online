@@ -870,15 +870,19 @@ body.modal-open { overflow: hidden;}
 /* 10 квадратиков в ряд, сами держат квадратное соотношение */
 .home-sets .sets-grid{
   --sets-gap:8px;
-  display:grid; grid-template-columns:repeat(10, 1fr);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;              /* центрируем каждую строку */
   gap:var(--sets-gap);
-  justify-content:center;
   margin:6px 0 10px;
 }
 
 .set-pill{
   aspect-ratio:1/1;
-  width:100%;
+
+  /* ширина одного квадрата = 1/10 доступной ширины минус зазоры */
+  flex:0 0 calc((100% - 9 * var(--sets-gap)) / 10);
+
   border-radius: var(--radius-sm);
   border:1px solid var(--border);
   background:var(--surface-2);
