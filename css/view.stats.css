@@ -250,7 +250,7 @@
 /* Верхний набор колец (Основные части речи) — легенда в одну колонку и центр */
 .stats-ring-set--core .stats-ring-legend {
   grid-template-columns: 1fr;
-  max-width: 260px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
