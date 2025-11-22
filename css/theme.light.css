@@ -931,7 +931,7 @@ body.modal-open { overflow: hidden;}
   display:block;
 
   /* фиксированная высота блока */
-  height:4em;                     /* подгони под вкус: 3.2–4em */
+  height:2.6em;                     /* подгони под вкус: 3.2–4em */
 
   overflow-y:auto;                  /* лишний текст прокручивается */
   -webkit-overflow-scrolling:touch; /* плавный скролл на iOS */
