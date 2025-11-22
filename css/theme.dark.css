@@ -634,7 +634,7 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
   display:block;
 
   /* фиксированная высота блока */
-  height:2.6em;                     /* подгони под вкус: 3.2–4em */
+  height:4em;                     /* подгони под вкус: 3.2–4em */
 
   overflow-y:auto;                  /* лишний текст прокручивается */
   -webkit-overflow-scrolling:touch; /* плавный скролл на iOS */
