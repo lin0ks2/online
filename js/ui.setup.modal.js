@@ -366,58 +366,58 @@
   }
 
   function renderConsents(rootEl) {
-    if (!rootEl) return;
-    var msgs = t();
+  if (!rootEl) return;
+  var msgs = t();
 
-    rootEl.innerHTML = [
-      '<label class="setup-checkbox" data-setup-tos-wrapper>',
-      '  <input type="checkbox" data-setup-tos>',
-      '  <span class="setup-checkbox__box"></span>',
-      '  <span class="setup-checkbox__label" data-setup-tos-label></span>',
-      '</label>',
-      '<label class="setup-checkbox" data-setup-ga-wrapper>',
-      '  <input type="checkbox" data-setup-ga>',
-      '  <span class="setup-checkbox__box"></span>',
-      '  <span class="setup-checkbox__label" data-setup-ga-label></span>',
-      '</label>'
-    ].join('');
+  rootEl.innerHTML = [
+    '<label class="setup-checkbox" data-setup-tos-wrapper>',
+    '  <input type="checkbox" data-setup-tos>',
+    '  <span class="setup-checkbox__box"></span>',
+    '  <span class="setup-checkbox__label onboarding-terms-text" data-setup-tos-label></span>',
+    '</label>',
+    '<label class="setup-checkbox" data-setup-ga-wrapper>',
+    '  <input type="checkbox" data-setup-ga>',
+    '  <span class="setup-checkbox__box"></span>',
+    '  <span class="setup-checkbox__label" data-setup-ga-label></span>',
+    '</label>'
+  ].join('');
 
-    var tosWrapper = rootEl.querySelector('[data-setup-tos-wrapper]');
-    var tosInput   = rootEl.querySelector('[data-setup-tos]');
-    var tosLabel   = rootEl.querySelector('[data-setup-tos-label]');
-    var gaWrapper  = rootEl.querySelector('[data-setup-ga-wrapper]');
-    var gaInput    = rootEl.querySelector('[data-setup-ga]');
-    var gaLabel    = rootEl.querySelector('[data-setup-ga-label]');
+  var tosWrapper = rootEl.querySelector('[data-setup-tos-wrapper]');
+  var tosInput   = rootEl.querySelector('[data-setup-tos]');
+  var tosLabel   = rootEl.querySelector('[data-setup-tos-label]');
+  var gaWrapper  = rootEl.querySelector('[data-setup-ga-wrapper]');
+  var gaInput    = rootEl.querySelector('[data-setup-ga]');
+  var gaLabel    = rootEl.querySelector('[data-setup-ga-label]');
 
-    // Лейбл TOS — просто текст, без ссылок и открытий страниц
-    if (tosLabel) {
-      tosLabel.textContent = msgs.tosLabel;
-    }
-    if (gaLabel) {
-      gaLabel.textContent = msgs.gaLabel;
-    }
-
-    // initial states
-    if (state.tosAccepted && tosWrapper) {
-      tosWrapper.classList.add('setup-checkbox--checked');
-    }
-    if (state.gaAccepted && gaWrapper) {
-      gaWrapper.classList.add('setup-checkbox--checked');
-    }
-    if (tosInput) tosInput.checked = state.tosAccepted;
-    if (gaInput) gaInput.checked   = state.gaAccepted;
-
-    // handlers
-    attachCheckboxHandlers(tosWrapper, tosInput, function (checked) {
-      state.tosAccepted = checked;
-      lsSet(LS_TOS_ACCEPTED, checked ? '1' : '');
-      updateStartDisabled();
-    });
-
-    attachCheckboxHandlers(gaWrapper, gaInput, function (checked) {
-      state.gaAccepted = checked;
-    });
+  // Лейбл TOS — текст, но теперь с классом onboarding-terms-text
+  if (tosLabel) {
+    tosLabel.textContent = msgs.tosLabel;
   }
+  if (gaLabel) {
+    gaLabel.textContent = msgs.gaLabel;
+  }
+
+  // initial states
+  if (state.tosAccepted && tosWrapper) {
+    tosWrapper.classList.add('setup-checkbox--checked');
+  }
+  if (state.gaAccepted && gaWrapper) {
+    gaWrapper.classList.add('setup-checkbox--checked');
+  }
+  if (tosInput) tosInput.checked = state.tosAccepted;
+  if (gaInput) gaInput.checked   = state.gaAccepted;
+
+  // handlers
+  attachCheckboxHandlers(tosWrapper, tosInput, function (checked) {
+    state.tosAccepted = checked;
+    lsSet(LS_TOS_ACCEPTED, checked ? '1' : '');
+    updateStartDisabled();
+  });
+
+  attachCheckboxHandlers(gaWrapper, gaInput, function (checked) {
+    state.gaAccepted = checked;
+  });
+}
 
   /* ---------------------------------------
    * GA consent integration
