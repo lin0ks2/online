@@ -683,56 +683,6 @@ function setupStatsPager(root) {
         goTo(p);
       });
     });
-
-    // Свайпы по телу карточки (только внутри, чтобы не конфликтовать с бургером)
-    var startX = null;
-    var startY = null;
-    var isSwiping = false;
-
-    body.addEventListener('touchstart', function (e) {
-      if (!e.touches || e.touches.length !== 1) return;
-      var t = e.touches[0];
-      startX = t.clientX;
-      startY = t.clientY;
-      isSwiping = false;
-    }, { passive: true });
-
-    body.addEventListener('touchmove', function (e) {
-      if (startX == null || startY == null || !e.touches || !e.touches.length) return;
-      var t = e.touches[0];
-      var dx = t.clientX - startX;
-      var dy = t.clientY - startY;
-
-      // горизонтальный жест доминирует над вертикальным
-      if (Math.abs(dx) > 24 && Math.abs(dx) > Math.abs(dy)) {
-        isSwiping = true;
-      }
-    }, { passive: true });
-
-    body.addEventListener('touchend', function (e) {
-      if (!isSwiping || startX == null || !e.changedTouches || !e.changedTouches.length) {
-        startX = null;
-        startY = null;
-        isSwiping = false;
-        return;
-      }
-
-      var t = e.changedTouches[0];
-      var dx = t.clientX - startX;
-      var threshold = 40;
-
-      if (dx <= -threshold) {
-        // свайп влево → следующая страница
-        goTo(current + 1);
-      } else if (dx >= threshold) {
-        // свайп вправо → предыдущая страница
-        goTo(current - 1);
-      }
-
-      startX = null;
-      startY = null;
-      isSwiping = false;
-    });
   });
 }
 
