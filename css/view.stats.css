@@ -57,7 +57,7 @@
 .stats-pages {
   position: relative;
   flex: 1 1 auto;
-  min-height: 220px; /* фиксированное место под контент, чтобы не прыгало */
+  min-height: 420px; /* фиксированное место под контент, чтобы не прыгало */
   overflow: hidden;
 }
 
@@ -136,7 +136,7 @@
 .stats-ring-set__circle {
   position: relative;
   margin: 0 auto;
-  max-width: 260px;
+  max-width: 360px;
   width: 100%;
   aspect-ratio: 1 / 1;
   display: flex;
