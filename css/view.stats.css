@@ -101,8 +101,8 @@
 }
 
 .stats-page-dot {
-  width: 22px;
-  height: 7px;
+  width: 32px;
+  height: 12px;
   border-radius: 999px;
   border: none;
   padding: 0;
@@ -136,7 +136,7 @@
 .stats-ring-set__circle {
   position: relative;
   margin: 0 auto;
-  width: min(100%, 340px);   /* единый размер для core/other */
+  width: min(100%, 360px);   /* единый размер для core/other */
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -146,7 +146,7 @@
 /* На всякий случай закрепляем тот же размер и для модификаторов */
 .stats-ring-set--core  .stats-ring-set__circle,
 .stats-ring-set--other .stats-ring-set__circle {
-  width: min(100%, 340px);
+  width: min(100%, 360px);
 }
 
 /* Внутренний контейнер для слоёв-колец */
@@ -312,7 +312,7 @@
 /* Чуть увеличиваем круг на странице "Основные части речи",
    чтобы он визуально совпадал по размеру со "Другими частями речи" */
 .stats-ring-set--core .stats-ring-layer {
-  transform: scale(calc(var(--ring-scale, 1) * 1.2));
+  transform: scale(calc(var(--ring-scale, 1) * 1.8));
 }
 
 /* ========================= Конец файла: view.stats.css ========================= */
