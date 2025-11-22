@@ -112,8 +112,8 @@
 }
 
 .stats-page-dot.is-active {
-  width: 44px;
-  height: 7px;
+  width: 52px;
+  height: 12px;
   opacity: 1;
   background: var(--brand, #35b6ff);
 }
