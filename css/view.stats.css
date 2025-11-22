@@ -57,7 +57,7 @@
 .stats-pages {
   position: relative;
   flex: 1 1 auto;
-  min-height: 220px; /* фиксированное место под контент, чтобы не прыгало */
+  min-height: 420px; /* фиксированное место под контент, чтобы не прыгало */
   overflow: hidden;
 }
 
