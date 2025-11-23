@@ -1,166 +1,124 @@
 /* ==========================================================
- * Проект: MOYAMOVA
- * Файл: ui.audio.tts.js
- * Назначение: Озвучка текущего слова в тренере (SpeechSynthesis)
- * Версия: 1.2
- * Обновлено: 2025-11-23
+ * Озвучка слова: кнопка + автоозвучка
  * ========================================================== */
 
-(function () {
+(function (root) {
   'use strict';
 
-  var A = (window.App = window.App || {});
-  var wordObserver = null;
+  var doc = root.document;
+  var lastSpoken = '';
 
-  function hasTTS() {
-    return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+  // ---- ТЕКУЩЕЕ СЛОВО И ПРОИЗНОШЕНИЕ ------------------------
+
+  function getCurrentWordText() {
+    var el = doc.querySelector('.trainer-word');
+    if (!el) return '';
+    return (el.textContent || '').trim();
   }
 
-  function getTtsLang() {
-    var study = (A.settings && A.settings.studyLang) || 'de';
-    switch (study) {
-      case 'de': return 'de-DE';
-      case 'en': return 'en-US';
-      case 'fr': return 'fr-FR';
-      case 'sr': return 'sr-RS';
-      case 'es': return 'es-ES';
-      default:   return 'de-DE';
-    }
-  }
-
-  function getUiLang() {
-    var s =
-      (A.settings && (A.settings.lang || A.settings.uiLang)) || null;
-    var attr = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-    var v = (s || attr || 'ru').toLowerCase();
-    return v === 'uk' ? 'uk' : 'ru';
-  }
-
-  // --- Озвучивание текста ---
+  // эта функция у тебя уже была — используй свою реализацию
   function speakText(text) {
-    if (!hasTTS() || !text) return;
+    if (!text) return;
 
-    try {
-      window.speechSynthesis.cancel();
-      var u = new window.SpeechSynthesisUtterance(String(text));
-      u.lang  = getTtsLang();
-      u.rate  = 0.95;
-      u.pitch = 1.0;
-      window.speechSynthesis.speak(u);
-    } catch (e) {}
+    // пример через Web Speech (если у тебя свой speakWord – оставь его)
+    if (!('speechSynthesis' in root)) return;
+
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = 'de-DE';
+    root.speechSynthesis.cancel();
+    root.speechSynthesis.speak(u);
   }
 
-  // --- Озвучить текущее слово ---
   function speakCurrentWord() {
-    var w = A.__currentWord;
-    if (w) speakText(w.wordBasic || w.word || '');
-    else {
-      var el = document.querySelector('.trainer-word');
-      speakText(el && el.textContent);
-    }
+    var text = getCurrentWordText();
+    if (!text) return;
+    speakText(text);
   }
 
-  /* ==========================================================
-   * === AUDIO BUTTON POSITION BLOCK ===
-   * Кнопка 🔊 вставляется СРАЗУ ПОСЛЕ .trainer-word
-   * Хочешь изменить расположение — редактируй только этот блок
-   * ========================================================== */
-  function renderAudioButton() {
-    if (!hasTTS()) return;
+  // ---- РИСУЕМ КНОПКУ И КЛАДЁМ ЕЁ ВНУТРЬ .trainer-word -----
 
-    // удаляем старую кнопку, если есть
-    var old = document.querySelector('.trainer-audio-btn');
-    if (old) old.remove();
-
-    var wordEl = document.querySelector('.trainer-word');
+  function ensureAudioButton() {
+    var wordEl = doc.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'trainer-audio-btn';
+    // ищем существующую кнопку
+    var btn = doc.querySelector('.trainer-audio-btn');
 
-    var lang = getUiLang();
-    btn.setAttribute(
-      'aria-label',
-      lang === 'uk' ? 'Озвучити слово' : 'Озвучить слово'
-    );
+    if (!btn) {
+      btn = doc.createElement('button');
+      btn.type = 'button';
+      btn.className = 'trainer-audio-btn';
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', 'Прослушать произношение');
 
-    btn.innerHTML = '🔊';
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      speakCurrentWord();
-    });
+      // иконка — пока emoji, потом можно заменить на SVG
+      btn.textContent = '🔊';
 
-    // Вставляем кнопку сразу после слова
-    wordEl.insertAdjacentElement('afterend', btn);
+      btn.addEventListener('click', function () {
+        speakCurrentWord();
+      });
+    }
 
-    // ✅ Авто-озвучивание нового слова
-    setTimeout(speakCurrentWord, 120);
+    // ВАЖНО: кладём кнопку ВНУТРЬ заголовка, сразу после текста
+    if (!wordEl.contains(btn)) {
+      wordEl.appendChild(btn);
+    }
   }
-  /* ========================================================== */
 
-  // --- Следим за сменой слова ---
+  // ---- АВТООЗВУЧКА ПРИ СМЕНЕ СЛОВА -------------------------
+
+  function autoSpeakOnChange(newText) {
+    newText = (newText || '').trim();
+    if (!newText || newText === lastSpoken) return;
+    lastSpoken = newText;
+    speakText(newText);
+  }
+
   function setupWordObserver() {
-    var wordEl = document.querySelector('.trainer-word');
-    if (!wordEl || typeof MutationObserver === 'undefined') {
-      renderAudioButton();
+    if (!('MutationObserver' in root)) {
       return;
     }
 
-    if (wordObserver) wordObserver.disconnect();
-    var last = wordEl.textContent || '';
+    var wordEl = doc.querySelector('.trainer-word');
+    if (!wordEl) return;
 
-    wordObserver = new MutationObserver(function () {
-      var t = wordEl.textContent || '';
-      if (t === last) return;
-      last = t;
-      renderAudioButton();
+    var lastText = (wordEl.textContent || '').trim();
+
+    var obs = new MutationObserver(function () {
+      var current = (wordEl.textContent || '').trim();
+      if (current === lastText) return;
+      lastText = current;
+
+      ensureAudioButton();       // держим кнопку при слове
+      autoSpeakOnChange(current); // автоозвучка
     });
 
-    wordObserver.observe(wordEl, {
+    obs.observe(wordEl, {
       childList: true,
       subtree: true,
       characterData: true
     });
 
-    renderAudioButton();
+    // первый запуск
+    ensureAudioButton();
+    autoSpeakOnChange(lastText);
   }
 
-  // --- Отслеживание появления тренера после навигации ---
-  function setupGlobalObserver() {
-    if (typeof MutationObserver === 'undefined') return;
-
-    var obs = new MutationObserver(function (mutations) {
-      for (var i = 0; i < mutations.length; i++) {
-        var nodes = mutations[i].addedNodes;
-        if (!nodes) continue;
-        for (var j = 0; j < nodes.length; j++) {
-          var n = nodes[j];
-          if (
-            n.nodeType === 1 &&
-            (n.matches('.trainer-word') ||
-              n.querySelector?.('.trainer-word'))
-          ) {
-            setupWordObserver();
-            return;
-          }
-        }
-      }
-    });
-
-    obs.observe(document.body, { childList: true, subtree: true });
-  }
+  // ---- ИНИЦИАЛИЗАЦИЯ ---------------------------------------
 
   function init() {
-    if (!hasTTS()) return;
-    setupWordObserver();
-    setupGlobalObserver();
-    (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
+    // ждём, пока DOM и тренер появятся
+    if (doc.readyState === 'loading') {
+      doc.addEventListener('DOMContentLoaded', setupWordObserver, { once: true });
+    } else {
+      setupWordObserver();
+    }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init, { once: true });
-  } else {
-    init();
-  }
-})();
+  init();
+
+  // на всякий случай экспортируем ручной вызов
+  root.TrainerAudio = root.TrainerAudio || {};
+  root.TrainerAudio.speakCurrentWord = speakCurrentWord;
+
+})(window);
