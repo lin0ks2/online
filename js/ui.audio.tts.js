@@ -1,208 +1,247 @@
 /* ==========================================================
  * Проект: MOYAMOVA
- * Файл: ui.trainer.audio.js
- * Назначение: Озвучка текущего слова в тренере
- *  - Кнопка рядом со словом
- *  - Автоозвучка при смене слова
- *  - Двойной клик по кнопке — включить/выключить озвучку
- * Версия: 2.0
+ * Файл: ui.audio.tts.js
+ * Назначение: Озвучка текущего слова в тренере (SpeechSynthesis)
+ *   - Кнопка рядом со словом
+ *   - Автоозвучка при смене слова
+ *   - Двойной клик по кнопке — включить/выключить звук (🔊 / 🔇)
+ * Версия: 2.1 (фикc циклов)
  * Обновлено: 2025-11-23
  * ========================================================== */
 
-(function (root) {
+(function () {
   'use strict';
 
-  var doc = root.document;
+  var A = (window.App = window.App || {});
 
-  // ВКЛ/ВЫКЛ озвучки пользователем (двойной тап по кнопке)
-  var audioEnabled = true;
+  var LS_KEY = 'mm.audioEnabled';
+  var wordObserver = null;
 
-  // Последнее озвученное слово, чтобы не дублировать
-  var lastSpokenWord = '';
+  // включён ли звук (по умолчанию: да)
+  var audioEnabled = loadAudioEnabled();
 
-  // ---------------------------------------------------------
-  // Вспомогательные функции
-  // ---------------------------------------------------------
-
-  // Текущее слово из App, если есть; иначе — из .trainer-word
-  function getCurrentWordText() {
-    // 1) Пытаемся взять из App.__currentWord.word (как в подсказках)
+  function loadAudioEnabled() {
     try {
-      if (root.App && root.App.__currentWord && root.App.__currentWord.word) {
-        var w = String(root.App.__currentWord.word || '').trim();
-        if (w) return w;
-      }
-    } catch (_) { /* ignore */ }
-
-    // 2) Фолбэк: первая текстовая нода inside .trainer-word
-    var el = doc.querySelector('.trainer-word');
-    if (!el) return '';
-
-    var firstText = '';
-    for (var i = 0; i < el.childNodes.length; i++) {
-      var node = el.childNodes[i];
-      if (node.nodeType === 3) { // TEXT_NODE
-        firstText = (node.nodeValue || '').trim();
-        if (firstText) break;
-      }
+      var v = window.localStorage.getItem(LS_KEY);
+      if (v === '0') return false;
+      return true;
+    } catch (e) {
+      return true;
     }
-
-    if (!firstText) {
-      // если вдруг нет отдельной текстовой ноды, берём текст
-      // целиком и выкидываем возможные эмодзи/служебные символы
-      firstText = (el.textContent || '').trim();
-    }
-
-    // Слово у нас всегда одно: на всякий случай забираем первую "группу"
-    return firstText.split(/\s+/)[0] || '';
   }
 
-  // Реальное произнесение текста
+  function saveAudioEnabled() {
+    try {
+      window.localStorage.setItem(LS_KEY, audioEnabled ? '1' : '0');
+    } catch (e) {}
+  }
+
+  function hasTTS() {
+    return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+  }
+
+  function getTtsLang() {
+    var study = (A.settings && A.settings.studyLang) || 'de';
+    switch (study) {
+      case 'de': return 'de-DE';
+      case 'en': return 'en-US';
+      case 'fr': return 'fr-FR';
+      case 'sr': return 'sr-RS';
+      case 'es': return 'es-ES';
+      default:   return 'de-DE';
+    }
+  }
+
   function speakText(text) {
-    if (!text || !audioEnabled) return;
-
-    // Используем Web Speech API — ОС сама решает, воспроизводить ли звук.
-    if (!('speechSynthesis' in root)) return;
-
-    var u = new SpeechSynthesisUtterance(text);
-    u.lang = 'de-DE';
+    if (!audioEnabled) return;      // звук выключен пользователем
+    if (!hasTTS()) return;
+    if (!text) return;
 
     try {
-      root.speechSynthesis.cancel();
-    } catch (_) { /* ignore */ }
+      window.speechSynthesis.cancel();
+      var u = new window.SpeechSynthesisUtterance(String(text));
+      u.lang  = getTtsLang();
+      u.rate  = 0.95;
+      u.pitch = 1.0;
+      window.speechSynthesis.speak(u);
+    } catch (e) {
+      // молча игнорируем
+    }
+  }
 
-    root.speechSynthesis.speak(u);
+  // Берём слово только из словаря, а не из DOM
+  function getCurrentWord() {
+    var w = A.__currentWord || null;
+    if (!w) return '';
+    var raw = w.wordBasic || w.word || '';
+    if (!raw && w.forms && w.forms.base) raw = w.forms.base;
+    return String(raw || '').trim();
   }
 
   function speakCurrentWord() {
-    var word = getCurrentWordText();
+    var word = getCurrentWord();
     if (!word) return;
-    lastSpokenWord = word;
     speakText(word);
   }
 
-  // ---------------------------------------------------------
-  // Кнопка озвучки рядом со словом
-  // ---------------------------------------------------------
+  /* ==========================================================
+   * === AUDIO BUTTON POSITION BLOCK ===
+   * Кнопка 🔊/🔇 вставляется СРАЗУ ПОСЛЕ .trainer-word
+   * Если захочешь поменять позицию — правь только эту функцию.
+   * ========================================================== */
 
   function updateButtonIcon(btn) {
     if (!btn) return;
-
     if (audioEnabled) {
       btn.textContent = '🔊';
-      btn.setAttribute('aria-label', 'Прослушать произношение');
+      btn.setAttribute('aria-label', 'Озвучить слово');
     } else {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка выключена');
     }
   }
 
-  function ensureAudioButton() {
-    var wordEl = doc.querySelector('.trainer-word');
+  function renderAudioButton() {
+    if (!hasTTS()) return;
+
+    var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    var btn = wordEl.querySelector('.trainer-audio-btn');
-    if (!btn) {
-      btn = doc.createElement('button');
+    // ищем кнопку рядом со словом (не внутри, а после)
+    var btn = wordEl.nextElementSibling;
+    if (!btn || !btn.classList || !btn.classList.contains('trainer-audio-btn')) {
+      // удалим старую кнопку, если она где-то ещё лежит
+      var old = document.querySelector('.trainer-audio-btn');
+      if (old && old.parentNode) {
+        old.parentNode.removeChild(old);
+      }
+
+      btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'trainer-audio-btn';
 
-      // обработчик одиночного / двойного клика
-      var lastTapTime = 0;
-      btn.addEventListener('click', function () {
-        var now = Date.now();
-        var delta = now - lastTapTime;
-        lastTapTime = now;
-
-        // Простое определение double tap: два клика за < 300 мс
-        if (delta > 0 && delta < 300) {
-          // double tap — переключаем режим
-          audioEnabled = !audioEnabled;
-          updateButtonIcon(btn);
-          return;
-        }
-
-        // single tap — озвучиваем слово (если звук не выключен)
-        if (audioEnabled) {
-          speakCurrentWord();
-        }
+      // одиночный клик — озвучка (если звук включён)
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!audioEnabled) return;
+        speakCurrentWord();
       });
 
-      wordEl.appendChild(btn);
+      // двойной клик — переключить режим (🔊 / 🔇)
+      btn.addEventListener('dblclick', function (e) {
+        e.preventDefault();
+        audioEnabled = !audioEnabled;
+        saveAudioEnabled();
+        updateButtonIcon(btn);
+      });
+
+      // вставляем кнопку сразу после слова
+      wordEl.insertAdjacentElement('afterend', btn);
     }
 
     updateButtonIcon(btn);
-  }
 
-  // ---------------------------------------------------------
-  // Автоозвучка при смене слова
-  // ---------------------------------------------------------
-
-  function autoSpeakIfChanged() {
-    var word = getCurrentWordText();
-    if (!word) return;
-    if (word === lastSpokenWord) return;
-
-    lastSpokenWord = word;
-
-    if (audioEnabled) {
-      speakText(word);
+    // автоозвучка нового слова
+    var word = getCurrentWord();
+    if (word && audioEnabled) {
+      // чуть откладываем, чтобы тренер успел всё дорисовать
+      setTimeout(function () {
+        speakText(word);
+      }, 120);
     }
   }
 
+  /* ========================================================== */
+
+  // Следим за сменой текста в .trainer-word, но НЕ трогаем её содержимое
   function setupWordObserver() {
-    if (!('MutationObserver' in root)) {
-      // без MutationObserver — просто один раз попробуем
-      ensureAudioButton();
-      autoSpeakIfChanged();
+    var wordEl = document.querySelector('.trainer-word');
+
+    if (!wordEl || typeof MutationObserver === 'undefined') {
+      renderAudioButton();
       return;
     }
 
-    var wordEl = doc.querySelector('.trainer-word');
-    if (!wordEl) {
-      return;
+    if (wordObserver) {
+      wordObserver.disconnect();
+      wordObserver = null;
     }
 
-    // Первый прогон
-    ensureAudioButton();
-    autoSpeakIfChanged();
+    var lastText = wordEl.textContent || '';
 
-    var obs = new MutationObserver(function () {
-      // при любой смене содержимого .trainer-word:
-      ensureAudioButton();
-      autoSpeakIfChanged();
+    wordObserver = new MutationObserver(function () {
+      var t = wordEl.textContent || '';
+      if (t === lastText) return;
+      lastText = t;
+      renderAudioButton();
     });
 
-    obs.observe(wordEl, {
+    wordObserver.observe(wordEl, {
       childList: true,
       subtree: true,
       characterData: true
     });
+
+    // первый рендер
+    renderAudioButton();
   }
 
-  // ---------------------------------------------------------
-  // Инициализация
-  // ---------------------------------------------------------
+  // Следим за тем, что тренер вообще появился после навигации
+  function setupGlobalObserver() {
+    if (typeof MutationObserver === 'undefined') return;
+
+    var obs = new MutationObserver(function (mutations) {
+      var need = false;
+      for (var i = 0; i < mutations.length; i++) {
+        var m = mutations[i];
+        if (!m.addedNodes) continue;
+        for (var j = 0; j < m.addedNodes.length; j++) {
+          var n = m.addedNodes[j];
+          if (n.nodeType !== 1) continue;
+          if (n.matches && n.matches('.trainer-word')) {
+            need = true;
+            break;
+          }
+          if (n.querySelector && n.querySelector('.trainer-word')) {
+            need = true;
+            break;
+          }
+        }
+        if (need) break;
+      }
+      if (need) {
+        setupWordObserver();
+      }
+    });
+
+    obs.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
 
   function init() {
-    if (doc.readyState === 'loading') {
-      doc.addEventListener('DOMContentLoaded', setupWordObserver, { once: true });
+    if (!hasTTS()) return;
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        setupWordObserver();
+        setupGlobalObserver();
+      }, { once: true });
     } else {
       setupWordObserver();
+      setupGlobalObserver();
     }
+
+    // хук для ручного обновления, если понадобится
+    (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
+    A.AudioTTS.setEnabled = function (flag) {
+      audioEnabled = !!flag;
+      saveAudioEnabled();
+      var btn = document.querySelector('.trainer-audio-btn');
+      if (btn) updateButtonIcon(btn);
+    };
   }
 
   init();
-
-  // Public API, если вдруг пригодится
-  root.TrainerAudio = root.TrainerAudio || {};
-  root.TrainerAudio.speakCurrentWord = speakCurrentWord;
-  root.TrainerAudio.setEnabled = function (enabled) {
-    audioEnabled = !!enabled;
-    // обновим иконку, если кнопка уже есть
-    var btn = doc.querySelector('.trainer-audio-btn');
-    if (btn) updateButtonIcon(btn);
-  };
-
-})(window);
-/* ========================= Конец файла: ui.trainer.audio.js ========================= */
+})();
