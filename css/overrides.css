@@ -140,3 +140,30 @@ body.no-scroll {
   box-shadow: 0 18px 40px rgba(15,23,42,.65);  /* как мастер */
 }
 
+/* Озвучка слова в тренере */
+.trainer-audio-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:2px 0 4px;
+  padding:2px 8px;
+  border:none;
+  background:none;
+  font-size:18px;
+  line-height:1;
+  cursor:pointer;
+  color:var(--brand, #35b6ff);
+  opacity:.8;
+  transition:opacity .15s ease, transform .15s ease;
+}
+
+.trainer-audio-btn:active{
+  transform:scale(.95);
+}
+
+@media (hover:hover){
+  .trainer-audio-btn:hover{
+    opacity:1;
+    transform:translateY(-1px);
+  }
+}
