@@ -1,96 +1,176 @@
 /* ==========================================================
- * Озвучка слова: кнопка + автоозвучка
+ * Проект: MOYAMOVA
+ * Файл: ui.trainer.audio.js
+ * Назначение: Озвучка текущего слова в тренере
+ *  - Кнопка рядом со словом
+ *  - Автоозвучка при смене слова
+ *  - Двойной клик по кнопке — включить/выключить озвучку
+ * Версия: 2.0
+ * Обновлено: 2025-11-23
  * ========================================================== */
 
 (function (root) {
   'use strict';
 
   var doc = root.document;
-  var lastSpoken = '';
 
-  // ---- ТЕКУЩЕЕ СЛОВО И ПРОИЗНОШЕНИЕ ------------------------
+  // ВКЛ/ВЫКЛ озвучки пользователем (двойной тап по кнопке)
+  var audioEnabled = true;
 
+  // Последнее озвученное слово, чтобы не дублировать
+  var lastSpokenWord = '';
+
+  // ---------------------------------------------------------
+  // Вспомогательные функции
+  // ---------------------------------------------------------
+
+  // Текущее слово из App, если есть; иначе — из .trainer-word
   function getCurrentWordText() {
+    // 1) Пытаемся взять из App.__currentWord.word (как в подсказках)
+    try {
+      if (root.App && root.App.__currentWord && root.App.__currentWord.word) {
+        var w = String(root.App.__currentWord.word || '').trim();
+        if (w) return w;
+      }
+    } catch (_) { /* ignore */ }
+
+    // 2) Фолбэк: первая текстовая нода inside .trainer-word
     var el = doc.querySelector('.trainer-word');
     if (!el) return '';
-    return (el.textContent || '').trim();
+
+    var firstText = '';
+    for (var i = 0; i < el.childNodes.length; i++) {
+      var node = el.childNodes[i];
+      if (node.nodeType === 3) { // TEXT_NODE
+        firstText = (node.nodeValue || '').trim();
+        if (firstText) break;
+      }
+    }
+
+    if (!firstText) {
+      // если вдруг нет отдельной текстовой ноды, берём текст
+      // целиком и выкидываем возможные эмодзи/служебные символы
+      firstText = (el.textContent || '').trim();
+    }
+
+    // Слово у нас всегда одно: на всякий случай забираем первую "группу"
+    return firstText.split(/\s+/)[0] || '';
   }
 
-  // эта функция у тебя уже была — используй свою реализацию
+  // Реальное произнесение текста
   function speakText(text) {
-    if (!text) return;
+    if (!text || !audioEnabled) return;
 
-    // пример через Web Speech (если у тебя свой speakWord – оставь его)
+    // Используем Web Speech API — ОС сама решает, воспроизводить ли звук.
     if (!('speechSynthesis' in root)) return;
 
     var u = new SpeechSynthesisUtterance(text);
     u.lang = 'de-DE';
-    root.speechSynthesis.cancel();
+
+    try {
+      root.speechSynthesis.cancel();
+    } catch (_) { /* ignore */ }
+
     root.speechSynthesis.speak(u);
   }
 
   function speakCurrentWord() {
-    var text = getCurrentWordText();
-    if (!text) return;
-    speakText(text);
+    var word = getCurrentWordText();
+    if (!word) return;
+    lastSpokenWord = word;
+    speakText(word);
   }
 
-  // ---- РИСУЕМ КНОПКУ И КЛАДЁМ ЕЁ ВНУТРЬ .trainer-word -----
+  // ---------------------------------------------------------
+  // Кнопка озвучки рядом со словом
+  // ---------------------------------------------------------
+
+  function updateButtonIcon(btn) {
+    if (!btn) return;
+
+    if (audioEnabled) {
+      btn.textContent = '🔊';
+      btn.setAttribute('aria-label', 'Прослушать произношение');
+    } else {
+      btn.textContent = '🔇';
+      btn.setAttribute('aria-label', 'Озвучка выключена');
+    }
+  }
 
   function ensureAudioButton() {
     var wordEl = doc.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // ищем существующую кнопку
-    var btn = doc.querySelector('.trainer-audio-btn');
-
+    var btn = wordEl.querySelector('.trainer-audio-btn');
     if (!btn) {
       btn = doc.createElement('button');
       btn.type = 'button';
       btn.className = 'trainer-audio-btn';
-      btn.setAttribute('type', 'button');
-      btn.setAttribute('aria-label', 'Прослушать произношение');
 
-      // иконка — пока emoji, потом можно заменить на SVG
-      btn.textContent = '🔊';
-
+      // обработчик одиночного / двойного клика
+      var lastTapTime = 0;
       btn.addEventListener('click', function () {
-        speakCurrentWord();
-      });
-    }
+        var now = Date.now();
+        var delta = now - lastTapTime;
+        lastTapTime = now;
 
-    // ВАЖНО: кладём кнопку ВНУТРЬ заголовка, сразу после текста
-    if (!wordEl.contains(btn)) {
+        // Простое определение double tap: два клика за < 300 мс
+        if (delta > 0 && delta < 300) {
+          // double tap — переключаем режим
+          audioEnabled = !audioEnabled;
+          updateButtonIcon(btn);
+          return;
+        }
+
+        // single tap — озвучиваем слово (если звук не выключен)
+        if (audioEnabled) {
+          speakCurrentWord();
+        }
+      });
+
       wordEl.appendChild(btn);
     }
+
+    updateButtonIcon(btn);
   }
 
-  // ---- АВТООЗВУЧКА ПРИ СМЕНЕ СЛОВА -------------------------
+  // ---------------------------------------------------------
+  // Автоозвучка при смене слова
+  // ---------------------------------------------------------
 
-  function autoSpeakOnChange(newText) {
-    newText = (newText || '').trim();
-    if (!newText || newText === lastSpoken) return;
-    lastSpoken = newText;
-    speakText(newText);
+  function autoSpeakIfChanged() {
+    var word = getCurrentWordText();
+    if (!word) return;
+    if (word === lastSpokenWord) return;
+
+    lastSpokenWord = word;
+
+    if (audioEnabled) {
+      speakText(word);
+    }
   }
 
   function setupWordObserver() {
     if (!('MutationObserver' in root)) {
+      // без MutationObserver — просто один раз попробуем
+      ensureAudioButton();
+      autoSpeakIfChanged();
       return;
     }
 
     var wordEl = doc.querySelector('.trainer-word');
-    if (!wordEl) return;
+    if (!wordEl) {
+      return;
+    }
 
-    var lastText = (wordEl.textContent || '').trim();
+    // Первый прогон
+    ensureAudioButton();
+    autoSpeakIfChanged();
 
     var obs = new MutationObserver(function () {
-      var current = (wordEl.textContent || '').trim();
-      if (current === lastText) return;
-      lastText = current;
-
-      ensureAudioButton();       // держим кнопку при слове
-      autoSpeakOnChange(current); // автоозвучка
+      // при любой смене содержимого .trainer-word:
+      ensureAudioButton();
+      autoSpeakIfChanged();
     });
 
     obs.observe(wordEl, {
@@ -98,16 +178,13 @@
       subtree: true,
       characterData: true
     });
-
-    // первый запуск
-    ensureAudioButton();
-    autoSpeakOnChange(lastText);
   }
 
-  // ---- ИНИЦИАЛИЗАЦИЯ ---------------------------------------
+  // ---------------------------------------------------------
+  // Инициализация
+  // ---------------------------------------------------------
 
   function init() {
-    // ждём, пока DOM и тренер появятся
     if (doc.readyState === 'loading') {
       doc.addEventListener('DOMContentLoaded', setupWordObserver, { once: true });
     } else {
@@ -117,8 +194,15 @@
 
   init();
 
-  // на всякий случай экспортируем ручной вызов
+  // Public API, если вдруг пригодится
   root.TrainerAudio = root.TrainerAudio || {};
   root.TrainerAudio.speakCurrentWord = speakCurrentWord;
+  root.TrainerAudio.setEnabled = function (enabled) {
+    audioEnabled = !!enabled;
+    // обновим иконку, если кнопка уже есть
+    var btn = doc.querySelector('.trainer-audio-btn');
+    if (btn) updateButtonIcon(btn);
+  };
 
 })(window);
+/* ========================= Конец файла: ui.trainer.audio.js ========================= */
