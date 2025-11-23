@@ -141,24 +141,33 @@ body.no-scroll {
 }
 
 /* ==========================================================
-   Озвучка слова — кнопка 🔊 рядом с .trainer-word
+   Тренер: слово + кнопка озвучки
    ========================================================== */
 
-/* Общий стиль кнопки */
+/* Слово в тренере: делаем горизонтальный блок с иконкой */
+.trainer-word {
+  display: inline-flex;          /* слово + кнопка в одну линию */
+  align-items: center;
+  justify-content: center;       /* центрируем внутри карточки */
+  gap: 6px;
+  margin: 0 auto 8px;            /* центрирование внутри .trainer-card */
+  text-align: center;
+}
+
+/* Кнопка озвучки рядом со словом */
 .trainer-audio-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 6px;
   font-size: 20px;
   line-height: 1;
   background: none;
   border: none;
   padding: 0;
+  margin: 0;                     /* отступ уже даёт gap */
   cursor: pointer;
   opacity: 0.85;
   transition: opacity .15s ease, transform .15s ease;
-  vertical-align: middle;
   color: var(--text, #000);
 }
 
@@ -176,15 +185,9 @@ body.no-scroll {
   opacity: 1;
 }
 
-/* Кнопка не смещает верстку при переносах строк */
-.trainer-word + .trainer-audio-btn {
-  white-space: nowrap;
-}
-
-/* Минимальные размеры на ультрамалых экранах */
+/* Небольшой даунскейл на очень узких экранах */
 @media (max-width: 360px) {
   .trainer-audio-btn {
     font-size: 18px;
-    margin-left: 4px;
   }
 }
