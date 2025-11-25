@@ -191,3 +191,34 @@ body.no-scroll {
     font-size: 18px;
   }
 }
+
+
+/* «iPhone 18 Pro Max» режим — включается на широких экранах */
+@media (min-width: 900px) {
+  body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .device-frame {
+    width: 460px;
+    height: 100vh;
+    background: #fff; /* или var(--bg) вашего приложения */
+    border-radius: 32px;
+    overflow: hidden;
+
+    /* рамка корпуса */
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(20px);
+
+    /* тень премиального девайса */
+    box-shadow:
+      0 0 50px rgba(0, 0, 0, 0.55),
+      0 0 120px rgba(0, 0, 0, 0.35);
+  }
+}
