@@ -20,6 +20,9 @@
   // включён ли звук (по умолчанию: да)
   var audioEnabled = loadAudioEnabled();
 
+  // запоминаем, какое слово было озвучено автоматически, чтобы не дублировать
+  var lastAutoSpokenWord = '';
+
   function loadAudioEnabled() {
     try {
       var v = window.localStorage.getItem(LS_KEY);
@@ -43,12 +46,17 @@
   function getTtsLang() {
     var study = (A.settings && A.settings.studyLang) || 'de';
     switch (study) {
-      case 'de': return 'de-DE';
-      case 'en': return 'en-US';
-      case 'fr': return 'fr-FR';
-      case 'sr': return 'sr-RS';
-      case 'es': return 'es-ES';
-      default:   return 'de-DE';
+      case 'en':
+        return 'en-US';
+      case 'es':
+        return 'es-ES';
+      case 'uk':
+        return 'uk-UA';
+      case 'ru':
+        return 'ru-RU';
+      case 'de':
+      default:
+        return 'de-DE';
     }
   }
 
@@ -123,7 +131,7 @@
         speakCurrentWord();
       });
 
-      // двойной клик — переключить режим (🔊 / 🔇)
+      // двойной клик — вкл/выкл звук
       btn.addEventListener('dblclick', function (e) {
         e.preventDefault();
         audioEnabled = !audioEnabled;
@@ -131,15 +139,15 @@
         updateButtonIcon(btn);
       });
 
-      // вставляем кнопку внутрь слова, после текста
       wordEl.appendChild(btn);
     }
 
     updateButtonIcon(btn);
 
-    // автоозвучка нового слова
+    // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
     var word = getCurrentWord();
-    if (word && audioEnabled) {
+    if (word && audioEnabled && word !== lastAutoSpokenWord) {
+      lastAutoSpokenWord = word;
       setTimeout(function () {
         speakText(word);
       }, 120);
@@ -148,7 +156,7 @@
 
   /* ========================================================== */
 
-  // Следим за сменой текста в .trainer-word, но НЕ трогаем её содержимое
+  // Следим за изменением .trainer-word и обновляем кнопку/озвучку
   function setupWordObserver() {
     var wordEl = document.querySelector('.trainer-word');
 
@@ -181,7 +189,7 @@
     renderAudioButton();
   }
 
-  // Следим за тем, что тренер вообще появился после навигации
+  // Глобальный наблюдатель: ждём появления .trainer-word в DOM
   function setupGlobalObserver() {
     if (typeof MutationObserver === 'undefined') return;
 
@@ -213,18 +221,17 @@
       childList: true,
       subtree: true
     });
+
+    // на случай, если .trainer-word уже есть
+    setupWordObserver();
   }
 
   function init() {
     if (!hasTTS()) return;
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function () {
-        setupWordObserver();
-        setupGlobalObserver();
-      }, { once: true });
+      document.addEventListener('DOMContentLoaded', setupGlobalObserver);
     } else {
-      setupWordObserver();
       setupGlobalObserver();
     }
 
