@@ -194,7 +194,7 @@ body.no-scroll {
 
 
 /* «iPhone 18 Pro Max» режим — включается на широких экранах */
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   body {
     background: #000;
     display: flex;
