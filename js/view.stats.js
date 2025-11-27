@@ -385,7 +385,7 @@
     return [];
   }
 
-  function renderActivitySection(langCode, texts) {
+    function renderActivitySection(langCode, texts) {
     var series = getDailyActivitySeries(langCode);
     if (!series.length) {
       return (
@@ -429,17 +429,31 @@
             ? (' — +' + (d.learned || 0) + ' / ' + (d.reviewed || 0) + ' / ' + Math.round((d.seconds || 0) / 60) + ' мин')
             : '');
 
-        // каждые 7 дней начинаем новую строку (новая «неделя»)
+        // линия между неделями
         var weekBreak = '';
         if (idx > 0 && idx % 7 === 0) {
           weekBreak = '<div class="stats-activity-week-break"></div>';
         }
 
+        // показываем подпись даты только у первого дня каждой недели
+        var dateLabel = '';
+        if (idx % 7 === 0 && d.date) {
+          var dt = new Date(d.date);
+          if (!isNaN(dt.getTime())) {
+            dateLabel = String(dt.getDate());
+          }
+        }
+
         return (
           weekBreak +
-          '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + '"' +
-            (title ? ' title="' + title.replace(/"/g, '&quot;') + '"' : '') +
-          '></div>'
+          '<div class="stats-activity-cell">' +
+            '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + '"' +
+              (title ? ' title="' + title.replace(/"/g, '&quot;') + '"' : '') +
+            '></div>' +
+            (dateLabel
+              ? '<span class="stats-activity-cell__date">' + dateLabel + '</span>'
+              : '') +
+          '</div>'
         );
       })
       .join('');
