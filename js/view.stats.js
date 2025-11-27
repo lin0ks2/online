@@ -389,9 +389,9 @@
     return [];
   }
 
-    function renderActivitySection(langCode, texts) {
-    var series = getDailyActivitySeries(langCode);
-    if (!series.length) {
+      function renderActivitySection(langCode, texts) {
+    var raw = getDailyActivitySeries(langCode);
+    if (!raw.length) {
       return (
         '<section class="stats-section stats-section--activity">' +
           '<h2 class="stats-subtitle">' + texts.activityTitle + '</h2>' +
@@ -402,65 +402,119 @@
       );
     }
 
-    // Превращаем метрики в «интенсивность» точки
-    var scores = series.map(function (d) {
+    // 1) Собираем баллы по датам (ключ: YYYY-MM-DD)
+    var byDate = Object.create(null);
+    var maxScore = 0;
+
+    raw.forEach(function (d) {
       var learned  = Number(d.learned  || 0);
       var reviewed = Number(d.reviewed || 0);
       var seconds  = Number(d.seconds  || 0);
-      // простая эвристика: учёт, повторения и время
-      return learned * 4 + reviewed * 1 + seconds / 60;
+      var score = learned * 4 + reviewed * 1 + seconds / 60;
+
+      var key = (d.date || '').slice(0, 10); // предположительно YYYY-MM-DD
+      if (!key) return;
+
+      byDate[key] = {
+        data: d,
+        score: score
+      };
+
+      if (score > maxScore) maxScore = score;
     });
 
-    var max = scores.reduce(function (m, v) { return v > m ? v : m; }, 0);
-    if (max <= 0) {
-      // есть записи, но всё нули — считаем как «есть, но слабая активность»
-      max = 1;
+    if (maxScore <= 0) {
+      maxScore = 1;
     }
 
-    var dotsHtml = series
-      .map(function (d, idx) {
-        var s = scores[idx];
-        var ratio = s / max;
+    // 2) Строим "календарь" на 5 недель: строки = недели, колонки = Пн–Вс
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // перевести getDay() (0=Вс..6=Сб) в индекс (0=Пн..6=Вс)
+    function toMondayIndex(day) {
+      return (day + 6) % 7;
+    }
+
+    var weekdayLabels = texts.weekdayShort || ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+
+    // понедельник текущей недели
+    var mondayThisWeek = new Date(today.getTime());
+    var todayMondayIdx = toMondayIndex(today.getDay());
+    mondayThisWeek.setDate(mondayThisWeek.getDate() - todayMondayIdx);
+
+    // стартовая точка — понедельник 4 недели назад (итого 5 недель)
+    var startMonday = new Date(mondayThisWeek.getTime());
+    startMonday.setDate(startMonday.getDate() - 7 * 4);
+
+    function formatDateYMD(d) {
+      var year = d.getFullYear();
+      var month = d.getMonth() + 1;
+      var day = d.getDate();
+      return (
+        year +
+        '-' +
+        (month < 10 ? '0' + month : month) +
+        '-' +
+        (day < 10 ? '0' + day : day)
+      );
+    }
+
+    var cellsHtml = '';
+
+    for (var week = 0; week < 5; week++) {
+      for (var dow = 0; dow < 7; dow++) {
+        var dayDate = new Date(startMonday.getTime());
+        dayDate.setDate(startMonday.getDate() + week * 7 + dow);
+
+        var key = formatDateYMD(dayDate);
+        var entry = byDate[key];
         var lvl = 0;
-        if      (ratio >= 0.75) lvl = 3;
-        else if (ratio >= 0.5)  lvl = 2;
-        else if (ratio >= 0.25) lvl = 1;
-        else lvl = 0;
+        var title = '';
 
-        var title =
-          (d.date || '') +
-          (d.learned || d.reviewed || d.seconds
-            ? (' — +' + (d.learned || 0) + ' / ' + (d.reviewed || 0) + ' / ' + Math.round((d.seconds || 0) / 60) + ' мин')
-            : '');
+        if (entry) {
+          var ratio = entry.score / maxScore;
+          if (ratio >= 0.75) lvl = 3;
+          else if (ratio >= 0.5) lvl = 2;
+          else if (ratio >= 0.25) lvl = 1;
+          else lvl = 0;
 
-        // линия между неделями
-        var weekBreak = '';
-        if (idx > 0 && idx % 7 === 0) {
-          weekBreak = '<div class="stats-activity-week-break"></div>';
+          var d = entry.data;
+          title =
+            key +
+            ' — +' +
+            (d.learned || 0) +
+            ' / ' +
+            (d.reviewed || 0) +
+            ' / ' +
+            Math.round((d.seconds || 0) / 60) +
+            ' мин';
+        } else {
+          // нет данных по активности
+          // различаем прошлое / будущее только в тултипе
+          var isFuture = dayDate.getTime() > today.getTime();
+          title = isFuture ? key : (key + ' — без активности');
+          lvl = 0;
         }
 
-        // показываем подпись даты только у первого дня каждой недели
-        var dateLabel = '';
-        if (idx % 7 === 0 && d.date) {
-          var dt = new Date(d.date);
-          if (!isNaN(dt.getTime())) {
-            dateLabel = String(dt.getDate());
-          }
-        }
-
-        return (
-          weekBreak +
+        cellsHtml +=
           '<div class="stats-activity-cell">' +
             '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + '"' +
               (title ? ' title="' + title.replace(/"/g, '&quot;') + '"' : '') +
             '></div>' +
-            (dateLabel
-              ? '<span class="stats-activity-cell__date">' + dateLabel + '</span>'
-              : '') +
-          '</div>'
-        );
-      })
-      .join('');
+          '</div>';
+      }
+    }
+
+    // заголовок с днями недели
+    var weekdaysHtml =
+      '<div class="stats-activity-weekdays">' +
+        weekdayLabels
+          .map(function (label) {
+            return '<span class="stats-activity-weekday">' + label + '</span>';
+          })
+          .join('') +
+      '</div>';
 
     var legendHtml =
       '<div class="stats-activity-legend">' +
@@ -484,7 +538,8 @@
     return (
       '<section class="stats-section stats-section--activity">' +
         '<h2 class="stats-subtitle">' + texts.activityTitle + '</h2>' +
-        '<div class="stats-activity-grid">' + dotsHtml + '</div>' +
+        weekdaysHtml +
+        '<div class="stats-activity-grid">' + cellsHtml + '</div>' +
         legendHtml +
       '</section>'
     );
