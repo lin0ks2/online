@@ -328,30 +328,35 @@
 
 /* История по месяцам под календарём активности */
 .stats-activity-history {
-  margin-top: 14px;
+  margin-top: 18px;
   max-width: 260px;
   margin-left: auto;
   margin-right: auto;
   font-size: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148,163,184,0.35); /* как легенда */
 }
 
 .stats-activity-history__title {
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   opacity: 0.9;
-  text-align: left;
 }
 
 .stats-activity-history__list {
-  border-radius: 10px;
-  background: rgba(15, 23, 42, 0.35);
-  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .stats-activity-history__item {
-  padding: 6px 0;
-  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stats-activity-history__item:last-child {
+  border-bottom: none;
 }
 
 .stats-activity-history__item:first-child {
