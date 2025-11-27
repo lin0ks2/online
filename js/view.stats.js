@@ -140,7 +140,6 @@
 
   function isWordLearned(word, deckKey) {
     const trainer = A.Trainer;
-    // 1) Основной путь — через state.stars + App.starKey (как в app.decks.js)
     try {
       if (
         A.state &&
@@ -156,18 +155,14 @@
         const sc = Math.max(0, Math.min(sMax, raw));
         return sc >= sMax;
       }
-    } catch (e) {
-      // пойдём в запасной путь
-    }
+    } catch (e) {}
 
-    // 2) Безопасный фоллбэк — доверяем Trainer.isLearned, если он есть
     try {
       if (trainer && typeof trainer.isLearned === 'function') {
         return !!trainer.isLearned(word, deckKey);
       }
     } catch (e) {}
 
-    // 3) Если ничего нет — считаем слово невыученным (иначе будет "всё выучено")
     return false;
   }
 
@@ -176,7 +171,7 @@
   function computeStats() {
     const decksApi = A.Decks;
     const rawDecks = window.decks || {};
-    const byLang = {};
+       const byLang = {};
     const langOrder = [];
 
     if (!decksApi) {
@@ -434,6 +429,7 @@
             ? (' — +' + (d.learned || 0) + ' / ' + (d.reviewed || 0) + ' / ' + Math.round((d.seconds || 0) / 60) + ' мин')
             : '');
 
+        // каждые 7 дней начинаем новую строку (новая «неделя»)
         var weekBreak = '';
         if (idx > 0 && idx % 7 === 0) {
           weekBreak = '<div class="stats-activity-week-break"></div>';
