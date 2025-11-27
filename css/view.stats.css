@@ -263,11 +263,16 @@
   opacity: 0.6;
 }
 
-/* Легенда активности (последние 30 дней) */
 .stats-activity-legend {
-  margin-top: 10px;
+  margin-top: 16px;                 /* чуть дальше от календаря */
+  padding-top: 8px;                 /* внутренний отступ сверху */
+  border-top: 1px solid rgba(148, 163, 184, 0.35); /* тонкая линия-разделитель */
   font-size: 11px;
   opacity: 0.75;
+  text-align: center;               /* текст по центру */
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;               /* центрируем весь блок */
 }
 
 .stats-activity-legend__caption {
@@ -280,6 +285,7 @@
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  justify-content: center;          /* и сами элементы легенды по центру */
 }
 
 .stats-activity-legend__item {
