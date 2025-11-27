@@ -1,0 +1,315 @@
+/* ==========================================================
+   Проект: MOYAMOVA
+   Файл: view.stats.css
+   Назначение: Стили экрана статистики
+   Версия: 1.0
+   Обновлено: 2025-11-17
+   ========================================================== */
+
+/* Общий контейнер карточки статистики (поверх стандартной card/dicts-card) */
+.stats-card {
+  margin-top: 0px;
+}
+
+/* Список языков (карточки) */
+.stats-lang-list {
+  margin-top: 4px;
+}
+
+/* Карточка языка */
+.stats-lang-card {
+  position: relative;
+  padding: 10px 10px 10px 14px;
+  margin-bottom: 8px;
+
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.03),
+    0 8px 20px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stats-lang-card:last-child {
+  margin-bottom: 4px;
+}
+
+/* Активная карточка языка */
+.stats-lang-card.is-active {
+  box-shadow: 0 0 0 1px rgba(4, 120, 255, 0.17),
+    0 10px 24px rgba(4, 120, 255, 0.16);
+}
+
+/* Строка заголовка карточки */
+.stats-lang-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Название языка и прогресс */
+.stats-lang-card__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+/* Название языка */
+.stats-lang-card__lang-name {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Прогресс по словам */
+.stats-lang-card__progress-line {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Маленькая строка "словарей: ..." */
+.stats-lang-card__decks-line {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* Флажок языка в карточке */
+.stats-lang-card__flag {
+  flex: 0 0 auto;
+}
+
+/* Тонкая разделительная линия внутри карточки */
+.stats-lang-card__divider {
+  margin: 4px 0 2px;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.05);
+}
+
+/* Блок с кольцевой диаграммой + легенда */
+.stats-lang-card__rings {
+  margin-top: 4px;
+}
+
+/* Переопределяем стандартный отступ заголовка */
+.stats-title {
+  margin-bottom: 4px;
+}
+
+/* ---------------------- Кольцевые диаграммы ---------------------- */
+
+/* Обёртка для набора колец */
+.stats-ring-set {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Контейнер с кольцами */
+.stats-ring-set__rings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Одно кольцо */
+.stats-ring {
+  position: relative;
+  width: 58px;
+  height: 58px;
+}
+
+/* SVG внутри кольца */
+.stats-ring svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Текст по центру кольца */
+.stats-ring__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Подписи под кольцами */
+.stats-ring-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Одна строка легенды */
+.stats-ring-legend__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* Подпись категории */
+.stats-ring-legend__label {
+  flex: 1 1 auto;
+}
+
+/* Значения (выучено / всего) */
+.stats-ring-legend__value {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Немного более компактные кольца для "основных" частей речи */
+.stats-ring-set--core .stats-ring {
+  width: 54px;
+  height: 54px;
+}
+
+.stats-ring-set--core .stats-ring__label {
+  font-size: 10px;
+}
+
+.stats-ring-set--core .stats-ring-legend__item {
+  justify-content: center;
+  text-align: center;
+}
+
+.stats-ring-set--core .stats-ring-legend__label {
+  flex: 0 1 auto;
+}
+
+/* Блок "Активность" с круглыми точками */
+.stats-section--activity {
+  margin-top: 12px;
+  padding: 0 10px 12px;
+}
+
+.stats-placeholder--activity {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.stats-activity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+/* Круглая точка активности */
+.stats-activity-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #22c55e;
+  opacity: 0.25;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Уровни интенсивности */
+.stats-activity-dot--lvl0 { opacity: 0.25; }
+.stats-activity-dot--lvl1 { opacity: 0.55; }
+.stats-activity-dot--lvl2 { opacity: 0.8;  transform: scale(1.05); }
+.stats-activity-dot--lvl3 { opacity: 1;    transform: scale(1.15); }
+
+/* Переход на новую строку между неделями активности */
+.stats-activity-week-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Легенда для блока активности */
+.stats-activity-legend {
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.stats-activity-legend__caption {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stats-activity-legend__scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.stats-activity-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Небольшой hover-эффект (для десктопа) */
+@media (hover: hover) {
+  .stats-activity-dot:hover {
+    transform: scale(1.25);
+  }
+}
+
+/* ==========================================================
+ * Дополнение: экранная разбивка статистики + индикатор страниц
+ * Без изменений размеров кругов
+ * ========================================================== */
+
+/* Контейнер для "страниц" статистики (пока 3: языки, части речи, активность) */
+.stats-pages {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.stats-pages__track {
+  display: flex;
+  transition: transform 0.25s ease-out;
+}
+
+/* Отдельная "страница" статистики */
+.stats-page {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+/* Индикатор страниц (точки/дорожки) */
+.stats-pages-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* Одна точка/полоска индикатора */
+.stats-page-dot {
+  width: 22px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--muted, rgba(0, 0, 0, 0.25));
+  opacity: 0.9;
+  outline: none;
+}
+
+.stats-page-dot.is-active {
+  width: 52px;
+  height: 12px;
+  opacity: 1;
+  background: var(--brand, #35b6ff);
+}
+
+
+/* ========================= Конец файла: view.stats.css ========================= */
