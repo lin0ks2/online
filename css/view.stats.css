@@ -314,6 +314,11 @@
 .stats-activity-dot--lvl2 { opacity: 0.8;  transform: scale(1.05); }
 .stats-activity-dot--lvl3 { opacity: 1;    transform: scale(1.15); }
 
+/* Текущий день в календаре активности */
+.stats-activity-dot--today {
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.9); /* бирюзовый контур вокруг точки */
+}
+
 /* Небольшой hover-эффект (для десктопа) */
 @media (hover: hover) {
   .stats-activity-dot:hover {
