@@ -16,170 +16,178 @@
   margin-top: 4px;
 }
 
-/* Карточка языка */
+/* Одна карточка языка */
 .stats-lang-card {
-  position: relative;
-  padding: 10px 10px 10px 14px;
-  margin-bottom: 8px;
-
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.03),
-    0 8px 20px rgba(15, 23, 42, 0.06);
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: none;
 }
 
-.stats-lang-card:last-child {
-  margin-bottom: 4px;
-}
-
-/* Активная карточка языка */
 .stats-lang-card.is-active {
-  box-shadow: 0 0 0 1px rgba(4, 120, 255, 0.17),
-    0 10px 24px rgba(4, 120, 255, 0.16);
+  display: block;
 }
 
-/* Строка заголовка карточки */
+/* Шапка карточки (Выучено N из M / Словарей: ...) */
 .stats-lang-card__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  padding: 10px 12px 6px;
+  border-bottom: 1px solid var(--border-soft, rgba(255,255,255,0.04));
+  margin-bottom: 6px;
 }
 
-/* Название языка и прогресс */
-.stats-lang-card__title-block {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex: 1;
-}
-
-/* Название языка */
-.stats-lang-card__lang-name {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* Прогресс по словам */
-.stats-lang-card__progress-line {
+.stats-lang-card__title {
   font-size: 12px;
-  opacity: 0.8;
+  margin-bottom: 2px;
 }
 
-/* Маленькая строка "словарей: ..." */
-.stats-lang-card__decks-line {
+.stats-lang-card__meta {
+  opacity: 0.9;
+}
+
+.stats-lang-card__decks {
   font-size: 11px;
   opacity: 0.7;
 }
 
-/* Флажок языка в карточке */
-.stats-lang-card__flag {
-  flex: 0 0 auto;
+/* Тело карточки с кругами */
+.stats-lang-card__body {
+  padding: 8px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
 }
 
-/* Тонкая разделительная линия внутри карточки */
-.stats-lang-card__divider {
-  margin: 4px 0 2px;
-  height: 1px;
-  background: rgba(15, 23, 42, 0.05);
+/* Контейнер для двух наборов колец */
+.stats-ring-sets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Блок с кольцевой диаграммой + легенда */
-.stats-lang-card__rings {
-  margin-top: 4px;
-}
-
-/* Переопределяем стандартный отступ заголовка */
-.stats-title {
-  margin-bottom: 4px;
-}
-
-/* ---------------------- Кольцевые диаграммы ---------------------- */
-
-/* Обёртка для набора колец */
+/* Один набор колец (основные / другие части речи) */
 .stats-ring-set {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* Контейнер с кольцами */
-.stats-ring-set__rings {
+/* Визуальный круг-набор */
+.stats-ring-set__circle {
+  position: relative;
+  margin: 0 auto;
+  max-width: 260px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
-/* Одно кольцо */
-.stats-ring {
+/* Внутренний контейнер для слоёв-колец */
+.stats-ring-set__circle-inner {
   position: relative;
-  width: 58px;
-  height: 58px;
-}
-
-/* SVG внутри кольца */
-.stats-ring svg {
-  display: block;
   width: 100%;
   height: 100%;
-}
-
-/* Текст по центру кольца */
-.stats-ring__label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-size: 11px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Подписи под кольцами */
-.stats-ring-legend {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
-  font-size: 11px;
-  opacity: 0.8;
-}
-
-/* Одна строка легенды */
-.stats-ring-legend__item {
+  border-radius: 999px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4px;
+  justify-content: center;
 }
 
-/* Подпись категории */
+/* Подпись внутри круга (Основные / Другие части речи) */
+.stats-ring-set__caption {
+  position: absolute;
+  max-width: 70%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Один слой-кольцо (концентрический круг) */
+.stats-ring-layer {
+  position: absolute;
+  inset: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(var(--ring-scale, 1));
+}
+
+.stats-ring-layer__ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background:
+    conic-gradient(
+      var(--ring-color, #0ea5e9) var(--ring-angle, 0deg),
+      rgba(255,255,255,0.06) var(--ring-angle, 0deg)
+    );
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.7) inset,
+    0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* Легенда под кругом (по умолчанию — 2 колонки) */
+.stats-ring-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+  font-size: 12px;
+}
+
+.stats-ring-legend__item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stats-ring-legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--ring-color, #0ea5e9);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+}
+
 .stats-ring-legend__label {
-  flex: 1 1 auto;
+  flex: 1;
 }
 
-/* Значения (выучено / всего) */
 .stats-ring-legend__value {
-  flex: 0 0 auto;
-  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  opacity: 0.75;
+  font-size: 11px;
 }
 
-/* Немного более компактные кольца для "основных" частей речи */
-.stats-ring-set--core .stats-ring {
-  width: 54px;
-  height: 54px;
+/* Плейсхолдер "Активность и качество" снизу */
+.stats-section--placeholder {
+  margin-top: 16px;
+  padding: 0 10px 16px;
 }
 
-.stats-ring-set--core .stats-ring__label {
-  font-size: 10px;
+.stats-subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stats-placeholder {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+/* Адаптация на совсем узких экранах */
+@media (max-width: 360px) {
+  .stats-ring-legend {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Верхний набор колец (Основные части речи) — легенда в одну колонку и центр */
+.stats-ring-set--core .stats-ring-legend {
+  grid-template-columns: 1fr;
+  max-width: 260px;
+  margin: 0 auto;
 }
 
 .stats-ring-set--core .stats-ring-legend__item {
@@ -209,29 +217,13 @@
   margin-top: 10px;
 }
 
-/* Круглая точка активности */
-.stats-activity-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #22c55e;
-  opacity: 0.25;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-/* Уровни интенсивности */
-.stats-activity-dot--lvl0 { opacity: 0.25; }
-.stats-activity-dot--lvl1 { opacity: 0.55; }
-.stats-activity-dot--lvl2 { opacity: 0.8;  transform: scale(1.05); }
-.stats-activity-dot--lvl3 { opacity: 1;    transform: scale(1.15); }
-
-/* Переход на новую строку между неделями активности */
+/* перенос строки между неделями */
 .stats-activity-week-break {
   flex-basis: 100%;
   height: 0;
 }
 
-/* Легенда для блока активности */
+/* Легенда активности (последние 30 дней) */
 .stats-activity-legend {
   margin-top: 10px;
   font-size: 11px;
@@ -256,6 +248,22 @@
   gap: 4px;
 }
 
+/* Круглая точка активности */
+.stats-activity-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--stats-activity-color, #22c55e);
+  opacity: 0.25;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Уровни интенсивности */
+.stats-activity-dot--lvl0 { opacity: 0.25; }
+.stats-activity-dot--lvl1 { opacity: 0.55; }
+.stats-activity-dot--lvl2 { opacity: 0.8;  transform: scale(1.05); }
+.stats-activity-dot--lvl3 { opacity: 1;    transform: scale(1.15); }
+
 /* Небольшой hover-эффект (для десктопа) */
 @media (hover: hover) {
   .stats-activity-dot:hover {
@@ -268,37 +276,51 @@
  * Без изменений размеров кругов
  * ========================================================== */
 
-/* Контейнер для "страниц" статистики (пока 3: языки, части речи, активность) */
+/* Контейнер страниц (по умолчанию обычный поток) */
 .stats-pages {
-  position: relative;
-  overflow: hidden;
+  margin-top: 0;
+  flex: 1 1 auto;
 }
 
-/* Лента слайдов */
-.stats-pages__track {
-  display: flex;
-  transition: transform 0.25s ease-out;
-}
-
-/* Отдельная "страница" статистики */
+/* Одна страница статистики: показываем только активную */
 .stats-page {
-  flex: 0 0 100%;
-  box-sizing: border-box;
+  display: none;
 }
 
-/* Индикатор страниц (точки/дорожки) */
-.stats-pages-indicator {
+.stats-page.is-active {
+  display: block;
+}
+
+/* Вариант: один набор колец на странице */
+.stats-ring-sets--single {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Заголовок над кругом (Основные / Другие части речи) */
+.stats-ring-set__title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: .88;
+}
+
+/* Индикатор страниц статистики */
+.stats-pages-dots {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 6px;
-  margin-top: 8px;
+  gap: 8px;
 }
 
-/* Одна точка/полоска индикатора */
 .stats-page-dot {
-  width: 22px;
-  height: 8px;
+  width: 32px;
+  height: 11px;
   border-radius: 999px;
+  border: none;
+  padding: 0;
   background: var(--muted, rgba(0, 0, 0, 0.25));
   opacity: 0.9;
   outline: none;
