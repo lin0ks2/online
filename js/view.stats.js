@@ -73,11 +73,11 @@
           adjectives: 'Прилагательные',
           adverbs: 'Наречия',
           pronouns: 'Местоимения',
-          numerals: 'Числительные',
-          particles: 'Частицы',
           prepositions: 'Предлоги',
           conjunctions: 'Союзы',
-          interjections: 'Междометия',
+          particles: 'Частицы',
+          numbers: 'Числительные',
+          other: 'Другое'
         };
         const mapUk = {
           nouns: 'Іменники',
@@ -85,180 +85,252 @@
           adjectives: 'Прикметники',
           adverbs: 'Прислівники',
           pronouns: 'Займенники',
-          numerals: 'Числівники',
-          particles: 'Частки',
           prepositions: 'Прийменники',
           conjunctions: 'Сполучники',
-          interjections: 'Вигуки',
+          particles: 'Частки',
+          numbers: 'Числівники',
+          other: 'Інше'
         };
-        const map = uk ? mapUk : mapRu;
-        return map[pos] || pos;
-      },
+        const dict = uk ? mapUk : mapRu;
+        return dict[pos] || pos;
+      }
     };
   }
 
-  function clamp01(v) {
-    return v < 0 ? 0 : v > 1 ? 1 : v;
+  function posFromDeckKey(deckKey) {
+    const parts = String(deckKey || '').split('_');
+    return parts[1] || 'other';
   }
 
-  function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
-    const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
-    return {
-      x: centerX + radius * Math.cos(angleInRadians),
-      y: centerY + radius * Math.sin(angleInRadians),
-    };
+  function percent(part, total) {
+    if (!total || total <= 0) return 0;
+    return Math.round((part / total) * 100);
   }
 
-  function describeArc(x, y, radius, startAngle, endAngle) {
-    const start = polarToCartesian(x, y, radius, endAngle);
-    const end = polarToCartesian(x, y, radius, startAngle);
-
-    const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1';
-
-    const d = [
-      'M',
-      start.x,
-      start.y,
-      'A',
-      radius,
-      radius,
-      0,
-      largeArcFlag,
-      0,
-      end.x,
-      end.y,
-    ].join(' ');
-
-    return d;
+  function degreesFromPercent(p) {
+    return Math.round((p / 100) * 360);
   }
 
-  /* ---------------------- подготовка данных ---------------------- */
+  /* основные/прочие части речи и их "цвета" */
+  const CORE_POS = ['verbs', 'nouns', 'adjectives'];
+  const OTHER_POS_ORDER = [
+    'adverbs',
+    'pronouns',
+    'prepositions',
+    'conjunctions',
+    'particles',
+    'numbers',
+    'other'
+  ];
 
-  function groupStatsByLang(stats) {
+  const POS_COLORS = {
+    verbs: 'var(--stats-color-verbs, #0ea5e9)',
+    nouns: 'var(--stats-color-nouns, #6366f1)',
+    adjectives: 'var(--stats-color-adj, #f97316)',
+    adverbs: 'var(--stats-color-adv, #22c55e)',
+    pronouns: 'var(--stats-color-pron, #ec4899)',
+    prepositions: 'var(--stats-color-prep, #eab308)',
+    conjunctions: 'var(--stats-color-conj, #8b5cf6)',
+    particles: 'var(--stats-color-part, #14b8a6)',
+    numbers: 'var(--stats-color-num, #f59e0b)',
+    other: 'var(--stats-color-other, #9ca3af)'
+  };
+
+  /* ------------ ключевой момент: откуда берём "выучено" --------- */
+
+  function isWordLearned(word, deckKey) {
+    const trainer = A.Trainer;
+    // 1) Основной путь — через state.stars + App.starKey (как в app.decks.js)
+    try {
+      if (
+        A.state &&
+        A.state.stars &&
+        typeof A.starKey === 'function' &&
+        trainer &&
+        typeof trainer.starsMax === 'function'
+      ) {
+        const sMax = trainer.starsMax();
+        const starsMap = A.state.stars || {};
+        const sk = A.starKey(word.id, deckKey);
+        const raw = starsMap[sk] || 0;
+        const sc = Math.max(0, Math.min(sMax, raw));
+        return sc >= sMax;
+      }
+    } catch (e) {
+      // пойдём в запасной путь
+    }
+
+    // 2) Безопасный фоллбэк — доверяем Trainer.isLearned, если он есть
+    try {
+      if (trainer && typeof trainer.isLearned === 'function') {
+        return !!trainer.isLearned(word, deckKey);
+      }
+    } catch (e) {}
+
+    // 3) Если ничего нет — считаем слово невыученным (иначе будет "всё выучено")
+    return false;
+  }
+
+  /* ---------------------- подсчёт статистики ---------------------- */
+
+  function computeStats() {
+    const decksApi = A.Decks;
+    const rawDecks = window.decks || {};
     const byLang = {};
-    stats.forEach(function (deckStat) {
-      if (!deckStat.lang) return;
-      const lang = deckStat.lang;
-      if (!byLang[lang]) {
-        byLang[lang] = {
+    const langOrder = [];
+
+    if (!decksApi) {
+      return { byLang: [] };
+    }
+
+    let deckKeys = [];
+    if (typeof decksApi.builtinKeys === 'function') {
+      deckKeys = decksApi.builtinKeys() || [];
+    } else {
+      deckKeys = Object.keys(rawDecks).filter(function (k) {
+        return Array.isArray(rawDecks[k]) && rawDecks[k].length;
+      });
+    }
+
+    deckKeys.forEach(function (deckKey) {
+      let lang;
+      try {
+        lang = decksApi.langOfKey(deckKey);
+      } catch (_) {
+        return;
+      }
+      if (!lang) return;
+
+      const words = decksApi.resolveDeckByKey(deckKey) || [];
+      if (!words.length) return;
+
+      const pos = posFromDeckKey(deckKey);
+
+      let langBucket = byLang[lang];
+      if (!langBucket) {
+        langBucket = byLang[lang] = {
           lang: lang,
-          decks: [],
           totalWords: 0,
           learnedWords: 0,
+          byPos: {}, // pos -> { pos, total, learned, sampleDeckKey }
+          decks: []  // [{ key, name, totalWords, learnedWords }]
         };
+        langOrder.push(lang);
       }
-      byLang[lang].decks.push(deckStat);
-      byLang[lang].totalWords += deckStat.totalWords || 0;
-      byLang[lang].learnedWords += deckStat.learnedWords || 0;
-    });
-    return Object.keys(byLang)
-      .sort()
-      .map(function (lang) {
-        return byLang[lang];
+
+      let deckLearned = 0;
+
+      words.forEach(function (w) {
+        langBucket.totalWords += 1;
+
+        const posBucket =
+          (langBucket.byPos[pos] =
+            langBucket.byPos[pos] || {
+              pos: pos,
+              total: 0,
+              learned: 0,
+              sampleDeckKey: deckKey
+            });
+
+        posBucket.total += 1;
+
+        if (isWordLearned(w, deckKey)) {
+          langBucket.learnedWords += 1;
+          posBucket.learned += 1;
+          deckLearned += 1;
+        }
       });
+
+      let deckName = '';
+      try {
+        deckName = decksApi.resolveNameByKey(deckKey) || deckKey;
+      } catch (_) {
+        deckName = deckKey;
+      }
+
+      langBucket.decks.push({
+        key: deckKey,
+        name: deckName,
+        totalWords: words.length,
+        learnedWords: deckLearned
+      });
+    });
+
+    const langList = langOrder.map(function (lang) {
+      return byLang[lang];
+    });
+
+    return { byLang: langList };
   }
+
+  /* ---------------------- labels из словарей ---------------------- */
+
+  function resolvePosLabel(posBucket, texts) {
+    const decksApi = A.Decks;
+    let label = '';
+
+    if (
+      posBucket.sampleDeckKey &&
+      decksApi &&
+      typeof decksApi.resolveNameByKey === 'function'
+    ) {
+      try {
+        label = decksApi.resolveNameByKey(posBucket.sampleDeckKey) || '';
+      } catch (_) {
+        label = '';
+      }
+    }
+    if (!label) {
+      label = texts.fallbackPosName(posBucket.pos || '');
+    }
+    return label;
+  }
+
+  /* ---------------------- nested rings ---------------------- */
 
   function splitPosBuckets(langStat) {
-    const corePos = ['nouns', 'verbs', 'adjectives', 'adverbs'];
-    const buckets = {};
-    langStat.decks.forEach(function (deck) {
-      const pos = deck.pos || 'other';
-      if (!buckets[pos]) {
-        buckets[pos] = {
-          pos: pos,
-          totalWords: 0,
-          learnedWords: 0,
-          decks: [],
-        };
-      }
-      buckets[pos].decks.push(deck);
-      buckets[pos].totalWords += deck.totalWords || 0;
-      buckets[pos].learnedWords += deck.learnedWords || 0;
-    });
-
     const core = [];
     const other = [];
-    Object.keys(buckets).forEach(function (pos) {
-      const b = buckets[pos];
-      if (corePos.indexOf(pos) !== -1) {
-        core.push(b);
-      } else {
-        other.push(b);
-      }
+
+    Object.keys(langStat.byPos || {}).forEach(function (pos) {
+      const bucket = langStat.byPos[pos];
+      if (CORE_POS.indexOf(pos) !== -1) core.push(bucket);
+      else other.push(bucket);
     });
 
     core.sort(function (a, b) {
-      return (b.totalWords || 0) - (a.totalWords || 0);
+      return CORE_POS.indexOf(a.pos) - CORE_POS.indexOf(b.pos);
     });
+
     other.sort(function (a, b) {
-      return (b.totalWords || 0) - (a.totalWords || 0);
+      return OTHER_POS_ORDER.indexOf(a.pos) - OTHER_POS_ORDER.indexOf(b.pos);
     });
 
     return { core: core, other: other };
   }
 
-  /* ---------------------- кольца ---------------------- */
+  function renderRingSet(buckets, texts, groupKind) {
+    if (!buckets || !buckets.length) return '';
 
-  function renderRing(total, learned) {
-    const size = 58;
-    const strokeWidthBg = 6;
-    const strokeWidthFg = 6;
-    const radius = (size - strokeWidthFg) / 2;
-    const center = size / 2;
-    const progress = total > 0 ? clamp01(learned / total) : 0;
+    const ringCount = buckets.length;
 
-    const bgPath = describeArc(center, center, radius, 0, 359.999);
-    const endAngle = 359.999 * progress;
-    const fgPath =
-      progress > 0
-        ? describeArc(center, center, radius, 0, endAngle)
-        : '';
-
-    return (
-      '<svg viewBox="0 0 ' +
-      size +
-      ' ' +
-      size +
-      '" xmlns="http://www.w3.org/2000/svg">' +
-      '<path d="' +
-      bgPath +
-      '" fill="none" stroke="rgba(148, 163, 184, 0.35)" stroke-width="' +
-      strokeWidthBg +
-      '" stroke-linecap="round" />' +
-      (fgPath
-        ? '<path d="' +
-          fgPath +
-          '" fill="none" stroke="#0ea5e9" stroke-width="' +
-          strokeWidthFg +
-          '" stroke-linecap="round" />'
-        : '') +
-      '</svg>'
-    );
-  }
-
-  function renderRingSet(buckets, texts, variant) {
-    if (!buckets || !buckets.length) {
-      return '<div class="stats-ring-set stats-ring-set--empty"></div>';
-    }
-
-    const isCore = variant === 'core';
-
-    const ringsHtml = buckets
-      .map(function (bucket) {
-        const total = bucket.totalWords || 0;
-        const learned = bucket.learnedWords || 0;
-        const progress = total > 0 ? clamp01(learned / total) : 0;
-        const percent = Math.round(progress * 100);
-
-        const label =
-          percent + '%' + (isCore ? '' : '<br><span>' + (bucket.posName || '') + '</span>');
+    const layersHtml = buckets
+      .map(function (bucket, idx) {
+        const p = percent(bucket.learned, bucket.total);
+        const angle = degreesFromPercent(p);
+        const scale = ringCount === 1 ? 1 : 1 - idx * 0.18; // 1, 0.82, 0.64...
+        const color = POS_COLORS[bucket.pos] || POS_COLORS.other;
 
         return (
-          '<div class="stats-ring">' +
-          renderRing(total, learned) +
-          '<div class="stats-ring__label">' +
-          label +
-          '</div>' +
+          '<div class="stats-ring-layer" ' +
+          'style="--ring-angle:' +
+          angle +
+          'deg;--ring-scale:' +
+          scale +
+          ';--ring-color:' +
+          color +
+          ';">' +
+          '<div class="stats-ring-layer__ring"></div>' +
           '</div>'
         );
       })
@@ -266,35 +338,38 @@
 
     const legendHtml = buckets
       .map(function (bucket) {
-        const total = bucket.totalWords || 0;
-        const learned = bucket.learnedWords || 0;
-        const progress = total > 0 ? clamp01(learned / total) : 0;
-        const percent = Math.round(progress * 100);
-
+        const color = POS_COLORS[bucket.pos] || POS_COLORS.other;
+        const label = resolvePosLabel(bucket, texts);
+        const val = bucket.learned + ' / ' + bucket.total; // без процентов
         return (
-          '<div class="stats-ring-legend__item">' +
+          '<div class="stats-ring-legend__item" style="--ring-color:' +
+          color +
+          ';">' +
+          '<span class="stats-ring-legend__dot"></span>' +
           '<span class="stats-ring-legend__label">' +
-          (bucket.posName || '') +
+          label +
           '</span>' +
           '<span class="stats-ring-legend__value">' +
-          learned +
-          ' / ' +
-          total +
-          ' (' +
-          percent +
-          '%)' +
+          val +
           '</span>' +
           '</div>'
         );
       })
       .join('');
 
+    const caption = groupKind === 'core' ? texts.coreTitle : texts.otherTitle;
+
     return (
-      '<div class="stats-ring-set ' +
-      (isCore ? 'stats-ring-set--core' : '') +
+      '<div class="stats-ring-set stats-ring-set--' +
+      groupKind +
       '">' +
-      '<div class="stats-ring-set__rings">' +
-      ringsHtml +
+      '<div class="stats-ring-set__title">' +
+      caption +
+      '</div>' +
+      '<div class="stats-ring-set__circle">' +
+      '<div class="stats-ring-set__circle-inner">' +
+      layersHtml +
+      '</div>' +
       '</div>' +
       '<div class="stats-ring-legend">' +
       legendHtml +
@@ -305,73 +380,39 @@
 
   /* ---------------------- АКТИВНОСТЬ (круглые точки) ----------- */
 
-  // Ожидаемый формат, если когда-нибудь реализуем:
-  // App.Stats.getDailyActivity(lang) -> [
-  //   { date: '2025-11-10', learned: 12, reviewed: 40, seconds: 600 },
-  //   ...
-  // ]
-  function getDailyActivitySeries(lang) {
-    const Stats = A.Stats;
-    if (!Stats || typeof Stats.getDailyActivity !== 'function') {
-      return [];
-    }
-
-    const raw = Stats.getDailyActivity(lang) || [];
-    const now = new Date();
-    const cutoff = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate() - 29
-    ).getTime();
-
-    const series = [];
-
-    raw.forEach(function (item) {
-      const t = new Date(item.date).getTime();
-      if (isNaN(t) || t < cutoff) return;
-      series.push({
-        date: item.date,
-        learned: Number(item.learned || 0),
-        reviewed: Number(item.reviewed || 0),
-        seconds: Number(item.seconds || 0),
-      });
-    });
-
-    series.sort(function (a, b) {
-      return new Date(a.date) - new Date(b.date);
-    });
-
-    return series;
+  function getDailyActivitySeries(langCode) {
+    try {
+      if (A.Stats && typeof A.Stats.getDailyActivity === 'function') {
+        var arr = A.Stats.getDailyActivity(langCode) || [];
+        if (Array.isArray(arr)) return arr;
+      }
+    } catch (_) {}
+    return [];
   }
 
-  function renderActivitySection(lang, texts) {
-    const series = getDailyActivitySeries(lang);
-
+  function renderActivitySection(langCode, texts) {
+    var series = getDailyActivitySeries(langCode);
     if (!series.length) {
       return (
         '<section class="stats-section stats-section--activity">' +
-        '<h2 class="stats-subtitle">' +
-        texts.activityTitle +
-        '</h2>' +
-        '<p class="stats-placeholder stats-placeholder--activity">' +
-        texts.activityNoData +
-        '</p>' +
+          '<h2 class="stats-subtitle">' + texts.activityTitle + '</h2>' +
+          '<p class="stats-placeholder stats-placeholder--activity">' +
+            texts.activityNoData +
+          '</p>' +
         '</section>'
       );
     }
 
     // Превращаем метрики в «интенсивность» точки
     var scores = series.map(function (d) {
-      var learned = Number(d.learned || 0);
+      var learned  = Number(d.learned  || 0);
       var reviewed = Number(d.reviewed || 0);
-      var seconds = Number(d.seconds || 0);
+      var seconds  = Number(d.seconds  || 0);
       // простая эвристика: учёт, повторения и время
       return learned * 4 + reviewed * 1 + seconds / 60;
     });
 
-    var max = scores.reduce(function (m, v) {
-      return v > m ? v : m;
-    }, 0);
+    var max = scores.reduce(function (m, v) { return v > m ? v : m; }, 0);
     if (max <= 0) {
       // есть записи, но всё нули — считаем как «есть, но слабая активность»
       max = 1;
@@ -382,24 +423,17 @@
         var s = scores[idx];
         var ratio = s / max;
         var lvl = 0;
-        if (ratio >= 0.75) lvl = 3;
-        else if (ratio >= 0.5) lvl = 2;
+        if      (ratio >= 0.75) lvl = 3;
+        else if (ratio >= 0.5)  lvl = 2;
         else if (ratio >= 0.25) lvl = 1;
         else lvl = 0;
 
         var title =
           (d.date || '') +
           (d.learned || d.reviewed || d.seconds
-            ? ' — +' +
-              (d.learned || 0) +
-              ' / ' +
-              (d.reviewed || 0) +
-              ' / ' +
-              Math.round((d.seconds || 0) / 60) +
-              ' мин'
+            ? (' — +' + (d.learned || 0) + ' / ' + (d.reviewed || 0) + ' / ' + Math.round((d.seconds || 0) / 60) + ' мин')
             : '');
 
-        // каждые 7 дней начинаем новую строку (новая «неделя»)
         var weekBreak = '';
         if (idx > 0 && idx % 7 === 0) {
           weekBreak = '<div class="stats-activity-week-break"></div>';
@@ -407,12 +441,8 @@
 
         return (
           weekBreak +
-          '<div class="stats-activity-dot stats-activity-dot--lvl' +
-          lvl +
-          '"' +
-          (title
-            ? ' title="' + title.replace(/"/g, '&quot;') + '"'
-            : '') +
+          '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + '"' +
+            (title ? ' title="' + title.replace(/"/g, '&quot;') + '"' : '') +
           '></div>'
         );
       })
@@ -420,40 +450,28 @@
 
     var legendHtml =
       '<div class="stats-activity-legend">' +
-      '<span class="stats-activity-legend__caption">' +
-      texts.activityLegendCaption +
-      '</span>' +
-      '<div class="stats-activity-legend__scale">' +
-      '<span class="stats-activity-legend__item">' +
-      '<span class="stats-activity-dot stats-activity-dot--lvl1"></span>' +
-      '<span>' +
-      texts.activityLegendLow +
-      '</span>' +
-      '</span>' +
-      '<span class="stats-activity-legend__item">' +
-      '<span class="stats-activity-dot stats-activity-dot--lvl2"></span>' +
-      '<span>' +
-      texts.activityLegendMid +
-      '</span>' +
-      '</span>' +
-      '<span class="stats-activity-legend__item">' +
-      '<span class="stats-activity-dot stats-activity-dot--lvl3"></span>' +
-      '<span>' +
-      texts.activityLegendHigh +
-      '</span>' +
-      '</span>' +
-      '</div>' +
+        '<span class="stats-activity-legend__caption">' + texts.activityLegendCaption + '</span>' +
+        '<div class="stats-activity-legend__scale">' +
+          '<span class="stats-activity-legend__item">' +
+            '<span class="stats-activity-dot stats-activity-dot--lvl1"></span>' +
+            '<span>' + texts.activityLegendLow + '</span>' +
+          '</span>' +
+          '<span class="stats-activity-legend__item">' +
+            '<span class="stats-activity-dot stats-activity-dot--lvl2"></span>' +
+            '<span>' + texts.activityLegendMid + '</span>' +
+          '</span>' +
+          '<span class="stats-activity-legend__item">' +
+            '<span class="stats-activity-dot stats-activity-dot--lvl3"></span>' +
+            '<span>' + texts.activityLegendHigh + '</span>' +
+          '</span>' +
+        '</div>' +
       '</div>';
 
     return (
       '<section class="stats-section stats-section--activity">' +
-      '<h2 class="stats-subtitle">' +
-      texts.activityTitle +
-      '</h2>' +
-      '<div class="stats-activity-grid">' +
-      dotsHtml +
-      '</div>' +
-      legendHtml +
+        '<h2 class="stats-subtitle">' + texts.activityTitle + '</h2>' +
+        '<div class="stats-activity-grid">' + dotsHtml + '</div>' +
+        legendHtml +
       '</section>'
     );
   }
@@ -478,13 +496,13 @@
         let completed = 0;
         langStat.decks.forEach(function (d) {
           if (d.learnedWords > 0) started += 1;
-          if (d.totalWords > 0 && d.learnedWords >= d.totalWords)
-            completed += 1;
+          if (d.totalWords > 0 && d.learnedWords >= d.totalWords) completed += 1;
         });
 
         const split = splitPosBuckets(langStat);
         const coreSetHtml = renderRingSet(split.core, texts, 'core');
         const otherSetHtml = renderRingSet(split.other, texts, 'other');
+        const activityHtml = renderActivitySection(langCode, texts);
 
         return (
           '<article class="stats-lang-card' +
@@ -493,33 +511,36 @@
           langCode +
           '">' +
           '<header class="stats-lang-card__header">' +
-          '<div class="stats-lang-card__title-block">' +
-          '<div class="stats-lang-card__lang-name">' +
-          langCode.toUpperCase() +
-          '</div>' +
-          '<div class="stats-lang-card__progress-line">' +
+          '<div class="stats-lang-card__title">' +
+          '<span class="stats-lang-card__meta">' +
           texts.learnedLangShort(learned, total) +
+          '</span>' +
           '</div>' +
-          '<div class="stats-lang-card__decks-line">' +
+          '<div class="stats-lang-card__decks">' +
           texts.decksSummary(started, completed, langStat.decks.length) +
           '</div>' +
-          '</div>' +
-          '<div class="stats-lang-card__flag">' +
-          (A.renderLangFlag ? A.renderLangFlag(langCode, 32) : '') +
-          '</div>' +
           '</header>' +
-          '<div class="stats-lang-card__divider"></div>' +
-          '<div class="stats-lang-card__rings">' +
-          '<h3 class="stats-subsubtitle">' +
-          texts.coreTitle +
-          '</h3>' +
-          coreSetHtml +
+          '<div class="stats-lang-card__body">' +
+          '<div class="stats-pages">' +
+            '<div class="stats-page stats-page--core is-active" data-page="0">' +
+              '<div class="stats-ring-sets stats-ring-sets--single">' +
+                coreSetHtml +
+              '</div>' +
+            '</div>' +
+            '<div class="stats-page stats-page--other" data-page="1">' +
+              '<div class="stats-ring-sets stats-ring-sets--single">' +
+                otherSetHtml +
+              '</div>' +
+            '</div>' +
+            '<div class="stats-page stats-page--analytics" data-page="2">' +
+              activityHtml +
+            '</div>' +
           '</div>' +
-          '<div class="stats-lang-card__rings">' +
-          '<h3 class="stats-subsubtitle">' +
-          texts.otherTitle +
-          '</h3>' +
-          otherSetHtml +
+          '<div class="stats-pages-dots">' +
+            '<button class="stats-page-dot is-active" type="button" data-page="0"></button>' +
+            '<button class="stats-page-dot" type="button" data-page="1"></button>' +
+            '<button class="stats-page-dot" type="button" data-page="2"></button>' +
+          '</div>' +
           '</div>' +
           '</article>'
         );
@@ -529,127 +550,202 @@
     return '<div class="stats-lang-list">' + items + '</div>';
   }
 
-  /* ---------------------- странички статистики ---------------------- */
+  /* ---------------------- плейсхолдер ---------------------- */
 
-  function renderStatsPages(langStats, texts, activeLang) {
-    const track =
-      '<div class="stats-pages__track">' +
-      '<div class="stats-page stats-page--langs">' +
-      renderLangCards(langStats, texts, activeLang) +
-      '</div>' +
-      '<div class="stats-page stats-page--placeholder">' +
+  function renderPlaceholderSection(texts) {
+    return (
+      '<section class="stats-section stats-section--placeholder">' +
       '<h2 class="stats-subtitle">' +
       texts.placeholderTitle +
       '</h2>' +
       '<p class="stats-placeholder">' +
       texts.placeholderText +
       '</p>' +
-      '</div>' +
-      '<div class="stats-page stats-page--activity">' +
-      renderActivitySection(activeLang, texts) +
-      '</div>' +
-      '</div>';
-
-    const indicator =
-      '<div class="stats-pages-indicator">' +
-      '<button class="stats-page-dot is-active" data-page="0"></button>' +
-      '<button class="stats-page-dot" data-page="1"></button>' +
-      '<button class="stats-page-dot" data-page="2"></button>' +
-      '</div>';
-
-    return (
-      '<div class="stats-pages">' + track + '</div>' + indicator
+      '</section>'
     );
   }
 
-  function attachStatsPagesBehavior(rootEl) {
-    const track = rootEl.querySelector('.stats-pages__track');
-    const dots = Array.prototype.slice.call(
-      rootEl.querySelectorAll('.stats-page-dot')
-    );
-    if (!track || !dots.length) return;
+  /* ---------------------- флаги (как в Словарях) ------------ */
 
-    function setPage(idx) {
-      const clamped = Math.max(0, Math.min(dots.length - 1, idx));
-      track.style.transform = 'translateX(-' + clamped * 100 + '%)';
-      dots.forEach(function (dot, i) {
-        dot.classList.toggle('is-active', i === clamped);
+  function setupLangFlags(root, langStats, activeLangInitial) {
+    const box = root.querySelector('#stats-flags');
+    if (!box || !langStats.length) return;
+
+    const langs = langStats.map(function (ls) {
+      return ls.lang;
+    });
+    let activeLang =
+      activeLangInitial && langs.indexOf(activeLangInitial) !== -1
+        ? activeLangInitial
+        : langs[0];
+
+    const FLAG = {
+      en: '🇬🇧',
+      de: '🇩🇪',
+      fr: '🇫🇷',
+      es: '🇪🇸',
+      it: '🇮🇹',
+      ru: '🇷🇺',
+      uk: '🇺🇦',
+      sr: '🇷🇸',
+      pl: '🇵🇱'
+    };
+
+    function applyActive(lang) {
+      activeLang = lang;
+
+      box.querySelectorAll('.dict-flag').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.lang === lang);
       });
+
+      root.querySelectorAll('.stats-lang-card').forEach(function (card) {
+        const cl = card.getAttribute('data-lang');
+        card.classList.toggle('is-active', cl === lang);
+      });
+
+      try {
+        A.settings = A.settings || {};
+        A.settings.statsLang = lang;
+      } catch (_) {}
     }
 
-    dots.forEach(function (dot, idx) {
-      dot.addEventListener('click', function () {
-        setPage(idx);
+    box.innerHTML = '';
+    langs.forEach(function (lang) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'dict-flag' + (lang === activeLang ? ' active' : '');
+      btn.dataset.lang = lang;
+      btn.title = lang.toUpperCase();
+      btn.textContent = FLAG[lang] || lang.toUpperCase();
+      btn.addEventListener('click', function () {
+        if (lang === activeLang) return;
+        applyActive(lang);
+      });
+      box.appendChild(btn);
+    });
+
+    applyActive(activeLang);
+  }
+
+  /* ---------------------- выбор активного языка ------------ */
+
+  function detectActiveTrainLang(statsByLang) {
+    if (!statsByLang || !statsByLang.length) return null;
+
+    try {
+      if (
+        A.settings &&
+        A.settings.statsLang &&
+        statsByLang.some(function (b) {
+          return b.lang === A.settings.statsLang;
+        })
+      ) {
+        return A.settings.statsLang;
+      }
+    } catch (_) {}
+
+    try {
+      if (
+        A.Trainer &&
+        typeof A.Trainer.getDeckKey === 'function' &&
+        A.Decks &&
+        typeof A.Decks.langOfKey === 'function'
+      ) {
+        const dk = A.Trainer.getDeckKey();
+        if (dk) {
+          const lang = A.Decks.langOfKey(dk);
+          if (
+            lang &&
+            statsByLang.some(function (b) {
+              return b.lang === lang;
+            })
+          ) {
+            return lang;
+          }
+        }
+      }
+    } catch (_) {}
+
+    const withProgress = statsByLang.filter(function (b) {
+      return (b.learnedWords || 0) > 0;
+    });
+    if (withProgress.length) return withProgress[0].lang;
+
+    return statsByLang[0].lang;
+  }
+
+  /* ---------------------- Пейджер по трём экранам ---------------------- */
+
+  function setupStatsPager(root) {
+    if (!root) return;
+
+    var cards = root.querySelectorAll('.stats-lang-card');
+    if (!cards.length) return;
+
+    cards.forEach(function (card) {
+      var body = card.querySelector('.stats-lang-card__body');
+      if (!body) return;
+
+      var pages = body.querySelectorAll('.stats-page');
+      var dots  = body.querySelectorAll('.stats-page-dot');
+      if (!pages.length || !dots.length) return;
+
+      var current = 0;
+
+      function goTo(idx) {
+        if (idx < 0) idx = 0;
+        if (idx > pages.length - 1) idx = pages.length - 1;
+        current = idx;
+
+        pages.forEach(function (page, i) {
+          page.classList.toggle('is-active', i === current);
+        });
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('is-active', i === current);
+        });
+      }
+
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function (evt) {
+          evt.preventDefault();
+          var p = Number(dot.getAttribute('data-page') || 0) || 0;
+          goTo(p);
+        });
       });
     });
   }
 
-  /* ---------------------- основной рендер ---------------------- */
+  function mount() {
+    const app = document.getElementById('app');
+    if (!app) return;
 
-  function renderStatsView(container) {
     const texts = t();
-    const Stats = A.Stats;
-    if (!Stats || typeof Stats.getDeckStats !== 'function') {
-      container.innerHTML =
-        '<p class="stats-placeholder">Статистика пока недоступна.</p>';
-      return;
-    }
+    const stats = computeStats();
+    const activeLang = detectActiveTrainLang(stats.byLang);
 
-    const deckStats = Stats.getDeckStats() || [];
-    const langStats = groupStatsByLang(deckStats);
-
-    const activeLang =
-      (A.settings && A.settings.currentLang) ||
-      (langStats[0] && langStats[0].lang) ||
-      'de';
+    const cardsHtml = renderLangCards(stats.byLang, texts, activeLang);
 
     const html =
-      '<section class="stats-card">' +
-      '<h1 class="stats-title">' +
+      '<div class="home">' +
+      '<section class="card dicts-card stats-card">' +
+      '<div class="dicts-header">' +
+      '<h3>' +
       texts.title +
-      '</h1>' +
-      renderStatsPages(langStats, texts, activeLang) +
-      '</section>';
+      '</h3>' +
+      '<div id="stats-flags" class="dicts-flags"></div>' +
+      '</div>' +
+      cardsHtml +
+      '</section>' +
+      // renderPlaceholderSection(texts) +
+      '</div>';
 
-    container.innerHTML = html;
-
-    attachStatsPagesBehavior(container);
-
-    const langCards = Array.prototype.slice.call(
-      container.querySelectorAll('.stats-lang-card')
-    );
-    langCards.forEach(function (card) {
-      card.addEventListener('click', function () {
-        const lang = card.getAttribute('data-lang');
-        if (!lang) return;
-
-        langCards.forEach(function (c) {
-          c.classList.toggle('is-active', c === card);
-        });
-
-        const statsPages = container.querySelector('.stats-pages');
-        if (!statsPages) return;
-        const newHtml = renderStatsPages(langStats, texts, lang);
-        const temp = document.createElement('div');
-        temp.innerHTML = newHtml;
-        const newPages = temp.querySelector('.stats-pages');
-        const newIndicator = temp.querySelector('.stats-pages-indicator');
-
-        const oldPages = container.querySelector('.stats-pages');
-        const oldIndicator = container.querySelector(
-          '.stats-pages-indicator'
-        );
-        if (oldPages && newPages && oldPages.parentNode) {
-          oldPages.parentNode.replaceChild(newPages, oldPages);
-        }
-        if (oldIndicator && newIndicator && oldIndicator.parentNode) {
-          oldIndicator.parentNode.replaceChild(newIndicator, oldIndicator);
-        }
-
-        attachStatsPagesBehavior(container);
-      });
-    });
+    app.innerHTML = html;
+    setupLangFlags(app, stats.byLang, activeLang);
+    setupStatsPager(app);
   }
 
-  A.renderStatsView = renderStatsView;
+  A.ViewStats = {
+    mount: mount
+  };
 })();
+/* ========================= Конец файла: view.stats.js ========================= */
