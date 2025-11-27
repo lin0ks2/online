@@ -1,9 +1,19 @@
-// js/analytics.js
-// Лёгкая обёртка над GA4 + события тренировок
+/* ==========================================================
+ * Проект: MOYAMOVA
+ * Файл: analytics.js
+ * Назначение: Обёртка над GA4 + события тренировок
+ * Версия: 1.0
+ * Обновлено: 2025-11-27
+ * ========================================================== */
+
 (function () {
   'use strict';
 
+  /* ---------------------- namespace ---------------------- */
+
   var A = (window.App = window.App || {});
+
+  /* ---------------------- low-level helpers ---------------------- */
 
   function hasGA() {
     return typeof window.gtag === 'function';
@@ -13,21 +23,22 @@
     if (!hasGA()) return;
     try {
       window.gtag('event', eventName, params || {});
-    } catch (e) {
-      // no-op
-    }
+    } catch (_) {}
   }
 
   function safeSetUserProps(props) {
     if (!hasGA()) return;
     try {
       window.gtag('set', 'user_properties', props || {});
-    } catch (e) {
-      // no-op
-    }
+    } catch (_) {}
+  }
+
+  function nowMs() {
+    return (typeof Date.now === 'function') ? Date.now() : new Date().getTime();
   }
 
   function detectAppMode() {
+    // PWA / standalone
     try {
       if (
         window.matchMedia &&
@@ -35,6 +46,7 @@
       ) {
         return 'pwa';
       }
+      // iOS standalone
       if (window.navigator && window.navigator.standalone) {
         return 'pwa';
       }
@@ -42,12 +54,9 @@
     return 'web';
   }
 
-  function nowMs() {
-    return Date.now ? Date.now() : new Date().getTime();
-  }
+  /* ---------------------- training state ---------------------- */
 
-  // ----------------- состояние тренировки -----------------
-
+  // Внутреннее состояние сессии тренировки
   var trainingState = {
     active: false,
     startedAt: null,
@@ -59,8 +68,8 @@
     heartbeatTimer: null
   };
 
-  // интервал heartbeat в миллисекундах (можно 30000–60000)
-  var HEARTBEAT_INTERVAL = 40000;
+  // Интервал отправки "пульса" в миллисекундах
+  var HEARTBEAT_INTERVAL = 40000; // 40 секунд
 
   function clearHeartbeatTimer() {
     if (trainingState.heartbeatTimer) {
@@ -80,6 +89,7 @@
         clearHeartbeatTimer();
         return;
       }
+
       var now = nowMs();
       var elapsedSec = Math.round((now - trainingState.startedAt) / 1000);
 
@@ -95,8 +105,12 @@
     }, HEARTBEAT_INTERVAL);
   }
 
-  // ----------------- публичный API -----------------
+  /* ---------------------- public API: user props ---------------------- */
 
+  /**
+   * Полная установка user_properties.
+   * Если какие-то поля не переданы — берём из текущего состояния.
+   */
   function setUserProps(baseProps) {
     baseProps = baseProps || {};
 
@@ -113,6 +127,10 @@
     safeSetUserProps(merged);
   }
 
+  /**
+   * Частичное обновление user_properties.
+   * Сейчас используется для смены языка и т.п.
+   */
   function updateUserProps(partial) {
     partial = partial || {};
     setUserProps({
@@ -122,26 +140,31 @@
     });
   }
 
+  /* ---------------------- public API: общие события ---------------------- */
+
   function track(eventName, params) {
     safeTrack(eventName, params);
   }
 
+  /* ---------------------- public API: training ---------------------- */
+
   /**
-   * Начало тренировки.
+   * Начало сессии тренировки.
+   *
    * opts:
-   *  - learnLang: 'de' / 'en' ...
+   *  - learnLang: 'de' / 'en' / ...
    *  - uiLang: 'ru' / 'uk'
-   *  - deckKey: 'de_verbs' и т.п.
+   *  - deckKey: 'de_verbs' / 'en_nouns' и т.д.
    */
   function trainingStart(opts) {
     opts = opts || {};
 
-    // если уже активна тренировка и словарь не поменялся — не дублируем
+    // если уже активна сессия и словарь не поменялся — не дублируем
     if (trainingState.active && trainingState.deckKey === opts.deckKey) {
       return;
     }
 
-    // если была активная — сначала завершить
+    // если была активная — аккуратно завершаем её
     if (trainingState.active) {
       trainingEnd({ reason: 'restart' });
     }
@@ -154,7 +177,7 @@
     trainingState.deckKey = opts.deckKey || null;
     trainingState.appMode = detectAppMode();
 
-    // сразу выставим user props
+    // сразу прокинем user properties
     setUserProps({
       learn_lang: trainingState.learnLang,
       ui_lang: trainingState.uiLang,
@@ -172,9 +195,10 @@
   }
 
   /**
-   * Завершение тренировки.
+   * Завершение сессии тренировки.
+   *
    * opts:
-   *  - reason: 'route_change' / 'blur' / 'manual' / 'restart'
+   *  - reason: 'route_change:stats' / 'hidden' / 'manual' / 'restart' / ...
    */
   function trainingEnd(opts) {
     opts = opts || {};
@@ -198,12 +222,16 @@
     trainingState.startedAt = null;
     trainingState.lastHeartbeatAt = null;
     trainingState.deckKey = null;
-    // язык/режим оставляем — они ещё актуальны для user props
+    // learnLang/uiLang/appMode оставляем в state — они актуальны для user props
   }
 
-  // опционально можно дергать вручную из кода, если нужно моментально "пингнуть"
+  /**
+   * Ручной "пинг" тренировки (используется редко, в основном для heartbeat loop).
+   * Можно дергать вручную, если понадобится зафиксировать какой-то момент.
+   */
   function trainingPing(extraParams) {
     if (!trainingState.active) return;
+
     var now = nowMs();
     var elapsedSec = Math.round((now - trainingState.startedAt) / 1000);
 
@@ -218,20 +246,21 @@
     trainingState.lastHeartbeatAt = now;
   }
 
-  // ----------------- интеграция с видимостью вкладки -----------------
+  /* ---------------- visibility / lifecycle integration --------------- */
 
-  // если приложение сворачивают — аккуратно завершим сессию тренировки
+  // Если вкладка/приложение скрывается (в т.ч. PWA свернули),
+  // аккуратно завершим активную сессию тренировки.
   if (typeof document !== 'undefined' && document.addEventListener) {
     document.addEventListener('visibilitychange', function () {
-      if (document.visibilityState === 'hidden') {
-        if (trainingState.active) {
+      try {
+        if (document.visibilityState === 'hidden' && trainingState.active) {
           trainingEnd({ reason: 'hidden' });
         }
-      }
+      } catch (_) {}
     });
   }
 
-  // ----------------- экспорт -----------------
+  /* ---------------------- export to App ---------------------- */
 
   A.Analytics = {
     track: track,
@@ -243,3 +272,5 @@
     trainingPing: trainingPing
   };
 })();
+
+/* ======================= Конец файла: analytics.js ======================= */
