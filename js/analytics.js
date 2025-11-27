@@ -191,6 +191,11 @@
       app_mode: trainingState.appMode || null
     });
 
+    // сразу отправим первый heartbeat, чтобы было видно онлайн мгновенно
+    try {
+      trainingPing({ reason: 'start' });
+    } catch (_) {}
+
     startHeartbeatLoop();
   }
 
@@ -217,6 +222,16 @@
       duration_sec: durationSec,
       reason: opts.reason || null
     });
+
+    // локальная статистика времени тренировки (3-й экран)
+    try {
+      if (window.App && window.App.Stats && typeof window.App.Stats.bump === 'function') {
+        window.App.Stats.bump({
+          lang: trainingState.learnLang || null,
+          seconds: durationSec
+        });
+      }
+    } catch (_) {}
 
     trainingState.active = false;
     trainingState.startedAt = null;
