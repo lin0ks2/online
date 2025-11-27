@@ -604,6 +604,14 @@ function activeDeckKey() {
           solved = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, true); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
+
+          // аналитика: пинг при правильном ответе
+          try {
+            if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+              A.Analytics.trainingPing({ reason: 'answer_correct' });
+            }
+          } catch (_) {}
+
           b.classList.add('is-correct');
           answers.querySelectorAll('.answer-btn').forEach(btn => {
             if (btn !== b) btn.classList.add('is-dim');
@@ -621,6 +629,14 @@ function activeDeckKey() {
           penalized = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, false); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
+
+          // аналитика: пинг при неправильном ответе
+          try {
+            if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+              A.Analytics.trainingPing({ reason: 'answer_wrong' });
+            }
+          } catch (_) {}
+
           try {
             const isMistDeck = !!(A.Mistakes  && A.Mistakes.isMistakesDeckKey   && A.Mistakes.isMistakesDeckKey(key));
             const isFavDeck  = !!(A.Favorites && A.Favorites.isFavoritesDeckKey && A.Favorites.isFavoritesDeckKey(key))
@@ -643,6 +659,14 @@ function activeDeckKey() {
         const correctBtn = answers.querySelector('.answer-btn[data-id="' + String(word.id) + '"]');
         if (correctBtn) correctBtn.classList.add('is-correct');
         lockAll(word.id);
+
+        // аналитика: пинг при "не знаю"
+        try {
+          if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+            A.Analytics.trainingPing({ reason: 'answer_idk' });
+          }
+        } catch (_) {}
+
         setTimeout(() => { renderSets(); renderTrainer(); }, ADV_DELAY);
       };
     }
