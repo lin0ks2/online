@@ -389,7 +389,7 @@
     return [];
   }
 
-      function renderActivitySection(langCode, texts) {
+        function renderActivitySection(langCode, texts) {
     var raw = getDailyActivitySeries(langCode);
     if (!raw.length) {
       return (
@@ -490,16 +490,17 @@
             Math.round((d.seconds || 0) / 60) +
             ' мин';
         } else {
-          // нет данных по активности
-          // различаем прошлое / будущее только в тултипе
           var isFuture = dayDate.getTime() > today.getTime();
           title = isFuture ? key : (key + ' — без активности');
           lvl = 0;
         }
 
+        var isToday = dayDate.getTime() === today.getTime();
+        var todayClass = isToday ? ' stats-activity-dot--today' : '';
+
         cellsHtml +=
           '<div class="stats-activity-cell">' +
-            '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + '"' +
+            '<div class="stats-activity-dot stats-activity-dot--lvl' + lvl + todayClass + '"' +
               (title ? ' title="' + title.replace(/"/g, '&quot;') + '"' : '') +
             '></div>' +
           '</div>';
