@@ -211,10 +211,33 @@
 }
 
 .stats-activity-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 4px;
-  margin-top: 10px; /* было 4px, немного отодвинули точки от заголовка */
+  margin-top: 6px; /* чуть ближе к дням недели, сверху будет заголовок */
+}
+
+/* Заголовок с днями недели (Пн–Вс) */
+.stats-activity-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 10px;
+  opacity: 0.65;
+  text-align: center;
+}
+
+/* Одна колонка названия дня недели */
+.stats-activity-weekday {
+  line-height: 1;
+}
+
+/* Одна "ячейка" календаря: точка + (в будущем можно добавить подписи) */
+.stats-activity-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* перенос строки между неделями */
