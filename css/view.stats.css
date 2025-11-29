@@ -453,8 +453,8 @@
 }
 
 .stats-page-dot {
-  width: 32px;
-  height: 11px;
+  width: 6px;
+  height: 6px;
   border-radius: 999px;
   border: none;
   padding: 0;
@@ -464,8 +464,8 @@
 }
 
 .stats-page-dot.is-active {
-  width: 52px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   opacity: 1;
   background: var(--brand, #35b6ff);
 }
