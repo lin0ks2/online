@@ -69555,8 +69555,6 @@ window.decks.de_numbers = [
     uk: "вісім",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Ich habe acht Bücher.", ru: "У меня восемь книг.", uk: "У мене вісім книжок." }
     ]
@@ -69568,8 +69566,6 @@ window.decks.de_numbers = [
     uk: "вісімнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Sie ist achtzehn Jahre alt.", ru: "Ей восемнадцать лет.", uk: "Їй вісімнадцять років." }
     ]
@@ -69581,8 +69577,6 @@ window.decks.de_numbers = [
     uk: "вісімдесят",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Mein Opa ist achtzig.", ru: "Моему деду восемьдесят.", uk: "Моєму дідусю вісімдесят." }
     ]
@@ -69594,8 +69588,6 @@ window.decks.de_numbers = [
     uk: "три",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Wir haben drei Katzen.", ru: "У нас три кошки.", uk: "У нас три кішки." }
     ]
@@ -69607,8 +69599,6 @@ window.decks.de_numbers = [
     uk: "тринадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Er ist dreizehn Jahre alt.", ru: "Ему тринадцать лет.", uk: "Йому тринадцять років." }
     ]
@@ -69620,8 +69610,6 @@ window.decks.de_numbers = [
     uk: "тридцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Das kostet dreißig Euro.", ru: "Это стоит тридцать евро.", uk: "Це коштує тридцять євро." }
     ]
@@ -69633,8 +69621,6 @@ window.decks.de_numbers = [
     uk: "третій",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "порядковое числительное",
-    ukNote: "порядковий числівник",
     examples: [
       { L2: "Sie wohnt im dritten Stock.", ru: "Она живёт на третьем этаже.", uk: "Вона живе на третьому поверсі." }
     ]
@@ -69646,8 +69632,6 @@ window.decks.de_numbers = [
     uk: "півтора",
     level: "A2",
     topics: ["numbers"],
-    ruNote: "в составе чисел: anderthalb, zweieinhalb и т.п.",
-    ukNote: "в складі чисел: anderthalb, zweieinhalb тощо",
     examples: [
       { L2: "Der Film dauert anderthalb Stunden.", ru: "Фильм длится полтора часа.", uk: "Фільм триває півтори години." }
     ]
@@ -69659,8 +69643,6 @@ window.decks.de_numbers = [
     uk: "один",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "употребляется как отдельное число, в счёте",
-    ukNote: "вживається як окреме число, у лічбі",
     examples: [
       { L2: "Eins, zwei, drei!", ru: "Раз, два, три!", uk: "Раз, два, три!" }
     ]
@@ -69672,8 +69654,6 @@ window.decks.de_numbers = [
     uk: "одинадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Wir haben elf Schüler in der Klasse.", ru: "У нас одиннадцать учеников в классе.", uk: "У нас одинадцять учнів у класі." }
     ]
@@ -69685,8 +69665,6 @@ window.decks.de_numbers = [
     uk: "перший",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "порядковое числительное",
-    ukNote: "порядковий числівник",
     examples: [
       { L2: "Das ist meine erste Reise.", ru: "Это моё первое путешествие.", uk: "Це моя перша подорож." }
     ]
@@ -69698,8 +69676,6 @@ window.decks.de_numbers = [
     uk: "п’ять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Ich habe fünf Äpfel.", ru: "У меня пять яблок.", uk: "У мене п’ять яблук." }
     ]
@@ -69711,8 +69687,6 @@ window.decks.de_numbers = [
     uk: "п’ятий",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "порядковое числительное",
-    ukNote: "порядковий числівник",
     examples: [
       { L2: "Die fünfte Aufgabe ist schwer.", ru: "Пятое задание сложное.", uk: "П’яте завдання складне." }
     ]
@@ -69724,8 +69698,6 @@ window.decks.de_numbers = [
     uk: "п’ятнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Er arbeitet seit fünfzehn Jahren hier.", ru: "Он работает здесь уже пятнадцать лет.", uk: "Він працює тут уже п’ятнадцять років." }
     ]
@@ -69737,8 +69709,6 @@ window.decks.de_numbers = [
     uk: "п’ятдесят",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Das Buch kostet fünfzig Euro.", ru: "Книга стоит пятьдесят евро.", uk: "Книга коштує п’ятдесят євро." }
     ]
@@ -69750,8 +69720,6 @@ window.decks.de_numbers = [
     uk: "сто",
     level: "A1",
     topics: ["numbers", "money"],
-    ruNote: "для образования сотен: hundert, zweihundert и т.д.",
-    ukNote: "для творення сотень: hundert, zweihundert тощо",
     examples: [
       { L2: "Im Saal sitzen hundert Leute.", ru: "В зале сидит сто человек.", uk: "У залі сидить сто людей." }
     ]
@@ -69763,8 +69731,6 @@ window.decks.de_numbers = [
     uk: "останній",
     level: "A2",
     topics: ["numbers", "time"],
-    ruNote: "по порядку или во времени: последний",
-    ukNote: "за порядком або в часі: останній",
     examples: [
       { L2: "Das ist meine letzte Frage.", ru: "Это мой последний вопрос.", uk: "Це моє останнє запитання." }
     ]
@@ -69776,8 +69742,6 @@ window.decks.de_numbers = [
     uk: "мільярд",
     level: "B1",
     topics: ["numbers", "money", "abstract"],
-    ruNote: "1 000 000 000",
-    ukNote: "1 000 000 000",
     examples: [
       { L2: "Die Firma ist mehrere Milliarden wert.", ru: "Компания стоит несколько миллиардов.", uk: "Компанія коштує кілька мільярдів." }
     ]
@@ -69789,8 +69753,6 @@ window.decks.de_numbers = [
     uk: "мільйон",
     level: "B1",
     topics: ["numbers", "money", "abstract"],
-    ruNote: "1 000 000",
-    ukNote: "1 000 000",
     examples: [
       { L2: "Die Stadt hat eine Million Einwohner.", ru: "В городе миллион жителей.", uk: "У місті один мільйон жителів." }
     ]
@@ -69802,8 +69764,6 @@ window.decks.de_numbers = [
     uk: "дев’ять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Der Unterricht beginnt um neun.", ru: "Занятия начинаются в девять.", uk: "Заняття починаються о дев’ятій." }
     ]
@@ -69815,8 +69775,6 @@ window.decks.de_numbers = [
     uk: "дев’ятнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Sie ist neunzehn und studiert.", ru: "Ей девятнадцать, и она учится.", uk: "Їй дев’ятнадцять, і вона навчається." }
     ]
@@ -69828,8 +69786,6 @@ window.decks.de_numbers = [
     uk: "дев’яносто",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Mein Opa ist neunzig Jahre alt.", ru: "Моему дедушке девяносто лет.", uk: "Моєму дідусю дев’яносто років." }
     ]
@@ -69841,8 +69797,6 @@ window.decks.de_numbers = [
     uk: "нуль",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число 0",
-    ukNote: "число 0",
     examples: [
       { L2: "Die Temperatur ist null Grad.", ru: "Температура ноль градусов.", uk: "Температура нуль градусів." }
     ]
@@ -69854,8 +69808,6 @@ window.decks.de_numbers = [
     uk: "шість",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Der Zug kommt um sechs.", ru: "Поезд приходит в шесть.", uk: "Поїзд приходить о шостій." }
     ]
@@ -69867,8 +69819,6 @@ window.decks.de_numbers = [
     uk: "шістнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Mit sechzehn darf man arbeiten.", ru: "С шестнадцати лет можно работать.", uk: "У шістнадцять років можна працювати." }
     ]
@@ -69880,8 +69830,6 @@ window.decks.de_numbers = [
     uk: "шістдесят",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Mein Vater wird sechzig.", ru: "Моему отцу исполняется шестьдесят.", uk: "Моєму татові виповнюється шістдесят." }
     ]
@@ -69893,8 +69841,6 @@ window.decks.de_numbers = [
     uk: "сім",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Wir stehen um sieben auf.", ru: "Мы встаём в семь.", uk: "Ми встаємо о сьомій." }
     ]
@@ -69906,8 +69852,6 @@ window.decks.de_numbers = [
     uk: "сімнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Er wird siebzehn im Mai.", ru: "Ему исполнится семнадцать в мае.", uk: "Йому виповниться сімнадцять у травні." }
     ]
@@ -69919,8 +69863,6 @@ window.decks.de_numbers = [
     uk: "сімдесят",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Sie ist fast siebzig.", ru: "Ей почти семьдесят.", uk: "Їй майже сімдесят." }
     ]
@@ -69932,8 +69874,6 @@ window.decks.de_numbers = [
     uk: "тисяча",
     level: "A1",
     topics: ["numbers", "money"],
-    ruNote: "для образования тысяч: tausend, zweitausend и т.д.",
-    ukNote: "для творення тисяч: tausend, zweitausend тощо",
     examples: [
       { L2: "Die Stadt hat tausend Einwohner.", ru: "В городе тысяча жителей.", uk: "У місті тисяча жителів." }
     ]
@@ -69945,8 +69885,6 @@ window.decks.de_numbers = [
     uk: "чотири",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Wir haben vier Kinder.", ru: "У нас четверо детей.", uk: "У нас четверо дітей." }
     ]
@@ -69958,8 +69896,6 @@ window.decks.de_numbers = [
     uk: "четвертий",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "порядковое числительное",
-    ukNote: "порядковий числівник",
     examples: [
       { L2: "Die Wohnung ist im vierten Stock.", ru: "Квартира на четвёртом этаже.", uk: "Квартира на четвертому поверсі." }
     ]
@@ -69971,8 +69907,6 @@ window.decks.de_numbers = [
     uk: "чотирнадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "число от 13 до 19 образуется через -zehn",
-    ukNote: "числа 13–19 утворюються з суфіксом -zehn",
     examples: [
       { L2: "Sie ist vierzehn Jahre alt.", ru: "Ей четырнадцать лет.", uk: "Їй чотирнадцять років." }
     ]
@@ -69984,8 +69918,6 @@ window.decks.de_numbers = [
     uk: "сорок",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Er wird bald vierzig.", ru: "Ему скоро сорок.", uk: "Йому скоро сорок." }
     ]
@@ -69997,8 +69929,6 @@ window.decks.de_numbers = [
     uk: "десять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Wir bleiben zehn Tage.", ru: "Мы остаёмся на десять дней.", uk: "Ми залишаємося на десять днів." }
     ]
@@ -70010,8 +69940,6 @@ window.decks.de_numbers = [
     uk: "двадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "десяток",
-    ukNote: "десяток",
     examples: [
       { L2: "Er ist zwanzig Jahre alt.", ru: "Ему двадцать лет.", uk: "Йому двадцять років." }
     ]
@@ -70023,8 +69951,6 @@ window.decks.de_numbers = [
     uk: "два",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Ich nehme zwei Kaffee.", ru: "Я возьму два кофе.", uk: "Я візьму дві кави." }
     ]
@@ -70036,8 +69962,6 @@ window.decks.de_numbers = [
     uk: "два з половиною",
     level: "A2",
     topics: ["numbers"],
-    ruNote: "дробное число: 2,5",
-    ukNote: "дробове число: 2,5",
     examples: [
       { L2: "Das dauert zweieinhalb Stunden.", ru: "Это длится два с половиной часа.", uk: "Це триває два з половиною години." }
     ]
@@ -70049,8 +69973,6 @@ window.decks.de_numbers = [
     uk: "другий",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "порядковое числительное",
-    ukNote: "порядковий числівник",
     examples: [
       { L2: "Er wohnt im zweiten Stock.", ru: "Он живёт на втором этаже.", uk: "Він живе на другому поверсі." }
     ]
@@ -70062,8 +69984,6 @@ window.decks.de_numbers = [
     uk: "дванадцять",
     level: "A1",
     topics: ["numbers"],
-    ruNote: "количественное числительное",
-    ukNote: "кількісний числівник",
     examples: [
       { L2: "Es ist zwölf Uhr.", ru: "Сейчас двенадцать часов.", uk: "Зараз дванадцята година." }
     ]
