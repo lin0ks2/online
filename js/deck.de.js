@@ -31305,11 +31305,13 @@ window.decks.de_verbs = [
       uk: "раціонально використовувати час"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir nutzen die Zeit sinnvoll.",
     ru: "Мы используем время с пользой.",
     uk: "Ми корисно використовуємо час."
   }
+  ]
 },
 {
   id: 102,
@@ -31336,11 +31338,13 @@ window.decks.de_verbs = [
       uk: "платити готівкою"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich muss heute die Miete zahlen.",
     ru: "Мне нужно сегодня заплатить за аренду.",
     uk: "Мені потрібно сьогодні заплатити за оренду."
   }
+  ]
 },
 {
   id: 103,
@@ -31367,11 +31371,13 @@ window.decks.de_verbs = [
       uk: "подорожувати світом"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir reisen gern im Sommer.",
     ru: "Мы любим путешествовать летом.",
     uk: "Ми любимо подорожувати влітку."
   }
+  ]
 },
 {
   id: 104,
@@ -31398,11 +31404,13 @@ window.decks.de_verbs = [
       uk: "готувати для родини"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich koche heute Nudeln.",
     ru: "Я сегодня готовлю макароны.",
     uk: "Я сьогодні готую макарони."
   }
+  ]
 },
 {
   id: 105,
@@ -31429,11 +31437,13 @@ window.decks.de_verbs = [
       uk: "їсти разом"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir essen zusammen zu Abend.",
     ru: "Мы ужинаем вместе.",
     uk: "Ми вечеряємо разом."
   }
+  ]
 },
 {
   id: 106,
@@ -31460,11 +31470,13 @@ window.decks.de_verbs = [
       uk: "пити достатньо води"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er trinkt morgens Kaffee.",
     ru: "Он пьёт по утрам кофе.",
     uk: "Він вранці п’є каву."
   }
+  ]
 },
 {
   id: 107,
@@ -31491,11 +31503,13 @@ window.decks.de_verbs = [
       uk: "достатньо спати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Baby schläft tief.",
     ru: "Младенец спит крепко.",
     uk: "Немовля міцно спить."
   }
+  ]
 },
 {
   id: 108,
@@ -31522,11 +31536,13 @@ window.decks.de_verbs = [
       uk: "насилу вставати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich stehe um sieben Uhr auf.",
     ru: "Я встаю в семь часов.",
     uk: "Я встаю о сьомій годині."
   }
+  ]
 },
 {
   id: 109,
@@ -31553,11 +31569,13 @@ window.decks.de_verbs = [
       uk: "закінчити розмову"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir beenden das Meeting um vier.",
     ru: "Мы заканчиваем встречу в четыре.",
     uk: "Ми закінчуємо зустріч о четвертій."
   }
+  ]
 },
 {
   id: 110,
@@ -31584,11 +31602,13 @@ window.decks.de_verbs = [
       uk: "надіслати посилку"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich sende dir die E-Mail später.",
     ru: "Я отправлю тебе письмо позже.",
     uk: "Я надішлю тобі лист пізніше."
   }
+  ]
 },
 {
   id: 111,
@@ -31615,11 +31635,13 @@ window.decks.de_verbs = [
       uk: "приймати сигнал"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Hotel kann viele Gäste empfangen.",
     ru: "Отель может принять много гостей.",
     uk: "Готель може прийняти багато гостей."
   }
+  ]
 },
 {
   id: 112,
@@ -31646,11 +31668,13 @@ window.decks.de_verbs = [
       uk: "танцювати всю ніч"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie tanzt sehr gern.",
     ru: "Она очень любит танцевать.",
     uk: "Вона дуже любить танцювати."
   }
+  ]
 },
 {
   id: 113,
@@ -31677,11 +31701,13 @@ window.decks.de_verbs = [
       uk: "голосно співати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er singt in einer Band.",
     ru: "Он поёт в группе.",
     uk: "Він співає в гурті."
   }
+  ]
 },
 {
   id: 114,
@@ -31708,11 +31734,13 @@ window.decks.de_verbs = [
       uk: "уважно прислухатися"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich höre deine Stimme.",
     ru: "Я слышу твой голос.",
     uk: "Я чую твій голос."
   }
+  ]
 },
 {
   id: 115,
@@ -31739,11 +31767,13 @@ window.decks.de_verbs = [
       uk: "дивитися у вікно"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir schauen einen Film.",
     ru: "Мы смотрим фильм.",
     uk: "Ми дивимося фільм."
   }
+  ]
 },
 {
   id: 116,
@@ -31770,11 +31800,13 @@ window.decks.de_verbs = [
       uk: "викладати в школі"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie lehrt Deutsch an einer Schule.",
     ru: "Она преподаёт немецкий в школе.",
     uk: "Вона викладає німецьку в школі."
   }
+  ]
 },
 {
   id: 117,
@@ -31801,11 +31833,13 @@ window.decks.de_verbs = [
       uk: "перевіряти тиск"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Arzt prüft den Blutdruck.",
     ru: "Врач проверяет давление.",
     uk: "Лікар перевіряє тиск."
   }
+  ]
 },
 {
   id: 118,
@@ -31832,11 +31866,13 @@ window.decks.de_verbs = [
       uk: "добре заробляти"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er verdient nicht schlecht.",
     ru: "Он неплохо зарабатывает.",
     uk: "Він непогано заробляє."
   }
+  ]
 },
 {
   id: 119,
@@ -31863,11 +31899,13 @@ window.decks.de_verbs = [
       uk: "заощаджувати на авто"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir sparen Geld für ein Auto.",
     ru: "Мы копим деньги на машину.",
     uk: "Ми заощаджуємо гроші на авто."
   }
+  ]
 },
 {
   id: 120,
@@ -31894,11 +31932,13 @@ window.decks.de_verbs = [
       uk: "інвестувати у стартапи"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie investieren in Start-ups.",
     ru: "Они инвестируют в стартапы.",
     uk: "Вони інвестують у стартапи."
   }
+  ]
 },
 {
   id: 121,
@@ -31925,11 +31965,13 @@ window.decks.de_verbs = [
       uk: "продати свій старий велосипед"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er verkauft sein altes Fahrrad.",
     ru: "Он продаёт свой старый велосипед.",
     uk: "Він продає свій старий велосипед."
   }
+  ]
 },
 {
   id: 122,
@@ -31956,11 +31998,13 @@ window.decks.de_verbs = [
       uk: "орендувати авто"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir mieten ein Auto für das Wochenende.",
     ru: "Мы арендуем машину на выходные.",
     uk: "Ми орендуємо авто на вихідні."
   }
+  ]
 },
 {
   id: 123,
@@ -31987,11 +32031,13 @@ window.decks.de_verbs = [
       uk: "здавати кімнату"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie vermieten ihre Wohnung.",
     ru: "Они сдают свою квартиру.",
     uk: "Вони здають свою квартиру."
   }
+  ]
 },
 {
   id: 124,
@@ -32018,11 +32064,13 @@ window.decks.de_verbs = [
       uk: "будувати міст"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie bauen ein neues Haus.",
     ru: "Они строят новый дом.",
     uk: "Вони будують новий будинок."
   }
+  ]
 },
 {
   id: 125,
@@ -32049,11 +32097,13 @@ window.decks.de_verbs = [
       uk: "ремонтувати комп’ютер"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er repariert den Computer.",
     ru: "Он ремонтирует компьютер.",
     uk: "Він ремонтує комп’ютер."
   }
+  ]
 },
 {
   id: 126,
@@ -32080,11 +32130,13 @@ window.decks.de_verbs = [
       uk: "мити вікна"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich putze jeden Samstag die Wohnung.",
     ru: "Я убираю квартиру каждую субботу.",
     uk: "Я щосуботи прибираю квартиру."
   }
+  ]
 },
 {
   id: 127,
@@ -32111,11 +32163,13 @@ window.decks.de_verbs = [
       uk: "мити руки"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie wäscht die Kleidung.",
     ru: "Она стирает одежду.",
     uk: "Вона пере одяг."
   }
+  ]
 },
 {
   id: 128,
@@ -32142,11 +32196,13 @@ window.decks.de_verbs = [
       uk: "рік закінчується"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Film endet um neun Uhr.",
     ru: "Фильм заканчивается в девять.",
     uk: "Фільм закінчується о дев’ятій."
   }
+  ]
 },
 {
   id: 129,
@@ -32173,11 +32229,13 @@ window.decks.de_verbs = [
       uk: "летіти літаком"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir fliegen nach Berlin.",
     ru: "Мы летим в Берлин.",
     uk: "Ми летимо до Берліна."
   }
+  ]
 },
 {
   id: 130,
@@ -32204,11 +32262,13 @@ window.decks.de_verbs = [
       uk: "повернутися на батьківщину"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie kehrt morgen zurück.",
     ru: "Она возвращается завтра.",
     uk: "Вона повертається завтра."
   }
+  ]
 },
 {
   id: 131,
@@ -32235,11 +32295,13 @@ window.decks.de_verbs = [
       uk: "сподіватися на допомогу"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich hoffe auf gutes Wetter.",
     ru: "Я надеюсь на хорошую погоду.",
     uk: "Я сподіваюся на хорошу погоду."
   }
+  ]
 },
 {
   id: 132,
@@ -32266,11 +32328,13 @@ window.decks.de_verbs = [
       uk: "любити свою країну"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie lieben einander sehr.",
     ru: "Они очень любят друг друга.",
     uk: "Вони дуже кохають одне одного."
   }
+  ]
 },
 {
   id: 133,
@@ -32297,11 +32361,13 @@ window.decks.de_verbs = [
       uk: "ненавидіти чекати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er hasst lange Warteschlangen.",
     ru: "Он ненавидит длинные очереди.",
     uk: "Він ненавидить довгі черги."
   }
+  ]
 },
 {
   id: 134,
@@ -32328,11 +32394,13 @@ window.decks.de_verbs = [
       uk: "боятися за майбутнє"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Kind fürchtet die Dunkelheit.",
     ru: "Ребёнок боится темноты.",
     uk: "Дитина боїться темряви."
   }
+  ]
 },
 {
   id: 135,
@@ -32359,11 +32427,13 @@ window.decks.de_verbs = [
       uk: "голосно сміятися"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir lachen über den Witz.",
     ru: "Мы смеёмся над шуткой.",
     uk: "Ми сміємося з жарту."
   }
+  ]
 },
 {
   id: 136,
@@ -32390,11 +32460,13 @@ window.decks.de_verbs = [
       uk: "тихо плакати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie weint vor Freude.",
     ru: "Она плачет от радости.",
     uk: "Вона плаче від радості."
   }
+  ]
 },
 {
   id: 137,
@@ -32421,11 +32493,13 @@ window.decks.de_verbs = [
       uk: "усміхнутися комусь"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er lächelt freundlich.",
     ru: "Он дружелюбно улыбается.",
     uk: "Він приязно усміхається."
   }
+  ]
 },
 {
   id: 138,
@@ -32452,11 +32526,13 @@ window.decks.de_verbs = [
       uk: "сильно сваритися"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie streiten oft über Kleinigkeiten.",
     ru: "Они часто ссорятся из-за мелочей.",
     uk: "Вони часто сваряться через дрібниці."
   }
+  ]
 },
 {
   id: 139,
@@ -32483,11 +32559,13 @@ window.decks.de_verbs = [
       uk: "сидіти в саду"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir sitzen im Garten.",
     ru: "Мы сидим в саду.",
     uk: "Ми сидимо в саду."
   }
+  ]
 },
 {
   id: 140,
@@ -32514,11 +32592,13 @@ window.decks.de_verbs = [
       uk: "стояти в заторі"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Tisch steht am Fenster.",
     ru: "Стол стоит у окна.",
     uk: "Стіл стоїть біля вікна."
   }
+  ]
 },
 {
   id: 141,
@@ -32545,11 +32625,13 @@ window.decks.de_verbs = [
       uk: "лежати на дивані"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Buch liegt auf dem Bett.",
     ru: "Книга лежит на кровати.",
     uk: "Книжка лежить на ліжку."
   }
+  ]
 },
 {
   id: 142,
@@ -32576,11 +32658,13 @@ window.decks.de_verbs = [
       uk: "взяти із собою щось поїсти"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich nehme meinen Laptop mit.",
     ru: "Я беру с собой ноутбук.",
     uk: "Я беру із собою ноутбук."
   }
+  ]
 },
 {
   id: 143,
@@ -32607,11 +32691,13 @@ window.decks.de_verbs = [
       uk: "забрати посилку"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er holt mich am Bahnhof ab.",
     ru: "Он забирает меня на вокзале.",
     uk: "Він забирає мене на вокзалі."
   }
+  ]
 },
 {
   id: 144,
@@ -32638,11 +32724,13 @@ window.decks.de_verbs = [
       uk: "повернути гроші"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich muss das Buch zurückgeben.",
     ru: "Мне нужно вернуть книгу.",
     uk: "Мені треба повернути книжку."
   }
+  ]
 },
 {
   id: 145,
@@ -32669,11 +32757,13 @@ window.decks.de_verbs = [
       uk: "щиро подякувати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich danke dir für deine Hilfe.",
     ru: "Я благодарю тебя за помощь.",
     uk: "Я дякую тобі за допомогу."
   }
+  ]
 },
 {
   id: 146,
@@ -32700,11 +32790,13 @@ window.decks.de_verbs = [
       uk: "передати комусь вітання від мене"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Bitte grüß deine Eltern von mir.",
     ru: "Пожалуйста, передай привет своим родителям от меня.",
     uk: "Будь ласка, передай вітання своїм батькам від мене."
   }
+  ]
 },
 {
   id: 147,
@@ -32731,11 +32823,13 @@ window.decks.de_verbs = [
       uk: "запросити друзів"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir laden unsere Freunde zum Essen ein.",
     ru: "Мы приглашаем друзей поесть.",
     uk: "Ми запрошуємо друзів на вечерю."
   }
+  ]
 },
 {
   id: 148,
@@ -32762,11 +32856,13 @@ window.decks.de_verbs = [
       uk: "відвідати місто"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie besucht ihre Großeltern jedes Wochenende.",
     ru: "Она навещает своих бабушку и дедушку каждые выходные.",
     uk: "Вона відвідує своїх дідусів і бабусь щовихідних."
   }
+  ]
 },
 {
   id: 149,
@@ -32793,11 +32889,13 @@ window.decks.de_verbs = [
       uk: "зателефонувати на гарячу лінію"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich rufe dich später an.",
     ru: "Я перезвоню тебе позже.",
     uk: "Я подзвоню тобі пізніше."
   }
+  ]
 },
 {
   id: 150,
@@ -32824,11 +32922,13 @@ window.decks.de_verbs = [
       uk: "надіслати електронного листа"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie schickt ihm eine Nachricht.",
     ru: "Она отправляет ему сообщение.",
     uk: "Вона надсилає йому повідомлення."
   }
+  ]
 },
 {
   id: 151,
@@ -32855,11 +32955,13 @@ window.decks.de_verbs = [
       uk: "швидко відповісти"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Bitte antworte schnell.",
     ru: "Пожалуйста, ответь быстро.",
     uk: "Будь ласка, відповідай швидко."
   }
+  ]
 },
 {
   id: 152,
@@ -32886,11 +32988,13 @@ window.decks.de_verbs = [
       uk: "детально описати ситуацію"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Kannst du das Bild beschreiben?",
     ru: "Ты можешь описать картинку?",
     uk: "Ти можеш описати цю картинку?"
   }
+  ]
 },
 {
   id: 153,
@@ -32917,11 +33021,13 @@ window.decks.de_verbs = [
       uk: "вільно рухатися"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Beweg den Stuhl bitte nach links.",
     ru: "Передвинь, пожалуйста, стул налево.",
     uk: "Посунь, будь ласка, стілець ліворуч."
   }
+  ]
 },
 {
   id: 154,
@@ -32948,11 +33054,13 @@ window.decks.de_verbs = [
       uk: "змінити тему"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich möchte Geld wechseln.",
     ru: "Я хочу обменять деньги.",
     uk: "Я хочу обміняти гроші."
   }
+  ]
 },
 {
   id: 155,
@@ -32979,11 +33087,13 @@ window.decks.de_verbs = [
       uk: "помінятися місцями"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie tauschen Bücher miteinander.",
     ru: "Они обмениваются книгами.",
     uk: "Вони обмінюються книжками."
   }
+  ]
 },
 {
   id: 156,
@@ -33010,11 +33120,13 @@ window.decks.de_verbs = [
       uk: "паркуватися на паркінгу"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Du darfst hier nicht parken.",
     ru: "Тебе нельзя парковаться здесь.",
     uk: "Тобі не можна тут паркуватися."
   }
+  ]
 },
 {
   id: 157,
@@ -33041,11 +33153,13 @@ window.decks.de_verbs = [
       uk: "набирати номер"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir wählen das beste Angebot.",
     ru: "Мы выбираем лучшее предложение.",
     uk: "Ми обираємо найкращу пропозицію."
   }
+  ]
 },
 {
   id: 158,
@@ -33072,11 +33186,13 @@ window.decks.de_verbs = [
       uk: "регулярно користуватися застосунком"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich benutze jeden Tag mein Fahrrad.",
     ru: "Я каждый день пользуюсь велосипедом.",
     uk: "Я щодня користуюся своїм велосипедом."
   }
+  ]
 },
 {
   id: 159,
@@ -33103,11 +33219,13 @@ window.decks.de_verbs = [
       uk: "покращувати якість"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie will ihr Deutsch verbessern.",
     ru: "Она хочет улучшить свой немецкий.",
     uk: "Вона хоче покращити свою німецьку."
   }
+  ]
 },
 {
   id: 160,
@@ -33134,11 +33252,13 @@ window.decks.de_verbs = [
       uk: "Погода погіршується."
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Wetter verschlechtert sich.",
     ru: "Погода ухудшается.",
     uk: "Погода погіршується."
   }
+  ]
 },
 {
   id: 161,
@@ -33165,11 +33285,13 @@ window.decks.de_verbs = [
       uk: "забути ім’я"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich vergesse oft Namen.",
     ru: "Я часто забываю имена.",
     uk: "Я часто забуваю імена."
   }
+  ]
 },
 {
   id: 162,
@@ -33196,11 +33318,13 @@ window.decks.de_verbs = [
       uk: "володіти великими грошима"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie besitzen ein Haus am See.",
     ru: "Они владеют домом у озера.",
     uk: "Вони володіють будинком біля озера."
   }
+  ]
 },
 {
   id: 163,
@@ -33227,11 +33351,13 @@ window.decks.de_verbs = [
       uk: "належати до групи"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Buch gehört mir.",
     ru: "Эта книга принадлежит мне.",
     uk: "Ця книжка належить мені."
   }
+  ]
 },
 {
   id: 164,
@@ -33258,11 +33384,13 @@ window.decks.de_verbs = [
       uk: "викладати в школі"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er unterrichtet Kinder in Mathe.",
     ru: "Он учит детей математике.",
     uk: "Він навчає дітей математики."
   }
+  ]
 },
 {
   id: 165,
@@ -33289,11 +33417,13 @@ window.decks.de_verbs = [
       uk: "рости вгору"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Pflanzen wachsen schnell.",
     ru: "Растения растут быстро.",
     uk: "Рослини швидко ростуть."
   }
+  ]
 },
 {
   id: 166,
@@ -33320,11 +33450,13 @@ window.decks.de_verbs = [
       uk: "ретельно планувати проєкт"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir planen eine Reise.",
     ru: "Мы планируем поездку.",
     uk: "Ми плануємо подорож."
   }
+  ]
 },
 {
   id: 167,
@@ -33351,11 +33483,13 @@ window.decks.de_verbs = [
       uk: "спробувати щось нове"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Möchtest du den Kuchen probieren?",
     ru: "Хочешь попробовать торт?",
     uk: "Хочеш спробувати торт?"
   }
+  ]
 },
 {
   id: 168,
@@ -33382,11 +33516,13 @@ window.decks.de_verbs = [
       uk: "вчитися правильно рахувати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Kinder lernen zu rechnen.",
     ru: "Дети учатся считать.",
     uk: "Діти вчаться рахувати."
   }
+  ]
 },
 {
   id: 169,
@@ -33413,11 +33549,13 @@ window.decks.de_verbs = [
       uk: "дуже сильно дощить"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Heute regnet es den ganzen Tag.",
     ru: "Сегодня целый день идёт дождь.",
     uk: "Сьогодні цілий день дощить."
   }
+  ]
 },
 {
   id: 170,
@@ -33444,11 +33582,13 @@ window.decks.de_verbs = [
       uk: "пахнути квітами"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Blumen riechen gut.",
     ru: "Цветы хорошо пахнут.",
     uk: "Квіти гарно пахнуть."
   }
+  ]
 },
 {
   id: 171,
@@ -33475,11 +33615,13 @@ window.decks.de_verbs = [
       uk: "кликати на допомогу"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Mutter ruft ihr Kind.",
     ru: "Мать зовёт своего ребёнка.",
     uk: "Мати кличе свою дитину."
   }
+  ]
 },
 {
   id: 172,
@@ -33506,11 +33648,13 @@ window.decks.de_verbs = [
       uk: "збирати інформацію"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er sammelt alte Münzen.",
     ru: "Он собирает старые монеты.",
     uk: "Він збирає старі монети."
   }
+  ]
 },
 {
   id: 173,
@@ -33537,11 +33681,13 @@ window.decks.de_verbs = [
       uk: "мати смак часнику"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Suppe schmeckt gut.",
     ru: "Суп вкусный.",
     uk: "Суп смачний."
   }
+  ]
 },
 {
   id: 174,
@@ -33568,11 +33714,13 @@ window.decks.de_verbs = [
       uk: "швидко плавати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir schwimmen im See.",
     ru: "Мы плаваем в озере.",
     uk: "Ми плаваємо в озері."
   }
+  ]
 },
 {
   id: 175,
@@ -33599,11 +33747,13 @@ window.decks.de_verbs = [
       uk: "стрибати через щось"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Kind springt hoch.",
     ru: "Ребёнок высоко прыгает.",
     uk: "Дитина високо стрибає."
   }
+  ]
 },
 {
   id: 176,
@@ -33630,11 +33780,13 @@ window.decks.de_verbs = [
       uk: "померти на війні"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Viele Bäume sterben im Winter nicht.",
     ru: "Многие деревья не умирают зимой.",
     uk: "Багато дерев не помирають узимку."
   }
+  ]
 },
 {
   id: 177,
@@ -33661,11 +33813,13 @@ window.decks.de_verbs = [
       uk: "температура підвищується"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Die Preise steigen jedes Jahr.",
     ru: "Цены растут каждый год.",
     uk: "Ціни зростають щороку."
   }
+  ]
 },
 {
   id: 178,
@@ -33692,11 +33846,13 @@ window.decks.de_verbs = [
       uk: "голосувати за пропозицію"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich stimme dir zu.",
     ru: "Я с тобой согласен.",
     uk: "Я з тобою погоджуюся."
   }
+  ]
 },
 {
   id: 179,
@@ -33723,11 +33879,13 @@ window.decks.de_verbs = [
       uk: "ділити квартиру"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir teilen die Kosten.",
     ru: "Мы делим расходы.",
     uk: "Ми ділимо витрати."
   }
+  ]
 },
 {
   id: 180,
@@ -33754,11 +33912,13 @@ window.decks.de_verbs = [
       uk: "регулярно займатися спортом"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie treiben viel Sport.",
     ru: "Они много занимаются спортом.",
     uk: "Вони багато займаються спортом."
   }
+  ]
 },
 {
   id: 181,
@@ -33785,11 +33945,13 @@ window.decks.de_verbs = [
       uk: "увійти до кімнати"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Tritt bitte näher.",
     ru: "Подойди, пожалуйста, ближе.",
     uk: "Підійди, будь ласка, ближче."
   }
+  ]
 },
 {
   id: 182,
@@ -33816,11 +33978,13 @@ window.decks.de_verbs = [
       uk: "ночувати в друзів"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir übernachten im Hotel.",
     ru: "Мы ночуем в отеле.",
     uk: "Ми ночуємо в готелі."
   }
+  ]
 },
 {
   id: 183,
@@ -33847,11 +34011,13 @@ window.decks.de_verbs = [
       uk: "переказувати оплату за оренду"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich überweise dir das Geld morgen.",
     ru: "Я переведу тебе деньги завтра.",
     uk: "Я перекажу тобі гроші завтра."
   }
+  ]
 },
 {
   id: 184,
@@ -33878,11 +34044,13 @@ window.decks.de_verbs = [
       uk: "переїжджати наступного тижня"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie ziehen nächste Woche um.",
     ru: "Они переезжают на следующей неделе.",
     uk: "Вони переїжджають наступного тижня."
   }
+  ]
 },
 {
   id: 185,
@@ -33909,11 +34077,13 @@ window.decks.de_verbs = [
       uk: "підписати тут"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Bitte unterschreiben Sie hier.",
     ru: "Пожалуйста, подпишите здесь.",
     uk: "Будь ласка, підпишіть тут."
   }
+  ]
 },
 {
   id: 186,
@@ -33940,11 +34110,13 @@ window.decks.de_verbs = [
       uk: "ретельно дослідити проблему"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Arzt untersucht den Patienten.",
     ru: "Врач осматривает пациента.",
     uk: "Лікар обстежує пацієнта."
   }
+  ]
 },
 {
   id: 187,
@@ -33971,11 +34143,13 @@ window.decks.de_verbs = [
       uk: "проводити час із родиною"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir verbringen das Wochenende zu Hause.",
     ru: "Мы проводим выходные дома.",
     uk: "Ми проводимо вихідні вдома."
   }
+  ]
 },
 {
   id: 188,
@@ -34002,11 +34176,13 @@ window.decks.de_verbs = [
       uk: "оплатити рахунок"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich bezahle bar.",
     ru: "Я плачу наличными.",
     uk: "Я плачу готівкою."
   }
+  ]
 },
 {
   id: 189,
@@ -34033,11 +34209,13 @@ window.decks.de_verbs = [
       uk: "просити когось щось зробити"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich bitte dich um Hilfe.",
     ru: "Я прошу тебя о помощи.",
     uk: "Я прошу тебе про допомогу."
   }
+  ]
 },
 {
   id: 190,
@@ -34064,11 +34242,13 @@ window.decks.de_verbs = [
       uk: "зламати руку"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Er bricht das Holz in zwei Teile.",
     ru: "Он ломает дерево на две части.",
     uk: "Він ламає дерево на дві частини."
   }
+  ]
 },
 {
   id: 191,
@@ -34095,11 +34275,13 @@ window.decks.de_verbs = [
       uk: "зав’язувати шнурівки"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie bindet das Paket mit einem Band.",
     ru: "Она перевязывает посылку лентой.",
     uk: "Вона перев’язує пакунок стрічкою."
   }
+  ]
 },
 {
   id: 192,
@@ -34126,11 +34308,13 @@ window.decks.de_verbs = [
       uk: "повернути праворуч"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Bieg das Metall vorsichtig.",
     ru: "Аккуратно согни металл.",
     uk: "Обережно зігни метал."
   }
+  ]
 },
 {
   id: 193,
@@ -34157,11 +34341,13 @@ window.decks.de_verbs = [
       uk: "задувати свічки"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Wind bläst stark.",
     ru: "Ветер сильно дует.",
     uk: "Вітер сильно дує."
   }
+  ]
 },
 {
   id: 194,
@@ -34188,11 +34374,13 @@ window.decks.de_verbs = [
       uk: "горить свічка"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Feuer brennt noch.",
     ru: "Огонь всё ещё горит.",
     uk: "Вогонь усе ще горить."
   }
+  ]
 },
 {
   id: 195,
@@ -34219,11 +34407,13 @@ window.decks.de_verbs = [
       uk: "тече кров"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Das Wasser fließt langsam.",
     ru: "Вода течёт медленно.",
     uk: "Вода повільно тече."
   }
+  ]
 },
 {
   id: 196,
@@ -34250,11 +34440,13 @@ window.decks.de_verbs = [
       uk: "дрижати від холоду"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Ich friere ohne Jacke.",
     ru: "Я мёрзну без куртки.",
     uk: "Я мерзну без куртки."
   }
+  ]
 },
 {
   id: 197,
@@ -34281,11 +34473,13 @@ window.decks.de_verbs = [
       uk: "щось добре вдається"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Der Kuchen ist gut gelungen.",
     ru: "Торт хорошо получился.",
     uk: "Торт добре вдався."
   }
+  ]
 },
 {
   id: 198,
@@ -34312,11 +34506,13 @@ window.decks.de_verbs = [
       uk: "насолоджуватися життям"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Wir genießen die Ruhe.",
     ru: "Мы наслаждаемся тишиной.",
     uk: "Ми насолоджуємося тишею."
   }
+  ]
 },
 {
   id: 199,
@@ -34343,11 +34539,13 @@ window.decks.de_verbs = [
       uk: "наливати воду в склянку"
     }
   ],
-  examples: {
+  examples: [
+    {
     L2: "Sie gießt die Blumen jeden Morgen.",
     ru: "Она поливает цветы каждое утро.",
     uk: "Вона поливає квіти щоранку."
   }
+  ]
 },
   {
     id: 200,
@@ -34379,11 +34577,13 @@ window.decks.de_verbs = [
         uk: "діяти жорстко"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er greift schnell nach dem Ball.",
       ru: "Он быстро хватается за мяч.",
       uk: "Він швидко хапає м’яч."
     }
+    ]
   },
   {
     id: 201,
@@ -34415,11 +34615,13 @@ window.decks.de_verbs = [
         uk: "бути прив’язаним до когось"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Bild hängt an der Wand.",
       ru: "Картина висит на стене.",
       uk: "Картина висить на стіні."
     }
+    ]
   },
   {
     id: 202,
@@ -34451,11 +34653,13 @@ window.decks.de_verbs = [
         uk: "підвищувати голос"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er hebt die Kiste vorsichtig.",
       ru: "Он осторожно поднимает ящик.",
       uk: "Він обережно піднімає ящик."
     }
+    ]
   },
   {
     id: 203,
@@ -34487,11 +34691,13 @@ window.decks.de_verbs = [
         uk: "сильно страждати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Viele Menschen leiden unter Stress.",
       ru: "Многие люди страдают от стресса.",
       uk: "Багато людей страждають від стресу."
     }
+    ]
   },
   {
     id: 204,
@@ -34523,11 +34729,13 @@ window.decks.de_verbs = [
         uk: "позичити на час"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Kannst du mir dein Auto leihen?",
       ru: "Можешь одолжить мне свою машину?",
       uk: "Можеш позичити мені своє авто?"
     }
+    ]
   },
   {
     id: 205,
@@ -34559,11 +34767,13 @@ window.decks.de_verbs = [
         uk: "брехати в обличчя"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er sagt die Wahrheit, er lügt nicht.",
       ru: "Он говорит правду, он не лжёт.",
       uk: "Він каже правду, він не бреше."
     }
+    ]
   },
   {
     id: 206,
@@ -34595,11 +34805,13 @@ window.decks.de_verbs = [
         uk: "вимірювати точно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Techniker misst die Spannung.",
       ru: "Техник измеряет напряжение.",
       uk: "Технік міряє напругу."
     }
+    ]
   },
   {
     id: 207,
@@ -34631,11 +34843,13 @@ window.decks.de_verbs = [
         uk: "голосно свистіти"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er pfeift eine Melodie.",
       ru: "Он насвистывает мелодию.",
       uk: "Він насвистує мелодію."
     }
+    ]
   },
   {
     id: 208,
@@ -34667,11 +34881,13 @@ window.decks.de_verbs = [
         uk: "радити з найкращих міркувань"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Was rätst du mir?",
       ru: "Что ты мне посоветуешь?",
       uk: "Що ти мені порадиш?"
     }
+    ]
   },
   {
     id: 209,
@@ -34703,11 +34919,13 @@ window.decks.de_verbs = [
         uk: "тертися об щось"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie reibt den Käse für die Pizza.",
       ru: "Она трёт сыр для пиццы.",
       uk: "Вона треть сир для піци."
     }
+    ]
   },
   {
     id: 210,
@@ -34739,11 +34957,13 @@ window.decks.de_verbs = [
         uk: "вибити з колії"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er reißt das Papier in zwei Teile.",
       ru: "Он рвёт бумагу на две части.",
       uk: "Він рве папір на дві частини."
     }
+    ]
   },
   {
     id: 211,
@@ -34775,11 +34995,13 @@ window.decks.de_verbs = [
         uk: "любити їздити верхи"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie reitet jedes Wochenende.",
       ru: "Она катается верхом каждые выходные.",
       uk: "Вона їздить верхи щовихідних."
     }
+    ]
   },
   {
     id: 212,
@@ -34811,11 +35033,13 @@ window.decks.de_verbs = [
         uk: "добігти до фінішу"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Kinder rennen über den Hof.",
       ru: "Дети бегут по двору.",
       uk: "Діти біжать подвір’ям."
     }
+    ]
   },
   {
     id: 213,
@@ -34847,11 +35071,13 @@ window.decks.de_verbs = [
         uk: "знімати з себе відповідальність"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er schiebt das Fahrrad den Berg hinauf.",
       ru: "Он толкает велосипед в гору.",
       uk: "Він штовхає велосипед угору."
     }
+    ]
   },
   {
     id: 214,
@@ -34883,11 +35109,13 @@ window.decks.de_verbs = [
         uk: "стріляти бойовими"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Spieler schießt ein Tor.",
       ru: "Игрок забивает гол.",
       uk: "Гравець забиває гол."
     }
+    ]
   },
   {
     id: 215,
@@ -34919,11 +35147,13 @@ window.decks.de_verbs = [
         uk: "серце б’ється швидше"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er schlägt mit der Faust auf den Tisch.",
       ru: "Он бьёт кулаком по столу.",
       uk: "Він б’є кулаком по столу."
     }
+    ]
   },
   {
     id: 216,
@@ -34955,11 +35185,13 @@ window.decks.de_verbs = [
         uk: "танути у воді"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Im Frühling schmilzt der Schnee.",
       ru: "Весной снег тает.",
       uk: "Навесні сніг тане."
     }
+    ]
   },
   {
     id: 217,
@@ -34991,11 +35223,13 @@ window.decks.de_verbs = [
         uk: "стригти волосся"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie schneidet das Gemüse klein.",
       ru: "Она мелко режет овощи.",
       uk: "Вона дрібно ріже овочі."
     }
+    ]
   },
   {
     id: 218,
@@ -35027,11 +35261,13 @@ window.decks.de_verbs = [
         uk: "кричати про допомогу"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Kind schreit vor Angst.",
       ru: "Ребёнок кричит от страха.",
       uk: "Дитина кричить від страху."
     }
+    ]
   },
   {
     id: 219,
@@ -35063,11 +35299,13 @@ window.decks.de_verbs = [
         uk: "воліти промовчати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er schweigt und sagt nichts.",
       ru: "Он молчит и ничего не говорит.",
       uk: "Він мовчить і нічого не каже."
     }
+    ]
   },
   {
     id: 220,
@@ -35099,11 +35337,13 @@ window.decks.de_verbs = [
         uk: "таємно красти"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Jemand hat mein Fahrrad gestohlen.",
       ru: "Кто-то украл мой велосипед.",
       uk: "Хтось украв мій велосипед."
     }
+    ]
   },
   {
     id: 221,
@@ -35135,11 +35375,13 @@ window.decks.de_verbs = [
         uk: "смердіти сміттям"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Müll stinkt furchtbar.",
       ru: "Мусор ужасно воняет.",
       uk: "Сміття страшенно смердить."
     }
+    ]
   },
   {
     id: 222,
@@ -35171,11 +35413,13 @@ window.decks.de_verbs = [
         uk: "натрапити на опір"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er stößt die Tür auf.",
       ru: "Он распахивает дверь.",
       uk: "Він розштовхує двері."
     }
+    ]
   },
   {
     id: 223,
@@ -35207,11 +35451,13 @@ window.decks.de_verbs = [
         uk: "фарбувати раму вікна"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir streichen die Wände neu.",
       ru: "Мы заново красим стены.",
       uk: "Ми фарбуємо стіни наново."
     }
+    ]
   },
   {
     id: 224,
@@ -35243,11 +35489,13 @@ window.decks.de_verbs = [
         uk: "влучити в саме яблучко"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich treffe meine Freunde am Abend.",
       ru: "Я встречаюсь с друзьями вечером.",
       uk: "Я зустрічаюся з друзями ввечері."
     }
+    ]
   },
   {
     id: 225,
@@ -35279,11 +35527,13 @@ window.decks.de_verbs = [
         uk: "кинути погляд"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er wirft den Ball ins Tor.",
       ru: "Он бросает мяч в ворота.",
       uk: "Він кидає м’яч у ворота."
     }
+    ]
   },
   {
     id: 226,
@@ -35315,11 +35565,13 @@ window.decks.de_verbs = [
         uk: "важити багато"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Paket wiegt fünf Kilo.",
       ru: "Посылка весит пять килограммов.",
       uk: "Пакунок важить п’ять кілограмів."
     }
+    ]
   },
   {
     id: 227,
@@ -35351,11 +35603,13 @@ window.decks.de_verbs = [
         uk: "примушувати силою"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Niemand zwingt dich zu bleiben.",
       ru: "Никто не принуждает тебя оставаться.",
       uk: "Ніхто не примушує тебе залишатися."
     }
+    ]
   },
   {
     id: 228,
@@ -35387,11 +35641,13 @@ window.decks.de_verbs = [
         uk: "постійно повторювати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Können Sie das bitte wiederholen?",
       ru: "Не могли бы вы это повторить?",
       uk: "Чи не могли б ви це повторити?"
     }
+    ]
   },
   {
     id: 229,
@@ -35423,11 +35679,13 @@ window.decks.de_verbs = [
         uk: "ретельно підготувати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich bereite mich auf die Prüfung vor.",
       ru: "Я готовлюсь к экзамену.",
       uk: "Я готуюся до іспиту."
     }
+    ]
   },
   {
     id: 230,
@@ -35459,11 +35717,13 @@ window.decks.de_verbs = [
         uk: "не мати особливих планів"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Was hast du heute Abend vor?",
       ru: "Что ты намереваешься делать сегодня вечером?",
       uk: "Що ти маєш намір робити сьогодні ввечері?"
     }
+    ]
   },
   {
     id: 231,
@@ -35495,11 +35755,13 @@ window.decks.de_verbs = [
         uk: "погодитися лише частково"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich stimme deinem Vorschlag zu.",
       ru: "Я одобряю твое предложение.",
       uk: "Я погоджуюся з твоєю пропозицією."
     }
+    ]
   },
   {
     id: 232,
@@ -35531,11 +35793,13 @@ window.decks.de_verbs = [
         uk: "зруйнувати чиюсь довіру"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Sturm zerstört viele Häuser.",
       ru: "Шторм разрушает много домов.",
       uk: "Буря руйнує багато будинків."
     }
+    ]
   },
   {
     id: 233,
@@ -35567,11 +35831,13 @@ window.decks.de_verbs = [
         uk: "виявитися правим"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Behalte den Zettel gut.",
       ru: "Сохрани эту записку.",
       uk: "Добре збережи цю записку."
     }
+    ]
   },
   {
     id: 234,
@@ -35603,11 +35869,13 @@ window.decks.de_verbs = [
         uk: "берегти спогади"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir müssen die Natur bewahren.",
       ru: "Мы должны беречь природу.",
       uk: "Ми повинні берегти природу."
     }
+    ]
   },
   {
     id: 235,
@@ -35639,11 +35907,13 @@ window.decks.de_verbs = [
         uk: "замовити піцу"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich bestelle eine Pizza.",
       ru: "Я заказываю пиццу.",
       uk: "Я замовляю піцу."
     }
+    ]
   },
   {
     id: 236,
@@ -35675,11 +35945,13 @@ window.decks.de_verbs = [
         uk: "підтвердити отримання"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bitte bestätigen Sie den Termin.",
       ru: "Пожалуйста, подтвердите встречу.",
       uk: "Будь ласка, підтвердьте зустріч."
     }
+    ]
   },
   {
     id: 237,
@@ -35711,11 +35983,13 @@ window.decks.de_verbs = [
         uk: "оцінювати позитивно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Kunden bewerten das Produkt gut.",
       ru: "Клиенты хорошо оценивают продукт.",
       uk: "Клієнти добре оцінюють продукт."
     }
+    ]
   },
   {
     id: 238,
@@ -35747,11 +36021,13 @@ window.decks.de_verbs = [
         uk: "вимагати більше грошей"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er verlangt eine Erklärung.",
       ru: "Он требует объяснения.",
       uk: "Він вимагає пояснення."
     }
+    ]
   },
   {
     id: 239,
@@ -35783,11 +36059,13 @@ window.decks.de_verbs = [
         uk: "уникати теми"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir wollen Fehler vermeiden.",
       ru: "Мы хотим избежать ошибок.",
       uk: "Ми хочемо уникати помилок."
     }
+    ]
   },
   {
     id: 240,
@@ -35819,11 +36097,13 @@ window.decks.de_verbs = [
         uk: "ще не пробачити"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bitte verzeih mir.",
       ru: "Пожалуйста, прости меня.",
       uk: "Будь ласка, пробач мене."
     }
+    ]
   },
   {
     id: 241,
@@ -35855,11 +36135,13 @@ window.decks.de_verbs = [
         uk: "не могти собі щось уявити"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Darf ich dir meinen Freund vorstellen?",
       ru: "Можно представить тебе моего друга?",
       uk: "Можна представити тобі мого друга?"
     }
+    ]
   },
   {
     id: 242,
@@ -35891,11 +36173,13 @@ window.decks.de_verbs = [
         uk: "вітати з Різдвом"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich wünsche dir viel Glück.",
       ru: "Я желаю тебе удачи.",
       uk: "Я бажаю тобі успіху."
     }
+    ]
   },
   {
     id: 243,
@@ -35927,11 +36211,13 @@ window.decks.de_verbs = [
         uk: "намалювати ескіз"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Kind zeichnet ein Haus.",
       ru: "Ребёнок рисует дом.",
       uk: "Дитина малює будинок."
     }
+    ]
   },
   {
     id: 244,
@@ -35963,11 +36249,13 @@ window.decks.de_verbs = [
         uk: "слухати на уроці"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Hör mir bitte gut zu.",
       ru: "Пожалуйста, хорошенько меня послушай.",
       uk: "Будь ласка, добре мене послухай."
     }
+    ]
   },
   {
     id: 245,
@@ -35999,11 +36287,13 @@ window.decks.de_verbs = [
         uk: "складатися з частин"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir setzen den Text aus Teilen zusammen.",
       ru: "Мы составляем текст из частей.",
       uk: "Ми складаємо текст із частин."
     }
+    ]
   },
   {
     id: 246,
@@ -36035,11 +36325,13 @@ window.decks.de_verbs = [
         uk: "пропонувати товари"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie bieten ihre Hilfe an.",
       ru: "Они предлагают свою помощь.",
       uk: "Вони пропонують свою допомогу."
     }
+    ]
   },
   {
     id: 247,
@@ -36071,11 +36363,13 @@ window.decks.de_verbs = [
         uk: "пізно прибути"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Zug kommt um zehn Uhr an.",
       ru: "Поезд прибывает в десять часов.",
       uk: "Поїзд прибуває о десятій годині."
     }
+    ]
   },
   {
     id: 248,
@@ -36107,11 +36401,13 @@ window.decks.de_verbs = [
         uk: "елегантно вдягтися"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich ziehe eine Jacke an.",
       ru: "Я надеваю куртку.",
       uk: "Я надягаю куртку."
     }
+    ]
   },
   {
     id: 249,
@@ -36143,11 +36439,13 @@ window.decks.de_verbs = [
         uk: "зняти куртку"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er zieht die Schuhe aus.",
       ru: "Он снимает обувь.",
       uk: "Він знімає взуття."
     }
+    ]
   },
   {
     id: 250,
@@ -36179,11 +36477,13 @@ window.decks.de_verbs = [
         uk: "відкрити посилку"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Mach bitte das Fenster auf.",
       ru: "Пожалуйста, открой окно.",
       uk: "Будь ласка, відкрий вікно."
     }
+    ]
   },
   {
     id: 251,
@@ -36215,11 +36515,13 @@ window.decks.de_verbs = [
         uk: "заплющити очі"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie macht die Tür zu.",
       ru: "Она закрывает дверь.",
       uk: "Вона зачиняє двері."
     }
+    ]
   },
   {
     id: 252,
@@ -36251,11 +36553,13 @@ window.decks.de_verbs = [
         uk: "ніколи не припиняти"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wann hörst du endlich auf?",
       ru: "Когда ты, наконец, остановишься?",
       uk: "Коли ти нарешті перестанеш?"
     }
+    ]
   },
   {
     id: 253,
@@ -36287,11 +36591,13 @@ window.decks.de_verbs = [
         uk: "бути уважним на уроці"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Pass gut auf die Kinder auf.",
       ru: "Хорошо присмотри за детьми.",
       uk: "Добре наглядай за дітьми."
     }
+    ]
   },
   {
     id: 254,
@@ -36323,11 +36629,13 @@ window.decks.de_verbs = [
         uk: "ретельно прибирати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich räume mein Zimmer auf.",
       ru: "Я убираю свою комнату.",
       uk: "Я прибираю свою кімнату."
     }
+    ]
   },
   {
     id: 255,
@@ -36359,11 +36667,13 @@ window.decks.de_verbs = [
         uk: "встати зі стільця"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie steht jeden Tag früh auf.",
       ru: "Она каждый день рано встаёт.",
       uk: "Вона щодня рано встає."
     }
+    ]
   },
   {
     id: 256,
@@ -36395,11 +36705,13 @@ window.decks.de_verbs = [
         uk: "вийти «в люди»"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir gehen heute Abend aus.",
       ru: "Мы сегодня вечером выходим в город.",
       uk: "Ми сьогодні ввечері кудись виходимо."
     }
+    ]
   },
   {
     id: 257,
@@ -36431,11 +36743,13 @@ window.decks.de_verbs = [
         uk: "будь ласка, заходьте"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bitte schnell einsteigen.",
       ru: "Пожалуйста, быстрее садитесь.",
       uk: "Будь ласка, швидше сідайте."
     }
+    ]
   },
   {
     id: 258,
@@ -36467,11 +36781,13 @@ window.decks.de_verbs = [
         uk: "вийти з автобуса"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich steige an der nächsten Station aus.",
       ru: "Я выхожу на следующей станции.",
       uk: "Я виходжу на наступній зупинці."
     }
+    ]
   },
   {
     id: 259,
@@ -36503,11 +36819,13 @@ window.decks.de_verbs = [
         uk: "їхати без пересадок"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir müssen in Zürich umsteigen.",
       ru: "Нам нужно сделать пересадку в Цюрихе.",
       uk: "Нам треба пересісти в Цюриху."
     }
+    ]
   },
   {
     id: 260,
@@ -36539,11 +36857,13 @@ window.decks.de_verbs = [
         uk: "із задоволенням піти"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Kommst du mit ins Kino?",
       ru: "Пойдёшь с нами в кино?",
       uk: "Підеш з нами в кіно?"
     }
+    ]
   },
   {
     id: 261,
@@ -36575,11 +36895,13 @@ window.decks.de_verbs = [
         uk: "привести з собою друзів"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bring bitte etwas zu essen mit.",
       ru: "Пожалуйста, принеси с собой что-нибудь поесть.",
       uk: "Будь ласка, принеси з собою щось поїсти."
     }
+    ]
   },
   {
     id: 262,
@@ -36611,11 +36933,13 @@ window.decks.de_verbs = [
         uk: "більше не хотіти брати участь"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Willst du bei dem Projekt mitmachen?",
       ru: "Хочешь поучаствовать в этом проекте?",
       uk: "Хочеш взяти участь у цьому проєкті?"
     }
+    ]
   },
   {
     id: 263,
@@ -36647,11 +36971,13 @@ window.decks.de_verbs = [
         uk: "повернутися з відпустки"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er kommt am Montag zurück.",
       ru: "Он возвращается в понедельник.",
       uk: "Він повертається в понеділок."
     }
+    ]
   },
   {
     id: 264,
@@ -36683,11 +37009,13 @@ window.decks.de_verbs = [
         uk: "зайти ненадовго"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Komm doch heute Abend vorbei.",
       ru: "Зайди сегодня вечером.",
       uk: "Зайди сьогодні ввечері."
     }
+    ]
   },
   {
     id: 265,
@@ -36719,11 +37047,13 @@ window.decks.de_verbs = [
         uk: "піти, не попрощавшись"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich muss jetzt weggehen.",
       ru: "Мне нужно сейчас уйти.",
       uk: "Мені зараз треба йти геть."
     }
+    ]
   },
   {
     id: 266,
@@ -36755,11 +37085,13 @@ window.decks.de_verbs = [
         uk: "треба рухатися далі"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir gehen nach der Pause weiter.",
       ru: "После перерыва мы продолжим идти.",
       uk: "Після перерви ми підемо далі."
     }
+    ]
   },
   {
     id: 267,
@@ -36791,11 +37123,13 @@ window.decks.de_verbs = [
         uk: "працювати в команді"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Firmen arbeiten eng zusammen.",
       ru: "Компании тесно сотрудничают.",
       uk: "Компанії тісно співпрацюють."
     }
+    ]
   },
   {
     id: 268,
@@ -36827,11 +37161,13 @@ window.decks.de_verbs = [
         uk: "підсумувати в кінці"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bitte fassen Sie den Text kurz zusammen.",
       ru: "Пожалуйста, кратко резюмируйте текст.",
       uk: "Будь ласка, коротко підсумуйте текст."
     }
+    ]
   },
   {
     id: 269,
@@ -36863,11 +37199,13 @@ window.decks.de_verbs = [
         uk: "не ладнати з кимось"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Kommst du mit der Aufgabe zurecht?",
       ru: "Ты справляешься с заданием?",
       uk: "Ти ладнаєш із завданням?"
     }
+    ]
   },
   {
     id: 270,
@@ -36899,11 +37237,13 @@ window.decks.de_verbs = [
         uk: "доставити особисто"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Paket wird morgen zugestellt.",
       ru: "Посылку доставят завтра.",
       uk: "Посилку доставлять завтра."
     }
+    ]
   },
   {
     id: 271,
@@ -36935,11 +37275,13 @@ window.decks.de_verbs = [
         uk: "незабаром від’їжджати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Bus fährt gleich ab.",
       ru: "Автобус сейчас отъезжает.",
       uk: "Автобус ось-ось від’їжджає."
     }
+    ]
   },
   {
     id: 272,
@@ -36971,11 +37313,13 @@ window.decks.de_verbs = [
         uk: "публічно оголосити"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie kündigen neue Regeln an.",
       ru: "Они объявляют новые правила.",
       uk: "Вони оголошують нові правила."
     }
+    ]
   },
   {
     id: 273,
@@ -37007,11 +37351,13 @@ window.decks.de_verbs = [
         uk: "вчасно зареєструватися"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Du musst dich online anmelden.",
       ru: "Тебе нужно зарегистрироваться онлайн.",
       uk: "Тобі потрібно зареєструватися онлайн."
     }
+    ]
   },
   {
     id: 274,
@@ -37043,11 +37389,13 @@ window.decks.de_verbs = [
         uk: "вчасно знятися з обліку"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er hat das Auto abgemeldet.",
       ru: "Он снял машину с учёта.",
       uk: "Він зняв авто з обліку."
     }
+    ]
   },
   {
     id: 275,
@@ -37079,11 +37427,13 @@ window.decks.de_verbs = [
         uk: "зв’язок переривається"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir mussten das Gespräch abbrechen.",
       ru: "Нам пришлось прервать разговор.",
       uk: "Нам довелося перервати розмову."
     }
+    ]
   },
   {
     id: 276,
@@ -37115,11 +37465,13 @@ window.decks.de_verbs = [
         uk: "успішно завершити проєкт"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie hat ihr Studium abgeschlossen.",
       ru: "Она завершила учёбу.",
       uk: "Вона закінчила навчання."
     }
+    ]
   },
   {
     id: 277,
@@ -37151,11 +37503,13 @@ window.decks.de_verbs = [
         uk: "відповідати на все чесно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Bitte beantworten Sie die Fragen.",
       ru: "Пожалуйста, ответьте на вопросы.",
       uk: "Будь ласка, дайте відповіді на запитання."
     }
+    ]
   },
   {
     id: 278,
@@ -37187,11 +37541,13 @@ window.decks.de_verbs = [
         uk: "обслуговувати себе самостійно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Kellnerin bedient die Gäste.",
       ru: "Официантка обслуживает гостей.",
       uk: "Офіціантка обслуговує гостей."
     }
+    ]
   },
   {
     id: 279,
@@ -37223,11 +37579,13 @@ window.decks.de_verbs = [
         uk: "музично супроводжувати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich begleite dich zum Arzt.",
       ru: "Я сопровожу тебя к врачу.",
       uk: "Я проведу тебе до лікаря."
     }
+    ]
   },
   {
     id: 280,
@@ -37259,11 +37617,13 @@ window.decks.de_verbs = [
         uk: "вітати потисканням руки"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Chef begrüßt die neuen Mitarbeiter.",
       ru: "Шеф приветствует новых сотрудников.",
       uk: "Шеф вітає нових працівників."
     }
+    ]
   },
   {
     id: 281,
@@ -37295,11 +37655,13 @@ window.decks.de_verbs = [
         uk: "виявитися правим"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Behalte das Geheimnis für dich.",
       ru: "Сохрани секрет при себе.",
       uk: "Збережи цю таємницю при собі."
     }
+    ]
   },
   {
     id: 282,
@@ -37331,11 +37693,13 @@ window.decks.de_verbs = [
         uk: "спостерігати природу"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir beobachten die Vögel am See.",
       ru: "Мы наблюдаем за птицами у озера.",
       uk: "Ми спостерігаємо за птахами біля озера."
     }
+    ]
   },
   {
     id: 283,
@@ -37367,11 +37731,13 @@ window.decks.de_verbs = [
         uk: "професійно консультувати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Verkäufer berät die Kunden.",
       ru: "Продавец консультирует клиентов.",
       uk: "Продавець консультує клієнтів."
     }
+    ]
   },
   {
     id: 284,
@@ -37403,11 +37769,13 @@ window.decks.de_verbs = [
         uk: "повідомляти по радіо"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Zeitung berichtet über das Ereignis.",
       ru: "Газета сообщает о событии.",
       uk: "Газета звітує про подію."
     }
+    ]
   },
   {
     id: 285,
@@ -37439,11 +37807,13 @@ window.decks.de_verbs = [
         uk: "постійно скаржитися"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er beschwert sich über den Lärm.",
       ru: "Он жалуется на шум.",
       uk: "Він скаржиться на шум."
     }
+    ]
   },
   {
     id: 286,
@@ -37475,11 +37845,13 @@ window.decks.de_verbs = [
         uk: "визначати ціну"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Wir bestimmen gemeinsam das Ziel.",
       ru: "Мы вместе определяем цель.",
       uk: "Ми разом визначаємо ціль."
     }
+    ]
   },
   {
     id: 287,
@@ -37511,11 +37883,13 @@ window.decks.de_verbs = [
         uk: "детально обговорювати"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Lass uns das Problem besprechen.",
       ru: "Давай обсудим эту проблему.",
       uk: "Давай обговоримо цю проблему."
     }
+    ]
   },
   {
     id: 288,
@@ -37547,11 +37921,13 @@ window.decks.de_verbs = [
         uk: "особливо наголосити"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er betont die Wichtigkeit des Projekts.",
       ru: "Он подчёркивает важность проекта.",
       uk: "Він наголошує на важливості проєкту."
     }
+    ]
   },
   {
     id: 289,
@@ -37583,11 +37959,13 @@ window.decks.de_verbs = [
         uk: "надавати перевагу одному варіанту"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich bevorzuge Tee statt Kaffee.",
       ru: "Я предпочитаю чай вместо кофе.",
       uk: "Я надаю перевагу чаю, а не каві."
     }
+    ]
   },
   {
     id: 290,
@@ -37619,11 +37997,13 @@ window.decks.de_verbs = [
         uk: "мовчки захоплюватися"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich bewundere ihren Mut.",
       ru: "Я восхищаюсь её мужеством.",
       uk: "Я захоплююся її сміливістю."
     }
+    ]
   },
   {
     id: 291,
@@ -37655,11 +38035,13 @@ window.decks.de_verbs = [
         uk: "не викликати сумнівів"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Ich bezweifle seine Geschichte.",
       ru: "Я сомневаюсь в его рассказе.",
       uk: "Я сумніваюся в його історії."
     }
+    ]
   },
   {
     id: 292,
@@ -37691,11 +38073,13 @@ window.decks.de_verbs = [
         uk: "заблокувати доступ"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Das Auto blockiert die Einfahrt.",
       ru: "Машина блокирует въезд.",
       uk: "Авто блокує в’їзд."
     }
+    ]
   },
   {
     id: 293,
@@ -37727,11 +38111,13 @@ window.decks.de_verbs = [
         uk: "вибілювати волосся"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Sie bleicht die Wäsche in der Sonne.",
       ru: "Она выбеливает бельё на солнце.",
       uk: "Вона вибілює білизну на сонці."
     }
+    ]
   },
   {
     id: 294,
@@ -37763,11 +38149,13 @@ window.decks.de_verbs = [
         uk: "ще трохи кровоточити"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Wunde blutet stark.",
       ru: "Рана сильно кровоточит.",
       uk: "Рана сильно кровоточить."
     }
+    ]
   },
   {
     id: 295,
@@ -37799,11 +38187,13 @@ window.decks.de_verbs = [
         uk: "свердлити дрилем"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Er bohrt ein Loch in die Wand.",
       ru: "Он сверлит отверстие в стене.",
       uk: "Він свердлить отвір у стіні."
     }
+    ]
   },
   {
     id: 296,
@@ -37835,11 +38225,13 @@ window.decks.de_verbs = [
         uk: "варити в пивоварні"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Die Firma braut eigenes Bier.",
       ru: "Компания варит собственное пиво.",
       uk: "Компанія варить власне пиво."
     }
+    ]
   },
   {
     id: 297,
@@ -37871,11 +38263,13 @@ window.decks.de_verbs = [
         uk: "тривати вічно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Der Film dauert zwei Stunden.",
       ru: "Фильм длится два часа.",
       uk: "Фільм триває дві години."
     }
+    ]
   },
   {
     id: 298,
@@ -37907,11 +38301,13 @@ window.decks.de_verbs = [
         uk: "слугувати основою"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Dieses Beispiel dient zur Erklärung.",
       ru: "Этот пример служит для объяснения.",
       uk: "Цей приклад слугує для пояснення."
     }
+    ]
   },
   {
     id: 299,
@@ -37943,11 +38339,13 @@ window.decks.de_verbs = [
         uk: "тиснути надто сильно"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "Drück bitte auf den Knopf.",
       ru: "Нажми, пожалуйста, на кнопку.",
       uk: "Натисни, будь ласка, на кнопку."
     }
+    ]
   },
   {
     id: 300,
@@ -37979,11 +38377,13 @@ window.decks.de_verbs = [
         uk: "не терпіти критики"
       }
     ],
-    examples: {
+    examples: [
+      {
       L2: "So ein Verhalten kann ich nicht dulden.",
       ru: "Такое поведение я не могу терпеть.",
       uk: "Таку поведінку я не можу терпіти."
     }
+    ]
   },
   {
   id: 301,
