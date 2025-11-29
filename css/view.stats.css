@@ -475,4 +475,14 @@
   border-color: var(--accent, var(--brand, #35b6ff));
   opacity: 1;
 }
+
+/* центрируем индикаторы страниц в статистике */
+.stats-page-dots,
+.stats-range-dots,
+.stats-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ========================= Конец файла: view.stats.css ========================= */
