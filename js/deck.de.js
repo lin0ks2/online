@@ -5,8 +5,6 @@
  * Version: 1.0
  * Last modified: 2025-10-19
 */
-window.decks = window.decks || {};
-
 window.decks.de_nouns = [
 {
   id: 1,
@@ -39548,7 +39546,7 @@ window.decks.de_verbs = [
   deSynonyms: ["beschaffen", "bringen (nach dem Holen)"],
   ruSynonyms: ["сходить за", "забрать и принести"],
   ukSynonyms: ["сходити по", "забрати й принести"],
-  deAntonyms: ["bringen" (в обратном направлении)],
+  deAntonyms: ["bringen"],
   ruAntonyms: [],
   ukAntonyms: [],
   collocations: [
