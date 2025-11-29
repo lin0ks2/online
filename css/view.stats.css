@@ -479,8 +479,10 @@
 /* центрируем индикаторы страниц в статистике */
 .stats-page-dots,
 .stats-range-dots {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   margin-top: 8px;
 }
 /* ========================= Конец файла: view.stats.css ========================= */
