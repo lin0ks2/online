@@ -1446,22 +1446,34 @@ body.modal-open { overflow: hidden;}
   gap:6px;
 }
 
-/* точки-индикаторы вкладок: маленькие визуально, но с большой зоной клика */
-.home-hints .hints-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  border:1px solid var(--text-muted,rgba(0,0,0,.35));
-  background:transparent;
-  padding:10px;             /* увеличиваем зону клика */
-  box-sizing:content-box;
-  cursor:pointer;
-  opacity:.7;
+/* точки-индикаторы вкладок: маленькие по виду, большие по зоне тапа */
+.home-hints .hints-dot {
+  position: relative;
+  width: 24px;          /* зона клика */
+  height: 24px;         /* зона клика */
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
-.home-hints .hints-dot.is-active{
-  background:var(--accent,var(--brand,#35b6ff));
-  border-color:var(--accent,var(--brand,#35b6ff));
-  opacity:1;
+/* сама точка внутри */
+.home-hints .hints-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;           /* реальный размер точки */
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--text-muted, rgba(255,255,255,.4));
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+
+.home-hints .hints-dot.is-active::before {
+  background: var(--accent, var(--brand, #35b6ff));
+  border-color: var(--accent, var(--brand, #35b6ff));
+  opacity: 1;
 }
 /* ========================= Конец файла: theme.light.css ========================= */
