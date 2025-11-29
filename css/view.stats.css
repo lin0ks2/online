@@ -476,9 +476,18 @@
   opacity: 1;
 }
 
-/* центрируем индикаторы страниц в статистике */
+/* центрируем индикаторы страниц в статистике 
 .stats-page-dots,
 .stats-range-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+} */
+/* центрируем индикаторы страниц в статистике:
+   берём ПОСЛЕДНИЙ блок в теле карточки (там лежат точки) */
+.stats-lang-card__body > div:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
