@@ -477,7 +477,7 @@
 }
 
 /* центрируем индикаторы страниц в статистике */
-.stats-page-dot,
+.stats-page-dots,
 .stats-range-dots {
   display: flex;
   justify-content: center;
