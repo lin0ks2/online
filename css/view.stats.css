@@ -476,13 +476,11 @@
   opacity: 1;
 }
 
-/* финальное выравнивание индикаторов статистики по центру */
+/* центрируем индикаторы страниц в статистике */
 .stats-page-dots,
 .stats-range-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
+  display: block;
+  text-align: center;
   margin-top: 8px;
 }
 /* ========================= Конец файла: view.stats.css ========================= */
