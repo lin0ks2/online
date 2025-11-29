@@ -69423,9 +69423,130 @@ window.decks.de_pronouns = [
         uk: "На вечірку прийшло численно гостей."
       }
     ]
+  },
+
+  // числа — пока оставляем в этом же массиве, тип "numeral"
+  {
+    id: 38,
+    word: "zweieinhalb",
+    ru: "два с половиной",
+    uk: "два з половиною",
+    level: "A2",
+    topics: ["numbers"],
+
+    pronounType: "numeral",
+    person: null,
+    number: null,
+    gender: null,
+    caseUsage: "дробное число; в сочетании с существительными влияет на форму числа/падежа",
+    function: "обозначает количество 2,5",
+    register: "neutral",
+
+    deSynonyms: [],
+    ruSynonyms: ["два с половиной"],
+    ukSynonyms: ["два з половиною"],
+
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+
+    patterns: [
+      {
+        de: "zweieinhalb + Stunden / Jahre / Kilo ...",
+        ru: "«два с половиной» + часа / года / килограмма ...",
+        uk: "«два з половиною» + години / роки / кілограми ..."
+      }
+    ],
+
+    examples: [
+      {
+        L2: "Das dauert zweieinhalb Stunden.",
+        ru: "Это длится два с половиной часа.",
+        uk: "Це триває два з половиною години."
+      }
+    ]
+  },
+  {
+    id: 39,
+    word: "zweite",
+    ru: "второй",
+    uk: "другий",
+    level: "A1",
+    topics: ["numbers"],
+
+    pronounType: "numeral",
+    person: null,
+    number: "both",
+    gender: "all",
+    caseUsage: "порядковое числительное; склоняется как прилагательное",
+    function: "обозначает порядок: второй по счёту",
+    register: "neutral",
+
+    deSynonyms: [],
+    ruSynonyms: ["второй", "вторая", "второе"],
+    ukSynonyms: ["другий", "друга", "друге"],
+
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+
+    patterns: [
+      {
+        de: "im zweiten Stock",
+        ru: "«на втором этаже»",
+        uk: "«на другому поверсі»"
+      }
+    ],
+
+    examples: [
+      {
+        L2: "Er wohnt im zweiten Stock.",
+        ru: "Он живёт на втором этаже.",
+        uk: "Він живе на другому поверсі."
+      }
+    ]
+  },
+  {
+    id: 40,
+    word: "zwölf",
+    ru: "двенадцать",
+    uk: "дванадцять",
+    level: "A1",
+    topics: ["numbers"],
+
+    pronounType: "numeral",
+    person: null,
+    number: null,
+    gender: null,
+    caseUsage: "количественное числительное",
+    function: "обозначает количество 12 или время (12 часов)",
+    register: "neutral",
+
+    deSynonyms: [],
+    ruSynonyms: ["двенадцать"],
+    ukSynonyms: ["дванадцять"],
+
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+
+    patterns: [
+      {
+        de: "zwölf + Nomen / zwölf Uhr",
+        ru: "«двенадцать» + существительное / «двенадцать часов»",
+        uk: "«дванадцять» + іменник / «дванацята година»"
+      }
+    ],
+
+    examples: [
+      {
+        L2: "Es ist zwölf Uhr.",
+        ru: "Сейчас двенадцать часов.",
+        uk: "Зараз дванадцята година."
+      }
+    ]
   }
 ];
-
 window.decks.de_numbers = [
   {
     id: 1,
