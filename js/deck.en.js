@@ -5,6 +5,7 @@
  * Version: 1.0
  * Last modified: 2025-10-19
 */
+window.decks = window.decks || {};
 
 window.decks.en_pronouns = [
   { id: 1, word: "I", uk: "я", ru: "я" },
