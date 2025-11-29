@@ -1425,65 +1425,43 @@ body.modal-open { overflow: hidden;}
 /* опционально: .mistakes-delete сделать pointer */
 .mistakes-delete{ cursor:pointer; }
 
-/* ===================== hints multi-tab ===================== */
+/* ===================== home-hints header with tabs ===================== */
 
-.hints-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 6px;
+.home-hints .hints-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:0 0 4px;
 }
 
-#hintsTabLabel {
-  font-size: 15px;
-  font-weight: 600;
+.home-hints .hints-title{
+  margin:0;
+  font-size:14px;
+  font-weight:700;
+  opacity:.85;
 }
 
-.hints-pager {
-  display: flex;
-  gap: 6px;
+.home-hints .hints-pager{
+  display:flex;
+  gap:6px;
 }
 
-.hints-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid var(--text-muted);
-  padding: 10px; /* зона клика большая */
-  box-sizing: content-box;
-  cursor: pointer;
-  opacity: 0.7;
+/* точки-индикаторы вкладок: маленькие визуально, но с большой зоной клика */
+.home-hints .hints-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  border:1px solid var(--text-muted,rgba(0,0,0,.35));
+  background:transparent;
+  padding:10px;             /* увеличиваем зону клика */
+  box-sizing:content-box;
+  cursor:pointer;
+  opacity:.7;
 }
 
-.hints-dot.is-active {
-  background: var(--accent);
-  border-color: var(--accent);
-  opacity: 1;
-}
-
-.hint-item {
-  margin-bottom: 14px;
-}
-
-.hint-l2 {
-  font-size: 15px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.hint-tr {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.hint-tr.hidden {
-  display: none;
-}
-
-.hint-empty {
-  padding: 12px 0;
-  font-size: 14px;
-  opacity: 0.6;
+.home-hints .hints-dot.is-active{
+  background:var(--accent,var(--brand,#35b6ff));
+  border-color:var(--accent,var(--brand,#35b6ff));
+  opacity:1;
 }
 /* ========================= Конец файла: theme.light.css ========================= */
