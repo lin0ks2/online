@@ -769,4 +769,66 @@ html[data-theme="dark"] :where(a,button,[role="button"],input,select,textarea,.b
 }
 /* опционально: .mistakes-delete сделать pointer */
 .mistakes-delete{ cursor:pointer; }
+
+/* ===================== hints multi-tab ===================== */
+
+.hints-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6px;
+}
+
+#hintsTabLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hints-pager {
+  display: flex;
+  gap: 6px;
+}
+
+.hints-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  padding: 10px; /* зона клика большая */
+  box-sizing: content-box;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.hints-dot.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.hint-item {
+  margin-bottom: 14px;
+}
+
+.hint-l2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.hint-tr {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hint-tr.hidden {
+  display: none;
+}
+
+.hint-empty {
+  padding: 12px 0;
+  font-size: 14px;
+  opacity: 0.6;
+}
 /* ========================= Конец файла: theme.dark.css ========================= */
