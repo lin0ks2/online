@@ -2,8 +2,9 @@
  * Проект: MOYAMOVA
  * Файл: ui.examples.hints.js
  * Назначение: Пример использования текущего слова
- *            в зоне .home-hints под сетами (примеры/синонимы/антонимы)
- * Версия: 3.0 (многовкладочная зона + общая логика показа перевода)
+ *            в зоне .home-hints под сетами
+ *            (Пример / Синонимы / Антонимы)
+ * Версия: 3.0 (вкладки + общая логика показа перевода)
  * Обновлено: 2025-11-29
  * ========================================================== */
 
@@ -12,9 +13,9 @@
 
   const A = (window.App = window.App || {});
 
-  let wordObserver = null;   // наблюдатель за .trainer-word
-  let wrongAttempts = 0;     // счётчик неверных ответов для текущего слова
-  let currentTab = 'examples'; // 'examples' | 'synonyms' | 'antonyms' — запоминаем на сессию
+  let wordObserver = null;    // наблюдатель за .trainer-word
+  let wrongAttempts = 0;      // счётчик неверных ответов для текущего слова
+  let currentTab = 'examples'; // 'examples' | 'synonyms' | 'antonyms' (на сессию)
 
   /* ----------------------------- Вспомогательные функции ----------------------------- */
 
@@ -103,7 +104,7 @@
     return '';
   }
 
-  // Выбор массивов синонимов/антонимов по языкам
+  // Синонимы по L2 и L1 (ru/uk)
   function getSynonyms(word) {
     if (!word) return { de: [], l1: [] };
 
@@ -113,9 +114,10 @@
     const uk = Array.isArray(word.ukSynonyms) ? word.ukSynonyms : [];
 
     const l1 = (uiLang === 'uk') ? uk : ru;
-    return { de, l1 };
+    return { de: de, l1: l1 };
   }
 
+  // Антонимы по L2 и L1 (ru/uk)
   function getAntonyms(word) {
     if (!word) return { de: [], l1: [] };
 
@@ -125,14 +127,15 @@
     const uk = Array.isArray(word.ukAntonyms) ? word.ukAntonyms : [];
 
     const l1 = (uiLang === 'uk') ? uk : ru;
-    return { de, l1 };
+    return { de: de, l1: l1 };
   }
 
-  /* ----------------------------- Заголовок + вкладки ----------------------------- */
+  /* ----------------------------- Заголовок и вкладки ----------------------------- */
 
-  function ensureHeader(section) {
+  // Создаём/обновляем заголовок с вкладками
+  function ensureTitle(section) {
     const bodyEl = section.querySelector('#hintsBody');
-    if (!bodyEl) return null;
+    if (!bodyEl) return;
 
     let header = section.querySelector('.hints-header');
     if (!header) {
@@ -145,7 +148,6 @@
 
       const pager = document.createElement('div');
       pager.className = 'hints-pager';
-      pager.id = 'hintsPager';
 
       header.appendChild(titleEl);
       header.appendChild(pager);
@@ -153,25 +155,15 @@
       section.insertBefore(header, bodyEl);
     }
 
-    return header;
-  }
-
-  function updateHeader(section) {
-    const header = ensureHeader(section);
-    if (!header) return;
-
     const labels = getTabLabels();
-
     const titleEl = header.querySelector('#hintsTabLabel');
-    const pager   = header.querySelector('#hintsPager');
+    const pager   = header.querySelector('.hints-pager');
     if (!titleEl || !pager) return;
 
-    // текст заголовка
     titleEl.textContent = labels[currentTab] || labels.examples;
 
-    // индикаторы
+    // индикаторы вкладок
     pager.innerHTML = '';
-
     ['examples', 'synonyms', 'antonyms'].forEach(function (tab) {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -179,8 +171,9 @@
       btn.dataset.tab = tab;
 
       btn.addEventListener('click', function () {
-        currentTab = tab;        // запоминаем выбор на сессию
-        renderExampleHint();     // перерисовываем содержимое под текущий таб
+        if (currentTab === tab) return;
+        currentTab = tab;      // запоминаем выбор на сессию
+        renderExampleHint();   // перерисовываем содержимое
       });
 
       pager.appendChild(btn);
@@ -192,19 +185,15 @@
   function renderExamplesTab(word, body) {
     const examples = Array.isArray(word.examples) ? word.examples : [];
     if (!examples.length) {
-      body.innerHTML = '<div class="hint-example"><p class="hint-tr is-visible">'
-        + escapeHtml(getNoDataText('examples'))
-        + '</p></div>';
+      // если нет примеров — просто очищаем (как было раньше)
+      body.innerHTML = '';
       return;
     }
 
-    // берём только один основной пример (как раньше)
-    const ex  = examples[0] || {};
-    const de  = ex.L2 || ex.de || ex.deu || '';
+    const ex = examples[0] || {};
+    const de = ex.L2 || ex.de || ex.deu || '';
     if (!de) {
-      body.innerHTML = '<div class="hint-example"><p class="hint-tr is-visible">'
-        + escapeHtml(getNoDataText('examples'))
-        + '</p></div>';
+      body.innerHTML = '';
       return;
     }
 
@@ -229,13 +218,15 @@
     const l1  = (syn.l1 || []).filter(Boolean);
 
     if (!de.length && !l1.length) {
-      body.innerHTML = '<div class="hint-example"><p class="hint-tr is-visible">'
-        + escapeHtml(getNoDataText('synonyms'))
-        + '</p></div>';
+      body.innerHTML =
+        '<div class="hint-example">' +
+          '<p class="hint-tr is-visible">' +
+            escapeHtml(getNoDataText('synonyms')) +
+          '</p>' +
+        '</div>';
       return;
     }
 
-    // Строим как "пример": сверху немецкий список, снизу переводный список
     const top = de.join(', ');
     const bottom = l1.join(', ');
 
@@ -252,9 +243,12 @@
     const l1  = (ant.l1 || []).filter(Boolean);
 
     if (!de.length && !l1.length) {
-      body.innerHTML = '<div class="hint-example"><p class="hint-tr is-visible">'
-        + escapeHtml(getNoDataText('antonyms'))
-        + '</p></div>';
+      body.innerHTML =
+        '<div class="hint-example">' +
+          '<p class="hint-tr is-visible">' +
+            escapeHtml(getNoDataText('antonyms')) +
+          '</p>' +
+        '</div>';
       return;
     }
 
@@ -269,13 +263,11 @@
   }
 
   function renderExampleHint() {
+    const section = document.querySelector('.home-hints');
     const body = document.getElementById('hintsBody');
-    if (!body) return;
+    if (!section || !body) return;
 
-    const section = body.closest('.home-hints');
-    if (!section) return;
-
-    updateHeader(section);
+    ensureTitle(section);
 
     const word = A.__currentWord;
     if (!word) {
@@ -283,15 +275,12 @@
       return;
     }
 
-    // активная вкладка — одна на всю сессию
-    if (currentTab === 'examples') {
-      renderExamplesTab(word, body);
-    } else if (currentTab === 'synonyms') {
+    if (currentTab === 'synonyms') {
       renderSynonymsTab(word, body);
     } else if (currentTab === 'antonyms') {
       renderAntonymsTab(word, body);
     } else {
-      // fallback на примеры
+      // 'examples' или любые другие значения по умолчанию → примеры
       renderExamplesTab(word, body);
     }
   }
@@ -316,33 +305,39 @@
     body.scrollTop += delta + 14; // небольшой запас
   }
 
-  // Показ перевода (для всех блоков в активной вкладке)
+  // Показ перевода (для активной вкладки)
   function showTranslation() {
     const body = document.getElementById('hintsBody');
     if (!body) return;
+    const root = body.querySelector('.hint-example');
+    if (!root) return;
+    const trEl = root.querySelector('.hint-tr');
+    if (!trEl) return;
 
-    const trs = body.querySelectorAll('.hint-tr');
-    if (!trs.length) return;
-
-    trs.forEach(function (trEl) {
-      trEl.classList.add('is-visible');
-    });
-
-    // следим, чтобы нижний не спрятался под скролл
-    ensureTranslationVisible(trs[trs.length - 1]);
+    trEl.classList.add('is-visible');
+    ensureTranslationVisible(trEl);
   }
 
   /* ----------------------------- Наблюдение за тренером ----------------------------- */
 
-  // локальный observer за .trainer-word — как в 1.2
   function setupWordObserver() {
-    if (wordObserver) {
-      try { wordObserver.disconnect(); } catch (_) {}
-      wordObserver = null;
+    const wordEl = document.querySelector('.trainer-word');
+
+    // если нет тренера — отключаем observer и хотя бы один раз рендерим
+    if (!wordEl || typeof MutationObserver === 'undefined') {
+      if (wordObserver) {
+        wordObserver.disconnect();
+        wordObserver = null;
+      }
+      renderExampleHint();
+      return;
     }
 
-    const wordEl = document.querySelector('.home-trainer .trainer-word');
-    if (!wordEl) return;
+    // отключаем старый observer, чтобы не плодить
+    if (wordObserver) {
+      wordObserver.disconnect();
+      wordObserver = null;
+    }
 
     let last = wordEl.textContent || '';
 
@@ -354,11 +349,9 @@
       // новое слово → сбрасываем счётчик неверных попыток
       wrongAttempts = 0;
 
-      // и возвращаем скролл подсказок в начало
       const body = document.getElementById('hintsBody');
       if (body) body.scrollTop = 0;
 
-      // перерисовываем блок подсказок под текущую вкладку
       renderExampleHint();
     });
 
@@ -367,19 +360,45 @@
       subtree: true,
       characterData: true
     });
+
+    // первый рендер для уже выведенного слова
+    wrongAttempts = 0;
+    const body = document.getElementById('hintsBody');
+    if (body) body.scrollTop = 0;
+    renderExampleHint();
   }
 
-  // Наблюдаем за домом, чтобы при возврате на home заново навесить observer
+  // глобальный observer: следим только за появлением НОВОГО .trainer-word
   function setupGlobalHomeObserver() {
-    const obs = new MutationObserver(function () {
-      const homeTrainer = document.querySelector('.home-trainer .trainer-word');
-      if (!homeTrainer) return;
+    if (typeof MutationObserver === 'undefined') {
+      return;
+    }
 
-      // как только снова появился тренер — настраиваем observer
-      let needSetup = !wordObserver;
-      if (!needSetup && homeTrainer) {
-        // если уже есть observer, но элемент сменился — тоже перепривязываем
-        needSetup = true;
+    const obs = new MutationObserver(function (mutations) {
+      let needSetup = false;
+
+      for (let i = 0; i < mutations.length; i++) {
+        const m = mutations[i];
+        if (!m.addedNodes || !m.addedNodes.length) continue;
+
+        for (let j = 0; j < m.addedNodes.length; j++) {
+          const node = m.addedNodes[j];
+          if (node.nodeType !== 1) continue; // только элементы
+
+          // сам .trainer-word
+          if (node.matches && node.matches('.trainer-word')) {
+            needSetup = true;
+            break;
+          }
+
+          // или внутри добавленного узла есть .trainer-word
+          if (node.querySelector && node.querySelector('.trainer-word')) {
+            needSetup = true;
+            break;
+          }
+        }
+
+        if (needSetup) break;
       }
 
       if (needSetup) {
@@ -412,26 +431,26 @@
 
         trEl.classList.toggle('is-visible');
 
+        // Если перевод только что показали — следим, чтобы он не спрятался под скролл
         if (willShow) {
           ensureTranslationVisible(trEl);
         }
-
         return;
       }
 
-      // 2) Клик по ответу/«Не знаю» → логика 2 ошибок и автопоказ перевода
+      // 2) Клик по вариантам ответов / "Не знаю"
       const answersGrid = document.querySelector('.home-trainer .answers-grid');
       const idkBtn      = document.querySelector('.home-trainer .idk-btn');
 
       if (!answersGrid && !idkBtn) return;
 
-      const ansBtn = target.closest('.answers-grid button');
-      const isIdk  = idkBtn && target.closest('.idk-btn');
+      const answerBtn = target.closest('.answers-grid button');
+      const isIdk     = idkBtn && target.closest('.idk-btn');
 
       // 2.1) Клик по варианту ответа
-      if (ansBtn && answersGrid && answersGrid.contains(ansBtn)) {
-        const isCorrect = ansBtn.classList.contains('is-correct');
-        const isWrong   = ansBtn.classList.contains('is-wrong');
+      if (answerBtn && answersGrid && answersGrid.contains(answerBtn)) {
+        const isCorrect = answerBtn.classList.contains('is-correct');
+        const isWrong   = answerBtn.classList.contains('is-wrong');
 
         // корректный ответ → сразу показываем перевод
         if (isCorrect) {
