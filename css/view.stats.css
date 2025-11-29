@@ -478,15 +478,11 @@
 
 /* финальное выравнивание индикаторов статистики по центру */
 .stats-page-dots,
-.stats-range-dots,
-.stats-pages {
-  display: flex !important;
-  justify-content: center !important;
+.stats-range-dots {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+  gap: 6px;
+  margin-top: 8px;
 }
-
 /* ========================= Конец файла: view.stats.css ========================= */
