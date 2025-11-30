@@ -896,29 +896,60 @@
     });
   }
 
-  function mount() {
+    function mount() {
     const app = document.getElementById('app');
     if (!app) return;
 
-    // Если PRO не активен — показываем заглушку и предложение купить
+    // Если PRO не активен — показываем заглушку в стиле "Избранное"
     if (!A.isPro || !A.isPro()) {
       const texts = t();
+      const lang = getUiLang();
+      const body =
+        lang === 'uk'
+          ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
+          : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
+
       app.innerHTML =
         '<div class="home">' +
           '<section class="card dicts-card stats-card">' +
-            '<div class="stats-lang-card__header">' +
-              '<h2 class="stats-lang-card__title">' + texts.title + '</h2>' +
+            '<div class="dicts-header">' +
+              '<h3>' + texts.title + '</h3>' +
             '</div>' +
-            '<div class="stats-lang-card__body" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
-              '<p style="margin-bottom:10px;">Расширенная статистика доступна в версии <strong>MOYAMOVA PRO</strong>.</p>' +
-              '<p style="margin-bottom:14px;">Нажмите кнопку 💎 в меню, чтобы узнать подробности и разово разблокировать PRO.</p>' +
+            '<div class="dicts-body" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
+              '<p style="margin-bottom:10px;">' + body + '</p>' +
             '</div>' +
           '</section>' +
         '</div>';
       return;
     }
 
+    const texts = t();
+    const stats = computeStats();
+    const activeLang = detectActiveTrainLang(stats.byLang);
 
+    const cardsHtml = renderLangCards(stats.byLang, texts, activeLang);
+
+    const html =
+      '<div class="home">' +
+        '<section class="card dicts-card stats-card">' +
+          '<header class="dicts-header">' +
+            '<h2 class="dicts-title">' + texts.title + '</h2>' +
+            '<div id="stats-flags" class="dicts-flags"></div>' +
+          '</header>' +
+          '<div class="stats-card">' +
+            cardsHtml +
+          '</div>' +
+        '</section>' +
+      '</div>';
+
+    app.innerHTML = html;
+
+    const root = app.querySelector('.stats-card');
+    const statsData = computeStats();
+    const activeLangCode = detectActiveTrainLang(statsData.byLang);
+    setupLangFlags(app, statsData.byLang, activeLangCode);
+    setupStatsPager(app);
+  }
     if (!app) return;
 
     const texts = t();
