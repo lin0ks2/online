@@ -92,6 +92,10 @@
     }catch(e){}
     alert(t().already);
     close();
+    // мягкая перезагрузка, чтобы сразу подхватить PRO-контент
+    try {
+      setTimeout(function(){ window.location.reload(); }, 150);
+    } catch(e) {}
   }
 
   function open(){
@@ -131,8 +135,12 @@
     sheet = wrap;
     document.body.appendChild(sheet);
 
-    var overlay = sheet.querySelector('[data-pro-close]');
-    overlay && overlay.addEventListener('click', close, { passive:true });
+    var closeNodes = sheet.querySelectorAll('[data-pro-close]');
+    if (closeNodes && closeNodes.length) {
+      closeNodes.forEach(function(node){
+        node.addEventListener('click', close, { passive:true });
+      });
+    }
     var buyBtn = sheet.querySelector('[data-pro-buy]');
     buyBtn && buyBtn.addEventListener('click', onBuyClick, { passive:true });
   }
