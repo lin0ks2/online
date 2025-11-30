@@ -896,7 +896,7 @@
     });
   }
 
-    function mount() {
+  function mount() {
     const app = document.getElementById('app');
     if (!app) return;
 
@@ -904,10 +904,9 @@
     if (!A.isPro || !A.isPro()) {
       const texts = t();
       const lang = getUiLang();
-      const body =
-        lang === 'uk'
-          ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
-          : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
+      const body = (lang === 'uk')
+        ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
+        : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
 
       app.innerHTML =
         '<div class="home">' +
@@ -923,33 +922,7 @@
       return;
     }
 
-    const texts = t();
-    const stats = computeStats();
-    const activeLang = detectActiveTrainLang(stats.byLang);
 
-    const cardsHtml = renderLangCards(stats.byLang, texts, activeLang);
-
-    const html =
-      '<div class="home">' +
-        '<section class="card dicts-card stats-card">' +
-          '<header class="dicts-header">' +
-            '<h2 class="dicts-title">' + texts.title + '</h2>' +
-            '<div id="stats-flags" class="dicts-flags"></div>' +
-          '</header>' +
-          '<div class="stats-card">' +
-            cardsHtml +
-          '</div>' +
-        '</section>' +
-      '</div>';
-
-    app.innerHTML = html;
-
-    const root = app.querySelector('.stats-card');
-    const statsData = computeStats();
-    const activeLangCode = detectActiveTrainLang(statsData.byLang);
-    setupLangFlags(app, statsData.byLang, activeLangCode);
-    setupStatsPager(app);
-  }
     if (!app) return;
 
     const texts = t();
