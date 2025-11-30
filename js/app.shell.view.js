@@ -18,6 +18,7 @@
         '<a class="brand-link" href="./" aria-label="Главная" data-i18n-aria="ariaHome">' +
           '<img src="./img/logo_64.png" alt="MOYAMOVA">' +
           '<h1 class="brand-title">MOYAMOVA</h1>' +
+          '<span class="header-pro-badge" data-pro="1">PRO</span>' +
         '</a>' +
       '</div>' +
       '<button id="btnMenu" class="burger" aria-label="Меню" data-i18n-aria="ariaMenu">☰</button>' +
