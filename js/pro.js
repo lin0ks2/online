@@ -49,7 +49,7 @@
 
   var sheet = null;
 
-      function ensureStyles(){
+        function ensureStyles(){
     if (document.getElementById('pro-sheet-style')) return;
 
     var css = ''
@@ -58,8 +58,11 @@
       + 'background:var(--card-bg,rgba(15,23,42,.98));color:var(--text-primary,#fff);box-shadow:0 -10px 40px rgba(15,23,42,.9);'
       + 'max-width:520px;margin:0 auto;padding:16px 18px 20px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}'
       + '@media (prefers-color-scheme:light){.pro-sheet{background:var(--card-bg,#fff);color:var(--text-primary,#0f172a);}}'
-      + '.pro-sheet__title{font-size:18px;font-weight:700;margin-bottom:4px;}'
-      + '.pro-sheet__subtitle{font-size:13px;opacity:.8;margin-bottom:12px;}'
+
+      // заголовок и подзаголовок — по центру
+      + '.pro-sheet__title{font-size:18px;font-weight:700;margin-bottom:4px;text-align:center;}'
+      + '.pro-sheet__subtitle{font-size:13px;opacity:.8;margin-bottom:12px;text-align:center;}'
+
       + '.pro-sheet__features-title{font-size:13px;font-weight:600;margin-bottom:6px;}'
       + '.pro-sheet__list{margin:0 0 14px;padding-left:18px;font-size:13px;}'
       + '.pro-sheet__list li{margin-bottom:4px;}'
@@ -70,11 +73,11 @@
       + '.pro-sheet__btn--primary{background:var(--accent,var(--brand,#35b6ff));color:#fff;}'
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
 
-         // БЕЙДЖ "Раз и навсегда" — по центру и крупнее
-      + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;'
-      + 'padding:6px 14px;border-radius:999px;background:rgba(34,197,94,0.12);color:#4ade80;margin:0 auto 12px auto;}'
-      + '.pro-sheet__badge span{font-size:14px;}';
-        
+      // БЕЙДЖ "Раз и навсегда" — без заливки, крупнее, брендовый цвет, по центру
+      + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
+      + 'padding:0;border-radius:999px;color:var(--accent,var(--brand,#35b6ff));margin:0 auto 10px auto;background:transparent;}'
+      + '.pro-sheet__badge span{font-size:15px;}';
+
     var style = document.createElement('style');
     style.id = 'pro-sheet-style';
     style.textContent = css;
