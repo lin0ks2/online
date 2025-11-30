@@ -60,7 +60,8 @@
       + '@media (prefers-color-scheme:light){.pro-sheet{background:var(--card-bg,#fff);color:var(--text-primary,#0f172a);}}'
 
       // заголовок и подзаголовок — по центру
-      + '.pro-sheet__title{font-size:18px;font-weight:700;margin-bottom:4px;text-align:center;}'
+      + '.pro-sheet__title{font-size:18px;font-weight:700;margin-bottom:4px;text-align:center;'
+      + 'color:var(--accent,var(--brand,#35b6ff));}'
       + '.pro-sheet__subtitle{font-size:13px;opacity:.8;margin-bottom:12px;text-align:center;}'
 
       + '.pro-sheet__features-title{font-size:13px;font-weight:600;margin-bottom:6px;}'
@@ -74,8 +75,8 @@
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
 
       // БЕЙДЖ "Раз и навсегда" — без заливки, крупнее, брендовый цвет, по центру
-      + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
-      + 'padding:0;border-radius:999px;color:var(--accent,var(--brand,#35b6ff));margin:0 auto 10px auto;background:transparent;}'
+    + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
+    + 'padding:0;border-radius:999px;color:var(--text-primary,#fff);margin:0 auto 10px auto;background:transparent;}'
       + '.pro-sheet__badge span{font-size:15px;}';
 
     var style = document.createElement('style');
