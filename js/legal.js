@@ -207,16 +207,84 @@ const Legal = (() => {
     }
   }
 
-  async function load(section){
+    async function load(section){
     const url = legalUrl(section);
     const res = await fetch(url, { credentials: 'same-origin' });
     const text = await res.text();
+
+    // основной контент + табы
     content.innerHTML = extractMain(text) + 
   `<div class="legal-tabs" style="margin:24px 0 0; border-top:1px solid #eee; padding-top:16px; justify-content:center;">
      <button class="legal-tab" data-section="terms" data-i18n="legalTerms">Условия</button>
      <button class="legal-tab" data-section="privacy" data-i18n="legalPrivacy">Конфиденциальность</button>
      <button class="legal-tab" data-section="impressum" data-i18n="legalImpressum">Юридическая информация</button>
    </div>`;
+
+    // ------------------ Блок согласия под Условиями ------------------
+    if (section === 'terms') {
+      try {
+        const lang = currentLang();
+        const accepted = (window.localStorage.getItem('mm.tosAccepted') === '1');
+
+        const labelText = (lang === 'uk')
+          ? 'Я приймаю умови використання застосунку'
+          : 'Я принимаю условия использования приложения';
+
+        const noteText = (lang === 'uk')
+          ? 'Зняття позначки видалить ваші дані і прогрес та поверне застосунок до початкового налаштування.'
+          : 'Снятие галочки удалит ваши данные и прогресс и вернёт приложение к первичной настройке.';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'legal-consent';
+        wrapper.innerHTML = [
+          '<label class="legal-consent__label">',
+            '<input type="checkbox" data-legal-tos>',
+            '<span class="legal-consent__box"></span>',
+            '<span class="legal-consent__text">', labelText, '</span>',
+          '</label>',
+          '<p class="legal-consent__note">', noteText, '</p>'
+        ].join('');
+
+        content.appendChild(wrapper);
+
+        const cb = wrapper.querySelector('[data-legal-tos]');
+        if (!cb) return;
+
+        // начальное состояние чекбокса
+        cb.checked = accepted;
+
+        cb.addEventListener('change', function () {
+          // Пользователь ставит галочку → просто считаем условия принятыми
+          if (cb.checked) {
+            try { window.localStorage.setItem('mm.tosAccepted', '1'); } catch(_){}
+            return;
+          }
+
+          // Пользователь снимает галочку → предупреждаем и сбрасываем всё
+          const msg = (lang === 'uk')
+            ? 'Якщо ви відхилите умови, усі дані (прогрес, налаштування, обрані слова тощо) будуть видалені, а застосунок повернеться до початкового налаштування. Продовжити?'
+            : 'Если вы откажетесь от условий, все данные (прогресс, настройки, избранные слова и т.п.) будут удалены, а приложение вернётся к первичной настройке. Продолжить?';
+
+          const ok = window.confirm(msg);
+          if (!ok) {
+            // отмена → возвращаем чекбокс обратно
+            cb.checked = true;
+            return;
+          }
+
+          // подтверждённый отказ:
+          // 1) очищаем localStorage (данные + прогресс)
+          try { window.localStorage.clear(); } catch(_){}
+
+          // 2) на всякий случай снимаем флаг согласия
+          try { window.localStorage.setItem('mm.tosAccepted', ''); } catch(_){}
+
+          // 3) перезапускаем приложение — StartupManager увидит, что
+          //    setupDone / tosAccepted отсутствуют, и покажет мастер
+          try { window.location.reload(); } catch(_){}
+        });
+      } catch(_){}
+    }
   }
 
   function open(section='impressum'){
