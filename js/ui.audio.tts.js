@@ -1,50 +1,128 @@
-/* ui.audio.tts.js — версия с кнопкой в правом нижнем углу */
+/* ==========================================================
+ * Проект: MOYAMOVA
+ * Файл: ui.audio.tts.js
+ * Назначение: Озвучка текущего слова в тренере (SpeechSynthesis)
+ *   - Кнопка рядом со словом
+ *   - Автоозвучка при смене слова
+ *   - Двойной клик по кнопке — включить/выключить звук (🔊 / 🔇)
+ * Версия: 2.2 (кнопка внутри .trainer-word)
+ * Обновлено: 2025-11-23
+ * ========================================================== */
 
 (function () {
-  if (!window.A) window.A = {};
+  'use strict';
 
-  var audioEnabled = true;
-  var lastAutoSpokenWord = null;
+  var A = (window.App = window.App || {});
 
-  function saveAudioEnabled() {
-    try {
-      localStorage.setItem('audioEnabled', audioEnabled ? '1' : '0');
-    } catch (e) {}
-  }
+  var LS_KEY = 'mm.audioEnabled';
+  var wordObserver = null;
+
+  // включён ли звук (по умолчанию: да)
+  var audioEnabled = loadAudioEnabled();
+
+  // запоминаем, какое слово было озвучено автоматически, чтобы не дублировать
+  var lastAutoSpokenWord = '';
 
   function loadAudioEnabled() {
     try {
-      var v = localStorage.getItem('audioEnabled');
-      audioEnabled = v !== '0';
+      var v = window.localStorage.getItem(LS_KEY);
+      if (v === '1') return false;
+      return true;
     } catch (e) {
-      audioEnabled = true;
+      return true;
     }
   }
 
+  function saveAudioEnabled() {
+    try {
+      window.localStorage.setItem(LS_KEY, audioEnabled ? '1' : '0');
+    } catch (e) {}
+  }
+
   function hasTTS() {
-    return !!window.speechSynthesis;
+    return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
   }
 
-  function speakText(t) {
-    if (!hasTTS() || !t) return;
-    var u = new SpeechSynthesisUtterance(t);
-    speechSynthesis.speak(u);
+  function getTtsLang() {
+    var study = (A.settings && A.settings.studyLang) || 'de';
+    switch (study) {
+      case 'en':
+        return 'en-US';
+      case 'es':
+        return 'es-ES';
+      case 'uk':
+        return 'uk-UA';
+      case 'ru':
+        return 'ru-RU';
+      case 'de':
+      default:
+        return 'de-DE';
+    }
   }
 
+  function speakText(text) {
+    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
+    if (!audioEnabled) return;      // звук выключен пользователем
+    if (!hasTTS()) return;
+    if (!text) return;
+
+    try {
+      window.speechSynthesis.cancel();
+      var u = new window.SpeechSynthesisUtterance(String(text));
+      u.lang  = getTtsLang();
+      u.rate  = 0.95;
+      u.pitch = 1.0;
+      window.speechSynthesis.speak(u);
+    } catch (e) {
+      // молча игнорируем
+    }
+  }
+
+  // Берём слово только из словаря, а не из DOM
   function getCurrentWord() {
-    var el = document.querySelector('.trainer-word');
-    return el ? (el.dataset.word || el.textContent.trim()) : null;
+    var w = A.__currentWord || null;
+    if (!w) return '';
+    var raw = w.wordBasic || w.word || '';
+    if (!raw && w.forms && w.forms.base) raw = w.forms.base;
+    return String(raw || '').trim();
   }
 
   function speakCurrentWord() {
-    var w = getCurrentWord();
-    if (!w) return;
-    speakText(w);
+    var word = getCurrentWord();
+    if (!word) return;
+    speakText(word);
   }
+
+  /* ==========================================================
+   * === AUDIO BUTTON POSITION BLOCK ===
+   * Кнопка 🔊/🔇 вставляется ВНУТРЬ .trainer-word,
+   * сразу после текстового содержимого.
+   * Если захочешь поменять позицию — правь только эту функцию.
+   * ========================================================== */
 
   function updateButtonIcon(btn) {
     if (!btn) return;
-    btn.textContent = audioEnabled ? '🔊' : '🔇';
+
+    // если PRO не активен — кнопка "задизейблена"
+    if (!A.isPro || !A.isPro()) {
+      btn.textContent = '🔊';
+      btn.setAttribute('aria-label', 'Доступно в версии PRO');
+      btn.style.opacity = '0.4';
+      btn.style.pointerEvents = 'none';
+      return;
+    }
+
+    // PRO активен — обычное поведение
+    btn.style.opacity = '';
+    btn.style.pointerEvents = '';
+
+    if (audioEnabled) {
+      btn.textContent = '🔊';
+      btn.setAttribute('aria-label', 'Озвучить слово');
+    } else {
+      btn.textContent = '🔇';
+      btn.setAttribute('aria-label', 'Озвучка выключена');
+    }
   }
 
   function renderAudioButton() {
@@ -53,8 +131,10 @@
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
+    // карточка тренера — основной контейнер для кнопки
     var card = wordEl.closest('.trainer-card') || wordEl;
 
+    // ищем кнопку ВНУТРИ карточки
     var btn = card.querySelector('.trainer-audio-btn');
 
     if (!btn) {
@@ -62,19 +142,7 @@
       btn.type = 'button';
       btn.className = 'trainer-audio-btn';
 
-      try {
-        if (card && !card.style.position) {
-          card.style.position = 'relative';
-        }
-        btn.style.position = 'absolute';
-        btn.style.right = '10px';
-        btn.style.bottom = '10px';
-        btn.style.fontSize = '22px';
-        btn.style.background = 'transparent';
-        btn.style.border = '0';
-        btn.style.cursor = 'pointer';
-      } catch (e) {}
-
+      // одиночный клик — озвучка (если звук включён)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         if (!A.isPro || !A.isPro()) return;
@@ -82,6 +150,7 @@
         speakCurrentWord();
       });
 
+      // двойной клик — вкл/выкл звук
       btn.addEventListener('dblclick', function (e) {
         e.preventDefault();
         if (!A.isPro || !A.isPro()) return;
@@ -90,11 +159,19 @@
         updateButtonIcon(btn);
       });
 
+      // вставляем кнопку в карточку
+      if (card && !card.style.position) {
+        card.style.position = 'relative';
+      }
+      btn.style.position = 'absolute';
+      btn.style.right = '14px';
+      btn.style.bottom = '16px';
       card.appendChild(btn);
     }
 
     updateButtonIcon(btn);
 
+    // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
     var word = getCurrentWord();
     if (word && audioEnabled && word !== lastAutoSpokenWord) {
       lastAutoSpokenWord = word;
@@ -104,10 +181,96 @@
     }
   }
 
-  loadAudioEnabled();
+  /* ========================================================== */
 
-  A.renderAudioButton = renderAudioButton;
+  // Следим за изменением .trainer-word и обновляем кнопку/озвучку
+  function setupWordObserver() {
+    var wordEl = document.querySelector('.trainer-word');
 
-  document.addEventListener('trainer:wordChanged', renderAudioButton);
-  document.addEventListener('DOMContentLoaded', renderAudioButton);
+    if (!wordEl || typeof MutationObserver === 'undefined') {
+      renderAudioButton();
+      return;
+    }
+
+    if (wordObserver) {
+      wordObserver.disconnect();
+      wordObserver = null;
+    }
+
+    var lastText = wordEl.textContent || '';
+
+    wordObserver = new MutationObserver(function () {
+      var t = wordEl.textContent || '';
+      if (t === lastText) return;
+      lastText = t;
+      renderAudioButton();
+    });
+
+    wordObserver.observe(wordEl, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+
+    // первый рендер
+    renderAudioButton();
+  }
+
+  // Глобальный наблюдатель: ждём появления .trainer-word в DOM
+  function setupGlobalObserver() {
+    if (typeof MutationObserver === 'undefined') return;
+
+    var obs = new MutationObserver(function (mutations) {
+      var need = false;
+      for (var i = 0; i < mutations.length; i++) {
+        var m = mutations[i];
+        if (!m.addedNodes) continue;
+        for (var j = 0; j < m.addedNodes.length; j++) {
+          var n = m.addedNodes[j];
+          if (n.nodeType !== 1) continue;
+          if (n.matches && n.matches('.trainer-word')) {
+            need = true;
+            break;
+          }
+          if (n.querySelector && n.querySelector('.trainer-word')) {
+            need = true;
+            break;
+          }
+        }
+        if (need) break;
+      }
+      if (need) {
+        setupWordObserver();
+      }
+    });
+
+    obs.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // на случай, если .trainer-word уже есть
+    setupWordObserver();
+  }
+
+  function init() {
+    if (!hasTTS()) return;
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupGlobalObserver);
+    } else {
+      setupGlobalObserver();
+    }
+
+    // хук для ручного обновления, если понадобится
+    (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
+    A.AudioTTS.setEnabled = function (flag) {
+      audioEnabled = !!flag;
+      saveAudioEnabled();
+      var btn = document.querySelector('.trainer-audio-btn');
+      if (btn) updateButtonIcon(btn);
+    };
+  }
+
+  init();
 })();
