@@ -61,6 +61,7 @@
   }
 
   function speakText(text) {
+    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
     if (!audioEnabled) return;      // звук выключен пользователем
     if (!hasTTS()) return;
     if (!text) return;
@@ -101,6 +102,20 @@
 
   function updateButtonIcon(btn) {
     if (!btn) return;
+
+    // если PRO не активен — кнопка "задизейблена"
+    if (!A.isPro || !A.isPro()) {
+      btn.textContent = '🔊';
+      btn.setAttribute('aria-label', 'Доступно в версии PRO');
+      btn.style.opacity = '0.4';
+      btn.style.pointerEvents = 'none';
+      return;
+    }
+
+    // PRO активен — обычное поведение
+    btn.style.opacity = '';
+    btn.style.pointerEvents = '';
+
     if (audioEnabled) {
       btn.textContent = '🔊';
       btn.setAttribute('aria-label', 'Озвучить слово');
@@ -127,6 +142,7 @@
       // одиночный клик — озвучка (если звук включён)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
+        if (!A.isPro || !A.isPro()) return;
         if (!audioEnabled) return;
         speakCurrentWord();
       });
@@ -134,6 +150,7 @@
       // двойной клик — вкл/выкл звук
       btn.addEventListener('dblclick', function (e) {
         e.preventDefault();
+        if (!A.isPro || !A.isPro()) return;
         audioEnabled = !audioEnabled;
         saveAudioEnabled();
         updateButtonIcon(btn);
