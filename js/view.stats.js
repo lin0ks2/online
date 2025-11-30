@@ -900,28 +900,26 @@
     const app = document.getElementById('app');
     if (!app) return;
 
-    // Если PRO не активен — показываем заглушку в стиле "Избранное"
+    // Если PRO не активен — показываем заглушку и предложение купить
     if (!A.isPro || !A.isPro()) {
       const texts = t();
-      const lang = getUiLang();
-      const body =
-        lang === 'uk'
-          ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
-          : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
-
       app.innerHTML =
         '<div class="home">' +
           '<section class="card dicts-card stats-card">' +
-            '<div class="dicts-header">' +
-              '<h3>' + texts.title + '</h3>' +
+            '<div class="stats-lang-card__header">' +
+              '<h2 class="stats-lang-card__title">' + texts.title + '</h2>' +
             '</div>' +
-            '<div class="dicts-body" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
-              '<p style="margin-bottom:10px;">' + body + '</p>' +
+            '<div class="stats-lang-card__body" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
+              '<p style="margin-bottom:10px;">Расширенная статистика доступна в версии <strong>MOYAMOVA PRO</strong>.</p>' +
+              '<p style="margin-bottom:14px;">Нажмите кнопку 💎 в меню, чтобы узнать подробности и разово разблокировать PRO.</p>' +
             '</div>' +
           '</section>' +
         '</div>';
       return;
     }
+
+
+    if (!app) return;
 
     const texts = t();
     const stats = computeStats();
@@ -931,23 +929,25 @@
 
     const html =
       '<div class="home">' +
-        '<section class="card dicts-card stats-card">' +
-          '<header class="dicts-header">' +
-            '<h2 class="dicts-title">' + texts.title + '</h2>' +
-            '<div id="stats-flags" class="dicts-flags"></div>' +
-          '</header>' +
-          '<div class="stats-card">' +
-            cardsHtml +
-          '</div>' +
-        '</section>' +
+      '<section class="card dicts-card stats-card">' +
+      '<div class="dicts-header">' +
+      '<h3>' +
+      texts.title +
+      '</h3>' +
+      '<div id="stats-flags" class="dicts-flags"></div>' +
+      '</div>' +
+      cardsHtml +
+      '</section>' +
+      // renderPlaceholderSection(texts) +
       '</div>';
 
     app.innerHTML = html;
-
-    const root = app.querySelector('.stats-card');
-    const statsData = computeStats();
-    const activeLangCode = detectActiveTrainLang(statsData.byLang);
-    setupLangFlags(app, statsData.byLang, activeLangCode);
+    setupLangFlags(app, stats.byLang, activeLang);
     setupStatsPager(app);
   }
 
+  A.ViewStats = {
+    mount: mount
+  };
+})();
+/* ========================= Конец файла: view.stats.js ========================= */
