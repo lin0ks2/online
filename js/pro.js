@@ -32,7 +32,8 @@
       f4: 'Повний контроль над словниками і помилками',
       buy: 'Купити PRO',
       already: 'У вас вже активована версія PRO',
-      close: 'Закрити'
+      close: 'Закрити',
+      badge: 'Раз і назавжди'
     } : {
       title: 'MOYAMOVA PRO',
       subtitle: 'Разовая разблокировка расширенного функционала',
@@ -43,7 +44,8 @@
       f4: 'Полный контроль над словарями и ошибками',
       buy: 'Купить PRO',
       already: 'У вас уже активирована версия PRO',
-      close: 'Закрыть'
+      close: 'Закрыть',
+      badge: 'Раз и навсегда'
     };
   }
 
@@ -124,7 +126,7 @@
     var html = ''
       + '<div class="pro-sheet-overlay" data-pro-close="1"></div>'
       + '<section class="pro-sheet" role="dialog" aria-modal="true">'
-      + '  <div class="pro-sheet__badge">💎 <span>Раз и навсегда</span></div>'
+      + '  <div class="pro-sheet__badge">💎 <span>' + texts.badge + '</span></div>'
       + '  <div class="pro-sheet__title">' + texts.title + '</div>'
       + '  <div class="pro-sheet__subtitle">' + texts.subtitle + '</div>'
       + '  <div class="pro-sheet__features-title">' + texts.featuresTitle + '</div>'
