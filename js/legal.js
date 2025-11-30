@@ -273,14 +273,16 @@ const Legal = (() => {
           }
 
           // подтверждённый отказ:
-          // 1) очищаем localStorage (данные + прогресс)
-          try { window.localStorage.clear(); } catch(_){}
+          // централизованный "factory reset" + перезапуск
+          try {
+            if (window.App && typeof window.App.factoryReset === 'function') {
+              window.App.factoryReset();
+            } else {
+              // запасной вариант — если по какой-то причине reset не объявлен
+              try { window.localStorage.clear(); } catch(_) {}
+            }
+          } catch(_) {}
 
-          // 2) на всякий случай снимаем флаг согласия
-          try { window.localStorage.setItem('mm.tosAccepted', ''); } catch(_){}
-
-          // 3) перезапускаем приложение — StartupManager увидит, что
-          //    setupDone / tosAccepted отсутствуют, и покажет мастер
           try { window.location.reload(); } catch(_){}
         });
       } catch(_){}

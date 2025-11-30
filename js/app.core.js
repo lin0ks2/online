@@ -42,7 +42,44 @@ App.starKey = function(wid, dk){
     if (!App.dictRegistry.lastByLang || typeof App.dictRegistry.lastByLang !== 'object') App.dictRegistry.lastByLang = {};
   }catch(_){}
 
-  (function migrateSets(){
+  
+  // Полный сброс данных приложения (используется при отзыве согласия)
+  App.factoryReset = function(){
+    var keys = [
+      // ядро
+      LS_SETTINGS,
+      LS_STATE,
+      LS_DICTS,
+
+      // прогресс тренировки
+      'progress.v2',            // ui.progress.scope.js
+      'favorites.progress.v1',  // app.favorites.js
+      'sets.done.v1',           // ui.sets.done.js
+
+      // мастер и выбор словаря/языка
+      'lexitron.uiLang',
+      'lexitron.studyLang',
+      'lexitron.deckKey',
+      'lexitron.activeKey',
+      'lexitron.setupDone',
+
+      // согласия и звук
+      'mm.tosAccepted',
+      'mm.gaChoice',
+      'mm.audioEnabled',
+
+      // тема
+      'ui-theme'
+    ];
+
+    try {
+      keys.forEach(function(k){
+        try { localStorage.removeItem(k); } catch(_) {}
+      });
+    } catch(_) {}
+  };
+
+(function migrateSets(){
     let ss = 50;
     try { ss = Number(App.state.setSize); } catch(e){}
     if (!Number.isFinite(ss) || ss < 2) ss = 50;
