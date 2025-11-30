@@ -13,6 +13,28 @@
   const LS_SETTINGS = 'k_settings_v1_3_1';
   const LS_STATE    = 'k_state_v1_3_1';
   const LS_DICTS    = 'k_dicts_v1_3_1';
+  const LS_PRO      = 'mm.proUnlocked';
+
+  App.isPro = function(){
+    try {
+      return window.localStorage.getItem(LS_PRO) === '1';
+    } catch (e) {
+      return false;
+    }
+  };
+
+  App.unlockPro = function(){
+    try {
+      window.localStorage.setItem(LS_PRO, '1');
+    } catch (e) {}
+  };
+
+  App.lockPro = function(){
+    try {
+      window.localStorage.removeItem(LS_PRO);
+    } catch (e) {}
+  };
+
 
   const I18N_FALLBACK = window.I18N;
 

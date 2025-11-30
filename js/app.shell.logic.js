@@ -198,7 +198,25 @@
       try { closeMenu(); } catch (_) {}
     },
 
-    donate() {
+    
+    pro() {
+      if (!window.ProUpgrade) {
+        const s = document.createElement('script');
+        s.src = './js/pro.js';
+        s.onload = () => {
+          if (window.ProUpgrade && typeof window.ProUpgrade.open === 'function') {
+            window.ProUpgrade.open();
+          }
+        };
+        document.head.appendChild(s);
+      } else {
+        if (typeof window.ProUpgrade.open === 'function') {
+          window.ProUpgrade.open();
+        }
+      }
+    },
+
+donate() {
       if (!window.Donate) {
         const s = document.createElement('script');
         s.src = './js/donate.js';

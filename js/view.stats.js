@@ -900,6 +900,27 @@
     const app = document.getElementById('app');
     if (!app) return;
 
+    // Если PRO не активен — показываем заглушку и предложение купить
+    if (!A.isPro || !A.isPro()) {
+      const texts = t();
+      app.innerHTML =
+        '<div class="home">' +
+          '<section class="card dicts-card stats-card">' +
+            '<div class="stats-lang-card__header">' +
+              '<h2 class="stats-lang-card__title">' + texts.title + '</h2>' +
+            '</div>' +
+            '<div class="stats-lang-card__body" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
+              '<p style="margin-bottom:10px;">Расширенная статистика доступна в версии <strong>MOYAMOVA PRO</strong>.</p>' +
+              '<p style="margin-bottom:14px;">Нажмите кнопку 💎 в меню, чтобы узнать подробности и разово разблокировать PRO.</p>' +
+            '</div>' +
+          '</section>' +
+        '</div>';
+      return;
+    }
+
+
+    if (!app) return;
+
     const texts = t();
     const stats = computeStats();
     const activeLang = detectActiveTrainLang(stats.byLang);

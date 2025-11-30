@@ -213,6 +213,14 @@
   }
 
   function renderSynonymsTab(word, body) {
+  if (!A.isPro || !A.isPro()) {
+    body.innerHTML =
+      '<div class="hint-example">' +
+        '<p class="hint-tr is-visible">Доступно в версии PRO. Нажмите 💎 в меню, чтобы разблокировать синонимы.</p>' +
+      '</div>';
+    return;
+  }
+
   const syn = getSynonyms(word);
   const de  = (syn.de || []).filter(Boolean);
   const l1  = (syn.l1 || []).filter(Boolean);
@@ -239,6 +247,14 @@
 }
 
   function renderAntonymsTab(word, body) {
+  if (!A.isPro || !A.isPro()) {
+    body.innerHTML =
+      '<div class="hint-example">' +
+        '<p class="hint-tr is-visible">Доступно в версии PRO. Нажмите 💎 в меню, чтобы разблокировать антонимы.</p>' +
+      '</div>';
+    return;
+  }
+
   const ant = getAntonyms(word);
   const de  = (ant.de || []).filter(Boolean);
   const l1  = (ant.l1 || []).filter(Boolean);
