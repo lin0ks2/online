@@ -49,7 +49,6 @@
     };
   }
 
-
   var sheet = null;
 
   function ensureStyles(){
