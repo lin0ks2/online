@@ -66,7 +66,7 @@
 
       // КНОПКИ ВНИЗУ — по центру
       + '.pro-sheet__actions{display:flex;gap:12px;justify-content:center;margin-top:8px;}'
-      + '.pro-sheet__btn{border:0;border-radius12px;padding:9px 20px;font-size:14px;cursor:pointer;min-width:120px;}'
+      + '.pro-sheet__btn{border:0;border-radius:12px;padding:9px 20px;font-size:14px;cursor:pointer;min-width:120px;}'
       + '.pro-sheet__btn--primary{background:var(--accent,var(--brand,#35b6ff));color:#fff;}'
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
 
