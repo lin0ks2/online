@@ -160,13 +160,40 @@
     });
   }
 
-  // Версия приложения (app.core.js → App.APP_VER)
+  
+  // Кнопка PRO/донат внизу меню
+  function applyProButtonState(){
+    try {
+      var btn = document.querySelector(
+        '.actions-row-bottom .action-btn[data-action="pro"], ' +
+        '.actions-row-bottom .action-btn[data-action="donate"]'
+      );
+      if (!btn || !window.App || typeof App.isPro !== 'function') return;
+
+      if (App.isPro && App.isPro()) {
+        // PRO уже куплена → показываем донат
+        btn.dataset.action = 'donate';
+        btn.textContent = '💰';
+        btn.setAttribute('aria-label', 'Поддержать проект');
+      } else {
+        // Free-версия → предлагаем купить PRO
+        btn.dataset.action = 'pro';
+        btn.textContent = '💎';
+        btn.setAttribute('aria-label', 'Купить PRO');
+      }
+    } catch(_) {}
+  }
+
+// Версия приложения (app.core.js → App.APP_VER)
   (function(){
     function renderVersion(){
       var el = document.getElementById('appVersion');
-      if (!el) return;
-      var v = (window.App && App.APP_VER) || null;
-      if (v) el.textContent = v;
+      if (el) {
+        var v = (window.App && App.APP_VER) || null;
+        if (v) el.textContent = v;
+      }
+      // после загрузки App обновляем состояние кнопки PRO/донат
+      applyProButtonState();
     }
     if (!(window.App && App.APP_VER)) {
       var s = document.createElement('script');
@@ -179,7 +206,9 @@
     }
   })();
 
-    // Actions внизу меню (кнопки в бургер-меню)
+  // Попробуем применить состояние кнопки сразу (если App уже инициализирован)
+  applyProButtonState();
+
   const actionsMap = {
     guide() {
       // Экран "Инструкция" реализован в js/view.guide.js (объект Guide)
