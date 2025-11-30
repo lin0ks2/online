@@ -6,7 +6,7 @@
  * Обновлено: 2025-11-17
  * ========================================================== */
 
-const TRAINER_DEFAULT_LEARNED_REPEAT = 'rare';
+const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
 
 (function () {
   const App = window.App || (window.App = {});
