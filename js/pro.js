@@ -75,8 +75,8 @@
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
 
       // БЕЙДЖ "Раз и навсегда" — без заливки, крупнее, брендовый цвет, по центру
-    + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
-    + 'padding:0;border-radius:999px;color:var(--text-primary,#fff);margin:0 auto 10px auto;background:transparent;}'
+      + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
+      + 'padding:0;border-radius:999px;color:inherit;margin:0 auto 10px auto;background:transparent;}'
       + '.pro-sheet__badge span{font-size:15px;}';
 
     var style = document.createElement('style');
