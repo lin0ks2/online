@@ -378,6 +378,10 @@ function activeDeckKey() {
           <p class="trainer-subtitle">${T.choose}</p>
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
+          <!-- НОВОЕ: индикатор режима сложности -->
+<span class="trainer-mode-indicator"
+      id="trainerModeIndicator"
+      aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
         </section>
       </div>`;
