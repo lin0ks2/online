@@ -886,6 +886,7 @@ function activeDeckKey() {
         A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender();
       } catch(_){}
     });
+        if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') { A.Trainer.updateModeIndicator(); }
   }
 
   async function mountApp() {

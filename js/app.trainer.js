@@ -32,16 +32,16 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'rare';
       return 'normal';
     }
   }
-
   // Индикатор режима сложности (🐣 / 🦅) в тренере
   function updateModeIndicator() {
     try {
       const el = document.getElementById('trainerModeIndicator');
       if (!el) return;
-      const lvl = difficulty();
+      const lvl = difficulty(); // 'hard' или 'normal'
       el.textContent = lvl === 'hard' ? '🦅' : '🐣';
     } catch (_) {}
   }
+
 
   function deltaOnAnswer(ok) {
     const hard = difficulty() === 'hard';
@@ -468,7 +468,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'rare';
     _recentShown,
     isCurrentSetComplete,
     isWholeDeckComplete,
-    advanceSetCircular,
+    advanceSetCircular
     updateModeIndicator
   });
 })();
