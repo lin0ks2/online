@@ -154,9 +154,29 @@
     });
   }
   const levelToggle = document.getElementById('levelToggle');
-  if(levelToggle){
-    levelToggle.addEventListener('change', e=>{
-      document.documentElement.dataset.level = e.target.checked ? 'hard' : 'normal';
+  if (levelToggle) {
+    levelToggle.addEventListener('change', e => {
+      const lvl = e.target.checked ? 'hard' : 'normal';
+
+      // 1) выставляем data-level на html
+      document.documentElement.dataset.level = lvl;
+
+      // 2) сохраняем в App.settings
+      try {
+        var App = window.App || (window.App = {});
+        App.settings = App.settings || {};
+        App.settings.level = lvl;
+        if (typeof App.saveSettings === 'function') {
+          App.saveSettings(App.settings);
+        }
+      } catch (_) {}
+
+      // 3) обновляем индикатор на карточке
+      try {
+        if (window.App && App.Trainer && typeof App.Trainer.updateModeIndicator === 'function') {
+          App.Trainer.updateModeIndicator();
+        }
+      } catch (_) {}
     });
   }
 
@@ -164,40 +184,25 @@
   // Кнопка PRO/донат внизу меню
   function applyProButtonState(){
     try {
-      var hasApp = !!window.App && typeof App.isPro === 'function';
-      var isPro = hasApp && App.isPro && App.isPro() ? true : false;
-
-      // нижняя кнопка ПРО/донат
       var btn = document.querySelector(
         '.actions-row-bottom .action-btn[data-action="pro"], ' +
         '.actions-row-bottom .action-btn[data-action="donate"]'
       );
-      if (btn && hasApp) {
-        if (isPro) {
-          // PRO уже куплена → показываем донат
-          btn.dataset.action = 'donate';
-          btn.textContent = '💰';
-          btn.setAttribute('aria-label', 'Поддержать проект');
-        } else {
-          // Free-версия → предлагаем купить PRO
-          btn.dataset.action = 'pro';
-          btn.textContent = '💎';
-          btn.setAttribute('aria-label', 'Купить PRO');
-        }
-      }
+      if (!btn || !window.App || typeof App.isPro !== 'function') return;
 
-      // бейдж PRO в шапке
-      var badge = document.querySelector('.header-pro-badge');
-      if (badge) {
-        if (isPro) {
-          badge.classList.add('is-visible');
-        } else {
-          badge.classList.remove('is-visible');
-        }
+      if (App.isPro && App.isPro()) {
+        // PRO уже куплена → показываем донат
+        btn.dataset.action = 'donate';
+        btn.textContent = '💰';
+        btn.setAttribute('aria-label', 'Поддержать проект');
+      } else {
+        // Free-версия → предлагаем купить PRO
+        btn.dataset.action = 'pro';
+        btn.textContent = '💎';
+        btn.setAttribute('aria-label', 'Купить PRO');
       }
     } catch(_) {}
   }
-
 
 // Версия приложения (app.core.js → App.APP_VER)
   (function(){

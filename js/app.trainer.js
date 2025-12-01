@@ -6,7 +6,7 @@
  * Обновлено: 2025-11-17
  * ========================================================== */
 
-const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
+const TRAINER_DEFAULT_LEARNED_REPEAT = 'rare';
 
 (function () {
   const App = window.App || (window.App = {});
@@ -31,6 +31,16 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     } catch (_) {
       return 'normal';
     }
+  }
+
+  // Индикатор режима сложности (🐣 / 🦅) в тренере
+  function updateModeIndicator() {
+    try {
+      const el = document.getElementById('trainerModeIndicator');
+      if (!el) return;
+      const lvl = difficulty(); // 'hard' или 'normal'
+      el.textContent = lvl === 'hard' ? '🦅' : '🐣';
+    } catch (_) {}
   }
 
   function deltaOnAnswer(ok) {
@@ -458,7 +468,8 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     _recentShown,
     isCurrentSetComplete,
     isWholeDeckComplete,
-    advanceSetCircular
+    advanceSetCircular,
+    updateModeIndicator
   });
 })();
 

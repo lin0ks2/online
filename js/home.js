@@ -352,11 +352,11 @@ function activeDeckKey() {
     app.innerHTML = `
       <div class="home">
         <!-- ЗОНА 1: Сеты -->
-         <section class="card home-sets">
+        <section class="card home-sets">
           <header class="sets-header">
-           <h2 class="sets-title">${title}</h2>
-           <span class="flag" aria-hidden="true">${flag}</span> 
-          </header>
+  <h2 class="sets-title">${title}</h2>
+  <span class="flag" aria-hidden="true">${flag}</span>
+</header>
           <div class="sets-viewport" id="setsViewport">
             <div class="sets-grid" id="setsBar"></div>
           </div>
@@ -378,12 +378,9 @@ function activeDeckKey() {
           <p class="trainer-subtitle">${T.choose}</p>
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
-          <!-- НОВОЕ: индикатор режима сложности -->
-          <span class="trainer-mode-indicator"
-          id="trainerModeIndicator"
-          aria-hidden="true"></span>
+          <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
-      </section>
+        </section>
       </div>`;
   }
 
@@ -515,7 +512,8 @@ function activeDeckKey() {
     const favBtn  = document.getElementById('favBtn');
     const idkBtn  = document.querySelector('.idk-btn');
     const stats   = document.getElementById('dictStats');
-    const modeEl  = document.getElementById('trainerModeIndicator'); // НОВОЕ
+    const modeEl  = document.getElementById('trainerModeIndicator');
+
     if (favBtn) {
       const favNow = isFav(key, word.id);
       favBtn.textContent = favNow ? '♥' : '♡';
@@ -678,18 +676,16 @@ function activeDeckKey() {
     const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(key) || []) : [];
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
     const learned = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax).length;
-      if (stats) {
-    const uk = getUiLang() === 'uk';
-    stats.textContent = uk
-      ? `Всього слів: ${full.length} / Вивчено: ${learned}`
-      : `Всего слов: ${full.length} / Выучено: ${learned}`;
-  }
+    if (stats) {
+      const uk = getUiLang() === 'uk';
+      stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
+                             : `Всего слов: ${full.length} / Выучено: ${learned}`;
+    }
 
-  // НОВОЕ: обновляем эмодзи режима сложности
-  if (modeEl && window.App && App.Trainer && typeof App.Trainer.updateModeIndicator === 'function') {
-    App.Trainer.updateModeIndicator();
+    if (modeEl && window.App && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
+      A.Trainer.updateModeIndicator();
+    }
   }
-}
 
   // Мягкая перерисовка звёзд при смене режима (без смены слова/ответов)
   function repaintStarsOnly(){
