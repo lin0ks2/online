@@ -9,7 +9,7 @@
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.6.2';
+const SW_VERSION = '1.6.3';
 const CACHE_NAME = 'moyamova-cache-v1.6';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
