@@ -67,39 +67,61 @@ App.starKey = function(wid, dk){
   
   // Полный сброс данных приложения (используется при отзыве согласия)
   App.factoryReset = function(){
-    var keys = [
-      // ядро
-      LS_SETTINGS,
-      LS_STATE,
-      LS_DICTS,
+  // 1) Пытаемся просто снести ВСЁ, что есть в localStorage
+  try {
+    window.localStorage.clear();
+  } catch(_){}
 
-      // прогресс тренировки
-      'progress.v2',            // ui.progress.scope.js
-      'favorites.progress.v1',  // app.favorites.js
-      'sets.done.v1',           // ui.sets.done.js
+  // 2) На всякий случай точечно чистим известные ключи
+  //    (на тех платформах, где clear() может быть ограничен)
+  var keys = [
+    // ядро
+    LS_SETTINGS,            // k_settings_v1_3_1
+    LS_STATE,               // k_state_v1_3_1
+    'k_state_v1_3_0',       // старый стейт, если вдруг всплывёт
+    LS_DICTS,               // k_dicts_v1_3_1
 
-      // мастер и выбор словаря/языка
-      'lexitron.uiLang',
-      'lexitron.studyLang',
-      'lexitron.deckKey',
-      'lexitron.activeKey',
-      'lexitron.setupDone',
+    // прогресс тренировки
+    'progress.v2',          // ui.progress.scope.js
+    'favorites.progress.v1',
+    'sets.done.v1',
+    'sets.progress.v1',
 
-      // согласия и звук
-      'mm.tosAccepted',
-      'mm.gaChoice',
-      'mm.audioEnabled',
+    // мастер и выбор словаря/языка
+    'lexitron.uiLang',
+    'lexitron.studyLang',
+    'lexitron.deckKey',
+    'lexitron.activeKey',
+    'lexitron.setupDone',
 
-      // тема
-      'ui-theme'
-    ];
+    // согласия и звук
+    'mm.tosAccepted',
+    'mm.gaChoice',
+    'ga_consent',
+    'mm.audioEnabled',
 
-    try {
-      keys.forEach(function(k){
-        try { localStorage.removeItem(k); } catch(_) {}
-      });
-    } catch(_) {}
-  };
+    // тема и прочее
+    'ui-theme',
+    'mm.proUnlocked',
+    'moya_upgrading'
+  ];
+
+  try {
+    keys.forEach(function(k){
+      try { window.localStorage.removeItem(k); } catch(_){}
+    });
+  } catch(_){}
+
+  // 3) Немного подчистим оперативное состояние (на всякий случай),
+  //    но после location.reload() это всё равно заново инициализируется
+  try {
+    if (App.Sets && App.Sets.state) {
+      App.Sets.state = { activeByDeck: {}, completedByDeck: {} };
+    }
+    if (App.state) App.state = {};
+    if (App.settings) App.settings = {};
+  } catch(_){}
+};
 
 (function migrateSets(){
     let ss = 50;
