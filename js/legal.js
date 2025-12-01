@@ -253,26 +253,36 @@ const Legal = (() => {
         // начальное состояние чекбокса
         cb.checked = accepted;
 
-        cb.addEventListener('change', function () {
+        cb.addEventListener('change', async function () {
           // Пользователь ставит галочку → просто считаем условия принятыми
           if (cb.checked) {
             try { window.localStorage.setItem('mm.tosAccepted', '1'); } catch(_){}
             return;
           }
 
-          // Пользователь снимает галочку → предупреждаем и сбрасываем всё
-          const msg = (lang === 'uk')
-            ? 'Якщо ви відхилите умови, усі дані (прогрес, налаштування, обрані слова тощо) будуть видалені, а застосунок повернеться до початкового налаштування. Продовжити?'
-            : 'Если вы откажетесь от условий, все данные (прогресс, настройки, избранные слова и т.п.) будут удалены, а приложение вернётся к первичной настройке. Продолжить?';
+                    // Пользователь снимает галочку → подтверждаем сброс через модалку
+          let ok = false;
 
-          const ok = window.confirm(msg);
+          if (window.App && App.Msg && typeof App.Msg.openConfirmModal === 'function') {
+            try {
+              const title = App.Msg.text('legal.reset_confirm');
+              const text  = App.Msg.text('legal.reset_warning');
+              ok = await App.Msg.openConfirmModal({ title: title, text: text, icon: '⚠️' });
+            } catch(_) {}
+          } else {
+            const fallbackMsg = (lang === 'uk')
+                          ? 'Якщо ви відхилите умови, усі дані (прогрес, налаштування, обране) будуть видалені, а застосунок повернеться до початкового налаштування. Продовжити?'
+                          : 'Если вы откажетесь от условий, все данные (прогресс, настройки, избранное) будут удалены, а приложение вернётся к первичной настройке. Продолжить?';
+                        ok = window.confirm(fallbackMsg);
+          }
+
           if (!ok) {
             // отмена → возвращаем чекбокс обратно
             cb.checked = true;
             return;
           }
 
-          // подтверждённый отказ:
+// подтверждённый отказ:
           // централизованный "factory reset" + перезапуск
           try {
             if (window.App && typeof window.App.factoryReset === 'function') {
