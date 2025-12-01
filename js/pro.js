@@ -96,7 +96,7 @@
 
   function onBuyClick(){
     var already = false;
-    try {
+    try{
       if (typeof A.isPro === 'function') {
         already = !!A.isPro();
       } else {
@@ -114,23 +114,24 @@
       }
     }catch(e){}
 
-    // Красивый локализованный тост: различаем "уже было" и "только что купили"
+    var TOAST_MS = 2600;
     if (window.App && App.Msg && typeof App.Msg.toast === 'function') {
-      App.Msg.toast(already ? 'pro.already' : 'pro.purchased', 3200);
+      App.Msg.toast(already ? 'pro.already' : 'pro.purchased', TOAST_MS);
     } else {
       var texts = t();
-      var fallback = already ? (texts.already || 'PRO уже активирована') : (texts.already || 'PRO активирована');
+      var fallback = already
+        ? (texts.already || 'PRO уже активирована')
+        : (texts.already || 'PRO активирована');
       alert(fallback);
     }
-
     close();
     // мягкая перезагрузка, чтобы сразу подхватить PRO-контент
     try {
-      setTimeout(function(){ window.location.reload(); }, 150);
+      setTimeout(function(){ window.location.reload(); }, TOAST_MS - 200);
     } catch(e) {}
   }
 
-  function open(){
+function open(){
     ensureStyles();
     var texts = t();
 
