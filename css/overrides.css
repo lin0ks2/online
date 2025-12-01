@@ -272,3 +272,13 @@ body.no-scroll {
 .header-pro-badge.is-visible {
   display: inline-flex;
 }
+
+/* Индикатор режима (обычный/сложный) — в левом нижнем углу карточки тренера */
+.home-trainer .trainer-mode-indicator {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.9;
+}
