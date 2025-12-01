@@ -513,9 +513,9 @@ function activeDeckKey() {
     const answers = document.querySelector('.answers-grid');
     const wordEl  = document.querySelector('.trainer-word');
     const favBtn  = document.getElementById('favBtn');
-    const idkBtn  = document.querySelector('.idk-btn');
-    const stats   = document.getElementById('dictStats');
-
+const idkBtn  = document.querySelector('.idk-btn');
+const stats   = document.getElementById('dictStats');
+const modeEl  = document.getElementById('trainerModeIndicator'); // НОВОЕ
     if (favBtn) {
       const favNow = isFav(key, word.id);
       favBtn.textContent = favNow ? '♥' : '♡';
