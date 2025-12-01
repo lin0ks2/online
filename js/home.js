@@ -678,12 +678,18 @@ function activeDeckKey() {
     const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(key) || []) : [];
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
     const learned = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax).length;
-    if (stats) {
-      const uk = getUiLang() === 'uk';
-      stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
-                             : `Всего слов: ${full.length} / Выучено: ${learned}`;
-    }
+      if (stats) {
+    const uk = getUiLang() === 'uk';
+    stats.textContent = uk
+      ? `Всього слів: ${full.length} / Вивчено: ${learned}`
+      : `Всего слов: ${full.length} / Выучено: ${learned}`;
   }
+
+  // НОВОЕ: обновляем эмодзи режима сложности
+  if (modeEl && window.App && App.Trainer && typeof App.Trainer.updateModeIndicator === 'function') {
+    App.Trainer.updateModeIndicator();
+  }
+}
 
   // Мягкая перерисовка звёзд при смене режима (без смены слова/ответов)
   function repaintStarsOnly(){
