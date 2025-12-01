@@ -352,11 +352,11 @@ function activeDeckKey() {
     app.innerHTML = `
       <div class="home">
         <!-- ЗОНА 1: Сеты -->
-        <section class="card home-sets">
+         <section class="card home-sets">
           <header class="sets-header">
-  <h2 class="sets-title">${title}</h2>
-  <span class="flag" aria-hidden="true">${flag}</span>
-</header>
+           <h2 class="sets-title">${title}</h2>
+           <span class="flag" aria-hidden="true">${flag}</span> 
+          </header>
           <div class="sets-viewport" id="setsViewport">
             <div class="sets-grid" id="setsBar"></div>
           </div>
@@ -379,11 +379,11 @@ function activeDeckKey() {
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
           <!-- НОВОЕ: индикатор режима сложности -->
-<span class="trainer-mode-indicator"
-      id="trainerModeIndicator"
-      aria-hidden="true"></span>
+          <span class="trainer-mode-indicator"
+          id="trainerModeIndicator"
+          aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
-        </section>
+      </section>
       </div>`;
   }
 
@@ -513,9 +513,9 @@ function activeDeckKey() {
     const answers = document.querySelector('.answers-grid');
     const wordEl  = document.querySelector('.trainer-word');
     const favBtn  = document.getElementById('favBtn');
-const idkBtn  = document.querySelector('.idk-btn');
-const stats   = document.getElementById('dictStats');
-const modeEl  = document.getElementById('trainerModeIndicator'); // НОВОЕ
+    const idkBtn  = document.querySelector('.idk-btn');
+    const stats   = document.getElementById('dictStats');
+    const modeEl  = document.getElementById('trainerModeIndicator'); // НОВОЕ
     if (favBtn) {
       const favNow = isFav(key, word.id);
       favBtn.textContent = favNow ? '♥' : '♡';
