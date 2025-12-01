@@ -469,7 +469,8 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     _recentShown,
     isCurrentSetComplete,
     isWholeDeckComplete,
-    advanceSetCircular
+    advanceSetCircular,
+    updateModeIndicator
   });
 })();
 
