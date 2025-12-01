@@ -102,7 +102,11 @@
         window.localStorage.setItem('mm.proUnlocked','1');
       }
     }catch(e){}
-    alert(t().already);
+    if (window.App && App.Msg && typeof App.Msg.toast === 'function') {
+      App.Msg.toast('pro.already');
+    } else {
+      alert(t().already);
+    }
     close();
     // мягкая перезагрузка, чтобы сразу подхватить PRO-контент
     try {

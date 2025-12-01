@@ -230,7 +230,11 @@
     function boot(state) {
       if (!state.deckKey) {
         // Минимальная обратная связь; в проде лучше заменить на in-app нотификацию/модалку
-        alert('Нет доступных словарей для старта.');
+        if (window.App && App.Msg && typeof App.Msg.toast === 'function') {
+          App.Msg.toast('error.no_decks');
+        } else {
+          alert('Нет доступных словарей для старта.');
+        }
         return;
       }
       safe(function () {
