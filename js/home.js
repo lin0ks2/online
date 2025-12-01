@@ -681,8 +681,7 @@ function activeDeckKey() {
       stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
                              : `Всего слов: ${full.length} / Выучено: ${learned}`;
     }
-
-    if (modeEl && window.App && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
+    if (modeEl && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
       A.Trainer.updateModeIndicator();
     }
   }

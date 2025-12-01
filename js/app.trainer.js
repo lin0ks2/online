@@ -38,7 +38,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'rare';
     try {
       const el = document.getElementById('trainerModeIndicator');
       if (!el) return;
-      const lvl = difficulty(); // 'hard' или 'normal'
+      const lvl = difficulty();
       el.textContent = lvl === 'hard' ? '🦅' : '🐣';
     } catch (_) {}
   }
