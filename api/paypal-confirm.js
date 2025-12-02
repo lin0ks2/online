@@ -140,7 +140,7 @@ export default async function handler(req, res) {
         };
         // ожидаем 5.00 EUR — как в pro.js
         amountOk = (
-          pu.amount.value === '5.00' &&
+          pu.amount.value === '1.00' &&
           pu.amount.currency_code === 'EUR'
         );
       }
