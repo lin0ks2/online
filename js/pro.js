@@ -2,8 +2,8 @@
  * Проект: MOYAMOVA
  * Файл: pro.js
  * Назначение: Экран/лист PRO-версии (разовая покупка)
- * Версия: 1.0
- * Обновлено: 2025-11-30
+ * Версия: 1.1
+ * Обновлено: 2025-12-02
  * ========================================================== */
 
 (function(root){
@@ -50,8 +50,9 @@
   }
 
   var sheet = null;
+  var paypalRendered = false;
 
-        function ensureStyles(){
+  function ensureStyles(){
     if (document.getElementById('pro-sheet-style')) return;
 
     var css = ''
@@ -76,10 +77,13 @@
       + '.pro-sheet__btn--primary{background:var(--accent,var(--brand,#35b6ff));color:#fff;}'
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
 
-      // БЕЙДЖ "Раз и навсегда" — без заливки, крупнее, брендовый цвет, по центру
+      // БЕЙДЖ "Раз и навсегда"
       + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
       + 'padding:0;border-radius:999px;color:inherit;margin:0 auto 10px auto;background:transparent;}'
-      + '.pro-sheet__badge span{font-size:15px;}';
+      + '.pro-sheet__badge span{font-size:15px;}'
+
+      // контейнер под PayPal-кнопку
+      + '.pro-sheet__paypal{margin-top:12px;}';
 
     var style = document.createElement('style');
     style.id = 'pro-sheet-style';
@@ -91,47 +95,56 @@
     if (!sheet) return;
     sheet.remove();
     sheet = null;
+    paypalRendered = false;
     document.body.classList.remove('pro-open');
   }
 
+  // при клике на "Купить PRO" — инициализируем PayPal-кнопку
   function onBuyClick(){
-    var already = false;
-    try{
-      if (typeof A.isPro === 'function') {
-        already = !!A.isPro();
-      } else {
-        try {
-          already = window.localStorage.getItem('mm.proUnlocked') === '1';
-        } catch(_){}
-      }
-    } catch(_){}
-
-    try{
-      if (typeof A.unlockPro === 'function') {
-        A.unlockPro();
-      } else {
-        window.localStorage.setItem('mm.proUnlocked','1');
-      }
-    }catch(e){}
-
-    var TOAST_MS = 2600;
-    if (window.App && App.Msg && typeof App.Msg.toast === 'function') {
-      App.Msg.toast(already ? 'pro.already' : 'pro.purchased', TOAST_MS);
-    } else {
-      var texts = t();
-      var fallback = already
-        ? (texts.already || 'PRO уже активирована')
-        : (texts.already || 'PRO активирована');
-      alert(fallback);
+    var paypalContainer = sheet && sheet.querySelector('#paypal-button-container');
+    if (!paypalContainer) {
+      console.warn('[PRO] PayPal container not found');
+      return;
     }
-    close();
-    // мягкая перезагрузка, чтобы сразу подхватить PRO-контент
-    try {
-      setTimeout(function(){ window.location.reload(); }, TOAST_MS - 200);
-    } catch(e) {}
+
+    // показываем контейнер
+    paypalContainer.style.display = 'block';
+
+    // рендерим кнопку только один раз
+    if (paypalRendered) {
+      return;
+    }
+    paypalRendered = true;
+
+    if (typeof root.paypal === 'undefined') {
+      console.warn('[PRO] PayPal SDK not loaded');
+      alert('PayPal SDK сейчас недоступен. Попробуйте обновить страницу.');
+      return;
+    }
+
+    root.paypal.Buttons({
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: '5.00' } // тестовая цена PRO (sandbox)
+          }]
+        });
+      },
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (details) {
+          console.log('[PRO][PayPal sandbox] Payment successful:', details);
+          // Здесь позже будет запрос на /api/paypal-confirm и активация PRO
+          alert('Sandbox-оплата прошла успешно. В боевой версии на этом шаге будет активация PRO.');
+        });
+      },
+      onError: function (err) {
+        console.error('[PRO][PayPal sandbox] Error:', err);
+        alert('Ошибка PayPal (sandbox). Детали в консоли браузера.');
+      }
+    }).render('#paypal-button-container');
   }
 
-function open(){
+  function open(){
     ensureStyles();
     var texts = t();
 
@@ -161,6 +174,7 @@ function open(){
       + '    <button type="button" class="pro-sheet__btn pro-sheet__btn--ghost" data-pro-close="1">' + texts.close + '</button>'
       + '    <button type="button" class="pro-sheet__btn pro-sheet__btn--primary" data-pro-buy="1">' + texts.buy + '</button>'
       + '  </div>'
+      + '  <div id="paypal-button-container" class="pro-sheet__paypal" style="display:none;"></div>'
       + '</section>';
 
     var wrap = document.createElement('div');
@@ -175,7 +189,9 @@ function open(){
       });
     }
     var buyBtn = sheet.querySelector('[data-pro-buy]');
-    buyBtn && buyBtn.addEventListener('click', onBuyClick, { passive:true });
+    if (buyBtn) {
+      buyBtn.addEventListener('click', onBuyClick, { passive:true });
+    }
   }
 
   root.ProUpgrade = { open: open, close: close };
