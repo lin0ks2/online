@@ -1,8 +1,9 @@
 /* ==========================================================
  * Проект: MOYAMOVA
  * Файл: paypal-confirm.js
- * Назначение: Подтверждение PayPal-оплаты (SANDBOX) и лог покупок
- * Версия: 1.0
+ * Назначение: Подтверждение PayPal-оплаты и лог покупок
+ * Режим: sandbox/live (через PAYPAL_MODE)
+ * Версия: 1.1
  * Обновлено: 2025-12-02
  * ========================================================== */
 
@@ -13,14 +14,16 @@
  *   { orderID: string }
  *
  * Логика:
- *   1) Получаем access token у PayPal (sandbox).
- *   2) Запрашиваем данные заказа по orderID.
- *   3) Проверяем:
+ *   1) Определяем режим (sandbox/live) по PAYPAL_MODE.
+ *   2) Берём соответствующие PAYPAL_CLIENT / PAYPAL_SECRET.
+ *   3) Получаем access token у PayPal.
+ *   4) Запрашиваем данные заказа по orderID.
+ *   5) Проверяем:
  *      - статус === 'COMPLETED'
- *      - сумма === 5.00 EUR
- *   4) Пишем структурный лог [PAYMENT_LOG] в stdout:
+ *      - сумма === 5.00 EUR (как в pro.js)
+ *   6) Пишем структурный лог [PAYMENT_LOG]:
  *      - type: PAYMENT_OK / PAYMENT_FAIL
- *   5) Возвращаем JSON:
+ *   7) Возвращаем JSON:
  *      - ok: true/false
  *      - status, amount, id
  * ========================================================== */
@@ -38,18 +41,30 @@ export default async function handler(req, res) {
       return res.status(400).json({ ok: false, error: 'ORDER_ID_MISSING' });
     }
 
-    const client = process.env.PAYPAL_CLIENT;
-    const secret = process.env.PAYPAL_SECRET;
+    const mode = process.env.PAYPAL_MODE === 'live' ? 'live' : 'sandbox';
+    const isLive = mode === 'live';
+
+    const client = isLive
+      ? process.env.PAYPAL_CLIENT_LIVE
+      : process.env.PAYPAL_CLIENT;
+
+    const secret = isLive
+      ? process.env.PAYPAL_SECRET_LIVE
+      : process.env.PAYPAL_SECRET;
+
+    const PAYPAL_API_BASE = isLive
+      ? 'https://api-m.paypal.com'
+      : 'https://api-m.sandbox.paypal.com';
 
     if (!client || !secret) {
-      console.error('[paypal-confirm] Missing PAYPAL_CLIENT or PAYPAL_SECRET');
+      console.error('[paypal-confirm] Missing PayPal credentials for mode:', mode);
       return res.status(500).json({ ok: false, error: 'PAYPAL_CONFIG_MISSING' });
     }
 
     const basicAuth = Buffer.from(client + ':' + secret).toString('base64');
 
-    // 1) Берём access token (SANDBOX)
-    const tokenRes = await fetch('https://api-m.sandbox.paypal.com/v1/oauth2/token', {
+    // 1) Берём access token
+    const tokenRes = await fetch(PAYPAL_API_BASE + '/v1/oauth2/token', {
       method: 'POST',
       headers: {
         'Authorization': 'Basic ' + basicAuth,
@@ -78,7 +93,7 @@ export default async function handler(req, res) {
 
     // 2) Проверяем заказ по orderID
     const orderRes = await fetch(
-      'https://api-m.sandbox.paypal.com/v2/checkout/orders/' + encodeURIComponent(orderID),
+      PAYPAL_API_BASE + '/v2/checkout/orders/' + encodeURIComponent(orderID),
       {
         method: 'GET',
         headers: {
@@ -95,7 +110,7 @@ export default async function handler(req, res) {
       console.log('[PAYMENT_LOG]', {
         type:       'PAYMENT_FAIL',
         source:     'paypal',
-        env:        'sandbox',
+        env:        mode,
         reason:     'ORDER_LOOKUP_FAILED',
         orderID:    orderID,
         statusCode: orderRes.status,
@@ -146,7 +161,7 @@ export default async function handler(req, res) {
       console.log('[PAYMENT_LOG]', {
         type:       'PAYMENT_OK',
         source:     'paypal',
-        env:        'sandbox',
+        env:        mode,
         orderID:    orderData.id,
         status:     status,
         amount:     amountInfo,
@@ -164,11 +179,11 @@ export default async function handler(req, res) {
       });
     } else {
       console.log('[PAYMENT_LOG]', {
-        type:    'PAYMENT_FAIL',
-        source:  'paypal',
-        env:     'sandbox',
-        orderID: orderData.id,
-        status:  status,
+        type:     'PAYMENT_FAIL',
+        source:   'paypal',
+        env:      mode,
+        orderID:  orderData.id,
+        status:   status,
         amountOk: amountOk,
         amount:   amountInfo,
         payer:    payerInfo,
@@ -184,12 +199,13 @@ export default async function handler(req, res) {
       });
     }
   } catch (err) {
+    const mode = process.env.PAYPAL_MODE === 'live' ? 'live' : 'sandbox';
     console.error('[paypal-confirm] Exception:', err);
 
     console.log('[PAYMENT_LOG]', {
       type:    'PAYMENT_FAIL',
       source:  'paypal',
-      env:     'sandbox',
+      env:     mode,
       reason:  'EXCEPTION',
       message: (err && err.message) ? err.message : String(err),
       time:    new Date().toISOString()
