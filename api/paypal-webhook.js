@@ -1,5 +1,30 @@
-// api/paypal-webhook.js
-// Обработка PayPal webhooks (SANDBOX) с проверкой подписи
+/* ==========================================================
+ * Проект: MOYAMOVA
+ * Файл: paypal-webhook.js
+ * Назначение: Обработка PayPal Webhooks (sandbox/live)
+ * Версия: 1.1
+ * Обновлено: 2025-12-02
+ * ========================================================== */
+
+/* ==========================================================
+ * Эндпоинт: POST /api/paypal-webhook
+ *
+ * Используется PayPal Webhooks:
+ *   - CHECKOUT.ORDER.APPROVED
+ *   - PAYMENT.CAPTURE.COMPLETED
+ *
+ * Логика:
+ *   1) Определяем режим (sandbox/live) по PAYPAL_MODE.
+ *   2) Берём соответствующие:
+ *        - PAYPAL_CLIENT / PAYPAL_SECRET
+ *        - PAYPAL_WEBHOOK_ID
+ *   3) Получаем access token у PayPal.
+ *   4) Проверяем подпись webhook'а через
+ *      /v1/notifications/verify-webhook-signature.
+ *   5) Если подпись валидна:
+ *        - логируем событие в [PAYMENT_LOG] (WEBHOOK_CAPTURE и т.п.).
+ *   6) Отвечаем 200 OK, чтобы PayPal не ретраил.
+ * ========================================================== */
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -7,8 +32,32 @@ export default async function handler(req, res) {
   }
 
   try {
-    const event = req.body; // PayPal шлёт JSON, Vercel его уже распарсит
+    const event   = req.body || {};
     const headers = req.headers || {};
+
+    const mode   = process.env.PAYPAL_MODE === 'live' ? 'live' : 'sandbox';
+    const isLive = mode === 'live';
+
+    const client = isLive
+      ? process.env.PAYPAL_CLIENT_LIVE
+      : process.env.PAYPAL_CLIENT;
+
+    const secret = isLive
+      ? process.env.PAYPAL_SECRET_LIVE
+      : process.env.PAYPAL_SECRET;
+
+    const webhookId = isLive
+      ? process.env.PAYPAL_WEBHOOK_ID_LIVE
+      : process.env.PAYPAL_WEBHOOK_ID;
+
+    const PAYPAL_API_BASE = isLive
+      ? 'https://api-m.paypal.com'
+      : 'https://api-m.sandbox.paypal.com';
+
+    if (!client || !secret || !webhookId) {
+      console.error('[paypal-webhook] Missing config for mode:', mode);
+      return res.status(500).json({ ok: false, error: 'PAYPAL_CONFIG_MISSING' });
+    }
 
     const transmissionId   = headers['paypal-transmission-id'];
     const transmissionTime = headers['paypal-transmission-time'];
@@ -16,19 +65,15 @@ export default async function handler(req, res) {
     const authAlgo         = headers['paypal-auth-algo'];
     const transmissionSig  = headers['paypal-transmission-sig'];
 
-    const webhookId = process.env.PAYPAL_WEBHOOK_ID;
-    const client    = process.env.PAYPAL_CLIENT;
-    const secret    = process.env.PAYPAL_SECRET;
-
-    if (!webhookId || !client || !secret) {
-      console.error('[paypal-webhook] Missing env vars');
-      return res.status(500).json({ ok: false, error: 'CONFIG_MISSING' });
+    if (!transmissionId || !transmissionTime || !certUrl || !authAlgo || !transmissionSig) {
+      console.error('[paypal-webhook] Missing required PayPal headers');
+      return res.status(400).json({ ok: false, error: 'HEADERS_MISSING' });
     }
 
-    // 1) Берём access token (SANDBOX)
+    // 1) Берём access token
     const basicAuth = Buffer.from(client + ':' + secret).toString('base64');
 
-    const tokenRes = await fetch('https://api-m.sandbox.paypal.com/v1/oauth2/token', {
+    const tokenRes = await fetch(PAYPAL_API_BASE + '/v1/oauth2/token', {
       method: 'POST',
       headers: {
         'Authorization': 'Basic ' + basicAuth,
@@ -51,9 +96,9 @@ export default async function handler(req, res) {
       return res.status(502).json({ ok: false, error: 'NO_ACCESS_TOKEN' });
     }
 
-    // 2) Проверяем подпись вебхука
+    // 2) Проверяем подпись webhook'а
     const verifyRes = await fetch(
-      'https://api-m.sandbox.paypal.com/v1/notifications/verify-webhook-signature',
+      PAYPAL_API_BASE + '/v1/notifications/verify-webhook-signature',
       {
         method: 'POST',
         headers: {
@@ -61,13 +106,13 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          auth_algo:        authAlgo,
-          cert_url:         certUrl,
+          auth_algo:         authAlgo,
+          cert_url:          certUrl,
           transmission_id:  transmissionId,
           transmission_sig: transmissionSig,
           transmission_time: transmissionTime,
-          webhook_id:       webhookId,
-          webhook_event:    event
+          webhook_id:        webhookId,
+          webhook_event:     event
         })
       }
     );
@@ -80,36 +125,55 @@ export default async function handler(req, res) {
       return res.status(400).json({ ok: false, error: 'SIGNATURE_INVALID', status });
     }
 
-    // 3) Подпись валидна — можно обрабатывать событие
+    // 3) Подпись валидна — обрабатываем событие
     const eventType = event.event_type;
-    console.log('[paypal-webhook] Event received:', eventType, 'id:', event.id);
+    console.log('[paypal-webhook] Event received:', eventType, 'id:', event.id, 'mode:', mode);
 
-    // Простейший пример обработки
     if (eventType === 'PAYMENT.CAPTURE.COMPLETED') {
       const resource = event.resource || {};
       const captureId = resource.id;
-      const amount = resource.amount && resource.amount.value;
-      const currency = resource.amount && resource.amount.currency_code;
+      const amount    = resource.amount && resource.amount.value;
+      const currency  = resource.amount && resource.amount.currency_code;
 
-      console.log('[paypal-webhook] Capture completed:', {
-        captureId,
-        amount,
-        currency
+      console.log('[PAYMENT_LOG]', {
+        type:      'WEBHOOK_CAPTURE',
+        source:    'paypal',
+        env:       mode,
+        captureId: captureId,
+        amount:    amount,
+        currency:  currency,
+        rawStatus: resource.status,
+        time:      new Date().toISOString()
       });
 
-      // TODO: здесь можно:
-      // - записать платёж в лог/БД
-      // - привязать к пользователю/устройству (если появится учётка)
+      // TODO: тут можно будет привязать оплату к пользователю/устройству,
+      //       когда появится аккаунт/идентификатор.
     }
 
-    // PayPal ждёт 200 OK, чтобы не ретраить
+    // Можно добавить обработку других типов, если понадобится
+    // if (eventType === 'CHECKOUT.ORDER.APPROVED') { ... }
+
+    // PayPal ждёт 200 OK, если всё ок
     return res.status(200).json({ ok: true });
   } catch (err) {
+    const mode = process.env.PAYPAL_MODE === 'live' ? 'live' : 'sandbox';
     console.error('[paypal-webhook] Exception:', err);
+
+    console.log('[PAYMENT_LOG]', {
+      type:    'WEBHOOK_ERROR',
+      source:  'paypal',
+      env:     mode,
+      reason:  'EXCEPTION',
+      message: (err && err.message) ? err.message : String(err),
+      time:    new Date().toISOString()
+    });
+
     return res.status(500).json({
-      ok: false,
+      ok:    false,
       error: 'EXCEPTION',
-      message: err && err.message ? err.message : String(err)
+      message: (err && err.message) ? err.message : String(err)
     });
   }
 }
+
+/* ==================== Конец файла: paypal-webhook.js ==================== */
