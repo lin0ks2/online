@@ -2,7 +2,7 @@
  * Проект: MOYAMOVA
  * Файл: pro.js
  * Назначение: Экран/лист PRO-версии (разовая покупка)
- * Версия: 1.5
+ * Версия: 2.0
  * Обновлено: 2025-12-02
  * ========================================================== */
 
@@ -11,7 +11,7 @@
   var A = root.App = root.App || {};
 
   /* ========================================================
-   * Вспомогательные функции локализации
+   * Локализация
    * ====================================================== */
 
   function getUiLang(){
@@ -38,12 +38,17 @@
       already: 'У вас вже активована версія PRO',
       close: 'Закрити',
       badge: 'Раз і назавжди',
+
       chooseMethod: 'Оберіть спосіб оплати',
       paypalShort: 'PayPal',
       otherShort: 'Інші способи',
       soon: 'Скоро',
       payWithPaypal: 'Оплатити через PayPal-акаунт',
-      otherDesc: 'Ми працюємо над підтримкою популярних способів оплати в різних країнах.'
+      otherDesc: 'Ми працюємо над підтримкою популярних способів оплати в різних країнах.',
+
+      haveCode: 'У мене є код',
+      enterCode: 'Введіть код активації',
+      codeInvalid: 'Невірний код активації'
     } : {
       title: 'MOYAMOVA PRO',
       subtitle: 'Разовая разблокировка расширенного функционала',
@@ -56,12 +61,17 @@
       already: 'У вас уже активирована версия PRO',
       close: 'Закрыть',
       badge: 'Раз и навсегда',
+
       chooseMethod: 'Выберите способ оплаты',
       paypalShort: 'PayPal',
       otherShort: 'Другие способы',
       soon: 'Скоро',
       payWithPaypal: 'Оплатить через PayPal-аккаунт',
-      otherDesc: 'Мы работаем над поддержкой популярных способов оплаты в разных странах.'
+      otherDesc: 'Мы работаем над поддержкой популярных способов оплаты в разных странах.',
+
+      haveCode: 'У меня есть код',
+      enterCode: 'Введите код активации',
+      codeInvalid: 'Неверный код активации'
     };
   }
 
@@ -74,7 +84,7 @@
   var currentPayPage = 0;
 
   /* ========================================================
-   * Стили для PRO-листа
+   * Стили
    * ====================================================== */
 
   function ensureStyles(){
@@ -101,7 +111,6 @@
       + 'padding:0;border-radius:999px;color:inherit;margin:0 auto 10px auto;background:transparent;}'
       + '.pro-sheet__badge span{font-size:15px;}'
 
-      // блок способов оплаты
       + '.pro-payments{margin-top:14px;padding-top:10px;border-top:1px solid rgba(148,163,184,.3);}'
       + '.pro-payments__header{font-size:13px;font-weight:600;text-align:center;margin-bottom:8px;}'
       + '.pro-payments__dots{display:flex;justify-content:center;gap:10px;margin-bottom:10px;}'
@@ -116,7 +125,10 @@
       + '.pro-payments__text{font-size:13px;opacity:.85;margin-bottom:10px;text-align:center;}'
       + '.pro-payments__soon{font-size:13px;opacity:.7;text-align:center;}'
       + '.pro-payments__soon strong{font-weight:600;}'
-      + '.pro-sheet__paypal{margin-top:8px;}';
+      + '.pro-sheet__paypal{margin-top:8px;}'
+      + '.pro-payments__code{margin:10px auto 0 auto;display:block;font-size:12px;border:0;'
+      + 'background:transparent;color:inherit;opacity:.8;text-decoration:underline;cursor:pointer;}'
+      + '.pro-payments__code:hover{opacity:1;}';
 
     var style = document.createElement('style');
     style.id = 'pro-sheet-style';
@@ -138,7 +150,7 @@
   }
 
   /* ========================================================
-   * Активация PRO после успешной оплаты
+   * Активация PRO (после оплаты или мастер-кода)
    * ====================================================== */
 
   function activateProAfterPayment(){
@@ -282,7 +294,7 @@
       };
     }
 
-    // PayPal-кнопка (жёлтая), только оплата через аккаунт
+    // Жёлтая кнопка PayPal (только оплата через аккаунт)
     if (paypalContainer && (!hasFundingCheck || root.paypal.isFundingAvailable(paypalFunding.PAYPAL))) {
       try {
         var cfgPaypal = createConfig();
@@ -295,7 +307,40 @@
   }
 
   /* ========================================================
-   * Обработчик нажатия "Купить PRO"
+   * Активация по мастер-коду
+   * ====================================================== */
+
+  function onHaveCodeClick(){
+    var texts = t();
+
+    try {
+      var code = root.prompt(texts.enterCode || 'Введите код активации');
+      if (!code) return;
+
+      fetch('/api/pro-key', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key: code })
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(res){
+        if (res && res.ok) {
+          activateProAfterPayment();
+        } else {
+          alert(texts.codeInvalid || 'Неверный код активации');
+        }
+      })
+      .catch(function(err){
+        console.error('[PRO] Error calling /api/pro-key:', err);
+        alert('Ошибка при проверке кода. Попробуйте позже.');
+      });
+    } catch (e) {
+      console.error('[PRO] Master key error:', e);
+    }
+  }
+
+  /* ========================================================
+   * Обработчики кнопок
    * ====================================================== */
 
   function onBuyClick(){
@@ -346,7 +391,7 @@
       + '    <button type="button" class="pro-sheet__btn pro-sheet__btn--primary" data-pro-buy="1">' + texts.buy + '</button>'
       + '  </div>'
 
-      // блок выбора способа оплаты (PayPal + заглушка "другие")
+      // блок выбора способа оплаты
       + '  <div id="pro-payments" class="pro-payments" style="display:none;">'
       + '    <div class="pro-payments__header">' + texts.chooseMethod + '</div>'
       + '    <div class="pro-payments__dots" role="tablist" aria-label="' + texts.chooseMethod + '">'
@@ -362,7 +407,7 @@
       + '        <div id="paypal-button-container" class="pro-sheet__paypal"></div>'
       + '      </section>'
 
-      // страница 1 — другие методы (СНГ) заглушка
+      // страница 1 — другие методы (заглушка)
       + '      <section class="pro-payments__page" data-pay-page="1">'
       + '        <div class="pro-payments__title">' + texts.otherShort + '</div>'
       + '        <div class="pro-payments__text">' + texts.otherDesc + '</div>'
@@ -370,6 +415,7 @@
       + '      </section>'
 
       + '    </div>'
+      + '    <button type="button" class="pro-payments__code" data-pro-code="1">' + texts.haveCode + '</button>'
       + '  </div>'
 
       + '</section>';
@@ -385,9 +431,15 @@
         node.addEventListener('click', close, { passive:true });
       });
     }
+
     var buyBtn = sheet.querySelector('[data-pro-buy]');
     if (buyBtn) {
       buyBtn.addEventListener('click', onBuyClick, { passive:true });
+    }
+
+    var codeBtn = sheet.querySelector('[data-pro-code]');
+    if (codeBtn) {
+      codeBtn.addEventListener('click', onHaveCodeClick, { passive:true });
     }
   }
 
