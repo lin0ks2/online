@@ -258,7 +258,7 @@
         createOrder: function (data, actions) {
           return actions.order.create({
             purchase_units: [{
-              amount: { value: '1.00' } // цена PRO (должна совпадать с paypal-confirm.js)
+              amount: { value: '9.99' } // цена PRO (должна совпадать с paypal-confirm.js)
             }]
           });
         },
