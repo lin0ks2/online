@@ -61,28 +61,19 @@
       + 'background:var(--card-bg,rgba(15,23,42,.98));color:var(--text-primary,#fff);box-shadow:0 -10px 40px rgba(15,23,42,.9);'
       + 'max-width:520px;margin:0 auto;padding:16px 18px 20px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}'
       + '@media (prefers-color-scheme:light){.pro-sheet{background:var(--card-bg,#fff);color:var(--text-primary,#0f172a);}}'
-
-      // заголовок и подзаголовок — по центру
       + '.pro-sheet__title{font-size:18px;font-weight:700;margin-bottom:4px;text-align:center;'
       + 'color:var(--accent,var(--brand,#35b6ff));}'
       + '.pro-sheet__subtitle{font-size:13px;opacity:.8;margin-bottom:12px;text-align:center;}'
-
       + '.pro-sheet__features-title{font-size:13px;font-weight:600;margin-bottom:6px;}'
       + '.pro-sheet__list{margin:0 0 14px;padding-left:18px;font-size:13px;}'
       + '.pro-sheet__list li{margin-bottom:4px;}'
-
-      // КНОПКИ ВНИЗУ — по центру
       + '.pro-sheet__actions{display:flex;gap:12px;justify-content:center;margin-top:8px;}'
       + '.pro-sheet__btn{border:0;border-radius:12px;padding:9px 20px;font-size:14px;cursor:pointer;min-width:120px;}'
       + '.pro-sheet__btn--primary{background:var(--accent,var(--brand,#35b6ff));color:#fff;}'
       + '.pro-sheet__btn--ghost{background:transparent;color:inherit;border:1px solid rgba(148,163,184,.6);}'
-
-      // БЕЙДЖ "Раз и навсегда"
       + '.pro-sheet__badge{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;'
       + 'padding:0;border-radius:999px;color:inherit;margin:0 auto 10px auto;background:transparent;}'
       + '.pro-sheet__badge span{font-size:15px;}'
-
-      // контейнер под PayPal-кнопку
       + '.pro-sheet__paypal{margin-top:12px;}';
 
     var style = document.createElement('style');
@@ -99,7 +90,7 @@
     document.body.classList.remove('pro-open');
   }
 
-  // активация PRO после успешной оплаты и подтверждения бекендом
+  // включаем PRO после успешной оплаты и ответа сервера
   function activateProAfterPayment(){
     var texts = t();
     var already = false;
@@ -134,13 +125,11 @@
       alert(fallback);
     }
 
-    // мягкая перезагрузка, чтобы подтянуть PRO-контент
     try {
       setTimeout(function(){ root.location.reload(); }, TOAST_MS - 200);
     } catch(e) {}
   }
 
-  // клик по "Купить PRO" — показываем PayPal-кнопку и вешаем логику
   function onBuyClick(){
     var paypalContainer = sheet && sheet.querySelector('#paypal-button-container');
     if (!paypalContainer) {
@@ -148,10 +137,8 @@
       return;
     }
 
-    // показываем контейнер
     paypalContainer.style.display = 'block';
 
-    // рендерим кнопку только один раз
     if (paypalRendered) {
       return;
     }
@@ -175,7 +162,6 @@
         return actions.order.capture().then(function (details) {
           console.log('[PRO][PayPal sandbox] Payment captured:', details);
 
-          // обращаемся к нашему бекенду для подтверждения
           return fetch('/api/paypal-confirm', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -209,7 +195,6 @@
     var texts = t();
 
     if (sheet){
-      // если уже открыт — просто подсветим
       sheet.classList.add('pro-sheet--pulse');
       setTimeout(function(){ sheet && sheet.classList.remove('pro-sheet--pulse'); }, 500);
       return;
