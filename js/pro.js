@@ -2,7 +2,7 @@
  * Проект: MOYAMOVA
  * Файл: pro.js
  * Назначение: Экран/лист PRO-версии (разовая покупка)
- * Версия: 1.1
+ * Версия: 1.2
  * Обновлено: 2025-12-02
  * ========================================================== */
 
@@ -99,7 +99,48 @@
     document.body.classList.remove('pro-open');
   }
 
-  // при клике на "Купить PRO" — инициализируем PayPal-кнопку
+  // активация PRO после успешной оплаты и подтверждения бекендом
+  function activateProAfterPayment(){
+    var texts = t();
+    var already = false;
+
+    try {
+      if (typeof A.isPro === 'function') {
+        already = !!A.isPro();
+      } else {
+        try {
+          already = root.localStorage.getItem('mm.proUnlocked') === '1';
+        } catch (_) {}
+      }
+    } catch (_) {}
+
+    try {
+      if (typeof A.unlockPro === 'function') {
+        A.unlockPro();
+      } else {
+        root.localStorage.setItem('mm.proUnlocked', '1');
+      }
+    } catch (e) {
+      console.error('[PRO] Failed to persist PRO flag', e);
+    }
+
+    var TOAST_MS = 2600;
+    if (root.App && root.App.Msg && typeof root.App.Msg.toast === 'function') {
+      root.App.Msg.toast(already ? 'pro.already' : 'pro.purchased', TOAST_MS);
+    } else {
+      var fallback = already
+        ? (texts.already || 'PRO уже активирована')
+        : (texts.already || 'PRO активирована');
+      alert(fallback);
+    }
+
+    // мягкая перезагрузка, чтобы подтянуть PRO-контент
+    try {
+      setTimeout(function(){ root.location.reload(); }, TOAST_MS - 200);
+    } catch(e) {}
+  }
+
+  // клик по "Купить PRO" — показываем PayPal-кнопку и вешаем логику
   function onBuyClick(){
     var paypalContainer = sheet && sheet.querySelector('#paypal-button-container');
     if (!paypalContainer) {
@@ -126,15 +167,34 @@
       createOrder: function (data, actions) {
         return actions.order.create({
           purchase_units: [{
-            amount: { value: '5.00' } // тестовая цена PRO (sandbox)
+            amount: { value: '5.00' } // цена PRO (sandbox)
           }]
         });
       },
       onApprove: function (data, actions) {
         return actions.order.capture().then(function (details) {
-          console.log('[PRO][PayPal sandbox] Payment successful:', details);
-          // Здесь позже будет запрос на /api/paypal-confirm и активация PRO
-          alert('Sandbox-оплата прошла успешно. В боевой версии на этом шаге будет активация PRO.');
+          console.log('[PRO][PayPal sandbox] Payment captured:', details);
+
+          // обращаемся к нашему бекенду для подтверждения
+          return fetch('/api/paypal-confirm', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ orderID: data.orderID })
+          })
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            console.log('[PRO] /api/paypal-confirm response:', res);
+
+            if (res && res.ok) {
+              activateProAfterPayment();
+            } else {
+              alert('Оплату не удалось подтвердить. Статус: ' + (res && res.status ? res.status : 'unknown'));
+            }
+          })
+          .catch(function (err) {
+            console.error('[PRO] Error calling /api/paypal-confirm:', err);
+            alert('Ошибка при подтверждении оплаты. Попробуйте позже.');
+          });
         });
       },
       onError: function (err) {
