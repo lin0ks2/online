@@ -1,5 +1,5 @@
 // api/paypal-confirm.js
-// Проверка PayPal-оплаты в SANDBOX через Orders API
+// Проверка PayPal-оплаты в SANDBOX через Orders API + лог покупок в серверные логи Vercel
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -63,6 +63,13 @@ export default async function handler(req, res) {
 
     if (!orderRes.ok) {
       console.error('[paypal-confirm] Order lookup failed:', orderRes.status, orderData);
+      console.log('[PAYMENT_LOG]', {
+        type: 'PAYMENT_FAIL',
+        reason: 'ORDER_LOOKUP_FAILED',
+        orderID,
+        statusCode: orderRes.status,
+        time: new Date().toISOString()
+      });
       return res.status(400).json({
         ok: false,
         error: 'ORDER_LOOKUP_FAILED',
@@ -74,6 +81,7 @@ export default async function handler(req, res) {
     const status = orderData.status;
     let amountOk = false;
     let amountInfo = null;
+    let payerInfo = null;
 
     try {
       const pu = orderData.purchase_units && orderData.purchase_units[0];
@@ -85,14 +93,32 @@ export default async function handler(req, res) {
         // ожидаем 5.00 EUR — как в pro.js
         amountOk = (pu.amount.value === '5.00' && pu.amount.currency_code === 'EUR');
       }
+      const payer = orderData.payer || {};
+      payerInfo = {
+        id: payer.payer_id || null,
+        email: payer.email_address || null
+      };
     } catch (e) {
-      console.warn('[paypal-confirm] Cannot parse amount:', e);
+      console.warn('[paypal-confirm] Cannot parse amount/payer:', e);
     }
 
     const isCompleted = (status === 'COMPLETED');
 
     if (isCompleted && amountOk) {
-      // всё ок — платёж прошёл и сумма совпала
+      // === УСПЕШНАЯ ПОКУПКА: логируем структурно ===
+      console.log('[PAYMENT_LOG]', {
+        type: 'PAYMENT_OK',
+        source: 'paypal',
+        env: 'sandbox',
+        orderID: orderData.id,
+        status,
+        amount: amountInfo,
+        payer: payerInfo,
+        createTime: orderData.create_time,
+        updateTime: orderData.update_time,
+        time: new Date().toISOString()
+      });
+
       return res.status(200).json({
         ok: true,
         status: status,
@@ -100,7 +126,18 @@ export default async function handler(req, res) {
         id: orderData.id
       });
     } else {
-      // статус не COMPLETED или сумма не та — не считаем валидным
+      console.log('[PAYMENT_LOG]', {
+        type: 'PAYMENT_FAIL',
+        source: 'paypal',
+        env: 'sandbox',
+        orderID: orderData.id,
+        status,
+        amountOk,
+        amount: amountInfo,
+        payer: payerInfo,
+        time: new Date().toISOString()
+      });
+
       return res.status(200).json({
         ok: false,
         status: status,
@@ -111,6 +148,14 @@ export default async function handler(req, res) {
     }
   } catch (err) {
     console.error('[paypal-confirm] Exception:', err);
+    console.log('[PAYMENT_LOG]', {
+      type: 'PAYMENT_FAIL',
+      source: 'paypal',
+      env: 'sandbox',
+      reason: 'EXCEPTION',
+      message: err && err.message ? err.message : String(err),
+      time: new Date().toISOString()
+    });
     return res.status(500).json({
       ok: false,
       error: 'EXCEPTION',
