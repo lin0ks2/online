@@ -6,27 +6,6 @@
  * Обновлено: 2025-12-02
  * ========================================================== */
 
-/* ==========================================================
- * Эндпоинт: POST /api/paypal-webhook
- *
- * Сейчас используем один режим за раз:
- *   PAYPAL_MODE = 'sandbox' | 'live'
- *
- * Для sandbox:
- *   PAYPAL_CLIENT
- *   PAYPAL_SECRET
- *   PAYPAL_WEBHOOK_ID
- *
- * Для live:
- *   PAYPAL_CLIENT_LIVE
- *   PAYPAL_SECRET_LIVE
- *   PAYPAL_WEBHOOK_ID_LIVE
- *
- * Важно:
- *   webhook_id НЕ приходит в теле события,
- *   его мы берём из ENV и передаём в verify-webhook-signature.
- * ========================================================== */
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ ok: false, error: 'METHOD_NOT_ALLOWED' });
@@ -68,7 +47,7 @@ export default async function handler(req, res) {
 
     const basicAuth = Buffer.from(client + ':' + secret).toString('base64');
 
-    // 1) Берём access token
+    // 1) access token
     const tokenRes = await fetch(PAYPAL_API_BASE + '/v1/oauth2/token', {
       method: 'POST',
       headers: {
@@ -92,7 +71,7 @@ export default async function handler(req, res) {
       return res.status(502).json({ ok: false, error: 'NO_ACCESS_TOKEN' });
     }
 
-    // 2) Проверяем подпись вебхука
+    // 2) проверяем подпись
     const verifyRes = await fetch(
       PAYPAL_API_BASE + '/v1/notifications/verify-webhook-signature',
       {
@@ -120,18 +99,18 @@ export default async function handler(req, res) {
       console.error('[paypal-webhook] Signature verify failed:', status, verifyData);
 
       console.log('[PAYMENT_LOG]', {
-        type:    'WEBHOOK_VERIFY_FAIL',
-        source:  'paypal',
-        env:     mode,
-        status:  status || null,
+        type:   'WEBHOOK_VERIFY_FAIL',
+        source: 'paypal',
+        env:    mode,
+        status: status || null,
         eventId: event && event.id ? event.id : null,
-        time:    new Date().toISOString()
+        time:   new Date().toISOString()
       });
 
       return res.status(400).json({ ok: false, error: 'SIGNATURE_INVALID', status });
     }
 
-    // 3) Подпись валидна — обрабатываем событие
+    // 3) подпись ок — логируем нужные события
     const eventType = event.event_type;
     console.log('[paypal-webhook] Event received:', eventType, 'id:', event.id, 'env:', mode);
 
@@ -152,11 +131,8 @@ export default async function handler(req, res) {
         eventId:   event.id,
         time:      new Date().toISOString()
       });
-
-      // Здесь позже можно будет писать в постоянное хранилище
     }
 
-    // PayPal ждёт 200 OK, чтобы не ретраить событие
     return res.status(200).json({ ok: true });
   } catch (err) {
     const mode = (process.env.PAYPAL_MODE === 'live') ? 'live' : 'sandbox';
