@@ -76,7 +76,7 @@
       "url": "./#study",
       "icons": [
         {
-          "src": "./img/icon-192.png",
+          "src": "./img/favicon-192x192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -87,7 +87,7 @@
       "url": "./#fav",
       "icons": [
         {
-          "src": "./img/icon-192.png",
+          "src": "./img/favicon-192x192.png",
           "sizes": "192x192",
           "type": "image/png"
         }
