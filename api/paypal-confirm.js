@@ -20,7 +20,7 @@
  *   4) Запрашиваем данные заказа по orderID.
  *   5) Проверяем:
  *      - статус === 'COMPLETED'
- *      - сумма === 5.00 EUR (как в pro.js)
+ *      - сумма === 9.99 EUR (как в pro.js)
  *   6) Пишем структурный лог [PAYMENT_LOG]:
  *      - type: PAYMENT_OK / PAYMENT_FAIL
  *   7) Возвращаем JSON:
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
         };
         // ожидаем 5.00 EUR — как в pro.js
         amountOk = (
-          pu.amount.value === '1.00' &&
+          pu.amount.value === '9.99' &&
           pu.amount.currency_code === 'EUR'
         );
       }
