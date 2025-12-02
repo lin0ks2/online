@@ -2,7 +2,7 @@
  * Проект: MOYAMOVA
  * Файл: pro.js
  * Назначение: Экран/лист PRO-версии (разовая покупка)
- * Версия: 1.4
+ * Версия: 1.5
  * Обновлено: 2025-12-02
  * ========================================================== */
 
@@ -10,10 +10,14 @@
   'use strict';
   var A = root.App = root.App || {};
 
+  /* ========================================================
+   * Вспомогательные функции локализации
+   * ====================================================== */
+
   function getUiLang(){
     try {
       var s = (A.settings && (A.settings.lang || A.settings.uiLang)) || 'ru';
-      s = String(s||'').toLowerCase();
+      s = String(s || '').toLowerCase();
       return (s === 'uk') ? 'uk' : 'ru';
     } catch (e) {
       return 'ru';
@@ -36,12 +40,10 @@
       badge: 'Раз і назавжди',
       chooseMethod: 'Оберіть спосіб оплати',
       paypalShort: 'PayPal',
-      cardShort: 'Банківська карта',
       otherShort: 'Інші способи',
       soon: 'Скоро',
-      payWithPaypal: 'Оплатити через PayPal',
-      cardDesc: 'Оплата банківською карткою через PayPal. Ваші дані залишаються у PayPal.',
-      otherDesc: 'Ми працюємо над підтримкою популярних способів оплати в країнах СНД.'
+      payWithPaypal: 'Оплатити через PayPal-акаунт',
+      otherDesc: 'Ми працюємо над підтримкою популярних способів оплати в різних країнах.'
     } : {
       title: 'MOYAMOVA PRO',
       subtitle: 'Разовая разблокировка расширенного функционала',
@@ -56,18 +58,24 @@
       badge: 'Раз и навсегда',
       chooseMethod: 'Выберите способ оплаты',
       paypalShort: 'PayPal',
-      cardShort: 'Банковская карта',
       otherShort: 'Другие способы',
       soon: 'Скоро',
-      payWithPaypal: 'Оплатить через PayPal',
-      cardDesc: 'Оплата банковской картой через PayPal. Ваши данные остаются у PayPal.',
-      otherDesc: 'Мы работаем над поддержкой популярных способов оплаты в странах СНГ.'
+      payWithPaypal: 'Оплатить через PayPal-аккаунт',
+      otherDesc: 'Мы работаем над поддержкой популярных способов оплаты в разных странах.'
     };
   }
+
+  /* ========================================================
+   * Состояние листа PRO
+   * ====================================================== */
 
   var sheet = null;
   var paypalRendered = false;
   var currentPayPage = 0;
+
+  /* ========================================================
+   * Стили для PRO-листа
+   * ====================================================== */
 
   function ensureStyles(){
     if (document.getElementById('pro-sheet-style')) return;
@@ -116,6 +124,10 @@
     document.head.appendChild(style);
   }
 
+  /* ========================================================
+   * Закрытие листа
+   * ====================================================== */
+
   function close(){
     if (!sheet) return;
     sheet.remove();
@@ -125,7 +137,10 @@
     document.body.classList.remove('pro-open');
   }
 
-  // включаем PRO после успешной оплаты и ответа сервера
+  /* ========================================================
+   * Активация PRO после успешной оплаты
+   * ====================================================== */
+
   function activateProAfterPayment(){
     var texts = t();
     var already = false;
@@ -165,6 +180,10 @@
     } catch(e) {}
   }
 
+  /* ========================================================
+   * Переключение страниц способов оплаты
+   * ====================================================== */
+
   function setPayPage(index){
     currentPayPage = index;
 
@@ -203,6 +222,10 @@
     setPayPage(0);
   }
 
+  /* ========================================================
+   * Инициализация PayPal-кнопки (только аккаунт)
+   * ====================================================== */
+
   function initPaypalButtons(){
     if (paypalRendered) return;
     paypalRendered = true;
@@ -213,19 +236,17 @@
       return;
     }
 
-    var paypalFunding = root.paypal.FUNDING || {};
+    var paypalFunding   = root.paypal.FUNDING || {};
     var hasFundingCheck = typeof root.paypal.isFundingAvailable === 'function';
 
     var paypalContainer = sheet && sheet.querySelector('#paypal-button-container');
-    var cardContainer   = sheet && sheet.querySelector('#paypal-card-container');
 
-    // базовая конфигурация (общая логика для обоих способов)
     function createConfig(){
       return {
         createOrder: function (data, actions) {
           return actions.order.create({
             purchase_units: [{
-              amount: { value: '1.00' } // цена PRO
+              amount: { value: '1.00' } // цена PRO (должна совпадать с paypal-confirm.js)
             }]
           });
         },
@@ -261,7 +282,7 @@
       };
     }
 
-    // PayPal-кнопка (жёлтая) на первой странице
+    // PayPal-кнопка (жёлтая), только оплата через аккаунт
     if (paypalContainer && (!hasFundingCheck || root.paypal.isFundingAvailable(paypalFunding.PAYPAL))) {
       try {
         var cfgPaypal = createConfig();
@@ -271,18 +292,11 @@
         console.error('[PRO] Failed to render PayPal button:', e);
       }
     }
-
-    // Кнопка "Debit or Credit Card" на второй странице
-    if (cardContainer && (!hasFundingCheck || root.paypal.isFundingAvailable(paypalFunding.CARD))) {
-      try {
-        var cfgCard = createConfig();
-        cfgCard.fundingSource = paypalFunding.CARD;
-        root.paypal.Buttons(cfgCard).render('#paypal-card-container');
-      } catch (e) {
-        console.error('[PRO] Failed to render Card button:', e);
-      }
-    }
   }
+
+  /* ========================================================
+   * Обработчик нажатия "Купить PRO"
+   * ====================================================== */
 
   function onBuyClick(){
     if (!sheet) return;
@@ -297,6 +311,10 @@
       payments.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } catch (_) {}
   }
+
+  /* ========================================================
+   * Открытие PRO-листа
+   * ====================================================== */
 
   function open(){
     ensureStyles();
@@ -328,13 +346,12 @@
       + '    <button type="button" class="pro-sheet__btn pro-sheet__btn--primary" data-pro-buy="1">' + texts.buy + '</button>'
       + '  </div>'
 
-      // блок выбора способа оплаты (изначально скрыт)
+      // блок выбора способа оплаты (PayPal + заглушка "другие")
       + '  <div id="pro-payments" class="pro-payments" style="display:none;">'
       + '    <div class="pro-payments__header">' + texts.chooseMethod + '</div>'
       + '    <div class="pro-payments__dots" role="tablist" aria-label="' + texts.chooseMethod + '">'
       + '      <button type="button" class="pro-payments__dot pro-payments__dot--active" data-pay-page="0" aria-label="' + texts.paypalShort + '"></button>'
-      + '      <button type="button" class="pro-payments__dot" data-pay-page="1" aria-label="' + texts.cardShort + '"></button>'
-      + '      <button type="button" class="pro-payments__dot" data-pay-page="2" aria-label="' + texts.otherShort + '"></button>'
+      + '      <button type="button" class="pro-payments__dot" data-pay-page="1" aria-label="' + texts.otherShort + '"></button>'
       + '    </div>'
       + '    <div class="pro-payments__pages">'
 
@@ -345,15 +362,8 @@
       + '        <div id="paypal-button-container" class="pro-sheet__paypal"></div>'
       + '      </section>'
 
-      // страница 1 — карта
+      // страница 1 — другие методы (СНГ) заглушка
       + '      <section class="pro-payments__page" data-pay-page="1">'
-      + '        <div class="pro-payments__title">' + texts.cardShort + '</div>'
-      + '        <div class="pro-payments__text">' + texts.cardDesc + '</div>'
-      + '        <div id="paypal-card-container" class="pro-sheet__paypal"></div>'
-      + '      </section>'
-
-      // страница 2 — другие методы (СНГ) заглушка
-      + '      <section class="pro-payments__page" data-pay-page="2">'
       + '        <div class="pro-payments__title">' + texts.otherShort + '</div>'
       + '        <div class="pro-payments__text">' + texts.otherDesc + '</div>'
       + '        <div class="pro-payments__soon"><strong>' + texts.soon + '</strong></div>'
@@ -380,6 +390,10 @@
       buyBtn.addEventListener('click', onBuyClick, { passive:true });
     }
   }
+
+  /* ========================================================
+   * Публичный API
+   * ====================================================== */
 
   root.ProUpgrade = { open: open, close: close };
 
