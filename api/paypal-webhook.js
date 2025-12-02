@@ -134,7 +134,7 @@ export default async function handler(req, res) {
         time:    new Date().toISOString()
       });
 
-      return res.status(400).json({ ok: false, error: 'SIGNATURE_INVALID', status });
+      return res.status(200).json({ ok: false, error: 'SIGNATURE_INVALID', status });
     }
 
     // 3) Подпись валидна — обрабатываем событие
