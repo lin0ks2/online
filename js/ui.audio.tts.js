@@ -65,21 +65,11 @@
   }
 
   function getCurrentWord() {
-    try {
-      var root = document.querySelector('.trainer-word');
-      if (!root) return '';
-      var el = root.querySelector('[data-role="word-text"]') || root;
-      var txt = '';
-      if (el.dataset && el.dataset.word) {
-        txt = el.dataset.word;
-      } else {
-        txt = el.textContent || '';
-      }
-      txt = String(txt || '').trim();
-      return txt.replace(/\s+/g, ' ');
-    } catch (e) {
-      return '';
-    }
+    var w = A.__currentWord || null;
+    if (!w) return '';
+    var raw = w.wordBasic || w.word || '';
+    if (!raw && w.forms && w.forms.base) raw = w.forms.base;
+    return String(raw || '').trim();
   }
 
   function speakText(text) {
