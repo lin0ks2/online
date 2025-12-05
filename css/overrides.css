@@ -348,6 +348,6 @@ html[data-theme="dark"] .stats-lang-card__body{
 @media all and (display-mode: standalone) {
   #app.content {
     box-sizing: border-box;
-    padding-top: 50px; /* можно 12–20px, подбери по вкусу */
+    padding-top: 64px; /* можно 12–20px, подбери по вкусу */
   }
 }
