@@ -877,17 +877,27 @@
         // Страница с аналитикой (2) доступна только в PRO-версии
         if (idx === 2 && (!A.isPro || !A.isPro())) {
           try {
-            if (window.ProUpgrade && typeof window.ProUpgrade.open === 'function') {
-              window.ProUpgrade.open();
-            } else {
-              const lang = getUiLang();
-              const msg = (lang === 'uk')
-                ? 'Сторінка з активністю доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
-                : 'Страница с активностью доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
-              alert(msg);
+            var lang = getUiLang();
+            var body = (lang === 'uk')
+              ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
+              : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
+
+            var stubHtml =
+              '<div class="stats-pro-gate" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
+                '<p style="margin-bottom:10px;">' + body + '</p>' +
+              '</div>';
+
+            var targetPage = null;
+            pages.forEach(function (pageEl) {
+              var pIdx = parseInt(pageEl.getAttribute('data-page') || '0', 10) || 0;
+              if (pIdx === 2) targetPage = pageEl;
+            });
+
+            if (targetPage) {
+              targetPage.innerHTML = stubHtml;
             }
           } catch (_) {}
-          return;
+          // продолжаем выполнение, чтобы переключить активную страницу и точку
         }
 
         if (idx < 0) idx = 0;
@@ -897,6 +907,7 @@
         pages.forEach(function (page, i) {
           page.classList.toggle('is-active', i === current);
         });
+
         dots.forEach(function (dot, i) {
           dot.classList.toggle('is-active', i === current);
         });
