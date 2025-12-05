@@ -355,21 +355,17 @@ html[data-runmode="pwa"] #app.content {
  * PWA: увеличенная зона подсказок (Пример/Синонимы/Антонимы)
  * ========================================================== */
 
-/* Только в установленной PWA */
+/* Только установленная PWA */
 html[data-runmode="pwa"] .home-hints .hints-body{
-  /* Перебиваем базовое height:2.6em из theme.dark.css */
-  height: 4.2em;              /* подгони по вкусу: 3.6–4.8em */
+  /* перебиваем light-тему (flex + min-height:48px)
+     и dark-тему (height:2.6em) одним махом */
+  display: block;
+  min-height: 0;
+  height: 4.2em;              /* подгони по вкусу: 3.8–4.6em */
   max-height: 4.2em;
 
-  /* Скролл остаётся, но явно дублируем на всякий случай */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Дополнительно: если текст очень длинный, подстрахуем контейнер примера */
-html[data-runmode="pwa"] .home-hints .hint-example{
-  max-height: 4.2em;
-  overflow-y: auto;
 }
 
 }
