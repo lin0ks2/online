@@ -342,3 +342,12 @@ html[data-theme="dark"] .stats-lang-card__body{
   background:
     radial-gradient(circle at top, #020b1f 0, #020617 55%, #000 100%);
 }
+/* ==========================================================
+ * Отступ сверху только для PWA (display-mode: standalone)
+ * ========================================================== */
+@media all and (display-mode: standalone) {
+  #app.content {
+    box-sizing: border-box;
+    padding-top: 14px; /* можно 12–20px, подбери по вкусу */
+  }
+}
