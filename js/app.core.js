@@ -2,13 +2,13 @@
  * Проект: MOYAMOVA
  * Файл: app.core.js
  * Назначение: Ядро приложения и общие настройки
- * Версия: 1.0
+ * Версия: 1.3.0
  * Обновлено: 2025-11-17
  * ========================================================== */
 
 (function(){
   const App = window.App = (window.App||{});
-  App.APP_VER = '1.2.9';
+  App.APP_VER = '1.3.0';
 
   const LS_SETTINGS = 'k_settings_v1_3_1';
   const LS_STATE    = 'k_state_v1_3_1';
