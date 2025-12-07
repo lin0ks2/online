@@ -1,5 +1,10 @@
-// Auto-generated English deck, based on German source.
-// Contains nouns with translations, synonyms, antonyms and examples in three languages.
+/* ==========================================================
+ * Project: MOYAMOVA
+ * File: deck.en.js
+ * Purpose: словарь приложения (JS)
+ * Version: 1.0
+ * Last modified: 2025-10-19
+*/
 window.decks.en_nouns = [
   {
     "id": 1,
@@ -30250,3 +30255,5206 @@ window.decks.en_nouns = [
     ]
   }
 ];
+window.decks.en_verbs = [
+
+];
+window.decks.en_adjectives = [
+
+];
+window.decks.en_adverbs = [
+
+];
+window.decks.en_prepositions = [
+{
+  id: 1,
+  word: "from (time)",
+  ru: "с",
+  uk: "від",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "From tomorrow on, I will work in Berlin.",
+      ru: "С завтрашнего дня я буду работать в Берлине.",
+      uk: "Від завтра я працюватиму в Берліні."
+    }
+  ]
+},
+{
+  id: 2,
+  word: "away from",
+  ru: "в стороне от",
+  uk: "осторонь від",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The house is away from the road.",
+      ru: "Дом стоит в стороне от дороги.",
+      uk: "Будинок розташований осторонь від дороги."
+    }
+  ]
+},
+{
+  id: 3,
+  word: "minus",
+  ru: "за вычетом",
+  uk: "за вирахуванням",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The price is 100 euros minus the discount.",
+      ru: "Цена составляет 100 евро за вычетом скидки.",
+      uk: "Ціна становить 100 євро за вирахуванням знижки."
+    }
+  ]
+},
+{
+  id: 4,
+  word: "less (after deducting)",
+  ru: "за вычетом",
+  uk: "за вирахуванням",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Less taxes, not much remains.",
+      ru: "За вычетом налогов мало остаётся.",
+      uk: "За вирахуванням податків лишається небагато."
+    }
+  ]
+},
+{
+  id: 5,
+  word: "at",
+  ru: "у",
+  uk: "біля",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "We are meeting at the station.",
+      ru: "Мы встречаемся у вокзала.",
+      uk: "Ми зустрічаємося біля вокзалу."
+    }
+  ]
+},
+{
+  id: 6,
+  word: "in place of",
+  ru: "вместо",
+  uk: "замість",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In place of the boss, the deputy signs.",
+      ru: "Вместо начальника подписывает заместитель.",
+      uk: "Замість шефа підписує заступник."
+    }
+  ]
+},
+{
+  id: 7,
+  word: "in place of (someone)",
+  ru: "вместо",
+  uk: "замість",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He is working in place of his colleague.",
+      ru: "Он работает вместо своего коллеги.",
+      uk: "Він працює замість свого колеги."
+    }
+  ]
+},
+{
+  id: 8,
+  word: "in view of",
+  ru: "ввиду",
+  uk: "з огляду на",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In view of the situation, we have to save money.",
+      ru: "Ввиду ситуации нам нужно экономить.",
+      uk: "З огляду на ситуацію ми мусимо економити."
+    }
+  ]
+},
+{
+  id: 9,
+  word: "on the basis of",
+  ru: "на основании",
+  uk: "на підставі",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I will explain the rule on the basis of this example.",
+      ru: "На основании этого примера я объясню правило.",
+      uk: "На підставі цього прикладу я поясню правило."
+    }
+  ]
+},
+{
+  id: 10,
+  word: "on the occasion of",
+  ru: "по случаю",
+  uk: "з нагоди",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "There will be a party on the occasion of his birthday.",
+      ru: "По случаю его дня рождения будет праздник.",
+      uk: "З нагоди його дня народження буде свято."
+    }
+  ]
+},
+{
+  id: 11,
+  word: "instead of",
+  ru: "вместо",
+  uk: "замість",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Instead of an email, he wrote a letter.",
+      ru: "Вместо электронного письма он написал письмо.",
+      uk: "Замість електронного листа він написав лист."
+    }
+  ]
+},
+{
+  id: 12,
+  word: "on",
+  ru: "на",
+  uk: "на",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The book is on the table.",
+      ru: "Книга лежит на столе.",
+      uk: "Книга лежить на столі."
+    }
+  ]
+},
+{
+  id: 13,
+  word: "because of",
+  ru: "из-за",
+  uk: "через",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Because of the bad weather, we are staying at home.",
+      ru: "Из-за плохой погоды мы остаёмся дома.",
+      uk: "Через погану погоду ми залишаємося вдома."
+    }
+  ]
+},
+{
+  id: 14,
+  word: "from (origin)",
+  ru: "из",
+  uk: "з",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He is from Germany.",
+      ru: "Он из Германии.",
+      uk: "Він з Німеччини."
+    }
+  ]
+},
+{
+  id: 15,
+  word: "excluding",
+  ru: "исключая",
+  uk: "за винятком",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Excluding drinks, everything is included in the price.",
+      ru: "Исключая напитки, всё включено в цену.",
+      uk: "За винятком напоїв, усе включено в ціну."
+    }
+  ]
+},
+{
+  id: 16,
+  word: "except for",
+  ru: "кроме",
+  uk: "крім",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Except for me, nobody was there.",
+      ru: "Кроме меня там никого не было.",
+      uk: "Крім мене там нікого не було."
+    }
+  ]
+},
+{
+  id: 17,
+  word: "outside",
+  ru: "вне",
+  uk: "поза",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "It is quieter outside the city.",
+      ru: "Вне города спокойнее.",
+      uk: "Поза містом спокійніше."
+    }
+  ]
+},
+{
+  id: 18,
+  word: "at (someone's place)",
+  ru: "у",
+  uk: "у",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I live at my parents’ place.",
+      ru: "Я живу у родителей.",
+      uk: "Я живу в батьків."
+    }
+  ]
+},
+{
+  id: 19,
+  word: "on both sides of",
+  ru: "по обе стороны",
+  uk: "по обидва боки",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "There are trees on both sides of the street.",
+      ru: "По обе стороны улицы стоят деревья.",
+      uk: "По обидва боки вулиці стоять дерева."
+    }
+  ]
+},
+{
+  id: 20,
+  word: "regarding",
+  ru: "касательно",
+  uk: "щодо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Regarding your application, we will contact you later.",
+      ru: "Касательно вашего заявления мы свяжемся позже.",
+      uk: "Щодо вашої заяви ми зв’яжемося пізніше."
+    }
+  ]
+},
+{
+  id: 21,
+  word: "concerning",
+  ru: "относительно",
+  uk: "щодо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Concerning the payment, I have a question.",
+      ru: "Относительно оплаты у меня есть вопрос.",
+      uk: "Щодо оплати маю запитання."
+    }
+  ]
+},
+{
+  id: 22,
+  word: "until",
+  ru: "до",
+  uk: "до",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I am staying until tomorrow.",
+      ru: "Я останусь до завтра.",
+      uk: "Я залишуся до завтра."
+    }
+  ]
+},
+{
+  id: 23,
+  word: "against (formal)",
+  ru: "против",
+  uk: "проти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Many voices were against the proposal.",
+      ru: "Многие голоса были против предложения.",
+      uk: "Багато голосів були проти пропозиції."
+    }
+  ]
+},
+{
+  id: 24,
+  word: "thanks to",
+  ru: "благодаря",
+  uk: "завдяки",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Thanks to your help, it was easy.",
+      ru: "Благодаря твоей помощи это было легко.",
+      uk: "Завдяки твоїй допомозі це було легко."
+    }
+  ]
+},
+{
+  id: 25,
+  word: "on this side of",
+  ru: "по эту сторону",
+  uk: "по цей бік",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "On this side of the river, there is a village.",
+      ru: "По эту сторону реки есть деревня.",
+      uk: "По цей бік річки є село."
+    }
+  ]
+},
+{
+  id: 26,
+  word: "through",
+  ru: "через",
+  uk: "через",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "We are walking through the park.",
+      ru: "Мы идём через парк.",
+      uk: "Ми йдемо через парк."
+    }
+  ]
+},
+{
+  id: 27,
+  word: "including",
+  ru: "включая",
+  uk: "включаючи",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Including drinks, it costs 20 euros.",
+      ru: "Включая напитки, это стоит 20 евро.",
+      uk: "Включаючи напої, це коштує 20 євро."
+    }
+  ]
+},
+{
+  id: 28,
+  word: "contrary to",
+  ru: "вопреки",
+  uk: "всупереч",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Contrary to the doctors’ advice, he keeps smoking.",
+      ru: "Вопреки совету врачей он продолжает курить.",
+      uk: "Всупереч пораді лікарів він далі палить."
+    }
+  ]
+},
+{
+  id: 29,
+  word: "along",
+  ru: "вдоль",
+  uk: "вздовж",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "We are walking along the river.",
+      ru: "Мы идём вдоль реки.",
+      uk: "Ми йдемо вздовж річки."
+    }
+  ]
+},
+{
+  id: 30,
+  word: "in accordance with",
+  ru: "соответственно",
+  uk: "відповідно до",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In accordance with the plan, we start at eight.",
+      ru: "Соответственно плану мы начинаем в восемь.",
+      uk: "Відповідно до плану ми починаємо о восьмій."
+    }
+  ]
+},
+{
+  id: 31,
+  word: "excluding (tax)",
+  ru: "за вычетом",
+  uk: "за винятком",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The price is given excluding tax.",
+      ru: "Цена указана без учёта налогов.",
+      uk: "Ціна вказана за винятком податків."
+    }
+  ]
+},
+{
+  id: 32,
+  word: "far from",
+  ru: "вдали от",
+  uk: "далеко від",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Far from the city, it is very quiet.",
+      ru: "Вдали от города очень тихо.",
+      uk: "Далеко від міста дуже тихо."
+    }
+  ]
+},
+{
+  id: 33,
+  word: "for",
+  ru: "для",
+  uk: "для",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The present is for you.",
+      ru: "Этот подарок для тебя.",
+      uk: "Цей подарунок для тебе."
+    }
+  ]
+},
+{
+  id: 34,
+  word: "against",
+  ru: "против",
+  uk: "проти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "We will arrive at about eight o’clock.",
+      ru: "Мы придём около восьми часов.",
+      uk: "Ми прийдемо близько восьмої години."
+    }
+  ]
+},
+{
+  id: 35,
+  word: "opposite",
+  ru: "напротив",
+  uk: "навпроти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The school is opposite the church.",
+      ru: "Школа находится напротив церкви.",
+      uk: "Школа розташована навпроти церкви."
+    }
+  ]
+},
+{
+  id: 36,
+  word: "across from",
+  ru: "напротив",
+  uk: "навпроти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The bank is across from the post office.",
+      ru: "Банк напротив почты.",
+      uk: "Банк навпроти пошти."
+    }
+  ]
+},
+{
+  id: 37,
+  word: "according to",
+  ru: "согласно",
+  uk: "згідно з",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "According to the contract, we pay monthly.",
+      ru: "Согласно договору мы платим ежемесячно.",
+      uk: "Згідно з договором ми платимо щомісяця."
+    }
+  ]
+},
+{
+  id: 38,
+  word: "with respect to",
+  ru: "касательно",
+  uk: "стосовно",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "With respect to quality, there are no problems.",
+      ru: "Касательно качества проблем нет.",
+      uk: "Стосовно якості проблем немає."
+    }
+  ]
+},
+{
+  id: 39,
+  word: "behind",
+  ru: "за",
+  uk: "за",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The garden is behind the house.",
+      ru: "Сад находится за домом.",
+      uk: "Сад розташований позаду будинку."
+    }
+  ]
+},
+{
+  id: 40,
+  word: "in case of",
+  ru: "в случае",
+  uk: "у разі",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In case of an emergency, call 112.",
+      ru: "В случае чрезвычайной ситуации звоните 112.",
+      uk: "У разі надзвичайної ситуації телефонуйте 112."
+    }
+  ]
+},
+{
+  id: 41,
+  word: "with a view to",
+  ru: "ввиду",
+  uk: "з огляду на",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "With a view to the future, we are saving money.",
+      ru: "Ввиду будущего мы копим деньги.",
+      uk: "З огляду на майбутнє ми заощаджуємо гроші."
+    }
+  ]
+},
+{
+  id: 42,
+  word: "in the course of",
+  ru: "в течение",
+  uk: "упродовж",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In the course of the day, I will call you.",
+      ru: "В течение дня я тебе позвоню.",
+      uk: "Упродовж дня я тобі подзвоню."
+    }
+  ]
+},
+{
+  id: 43,
+  word: "within the framework of",
+  ru: "в рамках",
+  uk: "у межах",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Within the framework of the course, we are doing a trip.",
+      ru: "В рамках курса мы делаем экскурсию.",
+      uk: "У межах курсу ми робимо екскурсію."
+    }
+  ]
+},
+{
+  id: 44,
+  word: "in the sense of",
+  ru: "в смысле",
+  uk: "у сенсі",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In the sense of the law, this is forbidden.",
+      ru: "В смысле закона это запрещено.",
+      uk: "У сенсі закону це заборонено."
+    }
+  ]
+},
+{
+  id: 45,
+  word: "in the process of",
+  ru: "в ходе",
+  uk: "в ході",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "In the process of the reform, many things changed.",
+      ru: "В ходе реформы многое изменилось.",
+      uk: "В ході реформи багато змінилося."
+    }
+  ]
+},
+{
+  id: 46,
+  word: "in",
+  ru: "в",
+  uk: "в",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I live in Berlin.",
+      ru: "Я живу в Берлине.",
+      uk: "Я живу в Берліні."
+    }
+  ]
+},
+{
+  id: 47,
+  word: "given",
+  ru: "ввиду",
+  uk: "з огляду на",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Given the circumstances, that is understandable.",
+      ru: "Ввиду обстоятельств это понятно.",
+      uk: "З огляду на обставини це зрозуміло."
+    }
+  ]
+},
+{
+  id: 48,
+  word: "with regard to",
+  ru: "в отношении",
+  uk: "щодо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "With regard to your question, I have an idea.",
+      ru: "Относительно твоего вопроса у меня есть идея.",
+      uk: "Щодо твого запитання маю одну ідею."
+    }
+  ]
+},
+{
+  id: 49,
+  word: "as a result of",
+  ru: "вследствие",
+  uk: "внаслідок",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "As a result of the accident, there were traffic jams.",
+      ru: "Вследствие аварии возникли пробки.",
+      uk: "Внаслідок аварії утворилися затори."
+    }
+  ]
+},
+{
+  id: 50,
+  word: "including",
+  ru: "включая",
+  uk: "включно з",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The price is including breakfast.",
+      ru: "Цена включает завтрак.",
+      uk: "Ціна включає сніданок."
+    }
+  ]
+},
+{
+  id: 51,
+  word: "in the middle of",
+  ru: "посреди",
+  uk: "посеред",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The book is on the table.",
+      ru: "Дом стоит посреди леса.",
+      uk: "Будинок стоїть посеред лісу."
+    }
+  ]
+},
+{
+  id: 52,
+  word: "within",
+  ru: "в пределах",
+  uk: "в межах",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The cat is lying under the table.",
+      ru: "В течение недели ты получишь ответ.",
+      uk: "У межах тижня ти отримаєш відповідь."
+    }
+  ]
+},
+{
+  id: 53,
+  word: "per",
+  ru: "по",
+  uk: "по",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The picture hangs between the windows.",
+      ru: "Билеты стоят 10 евро с человека.",
+      uk: "Квитки коштують 10 євро з особи."
+    }
+  ]
+},
+{
+  id: 54,
+  word: "beyond",
+  ru: "по ту сторону",
+  uk: "по той бік",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "A lamp hangs above the table.",
+      ru: "По ту сторону реки начинается лес.",
+      uk: "По той бік річки починається ліс."
+    }
+  ]
+},
+{
+  id: 55,
+  word: "by virtue of",
+  ru: "в силу",
+  uk: "в силу",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "By virtue of the law, the contract is valid.",
+      ru: "В силу закона договор действителен.",
+      uk: "В силу закону договір чинний."
+    }
+  ]
+},
+{
+  id: 56,
+  word: "by virtue of",
+  ru: "в силу",
+  uk: "в силу",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "By virtue of Article 3, this rule applies.",
+      ru: "В силу статьи 3 действует это правило.",
+      uk: "В силу статті 3 діє це правило."
+    }
+  ]
+},
+{
+  id: 57,
+  word: "according to",
+  ru: "согласно",
+  uk: "згідно з",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "According to the report, everything is fine.",
+      ru: "Согласно отчёту, всё в порядке.",
+      uk: "Згідно зі звітом усе гаразд."
+    }
+  ]
+},
+{
+  id: 58,
+  word: "along",
+  ru: "вдоль",
+  uk: "вздовж",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "We are driving along the coast.",
+      ru: "Мы едем вдоль побережья.",
+      uk: "Ми їдемо вздовж узбережжя."
+    }
+  ]
+},
+{
+  id: 59,
+  word: "for lack of",
+  ru: "за неимением",
+  uk: "через відсутність",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "For lack of evidence, he was acquitted.",
+      ru: "За неимением доказательств его оправдали.",
+      uk: "Через відсутність доказів його виправдали."
+    }
+  ]
+},
+{
+  id: 60,
+  word: "with",
+  ru: "с",
+  uk: "з",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "I am going to the cinema with my friends.",
+      ru: "Я иду в кино с друзьями.",
+      uk: "Я йду з друзями в кіно."
+    }
+  ]
+},
+{
+  id: 61,
+  word: "with the help of",
+  ru: "с помощью",
+  uk: "за допомогою",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "With the help of friends, he found an apartment.",
+      ru: "С помощью друзей он нашёл квартиру.",
+      uk: "За допомогою друзів він знайшов квартиру."
+    }
+  ]
+},
+{
+  id: 62,
+  word: "with the help of",
+  ru: "с помощью",
+  uk: "за допомогою",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "With the help of a dictionary, she translated the text.",
+      ru: "С помощью словаря она перевела текст.",
+      uk: "За допомогою словника вона переклала текст."
+    }
+  ]
+},
+{
+  id: 63,
+  word: "by means of",
+  ru: "посредством",
+  uk: "за допомогою",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "In the middle of the night, the phone rang.",
+      ru: "Посредством теста это было проверено.",
+      uk: "За допомогою тесту це було перевірено."
+    }
+  ]
+},
+{
+  id: 64,
+  word: "in the middle of",
+  ru: "посреди",
+  uk: "посеред",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "After eating, we go for a walk.",
+      ru: "Посреди ночи зазвонил телефон.",
+      uk: "Посеред ночі задзвонив телефон."
+    }
+  ]
+},
+{
+  id: 65,
+  word: "after",
+  ru: "после",
+  uk: "після",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "She lives near the school.",
+      ru: "После еды мы идём гулять.",
+      uk: "Після їжі ми йдемо гуляти."
+    }
+  ]
+},
+{
+  id: 66,
+  word: "near",
+  ru: "рядом с",
+  uk: "поруч із",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The chair is next to the table.",
+      ru: "Она живёт рядом со школой.",
+      uk: "Вона живе поруч із школою."
+    }
+  ]
+},
+{
+  id: 67,
+  word: "next to",
+  ru: "рядом с",
+  uk: "поруч з",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The rent, together with the utilities, is high.",
+      ru: "Стул стоит рядом со столом.",
+      uk: "Стілець стоїть поруч зі столом."
+    }
+  ]
+},
+{
+  id: 68,
+  word: "together with",
+  ru: "вместе с",
+  uk: "разом із",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Above the village, there is a castle.",
+      ru: "Аренда вместе с коммунальными высока.",
+      uk: "Оренда разом із комунальними висока."
+    }
+  ]
+},
+{
+  id: 69,
+  word: "above",
+  ru: "выше",
+  uk: "вище",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "I drink coffee without sugar.",
+      ru: "Выше деревни находится замок.",
+      uk: "Вище села розташований замок."
+    }
+  ]
+},
+{
+  id: 70,
+  word: "without",
+  ru: "без",
+  uk: "без",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "He acts without regard for the consequences.",
+      ru: "Я пью кофе без сахара.",
+      uk: "Я п’ю каву без цукру."
+    }
+  ]
+},
+{
+  id: 71,
+  word: "regardless of",
+  ru: "невзирая на",
+  uk: "незважаючи на",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Send it to me by email.",
+      ru: "Он действует, не считаясь с последствиями.",
+      uk: "Він діє, не зважаючи на наслідки."
+    }
+  ]
+},
+{
+  id: 72,
+  word: "by",
+  ru: "по",
+  uk: "по",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "It costs 5 euros per hour.",
+      ru: "Пошлите мне это по электронной почте.",
+      uk: "Надішліть мені це по e-mail."
+    }
+  ]
+},
+{
+  id: 73,
+  word: "per",
+  ru: "в",
+  uk: "на",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "We ran across the park.",
+      ru: "Это стоит 5 евро в час.",
+      uk: "Це коштує 5 євро за годину."
+    }
+  ]
+},
+{
+  id: 74,
+  word: "across",
+  ru: "поперек",
+  uk: "упоперек",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "He came with his family.",
+      ru: "Мы бежали поперёк парка.",
+      uk: "Ми бігли навскрізь через парк."
+    }
+  ]
+},
+{
+  id: 75,
+  word: "together with",
+  ru: "вместе с",
+  uk: "разом із",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "I have been learning German for a year.",
+      ru: "Он пришёл вместе с семьёй.",
+      uk: "Він прийшов разом із сім’єю."
+    }
+  ]
+},
+{
+  id: 76,
+  word: "since",
+  ru: "с",
+  uk: "від",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "There was criticism from the teachers.",
+      ru: "Я учу немецкий уже год.",
+      uk: "Я вчу німецьку вже рік."
+    }
+  ]
+},
+{
+  id: 77,
+  word: "on the part of",
+  ru: "со стороны",
+  uk: "з боку",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "There was agreement on the part of the government.",
+      ru: "Была критика со стороны учителей.",
+      uk: "Була критика з боку вчителів."
+    }
+  ]
+},
+{
+  id: 78,
+  word: "on the part of",
+  ru: "со стороны",
+  uk: "з боку",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Instead of a car, he bought a bicycle.",
+      ru: "Со стороны правительства было согласие.",
+      uk: "З боку уряду була згода."
+    }
+  ]
+},
+{
+  id: 79,
+  word: "instead of",
+  ru: "вместо",
+  uk: "замість",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Despite the rain, we are going for a walk.",
+      ru: "Вместо машины он купил велосипед.",
+      uk: "Замість авто він купив велосипед."
+    }
+  ]
+},
+{
+  id: 80,
+  word: "despite",
+  ru: "несмотря на",
+  uk: "попри",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "We are meeting at eight o'clock.",
+      ru: "Несмотря на дождь, мы идём гулять.",
+      uk: "Попри дощ ми йдемо гуляти."
+    }
+  ]
+},
+{
+  id: 81,
+  word: "at",
+  ru: "вокруг",
+  uk: "навколо",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "This rule applies without prejudice to the rights of third parties.",
+      ru: "Мы встречаемся в восемь часов.",
+      uk: "Ми зустрічаємося о восьмій годині."
+    }
+  ]
+},
+{
+  id: 82,
+  word: "without prejudice to",
+  ru: "без ущерба для",
+  uk: "без шкоди для",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Not far from the station, there is a hotel.",
+      ru: "Без ущерба правам третьих лиц действует это правило.",
+      uk: "Без шкоди правам третіх осіб ця норма діє."
+    }
+  ]
+},
+{
+  id: 83,
+  word: "not far from",
+  ru: "недалеко от",
+  uk: "неподалік від",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Despite the criticism, he continued.",
+      ru: "Недалеко от вокзала находится отель.",
+      uk: "Неподалік від вокзалу є готель."
+    }
+  ]
+},
+{
+  id: 84,
+  word: "notwithstanding",
+  ru: "несмотря на",
+  uk: "незважаючи на",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The cat is sitting under the table.",
+      ru: "Несмотря на критику, он продолжал.",
+      uk: "Незважаючи на критику, він продовжував."
+    }
+  ]
+},
+{
+  id: 85,
+  word: "under",
+  ru: "под",
+  uk: "під",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The river flows under the bridge.",
+      ru: "Кошка сидит под столом.",
+      uk: "Кіт сидить під столом."
+    }
+  ]
+},
+{
+  id: 86,
+  word: "below",
+  ru: "ниже",
+  uk: "нижче",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Not far from the centre, there is a park.",
+      ru: "Под мостом течёт река.",
+      uk: "Під мостом тече річка."
+    }
+  ]
+},
+{
+  id: 87,
+  word: "not far from",
+  ru: "недалеко от",
+  uk: "неподалік від",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Not far from the centre, there is a park.",
+      ru: "Недалеко от центра есть парк.",
+      uk: "Неподалік від центру є парк."
+    }
+  ]
+},
+{
+  id: 88,
+  word: "not far from",
+  ru: "недалеко от",
+  uk: "неподалік від",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The school is located not far from the church.",
+      ru: "Школа находится недалеко от церкви.",
+      uk: "Школа розташована неподалік від церкви."
+    }
+  ]
+},
+{
+  id: 89,
+  word: "via",
+  ru: "через",
+  uk: "через",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "We are flying to Rome via Zurich.",
+      ru: "Мы летим в Рим через Цюрих.",
+      uk: "Ми летимо до Рима через Цюрих."
+    }
+  ]
+},
+{
+  id: 90,
+  word: "from",
+  ru: "от",
+  uk: "від",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "This is a present from my mother.",
+      ru: "Это подарок от моей мамы.",
+      uk: "Це подарунок від моєї мами."
+    }
+  ]
+},
+{
+  id: 91,
+  word: "in front of",
+  ru: "перед",
+  uk: "перед",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "This is a present from my mother.",
+      ru: "Перед домом стоит дерево.",
+      uk: "Перед будинком стоїть дерево."
+    }
+  ]
+},
+{
+  id: 92,
+  word: "because of",
+  ru: "из-за",
+  uk: "через",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "There is a tree in front of the house.",
+      ru: "Из-за шторма школы остаются закрыты.",
+      uk: "Через шторм школи залишаються зачиненими."
+    }
+  ]
+},
+{
+  id: 93,
+  word: "against",
+  ru: "против",
+  uk: "всупереч",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The table is between the chairs.",
+      ru: "Против своей воли он был вынужден остаться.",
+      uk: "Всупереч своїй волі він мусив залишитися."
+    }
+  ]
+},
+{
+  id: 94,
+  word: "during",
+  ru: "во время",
+  uk: "під час",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "During the holiday, he read a lot.",
+      ru: "Во время отпуска он много читал.",
+      uk: "Під час відпустки він багато читав."
+    }
+  ]
+},
+{
+  id: 95,
+  word: "to",
+  ru: "к",
+  uk: "до",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "I am going to my friend.",
+      ru: "Я иду к своей подруге.",
+      uk: "Я йду до своєї подруги."
+    }
+  ]
+},
+{
+  id: 96,
+  word: "according to",
+  ru: "согласно",
+  uk: "згідно з",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "According to the reports, everything is stable.",
+      ru: "Согласно сообщениям, всё стабильно.",
+      uk: "Згідно з повідомленнями, все стабільно."
+    }
+  ]
+},
+{
+  id: 97,
+  word: "in favour of",
+  ru: "в пользу",
+  uk: "на користь",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "They donated money for the benefit of the children.",
+      ru: "Они пожертвовали деньги в пользу детей.",
+      uk: "Вони пожертвували гроші на користь дітей."
+    }
+  ]
+},
+{
+  id: 98,
+  word: "at the expense of",
+  ru: "в ущерб",
+  uk: "на шкоду",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The costs are to the detriment of the company.",
+      ru: "Расходы идут в ущерб компании.",
+      uk: "Витрати йдуть на шкоду компанії."
+    }
+  ]
+},
+{
+  id: 99,
+  word: "contrary to",
+  ru: "вопреки",
+  uk: "всупереч",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "Contrary to the rules, he acted on his own.",
+      ru: "Вопреки правилам он действовал самовольно.",
+      uk: "Всупереч правилам він діяв самовільно."
+    }
+  ]
+},
+{
+  id: 100,
+  word: "in addition to",
+  ru: "плюс",
+  uk: "додатково",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The price is 50 euros plus VAT.",
+      ru: "Цена составляет 50 евро плюс НДС.",
+      uk: "Ціна становить 50 євро плюс ПДВ."
+    }
+  ]
+},
+{
+  id: 101,
+  word: "in addition to",
+  ru: "с прибавлением",
+  uk: "з додаванням",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "With the added fees, it becomes more expensive.",
+      ru: "С прибавлением сборов это становится дороже.",
+      uk: "З додаванням зборів це стає дорожче."
+    }
+  ]
+},
+{
+  id: 102,
+  word: "for the purpose of",
+  ru: "с целью",
+  uk: "з метою",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "In order to clarify the matter, we will call there.",
+      ru: "С целью прояснить вопрос мы туда позвоним.",
+      uk: "З метою з’ясувати питання ми туди зателефонуємо."
+    }
+  ]
+},
+{
+  id: 103,
+  word: "between",
+  ru: "между",
+  uk: "між",
+  level: "",
+  topics: [],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "The table is between the chairs.",
+      ru: "Стол стоит между стульями.",
+      uk: "Стіл стоїть між стільцями."
+    }
+  ]
+},
+{
+  id: 104,
+  word: "about",
+  ru: "о, об",
+  uk: "про",
+  level: "A2",
+  topics: ["prepositions", "topic"],
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  examples: [
+    {
+      en: "We talked about the problem.",
+      ru: "Мы говорили о проблеме.",
+      uk: "Ми говорили про проблему."
+    }
+  ]
+}
+];
+window.decks.en_conjunctions = [
+{
+  id: 1,
+  word: "but",
+  ru: "но",
+  uk: "але",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I'm tired, but I'm happy.",
+      ru: "Я устал, но я счастлив.",
+      uk: "Я втомився, але я щасливий."
+    }
+  ]
+},
+{
+  id: 2,
+  word: "so",
+  ru: "итак",
+  uk: "отже",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "It's late, so I'm going home.",
+      ru: "Поздно, так что я иду домой.",
+      uk: "Пізно, тож я йду додому."
+    }
+  ]
+},
+{
+  id: 3,
+  word: "before",
+  ru: "прежде чем",
+  uk: "перш ніж",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Wash your hands before you eat.",
+      ru: "Помой руки, прежде чем есть.",
+      uk: "Вимий руки, перш ніж їсти."
+    }
+  ]
+},
+{
+  id: 4,
+  word: "so that",
+  ru: "чтобы",
+  uk: "щоб",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I'm learning German so that I can work in Germany.",
+      ru: "Я учу немецкий, чтобы я мог работать в Германии.",
+      uk: "Я вчу німецьку, щоб я міг працювати в Німеччині."
+    }
+  ]
+},
+{
+  id: 5,
+  word: "that",
+  ru: "что",
+  uk: "що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I think that he is right.",
+      ru: "Я думаю, что он прав.",
+      uk: "Я думаю, що він має рацію."
+    }
+  ]
+},
+{
+  id: 6,
+  word: "because",
+  ru: "потому что",
+  uk: "бо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I'm going home because I'm tired.",
+      ru: "Я иду домой, потому что устал.",
+      uk: "Я йду додому, бо втомився."
+    }
+  ]
+},
+{
+  id: 7,
+  word: "therefore",
+  ru: "поэтому",
+  uk: "тому",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "It is raining; therefore I am staying at home.",
+      ru: "Идёт дождь, поэтому я остаюсь дома.",
+      uk: "Іде дощ, тому я залишаюся вдома."
+    }
+  ]
+},
+{
+  id: 8,
+  word: "however",
+  ru: "однако",
+  uk: "проте",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "It was cold, however we went for a walk.",
+      ru: "Было холодно, однако мы пошли гулять.",
+      uk: "Було холодно, проте ми пішли гуляти."
+    }
+  ]
+},
+{
+  id: 9,
+  word: "in case",
+  ru: "если",
+  uk: "якщо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Call me in case you have any questions.",
+      ru: "Позвони мне, если у тебя будут вопросы.",
+      uk: "Подзвони мені, якщо матимеш запитання."
+    }
+  ]
+},
+{
+  id: 10,
+  word: "by",
+  ru: "тем что",
+  uk: "тим що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He improves his German by reading a lot.",
+      ru: "Он улучшает свой немецкий тем, что много читает.",
+      uk: "Він покращує німецьку тим, що багато читає."
+    }
+  ]
+},
+{
+  id: 11,
+  word: "insofar",
+  ru: "настолько",
+  uk: "настільки",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Insofar as I know, he is coming tomorrow.",
+      ru: "Насколько мне известно, он придёт завтра.",
+      uk: "Наскільки мені відомо, він прийде завтра."
+    }
+  ]
+},
+{
+  id: 12,
+  word: "the ... the ...",
+  ru: "чем … тем",
+  uk: "чим … тим",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "The more you practise, the better you get.",
+      ru: "Чем больше ты тренируешься, тем лучше ты становишься.",
+      uk: "Чим більше ти тренуєшся, тим кращим ти стаєш."
+    }
+  ]
+},
+{
+  id: 13,
+  word: "after",
+  ru: "после того как",
+  uk: "після того як",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "After we ate, we went for a walk.",
+      ru: "После того как мы поели, мы пошли гулять.",
+      uk: "Після того як ми поїли, ми пішли гуляти."
+    }
+  ]
+},
+{
+  id: 14,
+  word: "although",
+  ru: "хотя",
+  uk: "хоча",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Although it was raining, the children played outside.",
+      ru: "Хотя шёл дождь, дети играли на улице.",
+      uk: "Хоча йшов дощ, діти грали надворі."
+    }
+  ]
+},
+{
+  id: 15,
+  word: "even though",
+  ru: "хотя",
+  uk: "хоча",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Even though he was tired, he kept working.",
+      ru: "Хотя он был уставшим, он продолжал работать.",
+      uk: "Хоча він був втомлений, він продовжував працювати."
+    }
+  ]
+},
+{
+  id: 16,
+  word: "although, even though",
+  ru: "хотя",
+  uk: "хоча",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Although it is cold, she is not wearing a jacket.",
+      ru: "Хотя холодно, она не надевает куртку.",
+      uk: "Хоча холодно, вона не вдягає куртку."
+    }
+  ]
+},
+{
+  id: 17,
+  word: "or",
+  ru: "или",
+  uk: "або",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Do you want tea or coffee?",
+      ru: "Ты хочешь чай или кофе?",
+      uk: "Хочеш чай або каву?"
+    }
+  ]
+},
+{
+  id: 18,
+  word: "as soon as",
+  ru: "как только",
+  uk: "як тільки",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "As soon as I have time, I will call you.",
+      ru: "Как только у меня будет время, я тебе позвоню.",
+      uk: "Як тільки в мене буде час, я тобі подзвоню."
+    }
+  ]
+},
+{
+  id: 19,
+  word: "so ... that",
+  ru: "так что",
+  uk: "так що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "It was so loud that I couldn't sleep.",
+      ru: "Было так шумно, что я не мог спать.",
+      uk: "Було так голосно, що я не міг спати."
+    }
+  ]
+},
+{
+  id: 20,
+  word: "provided that",
+  ru: "если только",
+  uk: "якщо тільки",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "We will go to the sea provided that the weather is good.",
+      ru: "Мы поедем к морю, если только погода будет хорошей.",
+      uk: "Ми поїдемо до моря, якщо тільки погода буде доброю."
+    }
+  ]
+},
+{
+  id: 21,
+  word: "but rather",
+  ru: "а",
+  uk: "а",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He doesn't drink coffee but rather tea.",
+      ru: "Он пьёт не кофе, а чай.",
+      uk: "Він п’є не каву, а чай."
+    }
+  ]
+},
+{
+  id: 22,
+  word: "as far as",
+  ru: "поскольку",
+  uk: "насколько",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "As far as I know, he is coming tomorrow.",
+      ru: "Насколько я знаю, он придёт завтра.",
+      uk: "Наскільки я знаю, він прийде завтра."
+    }
+  ]
+},
+{
+  id: 23,
+  word: "as well as",
+  ru: "а также",
+  uk: "а також",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He speaks German as well as English.",
+      ru: "Он говорит по-немецки, а также по-английски.",
+      uk: "Він говорить німецькою, а також англійською."
+    }
+  ]
+},
+{
+  id: 24,
+  word: "and",
+  ru: "и",
+  uk: "і",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I’m buying bread and milk.",
+      ru: "Я покупаю хлеб и молоко.",
+      uk: "Я купую хліб і молоко."
+    }
+  ]
+},
+{
+  id: 25,
+  word: "because",
+  ru: "потому что",
+  uk: "тому що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I'm staying at home because I'm ill.",
+      ru: "Я остаюсь дома, потому что я болен.",
+      uk: "Я залишаюся вдома, тому що я хворий."
+    }
+  ]
+},
+{
+  id: 26,
+  word: "if",
+  ru: "если",
+  uk: "якщо",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "If I have time, I read.",
+      ru: "Если у меня есть время, я читаю.",
+      uk: "Якщо в мене є час, я читаю."
+    }
+  ]
+},
+{
+  id: 27,
+  word: "why",
+  ru: "почему",
+  uk: "чому",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I don't know why he isn't coming.",
+      ru: "Я не знаю, почему он не приходит.",
+      uk: "Я не знаю, чому він не приходить."
+    }
+  ]
+},
+{
+  id: 28,
+  word: "why",
+  ru: "из-за чего",
+  uk: "через що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "Tell me why you are sad.",
+      ru: "Скажи мне, из-за чего ты грустишь.",
+      uk: "Скажи мені, через що ти сумуєш."
+    }
+  ]
+},
+{
+  id: 29,
+  word: "while",
+  ru: "при этом",
+  uk: "при цьому",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He is strict, while he is also very fair.",
+      ru: "Он строгий, при этом он очень справедлив.",
+      uk: "Він суворий, при цьому дуже справедливий."
+    }
+  ]
+},
+{
+  id: 30,
+  word: "whereas",
+  ru: "тогда как",
+  uk: "тоді як",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He loves sport, whereas she prefers reading.",
+      ru: "Он любит спорт, тогда как она предпочитает читать.",
+      uk: "Він любить спорт, тоді як вона більше любить читати."
+    }
+  ]
+},
+{
+  id: 31,
+  word: "while",
+  ru: "в то время как",
+  uk: "в той час як",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "While I am cooking, he is listening to music.",
+      ru: "Пока я готовлю, он слушает музыку.",
+      uk: "Поки я готую, він слухає музику."
+    }
+  ]
+},
+{
+  id: 32,
+  word: "with the aim that",
+  ru: "с той целью чтобы",
+  uk: "з тією метою щоб",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "He speaks slowly with the aim that everyone understands.",
+      ru: "Он говорит медленно с той целью, чтобы все поняли.",
+      uk: "Він говорить повільно з тією метою, щоб усі зрозуміли."
+    }
+  ]
+},
+{
+  id: 33,
+  word: "especially as",
+  ru: "тем более что",
+  uk: "тим більше що",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  examples: [
+    {
+      L2: "I'll stay at home, especially as it is raining.",
+      ru: "Я останусь дома, тем более что идёт дождь.",
+      uk: "Я залишуся вдома, тим більше що йде дощ."
+    }
+  ]
+}
+
+];
+window.decks.en_particles = [
+{
+  id: 1,
+  word: "only",
+  ru: "только",
+  uk: "лише",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "emphasis",
+  register: "colloquial",
+  position: "afterImperativeVerb",
+  intonation: "обычно ударное, тон напряжённый при предупреждении",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Only don’t be late again, okay?",
+      ru: "Только больше не опаздывай, ладно?",
+      uk: "Лише більше не запізнюйся, гаразд?"
+    }
+  ]
+},
+{
+  id: 2,
+  word: "then",
+  ru: "же",
+  uk: "же",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "softening",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "мягкое, часто растянутое произнесение в середине вопроса",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "What are you doing here then?",
+      ru: "И что же ты здесь делаешь?",
+      uk: "А що ж ти тут робиш?"
+    }
+  ]
+},
+{
+  id: 3,
+  word: "though",
+  ru: "же",
+  uk: "ж",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "emphasis",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "часто ударное, с подъёмом тона при уговоре или возражении",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "It is strange, though, that he didn’t call.",
+      ru: "Странно, однако, что он не позвонил.",
+      uk: "Дивно, однак, що він не подзвонив."
+    }
+  ]
+},
+{
+  id: 4,
+  word: "exactly",
+  ru: "именно",
+  uk: "саме",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "resignation",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "скорее спокойное, слегка подчёркнутое при согласии",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "That’s exactly how it is.",
+      ru: "Именно так оно и есть.",
+      uk: "Саме так воно й є."
+    }
+  ]
+},
+{
+  id: 5,
+  word: "actually",
+  ru: "вообще-то",
+  uk: "власне",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "softening",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "мягкое, без сильного ударения, делает фразу менее прямой",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "What’s your name, actually?",
+      ru: "Как тебя вообще-то зовут?",
+      uk: "Як тебе, власне, звати?"
+    }
+  ]
+},
+{
+  id: 6,
+  word: "simply",
+  ru: "просто",
+  uk: "просто",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "resignation",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "спокойное, часто сокращённое, без сильного ударения",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "We simply can’t change it now.",
+      ru: "Мы просто уже не можем это изменить.",
+      uk: "Ми просто вже не можемо цього змінити."
+    }
+  ]
+},
+{
+  id: 7,
+  word: "indeed",
+  ru: "же",
+  uk: "же",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "emphasis",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "часто ударное при упрёке или напоминании",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "You do indeed know that.",
+      ru: "Ты же это знаешь.",
+      uk: "Ти ж це знаєш."
+    }
+  ]
+},
+{
+  id: 8,
+  word: "just",
+  ru: "разок",
+  uk: "якось",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "softening",
+  register: "colloquial",
+  position: "afterImperativeVerb",
+  intonation: "короткое, без сильного ударения, делает просьбу дружелюбной",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Just come over here for a second!",
+      ru: "Подойди-ка сюда на минутку!",
+      uk: "Підійди-но сюди на хвилинку!"
+    }
+  ]
+},
+{
+  id: 9,
+  word: "well",
+  ru: "ну",
+  uk: "ну",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "discourseMarker",
+  register: "neutral",
+  position: "sentenceInitial",
+  intonation: "часто с паузой после «well», как вступительное слово",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Well, what do you think about it?",
+      ru: "Ну, что ты об этом думаешь?",
+      uk: "Ну, що ти про це думаєш?"
+    }
+  ]
+},
+{
+  id: 10,
+  word: "feel free to",
+  ru: "смело",
+  uk: "сміливо",
+  level: "",
+  topics: ["particles", "communication"],
+
+  function: "encouragement",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "спокойное, с успокаивающим тоном",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "You can feel free to ask me anything.",
+      ru: "Ты можешь смело спросить у меня что угодно.",
+      uk: "Ти можеш сміливо запитати в мене що завгодно."
+    }
+  ]
+},
+{
+  id: 11,
+  word: "already",
+  ru: "уже",
+  uk: "вже",
+  level: "",
+  topics: ["particles", "time", "communication"],
+
+  function: "reassurance",
+  register: "colloquial",
+  position: "midfield",
+  intonation: "мягкое, с успокаивающим тоном, без резкого ударения",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "She is already feeling better.",
+      ru: "Ей уже становится лучше.",
+      uk: "Їй уже стає краще."
+    }
+  ]
+},
+{
+  id: 12,
+  word: "probably",
+  ru: "пожалуй",
+  uk: "мабуть",
+  level: "",
+  topics: ["particles", "abstract", "communication"],
+
+  function: "uncertainty",
+  register: "neutral",
+  position: "midfield",
+  intonation: "часто не очень ударное, с сомневающимся оттенком",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "He will probably arrive later.",
+      ru: "Он, пожалуй, приедет позже.",
+      uk: "Він, мабуть, приїде пізніше."
+    }
+  ]
+}
+
+];
+window.decks.en_pronouns = [
+{
+  id: 1,
+  word: "all",
+  ru: "все",
+  uk: "всі",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "склоняется по падежам во множественном числе; часто как подлежащее или определение к существительному во множественном числе",
+  function: "обозначает всю группу людей или предметов целиком, без исключений",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "All students must wear a name badge.",
+      ru: "Все студенты должны носить бейдж с именем.",
+      uk: "Усі студенти мають носити бейдж з ім’ям."
+    }
+  ]
+},
+{
+  id: 2,
+  word: "your",
+  ru: "твой",
+  uk: "твій",
+  level: "",
+  topics: [],
+
+  pronounType: "possessive",
+  person: 2,
+  number: "singular",
+  gender: "all",
+  caseUsage: "склоняется как притяжательное прилагательное; согласуется по роду, числу и падежу с существительным",
+  function: "обозначает принадлежность предмета адресату (2-е лицо ед. числа)",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Is this your phone on the table?",
+      ru: "Это твой телефон на столе?",
+      uk: "Це твій телефон на столі?"
+    }
+  ]
+},
+{
+  id: 3,
+  word: "whose",
+  ru: "чья",
+  uk: "чия",
+  level: "",
+  topics: [],
+
+  pronounType: "relative",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "форма, выражающая принадлежность; используется в относительных придаточных",
+  function: "связывает главное и придаточное предложение, выражая принадлежность группы или лица",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Those are the children whose mother is a teacher.",
+      ru: "Это дети, чья мать — учительница.",
+      uk: "Це діти, чия мама — вчителька."
+    }
+  ]
+},
+{
+  id: 4,
+  word: "the one who",
+  ru: "тот, кто",
+  uk: "той, хто",
+  level: "",
+  topics: [],
+
+  pronounType: "demonstrative",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "употребляется с придаточным предложением, которое уточняет лицо или предмет",
+  function: "указывает на конкретное лицо или предмет, который уточняется придаточным предложением",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "The one who finishes first can leave early.",
+      ru: "Тот, кто закончит первым, может уйти раньше.",
+      uk: "Той, хто закінчить першим, може піти раніше."
+    }
+  ]
+},
+{
+  id: 5,
+  word: "the same",
+  ru: "тот же самый",
+  uk: "той самий",
+  level: "",
+  topics: [],
+
+  pronounType: "demonstrative",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "часто употребляется с существительным; выражает полное тождество",
+  function: "указывает на полное тождество лица или предмета",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "We had the same idea yesterday.",
+      ru: "Вчера у нас была одна и та же идея.",
+      uk: "Учора в нас була та сама ідея."
+    }
+  ]
+},
+{
+  id: 6,
+  word: "whose",
+  ru: "чей",
+  uk: "чий",
+  level: "",
+  topics: [],
+
+  pronounType: "relative",
+  person: null,
+  number: "singular",
+  gender: "masculine",
+  caseUsage: "форма, выражающая принадлежность; относится к существительному в главном предложении",
+  function: "выражает принадлежность лица или предмета в придаточном предложении",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "The man whose car was stolen is talking to the police.",
+      ru: "Мужчина, чей автомобиль украли, разговаривает с полицией.",
+      uk: "Чоловік, чию машину вкрали, розмовляє з поліцією."
+    }
+  ]
+},
+{
+  id: 7,
+  word: "this",
+  ru: "этот",
+  uk: "цей",
+  level: "",
+  topics: [],
+
+  pronounType: "demonstrative",
+  person: null,
+  number: "both",
+  gender: "masculine",
+  caseUsage: "указывает на предмет, близкий в пространстве или контексте",
+  function: "указывает на конкретный предмет или человека, находящегося близко",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "This chair is free.",
+      ru: "Этот стул свободен.",
+      uk: "Цей стілець вільний."
+    }
+  ]
+},
+{
+  id: 8,
+  word: "you",
+  ru: "ты",
+  uk: "ти",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 2,
+  number: "singular",
+  gender: "all",
+  caseUsage: "личное местоимение во всех падежах; неформальное обращение к одному человеку",
+  function: "обозначает собеседника в неформальном общении",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "You look very tired today.",
+      ru: "Ты сегодня выглядишь очень усталым.",
+      uk: "Ти сьогодні виглядаєш дуже втомленим."
+    }
+  ]
+},
+{
+  id: 9,
+  word: "each other",
+  ru: "друг друга",
+  uk: "один одного",
+  level: "",
+  topics: [],
+
+  pronounType: "reciprocal",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "используется как дополнение; обозначает взаимное действие",
+  function: "обозначает взаимное действие между несколькими лицами",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "They support each other in difficult times.",
+      ru: "Они поддерживают друг друга в трудные времена.",
+      uk: "Вони підтримують один одного у важкі часи."
+    }
+  ]
+},
+{
+  id: 10,
+  word: "he",
+  ru: "он",
+  uk: "він",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 3,
+  number: "singular",
+  gender: "masculine",
+  caseUsage: "личное местоимение мужского рода во всех падежах",
+  function: "обозначает мужчину или предмет мужского рода",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "He is not working today.",
+      ru: "Он сегодня не работает.",
+      uk: "Він сьогодні не працює."
+    }
+  ]
+},
+{
+  id: 11,
+  word: "it",
+  ru: "оно",
+  uk: "воно",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 3,
+  number: "singular",
+  gender: "neuter",
+  caseUsage: "часто формальное подлежащее в безличных конструкциях",
+  function: "обозначает предмет среднего рода или используется как формальное подлежащее",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "It is raining outside.",
+      ru: "На улице идёт дождь.",
+      uk: "Надворі йде дощ."
+    }
+  ]
+},
+{
+  id: 12,
+  word: "quite a few",
+  ru: "некоторые",
+  uk: "деякі",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "используется в основном перед существительными во множественном числе",
+  function: "обозначает довольно большое, но неопределённое количество",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Quite a few people arrived late.",
+      ru: "Достаточно много людей пришли поздно.",
+      uk: "Чимало людей прийшли пізно."
+    }
+  ]
+},
+{
+  id: 13,
+  word: "your (plural, informal)",
+  ru: "ваш",
+  uk: "ваш",
+  level: "",
+  topics: [],
+
+  pronounType: "possessive",
+  person: 2,
+  number: "plural",
+  gender: "all",
+  caseUsage: "притяжательное местоимение для группы адресатов; согласуется с существительным",
+  function: "обозначает принадлежность группе адресатов (2-е лицо мн. числа)",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Is this your house, or your parents’?",
+      ru: "Это ваш дом или дом ваших родителей?",
+      uk: "Це ваш будинок чи будинок ваших батьків?"
+    }
+  ]
+},
+{
+  id: 14,
+  word: "I",
+  ru: "я",
+  uk: "я",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 1,
+  number: "singular",
+  gender: "all",
+  caseUsage: "личное местоимение 1-го лица ед. числа во всех падежах",
+  function: "обозначает говорящего",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "I come from Germany.",
+      ru: "Я из Германии.",
+      uk: "Я з Німеччини."
+    }
+  ]
+},
+{
+  id: 15,
+  word: "you (plural)",
+  ru: "вы",
+  uk: "ви",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 2,
+  number: "plural",
+  gender: "all",
+  caseUsage: "личное местоимение 2-го лица мн. числа",
+  function: "обозначает группу собеседников",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "You are very quiet today.",
+      ru: "Вы сегодня очень тихие.",
+      uk: "Ви сьогодні дуже тихі."
+    }
+  ]
+},
+{
+  id: 16,
+  word: "any",
+  ru: "любой",
+  uk: "будь-який",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "употребляется с существительными и самостоятельно; часто в отрицаниях и вопросах",
+  function: "подчеркивает, что нет исключений: всякий, любой",
+  register: "formal",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Any contact with the device is forbidden.",
+      ru: "Любой контакт с устройством запрещён.",
+      uk: "Будь-який контакт із пристроєм заборонений."
+    }
+  ]
+},
+{
+  id: 17,
+  word: "someone",
+  ru: "кто-то",
+  uk: "хтось",
+  level: "",
+  topics: [],
+
+  pronounType: "indefinite",
+  person: 3,
+  number: "singular",
+  gender: "all",
+  caseUsage: "неопределённое местоимение; употребляется как подлежащее или дополнение",
+  function: "обозначает неопределённое лицо: кто-то",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Someone is knocking at the door.",
+      ru: "Кто-то стучит в дверь.",
+      uk: "Хтось стукає в двері."
+    }
+  ]
+},
+{
+  id: 18,
+  word: "that (formal)",
+  ru: "тот",
+  uk: "той",
+  level: "",
+  topics: [],
+
+  pronounType: "demonstrative",
+  person: null,
+  number: "both",
+  gender: "masculine",
+  caseUsage: "указывает на отдалённый по времени или контексту объект",
+  function: "указывает на отдалённое во времени или контексте лицо/предмет",
+  register: "formal",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "That day was really special for us.",
+      ru: "Тот день был действительно особенным для нас.",
+      uk: "Той день був справді особливим для нас."
+    }
+  ]
+},
+{
+  id: 19,
+  word: "no … at all",
+  ru: "никакой",
+  uk: "ніякий",
+  level: "",
+  topics: [],
+
+  pronounType: "negative",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "часто используется с существительными или абстрактными понятиями",
+  function: "подчеркивает полное отсутствие чего-либо",
+  register: "formal",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "He shows no interest at all in sports.",
+      ru: "Он не проявляет никакого интереса к спорту.",
+      uk: "Він не виявляє жодного інтересу до спорту."
+    }
+  ]
+},
+{
+  id: 20,
+  word: "one",
+  ru: "кто-то",
+  uk: "хтось",
+  level: "",
+  topics: [],
+
+  pronounType: "indefinite-personal",
+  person: 3,
+  number: "singular",
+  gender: "all",
+  caseUsage: "употребляется как безличное подлежащее; глагол в 3-м лице ед. числа",
+  function: "обозначает людей вообще, неопределённого субъекта действия",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "In this city, one must register their address.",
+      ru: "В этом городе нужно регистрировать свой адрес.",
+      uk: "У цьому місті потрібно реєструвати свою адресу."
+    }
+  ]
+},
+{
+  id: 21,
+  word: "some",
+  ru: "некоторый",
+  uk: "деякий",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "может стоять самостоятельно или перед существительным",
+  function: "обозначает не одного, а несколько лиц/предметов: некоторые, многие",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Some students have trouble with math.",
+      ru: "У некоторых студентов проблемы с математикой.",
+      uk: "Деякі студенти мають проблеми з математикою."
+    }
+  ]
+},
+{
+  id: 22,
+  word: "several",
+  ru: "несколько",
+  uk: "кілька",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "используется только во множественном числе",
+  function: "обозначает количество больше двух, но неопределённое",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Several friends are coming over tonight.",
+      ru: "Сегодня вечером придут несколько друзей.",
+      uk: "Сьогодні ввечері прийдуть кілька друзів."
+    }
+  ]
+},
+{
+  id: 23,
+  word: "my",
+  ru: "мой",
+  uk: "мій",
+  level: "",
+  topics: [],
+
+  pronounType: "possessive",
+  person: 1,
+  number: "singular",
+  gender: "all",
+  caseUsage: "притяжательное местоимение, согласуется с существительным",
+  function: "обозначает принадлежность говорящему",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "My car is very old.",
+      ru: "Моя машина очень старая.",
+      uk: "Моя машина дуже стара."
+    }
+  ]
+},
+{
+  id: 24,
+  word: "nobody",
+  ru: "никто",
+  uk: "ніхто",
+  level: "",
+  topics: [],
+
+  pronounType: "negative",
+  person: 3,
+  number: "singular",
+  gender: "all",
+  caseUsage: "отрицательное местоимение; глагол обычно в 3-м лице ед. числа",
+  function: "обозначает полное отсутствие людей: ни один человек",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Nobody has time to help today.",
+      ru: "Сегодня ни у кого нет времени помочь.",
+      uk: "Сьогодні ніхто не має часу допомогти."
+    }
+  ]
+},
+{
+  id: 25,
+  word: "his",
+  ru: "его",
+  uk: "його",
+  level: "",
+  topics: [],
+
+  pronounType: "possessive",
+  person: 3,
+  number: "singular",
+  gender: "masculine",
+  caseUsage: "притяжательное местоимение; согласуется с существительным",
+  function: "обозначает принадлежность мужчине или предмету среднего рода",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "His room is very small.",
+      ru: "Его комната очень маленькая.",
+      uk: "Його кімната дуже маленька."
+    }
+  ]
+},
+{
+  id: 26,
+  word: "she",
+  ru: "она",
+  uk: "вона",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 3,
+  number: "both",
+  gender: "all",
+  caseUsage: "может означать «она» или часть группы значений «sie»; значение определяется контекстом",
+  function: "обозначает женщину или женский персонаж",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "She is my sister.",
+      ru: "Она моя сестра.",
+      uk: "Вона моя сестра."
+    }
+  ]
+},
+{
+  id: 27,
+  word: "such",
+  ru: "такой",
+  uk: "такий",
+  level: "",
+  topics: [],
+
+  pronounType: "demonstrative",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "употребляется с существительными и самостоятельно",
+  function: "обозначает тип, качество предмета: такой, подобный",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Such questions are always difficult.",
+      ru: "Такие вопросы всегда сложные.",
+      uk: "Такі запитання завжди складні."
+    }
+  ]
+},
+{
+  id: 28,
+  word: "all of",
+  ru: "все",
+  uk: "всі",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "книжное, подчёркивает полноту группы",
+  function: "подчеркивает полноту: все без исключения",
+  register: "formal",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "All of the documents are ready.",
+      ru: "Все документы готовы.",
+      uk: "Усі документи готові."
+    }
+  ]
+},
+{
+  id: 29,
+  word: "our",
+  ru: "наш",
+  uk: "наш",
+  level: "",
+  topics: [],
+
+  pronounType: "possessive",
+  person: 1,
+  number: "plural",
+  gender: "all",
+  caseUsage: "притяжательное местоимение; согласуется с существительным",
+  function: "обозначает принадлежность группе, включающей говорящего",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Our teacher is very friendly.",
+      ru: "Наш учитель очень дружелюбный.",
+      uk: "Наш учитель дуже привітний."
+    }
+  ]
+},
+{
+  id: 30,
+  word: "what",
+  ru: "что",
+  uk: "що",
+  level: "",
+  topics: [],
+
+  pronounType: "interrogative",
+  person: null,
+  number: "singular",
+  gender: "neuter",
+  caseUsage: "вопросительное/относительное местоимение; управляет глаголом или предлогом",
+  function: "используется для вопросов о предмете, действии или информации",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "What are you doing right now?",
+      ru: "Что ты делаешь прямо сейчас?",
+      uk: "Що ти робиш просто зараз?"
+    }
+  ]
+},
+{
+  id: 31,
+  word: "which",
+  ru: "которая",
+  uk: "яка",
+  level: "",
+  topics: [],
+
+  pronounType: "interrogative",
+  person: null,
+  number: "both",
+  gender: "feminine",
+  caseUsage: "вопросительное/относительное местоимение; склоняется по падежам в английском через позицию и предлоги",
+  function: "задаёт выбор или уточнение: какая? которая?",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Which color do you like most?",
+      ru: "Какой цвет ты любишь больше всего?",
+      uk: "Який колір ти любиш найбільше?"
+    }
+  ]
+},
+{
+  id: 32,
+  word: "which",
+  ru: "какой",
+  uk: "який",
+  level: "",
+  topics: [],
+
+  pronounType: "interrogative",
+  person: null,
+  number: "both",
+  gender: "masculine",
+  caseUsage: "используется для вопросов и относительных придаточных о предмете мужского рода (в немецком)",
+  function: "задаёт вопрос или уточнение о предмете",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Which day is today?",
+      ru: "Какой сегодня день?",
+      uk: "Який сьогодні день?"
+    }
+  ]
+},
+{
+  id: 33,
+  word: "which",
+  ru: "которое",
+  uk: "яке",
+  level: "",
+  topics: [],
+
+  pronounType: "interrogative",
+  person: null,
+  number: "both",
+  gender: "neuter",
+  caseUsage: "средний род вопросительного/относительного местоимения (для немецкого исходника)",
+  function: "задаёт вопрос или уточнение о предмете среднего рода",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Which book are you reading at the moment?",
+      ru: "Какую книгу ты сейчас читаешь?",
+      uk: "Яку книгу ти зараз читаєш?"
+    }
+  ]
+},
+{
+  id: 34,
+  word: "few",
+  ru: "немногие",
+  uk: "небагато",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "употребляется с исчисляемыми существительными во множественном числе",
+  function: "подчеркивает небольшое количество людей или предметов",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Only a few students passed the exam.",
+      ru: "Лишь немногие студенты сдали экзамен.",
+      uk: "Лише небагато студентів склали іспит."
+    }
+  ]
+},
+{
+  id: 35,
+  word: "who",
+  ru: "кто",
+  uk: "хто",
+  level: "",
+  topics: [],
+
+  pronounType: "interrogative",
+  person: null,
+  number: "singular",
+  gender: "all",
+  caseUsage: "вопросительное/относительное местоимение о лице",
+  function: "используется в вопросах и придаточных для обозначения лица",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Who is calling so late?",
+      ru: "Кто звонит так поздно?",
+      uk: "Хто телефонує так пізно?"
+    }
+  ]
+},
+{
+  id: 36,
+  word: "we",
+  ru: "мы",
+  uk: "ми",
+  level: "",
+  topics: [],
+
+  pronounType: "personal",
+  person: 1,
+  number: "plural",
+  gender: "all",
+  caseUsage: "личное местоимение 1-го лица мн. числа",
+  function: "обозначает говорящего вместе с другими людьми",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "We are going to the cinema tonight.",
+      ru: "Сегодня вечером мы идём в кино.",
+      uk: "Сьогодні ввечері ми йдемо в кіно."
+    }
+  ]
+},
+{
+  id: 37,
+  word: "numerous",
+  ru: "многочисленные",
+  uk: "численні",
+  level: "",
+  topics: [],
+
+  pronounType: "quantifier",
+  person: null,
+  number: "plural",
+  gender: "all",
+  caseUsage: "часто употребляется перед существительными во множественном числе",
+  function: "обозначает очень большое количество",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "Numerous guests came to the party.",
+      ru: "На вечеринку пришло множество гостей.",
+      uk: "На вечірку прийшло численно гостей."
+    }
+  ]
+},
+
+// числа — пока оставляем в этом же массиве, тип "numeral"
+{
+  id: 38,
+  word: "two and a half",
+  ru: "два с половиной",
+  uk: "два з половиною",
+  level: "",
+  topics: [],
+
+  pronounType: "numeral",
+  person: null,
+  number: null,
+  gender: null,
+  caseUsage: "дробное число, используется с существительными",
+  function: "обозначает количество 2,5",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "The trip takes two and a half hours.",
+      ru: "Поездка занимает два с половиной часа.",
+      uk: "Поїздка триває дві з половиною години."
+    }
+  ]
+},
+{
+  id: 39,
+  word: "second",
+  ru: "второй",
+  uk: "другий",
+  level: "",
+  topics: [],
+
+  pronounType: "numeral",
+  person: null,
+  number: "both",
+  gender: "all",
+  caseUsage: "порядковое числительное; употребляется как прилагательное",
+  function: "обозначает порядок: второй по счёту",
+  register: "neutral",
+
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+
+  patterns: [],
+
+  examples: [
+    {
+      L2: "He lives on the second floor.",
+      ru: "Он живёт на втором этаже.",
+      uk: "Він живе на другому поверсі."
+    }
+  ]
+}
+];
+window.decks.en_numbers = [
+{
+  id: 1,
+  word: "eight",
+  ru: "восемь",
+  uk: "вісім",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We have eight chairs in the kitchen.", ru: "У нас на кухне восемь стульев.", uk: "У нас на кухні вісім стільців." }
+  ]
+},
+{
+  id: 2,
+  word: "eighteen",
+  ru: "восемнадцать",
+  uk: "вісімнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "She will turn eighteen next month.", ru: "В следующем месяце ей исполнится восемнадцать.", uk: "Наступного місяця їй виповниться вісімнадцять." }
+  ]
+},
+{
+  id: 3,
+  word: "eighty",
+  ru: "восемьдесят",
+  uk: "вісімдесят",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "My grandfather is already eighty years old.", ru: "Моему дедушке уже восемьдесят лет.", uk: "Моєму дідусю вже вісімдесят років." }
+  ]
+},
+{
+  id: 4,
+  word: "three",
+  ru: "три",
+  uk: "три",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We have three meetings today.", ru: "У нас сегодня три встречи.", uk: "У нас сьогодні три зустрічі." }
+  ]
+},
+{
+  id: 5,
+  word: "thirteen",
+  ru: "тринадцать",
+  uk: "тринадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "Their son is thirteen and goes to secondary school.", ru: "Их сыну тринадцать, и он ходит в среднюю школу.", uk: "Їхньому синові тринадцять, і він ходить до середньої школи." }
+  ]
+},
+{
+  id: 6,
+  word: "thirty",
+  ru: "тридцать",
+  uk: "тридцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The ticket costs thirty euros.", ru: "Билет стоит тридцать евро.", uk: "Квиток коштує тридцять євро." }
+  ]
+},
+{
+  id: 7,
+  word: "third",
+  ru: "третий",
+  uk: "третій",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "He came in third place in the race.", ru: "Он пришёл третьим в гонке.", uk: "Він прийшов третім у забігу." }
+  ]
+},
+{
+  id: 8,
+  word: "one and a half",
+  ru: "полтора",
+  uk: "півтора",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The meeting lasted one and a half hours.", ru: "Встреча длилась полтора часа.", uk: "Зустріч тривала півтори години." }
+  ]
+},
+{
+  id: 9,
+  word: "one",
+  ru: "один",
+  uk: "один",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "I have only one question.", ru: "У меня только один вопрос.", uk: "У мене лише одне запитання." }
+  ]
+},
+{
+  id: 10,
+  word: "eleven",
+  ru: "одиннадцать",
+  uk: "одинадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "There are eleven people in the room.", ru: "В комнате одиннадцать человек.", uk: "У кімнаті одинадцять людей." }
+  ]
+},
+{
+  id: 11,
+  word: "first",
+  ru: "первый",
+  uk: "перший",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "This is my first day at work.", ru: "Это мой первый день на работе.", uk: "Це мій перший день на роботі." }
+  ]
+},
+{
+  id: 12,
+  word: "five",
+  ru: "пять",
+  uk: "п’ять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "She bought five fresh apples.", ru: "Она купила пять свежих яблок.", uk: "Вона купила п’ять свіжих яблук." }
+  ]
+},
+{
+  id: 13,
+  word: "fifth",
+  ru: "пятый",
+  uk: "п’ятий",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "Our office is on the fifth floor.", ru: "Наш офис на пятом этаже.", uk: "Наш офіс на п’ятому поверсі." }
+  ]
+},
+{
+  id: 14,
+  word: "fifteen",
+  ru: "пятнадцать",
+  uk: "п’ятнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "He has been living here for fifteen years.", ru: "Он живёт здесь уже пятнадцать лет.", uk: "Він живе тут уже п’ятнадцять років." }
+  ]
+},
+{
+  id: 15,
+  word: "fifty",
+  ru: "пятьдесят",
+  uk: "п’ятдесят",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The restaurant has space for fifty guests.", ru: "В ресторане есть места для пятидесяти гостей.", uk: "У ресторані є місця для п’ятдесяти гостей." }
+  ]
+},
+{
+  id: 16,
+  word: "hundred",
+  ru: "сто",
+  uk: "сто",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "About a hundred people attended the event.", ru: "На мероприятие пришло около ста человек.", uk: "На захід прийшло близько ста людей." }
+  ]
+},
+{
+  id: 17,
+  word: "last",
+  ru: "последний",
+  uk: "останній",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "This is my last offer.", ru: "Это моё последнее предложение.", uk: "Це моя остання пропозиція." }
+  ]
+},
+{
+  id: 18,
+  word: "billion",
+  ru: "миллиард",
+  uk: "мільярд",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The company is worth several billion dollars.", ru: "Компания стоит несколько миллиардов долларов.", uk: "Компанія коштує кілька мільярдів доларів." }
+  ]
+},
+{
+  id: 19,
+  word: "million",
+  ru: "миллион",
+  uk: "мільйон",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The city has over one million inhabitants.", ru: "В городе более миллиона жителей.", uk: "У місті понад один мільйон жителів." }
+  ]
+},
+{
+  id: 20,
+  word: "nine",
+  ru: "девять",
+  uk: "дев’ять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The shop opens at nine o’clock.", ru: "Магазин открывается в девять часов.", uk: "Магазин відчиняється о дев’ятій годині." }
+  ]
+},
+{
+  id: 21,
+  word: "nineteen",
+  ru: "девятнадцать",
+  uk: "дев’ятнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "She is nineteen and studies at university.", ru: "Ей девятнадцать, и она учится в университете.", uk: "Їй дев’ятнадцять, і вона навчається в університеті." }
+  ]
+},
+{
+  id: 22,
+  word: "ninety",
+  ru: "девяносто",
+  uk: "дев’яносто",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "My grandmother will be ninety next year.", ru: "Моей бабушке в следующем году исполнится девяносто.", uk: "Моїй бабусі наступного року виповниться дев’яносто." }
+  ]
+},
+{
+  id: 23,
+  word: "zero",
+  ru: "ноль",
+  uk: "нуль",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The temperature dropped to zero degrees at night.", ru: "Ночью температура опустилась до нуля градусов.", uk: "Уночі температура опустилася до нуля градусів." }
+  ]
+},
+{
+  id: 24,
+  word: "six",
+  ru: "шесть",
+  uk: "шість",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We have six lessons on Monday.", ru: "В понедельник у нас шесть уроков.", uk: "У понеділок у нас шість уроків." }
+  ]
+},
+{
+  id: 25,
+  word: "sixteen",
+  ru: "шестнадцать",
+  uk: "шістнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "You are allowed to work here from the age of sixteen.", ru: "Здесь можно работать с шестнадцати лет.", uk: "Тут можна працювати з шістнадцяти років." }
+  ]
+},
+{
+  id: 26,
+  word: "sixty",
+  ru: "шестьдесят",
+  uk: "шістдесят",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "My father will be sixty this summer.", ru: "Этим летом моему отцу исполнится шестьдесят.", uk: "Цього літа моєму батькові виповниться шістдесят." }
+  ]
+},
+{
+  id: 27,
+  word: "seven",
+  ru: "семь",
+  uk: "сім",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We get up at seven every day.", ru: "Мы встаём в семь каждый день.", uk: "Ми встаємо о сьомій щодня." }
+  ]
+},
+{
+  id: 28,
+  word: "seventeen",
+  ru: "семнадцать",
+  uk: "сімнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "He will turn seventeen in May.", ru: "В мае ему исполнится семнадцать.", uk: "У травні йому виповниться сімнадцять." }
+  ]
+},
+{
+  id: 29,
+  word: "seventy",
+  ru: "семьдесят",
+  uk: "сімдесят",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "She is almost seventy but still very active.", ru: "Ей почти семьдесят, но она всё ещё очень активна.", uk: "Їй майже сімдесят, але вона досі дуже активна." }
+  ]
+},
+{
+  id: 30,
+  word: "thousand",
+  ru: "тысяча",
+  uk: "тисяча",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The village has about one thousand residents.", ru: "В деревне около тысячи жителей.", uk: "У селі близько тисячі жителів." }
+  ]
+},
+{
+  id: 31,
+  word: "four",
+  ru: "четыре",
+  uk: "чотири",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We have four exams this week.", ru: "У нас на этой неделе четыре экзамена.", uk: "У нас цього тижня чотири іспити." }
+  ]
+},
+{
+  id: 32,
+  word: "fourth",
+  ru: "четвёртый",
+  uk: "четвертий",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "Our classroom is on the fourth floor.", ru: "Наш класс находится на четвёртом этаже.", uk: "Наш клас знаходиться на четвертому поверсі." }
+  ]
+},
+{
+  id: 33,
+  word: "fourteen",
+  ru: "четырнадцать",
+  uk: "чотирнадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "Her daughter is fourteen years old.", ru: "Её дочери четырнадцать лет.", uk: "Її доньці чотирнадцять років." }
+  ]
+},
+{
+  id: 34,
+  word: "forty",
+  ru: "сорок",
+  uk: "сорок",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "He is going to be forty next year.", ru: "В следующем году ему исполнится сорок.", uk: "Наступного року йому виповниться сорок." }
+  ]
+},
+{
+  id: 35,
+  word: "ten",
+  ru: "десять",
+  uk: "десять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "We are staying here for ten days.", ru: "Мы остаёмся здесь на десять дней.", uk: "Ми залишаємося тут на десять днів." }
+  ]
+},
+{
+  id: 36,
+  word: "twenty",
+  ru: "двадцать",
+  uk: "двадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "She is twenty and looking for her first job.", ru: "Ей двадцать, и она ищет свою первую работу.", uk: "Їй двадцять, і вона шукає свою першу роботу." }
+  ]
+},
+{
+  id: 37,
+  word: "two",
+  ru: "два",
+  uk: "два",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "I would like two cups of coffee, please.", ru: "Я бы хотел две чашки кофе, пожалуйста.", uk: "Я хотів би дві чашки кави, будь ласка." }
+  ]
+},
+{
+  id: 38,
+  word: "two and a half",
+  ru: "два с половиной",
+  uk: "два з половиною",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "The trip takes two and a half hours.", ru: "Поездка занимает два с половиной часа.", uk: "Поїздка триває дві з половиною години." }
+  ]
+},
+{
+  id: 39,
+  word: "second",
+  ru: "второй",
+  uk: "другий",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "He lives on the second floor.", ru: "Он живёт на втором этаже.", uk: "Він живе на другому поверсі." }
+  ]
+},
+{
+  id: 40,
+  word: "twelve",
+  ru: "двенадцать",
+  uk: "дванадцять",
+  level: "",
+  topics: [],
+  examples: [
+    { L2: "It is twelve o’clock already.", ru: "Уже двенадцать часов.", uk: "Уже дванадцята година." }
+  ]
+}
+];
+/* ====================== End of file =======================
+ * File: deck.de.js • Version: 1.1 • 2025-10-19
+*/
