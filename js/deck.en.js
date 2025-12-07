@@ -1,3 +1,10 @@
+/* ==========================================================
+ * Project: MOYAMOVA
+ * File: deck.de.js
+ * Purpose: словарь приложения (JS)
+ * Version: 1.0
+ * Last modified: 2025-10-19
+*/
 window.decks = window.decks || {};
 
 window.decks.de_nouns = [
