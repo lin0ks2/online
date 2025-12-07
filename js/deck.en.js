@@ -12,9 +12,7 @@ window.decks.en_nouns = [
     "ru": "деньги",
     "uk": "гроші",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -35,10 +33,7 @@ window.decks.en_nouns = [
     "ru": "время",
     "uk": "час",
     "level": "B2",
-    "topics": [
-      "work",
-      "shopping"
-    ],
+    "topics": ["shopping", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -59,9 +54,7 @@ window.decks.en_nouns = [
     "ru": "год",
     "uk": "рік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -82,9 +75,7 @@ window.decks.en_nouns = [
     "ru": "человек",
     "uk": "людина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -105,9 +96,7 @@ window.decks.en_nouns = [
     "ru": "женщина",
     "uk": "жінка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -128,9 +117,7 @@ window.decks.en_nouns = [
     "ru": "мужчина",
     "uk": "чоловік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -151,9 +138,7 @@ window.decks.en_nouns = [
     "ru": "ребёнок",
     "uk": "дитина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -174,9 +159,7 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -197,9 +180,7 @@ window.decks.en_nouns = [
     "ru": "страна",
     "uk": "країна",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -220,9 +201,7 @@ window.decks.en_nouns = [
     "ru": "дом",
     "uk": "будинок",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -243,9 +222,7 @@ window.decks.en_nouns = [
     "ru": "квартира",
     "uk": "квартира",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -266,9 +243,7 @@ window.decks.en_nouns = [
     "ru": "комната",
     "uk": "кімната",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -289,9 +264,7 @@ window.decks.en_nouns = [
     "ru": "дверь",
     "uk": "двері",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -312,9 +285,7 @@ window.decks.en_nouns = [
     "ru": "окно",
     "uk": "вікно",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -335,9 +306,7 @@ window.decks.en_nouns = [
     "ru": "стол",
     "uk": "стіл",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -358,9 +327,7 @@ window.decks.en_nouns = [
     "ru": "стул",
     "uk": "стілець",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -381,9 +348,7 @@ window.decks.en_nouns = [
     "ru": "кровать",
     "uk": "ліжко",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -404,9 +369,7 @@ window.decks.en_nouns = [
     "ru": "шкаф",
     "uk": "шафа",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -427,9 +390,7 @@ window.decks.en_nouns = [
     "ru": "лампа",
     "uk": "лампа",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -450,9 +411,7 @@ window.decks.en_nouns = [
     "ru": "ковёр",
     "uk": "килим",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -473,9 +432,7 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "автомобіль",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -496,9 +453,7 @@ window.decks.en_nouns = [
     "ru": "автобус",
     "uk": "автобус",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -519,9 +474,7 @@ window.decks.en_nouns = [
     "ru": "поезд",
     "uk": "поїзд",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -542,9 +495,7 @@ window.decks.en_nouns = [
     "ru": "самолёт",
     "uk": "літак",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -565,9 +516,7 @@ window.decks.en_nouns = [
     "ru": "корабль",
     "uk": "корабель",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -588,9 +537,7 @@ window.decks.en_nouns = [
     "ru": "велосипед",
     "uk": "велосипед",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -611,9 +558,7 @@ window.decks.en_nouns = [
     "ru": "улица",
     "uk": "вулиця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -634,9 +579,7 @@ window.decks.en_nouns = [
     "ru": "мост",
     "uk": "міст",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -657,9 +600,7 @@ window.decks.en_nouns = [
     "ru": "путь",
     "uk": "шлях",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -680,9 +621,7 @@ window.decks.en_nouns = [
     "ru": "площадь",
     "uk": "площа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -703,9 +642,7 @@ window.decks.en_nouns = [
     "ru": "вода",
     "uk": "вода",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -726,9 +663,7 @@ window.decks.en_nouns = [
     "ru": "хлеб",
     "uk": "хліб",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -749,10 +684,7 @@ window.decks.en_nouns = [
     "ru": "молоко",
     "uk": "молоко",
     "level": "A1",
-    "topics": [
-      "drink",
-      "food"
-    ],
+    "topics": ["drink", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -773,9 +705,7 @@ window.decks.en_nouns = [
     "ru": "сыр",
     "uk": "сир",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -796,9 +726,7 @@ window.decks.en_nouns = [
     "ru": "мясо",
     "uk": "м'ясо",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -819,9 +747,7 @@ window.decks.en_nouns = [
     "ru": "рыба",
     "uk": "риба",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -842,9 +768,7 @@ window.decks.en_nouns = [
     "ru": "овощи",
     "uk": "овочі",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -865,9 +789,7 @@ window.decks.en_nouns = [
     "ru": "фрукты",
     "uk": "фрукти",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -888,9 +810,7 @@ window.decks.en_nouns = [
     "ru": "яблоко",
     "uk": "яблуко",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -911,9 +831,7 @@ window.decks.en_nouns = [
     "ru": "банан",
     "uk": "банан",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -934,9 +852,7 @@ window.decks.en_nouns = [
     "ru": "работа",
     "uk": "робота",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -957,9 +873,7 @@ window.decks.en_nouns = [
     "ru": "профессия",
     "uk": "професія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -980,9 +894,7 @@ window.decks.en_nouns = [
     "ru": "школа",
     "uk": "школа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1003,9 +915,7 @@ window.decks.en_nouns = [
     "ru": "университет",
     "uk": "університет",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1026,10 +936,7 @@ window.decks.en_nouns = [
     "ru": "учитель",
     "uk": "вчитель",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1050,9 +957,7 @@ window.decks.en_nouns = [
     "ru": "ученик",
     "uk": "учень",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1073,9 +978,7 @@ window.decks.en_nouns = [
     "ru": "студент",
     "uk": "студент",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1096,10 +999,7 @@ window.decks.en_nouns = [
     "ru": "книга",
     "uk": "книга",
     "level": "B1",
-    "topics": [
-      "education",
-      "media"
-    ],
+    "topics": ["education", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1120,9 +1020,7 @@ window.decks.en_nouns = [
     "ru": "газета",
     "uk": "газета",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1143,9 +1041,7 @@ window.decks.en_nouns = [
     "ru": "тетрадь",
     "uk": "зошит",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1166,9 +1062,7 @@ window.decks.en_nouns = [
     "ru": "компьютер",
     "uk": "комп’ютер",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1189,9 +1083,7 @@ window.decks.en_nouns = [
     "ru": "ноутбук",
     "uk": "ноутбук",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1212,9 +1104,7 @@ window.decks.en_nouns = [
     "ru": "телефон",
     "uk": "телефон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1235,9 +1125,7 @@ window.decks.en_nouns = [
     "ru": "телефон",
     "uk": "телефон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1258,9 +1146,7 @@ window.decks.en_nouns = [
     "ru": "электронное письмо",
     "uk": "електронний лист",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1281,9 +1167,7 @@ window.decks.en_nouns = [
     "ru": "интернет",
     "uk": "інтернет",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1304,9 +1188,7 @@ window.decks.en_nouns = [
     "ru": "экран",
     "uk": "екран",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1327,9 +1209,7 @@ window.decks.en_nouns = [
     "ru": "мышь",
     "uk": "миша",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1350,9 +1230,7 @@ window.decks.en_nouns = [
     "ru": "клавиатура",
     "uk": "клавіатура",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1373,9 +1251,7 @@ window.decks.en_nouns = [
     "ru": "принтер",
     "uk": "принтер",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1396,9 +1272,7 @@ window.decks.en_nouns = [
     "ru": "семья",
     "uk": "родина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1419,9 +1293,7 @@ window.decks.en_nouns = [
     "ru": "отец",
     "uk": "батько",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1442,9 +1314,7 @@ window.decks.en_nouns = [
     "ru": "мать",
     "uk": "мати",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1465,9 +1335,7 @@ window.decks.en_nouns = [
     "ru": "сын",
     "uk": "син",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1488,9 +1356,7 @@ window.decks.en_nouns = [
     "ru": "дочь",
     "uk": "дочка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1511,9 +1377,7 @@ window.decks.en_nouns = [
     "ru": "брат",
     "uk": "брат",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1534,9 +1398,7 @@ window.decks.en_nouns = [
     "ru": "сестра",
     "uk": "сестра",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1557,9 +1419,7 @@ window.decks.en_nouns = [
     "ru": "друг",
     "uk": "друг",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1580,10 +1440,7 @@ window.decks.en_nouns = [
     "ru": "подруга",
     "uk": "подруга",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1604,9 +1461,7 @@ window.decks.en_nouns = [
     "ru": "родители",
     "uk": "батьки",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1627,9 +1482,7 @@ window.decks.en_nouns = [
     "ru": "еда",
     "uk": "їжа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1650,10 +1503,7 @@ window.decks.en_nouns = [
     "ru": "завтрак",
     "uk": "сніданок",
     "level": "A1",
-    "topics": [
-      "daily routine",
-      "food"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1674,10 +1524,7 @@ window.decks.en_nouns = [
     "ru": "обед",
     "uk": "обід",
     "level": "A1",
-    "topics": [
-      "daily routine",
-      "food"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1698,10 +1545,7 @@ window.decks.en_nouns = [
     "ru": "ужин",
     "uk": "вечеря",
     "level": "A1",
-    "topics": [
-      "daily routine",
-      "food"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1722,9 +1566,7 @@ window.decks.en_nouns = [
     "ru": "напиток",
     "uk": "напій",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1745,9 +1587,7 @@ window.decks.en_nouns = [
     "ru": "сок",
     "uk": "сік",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1768,9 +1608,7 @@ window.decks.en_nouns = [
     "ru": "чай",
     "uk": "чай",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1791,9 +1629,7 @@ window.decks.en_nouns = [
     "ru": "кофе",
     "uk": "кава",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1814,9 +1650,7 @@ window.decks.en_nouns = [
     "ru": "пиво",
     "uk": "пиво",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1837,9 +1671,7 @@ window.decks.en_nouns = [
     "ru": "вино",
     "uk": "вино",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1860,9 +1692,7 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікар",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1883,10 +1713,7 @@ window.decks.en_nouns = [
     "ru": "врач (женщина)",
     "uk": "лікарка",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1907,9 +1734,7 @@ window.decks.en_nouns = [
     "ru": "больница",
     "uk": "лікарня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1930,9 +1755,7 @@ window.decks.en_nouns = [
     "ru": "клиника",
     "uk": "клініка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1953,9 +1776,7 @@ window.decks.en_nouns = [
     "ru": "таблетка",
     "uk": "таблетка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1976,9 +1797,7 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1999,9 +1818,7 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2022,9 +1839,7 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2045,9 +1860,7 @@ window.decks.en_nouns = [
     "ru": "боль",
     "uk": "біль",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2068,10 +1881,7 @@ window.decks.en_nouns = [
     "ru": "помощь",
     "uk": "допомога",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2092,9 +1902,7 @@ window.decks.en_nouns = [
     "ru": "погода",
     "uk": "погода",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2115,10 +1923,7 @@ window.decks.en_nouns = [
     "ru": "солнце",
     "uk": "сонце",
     "level": "A1",
-    "topics": [
-      "nature",
-      "weather"
-    ],
+    "topics": ["nature", "weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2139,9 +1944,7 @@ window.decks.en_nouns = [
     "ru": "луна",
     "uk": "місяць",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2162,10 +1965,7 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": [
-      "ui",
-      "nature"
-    ],
+    "topics": ["nature", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2186,9 +1986,7 @@ window.decks.en_nouns = [
     "ru": "дождь",
     "uk": "дощ",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2209,9 +2007,7 @@ window.decks.en_nouns = [
     "ru": "снег",
     "uk": "сніг",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2232,9 +2028,7 @@ window.decks.en_nouns = [
     "ru": "ветер",
     "uk": "вітер",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2255,10 +2049,7 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "B2",
-    "topics": [
-      "it",
-      "nature"
-    ],
+    "topics": ["it", "nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2279,9 +2070,7 @@ window.decks.en_nouns = [
     "ru": "небо",
     "uk": "небо",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2302,9 +2091,7 @@ window.decks.en_nouns = [
     "ru": "температура",
     "uk": "температура",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2325,9 +2112,7 @@ window.decks.en_nouns = [
     "ru": "день",
     "uk": "день",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2348,9 +2133,7 @@ window.decks.en_nouns = [
     "ru": "ночь",
     "uk": "ніч",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2371,9 +2154,7 @@ window.decks.en_nouns = [
     "ru": "утро",
     "uk": "ранок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2394,9 +2175,7 @@ window.decks.en_nouns = [
     "ru": "вечер",
     "uk": "вечір",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2417,9 +2196,7 @@ window.decks.en_nouns = [
     "ru": "весна",
     "uk": "весна",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2440,9 +2217,7 @@ window.decks.en_nouns = [
     "ru": "лето",
     "uk": "літо",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2463,9 +2238,7 @@ window.decks.en_nouns = [
     "ru": "осень",
     "uk": "осінь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2486,9 +2259,7 @@ window.decks.en_nouns = [
     "ru": "зима",
     "uk": "зима",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2509,9 +2280,7 @@ window.decks.en_nouns = [
     "ru": "неделя",
     "uk": "тиждень",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2532,9 +2301,7 @@ window.decks.en_nouns = [
     "ru": "месяц",
     "uk": "місяць",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2555,9 +2322,7 @@ window.decks.en_nouns = [
     "ru": "голова",
     "uk": "голова",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2578,9 +2343,7 @@ window.decks.en_nouns = [
     "ru": "лицо",
     "uk": "обличчя",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2601,9 +2364,7 @@ window.decks.en_nouns = [
     "ru": "глаз",
     "uk": "око",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2624,9 +2385,7 @@ window.decks.en_nouns = [
     "ru": "нос",
     "uk": "ніс",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2647,9 +2406,7 @@ window.decks.en_nouns = [
     "ru": "рот",
     "uk": "рот",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2670,9 +2427,7 @@ window.decks.en_nouns = [
     "ru": "ухо",
     "uk": "вухо",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2693,9 +2448,7 @@ window.decks.en_nouns = [
     "ru": "шея",
     "uk": "шия",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2716,9 +2469,7 @@ window.decks.en_nouns = [
     "ru": "плечо",
     "uk": "плече",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2739,9 +2490,7 @@ window.decks.en_nouns = [
     "ru": "рука",
     "uk": "рука",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2762,9 +2511,7 @@ window.decks.en_nouns = [
     "ru": "ладонь",
     "uk": "долоня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2785,9 +2532,7 @@ window.decks.en_nouns = [
     "ru": "палец",
     "uk": "палець",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2808,9 +2553,7 @@ window.decks.en_nouns = [
     "ru": "нога",
     "uk": "нога",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2831,9 +2574,7 @@ window.decks.en_nouns = [
     "ru": "колено",
     "uk": "коліно",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2854,9 +2595,7 @@ window.decks.en_nouns = [
     "ru": "ступня",
     "uk": "ступня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2877,10 +2616,7 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": [
-      "ui",
-      "symbol"
-    ],
+    "topics": ["symbol", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2901,9 +2637,7 @@ window.decks.en_nouns = [
     "ru": "кровь",
     "uk": "кров",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2924,9 +2658,7 @@ window.decks.en_nouns = [
     "ru": "тело",
     "uk": "тіло",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2947,9 +2679,7 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2970,9 +2700,7 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2993,9 +2721,7 @@ window.decks.en_nouns = [
     "ru": "медицина",
     "uk": "медицина",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3016,9 +2742,7 @@ window.decks.en_nouns = [
     "ru": "игра",
     "uk": "гра",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3039,9 +2763,7 @@ window.decks.en_nouns = [
     "ru": "спорт",
     "uk": "спорт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3062,9 +2784,7 @@ window.decks.en_nouns = [
     "ru": "команда",
     "uk": "команда",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3085,9 +2805,7 @@ window.decks.en_nouns = [
     "ru": "мяч",
     "uk": "м'яч",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3108,9 +2826,7 @@ window.decks.en_nouns = [
     "ru": "бассейн",
     "uk": "басейн",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3131,9 +2847,7 @@ window.decks.en_nouns = [
     "ru": "море",
     "uk": "море",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3154,9 +2868,7 @@ window.decks.en_nouns = [
     "ru": "озеро",
     "uk": "озеро",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3177,9 +2889,7 @@ window.decks.en_nouns = [
     "ru": "река",
     "uk": "річка",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3200,9 +2910,7 @@ window.decks.en_nouns = [
     "ru": "гора",
     "uk": "гора",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3223,9 +2931,7 @@ window.decks.en_nouns = [
     "ru": "долина",
     "uk": "долина",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3246,9 +2952,7 @@ window.decks.en_nouns = [
     "ru": "лес",
     "uk": "ліс",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3269,9 +2973,7 @@ window.decks.en_nouns = [
     "ru": "дерево",
     "uk": "дерево",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3292,9 +2994,7 @@ window.decks.en_nouns = [
     "ru": "цветок",
     "uk": "квітка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3315,9 +3015,7 @@ window.decks.en_nouns = [
     "ru": "животное",
     "uk": "тварина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3338,9 +3036,7 @@ window.decks.en_nouns = [
     "ru": "собака",
     "uk": "пес",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3361,9 +3057,7 @@ window.decks.en_nouns = [
     "ru": "кошка",
     "uk": "кішка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3384,9 +3078,7 @@ window.decks.en_nouns = [
     "ru": "птица",
     "uk": "птах",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3407,9 +3099,7 @@ window.decks.en_nouns = [
     "ru": "лошадь",
     "uk": "кінь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3430,9 +3120,7 @@ window.decks.en_nouns = [
     "ru": "корова",
     "uk": "корова",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3453,9 +3141,7 @@ window.decks.en_nouns = [
     "ru": "свинья",
     "uk": "свиня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3476,9 +3162,7 @@ window.decks.en_nouns = [
     "ru": "овца",
     "uk": "вівця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3499,9 +3183,7 @@ window.decks.en_nouns = [
     "ru": "коза",
     "uk": "коза",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3522,9 +3204,7 @@ window.decks.en_nouns = [
     "ru": "курица",
     "uk": "курка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3545,9 +3225,7 @@ window.decks.en_nouns = [
     "ru": "петух",
     "uk": "півень",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3568,9 +3246,7 @@ window.decks.en_nouns = [
     "ru": "яйцо",
     "uk": "яйце",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3591,9 +3267,7 @@ window.decks.en_nouns = [
     "ru": "деревня",
     "uk": "село",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3614,9 +3288,7 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3637,9 +3309,7 @@ window.decks.en_nouns = [
     "ru": "столица",
     "uk": "столиця",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3660,9 +3330,7 @@ window.decks.en_nouns = [
     "ru": "правительство",
     "uk": "уряд",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3683,10 +3351,7 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B2",
-    "topics": [
-      "law",
-      "politics"
-    ],
+    "topics": ["law", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3707,10 +3372,7 @@ window.decks.en_nouns = [
     "ru": "полиция",
     "uk": "поліція",
     "level": "B2",
-    "topics": [
-      "city",
-      "law"
-    ],
+    "topics": ["city", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3731,10 +3393,7 @@ window.decks.en_nouns = [
     "ru": "суд",
     "uk": "суд",
     "level": "B2",
-    "topics": [
-      "law",
-      "food"
-    ],
+    "topics": ["food", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3755,9 +3414,7 @@ window.decks.en_nouns = [
     "ru": "судья",
     "uk": "суддя",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3778,10 +3435,7 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокат",
     "level": "B2",
-    "topics": [
-      "job",
-      "law"
-    ],
+    "topics": ["job", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3802,9 +3456,7 @@ window.decks.en_nouns = [
     "ru": "тюрьма",
     "uk": "в'язниця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3825,9 +3477,7 @@ window.decks.en_nouns = [
     "ru": "свобода",
     "uk": "свобода",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3848,9 +3498,7 @@ window.decks.en_nouns = [
     "ru": "право",
     "uk": "право",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3871,10 +3519,7 @@ window.decks.en_nouns = [
     "ru": "обязанность",
     "uk": "обов’язок",
     "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "law"
-    ],
+    "topics": ["bureaucracy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3895,9 +3540,7 @@ window.decks.en_nouns = [
     "ru": "наказание",
     "uk": "покарання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3918,10 +3561,7 @@ window.decks.en_nouns = [
     "ru": "безопасность",
     "uk": "безпека",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3942,9 +3582,7 @@ window.decks.en_nouns = [
     "ru": "искусство",
     "uk": "мистецтво",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3965,9 +3603,7 @@ window.decks.en_nouns = [
     "ru": "музыка",
     "uk": "музика",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3988,9 +3624,7 @@ window.decks.en_nouns = [
     "ru": "песня",
     "uk": "пісня",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4011,9 +3645,7 @@ window.decks.en_nouns = [
     "ru": "фильм",
     "uk": "фільм",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4034,10 +3666,7 @@ window.decks.en_nouns = [
     "ru": "театр",
     "uk": "театр",
     "level": "B1",
-    "topics": [
-      "culture",
-      "art"
-    ],
+    "topics": ["art", "culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4058,9 +3687,7 @@ window.decks.en_nouns = [
     "ru": "музей",
     "uk": "музей",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4081,9 +3708,7 @@ window.decks.en_nouns = [
     "ru": "картина",
     "uk": "картина",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4104,9 +3729,7 @@ window.decks.en_nouns = [
     "ru": "цвет",
     "uk": "колір",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4127,9 +3750,7 @@ window.decks.en_nouns = [
     "ru": "форма",
     "uk": "форма",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4150,9 +3771,7 @@ window.decks.en_nouns = [
     "ru": "пример",
     "uk": "приклад",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4173,9 +3792,7 @@ window.decks.en_nouns = [
     "ru": "вопрос",
     "uk": "питання",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4196,9 +3813,7 @@ window.decks.en_nouns = [
     "ru": "ответ",
     "uk": "відповідь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4219,9 +3834,7 @@ window.decks.en_nouns = [
     "ru": "язык",
     "uk": "мова",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4242,9 +3855,7 @@ window.decks.en_nouns = [
     "ru": "слово",
     "uk": "слово",
     "level": "B1",
-    "topics": [
-      "language"
-    ],
+    "topics": ["language"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4265,10 +3876,7 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "речення",
     "level": "B2",
-    "topics": [
-      "economy",
-      "business"
-    ],
+    "topics": ["business", "economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4289,9 +3897,7 @@ window.decks.en_nouns = [
     "ru": "текст",
     "uk": "текст",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4312,9 +3918,7 @@ window.decks.en_nouns = [
     "ru": "разговор",
     "uk": "розмова",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4335,9 +3939,7 @@ window.decks.en_nouns = [
     "ru": "история",
     "uk": "історія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4358,9 +3960,7 @@ window.decks.en_nouns = [
     "ru": "проблема",
     "uk": "проблема",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4381,10 +3981,7 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "B2",
-    "topics": [
-      "work",
-      "logic"
-    ],
+    "topics": ["logic", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4405,9 +4002,7 @@ window.decks.en_nouns = [
     "ru": "начало",
     "uk": "початок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4428,9 +4023,7 @@ window.decks.en_nouns = [
     "ru": "конец",
     "uk": "кінець",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4451,9 +4044,7 @@ window.decks.en_nouns = [
     "ru": "середина",
     "uk": "середина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4474,9 +4065,7 @@ window.decks.en_nouns = [
     "ru": "сторона",
     "uk": "сторона",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4497,9 +4086,7 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4520,9 +4107,7 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4543,9 +4128,7 @@ window.decks.en_nouns = [
     "ru": "путешествие",
     "uk": "подорож",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4566,9 +4149,7 @@ window.decks.en_nouns = [
     "ru": "отпуск",
     "uk": "відпустка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4589,10 +4170,7 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "B2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4613,9 +4191,7 @@ window.decks.en_nouns = [
     "ru": "успех",
     "uk": "успіх",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4636,9 +4212,7 @@ window.decks.en_nouns = [
     "ru": "наука",
     "uk": "наука",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4659,10 +4233,7 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B2",
-    "topics": [
-      "marketing",
-      "science"
-    ],
+    "topics": ["marketing", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4683,9 +4254,7 @@ window.decks.en_nouns = [
     "ru": "техника",
     "uk": "техніка",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4706,9 +4275,7 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "машина",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4729,9 +4296,7 @@ window.decks.en_nouns = [
     "ru": "инструмент",
     "uk": "інструмент",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4752,9 +4317,7 @@ window.decks.en_nouns = [
     "ru": "материал",
     "uk": "матеріал",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4775,10 +4338,7 @@ window.decks.en_nouns = [
     "ru": "энергия",
     "uk": "енергія",
     "level": "B2",
-    "topics": [
-      "housing",
-      "energy"
-    ],
+    "topics": ["energy", "housing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4799,9 +4359,7 @@ window.decks.en_nouns = [
     "ru": "ток",
     "uk": "струм",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4822,10 +4380,7 @@ window.decks.en_nouns = [
     "ru": "свет",
     "uk": "світло",
     "level": "B1",
-    "topics": [
-      "art",
-      "technology"
-    ],
+    "topics": ["art", "technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4846,9 +4401,7 @@ window.decks.en_nouns = [
     "ru": "тень",
     "uk": "тінь",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4869,9 +4422,7 @@ window.decks.en_nouns = [
     "ru": "звук",
     "uk": "звук",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4892,9 +4443,7 @@ window.decks.en_nouns = [
     "ru": "голос",
     "uk": "голос",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4915,9 +4464,7 @@ window.decks.en_nouns = [
     "ru": "шум",
     "uk": "шум",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4938,9 +4485,7 @@ window.decks.en_nouns = [
     "ru": "тишина",
     "uk": "тиша",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4961,9 +4506,7 @@ window.decks.en_nouns = [
     "ru": "шум",
     "uk": "гамір",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4984,9 +4527,7 @@ window.decks.en_nouns = [
     "ru": "запах",
     "uk": "запах",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5007,9 +4548,7 @@ window.decks.en_nouns = [
     "ru": "вкус",
     "uk": "смак",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5030,9 +4569,7 @@ window.decks.en_nouns = [
     "ru": "чувство",
     "uk": "почуття",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5053,9 +4590,7 @@ window.decks.en_nouns = [
     "ru": "радость",
     "uk": "радість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5076,9 +4611,7 @@ window.decks.en_nouns = [
     "ru": "любовь",
     "uk": "любов",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5099,9 +4632,7 @@ window.decks.en_nouns = [
     "ru": "ненависть",
     "uk": "ненависть",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5122,9 +4653,7 @@ window.decks.en_nouns = [
     "ru": "страх",
     "uk": "страх",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5145,9 +4674,7 @@ window.decks.en_nouns = [
     "ru": "надежда",
     "uk": "надія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5168,9 +4695,7 @@ window.decks.en_nouns = [
     "ru": "сон",
     "uk": "сон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5191,9 +4716,7 @@ window.decks.en_nouns = [
     "ru": "сон",
     "uk": "сон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5214,9 +4737,7 @@ window.decks.en_nouns = [
     "ru": "голод",
     "uk": "голод",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5237,9 +4758,7 @@ window.decks.en_nouns = [
     "ru": "жажда",
     "uk": "спрага",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5260,9 +4779,7 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5283,9 +4800,7 @@ window.decks.en_nouns = [
     "ru": "шаг",
     "uk": "крок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5306,9 +4821,7 @@ window.decks.en_nouns = [
     "ru": "бег",
     "uk": "біг",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5329,9 +4842,7 @@ window.decks.en_nouns = [
     "ru": "прыжок",
     "uk": "стрибок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5352,9 +4863,7 @@ window.decks.en_nouns = [
     "ru": "игрушка",
     "uk": "іграшка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5375,9 +4884,7 @@ window.decks.en_nouns = [
     "ru": "подарок",
     "uk": "подарунок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5398,9 +4905,7 @@ window.decks.en_nouns = [
     "ru": "сюрприз",
     "uk": "сюрприз",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5421,9 +4926,7 @@ window.decks.en_nouns = [
     "ru": "праздник",
     "uk": "свято",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5444,9 +4947,7 @@ window.decks.en_nouns = [
     "ru": "торжество",
     "uk": "урочистість",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5467,9 +4968,7 @@ window.decks.en_nouns = [
     "ru": "день рождения",
     "uk": "день народження",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5490,9 +4989,7 @@ window.decks.en_nouns = [
     "ru": "Рождество",
     "uk": "Різдво",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5513,9 +5010,7 @@ window.decks.en_nouns = [
     "ru": "Новый год",
     "uk": "Новий рік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5536,9 +5031,7 @@ window.decks.en_nouns = [
     "ru": "Пасха",
     "uk": "Великдень",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5559,9 +5052,7 @@ window.decks.en_nouns = [
     "ru": "понедельник",
     "uk": "понеділок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5582,9 +5073,7 @@ window.decks.en_nouns = [
     "ru": "вторник",
     "uk": "вівторок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5605,9 +5094,7 @@ window.decks.en_nouns = [
     "ru": "среда",
     "uk": "середа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5628,9 +5115,7 @@ window.decks.en_nouns = [
     "ru": "четверг",
     "uk": "четвер",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5651,9 +5136,7 @@ window.decks.en_nouns = [
     "ru": "пятница",
     "uk": "п’ятниця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5674,9 +5157,7 @@ window.decks.en_nouns = [
     "ru": "суббота",
     "uk": "субота",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5697,9 +5178,7 @@ window.decks.en_nouns = [
     "ru": "воскресенье",
     "uk": "неділя",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5720,9 +5199,7 @@ window.decks.en_nouns = [
     "ru": "календарь",
     "uk": "календар",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5743,9 +5220,7 @@ window.decks.en_nouns = [
     "ru": "дата",
     "uk": "дата",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5766,9 +5241,7 @@ window.decks.en_nouns = [
     "ru": "часы",
     "uk": "годинник",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5789,9 +5262,7 @@ window.decks.en_nouns = [
     "ru": "минута",
     "uk": "хвилина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5812,9 +5283,7 @@ window.decks.en_nouns = [
     "ru": "секунда",
     "uk": "секунда",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5835,9 +5304,7 @@ window.decks.en_nouns = [
     "ru": "настоящее",
     "uk": "теперішнє",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5858,9 +5325,7 @@ window.decks.en_nouns = [
     "ru": "прошлое",
     "uk": "минуле",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5881,9 +5346,7 @@ window.decks.en_nouns = [
     "ru": "будущее",
     "uk": "майбутнє",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5904,9 +5367,7 @@ window.decks.en_nouns = [
     "ru": "пространство",
     "uk": "простір",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5927,9 +5388,7 @@ window.decks.en_nouns = [
     "ru": "расстояние",
     "uk": "відстань",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5950,9 +5409,7 @@ window.decks.en_nouns = [
     "ru": "близость",
     "uk": "близькість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5973,9 +5430,7 @@ window.decks.en_nouns = [
     "ru": "сторона",
     "uk": "сторона",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5996,9 +5451,7 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6019,9 +5472,7 @@ window.decks.en_nouns = [
     "ru": "север",
     "uk": "північ",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6042,9 +5493,7 @@ window.decks.en_nouns = [
     "ru": "юг",
     "uk": "південь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6065,9 +5514,7 @@ window.decks.en_nouns = [
     "ru": "восток",
     "uk": "схід",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6088,9 +5535,7 @@ window.decks.en_nouns = [
     "ru": "запад",
     "uk": "захід",
     "level": "A2",
-    "topics": [
-      "events"
-    ],
+    "topics": ["events"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6111,9 +5556,7 @@ window.decks.en_nouns = [
     "ru": "середина",
     "uk": "середина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6134,9 +5577,7 @@ window.decks.en_nouns = [
     "ru": "окрестность",
     "uk": "оточення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6157,9 +5598,7 @@ window.decks.en_nouns = [
     "ru": "ландшафт",
     "uk": "ландшафт",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6180,9 +5619,7 @@ window.decks.en_nouns = [
     "ru": "природа",
     "uk": "природа",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6203,9 +5640,7 @@ window.decks.en_nouns = [
     "ru": "окружающая среда",
     "uk": "довкілля",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6226,10 +5661,7 @@ window.decks.en_nouns = [
     "ru": "защита окружающей среды",
     "uk": "захист довкілля",
     "level": "B2",
-    "topics": [
-      "it",
-      "law"
-    ],
+    "topics": ["it", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6250,9 +5682,7 @@ window.decks.en_nouns = [
     "ru": "огонь",
     "uk": "вогонь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6273,9 +5703,7 @@ window.decks.en_nouns = [
     "ru": "земля",
     "uk": "земля",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6296,9 +5724,7 @@ window.decks.en_nouns = [
     "ru": "воздух",
     "uk": "повітря",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6319,9 +5745,7 @@ window.decks.en_nouns = [
     "ru": "климат",
     "uk": "клімат",
     "level": "B2",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6342,9 +5766,7 @@ window.decks.en_nouns = [
     "ru": "тепло",
     "uk": "тепло",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6365,9 +5787,7 @@ window.decks.en_nouns = [
     "ru": "холод",
     "uk": "холод",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6388,10 +5808,7 @@ window.decks.en_nouns = [
     "ru": "жара",
     "uk": "спека",
     "level": "B2",
-    "topics": [
-      "housing",
-      "energy"
-    ],
+    "topics": ["energy", "housing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6412,9 +5829,7 @@ window.decks.en_nouns = [
     "ru": "высота",
     "uk": "висота",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6435,9 +5850,7 @@ window.decks.en_nouns = [
     "ru": "глубина",
     "uk": "глибина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6458,9 +5871,7 @@ window.decks.en_nouns = [
     "ru": "размер",
     "uk": "розмір",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6481,9 +5892,7 @@ window.decks.en_nouns = [
     "ru": "длина",
     "uk": "довжина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6504,9 +5913,7 @@ window.decks.en_nouns = [
     "ru": "ширина",
     "uk": "ширина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6527,9 +5934,7 @@ window.decks.en_nouns = [
     "ru": "толщина",
     "uk": "товщина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6550,9 +5955,7 @@ window.decks.en_nouns = [
     "ru": "число",
     "uk": "число",
     "level": "B2",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6573,9 +5976,7 @@ window.decks.en_nouns = [
     "ru": "номер",
     "uk": "номер",
     "level": "B2",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6596,9 +5997,7 @@ window.decks.en_nouns = [
     "ru": "количество",
     "uk": "кількість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6619,9 +6018,7 @@ window.decks.en_nouns = [
     "ru": "пара",
     "uk": "пара",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6642,9 +6039,7 @@ window.decks.en_nouns = [
     "ru": "группа",
     "uk": "група",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6665,9 +6060,7 @@ window.decks.en_nouns = [
     "ru": "ряд",
     "uk": "ряд",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6688,10 +6081,7 @@ window.decks.en_nouns = [
     "ru": "список",
     "uk": "список",
     "level": "B1",
-    "topics": [
-      "education",
-      "science"
-    ],
+    "topics": ["education", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6712,9 +6102,7 @@ window.decks.en_nouns = [
     "ru": "начало",
     "uk": "початок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6735,9 +6123,7 @@ window.decks.en_nouns = [
     "ru": "конец",
     "uk": "кінець",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6758,9 +6144,7 @@ window.decks.en_nouns = [
     "ru": "продолжение",
     "uk": "продовження",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6781,10 +6165,7 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "B2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6805,9 +6186,7 @@ window.decks.en_nouns = [
     "ru": "назначение",
     "uk": "призначення",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6828,10 +6207,7 @@ window.decks.en_nouns = [
     "ru": "задание",
     "uk": "завдання",
     "level": "B2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6852,10 +6228,7 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B2",
-    "topics": [
-      "ethics",
-      "work"
-    ],
+    "topics": ["ethics", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6876,10 +6249,7 @@ window.decks.en_nouns = [
     "ru": "план",
     "uk": "план",
     "level": "B2",
-    "topics": [
-      "business",
-      "education"
-    ],
+    "topics": ["business", "education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6900,9 +6270,7 @@ window.decks.en_nouns = [
     "ru": "проект",
     "uk": "проєкт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6923,9 +6291,7 @@ window.decks.en_nouns = [
     "ru": "стратегия",
     "uk": "стратегія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6946,10 +6312,7 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "B2",
-    "topics": [
-      "work",
-      "psychology"
-    ],
+    "topics": ["psychology", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6970,9 +6333,7 @@ window.decks.en_nouns = [
     "ru": "попытка",
     "uk": "спроба",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6993,9 +6354,7 @@ window.decks.en_nouns = [
     "ru": "успех",
     "uk": "успіх",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7016,10 +6375,7 @@ window.decks.en_nouns = [
     "ru": "результат",
     "uk": "результат",
     "level": "B1",
-    "topics": [
-      "general",
-      "science"
-    ],
+    "topics": ["general", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7040,9 +6396,7 @@ window.decks.en_nouns = [
     "ru": "прибыль",
     "uk": "прибуток",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7063,9 +6417,7 @@ window.decks.en_nouns = [
     "ru": "потеря",
     "uk": "втрата",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7086,9 +6438,7 @@ window.decks.en_nouns = [
     "ru": "преимущество",
     "uk": "перевага",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7109,9 +6459,7 @@ window.decks.en_nouns = [
     "ru": "недостаток",
     "uk": "недолік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7132,9 +6480,7 @@ window.decks.en_nouns = [
     "ru": "возможность",
     "uk": "можливість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7155,9 +6501,7 @@ window.decks.en_nouns = [
     "ru": "вероятность",
     "uk": "ймовірність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7178,10 +6522,7 @@ window.decks.en_nouns = [
     "ru": "опасность",
     "uk": "небезпека",
     "level": "B2",
-    "topics": [
-      "safety",
-      "law"
-    ],
+    "topics": ["law", "safety"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7202,10 +6543,7 @@ window.decks.en_nouns = [
     "ru": "риск",
     "uk": "ризик",
     "level": "B2",
-    "topics": [
-      "safety",
-      "law"
-    ],
+    "topics": ["law", "safety"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7226,9 +6564,7 @@ window.decks.en_nouns = [
     "ru": "шанс",
     "uk": "шанс",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7249,9 +6585,7 @@ window.decks.en_nouns = [
     "ru": "выборы",
     "uk": "вибори",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7272,10 +6606,7 @@ window.decks.en_nouns = [
     "ru": "голос",
     "uk": "голос",
     "level": "B1",
-    "topics": [
-      "communication",
-      "politics"
-    ],
+    "topics": ["communication", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7296,9 +6627,7 @@ window.decks.en_nouns = [
     "ru": "большинство",
     "uk": "більшість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7319,9 +6648,7 @@ window.decks.en_nouns = [
     "ru": "меньшинство",
     "uk": "меншість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7342,9 +6669,7 @@ window.decks.en_nouns = [
     "ru": "общество",
     "uk": "суспільство",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7365,9 +6690,7 @@ window.decks.en_nouns = [
     "ru": "сообщество",
     "uk": "спільнота",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7388,9 +6711,7 @@ window.decks.en_nouns = [
     "ru": "организация",
     "uk": "організація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7411,9 +6732,7 @@ window.decks.en_nouns = [
     "ru": "компания",
     "uk": "компанія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7434,9 +6753,7 @@ window.decks.en_nouns = [
     "ru": "предприятие",
     "uk": "підприємство",
     "level": "B2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7457,9 +6774,7 @@ window.decks.en_nouns = [
     "ru": "отдел",
     "uk": "відділ",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7480,9 +6795,7 @@ window.decks.en_nouns = [
     "ru": "шеф",
     "uk": "шеф",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7503,9 +6816,7 @@ window.decks.en_nouns = [
     "ru": "сотрудник",
     "uk": "співробітник",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7526,9 +6837,7 @@ window.decks.en_nouns = [
     "ru": "коллега",
     "uk": "колега",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7549,9 +6858,7 @@ window.decks.en_nouns = [
     "ru": "клиент",
     "uk": "клієнт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7572,9 +6879,7 @@ window.decks.en_nouns = [
     "ru": "клиентка",
     "uk": "клієнтка",
     "level": "B2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7595,10 +6900,7 @@ window.decks.en_nouns = [
     "ru": "заказ",
     "uk": "замовлення",
     "level": "A2",
-    "topics": [
-      "shopping",
-      "restaurant"
-    ],
+    "topics": ["restaurant", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7619,10 +6921,7 @@ window.decks.en_nouns = [
     "ru": "договор",
     "uk": "договір",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7643,10 +6942,7 @@ window.decks.en_nouns = [
     "ru": "магазин",
     "uk": "магазин",
     "level": "B2",
-    "topics": [
-      "economy",
-      "shopping"
-    ],
+    "topics": ["economy", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7667,9 +6963,7 @@ window.decks.en_nouns = [
     "ru": "лавка",
     "uk": "крамниця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7690,10 +6984,7 @@ window.decks.en_nouns = [
     "ru": "рынок",
     "uk": "ринок",
     "level": "B2",
-    "topics": [
-      "economy",
-      "shopping"
-    ],
+    "topics": ["economy", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7714,9 +7005,7 @@ window.decks.en_nouns = [
     "ru": "торговый центр",
     "uk": "торговий центр",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7737,9 +7026,7 @@ window.decks.en_nouns = [
     "ru": "касса",
     "uk": "каса",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7760,9 +7047,7 @@ window.decks.en_nouns = [
     "ru": "цена",
     "uk": "ціна",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7783,10 +7068,7 @@ window.decks.en_nouns = [
     "ru": "ценность",
     "uk": "вартість",
     "level": "B2",
-    "topics": [
-      "economy",
-      "planning"
-    ],
+    "topics": ["economy", "planning"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7807,10 +7089,7 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "B2",
-    "topics": [
-      "business",
-      "economy"
-    ],
+    "topics": ["business", "economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7831,9 +7110,7 @@ window.decks.en_nouns = [
     "ru": "спрос",
     "uk": "попит",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7854,9 +7131,7 @@ window.decks.en_nouns = [
     "ru": "товар",
     "uk": "товар",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7877,9 +7152,7 @@ window.decks.en_nouns = [
     "ru": "продукт",
     "uk": "продукт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7900,9 +7173,7 @@ window.decks.en_nouns = [
     "ru": "качество",
     "uk": "якість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7923,10 +7194,7 @@ window.decks.en_nouns = [
     "ru": "поставка",
     "uk": "поставка",
     "level": "B2",
-    "topics": [
-      "logistics",
-      "it"
-    ],
+    "topics": ["it", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7947,10 +7215,7 @@ window.decks.en_nouns = [
     "ru": "замовлення",
     "uk": "замовлення",
     "level": "A2",
-    "topics": [
-      "shopping",
-      "restaurant"
-    ],
+    "topics": ["restaurant", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7971,10 +7236,7 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "B2",
-    "topics": [
-      "finance",
-      "shopping"
-    ],
+    "topics": ["finance", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7995,9 +7257,7 @@ window.decks.en_nouns = [
     "ru": "квитанция",
     "uk": "квитанція",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8018,9 +7278,7 @@ window.decks.en_nouns = [
     "ru": "скидка",
     "uk": "знижка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8041,9 +7299,7 @@ window.decks.en_nouns = [
     "ru": "гарантия",
     "uk": "гарантія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8064,10 +7320,7 @@ window.decks.en_nouns = [
     "ru": "сервис",
     "uk": "сервіс",
     "level": "B2",
-    "topics": [
-      "it",
-      "business"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8088,10 +7341,7 @@ window.decks.en_nouns = [
     "ru": "реклама",
     "uk": "реклама",
     "level": "B2",
-    "topics": [
-      "economy",
-      "media"
-    ],
+    "topics": ["economy", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8112,9 +7362,7 @@ window.decks.en_nouns = [
     "ru": "бренд",
     "uk": "бренд",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8135,9 +7383,7 @@ window.decks.en_nouns = [
     "ru": "этикетка",
     "uk": "етикетка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8158,9 +7404,7 @@ window.decks.en_nouns = [
     "ru": "упаковка",
     "uk": "упаковка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8181,9 +7425,7 @@ window.decks.en_nouns = [
     "ru": "склад",
     "uk": "склад",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8204,9 +7446,7 @@ window.decks.en_nouns = [
     "ru": "отправка",
     "uk": "відправлення",
     "level": "B2",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8227,10 +7467,7 @@ window.decks.en_nouns = [
     "ru": "срок поставки",
     "uk": "час поставки",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8251,9 +7488,7 @@ window.decks.en_nouns = [
     "ru": "кривая спроса",
     "uk": "крива попиту",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8274,9 +7509,7 @@ window.decks.en_nouns = [
     "ru": "конкуренция",
     "uk": "конкуренція",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8297,9 +7530,7 @@ window.decks.en_nouns = [
     "ru": "доля рынка",
     "uk": "частка ринку",
     "level": "B2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8320,10 +7551,7 @@ window.decks.en_nouns = [
     "ru": "налог",
     "uk": "податок",
     "level": "B2",
-    "topics": [
-      "economy",
-      "law"
-    ],
+    "topics": ["economy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8344,10 +7572,7 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B2",
-    "topics": [
-      "economy",
-      "finance"
-    ],
+    "topics": ["economy", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8368,9 +7593,7 @@ window.decks.en_nouns = [
     "ru": "расход",
     "uk": "витрата",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8391,10 +7614,7 @@ window.decks.en_nouns = [
     "ru": "доход",
     "uk": "дохід",
     "level": "B2",
-    "topics": [
-      "economy",
-      "finance"
-    ],
+    "topics": ["economy", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8415,9 +7635,7 @@ window.decks.en_nouns = [
     "ru": "долги",
     "uk": "борги",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8438,9 +7656,7 @@ window.decks.en_nouns = [
     "ru": "кредит",
     "uk": "кредит",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8461,9 +7677,7 @@ window.decks.en_nouns = [
     "ru": "банк",
     "uk": "банк",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8484,10 +7698,7 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "B2",
-    "topics": [
-      "finance",
-      "money"
-    ],
+    "topics": ["finance", "money"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8508,9 +7719,7 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переказ",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8531,9 +7740,7 @@ window.decks.en_nouns = [
     "ru": "наличные",
     "uk": "готівка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8554,10 +7761,7 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "картка",
     "level": "B2",
-    "topics": [
-      "finance",
-      "daily life"
-    ],
+    "topics": ["daily life", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8578,9 +7782,7 @@ window.decks.en_nouns = [
     "ru": "торговый автомат",
     "uk": "торговий автомат",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8601,9 +7803,7 @@ window.decks.en_nouns = [
     "ru": "процентная ставка",
     "uk": "відсоткова ставка",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8624,9 +7824,7 @@ window.decks.en_nouns = [
     "ru": "инфляция",
     "uk": "інфляція",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8647,9 +7845,7 @@ window.decks.en_nouns = [
     "ru": "дефляция",
     "uk": "дефляція",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8670,10 +7866,7 @@ window.decks.en_nouns = [
     "ru": "обменный курс",
     "uk": "обмінний курс",
     "level": "B2",
-    "topics": [
-      "statistics",
-      "finance"
-    ],
+    "topics": ["finance", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8694,9 +7887,7 @@ window.decks.en_nouns = [
     "ru": "валюта",
     "uk": "валюта",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8717,10 +7908,7 @@ window.decks.en_nouns = [
     "ru": "биржа",
     "uk": "біржа",
     "level": "B2",
-    "topics": [
-      "business",
-      "logistics"
-    ],
+    "topics": ["business", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8741,10 +7929,7 @@ window.decks.en_nouns = [
     "ru": "акция",
     "uk": "акція",
     "level": "B2",
-    "topics": [
-      "business",
-      "logistics"
-    ],
+    "topics": ["business", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8765,10 +7950,7 @@ window.decks.en_nouns = [
     "ru": "доля",
     "uk": "частка",
     "level": "B2",
-    "topics": [
-      "finance",
-      "business"
-    ],
+    "topics": ["business", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8789,9 +7971,7 @@ window.decks.en_nouns = [
     "ru": "политика",
     "uk": "політика",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8812,9 +7992,7 @@ window.decks.en_nouns = [
     "ru": "партия",
     "uk": "партія",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8835,9 +8013,7 @@ window.decks.en_nouns = [
     "ru": "избирательная кампания",
     "uk": "виборча кампанія",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8858,9 +8034,7 @@ window.decks.en_nouns = [
     "ru": "парламент",
     "uk": "парламент",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8881,9 +8055,7 @@ window.decks.en_nouns = [
     "ru": "демократия",
     "uk": "демократія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8904,9 +8076,7 @@ window.decks.en_nouns = [
     "ru": "диктатура",
     "uk": "диктатура",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8927,9 +8097,7 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "кордон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8950,9 +8118,7 @@ window.decks.en_nouns = [
     "ru": "паспорт",
     "uk": "паспорт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8973,9 +8139,7 @@ window.decks.en_nouns = [
     "ru": "виза",
     "uk": "віза",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8996,9 +8160,7 @@ window.decks.en_nouns = [
     "ru": "гражданин",
     "uk": "громадянин",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9019,10 +8181,7 @@ window.decks.en_nouns = [
     "ru": "ведомство",
     "uk": "установа",
     "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "law"
-    ],
+    "topics": ["bureaucracy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9043,10 +8202,7 @@ window.decks.en_nouns = [
     "ru": "бланк",
     "uk": "формуляр",
     "level": "B2",
-    "topics": [
-      "data",
-      "law"
-    ],
+    "topics": ["data", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9067,9 +8223,7 @@ window.decks.en_nouns = [
     "ru": "регистрация",
     "uk": "реєстрація",
     "level": "B2",
-    "topics": [
-      "administration"
-    ],
+    "topics": ["administration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9090,9 +8244,7 @@ window.decks.en_nouns = [
     "ru": "снятие с учёта",
     "uk": "зняття з обліку",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9113,10 +8265,7 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "migration"
-    ],
+    "topics": ["bureaucracy", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9137,10 +8286,7 @@ window.decks.en_nouns = [
     "ru": "заявление",
     "uk": "заява",
     "level": "B2",
-    "topics": [
-      "law",
-      "data"
-    ],
+    "topics": ["data", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9161,9 +8307,7 @@ window.decks.en_nouns = [
     "ru": "уведомление",
     "uk": "повідомлення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9184,10 +8328,7 @@ window.decks.en_nouns = [
     "ru": "срок",
     "uk": "строк",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9208,10 +8349,7 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B2",
-    "topics": [
-      "administration",
-      "law"
-    ],
+    "topics": ["administration", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9232,10 +8370,7 @@ window.decks.en_nouns = [
     "ru": "вид",
     "uk": "вид",
     "level": "B2",
-    "topics": [
-      "communication",
-      "opinion"
-    ],
+    "topics": ["communication", "opinion"],
     "examples": [
       {
         "L2": "The view from the balcony is amazing at sunset.",
@@ -9256,9 +8391,7 @@ window.decks.en_nouns = [
     "ru": "опыт",
     "uk": "досвід",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "She has a lot of experience in sales.",
@@ -9279,9 +8412,7 @@ window.decks.en_nouns = [
     "ru": "знакомый",
     "uk": "знайомий",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "He is just a work acquaintance, not a close friend.",
@@ -9302,9 +8433,7 @@ window.decks.en_nouns = [
     "ru": "отношения",
     "uk": "стосунки",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "Their relationship has become much better lately.",
@@ -9325,9 +8454,7 @@ window.decks.en_nouns = [
     "ru": "связь",
     "uk": "зв’язок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "The connection between stress and sleep is very strong.",
@@ -9348,10 +8475,7 @@ window.decks.en_nouns = [
     "ru": "уход",
     "uk": "догляд",
     "level": "B2",
-    "topics": [
-      "health",
-      "work"
-    ],
+    "topics": ["health", "work"],
     "examples": [
       {
         "L2": "Good care is important for elderly people.",
@@ -9372,9 +8496,7 @@ window.decks.en_nouns = [
     "ru": "консультация",
     "uk": "консультація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "You can book a free consultation online.",
@@ -9395,10 +8517,7 @@ window.decks.en_nouns = [
     "ru": "поддержка",
     "uk": "підтримка",
     "level": "B2",
-    "topics": [
-      "society",
-      "politics"
-    ],
+    "topics": ["politics", "society"],
     "examples": [
       {
         "L2": "Thank you for your support during this project.",
@@ -9419,10 +8538,7 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "migration"
-    ],
+    "topics": ["bureaucracy", "migration"],
     "examples": [
       {
         "L2": "I finally got permission to work from home.",
@@ -9443,9 +8559,7 @@ window.decks.en_nouns = [
     "ru": "история",
     "uk": "історія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "She told us a funny story about her childhood.",
@@ -9466,9 +8580,7 @@ window.decks.en_nouns = [
     "ru": "описание",
     "uk": "опис",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "examples": [
       {
         "L2": "Please add a short description of your project.",
@@ -9489,9 +8601,7 @@ window.decks.en_nouns = [
     "ru": "объяснение",
     "uk": "пояснення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "The teacher gave a clear explanation of the rule.",
@@ -9512,9 +8622,7 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переклад",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "examples": [
       {
         "L2": "The translation sounds very natural in English.",
@@ -9535,9 +8643,7 @@ window.decks.en_nouns = [
     "ru": "сравнение",
     "uk": "порівняння",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "In comparison with last year, our costs are lower.",
@@ -9558,9 +8664,7 @@ window.decks.en_nouns = [
     "ru": "обзор",
     "uk": "огляд",
     "level": "B1",
-    "topics": [
-      "information"
-    ],
+    "topics": ["information"],
     "examples": [
       {
         "L2": "This chart gives a quick overview of the results.",
@@ -9581,9 +8685,7 @@ window.decks.en_nouns = [
     "ru": "уведомление",
     "uk": "сповіщення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "I got a notification about the meeting on my phone.",
@@ -9604,9 +8706,7 @@ window.decks.en_nouns = [
     "ru": "сообщение",
     "uk": "повідомлення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "I sent you a message on WhatsApp.",
@@ -9627,9 +8727,7 @@ window.decks.en_nouns = [
     "ru": "заметка",
     "uk": "нотатка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "I wrote a short note on a sticky pad.",
@@ -9650,10 +8748,7 @@ window.decks.en_nouns = [
     "ru": "объявление",
     "uk": "оголошення",
     "level": "B2",
-    "topics": [
-      "media",
-      "work"
-    ],
+    "topics": ["media", "work"],
     "examples": [
       {
         "L2": "The school made an announcement about the new timetable.",
@@ -9674,9 +8769,7 @@ window.decks.en_nouns = [
     "ru": "приглашение",
     "uk": "запрошення",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "examples": [
       {
         "L2": "Thanks for your invitation to the party.",
@@ -9697,10 +8790,7 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B2",
-    "topics": [
-      "law",
-      "communication"
-    ],
+    "topics": ["communication", "law"],
     "examples": [
       {
         "L2": "We need your written consent before we start.",
@@ -9721,10 +8811,7 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B2",
-    "topics": [
-      "communication",
-      "law"
-    ],
+    "topics": ["communication", "law"],
     "examples": [
       {
         "L2": "He was disappointed after the rejection of his idea.",
@@ -9745,9 +8832,7 @@ window.decks.en_nouns = [
     "ru": "жалоба",
     "uk": "скарга",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "You can file a complaint using this online form.",
@@ -9768,10 +8853,7 @@ window.decks.en_nouns = [
     "ru": "дискуссия",
     "uk": "дискусія",
     "level": "B2",
-    "topics": [
-      "communication",
-      "conflict"
-    ],
+    "topics": ["communication", "conflict"],
     "examples": [
       {
         "L2": "We had a long discussion about the budget.",
@@ -9792,9 +8874,7 @@ window.decks.en_nouns = [
     "ru": "дебаты",
     "uk": "дебати",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "The TV debate lasted more than two hours.",
@@ -9815,9 +8895,7 @@ window.decks.en_nouns = [
     "ru": "переговоры",
     "uk": "переговори",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "The salary negotiation went very well.",
@@ -9838,10 +8916,7 @@ window.decks.en_nouns = [
     "ru": "соглашение",
     "uk": "угода",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "examples": [
       {
         "L2": "Both sides signed the agreement yesterday.",
@@ -9862,9 +8937,7 @@ window.decks.en_nouns = [
     "ru": "контрагент",
     "uk": "контрагент",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "examples": [
       {
         "L2": "The contracting party is responsible for the delivery.",
@@ -9885,9 +8958,7 @@ window.decks.en_nouns = [
     "ru": "угроза",
     "uk": "загроза",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "Climate change is a serious threat to many species.",
@@ -9908,10 +8979,7 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B1",
-    "topics": [
-      "logic",
-      "education"
-    ],
+    "topics": ["education", "logic"],
     "examples": [
       {
         "L2": "Basic computer skills are a prerequisite for this course.",
@@ -9932,10 +9000,7 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B2",
-    "topics": [
-      "it",
-      "work"
-    ],
+    "topics": ["it", "work"],
     "examples": [
       {
         "L2": "A driving licence is a requirement for this job.",
@@ -9956,10 +9021,7 @@ window.decks.en_nouns = [
     "ru": "цепочка предпосылок",
     "uk": "ланцюг передумов",
     "level": "B2",
-    "topics": [
-      "business",
-      "logistics"
-    ],
+    "topics": ["business", "logistics"],
     "examples": [
       {
         "L2": "In big projects there is often a long chain of prerequisites.",
@@ -9980,10 +9042,7 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B2",
-    "topics": [
-      "psychology",
-      "daily life"
-    ],
+    "topics": ["daily life", "psychology"],
     "examples": [
       {
         "L2": "Drinking coffee in the morning is my favorite habit.",
@@ -10004,10 +9063,7 @@ window.decks.en_nouns = [
     "ru": "способность",
     "uk": "здатність",
     "level": "B2",
-    "topics": [
-      "network",
-      "it"
-    ],
+    "topics": ["it", "network"],
     "examples": [
       {
         "L2": "She has the ability to stay calm in difficult situations.",
@@ -10028,9 +9084,7 @@ window.decks.en_nouns = [
     "ru": "навык",
     "uk": "навичка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "Public speaking is an important skill in this job.",
@@ -10051,9 +9105,7 @@ window.decks.en_nouns = [
     "ru": "воспоминание",
     "uk": "спогад",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "This song brings back a nice memory from my childhood.",
@@ -10074,10 +9126,7 @@ window.decks.en_nouns = [
     "ru": "значение",
     "uk": "значення",
     "level": "B2",
-    "topics": [
-      "statistics",
-      "math"
-    ],
+    "topics": ["math", "statistics"],
     "examples": [
       {
         "L2": "What is the meaning of this expression?",
@@ -10098,9 +9147,7 @@ window.decks.en_nouns = [
     "ru": "рекомендация",
     "uk": "рекомендація",
     "level": "C1",
-    "topics": [
-      "medicine"
-    ],
+    "topics": ["medicine"],
     "examples": [
       {
         "L2": "Can you give me a recommendation for a good book?",
@@ -10121,10 +9168,7 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "migration"
-    ],
+    "topics": ["bureaucracy", "migration"],
     "examples": [
       {
         "L2": "We are still waiting for the authorization from the city.",
@@ -10145,9 +9189,7 @@ window.decks.en_nouns = [
     "ru": "одобрение",
     "uk": "схвалення",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "examples": [
       {
         "L2": "The project needs the approval of the manager.",
@@ -10168,10 +9210,7 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": [
-      "communication",
-      "ui"
-    ],
+    "topics": ["communication", "ui"],
     "examples": [
       {
         "L2": "The teacher gave us a small hint for the exam.",
@@ -10192,9 +9231,7 @@ window.decks.en_nouns = [
     "ru": "доказательство",
     "uk": "доказ",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "examples": [
       {
         "L2": "There is no proof that this method works.",
@@ -10215,9 +9252,7 @@ window.decks.en_nouns = [
     "ru": "последствие",
     "uk": "наслідок",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "examples": [
       {
         "L2": "Lack of sleep has a negative consequence for your health.",
@@ -10238,9 +9273,7 @@ window.decks.en_nouns = [
     "ru": "причина",
     "uk": "причина",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "examples": [
       {
         "L2": "Stress can be a cause of headaches.",
@@ -10261,10 +9294,7 @@ window.decks.en_nouns = [
     "ru": "эффект",
     "uk": "ефект",
     "level": "B2",
-    "topics": [
-      "science",
-      "health"
-    ],
+    "topics": ["health", "science"],
     "examples": [
       {
         "L2": "The medicine had no effect on his pain.",
@@ -10285,9 +9315,7 @@ window.decks.en_nouns = [
     "ru": "проверка",
     "uk": "перевірка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "examples": [
       {
         "L2": "There will be a safety inspection next week.",
@@ -10308,9 +9336,7 @@ window.decks.en_nouns = [
     "ru": "экзамен",
     "uk": "іспит",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "examples": [
       {
         "L2": "I have an important exam tomorrow.",
@@ -10331,9 +9357,7 @@ window.decks.en_nouns = [
     "ru": "письменный экзамен",
     "uk": "письмовий іспит",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "examples": [
       {
         "L2": "The written exam lasts ninety minutes.",
@@ -10354,10 +9378,7 @@ window.decks.en_nouns = [
     "ru": "лекция",
     "uk": "лекція",
     "level": "B1",
-    "topics": [
-      "communication",
-      "science"
-    ],
+    "topics": ["communication", "science"],
     "examples": [
       {
         "L2": "The lecture starts at nine o'clock.",
@@ -10378,9 +9399,7 @@ window.decks.en_nouns = [
     "ru": "семинар",
     "uk": "семінар",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10401,9 +9420,7 @@ window.decks.en_nouns = [
     "ru": "стажировка",
     "uk": "стажування",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10424,10 +9441,7 @@ window.decks.en_nouns = [
     "ru": "курсовая работа",
     "uk": "курсова робота",
     "level": "B2",
-    "topics": [
-      "work",
-      "education"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10448,10 +9462,7 @@ window.decks.en_nouns = [
     "ru": "выпускная работа",
     "uk": "випускна робота",
     "level": "B2",
-    "topics": [
-      "work",
-      "education"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10472,10 +9483,7 @@ window.decks.en_nouns = [
     "ru": "заявление на работу",
     "uk": "заява на роботу",
     "level": "B2",
-    "topics": [
-      "law",
-      "migration"
-    ],
+    "topics": ["law", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10496,9 +9504,7 @@ window.decks.en_nouns = [
     "ru": "собеседование",
     "uk": "співбесіда",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10519,10 +9525,7 @@ window.decks.en_nouns = [
     "ru": "приём на работу",
     "uk": "прийом на роботу",
     "level": "B2",
-    "topics": [
-      "migration",
-      "work"
-    ],
+    "topics": ["migration", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10543,10 +9546,7 @@ window.decks.en_nouns = [
     "ru": "повышение",
     "uk": "підвищення",
     "level": "B2",
-    "topics": [
-      "education",
-      "economics"
-    ],
+    "topics": ["economics", "education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10567,9 +9567,7 @@ window.decks.en_nouns = [
     "ru": "увольнение",
     "uk": "звільнення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10590,9 +9588,7 @@ window.decks.en_nouns = [
     "ru": "резюме",
     "uk": "резюме",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10613,9 +9609,7 @@ window.decks.en_nouns = [
     "ru": "сопроводительное письмо",
     "uk": "супровідний лист",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10636,9 +9630,7 @@ window.decks.en_nouns = [
     "ru": "отрасль",
     "uk": "галузь",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10659,9 +9651,7 @@ window.decks.en_nouns = [
     "ru": "сфера",
     "uk": "сфера",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10682,10 +9672,7 @@ window.decks.en_nouns = [
     "ru": "смена",
     "uk": "зміна",
     "level": "B2",
-    "topics": [
-      "general",
-      "environment"
-    ],
+    "topics": ["environment", "general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10706,9 +9693,7 @@ window.decks.en_nouns = [
     "ru": "руководство",
     "uk": "керівництво",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10729,9 +9714,7 @@ window.decks.en_nouns = [
     "ru": "головной офис",
     "uk": "головний офіс",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10752,9 +9735,7 @@ window.decks.en_nouns = [
     "ru": "филиал",
     "uk": "філія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10775,9 +9756,7 @@ window.decks.en_nouns = [
     "ru": "банковский филиал",
     "uk": "банківська філія",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10798,10 +9777,7 @@ window.decks.en_nouns = [
     "ru": "папка соискателя",
     "uk": "папка заявника",
     "level": "B2",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10822,10 +9798,7 @@ window.decks.en_nouns = [
     "ru": "тендерное объявление",
     "uk": "тендерне оголошення",
     "level": "B2",
-    "topics": [
-      "media",
-      "work"
-    ],
+    "topics": ["media", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10846,9 +9819,7 @@ window.decks.en_nouns = [
     "ru": "директива",
     "uk": "директива",
     "level": "C1",
-    "topics": [
-      "medicine"
-    ],
+    "topics": ["medicine"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10869,10 +9840,7 @@ window.decks.en_nouns = [
     "ru": "регламент",
     "uk": "припис",
     "level": "B2",
-    "topics": [
-      "it",
-      "law"
-    ],
+    "topics": ["it", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10893,9 +9861,7 @@ window.decks.en_nouns = [
     "ru": "мера",
     "uk": "захід",
     "level": "A2",
-    "topics": [
-      "events"
-    ],
+    "topics": ["events"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10916,9 +9882,7 @@ window.decks.en_nouns = [
     "ru": "внедрение",
     "uk": "впровадження",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10939,9 +9903,7 @@ window.decks.en_nouns = [
     "ru": "исполнение",
     "uk": "виконання",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10962,9 +9924,7 @@ window.decks.en_nouns = [
     "ru": "обслуживание",
     "uk": "обслуговування",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10985,9 +9945,7 @@ window.decks.en_nouns = [
     "ru": "содержание",
     "uk": "утримання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11008,9 +9966,7 @@ window.decks.en_nouns = [
     "ru": "неисправность",
     "uk": "несправність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11031,10 +9987,7 @@ window.decks.en_nouns = [
     "ru": "сообщение об ошибке",
     "uk": "повідомлення про помилку",
     "level": "B2",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11055,10 +10008,7 @@ window.decks.en_nouns = [
     "ru": "справочная",
     "uk": "довідка",
     "level": "B2",
-    "topics": [
-      "communication",
-      "administration"
-    ],
+    "topics": ["administration", "communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11079,9 +10029,7 @@ window.decks.en_nouns = [
     "ru": "обратная связь",
     "uk": "зворотний зв’язок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11102,10 +10050,7 @@ window.decks.en_nouns = [
     "ru": "список требований",
     "uk": "список вимог",
     "level": "B1",
-    "topics": [
-      "education",
-      "science"
-    ],
+    "topics": ["education", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11126,10 +10071,7 @@ window.decks.en_nouns = [
     "ru": "срок поставки",
     "uk": "термін поставки",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11150,10 +10092,7 @@ window.decks.en_nouns = [
     "ru": "поставщик",
     "uk": "постачальник",
     "level": "B2",
-    "topics": [
-      "it",
-      "business"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11174,9 +10113,7 @@ window.decks.en_nouns = [
     "ru": "производитель",
     "uk": "виробник",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11197,9 +10134,7 @@ window.decks.en_nouns = [
     "ru": "потребитель",
     "uk": "споживач",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11220,9 +10155,7 @@ window.decks.en_nouns = [
     "ru": "пользователь",
     "uk": "користувач",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11243,9 +10176,7 @@ window.decks.en_nouns = [
     "ru": "целевая аудитория",
     "uk": "цільова аудиторія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11266,10 +10197,7 @@ window.decks.en_nouns = [
     "ru": "возврат",
     "uk": "повернення",
     "level": "B2",
-    "topics": [
-      "shopping",
-      "logistics"
-    ],
+    "topics": ["logistics", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11290,9 +10218,7 @@ window.decks.en_nouns = [
     "ru": "обмен",
     "uk": "обмін",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11313,9 +10239,7 @@ window.decks.en_nouns = [
     "ru": "гарантия",
     "uk": "гарантія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11336,9 +10260,7 @@ window.decks.en_nouns = [
     "ru": "предпросмотр",
     "uk": "попередній перегляд",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11359,9 +10281,7 @@ window.decks.en_nouns = [
     "ru": "мнение",
     "uk": "думка",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11382,10 +10302,7 @@ window.decks.en_nouns = [
     "ru": "представление",
     "uk": "представлення",
     "level": "B2",
-    "topics": [
-      "information",
-      "it"
-    ],
+    "topics": ["information", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11406,10 +10323,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": [
-      "business",
-      "work"
-    ],
+    "topics": ["business", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11430,9 +10344,7 @@ window.decks.en_nouns = [
     "ru": "расчёт",
     "uk": "розрахунок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11453,9 +10365,7 @@ window.decks.en_nouns = [
     "ru": "отчёт",
     "uk": "звіт",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11476,9 +10386,7 @@ window.decks.en_nouns = [
     "ru": "статистика",
     "uk": "статистика",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11499,9 +10407,7 @@ window.decks.en_nouns = [
     "ru": "таблица",
     "uk": "таблиця",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11522,9 +10428,7 @@ window.decks.en_nouns = [
     "ru": "график",
     "uk": "графік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11545,9 +10449,7 @@ window.decks.en_nouns = [
     "ru": "диаграмма",
     "uk": "діаграма",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11568,10 +10470,7 @@ window.decks.en_nouns = [
     "ru": "провайдер",
     "uk": "постачальник послуг",
     "level": "B2",
-    "topics": [
-      "it",
-      "business"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11592,9 +10491,7 @@ window.decks.en_nouns = [
     "ru": "доступ",
     "uk": "доступ",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11615,9 +10512,7 @@ window.decks.en_nouns = [
     "ru": "логин",
     "uk": "логін",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11638,9 +10533,7 @@ window.decks.en_nouns = [
     "ru": "выход из системы",
     "uk": "вихід із системи",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11661,9 +10554,7 @@ window.decks.en_nouns = [
     "ru": "пароль",
     "uk": "пароль",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11684,9 +10575,7 @@ window.decks.en_nouns = [
     "ru": "имя пользователя",
     "uk": "ім’я користувача",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11707,10 +10596,7 @@ window.decks.en_nouns = [
     "ru": "настройка безопасности",
     "uk": "налаштування безпеки",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11731,9 +10617,7 @@ window.decks.en_nouns = [
     "ru": "политика конфиденциальности",
     "uk": "політика конфіденційності",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11754,9 +10638,7 @@ window.decks.en_nouns = [
     "ru": "сессия",
     "uk": "сесія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11777,9 +10659,7 @@ window.decks.en_nouns = [
     "ru": "блокировка аккаунта",
     "uk": "блокування акаунта",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11800,9 +10680,7 @@ window.decks.en_nouns = [
     "ru": "доступ к файлу",
     "uk": "доступ до файлу",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11823,9 +10701,7 @@ window.decks.en_nouns = [
     "ru": "файл",
     "uk": "файл",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11846,9 +10722,7 @@ window.decks.en_nouns = [
     "ru": "папка",
     "uk": "тека",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11869,9 +10743,7 @@ window.decks.en_nouns = [
     "ru": "каталог",
     "uk": "каталог",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11892,9 +10764,7 @@ window.decks.en_nouns = [
     "ru": "резервное копирование",
     "uk": "резервне копіювання",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11915,9 +10785,7 @@ window.decks.en_nouns = [
     "ru": "восстановление",
     "uk": "відновлення",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11938,9 +10806,7 @@ window.decks.en_nouns = [
     "ru": "версия",
     "uk": "версія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11961,9 +10827,7 @@ window.decks.en_nouns = [
     "ru": "обновление",
     "uk": "оновлення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11984,10 +10848,7 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": [
-      "it",
-      "society"
-    ],
+    "topics": ["it", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12008,10 +10869,7 @@ window.decks.en_nouns = [
     "ru": "сообщение об ошибке",
     "uk": "повідомлення про помилку",
     "level": "B2",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12032,10 +10890,7 @@ window.decks.en_nouns = [
     "ru": "черновик",
     "uk": "чернетка",
     "level": "B2",
-    "topics": [
-      "design",
-      "work"
-    ],
+    "topics": ["design", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12056,9 +10911,7 @@ window.decks.en_nouns = [
     "ru": "шаблон",
     "uk": "шаблон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12079,9 +10932,7 @@ window.decks.en_nouns = [
     "ru": "настройка",
     "uk": "налаштування",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12102,9 +10953,7 @@ window.decks.en_nouns = [
     "ru": "параметр",
     "uk": "параметр",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12125,9 +10974,7 @@ window.decks.en_nouns = [
     "ru": "опция",
     "uk": "опція",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12148,9 +10995,7 @@ window.decks.en_nouns = [
     "ru": "режим",
     "uk": "режим",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12171,10 +11016,7 @@ window.decks.en_nouns = [
     "ru": "настройка вида",
     "uk": "налаштування вигляду",
     "level": "B2",
-    "topics": [
-      "communication",
-      "opinion"
-    ],
+    "topics": ["communication", "opinion"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12195,9 +11037,7 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12218,10 +11058,7 @@ window.decks.en_nouns = [
     "ru": "расширение",
     "uk": "розширення",
     "level": "B2",
-    "topics": [
-      "it",
-      "law"
-    ],
+    "topics": ["it", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12242,9 +11079,7 @@ window.decks.en_nouns = [
     "ru": "плагин",
     "uk": "плагін",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12265,10 +11100,7 @@ window.decks.en_nouns = [
     "ru": "строка",
     "uk": "рядок",
     "level": "B2",
-    "topics": [
-      "it",
-      "tables"
-    ],
+    "topics": ["it", "tables"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12289,10 +11121,7 @@ window.decks.en_nouns = [
     "ru": "столбец",
     "uk": "стовпчик",
     "level": "B2",
-    "topics": [
-      "it",
-      "tables"
-    ],
+    "topics": ["it", "tables"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12313,9 +11142,7 @@ window.decks.en_nouns = [
     "ru": "ячейка",
     "uk": "комірка",
     "level": "B2",
-    "topics": [
-      "biology"
-    ],
+    "topics": ["biology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12336,10 +11163,7 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B2",
-    "topics": [
-      "data",
-      "it"
-    ],
+    "topics": ["data", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12360,10 +11184,7 @@ window.decks.en_nouns = [
     "ru": "набор данных",
     "uk": "набір даних",
     "level": "B2",
-    "topics": [
-      "data",
-      "it"
-    ],
+    "topics": ["data", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12384,9 +11205,7 @@ window.decks.en_nouns = [
     "ru": "коллекция",
     "uk": "збірка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12407,10 +11226,7 @@ window.decks.en_nouns = [
     "ru": "соотнесение",
     "uk": "віднесення",
     "level": "B2",
-    "topics": [
-      "it",
-      "logic"
-    ],
+    "topics": ["it", "logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12431,10 +11247,7 @@ window.decks.en_nouns = [
     "ru": "сверка данных",
     "uk": "звірка даних",
     "level": "B2",
-    "topics": [
-      "data",
-      "it"
-    ],
+    "topics": ["data", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12455,9 +11268,7 @@ window.decks.en_nouns = [
     "ru": "дедупликация",
     "uk": "дедуплікація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12478,9 +11289,7 @@ window.decks.en_nouns = [
     "ru": "приоритизация",
     "uk": "пріоритизація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12501,10 +11310,7 @@ window.decks.en_nouns = [
     "ru": "порядок",
     "uk": "послідовність",
     "level": "B2",
-    "topics": [
-      "general",
-      "work"
-    ],
+    "topics": ["general", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12525,9 +11331,7 @@ window.decks.en_nouns = [
     "ru": "случайность",
     "uk": "випадковість",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12548,10 +11352,7 @@ window.decks.en_nouns = [
     "ru": "выбор",
     "uk": "вибір",
     "level": "B1",
-    "topics": [
-      "general",
-      "ui"
-    ],
+    "topics": ["general", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12572,9 +11373,7 @@ window.decks.en_nouns = [
     "ru": "комбинация",
     "uk": "комбінація",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12595,9 +11394,7 @@ window.decks.en_nouns = [
     "ru": "вариант",
     "uk": "варіант",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12618,9 +11415,7 @@ window.decks.en_nouns = [
     "ru": "синхронизация",
     "uk": "синхронізація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12641,9 +11436,7 @@ window.decks.en_nouns = [
     "ru": "копия",
     "uk": "копія",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12664,9 +11457,7 @@ window.decks.en_nouns = [
     "ru": "резервная копия",
     "uk": "резервна копія",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12687,9 +11478,7 @@ window.decks.en_nouns = [
     "ru": "повторение",
     "uk": "повторення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12710,10 +11499,7 @@ window.decks.en_nouns = [
     "ru": "уровень сложности",
     "uk": "рівень складності",
     "level": "B2",
-    "topics": [
-      "statistics",
-      "health"
-    ],
+    "topics": ["health", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12734,10 +11520,7 @@ window.decks.en_nouns = [
     "ru": "прогресс",
     "uk": "прогрес",
     "level": "B2",
-    "topics": [
-      "it",
-      "ui"
-    ],
+    "topics": ["it", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12758,9 +11541,7 @@ window.decks.en_nouns = [
     "ru": "регресс",
     "uk": "регрес",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12781,10 +11562,7 @@ window.decks.en_nouns = [
     "ru": "промежуточный результат",
     "uk": "проміжний результат",
     "level": "B1",
-    "topics": [
-      "general",
-      "science"
-    ],
+    "topics": ["general", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12805,9 +11583,7 @@ window.decks.en_nouns = [
     "ru": "ключевой показатель",
     "uk": "ключовий показник",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12828,9 +11604,7 @@ window.decks.en_nouns = [
     "ru": "счётчик",
     "uk": "лічильник",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12851,10 +11625,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": [
-      "business",
-      "work"
-    ],
+    "topics": ["business", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12875,9 +11646,7 @@ window.decks.en_nouns = [
     "ru": "награда",
     "uk": "нагорода",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12898,9 +11667,7 @@ window.decks.en_nouns = [
     "ru": "наказание",
     "uk": "покарання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12921,9 +11688,7 @@ window.decks.en_nouns = [
     "ru": "картотека напоминаний",
     "uk": "картотека нагадувань",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12944,10 +11709,7 @@ window.decks.en_nouns = [
     "ru": "успехи в обучении",
     "uk": "успіхи в навчанні",
     "level": "B2",
-    "topics": [
-      "it",
-      "ui"
-    ],
+    "topics": ["it", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12968,9 +11730,7 @@ window.decks.en_nouns = [
     "ru": "список избранного",
     "uk": "список улюбленого",
     "level": "A2",
-    "topics": [
-      "ui"
-    ],
+    "topics": ["ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12991,9 +11751,7 @@ window.decks.en_nouns = [
     "ru": "значок избранного",
     "uk": "значок обраного",
     "level": "A2",
-    "topics": [
-      "ui"
-    ],
+    "topics": ["ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13014,10 +11772,7 @@ window.decks.en_nouns = [
     "ru": "символ сердца",
     "uk": "символ серця",
     "level": "A2",
-    "topics": [
-      "ui",
-      "symbol"
-    ],
+    "topics": ["symbol", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13038,9 +11793,7 @@ window.decks.en_nouns = [
     "ru": "метка",
     "uk": "позначка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13061,9 +11814,7 @@ window.decks.en_nouns = [
     "ru": "деактивация",
     "uk": "деактивація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13084,9 +11835,7 @@ window.decks.en_nouns = [
     "ru": "активация",
     "uk": "активація",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13107,9 +11856,7 @@ window.decks.en_nouns = [
     "ru": "ползунок",
     "uk": "повзунок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13130,9 +11877,7 @@ window.decks.en_nouns = [
     "ru": "переключатель",
     "uk": "перемикач",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13153,9 +11898,7 @@ window.decks.en_nouns = [
     "ru": "кнопка",
     "uk": "кнопка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13176,9 +11919,7 @@ window.decks.en_nouns = [
     "ru": "кнопка OK",
     "uk": "кнопка OK",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13199,9 +11940,7 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13222,9 +11961,7 @@ window.decks.en_nouns = [
     "ru": "макет",
     "uk": "макет",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13245,9 +11982,7 @@ window.decks.en_nouns = [
     "ru": "выравнивание",
     "uk": "вирівнювання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13268,9 +12003,7 @@ window.decks.en_nouns = [
     "ru": "отступ",
     "uk": "відступ",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13291,9 +12024,7 @@ window.decks.en_nouns = [
     "ru": "поле",
     "uk": "поле",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13314,9 +12045,7 @@ window.decks.en_nouns = [
     "ru": "ширина",
     "uk": "ширина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13337,9 +12066,7 @@ window.decks.en_nouns = [
     "ru": "высота",
     "uk": "висота",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13360,9 +12087,7 @@ window.decks.en_nouns = [
     "ru": "масштабирование",
     "uk": "масштабування",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13383,9 +12108,7 @@ window.decks.en_nouns = [
     "ru": "шрифт",
     "uk": "шрифт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13406,9 +12129,7 @@ window.decks.en_nouns = [
     "ru": "читаемость",
     "uk": "читабельність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13429,10 +12150,7 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": [
-      "communication",
-      "ui"
-    ],
+    "topics": ["communication", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13453,10 +12171,7 @@ window.decks.en_nouns = [
     "ru": "устойчивость к ошибкам",
     "uk": "відмовостійкість",
     "level": "C1",
-    "topics": [
-      "engineering",
-      "it"
-    ],
+    "topics": ["engineering", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13477,9 +12192,7 @@ window.decks.en_nouns = [
     "ru": "повторное использование",
     "uk": "повторне використання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13500,9 +12213,7 @@ window.decks.en_nouns = [
     "ru": "расширяемость",
     "uk": "розширюваність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13523,9 +12234,7 @@ window.decks.en_nouns = [
     "ru": "поддерживаемость",
     "uk": "підтримуваність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13546,10 +12255,7 @@ window.decks.en_nouns = [
     "ru": "стабильность",
     "uk": "стабільність",
     "level": "B2",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13570,9 +12276,7 @@ window.decks.en_nouns = [
     "ru": "надёжность",
     "uk": "надійність",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13593,10 +12297,7 @@ window.decks.en_nouns = [
     "ru": "производительность",
     "uk": "продуктивність",
     "level": "B2",
-    "topics": [
-      "culture",
-      "energy"
-    ],
+    "topics": ["culture", "energy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13617,10 +12318,7 @@ window.decks.en_nouns = [
     "ru": "узкое место",
     "uk": "вузьке місце",
     "level": "B2",
-    "topics": [
-      "administration",
-      "work"
-    ],
+    "topics": ["administration", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13641,9 +12339,7 @@ window.decks.en_nouns = [
     "ru": "тест-кейс",
     "uk": "тест-кейс",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13664,10 +12360,7 @@ window.decks.en_nouns = [
     "ru": "покрытие",
     "uk": "покриття",
     "level": "B2",
-    "topics": [
-      "stats",
-      "testing"
-    ],
+    "topics": ["statistics", "testing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13688,10 +12381,7 @@ window.decks.en_nouns = [
     "ru": "обеспечение",
     "uk": "забезпечення",
     "level": "B2",
-    "topics": [
-      "finance",
-      "it"
-    ],
+    "topics": ["finance", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13712,9 +12402,7 @@ window.decks.en_nouns = [
     "ru": "соблюдение",
     "uk": "дотримання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13735,10 +12423,7 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B2",
-    "topics": [
-      "it",
-      "work"
-    ],
+    "topics": ["it", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13759,9 +12444,7 @@ window.decks.en_nouns = [
     "ru": "отклонение",
     "uk": "відхилення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13782,9 +12465,7 @@ window.decks.en_nouns = [
     "ru": "коррекция",
     "uk": "виправлення",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13805,10 +12486,7 @@ window.decks.en_nouns = [
     "ru": "уровень допуска",
     "uk": "рівень допуску",
     "level": "B2",
-    "topics": [
-      "statistics",
-      "health"
-    ],
+    "topics": ["health", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13829,9 +12507,7 @@ window.decks.en_nouns = [
     "ru": "версионирование",
     "uk": "версіонування",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13852,10 +12528,7 @@ window.decks.en_nouns = [
     "ru": "изменение схемы",
     "uk": "зміна схеми",
     "level": "B2",
-    "topics": [
-      "general",
-      "environment"
-    ],
+    "topics": ["environment", "general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13876,10 +12549,7 @@ window.decks.en_nouns = [
     "ru": "обратная совместимость",
     "uk": "зворотна сумісність",
     "level": "B2",
-    "topics": [
-      "it",
-      "society"
-    ],
+    "topics": ["it", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13900,9 +12570,7 @@ window.decks.en_nouns = [
     "ru": "тело",
     "uk": "тіло",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13923,9 +12591,7 @@ window.decks.en_nouns = [
     "ru": "голова",
     "uk": "голова",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13946,9 +12612,7 @@ window.decks.en_nouns = [
     "ru": "лицо",
     "uk": "обличчя",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13969,9 +12633,7 @@ window.decks.en_nouns = [
     "ru": "глаз",
     "uk": "око",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13992,9 +12654,7 @@ window.decks.en_nouns = [
     "ru": "ухо",
     "uk": "вухо",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14015,9 +12675,7 @@ window.decks.en_nouns = [
     "ru": "нос",
     "uk": "ніс",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14038,9 +12696,7 @@ window.decks.en_nouns = [
     "ru": "рот",
     "uk": "рот",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14061,9 +12717,7 @@ window.decks.en_nouns = [
     "ru": "зуб",
     "uk": "зуб",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14084,9 +12738,7 @@ window.decks.en_nouns = [
     "ru": "язык",
     "uk": "язик",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14107,9 +12759,7 @@ window.decks.en_nouns = [
     "ru": "волос",
     "uk": "волосся",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14130,9 +12780,7 @@ window.decks.en_nouns = [
     "ru": "шея",
     "uk": "шия",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14153,9 +12801,7 @@ window.decks.en_nouns = [
     "ru": "плечо",
     "uk": "плече",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14176,9 +12822,7 @@ window.decks.en_nouns = [
     "ru": "рука",
     "uk": "рука",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14199,9 +12843,7 @@ window.decks.en_nouns = [
     "ru": "локоть",
     "uk": "лікоть",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14222,9 +12864,7 @@ window.decks.en_nouns = [
     "ru": "кисть",
     "uk": "кисть",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14245,9 +12885,7 @@ window.decks.en_nouns = [
     "ru": "палец",
     "uk": "палець",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14268,9 +12906,7 @@ window.decks.en_nouns = [
     "ru": "грудь",
     "uk": "груди",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14291,9 +12927,7 @@ window.decks.en_nouns = [
     "ru": "спина",
     "uk": "спина",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14314,9 +12948,7 @@ window.decks.en_nouns = [
     "ru": "живот",
     "uk": "живіт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14337,9 +12969,7 @@ window.decks.en_nouns = [
     "ru": "нога",
     "uk": "нога",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14360,9 +12990,7 @@ window.decks.en_nouns = [
     "ru": "колено",
     "uk": "коліно",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14383,9 +13011,7 @@ window.decks.en_nouns = [
     "ru": "стопа",
     "uk": "ступня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14406,10 +13032,7 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": [
-      "ui",
-      "symbol"
-    ],
+    "topics": ["symbol", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14430,9 +13053,7 @@ window.decks.en_nouns = [
     "ru": "легкое",
     "uk": "легеня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14453,9 +13074,7 @@ window.decks.en_nouns = [
     "ru": "печень",
     "uk": "печінка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14476,9 +13095,7 @@ window.decks.en_nouns = [
     "ru": "желудок",
     "uk": "шлунок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14499,9 +13116,7 @@ window.decks.en_nouns = [
     "ru": "кровь",
     "uk": "кров",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14522,9 +13137,7 @@ window.decks.en_nouns = [
     "ru": "мышца",
     "uk": "м’яз",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14545,9 +13158,7 @@ window.decks.en_nouns = [
     "ru": "кость",
     "uk": "кістка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14568,9 +13179,7 @@ window.decks.en_nouns = [
     "ru": "кожа",
     "uk": "шкіра",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14591,9 +13200,7 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікар",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14614,10 +13221,7 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікарка",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14638,9 +13242,7 @@ window.decks.en_nouns = [
     "ru": "больница",
     "uk": "лікарня",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14661,9 +13263,7 @@ window.decks.en_nouns = [
     "ru": "клиника",
     "uk": "клініка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14684,10 +13284,7 @@ window.decks.en_nouns = [
     "ru": "частная практика",
     "uk": "приватна практика",
     "level": "B2",
-    "topics": [
-      "science",
-      "law"
-    ],
+    "topics": ["law", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14708,9 +13305,7 @@ window.decks.en_nouns = [
     "ru": "аптека",
     "uk": "аптека",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14731,9 +13326,7 @@ window.decks.en_nouns = [
     "ru": "рецепт",
     "uk": "рецепт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14754,9 +13347,7 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14777,9 +13368,7 @@ window.decks.en_nouns = [
     "ru": "укол",
     "uk": "укол",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14800,9 +13389,7 @@ window.decks.en_nouns = [
     "ru": "повязка",
     "uk": "пов’язка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14823,9 +13410,7 @@ window.decks.en_nouns = [
     "ru": "обследование",
     "uk": "обстеження",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14846,9 +13431,7 @@ window.decks.en_nouns = [
     "ru": "лечение",
     "uk": "лікування",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14869,9 +13452,7 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14892,9 +13473,7 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14915,9 +13494,7 @@ window.decks.en_nouns = [
     "ru": "травма",
     "uk": "травма",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14938,9 +13515,7 @@ window.decks.en_nouns = [
     "ru": "жар",
     "uk": "гарячка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14961,9 +13536,7 @@ window.decks.en_nouns = [
     "ru": "простуда",
     "uk": "застуда",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14984,9 +13557,7 @@ window.decks.en_nouns = [
     "ru": "кашель",
     "uk": "кашель",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15007,9 +13578,7 @@ window.decks.en_nouns = [
     "ru": "грипп",
     "uk": "грип",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15030,10 +13599,7 @@ window.decks.en_nouns = [
     "ru": "уход",
     "uk": "догляд",
     "level": "B2",
-    "topics": [
-      "health",
-      "work"
-    ],
+    "topics": ["health", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15054,9 +13620,7 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15077,9 +13641,7 @@ window.decks.en_nouns = [
     "ru": "деревня",
     "uk": "село",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15100,9 +13662,7 @@ window.decks.en_nouns = [
     "ru": "улица",
     "uk": "вулиця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15123,9 +13683,7 @@ window.decks.en_nouns = [
     "ru": "площадь",
     "uk": "площа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15146,9 +13704,7 @@ window.decks.en_nouns = [
     "ru": "перекресток",
     "uk": "перехрестя",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15169,9 +13725,7 @@ window.decks.en_nouns = [
     "ru": "мост",
     "uk": "міст",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15192,10 +13746,7 @@ window.decks.en_nouns = [
     "ru": "вокзал",
     "uk": "вокзал",
     "level": "B2",
-    "topics": [
-      "traffic",
-      "energy"
-    ],
+    "topics": ["energy", "traffic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15216,9 +13767,7 @@ window.decks.en_nouns = [
     "ru": "аэропорт",
     "uk": "аеропорт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15239,9 +13788,7 @@ window.decks.en_nouns = [
     "ru": "остановка",
     "uk": "зупинка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15262,9 +13809,7 @@ window.decks.en_nouns = [
     "ru": "метро",
     "uk": "метро",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15285,9 +13830,7 @@ window.decks.en_nouns = [
     "ru": "автобус",
     "uk": "автобус",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15308,9 +13851,7 @@ window.decks.en_nouns = [
     "ru": "трамвай",
     "uk": "трамвай",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15331,9 +13872,7 @@ window.decks.en_nouns = [
     "ru": "такси",
     "uk": "таксі",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15354,9 +13893,7 @@ window.decks.en_nouns = [
     "ru": "авто",
     "uk": "авто",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15377,9 +13914,7 @@ window.decks.en_nouns = [
     "ru": "велосипед",
     "uk": "велосипед",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15400,9 +13935,7 @@ window.decks.en_nouns = [
     "ru": "мотоцикл",
     "uk": "мотоцикл",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15423,9 +13956,7 @@ window.decks.en_nouns = [
     "ru": "поезд",
     "uk": "потяг",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15446,9 +13977,7 @@ window.decks.en_nouns = [
     "ru": "корабль",
     "uk": "корабель",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15469,9 +13998,7 @@ window.decks.en_nouns = [
     "ru": "самолет",
     "uk": "літак",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15492,9 +14019,7 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15515,9 +14040,7 @@ window.decks.en_nouns = [
     "ru": "светофор",
     "uk": "світлофор",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15538,10 +14061,7 @@ window.decks.en_nouns = [
     "ru": "билет",
     "uk": "квиток",
     "level": "A2",
-    "topics": [
-      "culture",
-      "travel"
-    ],
+    "topics": ["culture", "travel"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15562,10 +14082,7 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "карта",
     "level": "B2",
-    "topics": [
-      "finance",
-      "daily life"
-    ],
+    "topics": ["daily life", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15586,10 +14103,7 @@ window.decks.en_nouns = [
     "ru": "план",
     "uk": "план",
     "level": "B2",
-    "topics": [
-      "business",
-      "education"
-    ],
+    "topics": ["business", "education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15610,9 +14124,7 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15633,9 +14145,7 @@ window.decks.en_nouns = [
     "ru": "расстояние",
     "uk": "відстань",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15656,9 +14166,7 @@ window.decks.en_nouns = [
     "ru": "путешествие",
     "uk": "подорож",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15679,9 +14187,7 @@ window.decks.en_nouns = [
     "ru": "отпуск",
     "uk": "відпустка",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15702,9 +14208,7 @@ window.decks.en_nouns = [
     "ru": "жильё",
     "uk": "житло",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15725,9 +14229,7 @@ window.decks.en_nouns = [
     "ru": "отель",
     "uk": "готель",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15748,9 +14250,7 @@ window.decks.en_nouns = [
     "ru": "хостел",
     "uk": "хостел",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15771,9 +14271,7 @@ window.decks.en_nouns = [
     "ru": "ресепшн",
     "uk": "рецепція",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15794,9 +14292,7 @@ window.decks.en_nouns = [
     "ru": "бронирование",
     "uk": "бронювання",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15817,9 +14313,7 @@ window.decks.en_nouns = [
     "ru": "резервация",
     "uk": "резервація",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15840,10 +14334,7 @@ window.decks.en_nouns = [
     "ru": "удостоверение",
     "uk": "посвідчення",
     "level": "B2",
-    "topics": [
-      "finance",
-      "daily life"
-    ],
+    "topics": ["daily life", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15864,9 +14355,7 @@ window.decks.en_nouns = [
     "ru": "паспорт",
     "uk": "паспорт",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15887,9 +14376,7 @@ window.decks.en_nouns = [
     "ru": "таможня",
     "uk": "митниця",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15910,9 +14397,7 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "кордон",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15933,9 +14418,7 @@ window.decks.en_nouns = [
     "ru": "виза",
     "uk": "віза",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15956,10 +14439,7 @@ window.decks.en_nouns = [
     "ru": "пребывание",
     "uk": "перебування",
     "level": "B2",
-    "topics": [
-      "migration",
-      "law"
-    ],
+    "topics": ["law", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15980,9 +14460,7 @@ window.decks.en_nouns = [
     "ru": "школа",
     "uk": "школа",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16003,9 +14481,7 @@ window.decks.en_nouns = [
     "ru": "университет",
     "uk": "університет",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16026,10 +14502,7 @@ window.decks.en_nouns = [
     "ru": "лекция",
     "uk": "лекція",
     "level": "B1",
-    "topics": [
-      "communication",
-      "science"
-    ],
+    "topics": ["communication", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16050,9 +14523,7 @@ window.decks.en_nouns = [
     "ru": "предмет",
     "uk": "предмет",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16073,10 +14544,7 @@ window.decks.en_nouns = [
     "ru": "домашнее задание",
     "uk": "домашнє завдання",
     "level": "B2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16097,9 +14565,7 @@ window.decks.en_nouns = [
     "ru": "экзамен",
     "uk": "іспит",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16120,10 +14586,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": [
-      "business",
-      "work"
-    ],
+    "topics": ["business", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16144,9 +14607,7 @@ window.decks.en_nouns = [
     "ru": "ученик",
     "uk": "учень",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16167,10 +14628,7 @@ window.decks.en_nouns = [
     "ru": "ученица",
     "uk": "учениця",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16191,10 +14649,7 @@ window.decks.en_nouns = [
     "ru": "учитель",
     "uk": "вчитель",
     "level": "B1",
-    "topics": [
-      "job",
-      "education"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16215,10 +14670,7 @@ window.decks.en_nouns = [
     "ru": "учительница",
     "uk": "вчителька",
     "level": "A1",
-    "topics": [
-      "education",
-      "job"
-    ],
+    "topics": ["education", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16239,9 +14691,7 @@ window.decks.en_nouns = [
     "ru": "тетрадь",
     "uk": "зошит",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16262,10 +14712,7 @@ window.decks.en_nouns = [
     "ru": "книга",
     "uk": "книга",
     "level": "A1",
-    "topics": [
-      "education",
-      "media"
-    ],
+    "topics": ["education", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16286,10 +14733,7 @@ window.decks.en_nouns = [
     "ru": "словарь",
     "uk": "словник",
     "level": "A1",
-    "topics": [
-      "education",
-      "language"
-    ],
+    "topics": ["education", "language"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16310,9 +14754,7 @@ window.decks.en_nouns = [
     "ru": "ручка",
     "uk": "ручка",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16333,9 +14775,7 @@ window.decks.en_nouns = [
     "ru": "лист",
     "uk": "аркуш",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16356,9 +14796,7 @@ window.decks.en_nouns = [
     "ru": "доска",
     "uk": "дошка",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16379,9 +14817,7 @@ window.decks.en_nouns = [
     "ru": "мел",
     "uk": "крейда",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16402,9 +14838,7 @@ window.decks.en_nouns = [
     "ru": "ластик",
     "uk": "гумка",
     "level": "A1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16425,10 +14859,7 @@ window.decks.en_nouns = [
     "ru": "рюкзак",
     "uk": "рюкзак",
     "level": "A1",
-    "topics": [
-      "education",
-      "travel"
-    ],
+    "topics": ["education", "travel"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16449,10 +14880,7 @@ window.decks.en_nouns = [
     "ru": "суд",
     "uk": "суд",
     "level": "B1",
-    "topics": [
-      "law",
-      "food"
-    ],
+    "topics": ["food", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16473,9 +14901,7 @@ window.decks.en_nouns = [
     "ru": "судья",
     "uk": "суддя",
     "level": "B1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16496,10 +14922,7 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокат",
     "level": "B1",
-    "topics": [
-      "law",
-      "job"
-    ],
+    "topics": ["job", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16520,10 +14943,7 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокатка",
     "level": "B1",
-    "topics": [
-      "law",
-      "job"
-    ],
+    "topics": ["job", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16544,10 +14964,7 @@ window.decks.en_nouns = [
     "ru": "полиция",
     "uk": "поліція",
     "level": "A2",
-    "topics": [
-      "law",
-      "city"
-    ],
+    "topics": ["city", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16568,9 +14985,7 @@ window.decks.en_nouns = [
     "ru": "заявление",
     "uk": "заява",
     "level": "B1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16591,9 +15006,7 @@ window.decks.en_nouns = [
     "ru": "штраф",
     "uk": "штраф",
     "level": "B1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16614,9 +15027,7 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16637,9 +15048,7 @@ window.decks.en_nouns = [
     "ru": "правило",
     "uk": "правило",
     "level": "A2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16660,9 +15069,7 @@ window.decks.en_nouns = [
     "ru": "порядок",
     "uk": "порядок",
     "level": "A2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16683,9 +15090,7 @@ window.decks.en_nouns = [
     "ru": "дом",
     "uk": "будинок",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16706,9 +15111,7 @@ window.decks.en_nouns = [
     "ru": "квартира",
     "uk": "квартира",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16729,9 +15132,7 @@ window.decks.en_nouns = [
     "ru": "комната",
     "uk": "кімната",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16752,10 +15153,7 @@ window.decks.en_nouns = [
     "ru": "кухня",
     "uk": "кухня",
     "level": "A1",
-    "topics": [
-      "home",
-      "kitchen"
-    ],
+    "topics": ["home", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16776,9 +15174,7 @@ window.decks.en_nouns = [
     "ru": "ванная",
     "uk": "ванна",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16799,9 +15195,7 @@ window.decks.en_nouns = [
     "ru": "спальня",
     "uk": "спальня",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16822,9 +15216,7 @@ window.decks.en_nouns = [
     "ru": "гостиная",
     "uk": "вітальня",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16845,9 +15237,7 @@ window.decks.en_nouns = [
     "ru": "коридор",
     "uk": "коридор",
     "level": "A2",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16868,9 +15258,7 @@ window.decks.en_nouns = [
     "ru": "балкон",
     "uk": "балкон",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16891,10 +15279,7 @@ window.decks.en_nouns = [
     "ru": "сад",
     "uk": "сад",
     "level": "A1",
-    "topics": [
-      "home",
-      "nature"
-    ],
+    "topics": ["home", "nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16915,9 +15300,7 @@ window.decks.en_nouns = [
     "ru": "стол",
     "uk": "стіл",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16938,9 +15321,7 @@ window.decks.en_nouns = [
     "ru": "стул",
     "uk": "стілець",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16961,9 +15342,7 @@ window.decks.en_nouns = [
     "ru": "кровать",
     "uk": "ліжко",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16984,9 +15363,7 @@ window.decks.en_nouns = [
     "ru": "шкаф",
     "uk": "шафа",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17007,9 +15384,7 @@ window.decks.en_nouns = [
     "ru": "полка",
     "uk": "полиця",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17030,9 +15405,7 @@ window.decks.en_nouns = [
     "ru": "лампа",
     "uk": "лампа",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17053,9 +15426,7 @@ window.decks.en_nouns = [
     "ru": "ковер",
     "uk": "килим",
     "level": "A2",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17076,9 +15447,7 @@ window.decks.en_nouns = [
     "ru": "зеркало",
     "uk": "дзеркало",
     "level": "A1",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17099,9 +15468,7 @@ window.decks.en_nouns = [
     "ru": "штора",
     "uk": "штора",
     "level": "A2",
-    "topics": [
-      "home"
-    ],
+    "topics": ["home"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17122,10 +15489,7 @@ window.decks.en_nouns = [
     "ru": "растение",
     "uk": "рослина",
     "level": "A1",
-    "topics": [
-      "home",
-      "nature"
-    ],
+    "topics": ["home", "nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17146,10 +15510,7 @@ window.decks.en_nouns = [
     "ru": "холодильник",
     "uk": "холодильник",
     "level": "A1",
-    "topics": [
-      "home",
-      "kitchen"
-    ],
+    "topics": ["home", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17170,10 +15531,7 @@ window.decks.en_nouns = [
     "ru": "плита",
     "uk": "плита",
     "level": "A1",
-    "topics": [
-      "home",
-      "kitchen"
-    ],
+    "topics": ["home", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17194,10 +15552,7 @@ window.decks.en_nouns = [
     "ru": "духовка",
     "uk": "духовка",
     "level": "A2",
-    "topics": [
-      "home",
-      "kitchen"
-    ],
+    "topics": ["home", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17218,9 +15573,7 @@ window.decks.en_nouns = [
     "ru": "сковорода",
     "uk": "пательня",
     "level": "A2",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17241,9 +15594,7 @@ window.decks.en_nouns = [
     "ru": "кастрюля",
     "uk": "каструля",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17264,9 +15615,7 @@ window.decks.en_nouns = [
     "ru": "нож",
     "uk": "ніж",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17287,9 +15636,7 @@ window.decks.en_nouns = [
     "ru": "вилка",
     "uk": "виделка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17310,9 +15657,7 @@ window.decks.en_nouns = [
     "ru": "ложка",
     "uk": "ложка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17333,9 +15678,7 @@ window.decks.en_nouns = [
     "ru": "тарелка",
     "uk": "тарілка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17356,9 +15699,7 @@ window.decks.en_nouns = [
     "ru": "чашка",
     "uk": "чашка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17379,9 +15720,7 @@ window.decks.en_nouns = [
     "ru": "стакан",
     "uk": "склянка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17402,9 +15741,7 @@ window.decks.en_nouns = [
     "ru": "бутылка",
     "uk": "пляшка",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17425,9 +15762,7 @@ window.decks.en_nouns = [
     "ru": "миска",
     "uk": "миска",
     "level": "A1",
-    "topics": [
-      "kitchen"
-    ],
+    "topics": ["kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17448,10 +15783,7 @@ window.decks.en_nouns = [
     "ru": "соль",
     "uk": "сіль",
     "level": "A1",
-    "topics": [
-      "kitchen",
-      "food"
-    ],
+    "topics": ["food", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17472,10 +15804,7 @@ window.decks.en_nouns = [
     "ru": "сахар",
     "uk": "цукор",
     "level": "A1",
-    "topics": [
-      "kitchen",
-      "food"
-    ],
+    "topics": ["food", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17496,10 +15825,7 @@ window.decks.en_nouns = [
     "ru": "перец",
     "uk": "перець",
     "level": "A2",
-    "topics": [
-      "kitchen",
-      "food"
-    ],
+    "topics": ["food", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17520,10 +15846,7 @@ window.decks.en_nouns = [
     "ru": "масло",
     "uk": "олія",
     "level": "A2",
-    "topics": [
-      "kitchen",
-      "food"
-    ],
+    "topics": ["food", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17544,10 +15867,7 @@ window.decks.en_nouns = [
     "ru": "уксус",
     "uk": "оцет",
     "level": "A2",
-    "topics": [
-      "kitchen",
-      "food"
-    ],
+    "topics": ["food", "kitchen"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17568,9 +15888,7 @@ window.decks.en_nouns = [
     "ru": "специя",
     "uk": "спеція",
     "level": "A2",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17591,10 +15909,7 @@ window.decks.en_nouns = [
     "ru": "завтрак",
     "uk": "сніданок",
     "level": "A1",
-    "topics": [
-      "food",
-      "daily routine"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17615,10 +15930,7 @@ window.decks.en_nouns = [
     "ru": "обед",
     "uk": "обід",
     "level": "A1",
-    "topics": [
-      "food",
-      "daily routine"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17639,10 +15951,7 @@ window.decks.en_nouns = [
     "ru": "ужин",
     "uk": "вечеря",
     "level": "A1",
-    "topics": [
-      "food",
-      "daily routine"
-    ],
+    "topics": ["daily routine", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17663,9 +15972,7 @@ window.decks.en_nouns = [
     "ru": "суп",
     "uk": "суп",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17686,9 +15993,7 @@ window.decks.en_nouns = [
     "ru": "салат",
     "uk": "салат",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17709,9 +16014,7 @@ window.decks.en_nouns = [
     "ru": "хлеб",
     "uk": "хліб",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17732,9 +16035,7 @@ window.decks.en_nouns = [
     "ru": "сливочное масло",
     "uk": "вершкове масло",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17755,9 +16056,7 @@ window.decks.en_nouns = [
     "ru": "сыр",
     "uk": "сир",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17778,9 +16077,7 @@ window.decks.en_nouns = [
     "ru": "колбаса",
     "uk": "ковбаса",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17801,9 +16098,7 @@ window.decks.en_nouns = [
     "ru": "мясо",
     "uk": "м’ясо",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17824,9 +16119,7 @@ window.decks.en_nouns = [
     "ru": "рыба",
     "uk": "риба",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17847,9 +16140,7 @@ window.decks.en_nouns = [
     "ru": "овощи",
     "uk": "овочі",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17870,9 +16161,7 @@ window.decks.en_nouns = [
     "ru": "фрукты",
     "uk": "фрукти",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17893,9 +16182,7 @@ window.decks.en_nouns = [
     "ru": "яблоко",
     "uk": "яблуко",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17916,9 +16203,7 @@ window.decks.en_nouns = [
     "ru": "банан",
     "uk": "банан",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17939,9 +16224,7 @@ window.decks.en_nouns = [
     "ru": "апельсин",
     "uk": "апельсин",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17962,9 +16245,7 @@ window.decks.en_nouns = [
     "ru": "виноград",
     "uk": "виноград",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17985,9 +16266,7 @@ window.decks.en_nouns = [
     "ru": "клубника",
     "uk": "полуниця",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18008,9 +16287,7 @@ window.decks.en_nouns = [
     "ru": "картофель",
     "uk": "картопля",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18031,9 +16308,7 @@ window.decks.en_nouns = [
     "ru": "рис",
     "uk": "рис",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18054,9 +16329,7 @@ window.decks.en_nouns = [
     "ru": "лапша",
     "uk": "локшина",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18077,9 +16350,7 @@ window.decks.en_nouns = [
     "ru": "пирог",
     "uk": "пиріг",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18100,9 +16371,7 @@ window.decks.en_nouns = [
     "ru": "печенье",
     "uk": "печиво",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18123,9 +16392,7 @@ window.decks.en_nouns = [
     "ru": "шоколад",
     "uk": "шоколад",
     "level": "A1",
-    "topics": [
-      "food"
-    ],
+    "topics": ["food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18146,9 +16413,7 @@ window.decks.en_nouns = [
     "ru": "кофе",
     "uk": "кава",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18169,9 +16434,7 @@ window.decks.en_nouns = [
     "ru": "чай",
     "uk": "чай",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18192,9 +16455,7 @@ window.decks.en_nouns = [
     "ru": "вода",
     "uk": "вода",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18215,9 +16476,7 @@ window.decks.en_nouns = [
     "ru": "сок",
     "uk": "сік",
     "level": "A1",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18238,10 +16497,7 @@ window.decks.en_nouns = [
     "ru": "молоко",
     "uk": "молоко",
     "level": "A1",
-    "topics": [
-      "drink",
-      "food"
-    ],
+    "topics": ["drink", "food"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18262,9 +16518,7 @@ window.decks.en_nouns = [
     "ru": "пиво",
     "uk": "пиво",
     "level": "A2",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18285,9 +16539,7 @@ window.decks.en_nouns = [
     "ru": "вино",
     "uk": "вино",
     "level": "A2",
-    "topics": [
-      "drink"
-    ],
+    "topics": ["drink"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18308,10 +16560,7 @@ window.decks.en_nouns = [
     "ru": "бар",
     "uk": "бар",
     "level": "A2",
-    "topics": [
-      "restaurant",
-      "city"
-    ],
+    "topics": ["city", "restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18332,9 +16581,7 @@ window.decks.en_nouns = [
     "ru": "ресторан",
     "uk": "ресторан",
     "level": "A1",
-    "topics": [
-      "restaurant"
-    ],
+    "topics": ["restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18355,9 +16602,7 @@ window.decks.en_nouns = [
     "ru": "кафе",
     "uk": "кафе",
     "level": "A1",
-    "topics": [
-      "restaurant"
-    ],
+    "topics": ["restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18378,10 +16623,7 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": [
-      "restaurant",
-      "money"
-    ],
+    "topics": ["money", "restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18402,10 +16644,7 @@ window.decks.en_nouns = [
     "ru": "чаевые",
     "uk": "чайові",
     "level": "B1",
-    "topics": [
-      "restaurant",
-      "money"
-    ],
+    "topics": ["money", "restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18426,9 +16665,7 @@ window.decks.en_nouns = [
     "ru": "меню",
     "uk": "меню",
     "level": "A2",
-    "topics": [
-      "restaurant"
-    ],
+    "topics": ["restaurant"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18449,10 +16686,7 @@ window.decks.en_nouns = [
     "ru": "заказ",
     "uk": "замовлення",
     "level": "A2",
-    "topics": [
-      "restaurant",
-      "shopping"
-    ],
+    "topics": ["restaurant", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18473,10 +16707,7 @@ window.decks.en_nouns = [
     "ru": "доставка",
     "uk": "доставка",
     "level": "B1",
-    "topics": [
-      "shopping",
-      "restaurant"
-    ],
+    "topics": ["restaurant", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18497,10 +16728,7 @@ window.decks.en_nouns = [
     "ru": "время работы",
     "uk": "час роботи",
     "level": "A2",
-    "topics": [
-      "restaurant",
-      "shopping"
-    ],
+    "topics": ["restaurant", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18521,9 +16749,7 @@ window.decks.en_nouns = [
     "ru": "газета",
     "uk": "газета",
     "level": "A1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18544,9 +16770,7 @@ window.decks.en_nouns = [
     "ru": "журнал",
     "uk": "журнал",
     "level": "A2",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18567,10 +16791,7 @@ window.decks.en_nouns = [
     "ru": "статья",
     "uk": "стаття",
     "level": "B1",
-    "topics": [
-      "media",
-      "language"
-    ],
+    "topics": ["language", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18591,9 +16812,7 @@ window.decks.en_nouns = [
     "ru": "заголовок",
     "uk": "заголовок",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18614,9 +16833,7 @@ window.decks.en_nouns = [
     "ru": "кричащий заголовок",
     "uk": "сенсаційний заголовок",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18637,10 +16854,7 @@ window.decks.en_nouns = [
     "ru": "реклама",
     "uk": "реклама",
     "level": "A2",
-    "topics": [
-      "media",
-      "economy"
-    ],
+    "topics": ["economy", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18661,9 +16875,7 @@ window.decks.en_nouns = [
     "ru": "объявление",
     "uk": "оголошення",
     "level": "A2",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18684,9 +16896,7 @@ window.decks.en_nouns = [
     "ru": "редакция",
     "uk": "редакція",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18707,10 +16917,7 @@ window.decks.en_nouns = [
     "ru": "репортёр",
     "uk": "репортер",
     "level": "B1",
-    "topics": [
-      "media",
-      "job"
-    ],
+    "topics": ["job", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18731,9 +16938,7 @@ window.decks.en_nouns = [
     "ru": "выпуск новостей",
     "uk": "випуск новин",
     "level": "B1",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18754,10 +16959,7 @@ window.decks.en_nouns = [
     "ru": "театр",
     "uk": "театр",
     "level": "A1",
-    "topics": [
-      "art",
-      "culture"
-    ],
+    "topics": ["art", "culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18778,9 +16980,7 @@ window.decks.en_nouns = [
     "ru": "сцена",
     "uk": "сцена",
     "level": "A2",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18801,10 +17001,7 @@ window.decks.en_nouns = [
     "ru": "актёр",
     "uk": "актор",
     "level": "A2",
-    "topics": [
-      "art",
-      "job"
-    ],
+    "topics": ["art", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18825,10 +17022,7 @@ window.decks.en_nouns = [
     "ru": "актриса",
     "uk": "акторка",
     "level": "A2",
-    "topics": [
-      "art",
-      "job"
-    ],
+    "topics": ["art", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18849,9 +17043,7 @@ window.decks.en_nouns = [
     "ru": "публика",
     "uk": "публіка",
     "level": "A2",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18872,9 +17064,7 @@ window.decks.en_nouns = [
     "ru": "спектакль",
     "uk": "вистава",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18895,9 +17085,7 @@ window.decks.en_nouns = [
     "ru": "репетиция",
     "uk": "репетиція",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18918,9 +17106,7 @@ window.decks.en_nouns = [
     "ru": "премьера",
     "uk": "прем’єра",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18941,9 +17127,7 @@ window.decks.en_nouns = [
     "ru": "занавес",
     "uk": "завіса",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18964,10 +17148,7 @@ window.decks.en_nouns = [
     "ru": "входной билет",
     "uk": "вхідний квиток",
     "level": "A2",
-    "topics": [
-      "culture",
-      "travel"
-    ],
+    "topics": ["culture", "travel"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18988,9 +17169,7 @@ window.decks.en_nouns = [
     "ru": "музей",
     "uk": "музей",
     "level": "A1",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19011,9 +17190,7 @@ window.decks.en_nouns = [
     "ru": "выставка",
     "uk": "виставка",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19034,9 +17211,7 @@ window.decks.en_nouns = [
     "ru": "картина",
     "uk": "картина",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19057,9 +17232,7 @@ window.decks.en_nouns = [
     "ru": "скульптура",
     "uk": "скульптура",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19080,9 +17253,7 @@ window.decks.en_nouns = [
     "ru": "галерея",
     "uk": "галерея",
     "level": "A2",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19103,10 +17274,7 @@ window.decks.en_nouns = [
     "ru": "художник",
     "uk": "митць",
     "level": "B1",
-    "topics": [
-      "art",
-      "job"
-    ],
+    "topics": ["art", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19127,9 +17295,7 @@ window.decks.en_nouns = [
     "ru": "полотно",
     "uk": "полотно",
     "level": "B1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19150,9 +17316,7 @@ window.decks.en_nouns = [
     "ru": "кисть",
     "uk": "пензлик",
     "level": "A2",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19173,9 +17337,7 @@ window.decks.en_nouns = [
     "ru": "краска",
     "uk": "фарба",
     "level": "A1",
-    "topics": [
-      "art"
-    ],
+    "topics": ["art"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19196,10 +17358,7 @@ window.decks.en_nouns = [
     "ru": "ателье",
     "uk": "ательє",
     "level": "B1",
-    "topics": [
-      "art",
-      "job"
-    ],
+    "topics": ["art", "job"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19220,9 +17379,7 @@ window.decks.en_nouns = [
     "ru": "музыка",
     "uk": "музика",
     "level": "A1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19243,10 +17400,7 @@ window.decks.en_nouns = [
     "ru": "певец",
     "uk": "співак",
     "level": "A2",
-    "topics": [
-      "music",
-      "job"
-    ],
+    "topics": ["job", "music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19267,10 +17421,7 @@ window.decks.en_nouns = [
     "ru": "певица",
     "uk": "співачка",
     "level": "A2",
-    "topics": [
-      "music",
-      "job"
-    ],
+    "topics": ["job", "music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19291,9 +17442,7 @@ window.decks.en_nouns = [
     "ru": "песня",
     "uk": "пісня",
     "level": "A1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19314,9 +17463,7 @@ window.decks.en_nouns = [
     "ru": "концерт",
     "uk": "концерт",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19337,9 +17484,7 @@ window.decks.en_nouns = [
     "ru": "группа",
     "uk": "гурт",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19360,9 +17505,7 @@ window.decks.en_nouns = [
     "ru": "оркестр",
     "uk": "оркестр",
     "level": "B1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19383,10 +17526,7 @@ window.decks.en_nouns = [
     "ru": "дирижёр",
     "uk": "диригент",
     "level": "B1",
-    "topics": [
-      "music",
-      "job"
-    ],
+    "topics": ["job", "music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19407,10 +17547,7 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B1",
-    "topics": [
-      "music",
-      "media"
-    ],
+    "topics": ["media", "music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19431,9 +17568,7 @@ window.decks.en_nouns = [
     "ru": "инструмент",
     "uk": "інструмент",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19454,9 +17589,7 @@ window.decks.en_nouns = [
     "ru": "гитара",
     "uk": "гітара",
     "level": "A1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19477,9 +17610,7 @@ window.decks.en_nouns = [
     "ru": "пианино",
     "uk": "піаніно",
     "level": "A1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19500,9 +17631,7 @@ window.decks.en_nouns = [
     "ru": "скрипка",
     "uk": "скрипка",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19523,9 +17652,7 @@ window.decks.en_nouns = [
     "ru": "барабан",
     "uk": "барабан",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19546,9 +17673,7 @@ window.decks.en_nouns = [
     "ru": "флейта",
     "uk": "флейта",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19569,9 +17694,7 @@ window.decks.en_nouns = [
     "ru": "звук",
     "uk": "звук",
     "level": "A2",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19592,9 +17715,7 @@ window.decks.en_nouns = [
     "ru": "ритм",
     "uk": "ритм",
     "level": "B1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19615,9 +17736,7 @@ window.decks.en_nouns = [
     "ru": "мелодия",
     "uk": "мелодія",
     "level": "B1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19638,9 +17757,7 @@ window.decks.en_nouns = [
     "ru": "аккорд",
     "uk": "акорд",
     "level": "B1",
-    "topics": [
-      "music"
-    ],
+    "topics": ["music"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19661,10 +17778,7 @@ window.decks.en_nouns = [
     "ru": "свет сцены",
     "uk": "сценічне освітлення",
     "level": "B2",
-    "topics": [
-      "art",
-      "technology"
-    ],
+    "topics": ["art", "technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19685,9 +17799,7 @@ window.decks.en_nouns = [
     "ru": "наука",
     "uk": "наука",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19708,10 +17820,7 @@ window.decks.en_nouns = [
     "ru": "исследователь",
     "uk": "дослідник",
     "level": "B1",
-    "topics": [
-      "science",
-      "job"
-    ],
+    "topics": ["job", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19732,9 +17841,7 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19755,9 +17862,7 @@ window.decks.en_nouns = [
     "ru": "гипотеза",
     "uk": "гіпотеза",
     "level": "B2",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19778,9 +17883,7 @@ window.decks.en_nouns = [
     "ru": "эксперимент",
     "uk": "експеримент",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19801,10 +17904,7 @@ window.decks.en_nouns = [
     "ru": "результат",
     "uk": "результат",
     "level": "A2",
-    "topics": [
-      "science",
-      "general"
-    ],
+    "topics": ["general", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19825,9 +17925,7 @@ window.decks.en_nouns = [
     "ru": "метод",
     "uk": "метод",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19848,9 +17946,7 @@ window.decks.en_nouns = [
     "ru": "теория",
     "uk": "теорія",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19871,9 +17967,7 @@ window.decks.en_nouns = [
     "ru": "практика",
     "uk": "практика",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19894,9 +17988,7 @@ window.decks.en_nouns = [
     "ru": "открытие",
     "uk": "відкриття",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19917,9 +18009,7 @@ window.decks.en_nouns = [
     "ru": "природа",
     "uk": "природа",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19940,9 +18030,7 @@ window.decks.en_nouns = [
     "ru": "пейзаж",
     "uk": "краєвид",
     "level": "A2",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19963,9 +18051,7 @@ window.decks.en_nouns = [
     "ru": "лес",
     "uk": "ліс",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19986,9 +18072,7 @@ window.decks.en_nouns = [
     "ru": "дерево",
     "uk": "дерево",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20009,9 +18093,7 @@ window.decks.en_nouns = [
     "ru": "река",
     "uk": "річка",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20032,9 +18114,7 @@ window.decks.en_nouns = [
     "ru": "озеро",
     "uk": "озеро",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20055,9 +18135,7 @@ window.decks.en_nouns = [
     "ru": "море",
     "uk": "море",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20078,10 +18156,7 @@ window.decks.en_nouns = [
     "ru": "пляж",
     "uk": "пляж",
     "level": "A1",
-    "topics": [
-      "nature",
-      "travel"
-    ],
+    "topics": ["nature", "travel"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20102,9 +18177,7 @@ window.decks.en_nouns = [
     "ru": "гора",
     "uk": "гора",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20125,9 +18198,7 @@ window.decks.en_nouns = [
     "ru": "долина",
     "uk": "долина",
     "level": "A2",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20148,9 +18219,7 @@ window.decks.en_nouns = [
     "ru": "небо",
     "uk": "небо",
     "level": "A1",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20171,10 +18240,7 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "A1",
-    "topics": [
-      "nature",
-      "weather"
-    ],
+    "topics": ["nature", "weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20195,9 +18261,7 @@ window.decks.en_nouns = [
     "ru": "дождь",
     "uk": "дощ",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20218,9 +18282,7 @@ window.decks.en_nouns = [
     "ru": "снег",
     "uk": "сніг",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20241,9 +18303,7 @@ window.decks.en_nouns = [
     "ru": "ветер",
     "uk": "вітер",
     "level": "A1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20264,9 +18324,7 @@ window.decks.en_nouns = [
     "ru": "шторм",
     "uk": "буря",
     "level": "B1",
-    "topics": [
-      "weather"
-    ],
+    "topics": ["weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20287,10 +18345,7 @@ window.decks.en_nouns = [
     "ru": "солнце",
     "uk": "сонце",
     "level": "A1",
-    "topics": [
-      "nature",
-      "weather"
-    ],
+    "topics": ["nature", "weather"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20311,9 +18366,7 @@ window.decks.en_nouns = [
     "ru": "тень",
     "uk": "тінь",
     "level": "A2",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20334,9 +18387,7 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20357,9 +18408,7 @@ window.decks.en_nouns = [
     "ru": "луна",
     "uk": "місяць",
     "level": "A2",
-    "topics": [
-      "nature"
-    ],
+    "topics": ["nature"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20380,9 +18429,7 @@ window.decks.en_nouns = [
     "ru": "техника",
     "uk": "техніка",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20403,9 +18450,7 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "машина",
     "level": "A2",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20426,9 +18471,7 @@ window.decks.en_nouns = [
     "ru": "устройство",
     "uk": "пристрій",
     "level": "A2",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20449,9 +18492,7 @@ window.decks.en_nouns = [
     "ru": "установка",
     "uk": "установка",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20472,9 +18513,7 @@ window.decks.en_nouns = [
     "ru": "двигатель",
     "uk": "двигун",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20495,10 +18534,7 @@ window.decks.en_nouns = [
     "ru": "винт",
     "uk": "гвинт",
     "level": "A2",
-    "topics": [
-      "tools",
-      "technology"
-    ],
+    "topics": ["technology", "tools"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20519,10 +18555,7 @@ window.decks.en_nouns = [
     "ru": "гайка",
     "uk": "гайка",
     "level": "A2",
-    "topics": [
-      "tools",
-      "technology"
-    ],
+    "topics": ["technology", "tools"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20543,9 +18576,7 @@ window.decks.en_nouns = [
     "ru": "плоскогубцы",
     "uk": "кліщі",
     "level": "A2",
-    "topics": [
-      "tools"
-    ],
+    "topics": ["tools"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20566,9 +18597,7 @@ window.decks.en_nouns = [
     "ru": "молоток",
     "uk": "молоток",
     "level": "A1",
-    "topics": [
-      "tools"
-    ],
+    "topics": ["tools"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20589,9 +18618,7 @@ window.decks.en_nouns = [
     "ru": "отвёртка",
     "uk": "викрутка",
     "level": "A2",
-    "topics": [
-      "tools"
-    ],
+    "topics": ["tools"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20612,9 +18639,7 @@ window.decks.en_nouns = [
     "ru": "экономика",
     "uk": "економіка",
     "level": "B1",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20635,9 +18660,7 @@ window.decks.en_nouns = [
     "ru": "торговля",
     "uk": "торгівля",
     "level": "B1",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20658,10 +18681,7 @@ window.decks.en_nouns = [
     "ru": "магазин",
     "uk": "магазин",
     "level": "A1",
-    "topics": [
-      "economy",
-      "shopping"
-    ],
+    "topics": ["economy", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20682,10 +18702,7 @@ window.decks.en_nouns = [
     "ru": "рынок",
     "uk": "ринок",
     "level": "A2",
-    "topics": [
-      "economy",
-      "shopping"
-    ],
+    "topics": ["economy", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20706,9 +18723,7 @@ window.decks.en_nouns = [
     "ru": "спрос",
     "uk": "попит",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20729,9 +18744,7 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20752,9 +18765,7 @@ window.decks.en_nouns = [
     "ru": "прибыль",
     "uk": "прибуток",
     "level": "B1",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20775,9 +18786,7 @@ window.decks.en_nouns = [
     "ru": "убыток",
     "uk": "втрата",
     "level": "B1",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20798,10 +18807,7 @@ window.decks.en_nouns = [
     "ru": "налог",
     "uk": "податок",
     "level": "B1",
-    "topics": [
-      "economy",
-      "law"
-    ],
+    "topics": ["economy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20822,9 +18828,7 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20845,10 +18849,7 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": [
-      "finance",
-      "shopping"
-    ],
+    "topics": ["finance", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20869,9 +18870,7 @@ window.decks.en_nouns = [
     "ru": "квитанция",
     "uk": "квитанція",
     "level": "A2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20892,9 +18891,7 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переказ",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20915,9 +18912,7 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20938,10 +18933,7 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "картка",
     "level": "A2",
-    "topics": [
-      "finance",
-      "daily life"
-    ],
+    "topics": ["daily life", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20962,9 +18954,7 @@ window.decks.en_nouns = [
     "ru": "кредит",
     "uk": "кредит",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20985,9 +18975,7 @@ window.decks.en_nouns = [
     "ru": "долги",
     "uk": "борги",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21008,9 +18996,7 @@ window.decks.en_nouns = [
     "ru": "взнос",
     "uk": "внесок",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21031,9 +19017,7 @@ window.decks.en_nouns = [
     "ru": "выплата",
     "uk": "виплата",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21054,9 +19038,7 @@ window.decks.en_nouns = [
     "ru": "процентная ставка",
     "uk": "відсоткова ставка",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21077,9 +19059,7 @@ window.decks.en_nouns = [
     "ru": "политика",
     "uk": "політика",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21100,9 +19080,7 @@ window.decks.en_nouns = [
     "ru": "правительство",
     "uk": "уряд",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21123,9 +19101,7 @@ window.decks.en_nouns = [
     "ru": "парламент",
     "uk": "парламент",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21146,9 +19122,7 @@ window.decks.en_nouns = [
     "ru": "выборы",
     "uk": "вибори",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21169,9 +19143,7 @@ window.decks.en_nouns = [
     "ru": "партия",
     "uk": "партія",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21192,10 +19164,7 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B1",
-    "topics": [
-      "law",
-      "politics"
-    ],
+    "topics": ["law", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21216,10 +19185,7 @@ window.decks.en_nouns = [
     "ru": "постановление",
     "uk": "постанова",
     "level": "B2",
-    "topics": [
-      "law",
-      "politics"
-    ],
+    "topics": ["law", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21240,10 +19206,7 @@ window.decks.en_nouns = [
     "ru": "администрация",
     "uk": "адміністрація",
     "level": "B1",
-    "topics": [
-      "law",
-      "organization"
-    ],
+    "topics": ["law", "organization"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21264,10 +19227,7 @@ window.decks.en_nouns = [
     "ru": "ведомство",
     "uk": "установа",
     "level": "B1",
-    "topics": [
-      "law",
-      "bureaucracy"
-    ],
+    "topics": ["bureaucracy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21288,10 +19248,7 @@ window.decks.en_nouns = [
     "ru": "голосование",
     "uk": "голосування",
     "level": "B1",
-    "topics": [
-      "politics",
-      "communication"
-    ],
+    "topics": ["communication", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21312,9 +19269,7 @@ window.decks.en_nouns = [
     "ru": "культура",
     "uk": "культура",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21335,9 +19290,7 @@ window.decks.en_nouns = [
     "ru": "традиция",
     "uk": "традиція",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21358,9 +19311,7 @@ window.decks.en_nouns = [
     "ru": "обычай",
     "uk": "звичай",
     "level": "B1",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21381,9 +19332,7 @@ window.decks.en_nouns = [
     "ru": "праздник",
     "uk": "свято",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21404,9 +19353,7 @@ window.decks.en_nouns = [
     "ru": "празднование",
     "uk": "святкування",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21427,9 +19374,7 @@ window.decks.en_nouns = [
     "ru": "праздничный день",
     "uk": "святковий день",
     "level": "A2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21450,10 +19395,7 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B1",
-    "topics": [
-      "psychology",
-      "daily life"
-    ],
+    "topics": ["daily life", "psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21474,9 +19416,7 @@ window.decks.en_nouns = [
     "ru": "нравы",
     "uk": "звичаї",
     "level": "B2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21497,9 +19437,7 @@ window.decks.en_nouns = [
     "ru": "молодожёны",
     "uk": "молодята",
     "level": "B1",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21520,9 +19458,7 @@ window.decks.en_nouns = [
     "ru": "церемония",
     "uk": "церемонія",
     "level": "B2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21543,9 +19479,7 @@ window.decks.en_nouns = [
     "ru": "коммуникация",
     "uk": "комунікація",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21566,9 +19500,7 @@ window.decks.en_nouns = [
     "ru": "разговор",
     "uk": "розмова",
     "level": "A2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21589,10 +19521,7 @@ window.decks.en_nouns = [
     "ru": "произношение",
     "uk": "вимова",
     "level": "B1",
-    "topics": [
-      "language",
-      "communication"
-    ],
+    "topics": ["communication", "language"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21613,9 +19542,7 @@ window.decks.en_nouns = [
     "ru": "ударение",
     "uk": "наголос",
     "level": "B1",
-    "topics": [
-      "language"
-    ],
+    "topics": ["language"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21636,9 +19563,7 @@ window.decks.en_nouns = [
     "ru": "речь",
     "uk": "промова",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21659,10 +19584,7 @@ window.decks.en_nouns = [
     "ru": "доклад",
     "uk": "доповідь",
     "level": "B1",
-    "topics": [
-      "communication",
-      "science"
-    ],
+    "topics": ["communication", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21683,10 +19605,7 @@ window.decks.en_nouns = [
     "ru": "конференция",
     "uk": "конференція",
     "level": "B1",
-    "topics": [
-      "work",
-      "science"
-    ],
+    "topics": ["science", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21707,9 +19626,7 @@ window.decks.en_nouns = [
     "ru": "протокол",
     "uk": "протокол",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21730,9 +19647,7 @@ window.decks.en_nouns = [
     "ru": "приглашение",
     "uk": "запрошення",
     "level": "A2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21753,9 +19668,7 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21776,9 +19689,7 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21799,9 +19710,7 @@ window.decks.en_nouns = [
     "ru": "уточняющий вопрос",
     "uk": "уточнююче запитання",
     "level": "B2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21822,9 +19731,7 @@ window.decks.en_nouns = [
     "ru": "справка",
     "uk": "довідка",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21845,9 +19752,7 @@ window.decks.en_nouns = [
     "ru": "одобрение",
     "uk": "схвалення",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21868,9 +19773,7 @@ window.decks.en_nouns = [
     "ru": "разногласие",
     "uk": "розбіжність у думках",
     "level": "B2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21891,9 +19794,7 @@ window.decks.en_nouns = [
     "ru": "компромисс",
     "uk": "компроміс",
     "level": "B1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21914,10 +19815,7 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B1",
-    "topics": [
-      "work",
-      "ethics"
-    ],
+    "topics": ["ethics", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21938,10 +19836,7 @@ window.decks.en_nouns = [
     "ru": "компетенция",
     "uk": "компетенція",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21962,9 +19857,7 @@ window.decks.en_nouns = [
     "ru": "доверенность",
     "uk": "довіреність",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21985,9 +19878,7 @@ window.decks.en_nouns = [
     "ru": "подпись",
     "uk": "підпис",
     "level": "A2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22008,10 +19899,7 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "A2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22032,9 +19920,7 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "призначення",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22055,10 +19941,7 @@ window.decks.en_nouns = [
     "ru": "задача",
     "uk": "завдання",
     "level": "A2",
-    "topics": [
-      "work",
-      "learning"
-    ],
+    "topics": ["learning", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22079,10 +19962,7 @@ window.decks.en_nouns = [
     "ru": "сложная задача",
     "uk": "виклик",
     "level": "B2",
-    "topics": [
-      "work",
-      "psychology"
-    ],
+    "topics": ["psychology", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22103,10 +19983,7 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "A2",
-    "topics": [
-      "logic",
-      "work"
-    ],
+    "topics": ["logic", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22127,10 +20004,7 @@ window.decks.en_nouns = [
     "ru": "индикатор прогресса",
     "uk": "індикатор прогресу",
     "level": "B1",
-    "topics": [
-      "it",
-      "ui"
-    ],
+    "topics": ["it", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22151,10 +20025,7 @@ window.decks.en_nouns = [
     "ru": "срок",
     "uk": "строк",
     "level": "B1",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22175,10 +20046,7 @@ window.decks.en_nouns = [
     "ru": "встреча",
     "uk": "зустріч",
     "level": "A2",
-    "topics": [
-      "work",
-      "daily life"
-    ],
+    "topics": ["daily life", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22199,10 +20067,7 @@ window.decks.en_nouns = [
     "ru": "расписание",
     "uk": "розклад",
     "level": "B1",
-    "topics": [
-      "work",
-      "time"
-    ],
+    "topics": ["time", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22223,10 +20088,7 @@ window.decks.en_nouns = [
     "ru": "приоритет",
     "uk": "пріоритет",
     "level": "B1",
-    "topics": [
-      "work",
-      "time"
-    ],
+    "topics": ["time", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22247,9 +20109,7 @@ window.decks.en_nouns = [
     "ru": "преимущество",
     "uk": "перевага",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22270,9 +20130,7 @@ window.decks.en_nouns = [
     "ru": "недостаток",
     "uk": "недолік",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22293,10 +20151,7 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": [
-      "communication",
-      "ui"
-    ],
+    "topics": ["communication", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22317,10 +20172,7 @@ window.decks.en_nouns = [
     "ru": "ошибка",
     "uk": "помилка",
     "level": "A2",
-    "topics": [
-      "general",
-      "it"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22341,9 +20193,7 @@ window.decks.en_nouns = [
     "ru": "исключение",
     "uk": "виняток",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22364,9 +20214,7 @@ window.decks.en_nouns = [
     "ru": "регулярность",
     "uk": "регулярність",
     "level": "B2",
-    "topics": [
-      "time"
-    ],
+    "topics": ["time"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22387,9 +20235,7 @@ window.decks.en_nouns = [
     "ru": "случайность",
     "uk": "випадковість",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22410,9 +20256,7 @@ window.decks.en_nouns = [
     "ru": "уверенность",
     "uk": "упевненість",
     "level": "B2",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22433,9 +20277,7 @@ window.decks.en_nouns = [
     "ru": "сомнение",
     "uk": "сумнів",
     "level": "B1",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22456,10 +20298,7 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "A2",
-    "topics": [
-      "psychology",
-      "work"
-    ],
+    "topics": ["psychology", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22480,9 +20319,7 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B2",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22503,10 +20340,7 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B1",
-    "topics": [
-      "logic",
-      "law"
-    ],
+    "topics": ["law", "logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22527,9 +20361,7 @@ window.decks.en_nouns = [
     "ru": "эффект",
     "uk": "дія",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22550,9 +20382,7 @@ window.decks.en_nouns = [
     "ru": "причина",
     "uk": "причина",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22573,9 +20403,7 @@ window.decks.en_nouns = [
     "ru": "последствие",
     "uk": "наслідок",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22596,9 +20424,7 @@ window.decks.en_nouns = [
     "ru": "обзор",
     "uk": "огляд",
     "level": "B1",
-    "topics": [
-      "information"
-    ],
+    "topics": ["information"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22619,10 +20445,7 @@ window.decks.en_nouns = [
     "ru": "представление",
     "uk": "представлення",
     "level": "B1",
-    "topics": [
-      "information",
-      "it"
-    ],
+    "topics": ["information", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22643,10 +20466,7 @@ window.decks.en_nouns = [
     "ru": "выбор",
     "uk": "вибір",
     "level": "A2",
-    "topics": [
-      "general",
-      "ui"
-    ],
+    "topics": ["general", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22667,9 +20487,7 @@ window.decks.en_nouns = [
     "ru": "комбинация",
     "uk": "комбінація",
     "level": "B1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22690,10 +20508,7 @@ window.decks.en_nouns = [
     "ru": "соответствие",
     "uk": "віднесення",
     "level": "B2",
-    "topics": [
-      "logic",
-      "it"
-    ],
+    "topics": ["it", "logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22714,9 +20529,7 @@ window.decks.en_nouns = [
     "ru": "список избранного",
     "uk": "список улюблених",
     "level": "A2",
-    "topics": [
-      "ui"
-    ],
+    "topics": ["ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22737,10 +20550,7 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": [
-      "symbol",
-      "ui"
-    ],
+    "topics": ["symbol", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22761,10 +20571,7 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": [
-      "symbol",
-      "ui"
-    ],
+    "topics": ["symbol", "ui"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22785,9 +20592,7 @@ window.decks.en_nouns = [
     "ru": "ступень",
     "uk": "щабель",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22808,9 +20613,7 @@ window.decks.en_nouns = [
     "ru": "порог",
     "uk": "поріг",
     "level": "B2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22831,9 +20634,7 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "межа",
     "level": "A2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22854,10 +20655,7 @@ window.decks.en_nouns = [
     "ru": "столбец",
     "uk": "стовпчик",
     "level": "B1",
-    "topics": [
-      "it",
-      "tables"
-    ],
+    "topics": ["it", "tables"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22878,10 +20676,7 @@ window.decks.en_nouns = [
     "ru": "строка",
     "uk": "рядок",
     "level": "B1",
-    "topics": [
-      "it",
-      "tables"
-    ],
+    "topics": ["it", "tables"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22902,10 +20697,7 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B1",
-    "topics": [
-      "it",
-      "data"
-    ],
+    "topics": ["data", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22926,10 +20718,7 @@ window.decks.en_nouns = [
     "ru": "набор данных",
     "uk": "набір даних",
     "level": "B2",
-    "topics": [
-      "it",
-      "data"
-    ],
+    "topics": ["data", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22950,9 +20739,7 @@ window.decks.en_nouns = [
     "ru": "резервное копирование",
     "uk": "резервне копіювання",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22973,9 +20760,7 @@ window.decks.en_nouns = [
     "ru": "восстановление",
     "uk": "відновлення",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22996,9 +20781,7 @@ window.decks.en_nouns = [
     "ru": "версионирование",
     "uk": "версіонування",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23019,9 +20802,7 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23042,10 +20823,7 @@ window.decks.en_nouns = [
     "ru": "стабильность",
     "uk": "стабільність",
     "level": "B2",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23066,9 +20844,7 @@ window.decks.en_nouns = [
     "ru": "расширение",
     "uk": "розширення",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23089,9 +20865,7 @@ window.decks.en_nouns = [
     "ru": "модуль",
     "uk": "модуль",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23112,9 +20886,7 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23135,10 +20907,7 @@ window.decks.en_nouns = [
     "ru": "документация",
     "uk": "документація",
     "level": "B1",
-    "topics": [
-      "it",
-      "work"
-    ],
+    "topics": ["it", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23159,10 +20928,7 @@ window.decks.en_nouns = [
     "ru": "публикация",
     "uk": "публікація",
     "level": "B2",
-    "topics": [
-      "it",
-      "media"
-    ],
+    "topics": ["it", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23183,9 +20949,7 @@ window.decks.en_nouns = [
     "ru": "население",
     "uk": "населення",
     "level": "B1",
-    "topics": [
-      "society"
-    ],
+    "topics": ["society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23206,10 +20970,7 @@ window.decks.en_nouns = [
     "ru": "равноправие",
     "uk": "рівноправність",
     "level": "B2",
-    "topics": [
-      "society",
-      "law"
-    ],
+    "topics": ["law", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23230,10 +20991,7 @@ window.decks.en_nouns = [
     "ru": "обязательство",
     "uk": "зобов'язання",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23254,10 +21012,7 @@ window.decks.en_nouns = [
     "ru": "ущерб",
     "uk": "обмеження",
     "level": "B2",
-    "topics": [
-      "law",
-      "health"
-    ],
+    "topics": ["health", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23278,10 +21033,7 @@ window.decks.en_nouns = [
     "ru": "ограничение",
     "uk": "обмеження",
     "level": "B1",
-    "topics": [
-      "law",
-      "general"
-    ],
+    "topics": ["general", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23302,9 +21054,7 @@ window.decks.en_nouns = [
     "ru": "толерантность",
     "uk": "толерантність",
     "level": "B1",
-    "topics": [
-      "society"
-    ],
+    "topics": ["society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23325,9 +21075,7 @@ window.decks.en_nouns = [
     "ru": "разнообразие",
     "uk": "різноманіття",
     "level": "B1",
-    "topics": [
-      "society"
-    ],
+    "topics": ["society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23348,9 +21096,7 @@ window.decks.en_nouns = [
     "ru": "интеграция",
     "uk": "інтеграція",
     "level": "B1",
-    "topics": [
-      "society"
-    ],
+    "topics": ["society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23371,10 +21117,7 @@ window.decks.en_nouns = [
     "ru": "участие",
     "uk": "участь",
     "level": "B2",
-    "topics": [
-      "society",
-      "work"
-    ],
+    "topics": ["society", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23395,9 +21138,7 @@ window.decks.en_nouns = [
     "ru": "обоснование",
     "uk": "обґрунтування",
     "level": "B2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23418,9 +21159,7 @@ window.decks.en_nouns = [
     "ru": "заявление о согласии",
     "uk": "заява про згоду",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23441,10 +21180,7 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B1",
-    "topics": [
-      "work",
-      "it"
-    ],
+    "topics": ["it", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23465,10 +21201,7 @@ window.decks.en_nouns = [
     "ru": "процедура",
     "uk": "процедура",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23489,9 +21222,7 @@ window.decks.en_nouns = [
     "ru": "учреждение",
     "uk": "установа",
     "level": "B1",
-    "topics": [
-      "society"
-    ],
+    "topics": ["society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23512,9 +21243,7 @@ window.decks.en_nouns = [
     "ru": "община",
     "uk": "громада",
     "level": "B1",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23535,9 +21264,7 @@ window.decks.en_nouns = [
     "ru": "городской совет",
     "uk": "міська рада",
     "level": "B2",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23558,10 +21285,7 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": [
-      "finance",
-      "politics"
-    ],
+    "topics": ["finance", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23582,9 +21306,7 @@ window.decks.en_nouns = [
     "ru": "проведение",
     "uk": "проведення",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23605,10 +21327,7 @@ window.decks.en_nouns = [
     "ru": "затраты",
     "uk": "витрати",
     "level": "B2",
-    "topics": [
-      "work",
-      "finance"
-    ],
+    "topics": ["finance", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23629,10 +21348,7 @@ window.decks.en_nouns = [
     "ru": "доход",
     "uk": "дохід",
     "level": "B2",
-    "topics": [
-      "finance",
-      "economy"
-    ],
+    "topics": ["economy", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23653,9 +21369,7 @@ window.decks.en_nouns = [
     "ru": "оборот",
     "uk": "обіг",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23676,9 +21390,7 @@ window.decks.en_nouns = [
     "ru": "доставка",
     "uk": "доставка",
     "level": "B2",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23699,10 +21411,7 @@ window.decks.en_nouns = [
     "ru": "оснащение",
     "uk": "оснащення",
     "level": "B1",
-    "topics": [
-      "tech",
-      "work"
-    ],
+    "topics": ["technology", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23723,10 +21432,7 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": [
-      "work",
-      "society"
-    ],
+    "topics": ["society", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23747,10 +21453,7 @@ window.decks.en_nouns = [
     "ru": "приложение",
     "uk": "застосунок",
     "level": "B1",
-    "topics": [
-      "it",
-      "general"
-    ],
+    "topics": ["general", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23771,9 +21474,7 @@ window.decks.en_nouns = [
     "ru": "комплектация",
     "uk": "комплектація",
     "level": "B2",
-    "topics": [
-      "tech"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23794,10 +21495,7 @@ window.decks.en_nouns = [
     "ru": "безопасность данных",
     "uk": "безпека даних",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23818,10 +21516,7 @@ window.decks.en_nouns = [
     "ru": "защита данных",
     "uk": "захист даних",
     "level": "B2",
-    "topics": [
-      "it",
-      "law"
-    ],
+    "topics": ["it", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23842,9 +21537,7 @@ window.decks.en_nouns = [
     "ru": "программное обеспечение",
     "uk": "програмне забезпечення",
     "level": "A2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23865,9 +21558,7 @@ window.decks.en_nouns = [
     "ru": "аппаратное обеспечение",
     "uk": "апаратне забезпечення",
     "level": "A2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23888,10 +21579,7 @@ window.decks.en_nouns = [
     "ru": "пропускная способность",
     "uk": "пропускна здатність",
     "level": "B2",
-    "topics": [
-      "it",
-      "network"
-    ],
+    "topics": ["it", "network"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23912,10 +21600,7 @@ window.decks.en_nouns = [
     "ru": "шифрование",
     "uk": "шифрування",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23936,10 +21621,7 @@ window.decks.en_nouns = [
     "ru": "передача",
     "uk": "передача",
     "level": "B1",
-    "topics": [
-      "it",
-      "media"
-    ],
+    "topics": ["it", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23960,9 +21642,7 @@ window.decks.en_nouns = [
     "ru": "заболевание",
     "uk": "захворювання",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23983,9 +21663,7 @@ window.decks.en_nouns = [
     "ru": "профилактика",
     "uk": "профілактика",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24006,9 +21684,7 @@ window.decks.en_nouns = [
     "ru": "диагноз",
     "uk": "діагноз",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24029,9 +21705,7 @@ window.decks.en_nouns = [
     "ru": "терапия",
     "uk": "терапія",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24052,9 +21726,7 @@ window.decks.en_nouns = [
     "ru": "прививка",
     "uk": "щеплення",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24075,9 +21747,7 @@ window.decks.en_nouns = [
     "ru": "выздоровление",
     "uk": "одужання",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24098,10 +21768,7 @@ window.decks.en_nouns = [
     "ru": "нагрузка",
     "uk": "навантаження",
     "level": "B2",
-    "topics": [
-      "work",
-      "health"
-    ],
+    "topics": ["health", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24122,9 +21789,7 @@ window.decks.en_nouns = [
     "ru": "влияние",
     "uk": "вплив",
     "level": "B2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24145,9 +21810,7 @@ window.decks.en_nouns = [
     "ru": "кровяное давление",
     "uk": "артеріальний тиск",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24168,10 +21831,7 @@ window.decks.en_nouns = [
     "ru": "знание",
     "uk": "знання",
     "level": "B2",
-    "topics": [
-      "science",
-      "psychology"
-    ],
+    "topics": ["psychology", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24192,9 +21852,7 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B1",
-    "topics": [
-      "science"
-    ],
+    "topics": ["science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24215,9 +21873,7 @@ window.decks.en_nouns = [
     "ru": "изменение климата",
     "uk": "зміна клімату",
     "level": "B1",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24238,9 +21894,7 @@ window.decks.en_nouns = [
     "ru": "выброс",
     "uk": "викид",
     "level": "B2",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24261,9 +21915,7 @@ window.decks.en_nouns = [
     "ru": "эмиссия",
     "uk": "викид",
     "level": "B2",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24284,10 +21936,7 @@ window.decks.en_nouns = [
     "ru": "потребление",
     "uk": "споживання",
     "level": "B1",
-    "topics": [
-      "environment",
-      "economy"
-    ],
+    "topics": ["economy", "environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24308,10 +21957,7 @@ window.decks.en_nouns = [
     "ru": "выработка",
     "uk": "виробництво",
     "level": "B2",
-    "topics": [
-      "environment",
-      "economy"
-    ],
+    "topics": ["economy", "environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24332,10 +21978,7 @@ window.decks.en_nouns = [
     "ru": "снабжение",
     "uk": "забезпечення",
     "level": "B2",
-    "topics": [
-      "economy",
-      "health"
-    ],
+    "topics": ["economy", "health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24356,10 +21999,7 @@ window.decks.en_nouns = [
     "ru": "экономия",
     "uk": "економія",
     "level": "B2",
-    "topics": [
-      "economy",
-      "environment"
-    ],
+    "topics": ["economy", "environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24380,9 +22020,7 @@ window.decks.en_nouns = [
     "ru": "раздельный сбор отходов",
     "uk": "сортування відходів",
     "level": "B1",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24403,9 +22041,7 @@ window.decks.en_nouns = [
     "ru": "переработка",
     "uk": "переробка",
     "level": "B2",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24426,9 +22062,7 @@ window.decks.en_nouns = [
     "ru": "устойчивое развитие",
     "uk": "сталий розвиток",
     "level": "B2",
-    "topics": [
-      "environment"
-    ],
+    "topics": ["environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24449,9 +22083,7 @@ window.decks.en_nouns = [
     "ru": "рецессия",
     "uk": "рецесія",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24472,9 +22104,7 @@ window.decks.en_nouns = [
     "ru": "благосостояние",
     "uk": "добробут",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24495,9 +22125,7 @@ window.decks.en_nouns = [
     "ru": "имущество",
     "uk": "майно",
     "level": "B2",
-    "topics": [
-      "economy"
-    ],
+    "topics": ["economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24518,9 +22146,7 @@ window.decks.en_nouns = [
     "ru": "облигация",
     "uk": "облігація",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24541,9 +22167,7 @@ window.decks.en_nouns = [
     "ru": "доходность",
     "uk": "дохідність",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24564,9 +22188,7 @@ window.decks.en_nouns = [
     "ru": "резерв",
     "uk": "резерв",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24587,9 +22209,7 @@ window.decks.en_nouns = [
     "ru": "иск",
     "uk": "позов",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24610,10 +22230,7 @@ window.decks.en_nouns = [
     "ru": "обязательное разрешение",
     "uk": "обов'язковий дозвіл",
     "level": "C1",
-    "topics": [
-      "law",
-      "bureaucracy"
-    ],
+    "topics": ["bureaucracy", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24634,10 +22251,7 @@ window.decks.en_nouns = [
     "ru": "соглашение",
     "uk": "угода",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24658,9 +22272,7 @@ window.decks.en_nouns = [
     "ru": "подтверждение",
     "uk": "підтвердження",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24681,9 +22293,7 @@ window.decks.en_nouns = [
     "ru": "доказательная база",
     "uk": "доказова база",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24704,9 +22314,7 @@ window.decks.en_nouns = [
     "ru": "приговор",
     "uk": "вирок",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24727,9 +22335,7 @@ window.decks.en_nouns = [
     "ru": "апелляция",
     "uk": "апеляція",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24750,9 +22356,7 @@ window.decks.en_nouns = [
     "ru": "образование",
     "uk": "освіта",
     "level": "A2",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24773,10 +22377,7 @@ window.decks.en_nouns = [
     "ru": "повышение квалификации",
     "uk": "підвищення кваліфікації",
     "level": "B2",
-    "topics": [
-      "education",
-      "work"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24797,10 +22398,7 @@ window.decks.en_nouns = [
     "ru": "повышение квалификации",
     "uk": "підвищення кваліфікації",
     "level": "B2",
-    "topics": [
-      "education",
-      "work"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24821,9 +22419,7 @@ window.decks.en_nouns = [
     "ru": "учебный план",
     "uk": "навчальний план",
     "level": "B1",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24844,9 +22440,7 @@ window.decks.en_nouns = [
     "ru": "спектакль",
     "uk": "вистава",
     "level": "B1",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24867,9 +22461,7 @@ window.decks.en_nouns = [
     "ru": "литературное чтение",
     "uk": "читання",
     "level": "B2",
-    "topics": [
-      "culture"
-    ],
+    "topics": ["culture"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24890,9 +22482,7 @@ window.decks.en_nouns = [
     "ru": "вступительный экзамен",
     "uk": "вступний іспит",
     "level": "B2",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24913,9 +22503,7 @@ window.decks.en_nouns = [
     "ru": "вакансия",
     "uk": "оголошення про вакансію",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24936,9 +22524,7 @@ window.decks.en_nouns = [
     "ru": "введение в работу",
     "uk": "впровадження в роботу",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24959,9 +22545,7 @@ window.decks.en_nouns = [
     "ru": "сменная работа",
     "uk": "позмінна робота",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24982,9 +22566,7 @@ window.decks.en_nouns = [
     "ru": "замещение",
     "uk": "заміна",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25005,10 +22587,7 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": [
-      "work",
-      "society"
-    ],
+    "topics": ["society", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25029,9 +22608,7 @@ window.decks.en_nouns = [
     "ru": "руководитель",
     "uk": "керівник",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25052,9 +22629,7 @@ window.decks.en_nouns = [
     "ru": "специалист",
     "uk": "фахівець",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25075,10 +22650,7 @@ window.decks.en_nouns = [
     "ru": "рабочая нагрузка",
     "uk": "робоче навантаження",
     "level": "B2",
-    "topics": [
-      "work",
-      "health"
-    ],
+    "topics": ["health", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25099,10 +22671,7 @@ window.decks.en_nouns = [
     "ru": "зона ответственности",
     "uk": "зона відповідальності",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25123,10 +22692,7 @@ window.decks.en_nouns = [
     "ru": "готовность",
     "uk": "готовність",
     "level": "B1",
-    "topics": [
-      "work",
-      "psychology"
-    ],
+    "topics": ["psychology", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25147,9 +22713,7 @@ window.decks.en_nouns = [
     "ru": "свойство",
     "uk": "властивість",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25170,10 +22734,7 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B2",
-    "topics": [
-      "work",
-      "education"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25194,10 +22755,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": [
-      "work",
-      "communication"
-    ],
+    "topics": ["communication", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25218,9 +22776,7 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B1",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25241,10 +22797,7 @@ window.decks.en_nouns = [
     "ru": "зависимость",
     "uk": "залежність",
     "level": "B2",
-    "topics": [
-      "psychology",
-      "society"
-    ],
+    "topics": ["psychology", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25265,10 +22818,7 @@ window.decks.en_nouns = [
     "ru": "независимость",
     "uk": "незалежність",
     "level": "B2",
-    "topics": [
-      "society",
-      "psychology"
-    ],
+    "topics": ["psychology", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25289,10 +22839,7 @@ window.decks.en_nouns = [
     "ru": "безответственность",
     "uk": "безвідповідальність",
     "level": "B2",
-    "topics": [
-      "personality",
-      "society"
-    ],
+    "topics": ["personality", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25313,10 +22860,7 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B1",
-    "topics": [
-      "communication",
-      "law"
-    ],
+    "topics": ["communication", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25337,10 +22881,7 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B1",
-    "topics": [
-      "communication",
-      "law"
-    ],
+    "topics": ["communication", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25361,10 +22902,7 @@ window.decks.en_nouns = [
     "ru": "платформа",
     "uk": "платформа",
     "level": "B1",
-    "topics": [
-      "it",
-      "business"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25385,9 +22923,7 @@ window.decks.en_nouns = [
     "ru": "операционная система",
     "uk": "операційна система",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25408,9 +22944,7 @@ window.decks.en_nouns = [
     "ru": "программный интерфейс",
     "uk": "програмний інтерфейс",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25431,9 +22965,7 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25454,9 +22986,7 @@ window.decks.en_nouns = [
     "ru": "сервер",
     "uk": "сервер",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25477,10 +23007,7 @@ window.decks.en_nouns = [
     "ru": "поставщик услуг",
     "uk": "постачальник послуг",
     "level": "B2",
-    "topics": [
-      "business",
-      "it"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25501,10 +23028,7 @@ window.decks.en_nouns = [
     "ru": "технология шифрования",
     "uk": "технологія шифрування",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25525,10 +23049,7 @@ window.decks.en_nouns = [
     "ru": "аутентификация",
     "uk": "автентифікація",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25549,10 +23070,7 @@ window.decks.en_nouns = [
     "ru": "авторизация",
     "uk": "авторизація",
     "level": "B2",
-    "topics": [
-      "it",
-      "security"
-    ],
+    "topics": ["it", "security"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25573,9 +23091,7 @@ window.decks.en_nouns = [
     "ru": "база данных",
     "uk": "база даних",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25596,9 +23112,7 @@ window.decks.en_nouns = [
     "ru": "запрос к базе данных",
     "uk": "запит до бази даних",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25619,10 +23133,7 @@ window.decks.en_nouns = [
     "ru": "устойчивость к отказам",
     "uk": "відмовостійкість",
     "level": "C1",
-    "topics": [
-      "it",
-      "engineering"
-    ],
+    "topics": ["engineering", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25643,9 +23154,7 @@ window.decks.en_nouns = [
     "ru": "журналирование",
     "uk": "журналювання",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25666,9 +23175,7 @@ window.decks.en_nouns = [
     "ru": "распределение нагрузки",
     "uk": "балансування навантаження",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25689,9 +23196,7 @@ window.decks.en_nouns = [
     "ru": "задержка",
     "uk": "затримка",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25712,9 +23217,7 @@ window.decks.en_nouns = [
     "ru": "ограничение пропускной способности",
     "uk": "обмеження пропускної здатності",
     "level": "C1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25735,9 +23238,7 @@ window.decks.en_nouns = [
     "ru": "описание интерфейса",
     "uk": "опис інтерфейсу",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25758,9 +23259,7 @@ window.decks.en_nouns = [
     "ru": "исходный код",
     "uk": "вихідний код",
     "level": "B1",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25781,10 +23280,7 @@ window.decks.en_nouns = [
     "ru": "коммит",
     "uk": "коміт",
     "level": "B2",
-    "topics": [
-      "it",
-      "dev"
-    ],
+    "topics": ["dev", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25805,10 +23301,7 @@ window.decks.en_nouns = [
     "ru": "пулл-реквест",
     "uk": "запит на злиття",
     "level": "B2",
-    "topics": [
-      "it",
-      "dev"
-    ],
+    "topics": ["dev", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25829,10 +23322,7 @@ window.decks.en_nouns = [
     "ru": "репозиторий",
     "uk": "репозиторій",
     "level": "B1",
-    "topics": [
-      "it",
-      "dev"
-    ],
+    "topics": ["dev", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25853,10 +23343,7 @@ window.decks.en_nouns = [
     "ru": "пайплайн",
     "uk": "пайплайн",
     "level": "B2",
-    "topics": [
-      "it",
-      "devops"
-    ],
+    "topics": ["devops", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25877,10 +23364,7 @@ window.decks.en_nouns = [
     "ru": "развёртывание",
     "uk": "розгортання",
     "level": "B2",
-    "topics": [
-      "it",
-      "devops"
-    ],
+    "topics": ["devops", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25901,11 +23385,7 @@ window.decks.en_nouns = [
     "ru": "поставка",
     "uk": "постачання",
     "level": "B2",
-    "topics": [
-      "business",
-      "logistics",
-      "it"
-    ],
+    "topics": ["business", "it", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25926,10 +23406,7 @@ window.decks.en_nouns = [
     "ru": "зависимость",
     "uk": "залежність",
     "level": "B2",
-    "topics": [
-      "it",
-      "dev"
-    ],
+    "topics": ["dev", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25950,10 +23427,7 @@ window.decks.en_nouns = [
     "ru": "покрытие",
     "uk": "покриття",
     "level": "B2",
-    "topics": [
-      "testing",
-      "stats"
-    ],
+    "topics": ["statistics", "testing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25974,9 +23448,7 @@ window.decks.en_nouns = [
     "ru": "исключение",
     "uk": "виняток",
     "level": "B2",
-    "topics": [
-      "it"
-    ],
+    "topics": ["it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25997,10 +23469,7 @@ window.decks.en_nouns = [
     "ru": "тракция",
     "uk": "тракція",
     "level": "C1",
-    "topics": [
-      "business",
-      "startups"
-    ],
+    "topics": ["business", "startups"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26021,10 +23490,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B1",
-    "topics": [
-      "business",
-      "finance"
-    ],
+    "topics": ["business", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26045,10 +23511,7 @@ window.decks.en_nouns = [
     "ru": "раунд финансирования",
     "uk": "раунд фінансування",
     "level": "B2",
-    "topics": [
-      "finance",
-      "startups"
-    ],
+    "topics": ["finance", "startups"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26069,9 +23532,7 @@ window.decks.en_nouns = [
     "ru": "инвестор",
     "uk": "інвестор",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26092,9 +23553,7 @@ window.decks.en_nouns = [
     "ru": "наблюдательный совет",
     "uk": "наглядова рада",
     "level": "C1",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26115,10 +23574,7 @@ window.decks.en_nouns = [
     "ru": "доля участия",
     "uk": "частка участі",
     "level": "B2",
-    "topics": [
-      "finance",
-      "business"
-    ],
+    "topics": ["business", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26139,9 +23595,7 @@ window.decks.en_nouns = [
     "ru": "бизнес-план",
     "uk": "бізнес-план",
     "level": "B2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26162,9 +23616,7 @@ window.decks.en_nouns = [
     "ru": "бизнес-модель",
     "uk": "бізнес-модель",
     "level": "B2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26185,10 +23637,7 @@ window.decks.en_nouns = [
     "ru": "вывод на рынок",
     "uk": "виведення на ринок",
     "level": "B2",
-    "topics": [
-      "business",
-      "marketing"
-    ],
+    "topics": ["business", "marketing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26209,10 +23658,7 @@ window.decks.en_nouns = [
     "ru": "исследование рынка",
     "uk": "дослідження ринку",
     "level": "B2",
-    "topics": [
-      "business",
-      "marketing"
-    ],
+    "topics": ["business", "marketing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26233,9 +23679,7 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "A2",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26256,10 +23700,7 @@ window.decks.en_nouns = [
     "ru": "создание добавленной стоимости",
     "uk": "створення доданої вартості",
     "level": "C1",
-    "topics": [
-      "economy",
-      "business"
-    ],
+    "topics": ["business", "economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26280,10 +23721,7 @@ window.decks.en_nouns = [
     "ru": "цепочка поставок",
     "uk": "ланцюг постачання",
     "level": "B2",
-    "topics": [
-      "logistics",
-      "business"
-    ],
+    "topics": ["business", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26304,10 +23742,7 @@ window.decks.en_nouns = [
     "ru": "анализ узких мест",
     "uk": "аналіз вузьких місць",
     "level": "C1",
-    "topics": [
-      "business",
-      "it"
-    ],
+    "topics": ["business", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26328,10 +23763,7 @@ window.decks.en_nouns = [
     "ru": "уровень заболеваемости",
     "uk": "рівень захворюваності",
     "level": "B2",
-    "topics": [
-      "health",
-      "statistics"
-    ],
+    "topics": ["health", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26352,10 +23784,7 @@ window.decks.en_nouns = [
     "ru": "уровень смертности",
     "uk": "рівень смертності",
     "level": "B2",
-    "topics": [
-      "health",
-      "statistics"
-    ],
+    "topics": ["health", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26376,10 +23805,7 @@ window.decks.en_nouns = [
     "ru": "продолжительность жизни",
     "uk": "середня тривалість життя",
     "level": "B1",
-    "topics": [
-      "health",
-      "statistics"
-    ],
+    "topics": ["health", "statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26400,9 +23826,7 @@ window.decks.en_nouns = [
     "ru": "побочный эффект",
     "uk": "побічна дія",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26423,9 +23847,7 @@ window.decks.en_nouns = [
     "ru": "переносимость",
     "uk": "переносимість",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26446,9 +23868,7 @@ window.decks.en_nouns = [
     "ru": "дозировка",
     "uk": "дозування",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26469,9 +23889,7 @@ window.decks.en_nouns = [
     "ru": "введение",
     "uk": "введення",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26492,9 +23910,7 @@ window.decks.en_nouns = [
     "ru": "передозировка",
     "uk": "передозування",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26515,9 +23931,7 @@ window.decks.en_nouns = [
     "ru": "воспаление",
     "uk": "запалення",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26538,9 +23952,7 @@ window.decks.en_nouns = [
     "ru": "образец крови",
     "uk": "зразок крові",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26561,9 +23973,7 @@ window.decks.en_nouns = [
     "ru": "ткань",
     "uk": "тканина",
     "level": "B2",
-    "topics": [
-      "biology"
-    ],
+    "topics": ["biology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26584,9 +23994,7 @@ window.decks.en_nouns = [
     "ru": "деление клеток",
     "uk": "поділ клітин",
     "level": "B2",
-    "topics": [
-      "biology"
-    ],
+    "topics": ["biology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26607,10 +24015,7 @@ window.decks.en_nouns = [
     "ru": "действующее вещество",
     "uk": "діюча речовина",
     "level": "B2",
-    "topics": [
-      "health",
-      "pharmacy"
-    ],
+    "topics": ["health", "pharmacy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26631,10 +24036,7 @@ window.decks.en_nouns = [
     "ru": "эффективность",
     "uk": "ефективність",
     "level": "B2",
-    "topics": [
-      "health",
-      "science"
-    ],
+    "topics": ["health", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26655,10 +24057,7 @@ window.decks.en_nouns = [
     "ru": "доказательность",
     "uk": "доказовість",
     "level": "C1",
-    "topics": [
-      "science",
-      "medicine"
-    ],
+    "topics": ["medicine", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26679,9 +24078,7 @@ window.decks.en_nouns = [
     "ru": "клиническая рекомендация",
     "uk": "клінічна настанова",
     "level": "C1",
-    "topics": [
-      "medicine"
-    ],
+    "topics": ["medicine"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26702,10 +24099,7 @@ window.decks.en_nouns = [
     "ru": "расширение полномочий",
     "uk": "розширення повноважень",
     "level": "C1",
-    "topics": [
-      "law",
-      "politics"
-    ],
+    "topics": ["law", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26726,10 +24120,7 @@ window.decks.en_nouns = [
     "ru": "общий регламент по защите данных",
     "uk": "загальний регламент захисту даних",
     "level": "C1",
-    "topics": [
-      "law",
-      "it"
-    ],
+    "topics": ["it", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26750,10 +24141,7 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "заява згоди",
     "level": "B2",
-    "topics": [
-      "law",
-      "data"
-    ],
+    "topics": ["data", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26774,9 +24162,7 @@ window.decks.en_nouns = [
     "ru": "возражение",
     "uk": "заперечення",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26797,9 +24183,7 @@ window.decks.en_nouns = [
     "ru": "апелляция",
     "uk": "заперечення",
     "level": "B2",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26820,9 +24204,7 @@ window.decks.en_nouns = [
     "ru": "полномочие на вручение",
     "uk": "повноваження на вручення",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26843,9 +24225,7 @@ window.decks.en_nouns = [
     "ru": "срок давности",
     "uk": "строк давності",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26866,9 +24246,7 @@ window.decks.en_nouns = [
     "ru": "судебная практика",
     "uk": "судова практика",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26889,10 +24267,7 @@ window.decks.en_nouns = [
     "ru": "разделение полномочий",
     "uk": "розподіл повноважень",
     "level": "C1",
-    "topics": [
-      "politics",
-      "law"
-    ],
+    "topics": ["law", "politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26913,10 +24288,7 @@ window.decks.en_nouns = [
     "ru": "фотовольтаика",
     "uk": "фотовольтаїка",
     "level": "B2",
-    "topics": [
-      "energy",
-      "environment"
-    ],
+    "topics": ["energy", "environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26937,10 +24309,7 @@ window.decks.en_nouns = [
     "ru": "ветроустановка",
     "uk": "вітрова установка",
     "level": "B2",
-    "topics": [
-      "energy",
-      "environment"
-    ],
+    "topics": ["energy", "environment"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26961,9 +24330,7 @@ window.decks.en_nouns = [
     "ru": "электросеть",
     "uk": "електромережа",
     "level": "B1",
-    "topics": [
-      "energy"
-    ],
+    "topics": ["energy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26984,9 +24351,7 @@ window.decks.en_nouns = [
     "ru": "ввод в сеть",
     "uk": "подання в мережу",
     "level": "B2",
-    "topics": [
-      "energy"
-    ],
+    "topics": ["energy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27007,10 +24372,7 @@ window.decks.en_nouns = [
     "ru": "накопитель",
     "uk": "накопичувач",
     "level": "B1",
-    "topics": [
-      "it",
-      "energy"
-    ],
+    "topics": ["energy", "it"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27031,10 +24393,7 @@ window.decks.en_nouns = [
     "ru": "зарядная станция",
     "uk": "зарядна станція",
     "level": "B1",
-    "topics": [
-      "energy",
-      "traffic"
-    ],
+    "topics": ["energy", "traffic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27055,9 +24414,7 @@ window.decks.en_nouns = [
     "ru": "мощность зарядки",
     "uk": "потужність заряджання",
     "level": "B2",
-    "topics": [
-      "energy"
-    ],
+    "topics": ["energy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27078,10 +24435,7 @@ window.decks.en_nouns = [
     "ru": "тепловой насос",
     "uk": "тепловий насос",
     "level": "B2",
-    "topics": [
-      "energy",
-      "housing"
-    ],
+    "topics": ["energy", "housing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27102,10 +24456,7 @@ window.decks.en_nouns = [
     "ru": "утепление",
     "uk": "утеплення",
     "level": "B2",
-    "topics": [
-      "housing",
-      "energy"
-    ],
+    "topics": ["energy", "housing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27126,10 +24477,7 @@ window.decks.en_nouns = [
     "ru": "энергетический сертификат здания",
     "uk": "енергетичний сертифікат будівлі",
     "level": "C1",
-    "topics": [
-      "energy",
-      "housing"
-    ],
+    "topics": ["energy", "housing"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27150,10 +24498,7 @@ window.decks.en_nouns = [
     "ru": "специализированная литература",
     "uk": "фахова література",
     "level": "B2",
-    "topics": [
-      "education",
-      "science"
-    ],
+    "topics": ["education", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27174,10 +24519,7 @@ window.decks.en_nouns = [
     "ru": "список источников",
     "uk": "список джерел",
     "level": "B2",
-    "topics": [
-      "education",
-      "science"
-    ],
+    "topics": ["education", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27198,10 +24540,7 @@ window.decks.en_nouns = [
     "ru": "цитата",
     "uk": "цитата",
     "level": "B1",
-    "topics": [
-      "education",
-      "communication"
-    ],
+    "topics": ["communication", "education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27222,10 +24561,7 @@ window.decks.en_nouns = [
     "ru": "тезис",
     "uk": "теза",
     "level": "B2",
-    "topics": [
-      "education",
-      "science"
-    ],
+    "topics": ["education", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27246,10 +24582,7 @@ window.decks.en_nouns = [
     "ru": "обоснование",
     "uk": "обґрунтування",
     "level": "B2",
-    "topics": [
-      "education",
-      "logic"
-    ],
+    "topics": ["education", "logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27270,10 +24603,7 @@ window.decks.en_nouns = [
     "ru": "заключение",
     "uk": "висновок",
     "level": "B2",
-    "topics": [
-      "medicine",
-      "science"
-    ],
+    "topics": ["medicine", "science"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27294,9 +24624,7 @@ window.decks.en_nouns = [
     "ru": "выборка",
     "uk": "вибірка",
     "level": "B2",
-    "topics": [
-      "statistics"
-    ],
+    "topics": ["statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27317,9 +24645,7 @@ window.decks.en_nouns = [
     "ru": "дисперсия",
     "uk": "дисперсія",
     "level": "C1",
-    "topics": [
-      "statistics"
-    ],
+    "topics": ["statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27340,9 +24666,7 @@ window.decks.en_nouns = [
     "ru": "среднее значение",
     "uk": "середнє значення",
     "level": "B1",
-    "topics": [
-      "statistics"
-    ],
+    "topics": ["statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27363,9 +24687,7 @@ window.decks.en_nouns = [
     "ru": "корреляция",
     "uk": "кореляція",
     "level": "B2",
-    "topics": [
-      "statistics"
-    ],
+    "topics": ["statistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27386,10 +24708,7 @@ window.decks.en_nouns = [
     "ru": "понимание",
     "uk": "розуміння",
     "level": "B2",
-    "topics": [
-      "communication",
-      "opinion"
-    ],
+    "topics": ["communication", "opinion"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27410,10 +24729,7 @@ window.decks.en_nouns = [
     "ru": "дискуссия",
     "uk": "дискусія",
     "level": "B2",
-    "topics": [
-      "communication",
-      "conflict"
-    ],
+    "topics": ["communication", "conflict"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27434,10 +24750,7 @@ window.decks.en_nouns = [
     "ru": "влияние",
     "uk": "вплив",
     "level": "B2",
-    "topics": [
-      "communication",
-      "psychology"
-    ],
+    "topics": ["communication", "psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27458,10 +24771,7 @@ window.decks.en_nouns = [
     "ru": "возмущение",
     "uk": "обурення",
     "level": "B2",
-    "topics": [
-      "emotion",
-      "society"
-    ],
+    "topics": ["emotion", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27482,10 +24792,7 @@ window.decks.en_nouns = [
     "ru": "общественная поддержка",
     "uk": "суспільна підтримка",
     "level": "B2",
-    "topics": [
-      "politics",
-      "society"
-    ],
+    "topics": ["politics", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27506,10 +24813,7 @@ window.decks.en_nouns = [
     "ru": "общественное неприятие",
     "uk": "суспільне відторгнення",
     "level": "B2",
-    "topics": [
-      "politics",
-      "society"
-    ],
+    "topics": ["politics", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27530,10 +24834,7 @@ window.decks.en_nouns = [
     "ru": "поляризация",
     "uk": "поляризація",
     "level": "C1",
-    "topics": [
-      "society",
-      "politics"
-    ],
+    "topics": ["politics", "society"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27554,9 +24855,7 @@ window.decks.en_nouns = [
     "ru": "освещение",
     "uk": "висвітлення",
     "level": "B2",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27577,9 +24876,7 @@ window.decks.en_nouns = [
     "ru": "дезинформация",
     "uk": "дезінформація",
     "level": "B2",
-    "topics": [
-      "media"
-    ],
+    "topics": ["media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27600,10 +24897,7 @@ window.decks.en_nouns = [
     "ru": "источник",
     "uk": "джерело",
     "level": "A2",
-    "topics": [
-      "media",
-      "education"
-    ],
+    "topics": ["education", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27624,10 +24918,7 @@ window.decks.en_nouns = [
     "ru": "тарифный договор",
     "uk": "тарифна угода",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27648,10 +24939,7 @@ window.decks.en_nouns = [
     "ru": "динамика зарплат",
     "uk": "динаміка зарплат",
     "level": "B2",
-    "topics": [
-      "work",
-      "economy"
-    ],
+    "topics": ["economy", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27672,9 +24960,7 @@ window.decks.en_nouns = [
     "ru": "регулирование рабочего времени",
     "uk": "регулювання робочого часу",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27695,9 +24981,7 @@ window.decks.en_nouns = [
     "ru": "вознаграждение",
     "uk": "винагорода",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27718,9 +25002,7 @@ window.decks.en_nouns = [
     "ru": "сверхурочный час",
     "uk": "понаднормова година",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27741,10 +25023,7 @@ window.decks.en_nouns = [
     "ru": "надбавка",
     "uk": "надбавка",
     "level": "B2",
-    "topics": [
-      "work",
-      "finance"
-    ],
+    "topics": ["finance", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27765,10 +25044,7 @@ window.decks.en_nouns = [
     "ru": "выходное пособие",
     "uk": "вихідна допомога",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27789,9 +25065,7 @@ window.decks.en_nouns = [
     "ru": "возмещение",
     "uk": "відшкодування",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27812,9 +25086,7 @@ window.decks.en_nouns = [
     "ru": "порядок замещения",
     "uk": "порядок заміщення",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27835,10 +25107,7 @@ window.decks.en_nouns = [
     "ru": "соглашение на предприятии",
     "uk": "угода на підприємстві",
     "level": "C1",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27859,10 +25128,7 @@ window.decks.en_nouns = [
     "ru": "охрана труда",
     "uk": "охорона праці",
     "level": "B2",
-    "topics": [
-      "work",
-      "law"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27883,11 +25149,7 @@ window.decks.en_nouns = [
     "ru": "оценка рисков",
     "uk": "оцінка ризиків",
     "level": "C1",
-    "topics": [
-      "work",
-      "safety",
-      "law"
-    ],
+    "topics": ["law", "safety", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27908,10 +25170,7 @@ window.decks.en_nouns = [
     "ru": "восприятие",
     "uk": "сприйняття",
     "level": "B2",
-    "topics": [
-      "psychology",
-      "communication"
-    ],
+    "topics": ["communication", "psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27932,10 +25191,7 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінювання",
     "level": "B2",
-    "topics": [
-      "work",
-      "evaluation"
-    ],
+    "topics": ["evaluation", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27956,10 +25212,7 @@ window.decks.en_nouns = [
     "ru": "толкование",
     "uk": "тлумачення",
     "level": "C1",
-    "topics": [
-      "law",
-      "communication"
-    ],
+    "topics": ["communication", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27980,10 +25233,7 @@ window.decks.en_nouns = [
     "ru": "склонность",
     "uk": "схильність",
     "level": "B2",
-    "topics": [
-      "personality",
-      "psychology"
-    ],
+    "topics": ["personality", "psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28004,10 +25254,7 @@ window.decks.en_nouns = [
     "ru": "устойчивость",
     "uk": "стійкість",
     "level": "B2",
-    "topics": [
-      "personality",
-      "physics"
-    ],
+    "topics": ["personality", "physics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28028,10 +25275,7 @@ window.decks.en_nouns = [
     "ru": "выносливость",
     "uk": "витривалість",
     "level": "B2",
-    "topics": [
-      "work",
-      "health"
-    ],
+    "topics": ["health", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28052,10 +25296,7 @@ window.decks.en_nouns = [
     "ru": "соответствие",
     "uk": "відповідність",
     "level": "B2",
-    "topics": [
-      "logic",
-      "law"
-    ],
+    "topics": ["law", "logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28076,10 +25317,7 @@ window.decks.en_nouns = [
     "ru": "несоответствие",
     "uk": "невідповідність",
     "level": "B2",
-    "topics": [
-      "conflict",
-      "law"
-    ],
+    "topics": ["conflict", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28100,10 +25338,7 @@ window.decks.en_nouns = [
     "ru": "ориентировочное значение",
     "uk": "орієнтовне значення",
     "level": "B2",
-    "topics": [
-      "math",
-      "planning"
-    ],
+    "topics": ["math", "planning"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28124,10 +25359,7 @@ window.decks.en_nouns = [
     "ru": "складской остаток",
     "uk": "складський залишок",
     "level": "B2",
-    "topics": [
-      "logistics",
-      "business"
-    ],
+    "topics": ["business", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28148,10 +25380,7 @@ window.decks.en_nouns = [
     "ru": "дефицит поставок",
     "uk": "дефіцит постачання",
     "level": "B2",
-    "topics": [
-      "logistics",
-      "economy"
-    ],
+    "topics": ["economy", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28172,10 +25401,7 @@ window.decks.en_nouns = [
     "ru": "дозаказ",
     "uk": "додаткове замовлення",
     "level": "B1",
-    "topics": [
-      "logistics",
-      "shopping"
-    ],
+    "topics": ["logistics", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28196,10 +25422,7 @@ window.decks.en_nouns = [
     "ru": "возврат",
     "uk": "повернення",
     "level": "B1",
-    "topics": [
-      "shopping",
-      "logistics"
-    ],
+    "topics": ["logistics", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28220,10 +25443,7 @@ window.decks.en_nouns = [
     "ru": "наличие",
     "uk": "наявність",
     "level": "B1",
-    "topics": [
-      "shopping",
-      "it"
-    ],
+    "topics": ["it", "shopping"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28244,9 +25464,7 @@ window.decks.en_nouns = [
     "ru": "отслеживание отправления",
     "uk": "відстеження відправлення",
     "level": "B1",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28267,9 +25485,7 @@ window.decks.en_nouns = [
     "ru": "трек-номер",
     "uk": "номер відправлення",
     "level": "A2",
-    "topics": [
-      "logistics"
-    ],
+    "topics": ["logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28290,10 +25506,7 @@ window.decks.en_nouns = [
     "ru": "адрес доставки",
     "uk": "адреса доставки",
     "level": "A2",
-    "topics": [
-      "logistics",
-      "forms"
-    ],
+    "topics": ["forms", "logistics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28314,10 +25527,7 @@ window.decks.en_nouns = [
     "ru": "вид на жительство",
     "uk": "дозвіл на проживання",
     "level": "B2",
-    "topics": [
-      "law",
-      "migration"
-    ],
+    "topics": ["law", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28338,9 +25548,7 @@ window.decks.en_nouns = [
     "ru": "справка о регистрации",
     "uk": "довідка про реєстрацію",
     "level": "B2",
-    "topics": [
-      "administration"
-    ],
+    "topics": ["administration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28361,10 +25569,7 @@ window.decks.en_nouns = [
     "ru": "разрешение на пребывание",
     "uk": "дозвіл на перебування",
     "level": "B2",
-    "topics": [
-      "law",
-      "migration"
-    ],
+    "topics": ["law", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28385,10 +25590,7 @@ window.decks.en_nouns = [
     "ru": "разрешение на работу",
     "uk": "дозвіл на роботу",
     "level": "B2",
-    "topics": [
-      "work",
-      "migration"
-    ],
+    "topics": ["migration", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28409,10 +25611,7 @@ window.decks.en_nouns = [
     "ru": "гражданство",
     "uk": "громадянство",
     "level": "B1",
-    "topics": [
-      "law",
-      "personal"
-    ],
+    "topics": ["law", "personal"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28433,10 +25632,7 @@ window.decks.en_nouns = [
     "ru": "натурализация",
     "uk": "натуралізація",
     "level": "C1",
-    "topics": [
-      "law",
-      "migration"
-    ],
+    "topics": ["law", "migration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28457,9 +25653,7 @@ window.decks.en_nouns = [
     "ru": "место жительства",
     "uk": "місце проживання",
     "level": "B1",
-    "topics": [
-      "administration"
-    ],
+    "topics": ["administration"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28480,10 +25674,7 @@ window.decks.en_nouns = [
     "ru": "опасность",
     "uk": "неbezпека",
     "level": "B2",
-    "topics": [
-      "safety",
-      "law"
-    ],
+    "topics": ["law", "safety"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28504,10 +25695,7 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B2",
-    "topics": [
-      "law",
-      "business"
-    ],
+    "topics": ["business", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28528,10 +25716,7 @@ window.decks.en_nouns = [
     "ru": "экспертное заключение",
     "uk": "експертний висновок",
     "level": "B2",
-    "topics": [
-      "law",
-      "medicine"
-    ],
+    "topics": ["law", "medicine"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28552,10 +25737,7 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B2",
-    "topics": [
-      "law",
-      "administration"
-    ],
+    "topics": ["administration", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28576,10 +25758,7 @@ window.decks.en_nouns = [
     "ru": "подтверждение встречи",
     "uk": "підтвердження зустрічі",
     "level": "B1",
-    "topics": [
-      "work",
-      "communication"
-    ],
+    "topics": ["communication", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28600,10 +25779,7 @@ window.decks.en_nouns = [
     "ru": "перенос встречи",
     "uk": "перенесення зустрічі",
     "level": "B1",
-    "topics": [
-      "work",
-      "communication"
-    ],
+    "topics": ["communication", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28624,10 +25800,7 @@ window.decks.en_nouns = [
     "ru": "доступность",
     "uk": "доступність",
     "level": "B1",
-    "topics": [
-      "communication",
-      "work"
-    ],
+    "topics": ["communication", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28648,9 +25821,7 @@ window.decks.en_nouns = [
     "ru": "заём",
     "uk": "позика",
     "level": "B2",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28671,9 +25842,7 @@ window.decks.en_nouns = [
     "ru": "проценты",
     "uk": "відсотки",
     "level": "B1",
-    "topics": [
-      "finance"
-    ],
+    "topics": ["finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28694,10 +25863,7 @@ window.decks.en_nouns = [
     "ru": "налоговая декларация",
     "uk": "податкова декларація",
     "level": "B2",
-    "topics": [
-      "finance",
-      "law"
-    ],
+    "topics": ["finance", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28718,10 +25884,7 @@ window.decks.en_nouns = [
     "ru": "сбор",
     "uk": "збір",
     "level": "B2",
-    "topics": [
-      "finance",
-      "law"
-    ],
+    "topics": ["finance", "law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28742,10 +25905,7 @@ window.decks.en_nouns = [
     "ru": "страховка",
     "uk": "страхування",
     "level": "B1",
-    "topics": [
-      "finance",
-      "health"
-    ],
+    "topics": ["finance", "health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28766,10 +25926,7 @@ window.decks.en_nouns = [
     "ru": "пенсионное обеспечение",
     "uk": "пенсійне забезпечення",
     "level": "B2",
-    "topics": [
-      "finance",
-      "social"
-    ],
+    "topics": ["finance", "social"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28790,10 +25947,7 @@ window.decks.en_nouns = [
     "ru": "взнос",
     "uk": "внесок",
     "level": "B1",
-    "topics": [
-      "finance",
-      "media"
-    ],
+    "topics": ["finance", "media"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28814,10 +25968,7 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": [
-      "family",
-      "finance"
-    ],
+    "topics": ["family", "finance"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28838,10 +25989,7 @@ window.decks.en_nouns = [
     "ru": "ситуация с обеспечением",
     "uk": "ситуація із забезпеченням",
     "level": "C1",
-    "topics": [
-      "economy",
-      "crisis"
-    ],
+    "topics": ["crisis", "economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28862,10 +26010,7 @@ window.decks.en_nouns = [
     "ru": "рост",
     "uk": "зростання",
     "level": "B1",
-    "topics": [
-      "economy",
-      "biology"
-    ],
+    "topics": ["biology", "economy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28886,10 +26031,7 @@ window.decks.en_nouns = [
     "ru": "развитие",
     "uk": "розвиток",
     "level": "B1",
-    "topics": [
-      "general",
-      "economy"
-    ],
+    "topics": ["economy", "general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28910,10 +26052,7 @@ window.decks.en_nouns = [
     "ru": "колебание",
     "uk": "коливання",
     "level": "B2",
-    "topics": [
-      "economy",
-      "physics"
-    ],
+    "topics": ["economy", "physics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28934,10 +26073,7 @@ window.decks.en_nouns = [
     "ru": "профилактика",
     "uk": "профілактика",
     "level": "B2",
-    "topics": [
-      "health",
-      "finance"
-    ],
+    "topics": ["finance", "health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28958,9 +26094,7 @@ window.decks.en_nouns = [
     "ru": "метод лечения",
     "uk": "метод лікування",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -28981,9 +26115,7 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29004,9 +26136,7 @@ window.decks.en_nouns = [
     "ru": "исцеление",
     "uk": "зцілення",
     "level": "B1",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29027,9 +26157,7 @@ window.decks.en_nouns = [
     "ru": "вид терапии",
     "uk": "вид терапії",
     "level": "B2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29050,10 +26178,7 @@ window.decks.en_nouns = [
     "ru": "медперсонал",
     "uk": "медперсонал",
     "level": "B1",
-    "topics": [
-      "health",
-      "work"
-    ],
+    "topics": ["health", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29074,9 +26199,7 @@ window.decks.en_nouns = [
     "ru": "пациент",
     "uk": "пацієнт",
     "level": "A2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29097,9 +26220,7 @@ window.decks.en_nouns = [
     "ru": "операция",
     "uk": "операція",
     "level": "A2",
-    "topics": [
-      "health"
-    ],
+    "topics": ["health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29120,10 +26241,7 @@ window.decks.en_nouns = [
     "ru": "отдых",
     "uk": "відпочинок",
     "level": "B1",
-    "topics": [
-      "health",
-      "free-time"
-    ],
+    "topics": ["free-time", "health"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29144,9 +26262,7 @@ window.decks.en_nouns = [
     "ru": "положение",
     "uk": "положення",
     "level": "C1",
-    "topics": [
-      "law"
-    ],
+    "topics": ["law"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29167,10 +26283,7 @@ window.decks.en_nouns = [
     "ru": "регулирование",
     "uk": "регулювання",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29191,10 +26304,7 @@ window.decks.en_nouns = [
     "ru": "нарушение",
     "uk": "порушення",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29215,10 +26325,7 @@ window.decks.en_nouns = [
     "ru": "наблюдение",
     "uk": "нагляд",
     "level": "B2",
-    "topics": [
-      "safety",
-      "it"
-    ],
+    "topics": ["it", "safety"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29239,10 +26346,7 @@ window.decks.en_nouns = [
     "ru": "распоряжение",
     "uk": "розпорядження",
     "level": "B2",
-    "topics": [
-      "law",
-      "work"
-    ],
+    "topics": ["law", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29263,9 +26367,7 @@ window.decks.en_nouns = [
     "ru": "рабочее время",
     "uk": "робочий час",
     "level": "A2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29286,9 +26388,7 @@ window.decks.en_nouns = [
     "ru": "рабочее место",
     "uk": "робоче місце",
     "level": "A2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29309,9 +26409,7 @@ window.decks.en_nouns = [
     "ru": "работник",
     "uk": "працівник",
     "level": "A2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29332,9 +26430,7 @@ window.decks.en_nouns = [
     "ru": "работодатель",
     "uk": "роботодавець",
     "level": "A2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29355,9 +26451,7 @@ window.decks.en_nouns = [
     "ru": "совещание",
     "uk": "нарада",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29378,9 +26472,7 @@ window.decks.en_nouns = [
     "ru": "встреча",
     "uk": "зустріч",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29401,10 +26493,7 @@ window.decks.en_nouns = [
     "ru": "презентация",
     "uk": "презентація",
     "level": "B1",
-    "topics": [
-      "work",
-      "education"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29425,10 +26514,7 @@ window.decks.en_nouns = [
     "ru": "планирование",
     "uk": "планування",
     "level": "B1",
-    "topics": [
-      "work",
-      "project"
-    ],
+    "topics": ["project", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29449,9 +26535,7 @@ window.decks.en_nouns = [
     "ru": "занятие",
     "uk": "заняття",
     "level": "A2",
-    "topics": [
-      "education"
-    ],
+    "topics": ["education"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29472,10 +26556,7 @@ window.decks.en_nouns = [
     "ru": "компетенция",
     "uk": "компетенція",
     "level": "B2",
-    "topics": [
-      "work",
-      "education"
-    ],
+    "topics": ["education", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29496,9 +26577,7 @@ window.decks.en_nouns = [
     "ru": "участие",
     "uk": "участь",
     "level": "A2",
-    "topics": [
-      "events"
-    ],
+    "topics": ["events"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29519,9 +26598,7 @@ window.decks.en_nouns = [
     "ru": "мероприятие",
     "uk": "захід",
     "level": "A2",
-    "topics": [
-      "events"
-    ],
+    "topics": ["events"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29542,9 +26619,7 @@ window.decks.en_nouns = [
     "ru": "транспортное средство",
     "uk": "транспортний засіб",
     "level": "A2",
-    "topics": [
-      "traffic"
-    ],
+    "topics": ["traffic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29565,10 +26640,7 @@ window.decks.en_nouns = [
     "ru": "сеть",
     "uk": "мережа",
     "level": "B1",
-    "topics": [
-      "it",
-      "social"
-    ],
+    "topics": ["it", "social"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29589,10 +26661,7 @@ window.decks.en_nouns = [
     "ru": "сигнал",
     "uk": "сигнал",
     "level": "A2",
-    "topics": [
-      "tech",
-      "communication"
-    ],
+    "topics": ["communication", "technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29613,9 +26682,7 @@ window.decks.en_nouns = [
     "ru": "управление",
     "uk": "керування",
     "level": "B1",
-    "topics": [
-      "tech"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29636,10 +26703,7 @@ window.decks.en_nouns = [
     "ru": "напряжение",
     "uk": "напруга",
     "level": "B1",
-    "topics": [
-      "physics",
-      "emotion"
-    ],
+    "topics": ["emotion", "physics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29660,9 +26724,7 @@ window.decks.en_nouns = [
     "ru": "батарея",
     "uk": "батарея",
     "level": "A2",
-    "topics": [
-      "tech"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29683,9 +26745,7 @@ window.decks.en_nouns = [
     "ru": "мнение",
     "uk": "думка",
     "level": "A2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29706,9 +26766,7 @@ window.decks.en_nouns = [
     "ru": "изменение",
     "uk": "зміна",
     "level": "A2",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29729,9 +26787,7 @@ window.decks.en_nouns = [
     "ru": "случай",
     "uk": "нагода",
     "level": "B1",
-    "topics": [
-      "general"
-    ],
+    "topics": ["general"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29752,9 +26808,7 @@ window.decks.en_nouns = [
     "ru": "доступ",
     "uk": "доступ",
     "level": "B1",
-    "topics": [
-      "technology"
-    ],
+    "topics": ["technology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29775,9 +26829,7 @@ window.decks.en_nouns = [
     "ru": "повышение стоимости",
     "uk": "підвищення вартості",
     "level": "B2",
-    "topics": [
-      "economics"
-    ],
+    "topics": ["economics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29798,10 +26850,7 @@ window.decks.en_nouns = [
     "ru": "черновик, эскиз",
     "uk": "чернетка, ескіз",
     "level": "B1",
-    "topics": [
-      "design",
-      "work"
-    ],
+    "topics": ["design", "work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29822,9 +26871,7 @@ window.decks.en_nouns = [
     "ru": "укрепление, закрепление",
     "uk": "закріплення",
     "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "topics": ["abstract"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29845,9 +26892,7 @@ window.decks.en_nouns = [
     "ru": "перелом, поворот",
     "uk": "злам, поворот",
     "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "topics": ["abstract"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29868,9 +26913,7 @@ window.decks.en_nouns = [
     "ru": "перегруженность",
     "uk": "перевантаженість",
     "level": "C1",
-    "topics": [
-      "abstract"
-    ],
+    "topics": ["abstract"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29891,9 +26934,7 @@ window.decks.en_nouns = [
     "ru": "заказчик",
     "uk": "замовник",
     "level": "B1",
-    "topics": [
-      "business"
-    ],
+    "topics": ["business"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29914,9 +26955,7 @@ window.decks.en_nouns = [
     "ru": "страсть, влечение",
     "uk": "пристрасть, бажання",
     "level": "C1",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29937,9 +26976,7 @@ window.decks.en_nouns = [
     "ru": "ошибочное предположение",
     "uk": "помилкове припущення",
     "level": "C1",
-    "topics": [
-      "logic"
-    ],
+    "topics": ["logic"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29960,9 +26997,7 @@ window.decks.en_nouns = [
     "ru": "инициатива, попытка продвижения",
     "uk": "ініціатива, спроба просування",
     "level": "B2",
-    "topics": [
-      "politics"
-    ],
+    "topics": ["politics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -29983,9 +27018,7 @@ window.decks.en_nouns = [
     "ru": "устранение проблемы",
     "uk": "усунення проблеми",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30006,9 +27039,7 @@ window.decks.en_nouns = [
     "ru": "преобразование, перестройка",
     "uk": "перетворення, перебудова",
     "level": "B2",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30029,9 +27060,7 @@ window.decks.en_nouns = [
     "ru": "персонал, коллектив",
     "uk": "персонал, колектив",
     "level": "B1",
-    "topics": [
-      "work"
-    ],
+    "topics": ["work"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30052,9 +27081,7 @@ window.decks.en_nouns = [
     "ru": "размышление, уединение",
     "uk": "усамітнення, роздуми",
     "level": "C1",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30075,9 +27102,7 @@ window.decks.en_nouns = [
     "ru": "оговорка, сомнение",
     "uk": "застереження, сумнів",
     "level": "B2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30098,9 +27123,7 @@ window.decks.en_nouns = [
     "ru": "инцидент",
     "uk": "інцидент",
     "level": "B1",
-    "topics": [
-      "crime"
-    ],
+    "topics": ["crime"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30121,9 +27144,7 @@ window.decks.en_nouns = [
     "ru": "безвестность, исчезнение",
     "uk": "загубленість, зникнення",
     "level": "C1",
-    "topics": [
-      "crime"
-    ],
+    "topics": ["crime"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30144,9 +27165,7 @@ window.decks.en_nouns = [
     "ru": "выплата, распределение средств",
     "uk": "виплата, розподіл коштів",
     "level": "B2",
-    "topics": [
-      "economics"
-    ],
+    "topics": ["economics"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30167,9 +27186,7 @@ window.decks.en_nouns = [
     "ru": "услуга, любезность",
     "uk": "послуга, люб’язність",
     "level": "B2",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30190,9 +27207,7 @@ window.decks.en_nouns = [
     "ru": "ошибка, промах",
     "uk": "помилка, промах",
     "level": "B2",
-    "topics": [
-      "psychology"
-    ],
+    "topics": ["psychology"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30213,9 +27228,7 @@ window.decks.en_nouns = [
     "ru": "суть дела, суть вопроса",
     "uk": "сутність справи",
     "level": "C1",
-    "topics": [
-      "communication"
-    ],
+    "topics": ["communication"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -30236,10 +27249,7 @@ window.decks.en_nouns = [
     "ru": "стечение обстоятельств",
     "uk": "збіг обставин",
     "level": "B2",
-    "topics": [
-      "philosophy",
-      "abstract"
-    ],
+    "topics": ["abstract", "philosophy"],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
