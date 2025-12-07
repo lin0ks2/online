@@ -1,12 +1,5 @@
-/* ==========================================================
- * Project: MOYAMOVA
- * File: deck.de.js
- * Purpose: словарь приложения (JS)
- * Version: 1.0
- * Last modified: 2025-10-19
-*/
-window.decks = window.decks || {};
-
+// Auto-generated English deck, based on German source.
+// Contains nouns with translations, synonyms, antonyms and examples in three languages.
 window.decks.en_nouns = [
   {
     "id": 1,
@@ -16227,7 +16220,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Female teacher is an important topic at our workplace.",
+        "ru": "Учительница — важная тема на нашей работе.",
+        "uk": "Вчителька — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 702,
@@ -16244,7 +16243,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about notebook in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как тетрадь.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як зошит."
+      }
+    ]
   },
   {
     "id": 703,
@@ -16262,7 +16267,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about book in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как книга.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як книга."
+      }
+    ]
   },
   {
     "id": 704,
@@ -16280,7 +16291,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about dictionary in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как словарь.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як словник."
+      }
+    ]
   },
   {
     "id": 705,
@@ -16297,7 +16314,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about pen in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как ручка.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як ручка."
+      }
+    ]
   },
   {
     "id": 706,
@@ -16314,7 +16337,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about sheet of paper in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как лист.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як аркуш."
+      }
+    ]
   },
   {
     "id": 707,
@@ -16331,7 +16360,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about blackboard in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как доска.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як дошка."
+      }
+    ]
   },
   {
     "id": 708,
@@ -16348,7 +16383,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about chalk in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как мел.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як крейда."
+      }
+    ]
   },
   {
     "id": 709,
@@ -16365,7 +16406,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about eraser in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как ластик.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як гумка."
+      }
+    ]
   },
   {
     "id": 710,
@@ -16383,7 +16430,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about backpack in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как рюкзак.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як рюкзак."
+      }
+    ]
   },
   {
     "id": 711,
@@ -16401,7 +16454,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, court played a central role.",
+        "ru": "В обсуждении новых правил суд сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил суд відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 712,
@@ -16418,7 +16477,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, judge played a central role.",
+        "ru": "В обсуждении новых правил судья сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил суддя відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 713,
@@ -16436,7 +16501,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Lawyer is an important topic at our workplace.",
+        "ru": "Адвокат — важная тема на нашей работе.",
+        "uk": "Адвокат — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 714,
@@ -16454,7 +16525,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Female lawyer is an important topic at our workplace.",
+        "ru": "Адвокат — важная тема на нашей работе.",
+        "uk": "Адвокатка — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 715,
@@ -16472,7 +16549,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, police played a central role.",
+        "ru": "В обсуждении новых правил полиция сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил поліція відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 716,
@@ -16489,7 +16572,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, police report played a central role.",
+        "ru": "В обсуждении новых правил заявление сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил заява відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 717,
@@ -16506,7 +16595,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, fine played a central role.",
+        "ru": "В обсуждении новых правил штраф сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил штраф відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 718,
@@ -16523,7 +16618,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, law played a central role.",
+        "ru": "В обсуждении новых правил закон сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил закон відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 719,
@@ -16540,7 +16641,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, rule can be very important.",
+        "ru": "В повседневной жизни правило может играть очень важную роль.",
+        "uk": "У повсякденному житті правило може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 720,
@@ -16557,7 +16664,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, order can be very important.",
+        "ru": "В повседневной жизни порядок может играть очень важную роль.",
+        "uk": "У повсякденному житті порядок може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 721,
@@ -16574,7 +16687,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, house can be very important.",
+        "ru": "В повседневной жизни дом может играть очень важную роль.",
+        "uk": "У повсякденному житті будинок може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 722,
@@ -16591,7 +16710,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, apartment can be very important.",
+        "ru": "В повседневной жизни квартира может играть очень важную роль.",
+        "uk": "У повсякденному житті квартира може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 723,
@@ -16608,7 +16733,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, room can be very important.",
+        "ru": "В повседневной жизни комната может играть очень важную роль.",
+        "uk": "У повсякденному житті кімната може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 724,
@@ -16626,7 +16757,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, kitchen can be very important.",
+        "ru": "В повседневной жизни кухня может играть очень важную роль.",
+        "uk": "У повсякденному житті кухня може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 725,
@@ -16643,7 +16780,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bathroom can be very important.",
+        "ru": "В повседневной жизни ванная может играть очень важную роль.",
+        "uk": "У повсякденному житті ванна може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 726,
@@ -16660,7 +16803,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bedroom can be very important.",
+        "ru": "В повседневной жизни спальня может играть очень важную роль.",
+        "uk": "У повсякденному житті спальня може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 727,
@@ -16677,7 +16826,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, living room can be very important.",
+        "ru": "В повседневной жизни гостиная может играть очень важную роль.",
+        "uk": "У повсякденному житті вітальня може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 728,
@@ -16694,7 +16849,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, hallway can be very important.",
+        "ru": "В повседневной жизни коридор может играть очень важную роль.",
+        "uk": "У повсякденному житті коридор може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 729,
@@ -16711,7 +16872,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, balcony can be very important.",
+        "ru": "В повседневной жизни балкон может играть очень важную роль.",
+        "uk": "У повсякденному житті балкон може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 730,
@@ -16729,7 +16896,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, garden can be very important.",
+        "ru": "В повседневной жизни сад может играть очень важную роль.",
+        "uk": "У повсякденному житті сад може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 731,
@@ -16746,7 +16919,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, table can be very important.",
+        "ru": "В повседневной жизни стол может играть очень важную роль.",
+        "uk": "У повсякденному житті стіл може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 732,
@@ -16763,7 +16942,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, chair can be very important.",
+        "ru": "В повседневной жизни стул может играть очень важную роль.",
+        "uk": "У повсякденному житті стілець може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 733,
@@ -16780,7 +16965,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bed can be very important.",
+        "ru": "В повседневной жизни кровать может играть очень важную роль.",
+        "uk": "У повсякденному житті ліжко може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 734,
@@ -16797,7 +16988,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, wardrobe can be very important.",
+        "ru": "В повседневной жизни шкаф может играть очень важную роль.",
+        "uk": "У повсякденному житті шафа може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 735,
@@ -16814,7 +17011,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, shelf can be very important.",
+        "ru": "В повседневной жизни полка может играть очень важную роль.",
+        "uk": "У повсякденному житті полиця може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 736,
@@ -16831,7 +17034,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, lamp can be very important.",
+        "ru": "В повседневной жизни лампа может играть очень важную роль.",
+        "uk": "У повсякденному житті лампа може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 737,
@@ -16848,7 +17057,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, carpet can be very important.",
+        "ru": "В повседневной жизни ковер может играть очень важную роль.",
+        "uk": "У повсякденному житті килим може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 738,
@@ -16865,7 +17080,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, mirror can be very important.",
+        "ru": "В повседневной жизни зеркало может играть очень важную роль.",
+        "uk": "У повсякденному житті дзеркало може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 739,
@@ -16882,7 +17103,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, curtain can be very important.",
+        "ru": "В повседневной жизни штора может играть очень важную роль.",
+        "uk": "У повсякденному житті штора може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 740,
@@ -16900,7 +17127,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, plant can be very important.",
+        "ru": "В повседневной жизни растение может играть очень важную роль.",
+        "uk": "У повсякденному житті рослина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 742,
@@ -16918,7 +17151,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, fridge can be very important.",
+        "ru": "В повседневной жизни холодильник может играть очень важную роль.",
+        "uk": "У повсякденному житті холодильник може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 743,
@@ -16936,7 +17175,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, stove can be very important.",
+        "ru": "В повседневной жизни плита может играть очень важную роль.",
+        "uk": "У повсякденному житті плита може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 744,
@@ -16954,7 +17199,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, oven can be very important.",
+        "ru": "В повседневной жизни духовка может играть очень важную роль.",
+        "uk": "У повсякденному житті духовка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 745,
@@ -16971,7 +17222,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, frying pan can be very important.",
+        "ru": "В повседневной жизни сковорода может играть очень важную роль.",
+        "uk": "У повсякденному житті пательня може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 746,
@@ -16988,7 +17245,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, pot can be very important.",
+        "ru": "В повседневной жизни кастрюля может играть очень важную роль.",
+        "uk": "У повсякденному житті каструля може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 747,
@@ -17005,7 +17268,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, knife can be very important.",
+        "ru": "В повседневной жизни нож может играть очень важную роль.",
+        "uk": "У повсякденному житті ніж може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 748,
@@ -17022,7 +17291,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, fork can be very important.",
+        "ru": "В повседневной жизни вилка может играть очень важную роль.",
+        "uk": "У повсякденному житті виделка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 749,
@@ -17039,7 +17314,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, spoon can be very important.",
+        "ru": "В повседневной жизни ложка может играть очень важную роль.",
+        "uk": "У повсякденному житті ложка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 750,
@@ -17056,7 +17337,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, plate can be very important.",
+        "ru": "В повседневной жизни тарелка может играть очень важную роль.",
+        "uk": "У повсякденному житті тарілка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 751,
@@ -17073,7 +17360,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cup can be very important.",
+        "ru": "В повседневной жизни чашка может играть очень важную роль.",
+        "uk": "У повсякденному житті чашка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 752,
@@ -17090,7 +17383,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, glass can be very important.",
+        "ru": "В повседневной жизни стакан может играть очень важную роль.",
+        "uk": "У повсякденному житті склянка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 753,
@@ -17107,7 +17406,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bottle can be very important.",
+        "ru": "В повседневной жизни бутылка может играть очень важную роль.",
+        "uk": "У повсякденному житті пляшка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 754,
@@ -17124,7 +17429,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bowl can be very important.",
+        "ru": "В повседневной жизни миска может играть очень важную роль.",
+        "uk": "У повсякденному житті миска може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 755,
@@ -17142,7 +17453,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, salt can be very important.",
+        "ru": "В повседневной жизни соль может играть очень важную роль.",
+        "uk": "У повсякденному житті сіль може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 756,
@@ -17160,7 +17477,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sugar can be very important.",
+        "ru": "В повседневной жизни сахар может играть очень важную роль.",
+        "uk": "У повсякденному житті цукор може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 757,
@@ -17178,7 +17501,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, pepper can be very important.",
+        "ru": "В повседневной жизни перец может играть очень важную роль.",
+        "uk": "У повсякденному житті перець може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 758,
@@ -17196,7 +17525,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, oil can be very important.",
+        "ru": "В повседневной жизни масло может играть очень важную роль.",
+        "uk": "У повсякденному житті олія може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 759,
@@ -17214,7 +17549,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, vinegar can be very important.",
+        "ru": "В повседневной жизни уксус может играть очень важную роль.",
+        "uk": "У повсякденному житті оцет може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 760,
@@ -17231,7 +17572,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, spice can be very important.",
+        "ru": "В повседневной жизни специя может играть очень важную роль.",
+        "uk": "У повсякденному житті спеція може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 761,
@@ -17249,7 +17596,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, breakfast can be very important.",
+        "ru": "В повседневной жизни завтрак может играть очень важную роль.",
+        "uk": "У повсякденному житті сніданок може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 762,
@@ -17267,7 +17620,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, lunch can be very important.",
+        "ru": "В повседневной жизни обед может играть очень важную роль.",
+        "uk": "У повсякденному житті обід може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 763,
@@ -17285,7 +17644,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, dinner can be very important.",
+        "ru": "В повседневной жизни ужин может играть очень важную роль.",
+        "uk": "У повсякденному житті вечеря може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 764,
@@ -17302,7 +17667,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, soup can be very important.",
+        "ru": "В повседневной жизни суп может играть очень важную роль.",
+        "uk": "У повсякденному житті суп може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 765,
@@ -17319,7 +17690,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, salad can be very important.",
+        "ru": "В повседневной жизни салат может играть очень важную роль.",
+        "uk": "У повсякденному житті салат може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 766,
@@ -17336,7 +17713,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bread can be very important.",
+        "ru": "В повседневной жизни хлеб может играть очень важную роль.",
+        "uk": "У повсякденному житті хліб може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 767,
@@ -17353,7 +17736,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, butter can be very important.",
+        "ru": "В повседневной жизни сливочное масло может играть очень важную роль.",
+        "uk": "У повсякденному житті вершкове масло може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 768,
@@ -17370,7 +17759,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cheese can be very important.",
+        "ru": "В повседневной жизни сыр может играть очень важную роль.",
+        "uk": "У повсякденному житті сир може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 769,
@@ -17387,7 +17782,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sausage can be very important.",
+        "ru": "В повседневной жизни колбаса может играть очень важную роль.",
+        "uk": "У повсякденному житті ковбаса може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 770,
@@ -17404,7 +17805,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, meat can be very important.",
+        "ru": "В повседневной жизни мясо может играть очень важную роль.",
+        "uk": "У повсякденному житті м’ясо може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 771,
@@ -17421,7 +17828,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, fish can be very important.",
+        "ru": "В повседневной жизни рыба может играть очень важную роль.",
+        "uk": "У повсякденному житті риба може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 772,
@@ -17438,7 +17851,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, vegetables can be very important.",
+        "ru": "В повседневной жизни овощи может играть очень важную роль.",
+        "uk": "У повсякденному житті овочі може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 773,
@@ -17455,7 +17874,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, fruit can be very important.",
+        "ru": "В повседневной жизни фрукты может играть очень важную роль.",
+        "uk": "У повсякденному житті фрукти може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 774,
@@ -17472,7 +17897,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, apple can be very important.",
+        "ru": "В повседневной жизни яблоко может играть очень важную роль.",
+        "uk": "У повсякденному житті яблуко може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 775,
@@ -17489,7 +17920,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, banana can be very important.",
+        "ru": "В повседневной жизни банан может играть очень важную роль.",
+        "uk": "У повсякденному житті банан може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 776,
@@ -17506,7 +17943,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, orange can be very important.",
+        "ru": "В повседневной жизни апельсин может играть очень важную роль.",
+        "uk": "У повсякденному житті апельсин може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 777,
@@ -17523,7 +17966,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, grape can be very important.",
+        "ru": "В повседневной жизни виноград может играть очень важную роль.",
+        "uk": "У повсякденному житті виноград може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 778,
@@ -17540,7 +17989,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, strawberry can be very important.",
+        "ru": "В повседневной жизни клубника может играть очень важную роль.",
+        "uk": "У повсякденному житті полуниця може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 779,
@@ -17557,7 +18012,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, potato can be very important.",
+        "ru": "В повседневной жизни картофель может играть очень важную роль.",
+        "uk": "У повсякденному житті картопля може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 780,
@@ -17574,7 +18035,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, rice can be very important.",
+        "ru": "В повседневной жизни рис может играть очень важную роль.",
+        "uk": "У повсякденному житті рис може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 781,
@@ -17591,7 +18058,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, noodles can be very important.",
+        "ru": "В повседневной жизни лапша может играть очень важную роль.",
+        "uk": "У повсякденному житті локшина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 782,
@@ -17608,7 +18081,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cake can be very important.",
+        "ru": "В повседневной жизни пирог может играть очень важную роль.",
+        "uk": "У повсякденному житті пиріг може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 783,
@@ -17625,7 +18104,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cookie can be very important.",
+        "ru": "В повседневной жизни печенье может играть очень важную роль.",
+        "uk": "У повсякденному житті печиво може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 784,
@@ -17642,7 +18127,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, chocolate can be very important.",
+        "ru": "В повседневной жизни шоколад может играть очень важную роль.",
+        "uk": "У повсякденному житті шоколад може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 785,
@@ -17659,7 +18150,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, coffee can be very important.",
+        "ru": "В повседневной жизни кофе может играть очень важную роль.",
+        "uk": "У повсякденному житті кава може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 786,
@@ -17676,7 +18173,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tea can be very important.",
+        "ru": "В повседневной жизни чай может играть очень важную роль.",
+        "uk": "У повсякденному житті чай може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 787,
@@ -17693,7 +18196,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, water can be very important.",
+        "ru": "В повседневной жизни вода может играть очень важную роль.",
+        "uk": "У повсякденному житті вода може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 788,
@@ -17710,7 +18219,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, juice can be very important.",
+        "ru": "В повседневной жизни сок может играть очень важную роль.",
+        "uk": "У повсякденному житті сік може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 789,
@@ -17728,7 +18243,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, milk can be very important.",
+        "ru": "В повседневной жизни молоко может играть очень важную роль.",
+        "uk": "У повсякденному житті молоко може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 790,
@@ -17745,7 +18266,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, beer can be very important.",
+        "ru": "В повседневной жизни пиво может играть очень важную роль.",
+        "uk": "У повсякденному житті пиво може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 791,
@@ -17762,7 +18289,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, wine can be very important.",
+        "ru": "В повседневной жизни вино может играть очень важную роль.",
+        "uk": "У повсякденному житті вино може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 792,
@@ -17780,7 +18313,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bar can be very important.",
+        "ru": "В повседневной жизни бар может играть очень важную роль.",
+        "uk": "У повсякденному житті бар може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 793,
@@ -17797,7 +18336,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, restaurant can be very important.",
+        "ru": "В повседневной жизни ресторан может играть очень важную роль.",
+        "uk": "У повсякденному житті ресторан може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 794,
@@ -17814,7 +18359,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, café can be very important.",
+        "ru": "В повседневной жизни кафе может играть очень важную роль.",
+        "uk": "У повсякденному житті кафе може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 795,
@@ -17832,7 +18383,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bill can be very important.",
+        "ru": "В повседневной жизни счёт может играть очень важную роль.",
+        "uk": "У повсякденному житті рахунок може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 796,
@@ -17850,7 +18407,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tip can be very important.",
+        "ru": "В повседневной жизни чаевые может играть очень важную роль.",
+        "uk": "У повсякденному житті чайові може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 797,
@@ -17867,7 +18430,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, menu can be very important.",
+        "ru": "В повседневной жизни меню может играть очень важную роль.",
+        "uk": "У повсякденному житті меню може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 798,
@@ -17885,7 +18454,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, order can be very important.",
+        "ru": "В повседневной жизни заказ может играть очень важную роль.",
+        "uk": "У повсякденному житті замовлення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 799,
@@ -17903,7 +18478,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, delivery can be very important.",
+        "ru": "В повседневной жизни доставка может играть очень важную роль.",
+        "uk": "У повсякденному житті доставка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 800,
@@ -17921,7 +18502,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, opening hours can be very important.",
+        "ru": "В повседневной жизни время работы может играть очень важную роль.",
+        "uk": "У повсякденному житті час роботи може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 801,
@@ -17938,7 +18525,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about newspaper.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать газета.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти газета."
+      }
+    ]
   },
   {
     "id": 802,
@@ -17955,7 +18548,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about magazine.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать журнал.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти журнал."
+      }
+    ]
   },
   {
     "id": 803,
@@ -17973,7 +18572,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about article.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать статья.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти стаття."
+      }
+    ]
   },
   {
     "id": 804,
@@ -17990,7 +18595,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about title.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать заголовок.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти заголовок."
+      }
+    ]
   },
   {
     "id": 805,
@@ -18007,7 +18618,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about headline.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать кричащий заголовок.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти сенсаційний заголовок."
+      }
+    ]
   },
   {
     "id": 806,
@@ -18025,7 +18642,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how advertising affects the company.",
+        "ru": "Менеджер объяснил, как реклама влияет на работу компании.",
+        "uk": "Менеджер пояснив, як реклама впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 807,
@@ -18042,7 +18665,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about advertisement.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать объявление.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти оголошення."
+      }
+    ]
   },
   {
     "id": 808,
@@ -18059,7 +18688,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about editorial team.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать редакция.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти редакція."
+      }
+    ]
   },
   {
     "id": 809,
@@ -18077,7 +18712,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Reporter is an important topic at our workplace.",
+        "ru": "Репортёр — важная тема на нашей работе.",
+        "uk": "Репортер — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 810,
@@ -18094,7 +18735,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about news broadcast.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать выпуск новостей.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти випуск новин."
+      }
+    ]
   },
   {
     "id": 811,
@@ -18112,7 +18759,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, theatre can be very important.",
+        "ru": "В повседневной жизни театр может играть очень важную роль.",
+        "uk": "У повсякденному житті театр може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 812,
@@ -18129,7 +18782,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, stage can be very important.",
+        "ru": "В повседневной жизни сцена может играть очень важную роль.",
+        "uk": "У повсякденному житті сцена може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 813,
@@ -18147,7 +18806,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Actor is an important topic at our workplace.",
+        "ru": "Актёр — важная тема на нашей работе.",
+        "uk": "Актор — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 814,
@@ -18165,7 +18830,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Actress is an important topic at our workplace.",
+        "ru": "Актриса — важная тема на нашей работе.",
+        "uk": "Акторка — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 815,
@@ -18182,7 +18853,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, audience can be very important.",
+        "ru": "В повседневной жизни публика может играть очень важную роль.",
+        "uk": "У повсякденному житті публіка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 816,
@@ -18199,7 +18876,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, performance can be very important.",
+        "ru": "В повседневной жизни спектакль может играть очень важную роль.",
+        "uk": "У повсякденному житті вистава може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 817,
@@ -18216,7 +18899,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, rehearsal can be very important.",
+        "ru": "В повседневной жизни репетиция может играть очень важную роль.",
+        "uk": "У повсякденному житті репетиція може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 818,
@@ -18233,7 +18922,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, premiere can be very important.",
+        "ru": "В повседневной жизни премьера может играть очень важную роль.",
+        "uk": "У повсякденному житті прем’єра може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 819,
@@ -18250,7 +18945,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, curtain can be very important.",
+        "ru": "В повседневной жизни занавес может играть очень важную роль.",
+        "uk": "У повсякденному житті завіса може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 820,
@@ -18268,7 +18969,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, admission ticket can be very important.",
+        "ru": "В повседневной жизни входной билет может играть очень важную роль.",
+        "uk": "У повсякденному житті вхідний квиток може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 821,
@@ -18285,7 +18992,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, museum can be very important.",
+        "ru": "В повседневной жизни музей может играть очень важную роль.",
+        "uk": "У повсякденному житті музей може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 822,
@@ -18302,7 +19015,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, exhibition can be very important.",
+        "ru": "В повседневной жизни выставка может играть очень важную роль.",
+        "uk": "У повсякденному житті виставка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 823,
@@ -18319,7 +19038,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, painting can be very important.",
+        "ru": "В повседневной жизни картина может играть очень важную роль.",
+        "uk": "У повсякденному житті картина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 824,
@@ -18336,7 +19061,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sculpture can be very important.",
+        "ru": "В повседневной жизни скульптура может играть очень важную роль.",
+        "uk": "У повсякденному житті скульптура може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 825,
@@ -18353,7 +19084,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, gallery can be very important.",
+        "ru": "В повседневной жизни галерея может играть очень важную роль.",
+        "uk": "У повсякденному житті галерея може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 826,
@@ -18371,7 +19108,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Artist is an important topic at our workplace.",
+        "ru": "Художник — важная тема на нашей работе.",
+        "uk": "Митць — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 827,
@@ -18388,7 +19131,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, canvas can be very important.",
+        "ru": "В повседневной жизни полотно может играть очень важную роль.",
+        "uk": "У повсякденному житті полотно може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 828,
@@ -18405,7 +19154,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, paintbrush can be very important.",
+        "ru": "В повседневной жизни кисть может играть очень важную роль.",
+        "uk": "У повсякденному житті пензлик може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 829,
@@ -18422,7 +19177,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, paint can be very important.",
+        "ru": "В повседневной жизни краска может играть очень важную роль.",
+        "uk": "У повсякденному житті фарба може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 830,
@@ -18440,7 +19201,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Studio is an important topic at our workplace.",
+        "ru": "Ателье — важная тема на нашей работе.",
+        "uk": "Ательє — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 831,
@@ -18457,7 +19224,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, music can be very important.",
+        "ru": "В повседневной жизни музыка может играть очень важную роль.",
+        "uk": "У повсякденному житті музика може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 832,
@@ -18475,7 +19248,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Singer is an important topic at our workplace.",
+        "ru": "Певец — важная тема на нашей работе.",
+        "uk": "Співак — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 833,
@@ -18493,7 +19272,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Singer (female) is an important topic at our workplace.",
+        "ru": "Певица — важная тема на нашей работе.",
+        "uk": "Співачка — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 834,
@@ -18510,7 +19295,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, song can be very important.",
+        "ru": "В повседневной жизни песня может играть очень важную роль.",
+        "uk": "У повсякденному житті пісня може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 835,
@@ -18527,7 +19318,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, concert can be very important.",
+        "ru": "В повседневной жизни концерт может играть очень важную роль.",
+        "uk": "У повсякденному житті концерт може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 836,
@@ -18544,7 +19341,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, band can be very important.",
+        "ru": "В повседневной жизни группа может играть очень важную роль.",
+        "uk": "У повсякденному житті гурт може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 837,
@@ -18561,7 +19364,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, orchestra can be very important.",
+        "ru": "В повседневной жизни оркестр может играть очень важную роль.",
+        "uk": "У повсякденному житті оркестр може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 838,
@@ -18579,7 +19388,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Conductor is an important topic at our workplace.",
+        "ru": "Дирижёр — важная тема на нашей работе.",
+        "uk": "Диригент — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 839,
@@ -18597,7 +19412,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about recording.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать запись.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти запис."
+      }
+    ]
   },
   {
     "id": 840,
@@ -18614,7 +19435,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, instrument can be very important.",
+        "ru": "В повседневной жизни инструмент может играть очень важную роль.",
+        "uk": "У повсякденному житті інструмент може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 841,
@@ -18631,7 +19458,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, guitar can be very important.",
+        "ru": "В повседневной жизни гитара может играть очень важную роль.",
+        "uk": "У повсякденному житті гітара може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 842,
@@ -18648,7 +19481,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, piano can be very important.",
+        "ru": "В повседневной жизни пианино может играть очень важную роль.",
+        "uk": "У повсякденному житті піаніно може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 843,
@@ -18665,7 +19504,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, violin can be very important.",
+        "ru": "В повседневной жизни скрипка может играть очень важную роль.",
+        "uk": "У повсякденному житті скрипка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 844,
@@ -18682,7 +19527,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, drum can be very important.",
+        "ru": "В повседневной жизни барабан может играть очень важную роль.",
+        "uk": "У повсякденному житті барабан може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 845,
@@ -18699,7 +19550,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, flute can be very important.",
+        "ru": "В повседневной жизни флейта может играть очень важную роль.",
+        "uk": "У повсякденному житті флейта може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 846,
@@ -18716,7 +19573,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tone can be very important.",
+        "ru": "В повседневной жизни звук может играть очень важную роль.",
+        "uk": "У повсякденному житті звук може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 847,
@@ -18733,7 +19596,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, rhythm can be very important.",
+        "ru": "В повседневной жизни ритм может играть очень важную роль.",
+        "uk": "У повсякденному житті ритм може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 848,
@@ -18750,7 +19619,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, melody can be very important.",
+        "ru": "В повседневной жизни мелодия может играть очень важную роль.",
+        "uk": "У повсякденному житті мелодія може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 849,
@@ -18767,7 +19642,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, chord can be very important.",
+        "ru": "В повседневной жизни аккорд может играть очень важную роль.",
+        "uk": "У повсякденному житті акорд може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 850,
@@ -18785,7 +19666,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with stage lighting every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как свет сцены, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як сценічне освітлення."
+      }
+    ]
   },
   {
     "id": 851,
@@ -18802,7 +19689,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used science to interpret the data.",
+        "ru": "В отчёте мы использовали наука, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували наука, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 852,
@@ -18820,7 +19713,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Researcher is an important topic at our workplace.",
+        "ru": "Исследователь — важная тема на нашей работе.",
+        "uk": "Дослідник — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 853,
@@ -18837,7 +19736,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used research to interpret the data.",
+        "ru": "В отчёте мы использовали исследование, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували дослідження, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 854,
@@ -18854,7 +19759,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used hypothesis to interpret the data.",
+        "ru": "В отчёте мы использовали гипотеза, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували гіпотеза, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 855,
@@ -18871,7 +19782,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used experiment to interpret the data.",
+        "ru": "В отчёте мы использовали эксперимент, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували експеримент, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 856,
@@ -18889,7 +19806,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used result to interpret the data.",
+        "ru": "В отчёте мы использовали результат, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували результат, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 857,
@@ -18906,7 +19829,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used method to interpret the data.",
+        "ru": "В отчёте мы использовали метод, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували метод, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 858,
@@ -18923,7 +19852,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used theory to interpret the data.",
+        "ru": "В отчёте мы использовали теория, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували теорія, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 859,
@@ -18940,7 +19875,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used practice to interpret the data.",
+        "ru": "В отчёте мы использовали практика, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували практика, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 860,
@@ -18957,7 +19898,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used discovery to interpret the data.",
+        "ru": "В отчёте мы использовали открытие, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували відкриття, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 861,
@@ -18974,7 +19921,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, nature can be very important.",
+        "ru": "В повседневной жизни природа может играть очень важную роль.",
+        "uk": "У повсякденному житті природа може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 862,
@@ -18991,7 +19944,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, landscape can be very important.",
+        "ru": "В повседневной жизни пейзаж может играть очень важную роль.",
+        "uk": "У повсякденному житті краєвид може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 863,
@@ -19008,7 +19967,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, forest can be very important.",
+        "ru": "В повседневной жизни лес может играть очень важную роль.",
+        "uk": "У повсякденному житті ліс може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 864,
@@ -19025,7 +19990,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tree can be very important.",
+        "ru": "В повседневной жизни дерево может играть очень важную роль.",
+        "uk": "У повсякденному житті дерево може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 865,
@@ -19042,7 +20013,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, river can be very important.",
+        "ru": "В повседневной жизни река может играть очень важную роль.",
+        "uk": "У повсякденному житті річка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 866,
@@ -19059,7 +20036,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, lake can be very important.",
+        "ru": "В повседневной жизни озеро может играть очень важную роль.",
+        "uk": "У повсякденному житті озеро може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 867,
@@ -19076,7 +20059,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sea can be very important.",
+        "ru": "В повседневной жизни море может играть очень важную роль.",
+        "uk": "У повсякденному житті море може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 868,
@@ -19094,7 +20083,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, beach can be very important.",
+        "ru": "В повседневной жизни пляж может играть очень важную роль.",
+        "uk": "У повсякденному житті пляж може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 869,
@@ -19111,7 +20106,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, mountain can be very important.",
+        "ru": "В повседневной жизни гора может играть очень важную роль.",
+        "uk": "У повсякденному житті гора може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 870,
@@ -19128,7 +20129,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, valley can be very important.",
+        "ru": "В повседневной жизни долина может играть очень важную роль.",
+        "uk": "У повсякденному житті долина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 871,
@@ -19145,7 +20152,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sky can be very important.",
+        "ru": "В повседневной жизни небо может играть очень важную роль.",
+        "uk": "У повсякденному житті небо може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 872,
@@ -19163,7 +20176,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cloud can be very important.",
+        "ru": "В повседневной жизни облако может играть очень важную роль.",
+        "uk": "У повсякденному житті хмара може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 873,
@@ -19180,7 +20199,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, rain can be very important.",
+        "ru": "В повседневной жизни дождь может играть очень важную роль.",
+        "uk": "У повсякденному житті дощ може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 874,
@@ -19197,7 +20222,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, snow can be very important.",
+        "ru": "В повседневной жизни снег может играть очень важную роль.",
+        "uk": "У повсякденному житті сніг може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 875,
@@ -19214,7 +20245,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, wind can be very important.",
+        "ru": "В повседневной жизни ветер может играть очень важную роль.",
+        "uk": "У повсякденному житті вітер може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 876,
@@ -19231,7 +20268,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, storm can be very important.",
+        "ru": "В повседневной жизни шторм может играть очень важную роль.",
+        "uk": "У повсякденному житті буря може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 877,
@@ -19249,7 +20292,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, sun can be very important.",
+        "ru": "В повседневной жизни солнце может играть очень важную роль.",
+        "uk": "У повсякденному житті сонце може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 878,
@@ -19266,7 +20315,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, shade can be very important.",
+        "ru": "В повседневной жизни тень может играть очень важную роль.",
+        "uk": "У повсякденному житті тінь може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 879,
@@ -19283,7 +20338,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, star can be very important.",
+        "ru": "В повседневной жизни звезда может играть очень важную роль.",
+        "uk": "У повсякденному житті зірка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 880,
@@ -19300,7 +20361,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, moon can be very important.",
+        "ru": "В повседневной жизни луна может играть очень важную роль.",
+        "uk": "У повсякденному житті місяць може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 881,
@@ -19317,7 +20384,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with technology every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как техника, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як техніка."
+      }
+    ]
   },
   {
     "id": 882,
@@ -19334,7 +20407,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with machine every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как машина, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як машина."
+      }
+    ]
   },
   {
     "id": 883,
@@ -19351,7 +20430,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with device every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как устройство, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як пристрій."
+      }
+    ]
   },
   {
     "id": 884,
@@ -19368,7 +20453,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with installation every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как установка, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як установка."
+      }
+    ]
   },
   {
     "id": 885,
@@ -19385,7 +20476,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with engine every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как двигатель, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як двигун."
+      }
+    ]
   },
   {
     "id": 886,
@@ -19403,7 +20500,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with screw every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как винт, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як гвинт."
+      }
+    ]
   },
   {
     "id": 887,
@@ -19421,7 +20524,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with nut every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как гайка, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як гайка."
+      }
+    ]
   },
   {
     "id": 888,
@@ -19438,7 +20547,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, pliers can be very important.",
+        "ru": "В повседневной жизни плоскогубцы может играть очень важную роль.",
+        "uk": "У повсякденному житті кліщі може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 889,
@@ -19455,7 +20570,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, hammer can be very important.",
+        "ru": "В повседневной жизни молоток может играть очень важную роль.",
+        "uk": "У повсякденному житті молоток може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 890,
@@ -19472,7 +20593,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, screwdriver can be very important.",
+        "ru": "В повседневной жизни отвёртка может играть очень важную роль.",
+        "uk": "У повсякденному житті викрутка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 891,
@@ -19489,7 +20616,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how economy affects the company.",
+        "ru": "Менеджер объяснил, как экономика влияет на работу компании.",
+        "uk": "Менеджер пояснив, як економіка впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 892,
@@ -19506,7 +20639,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how trade affects the company.",
+        "ru": "Менеджер объяснил, как торговля влияет на работу компании.",
+        "uk": "Менеджер пояснив, як торгівля впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 893,
@@ -19524,7 +20663,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how shop affects the company.",
+        "ru": "Менеджер объяснил, как магазин влияет на работу компании.",
+        "uk": "Менеджер пояснив, як магазин впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 894,
@@ -19542,7 +20687,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how market affects the company.",
+        "ru": "Менеджер объяснил, как рынок влияет на работу компании.",
+        "uk": "Менеджер пояснив, як ринок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 895,
@@ -19559,7 +20710,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how demand affects the company.",
+        "ru": "Менеджер объяснил, как спрос влияет на работу компании.",
+        "uk": "Менеджер пояснив, як попит впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 896,
@@ -19576,7 +20733,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how supply affects the company.",
+        "ru": "Менеджер объяснил, как предложение влияет на работу компании.",
+        "uk": "Менеджер пояснив, як пропозиція впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 897,
@@ -19593,7 +20756,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how profit affects the company.",
+        "ru": "Менеджер объяснил, как прибыль влияет на работу компании.",
+        "uk": "Менеджер пояснив, як прибуток впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 898,
@@ -19610,7 +20779,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how loss affects the company.",
+        "ru": "Менеджер объяснил, как убыток влияет на работу компании.",
+        "uk": "Менеджер пояснив, як втрата впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 899,
@@ -19628,7 +20803,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how tax affects the company.",
+        "ru": "Менеджер объяснил, как налог влияет на работу компании.",
+        "uk": "Менеджер пояснив, як податок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 900,
@@ -19645,7 +20826,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how budget affects the company.",
+        "ru": "Менеджер объяснил, как бюджет влияет на работу компании.",
+        "uk": "Менеджер пояснив, як бюджет впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 901,
@@ -19663,7 +20850,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how invoice affects the company.",
+        "ru": "Менеджер объяснил, как счёт влияет на работу компании.",
+        "uk": "Менеджер пояснив, як рахунок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 902,
@@ -19680,7 +20873,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how receipt affects the company.",
+        "ru": "Менеджер объяснил, как квитанция влияет на работу компании.",
+        "uk": "Менеджер пояснив, як квитанція впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 903,
@@ -19697,7 +20896,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how bank transfer affects the company.",
+        "ru": "Менеджер объяснил, как перевод влияет на работу компании.",
+        "uk": "Менеджер пояснив, як переказ впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 904,
@@ -19714,7 +20919,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how account affects the company.",
+        "ru": "Менеджер объяснил, как счёт влияет на работу компании.",
+        "uk": "Менеджер пояснив, як рахунок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 905,
@@ -19732,7 +20943,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how card affects the company.",
+        "ru": "Менеджер объяснил, как карта влияет на работу компании.",
+        "uk": "Менеджер пояснив, як картка впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 906,
@@ -19749,7 +20966,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how loan affects the company.",
+        "ru": "Менеджер объяснил, как кредит влияет на работу компании.",
+        "uk": "Менеджер пояснив, як кредит впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 907,
@@ -19766,7 +20989,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how debt affects the company.",
+        "ru": "Менеджер объяснил, как долги влияет на работу компании.",
+        "uk": "Менеджер пояснив, як борги впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 908,
@@ -19783,7 +21012,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how deposit affects the company.",
+        "ru": "Менеджер объяснил, как взнос влияет на работу компании.",
+        "uk": "Менеджер пояснив, як внесок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 909,
@@ -19800,7 +21035,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how payment affects the company.",
+        "ru": "Менеджер объяснил, как выплата влияет на работу компании.",
+        "uk": "Менеджер пояснив, як виплата впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 910,
@@ -19817,7 +21058,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how interest rate affects the company.",
+        "ru": "Менеджер объяснил, как процентная ставка влияет на работу компании.",
+        "uk": "Менеджер пояснив, як відсоткова ставка впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 911,
@@ -19834,7 +21081,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, politics played a central role.",
+        "ru": "В обсуждении новых правил политика сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил політика відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 912,
@@ -19851,7 +21104,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, government played a central role.",
+        "ru": "В обсуждении новых правил правительство сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил уряд відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 913,
@@ -19868,7 +21127,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, parliament played a central role.",
+        "ru": "В обсуждении новых правил парламент сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил парламент відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 914,
@@ -19885,7 +21150,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, election played a central role.",
+        "ru": "В обсуждении новых правил выборы сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил вибори відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 915,
@@ -19902,7 +21173,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, party played a central role.",
+        "ru": "В обсуждении новых правил партия сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил партія відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 916,
@@ -19920,7 +21197,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, law played a central role.",
+        "ru": "В обсуждении новых правил закон сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил закон відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 917,
@@ -19938,7 +21221,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, regulation played a central role.",
+        "ru": "В обсуждении новых правил постановление сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил постанова відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 918,
@@ -19956,7 +21245,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, administration played a central role.",
+        "ru": "В обсуждении новых правил администрация сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил адміністрація відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 919,
@@ -19974,7 +21269,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, authority played a central role.",
+        "ru": "В обсуждении новых правил ведомство сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил установа відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 920,
@@ -19992,7 +21293,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, vote played a central role.",
+        "ru": "В обсуждении новых правил голосование сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил голосування відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 921,
@@ -20009,7 +21316,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, culture can be very important.",
+        "ru": "В повседневной жизни культура может играть очень важную роль.",
+        "uk": "У повсякденному житті культура може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 922,
@@ -20026,7 +21339,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tradition can be very important.",
+        "ru": "В повседневной жизни традиция может играть очень важную роль.",
+        "uk": "У повсякденному житті традиція може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 923,
@@ -20043,7 +21362,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, custom can be very important.",
+        "ru": "В повседневной жизни обычай может играть очень важную роль.",
+        "uk": "У повсякденному житті звичай може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 924,
@@ -20060,7 +21385,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, festival can be very important.",
+        "ru": "В повседневной жизни праздник может играть очень важную роль.",
+        "uk": "У повсякденному житті свято може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 925,
@@ -20077,7 +21408,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, celebration can be very important.",
+        "ru": "В повседневной жизни празднование может играть очень важную роль.",
+        "uk": "У повсякденному житті святкування може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 926,
@@ -20094,7 +21431,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, public holiday can be very important.",
+        "ru": "В повседневной жизни праздничный день может играть очень важную роль.",
+        "uk": "У повсякденному житті святковий день може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 927,
@@ -20112,7 +21455,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, habit can be very important.",
+        "ru": "В повседневной жизни привычка может играть очень важную роль.",
+        "uk": "У повсякденному житті звичка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 928,
@@ -20129,7 +21478,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, social custom can be very important.",
+        "ru": "В повседневной жизни нравы может играть очень важную роль.",
+        "uk": "У повсякденному житті звичаї може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 929,
@@ -20146,7 +21501,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, bridal couple can be very important.",
+        "ru": "В повседневной жизни молодожёны может играть очень важную роль.",
+        "uk": "У повсякденному житті молодята може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 930,
@@ -20163,7 +21524,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, ceremony can be very important.",
+        "ru": "В повседневной жизни церемония может играть очень важную роль.",
+        "uk": "У повсякденному житті церемонія може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 931,
@@ -20180,7 +21547,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about communication.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать коммуникация.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти комунікація."
+      }
+    ]
   },
   {
     "id": 932,
@@ -20197,7 +21570,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about conversation.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать разговор.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти розмова."
+      }
+    ]
   },
   {
     "id": 933,
@@ -20215,7 +21594,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about pronunciation.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать произношение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти вимова."
+      }
+    ]
   },
   {
     "id": 934,
@@ -20232,7 +21617,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, word stress can be very important.",
+        "ru": "В повседневной жизни ударение может играть очень важную роль.",
+        "uk": "У повсякденному житті наголос може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 935,
@@ -20249,7 +21640,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about speech.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать речь.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти промова."
+      }
+    ]
   },
   {
     "id": 936,
@@ -20267,7 +21664,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about lecture.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать доклад.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти доповідь."
+      }
+    ]
   },
   {
     "id": 937,
@@ -20285,7 +21688,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Conference is an important topic at our workplace.",
+        "ru": "Конференция — важная тема на нашей работе.",
+        "uk": "Конференція — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 938,
@@ -20302,7 +21711,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Minutes is an important topic at our workplace.",
+        "ru": "Протокол — важная тема на нашей работе.",
+        "uk": "Протокол — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 939,
@@ -20319,7 +21734,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about invitation.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать приглашение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти запрошення."
+      }
+    ]
   },
   {
     "id": 940,
@@ -20336,7 +21757,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about acceptance.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать согласие.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти згода."
+      }
+    ]
   },
   {
     "id": 941,
@@ -20353,7 +21780,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about rejection.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать отказ.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти відмова."
+      }
+    ]
   },
   {
     "id": 942,
@@ -20370,7 +21803,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about follow-up question.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать уточняющий вопрос.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти уточнююче запитання."
+      }
+    ]
   },
   {
     "id": 943,
@@ -20387,7 +21826,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about information.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать справка.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти довідка."
+      }
+    ]
   },
   {
     "id": 944,
@@ -20404,7 +21849,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about approval.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать одобрение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти схвалення."
+      }
+    ]
   },
   {
     "id": 945,
@@ -20421,7 +21872,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about disagreement.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать разногласие.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти розбіжність у думках."
+      }
+    ]
   },
   {
     "id": 946,
@@ -20438,7 +21895,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about compromise.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать компромисс.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти компроміс."
+      }
+    ]
   },
   {
     "id": 947,
@@ -20456,7 +21919,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Responsibility is an important topic at our workplace.",
+        "ru": "Ответственность — важная тема на нашей работе.",
+        "uk": "Відповідальність — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 948,
@@ -20474,7 +21943,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Jurisdiction is an important topic at our workplace.",
+        "ru": "Компетенция — важная тема на нашей работе.",
+        "uk": "Компетенція — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 949,
@@ -20491,7 +21966,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, power of attorney played a central role.",
+        "ru": "В обсуждении новых правил доверенность сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил довіреність відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 950,
@@ -20508,7 +21989,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, signature played a central role.",
+        "ru": "В обсуждении новых правил подпись сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил підпис відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 951,
@@ -20526,7 +22013,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Goal is an important topic at our workplace.",
+        "ru": "Цель — важная тема на нашей работе.",
+        "uk": "Мета — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 952,
@@ -20543,7 +22036,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Purpose is an important topic at our workplace.",
+        "ru": "Цель — важная тема на нашей работе.",
+        "uk": "Призначення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 953,
@@ -20561,7 +22060,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Task is an important topic at our workplace.",
+        "ru": "Задача — важная тема на нашей работе.",
+        "uk": "Завдання — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 954,
@@ -20579,7 +22084,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Challenge is an important topic at our workplace.",
+        "ru": "Сложная задача — важная тема на нашей работе.",
+        "uk": "Виклик — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 955,
@@ -20597,7 +22108,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Solution is an important topic at our workplace.",
+        "ru": "Решение — важная тема на нашей работе.",
+        "uk": "Рішення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 956,
@@ -20615,7 +22132,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with progress bar every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как индикатор прогресса, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як індикатор прогресу."
+      }
+    ]
   },
   {
     "id": 957,
@@ -20633,7 +22156,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Deadline is an important topic at our workplace.",
+        "ru": "Срок — важная тема на нашей работе.",
+        "uk": "Строк — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 958,
@@ -20651,7 +22180,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Appointment is an important topic at our workplace.",
+        "ru": "Встреча — важная тема на нашей работе.",
+        "uk": "Зустріч — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 959,
@@ -20669,7 +22204,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Schedule is an important topic at our workplace.",
+        "ru": "Расписание — важная тема на нашей работе.",
+        "uk": "Розклад — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 960,
@@ -20687,7 +22228,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Priority is an important topic at our workplace.",
+        "ru": "Приоритет — важная тема на нашей работе.",
+        "uk": "Пріоритет — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 961,
@@ -20704,7 +22251,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, advantage can be very important.",
+        "ru": "В повседневной жизни преимущество может играть очень важную роль.",
+        "uk": "У повсякденному житті перевага може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 962,
@@ -20721,7 +22274,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, disadvantage can be very important.",
+        "ru": "В повседневной жизни недостаток может играть очень важную роль.",
+        "uk": "У повсякденному житті недолік може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 963,
@@ -20739,7 +22298,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about hint.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать подсказка.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти підказка."
+      }
+    ]
   },
   {
     "id": 964,
@@ -20757,7 +22322,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with error every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как ошибка, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як помилка."
+      }
+    ]
   },
   {
     "id": 965,
@@ -20774,7 +22345,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, exception can be very important.",
+        "ru": "В повседневной жизни исключение может играть очень важную роль.",
+        "uk": "У повсякденному житті виняток може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 966,
@@ -20791,7 +22368,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, regularity can be very important.",
+        "ru": "В повседневной жизни регулярность может играть очень важную роль.",
+        "uk": "У повсякденному житті регулярність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 967,
@@ -20808,7 +22391,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, coincidence can be very important.",
+        "ru": "В повседневной жизни случайность может играть очень важную роль.",
+        "uk": "У повсякденному житті випадковість може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 968,
@@ -20825,7 +22414,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, certainty can be very important.",
+        "ru": "В повседневной жизни уверенность может играть очень важную роль.",
+        "uk": "У повсякденному житті упевненість може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 969,
@@ -20842,7 +22437,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, doubt can be very important.",
+        "ru": "В повседневной жизни сомнение может играть очень важную роль.",
+        "uk": "У повсякденному житті сумнів може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 970,
@@ -20860,7 +22461,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Decision is an important topic at our workplace.",
+        "ru": "Решение — важная тема на нашей работе.",
+        "uk": "Рішення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 971,
@@ -20877,7 +22484,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, prerequisite can be very important.",
+        "ru": "В повседневной жизни предпосылка может играть очень важную роль.",
+        "uk": "У повсякденному житті передумова може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 972,
@@ -20895,7 +22508,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, condition played a central role.",
+        "ru": "В обсуждении новых правил условие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил умова відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 973,
@@ -20912,7 +22531,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used effect to interpret the data.",
+        "ru": "В отчёте мы использовали эффект, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували дія, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 974,
@@ -20929,7 +22554,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cause can be very important.",
+        "ru": "В повседневной жизни причина может играть очень важную роль.",
+        "uk": "У повсякденному житті причина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 975,
@@ -20946,7 +22577,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, consequence can be very important.",
+        "ru": "В повседневной жизни последствие может играть очень важную роль.",
+        "uk": "У повсякденному житті наслідок може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 976,
@@ -20963,7 +22600,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, overview can be very important.",
+        "ru": "В повседневной жизни обзор может играть очень важную роль.",
+        "uk": "У повсякденному житті огляд може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 977,
@@ -20981,7 +22624,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with visualization every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как представление, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як представлення."
+      }
+    ]
   },
   {
     "id": 978,
@@ -20999,7 +22648,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, selection can be very important.",
+        "ru": "В повседневной жизни выбор может играть очень важную роль.",
+        "uk": "У повсякденному житті вибір може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 979,
@@ -21016,7 +22671,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, combination can be very important.",
+        "ru": "В повседневной жизни комбинация может играть очень важную роль.",
+        "uk": "У повсякденному житті комбінація може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 980,
@@ -21034,7 +22695,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with mapping every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как соответствие, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як віднесення."
+      }
+    ]
   },
   {
     "id": 981,
@@ -21051,7 +22718,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, favorites list can be very important.",
+        "ru": "В повседневной жизни список избранного может играть очень важную роль.",
+        "uk": "У повсякденному житті список улюблених може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 982,
@@ -21069,7 +22742,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, heart can be very important.",
+        "ru": "В повседневной жизни сердце может играть очень важную роль.",
+        "uk": "У повсякденному житті серце може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 983,
@@ -21087,7 +22766,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, star can be very important.",
+        "ru": "В повседневной жизни звезда может играть очень важную роль.",
+        "uk": "У повсякденному житті зірка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 984,
@@ -21104,7 +22789,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, level can be very important.",
+        "ru": "В повседневной жизни ступень может играть очень важную роль.",
+        "uk": "У повсякденному житті щабель може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 985,
@@ -21121,7 +22812,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, threshold can be very important.",
+        "ru": "В повседневной жизни порог может играть очень важную роль.",
+        "uk": "У повсякденному житті поріг може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 986,
@@ -21138,7 +22835,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, limit can be very important.",
+        "ru": "В повседневной жизни граница может играть очень важную роль.",
+        "uk": "У повсякденному житті межа може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 987,
@@ -21156,7 +22859,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with column every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как столбец, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як стовпчик."
+      }
+    ]
   },
   {
     "id": 988,
@@ -21174,7 +22883,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with row every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как строка, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як рядок."
+      }
+    ]
   },
   {
     "id": 989,
@@ -21192,7 +22907,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with entry every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как запись, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як запис."
+      }
+    ]
   },
   {
     "id": 990,
@@ -21210,7 +22931,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with data set every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как набор данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як набір даних."
+      }
+    ]
   },
   {
     "id": 991,
@@ -21227,7 +22954,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with backup every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как резервное копирование, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як резервне копіювання."
+      }
+    ]
   },
   {
     "id": 992,
@@ -21244,7 +22977,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with recovery every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как восстановление, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як відновлення."
+      }
+    ]
   },
   {
     "id": 993,
@@ -21261,7 +23000,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with versioning every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как версионирование, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як версіонування."
+      }
+    ]
   },
   {
     "id": 994,
@@ -21278,7 +23023,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with compatibility every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как совместимость, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як сумісність."
+      }
+    ]
   },
   {
     "id": 995,
@@ -21296,7 +23047,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with stability every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как стабильность, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як стабільність."
+      }
+    ]
   },
   {
     "id": 996,
@@ -21313,7 +23070,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with extension every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как расширение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як розширення."
+      }
+    ]
   },
   {
     "id": 997,
@@ -21330,7 +23093,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with module every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как модуль, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як модуль."
+      }
+    ]
   },
   {
     "id": 998,
@@ -21347,7 +23116,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with interface every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как интерфейс, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як інтерфейс."
+      }
+    ]
   },
   {
     "id": 999,
@@ -21365,7 +23140,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Documentation is an important topic at our workplace.",
+        "ru": "Документация — важная тема на нашей работе.",
+        "uk": "Документація — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1000,
@@ -21383,7 +23164,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with release every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как публикация, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як публікація."
+      }
+    ]
   },
   {
     "id": 1001,
@@ -21400,7 +23187,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, population can be very important.",
+        "ru": "В повседневной жизни население может играть очень важную роль.",
+        "uk": "У повсякденному житті населення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1002,
@@ -21418,7 +23211,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, equality played a central role.",
+        "ru": "В обсуждении новых правил равноправие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил рівноправність відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1003,
@@ -21436,7 +23235,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Obligation is an important topic at our workplace.",
+        "ru": "Обязательство — важная тема на нашей работе.",
+        "uk": "Зобов'язання — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1004,
@@ -21454,7 +23259,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about impairment.",
+        "ru": "Врач поговорил с пациентом о том, что такое ущерб.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке обмеження."
+      }
+    ]
   },
   {
     "id": 1005,
@@ -21472,7 +23283,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, restriction played a central role.",
+        "ru": "В обсуждении новых правил ограничение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил обмеження відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1006,
@@ -21489,7 +23306,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tolerance can be very important.",
+        "ru": "В повседневной жизни толерантность может играть очень важную роль.",
+        "uk": "У повсякденному житті толерантність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1007,
@@ -21506,7 +23329,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, diversity can be very important.",
+        "ru": "В повседневной жизни разнообразие может играть очень важную роль.",
+        "uk": "У повсякденному житті різноманіття може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1008,
@@ -21523,7 +23352,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, integration can be very important.",
+        "ru": "В повседневной жизни интеграция может играть очень важную роль.",
+        "uk": "У повсякденному житті інтеграція може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1009,
@@ -21541,7 +23376,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Participation is an important topic at our workplace.",
+        "ru": "Участие — важная тема на нашей работе.",
+        "uk": "Участь — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1010,
@@ -21558,7 +23399,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about justification.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать обоснование.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти обґрунтування."
+      }
+    ]
   },
   {
     "id": 1011,
@@ -21575,7 +23422,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, consent form played a central role.",
+        "ru": "В обсуждении новых правил заявление о согласии сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил заява про згоду відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1012,
@@ -21593,7 +23446,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Requirement is an important topic at our workplace.",
+        "ru": "Требование — важная тема на нашей работе.",
+        "uk": "Вимога — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1013,
@@ -21611,7 +23470,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Procedure is an important topic at our workplace.",
+        "ru": "Процедура — важная тема на нашей работе.",
+        "uk": "Процедура — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1014,
@@ -21628,7 +23493,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, institution can be very important.",
+        "ru": "В повседневной жизни учреждение может играть очень важную роль.",
+        "uk": "У повсякденному житті установа може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1015,
@@ -21645,7 +23516,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, municipality played a central role.",
+        "ru": "В обсуждении новых правил община сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил громада відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1016,
@@ -21662,7 +23539,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, city council played a central role.",
+        "ru": "В обсуждении новых правил городской совет сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил міська рада відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1017,
@@ -21680,7 +23563,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how budget affects the company.",
+        "ru": "Менеджер объяснил, как бюджет влияет на работу компании.",
+        "uk": "Менеджер пояснив, як бюджет впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1018,
@@ -21697,7 +23586,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Execution is an important topic at our workplace.",
+        "ru": "Проведение — важная тема на нашей работе.",
+        "uk": "Проведення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1019,
@@ -21715,7 +23610,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Effort is an important topic at our workplace.",
+        "ru": "Затраты — важная тема на нашей работе.",
+        "uk": "Витрати — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1020,
@@ -21733,7 +23634,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how yield affects the company.",
+        "ru": "Менеджер объяснил, как доход влияет на работу компании.",
+        "uk": "Менеджер пояснив, як дохід впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1021,
@@ -21750,7 +23657,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how turnover affects the company.",
+        "ru": "Менеджер объяснил, как оборот влияет на работу компании.",
+        "uk": "Менеджер пояснив, як обіг впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1022,
@@ -21767,7 +23680,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, delivery can be very important.",
+        "ru": "В повседневной жизни доставка может играть очень важную роль.",
+        "uk": "У повсякденному житті доставка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1023,
@@ -21785,7 +23704,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Equipment is an important topic at our workplace.",
+        "ru": "Оснащение — важная тема на нашей работе.",
+        "uk": "Оснащення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1024,
@@ -21803,7 +23728,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Compatibility is an important topic at our workplace.",
+        "ru": "Совместимость — важная тема на нашей работе.",
+        "uk": "Сумісність — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1025,
@@ -21821,7 +23752,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with application every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как приложение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як застосунок."
+      }
+    ]
   },
   {
     "id": 1026,
@@ -21838,7 +23775,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with configuration every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как комплектация, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як комплектація."
+      }
+    ]
   },
   {
     "id": 1027,
@@ -21856,7 +23799,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with data security every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как безопасность данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як безпека даних."
+      }
+    ]
   },
   {
     "id": 1028,
@@ -21874,7 +23823,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with data protection every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как защита данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як захист даних."
+      }
+    ]
   },
   {
     "id": 1029,
@@ -21891,7 +23846,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with software every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как программное обеспечение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як програмне забезпечення."
+      }
+    ]
   },
   {
     "id": 1030,
@@ -21908,7 +23869,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with hardware every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как аппаратное обеспечение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як апаратне забезпечення."
+      }
+    ]
   },
   {
     "id": 1031,
@@ -21926,7 +23893,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with bandwidth every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как пропускная способность, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як пропускна здатність."
+      }
+    ]
   },
   {
     "id": 1032,
@@ -21944,7 +23917,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with encryption every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как шифрование, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як шифрування."
+      }
+    ]
   },
   {
     "id": 1033,
@@ -21962,7 +23941,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with transmission every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как передача, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як передача."
+      }
+    ]
   },
   {
     "id": 1034,
@@ -21979,7 +23964,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about illness.",
+        "ru": "Врач поговорил с пациентом о том, что такое заболевание.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке захворювання."
+      }
+    ]
   },
   {
     "id": 1035,
@@ -21996,7 +23987,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about prevention.",
+        "ru": "Врач поговорил с пациентом о том, что такое профилактика.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке профілактика."
+      }
+    ]
   },
   {
     "id": 1036,
@@ -22013,7 +24010,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about diagnosis.",
+        "ru": "Врач поговорил с пациентом о том, что такое диагноз.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке діагноз."
+      }
+    ]
   },
   {
     "id": 1037,
@@ -22030,7 +24033,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about therapy.",
+        "ru": "Врач поговорил с пациентом о том, что такое терапия.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке терапія."
+      }
+    ]
   },
   {
     "id": 1038,
@@ -22047,7 +24056,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about vaccination.",
+        "ru": "Врач поговорил с пациентом о том, что такое прививка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке щеплення."
+      }
+    ]
   },
   {
     "id": 1039,
@@ -22064,7 +24079,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about recovery.",
+        "ru": "Врач поговорил с пациентом о том, что такое выздоровление.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке одужання."
+      }
+    ]
   },
   {
     "id": 1040,
@@ -22082,7 +24103,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about strain.",
+        "ru": "Врач поговорил с пациентом о том, что такое нагрузка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке навантаження."
+      }
+    ]
   },
   {
     "id": 1041,
@@ -22099,7 +24126,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, impact can be very important.",
+        "ru": "В повседневной жизни влияние может играть очень важную роль.",
+        "uk": "У повсякденному житті вплив може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1042,
@@ -22116,7 +24149,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about blood pressure.",
+        "ru": "Врач поговорил с пациентом о том, что такое кровяное давление.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке артеріальний тиск."
+      }
+    ]
   },
   {
     "id": 1043,
@@ -22134,7 +24173,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used insight to interpret the data.",
+        "ru": "В отчёте мы использовали знание, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували знання, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1044,
@@ -22151,7 +24196,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used study to interpret the data.",
+        "ru": "В отчёте мы использовали исследование, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували дослідження, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1045,
@@ -22168,7 +24219,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how climate change can protect the environment.",
+        "ru": "Многие обсуждают, как изменение климата может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як зміна клімату може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1046,
@@ -22185,7 +24242,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how emissions can protect the environment.",
+        "ru": "Многие обсуждают, как выброс может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як викид може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1047,
@@ -22202,7 +24265,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how emission can protect the environment.",
+        "ru": "Многие обсуждают, как эмиссия может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як викид може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1048,
@@ -22220,7 +24289,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how consumption affects the company.",
+        "ru": "Менеджер объяснил, как потребление влияет на работу компании.",
+        "uk": "Менеджер пояснив, як споживання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1049,
@@ -22238,7 +24313,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how generation affects the company.",
+        "ru": "Менеджер объяснил, как выработка влияет на работу компании.",
+        "uk": "Менеджер пояснив, як виробництво впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1050,
@@ -22256,7 +24337,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about supply.",
+        "ru": "Врач поговорил с пациентом о том, что такое снабжение.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке забезпечення."
+      }
+    ]
   },
   {
     "id": 1051,
@@ -22274,7 +24361,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how saving affects the company.",
+        "ru": "Менеджер объяснил, как экономия влияет на работу компании.",
+        "uk": "Менеджер пояснив, як економія впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1052,
@@ -22291,7 +24384,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how waste separation can protect the environment.",
+        "ru": "Многие обсуждают, как раздельный сбор отходов может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як сортування відходів може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1053,
@@ -22308,7 +24407,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how recycling can protect the environment.",
+        "ru": "Многие обсуждают, как переработка может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як переробка може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1054,
@@ -22325,7 +24430,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how sustainability can protect the environment.",
+        "ru": "Многие обсуждают, как устойчивое развитие может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як сталий розвиток може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1055,
@@ -22342,7 +24453,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how recession affects the company.",
+        "ru": "Менеджер объяснил, как рецессия влияет на работу компании.",
+        "uk": "Менеджер пояснив, як рецесія впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1056,
@@ -22359,7 +24476,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how prosperity affects the company.",
+        "ru": "Менеджер объяснил, как благосостояние влияет на работу компании.",
+        "uk": "Менеджер пояснив, як добробут впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1057,
@@ -22376,7 +24499,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how assets affects the company.",
+        "ru": "Менеджер объяснил, как имущество влияет на работу компании.",
+        "uk": "Менеджер пояснив, як майно впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1058,
@@ -22393,7 +24522,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how bond affects the company.",
+        "ru": "Менеджер объяснил, как облигация влияет на работу компании.",
+        "uk": "Менеджер пояснив, як облігація впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1059,
@@ -22410,7 +24545,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how return affects the company.",
+        "ru": "Менеджер объяснил, как доходность влияет на работу компании.",
+        "uk": "Менеджер пояснив, як дохідність впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1060,
@@ -22427,7 +24568,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how reserve affects the company.",
+        "ru": "Менеджер объяснил, как резерв влияет на работу компании.",
+        "uk": "Менеджер пояснив, як резерв впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1061,
@@ -22444,7 +24591,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, lawsuit played a central role.",
+        "ru": "В обсуждении новых правил иск сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил позов відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1062,
@@ -22462,7 +24615,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, approval requirement played a central role.",
+        "ru": "В обсуждении новых правил обязательное разрешение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил обов'язковий дозвіл відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1063,
@@ -22480,7 +24639,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Agreement is an important topic at our workplace.",
+        "ru": "Соглашение — важная тема на нашей работе.",
+        "uk": "Угода — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1064,
@@ -22497,7 +24662,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, proof played a central role.",
+        "ru": "В обсуждении новых правил подтверждение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил підтвердження відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1065,
@@ -22514,7 +24685,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, evidence played a central role.",
+        "ru": "В обсуждении новых правил доказательная база сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил доказова база відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1066,
@@ -22531,7 +24708,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, verdict played a central role.",
+        "ru": "В обсуждении новых правил приговор сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил вирок відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1067,
@@ -22548,7 +24731,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, appeal played a central role.",
+        "ru": "В обсуждении новых правил апелляция сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил апеляція відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1068,
@@ -22565,7 +24754,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about education in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как образование.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як освіта."
+      }
+    ]
   },
   {
     "id": 1069,
@@ -22583,7 +24778,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Further training is an important topic at our workplace.",
+        "ru": "Повышение квалификации — важная тема на нашей работе.",
+        "uk": "Підвищення кваліфікації — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1070,
@@ -22601,7 +24802,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Advanced training is an important topic at our workplace.",
+        "ru": "Повышение квалификации — важная тема на нашей работе.",
+        "uk": "Підвищення кваліфікації — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1071,
@@ -22618,7 +24825,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about curriculum in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как учебный план.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як навчальний план."
+      }
+    ]
   },
   {
     "id": 1072,
@@ -22635,7 +24848,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, performance can be very important.",
+        "ru": "В повседневной жизни спектакль может играть очень важную роль.",
+        "uk": "У повсякденному житті вистава може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1073,
@@ -22652,7 +24871,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, reading can be very important.",
+        "ru": "В повседневной жизни литературное чтение может играть очень важную роль.",
+        "uk": "У повсякденному житті читання може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1074,
@@ -22669,7 +24894,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about entrance exam in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как вступительный экзамен.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як вступний іспит."
+      }
+    ]
   },
   {
     "id": 1075,
@@ -22686,7 +24917,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Job posting is an important topic at our workplace.",
+        "ru": "Вакансия — важная тема на нашей работе.",
+        "uk": "Оголошення про вакансію — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1076,
@@ -22703,7 +24940,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Onboarding is an important topic at our workplace.",
+        "ru": "Введение в работу — важная тема на нашей работе.",
+        "uk": "Впровадження в роботу — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1077,
@@ -22720,7 +24963,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Shift work is an important topic at our workplace.",
+        "ru": "Сменная работа — важная тема на нашей работе.",
+        "uk": "Позмінна робота — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1078,
@@ -22737,7 +24986,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Substitution is an important topic at our workplace.",
+        "ru": "Замещение — важная тема на нашей работе.",
+        "uk": "Заміна — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1079,
@@ -22755,7 +25010,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Compatibility is an important topic at our workplace.",
+        "ru": "Совместимость — важная тема на нашей работе.",
+        "uk": "Сумісність — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1080,
@@ -22772,7 +25033,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Manager is an important topic at our workplace.",
+        "ru": "Руководитель — важная тема на нашей работе.",
+        "uk": "Керівник — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1081,
@@ -22789,7 +25056,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Specialist is an important topic at our workplace.",
+        "ru": "Специалист — важная тема на нашей работе.",
+        "uk": "Фахівець — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1082,
@@ -22807,7 +25080,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about workload.",
+        "ru": "Врач поговорил с пациентом о том, что такое рабочая нагрузка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке робоче навантаження."
+      }
+    ]
   },
   {
     "id": 1083,
@@ -22825,7 +25104,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Responsibility is an important topic at our workplace.",
+        "ru": "Зона ответственности — важная тема на нашей работе.",
+        "uk": "Зона відповідальності — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1084,
@@ -22843,7 +25128,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Willingness is an important topic at our workplace.",
+        "ru": "Готовность — важная тема на нашей работе.",
+        "uk": "Готовність — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1085,
@@ -22860,7 +25151,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, characteristic can be very important.",
+        "ru": "В повседневной жизни свойство может играть очень важную роль.",
+        "uk": "У повсякденному житті властивість може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1086,
@@ -22878,7 +25175,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Requirement is an important topic at our workplace.",
+        "ru": "Предпосылка — важная тема на нашей работе.",
+        "uk": "Передумова — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1087,
@@ -22896,7 +25199,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Assessment is an important topic at our workplace.",
+        "ru": "Оценка — важная тема на нашей работе.",
+        "uk": "Оцінка — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1088,
@@ -22913,7 +25222,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, habit can be very important.",
+        "ru": "В повседневной жизни привычка может играть очень важную роль.",
+        "uk": "У повсякденному житті звичка може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1089,
@@ -22931,7 +25246,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, dependence can be very important.",
+        "ru": "В повседневной жизни зависимость может играть очень важную роль.",
+        "uk": "У повсякденному житті залежність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1090,
@@ -22949,7 +25270,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, independence can be very important.",
+        "ru": "В повседневной жизни независимость может играть очень важную роль.",
+        "uk": "У повсякденному житті незалежність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1091,
@@ -22967,7 +25294,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, irresponsibility can be very important.",
+        "ru": "В повседневной жизни безответственность может играть очень важную роль.",
+        "uk": "У повсякденному житті безвідповідальність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1092,
@@ -22985,7 +25318,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, approval played a central role.",
+        "ru": "В обсуждении новых правил согласие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил згода відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1093,
@@ -23003,7 +25342,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, rejection played a central role.",
+        "ru": "В обсуждении новых правил отказ сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил відмова відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1094,
@@ -23021,7 +25366,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how platform affects the company.",
+        "ru": "Менеджер объяснил, как платформа влияет на работу компании.",
+        "uk": "Менеджер пояснив, як платформа впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1095,
@@ -23038,7 +25389,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with operating system every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как операционная система, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як операційна система."
+      }
+    ]
   },
   {
     "id": 1096,
@@ -23055,7 +25412,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with application interface every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как программный интерфейс, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як програмний інтерфейс."
+      }
+    ]
   },
   {
     "id": 1097,
@@ -23072,7 +25435,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with cloud every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как облако, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як хмара."
+      }
+    ]
   },
   {
     "id": 1098,
@@ -23089,7 +25458,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with server every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как сервер, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як сервер."
+      }
+    ]
   },
   {
     "id": 1099,
@@ -23107,7 +25482,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how service provider affects the company.",
+        "ru": "Менеджер объяснил, как поставщик услуг влияет на работу компании.",
+        "uk": "Менеджер пояснив, як постачальник послуг впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1100,
@@ -23125,7 +25506,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with encryption technology every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как технология шифрования, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як технологія шифрування."
+      }
+    ]
   },
   {
     "id": 1101,
@@ -23143,7 +25530,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with authentication every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как аутентификация, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як автентифікація."
+      }
+    ]
   },
   {
     "id": 1102,
@@ -23161,7 +25554,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with authorization every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как авторизация, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як авторизація."
+      }
+    ]
   },
   {
     "id": 1103,
@@ -23178,7 +25577,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with database every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как база данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як база даних."
+      }
+    ]
   },
   {
     "id": 1104,
@@ -23195,7 +25600,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with database query every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как запрос к базе данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як запит до бази даних."
+      }
+    ]
   },
   {
     "id": 1105,
@@ -23213,7 +25624,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with fault tolerance every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как устойчивость к отказам, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як відмовостійкість."
+      }
+    ]
   },
   {
     "id": 1106,
@@ -23230,7 +25647,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with logging every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как журналирование, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як журналювання."
+      }
+    ]
   },
   {
     "id": 1107,
@@ -23247,7 +25670,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with load balancing every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как распределение нагрузки, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як балансування навантаження."
+      }
+    ]
   },
   {
     "id": 1108,
@@ -23264,7 +25693,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with latency every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как задержка, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як затримка."
+      }
+    ]
   },
   {
     "id": 1109,
@@ -23281,7 +25716,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with bandwidth limit every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как ограничение пропускной способности, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як обмеження пропускної здатності."
+      }
+    ]
   },
   {
     "id": 1110,
@@ -23298,7 +25739,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with interface description every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как описание интерфейса, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як опис інтерфейсу."
+      }
+    ]
   },
   {
     "id": 1111,
@@ -23315,7 +25762,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with source code every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как исходный код, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як вихідний код."
+      }
+    ]
   },
   {
     "id": 1112,
@@ -23333,7 +25786,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with commit every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как коммит, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як коміт."
+      }
+    ]
   },
   {
     "id": 1113,
@@ -23351,7 +25810,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with pull request every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как пулл-реквест, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як запит на злиття."
+      }
+    ]
   },
   {
     "id": 1114,
@@ -23369,7 +25834,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with repository every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как репозиторий, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як репозиторій."
+      }
+    ]
   },
   {
     "id": 1115,
@@ -23387,7 +25858,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with pipeline every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как пайплайн, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як пайплайн."
+      }
+    ]
   },
   {
     "id": 1116,
@@ -23405,7 +25882,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with deployment every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как развёртывание, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як розгортання."
+      }
+    ]
   },
   {
     "id": 1117,
@@ -23424,7 +25907,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how delivery affects the company.",
+        "ru": "Менеджер объяснил, как поставка влияет на работу компании.",
+        "uk": "Менеджер пояснив, як постачання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1118,
@@ -23442,7 +25931,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with dependency every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как зависимость, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як залежність."
+      }
+    ]
   },
   {
     "id": 1119,
@@ -23460,7 +25955,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, coverage can be very important.",
+        "ru": "В повседневной жизни покрытие может играть очень важную роль.",
+        "uk": "У повсякденному житті покриття може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1120,
@@ -23477,7 +25978,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with exception every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как исключение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як виняток."
+      }
+    ]
   },
   {
     "id": 1121,
@@ -23495,7 +26002,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how traction affects the company.",
+        "ru": "Менеджер объяснил, как тракция влияет на работу компании.",
+        "uk": "Менеджер пояснив, як тракція впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1122,
@@ -23513,7 +26026,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how valuation affects the company.",
+        "ru": "Менеджер объяснил, как оценка влияет на работу компании.",
+        "uk": "Менеджер пояснив, як оцінка впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1123,
@@ -23531,7 +26050,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how funding round affects the company.",
+        "ru": "Менеджер объяснил, как раунд финансирования влияет на работу компании.",
+        "uk": "Менеджер пояснив, як раунд фінансування впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1124,
@@ -23548,7 +26073,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how investor affects the company.",
+        "ru": "Менеджер объяснил, как инвестор влияет на работу компании.",
+        "uk": "Менеджер пояснив, як інвестор впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1125,
@@ -23565,7 +26096,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how advisory board affects the company.",
+        "ru": "Менеджер объяснил, как наблюдательный совет влияет на работу компании.",
+        "uk": "Менеджер пояснив, як наглядова рада впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1126,
@@ -23583,7 +26120,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how stake affects the company.",
+        "ru": "Менеджер объяснил, как доля участия влияет на работу компании.",
+        "uk": "Менеджер пояснив, як частка участі впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1127,
@@ -23600,7 +26143,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how business plan affects the company.",
+        "ru": "Менеджер объяснил, как бизнес-план влияет на работу компании.",
+        "uk": "Менеджер пояснив, як бізнес-план впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1128,
@@ -23617,7 +26166,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how business model affects the company.",
+        "ru": "Менеджер объяснил, как бизнес-модель влияет на работу компании.",
+        "uk": "Менеджер пояснив, як бізнес-модель впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1129,
@@ -23635,7 +26190,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how market launch affects the company.",
+        "ru": "Менеджер объяснил, как вывод на рынок влияет на работу компании.",
+        "uk": "Менеджер пояснив, як виведення на ринок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1130,
@@ -23653,7 +26214,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how market research affects the company.",
+        "ru": "Менеджер объяснил, как исследование рынка влияет на работу компании.",
+        "uk": "Менеджер пояснив, як дослідження ринку впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1131,
@@ -23670,7 +26237,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how offer affects the company.",
+        "ru": "Менеджер объяснил, как предложение влияет на работу компании.",
+        "uk": "Менеджер пояснив, як пропозиція впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1132,
@@ -23688,7 +26261,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how value creation affects the company.",
+        "ru": "Менеджер объяснил, как создание добавленной стоимости влияет на работу компании.",
+        "uk": "Менеджер пояснив, як створення доданої вартості впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1133,
@@ -23706,7 +26285,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how supply chain affects the company.",
+        "ru": "Менеджер объяснил, как цепочка поставок влияет на работу компании.",
+        "uk": "Менеджер пояснив, як ланцюг постачання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1134,
@@ -23724,7 +26309,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how bottleneck analysis affects the company.",
+        "ru": "Менеджер объяснил, как анализ узких мест влияет на работу компании.",
+        "uk": "Менеджер пояснив, як аналіз вузьких місць впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1135,
@@ -23742,7 +26333,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about incidence rate.",
+        "ru": "Врач поговорил с пациентом о том, что такое уровень заболеваемости.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке рівень захворюваності."
+      }
+    ]
   },
   {
     "id": 1136,
@@ -23760,7 +26357,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about mortality rate.",
+        "ru": "Врач поговорил с пациентом о том, что такое уровень смертности.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке рівень смертності."
+      }
+    ]
   },
   {
     "id": 1137,
@@ -23778,7 +26381,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about life expectancy.",
+        "ru": "Врач поговорил с пациентом о том, что такое продолжительность жизни.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке середня тривалість життя."
+      }
+    ]
   },
   {
     "id": 1138,
@@ -23795,7 +26404,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about side effect.",
+        "ru": "Врач поговорил с пациентом о том, что такое побочный эффект.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке побічна дія."
+      }
+    ]
   },
   {
     "id": 1139,
@@ -23812,7 +26427,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about tolerability.",
+        "ru": "Врач поговорил с пациентом о том, что такое переносимость.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке переносимість."
+      }
+    ]
   },
   {
     "id": 1140,
@@ -23829,7 +26450,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about dosage.",
+        "ru": "Врач поговорил с пациентом о том, что такое дозировка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке дозування."
+      }
+    ]
   },
   {
     "id": 1141,
@@ -23846,7 +26473,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about administration.",
+        "ru": "Врач поговорил с пациентом о том, что такое введение.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке введення."
+      }
+    ]
   },
   {
     "id": 1142,
@@ -23863,7 +26496,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about overdose.",
+        "ru": "Врач поговорил с пациентом о том, что такое передозировка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке передозування."
+      }
+    ]
   },
   {
     "id": 1143,
@@ -23880,7 +26519,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about inflammation.",
+        "ru": "Врач поговорил с пациентом о том, что такое воспаление.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке запалення."
+      }
+    ]
   },
   {
     "id": 1144,
@@ -23897,7 +26542,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about blood sample.",
+        "ru": "Врач поговорил с пациентом о том, что такое образец крови.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке зразок крові."
+      }
+    ]
   },
   {
     "id": 1145,
@@ -23914,7 +26565,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tissue can be very important.",
+        "ru": "В повседневной жизни ткань может играть очень важную роль.",
+        "uk": "У повсякденному житті тканина може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1146,
@@ -23931,7 +26588,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, cell division can be very important.",
+        "ru": "В повседневной жизни деление клеток может играть очень важную роль.",
+        "uk": "У повсякденному житті поділ клітин може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1147,
@@ -23949,7 +26612,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about active ingredient.",
+        "ru": "Врач поговорил с пациентом о том, что такое действующее вещество.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке діюча речовина."
+      }
+    ]
   },
   {
     "id": 1148,
@@ -23967,7 +26636,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about effectiveness.",
+        "ru": "Врач поговорил с пациентом о том, что такое эффективность.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке ефективність."
+      }
+    ]
   },
   {
     "id": 1149,
@@ -23985,7 +26660,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about evidence.",
+        "ru": "Врач поговорил с пациентом о том, что такое доказательность.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке доказовість."
+      }
+    ]
   },
   {
     "id": 1150,
@@ -24002,7 +26683,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about guideline.",
+        "ru": "Врач поговорил с пациентом о том, что такое клиническая рекомендация.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке клінічна настанова."
+      }
+    ]
   },
   {
     "id": 1151,
@@ -24020,7 +26707,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, extension of powers played a central role.",
+        "ru": "В обсуждении новых правил расширение полномочий сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил розширення повноважень відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1152,
@@ -24038,7 +26731,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with General Data Protection Regulation every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как общий регламент по защите данных, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як загальний регламент захисту даних."
+      }
+    ]
   },
   {
     "id": 1153,
@@ -24056,7 +26755,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, consent form played a central role.",
+        "ru": "В обсуждении новых правил согласие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил заява згоди відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1154,
@@ -24073,7 +26778,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, objection played a central role.",
+        "ru": "В обсуждении новых правил возражение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил заперечення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1155,
@@ -24090,7 +26801,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, appeal played a central role.",
+        "ru": "В обсуждении новых правил апелляция сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил заперечення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1156,
@@ -24107,7 +26824,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, authorisation to receive documents played a central role.",
+        "ru": "В обсуждении новых правил полномочие на вручение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил повноваження на вручення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1157,
@@ -24124,7 +26847,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, statute of limitations played a central role.",
+        "ru": "В обсуждении новых правил срок давности сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил строк давності відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1158,
@@ -24141,7 +26870,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, case law played a central role.",
+        "ru": "В обсуждении новых правил судебная практика сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил судова практика відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1159,
@@ -24159,7 +26894,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, division of powers played a central role.",
+        "ru": "В обсуждении новых правил разделение полномочий сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил розподіл повноважень відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1160,
@@ -24177,7 +26918,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how photovoltaics can protect the environment.",
+        "ru": "Многие обсуждают, как фотовольтаика может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як фотовольтаїка може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1161,
@@ -24195,7 +26942,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how wind turbine can protect the environment.",
+        "ru": "Многие обсуждают, как ветроустановка может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як вітрова установка може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1162,
@@ -24212,7 +26965,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how power grid can protect the environment.",
+        "ru": "Многие обсуждают, как электросеть может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як електромережа може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1163,
@@ -24229,7 +26988,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how feed-in can protect the environment.",
+        "ru": "Многие обсуждают, как ввод в сеть может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як подання в мережу може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1164,
@@ -24247,7 +27012,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with storage unit every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как накопитель, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як накопичувач."
+      }
+    ]
   },
   {
     "id": 1165,
@@ -24265,7 +27036,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how charging station can protect the environment.",
+        "ru": "Многие обсуждают, как зарядная станция может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як зарядна станція може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1166,
@@ -24282,7 +27059,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how charging power can protect the environment.",
+        "ru": "Многие обсуждают, как мощность зарядки может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як потужність заряджання може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1167,
@@ -24300,7 +27083,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how heat pump can protect the environment.",
+        "ru": "Многие обсуждают, как тепловой насос может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як тепловий насос може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1168,
@@ -24318,7 +27107,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how insulation can protect the environment.",
+        "ru": "Многие обсуждают, как утепление может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як утеплення може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1169,
@@ -24336,7 +27131,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Many people discuss how energy performance certificate can protect the environment.",
+        "ru": "Многие обсуждают, как энергетический сертификат здания может помочь защитить окружающую среду.",
+        "uk": "Багато хто обговорює, як енергетичний сертифікат будівлі може допомогти захистити довкілля."
+      }
+    ]
   },
   {
     "id": 1170,
@@ -24354,7 +27155,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about specialist literature in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как специализированная литература.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як фахова література."
+      }
+    ]
   },
   {
     "id": 1171,
@@ -24372,7 +27179,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about list of references in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как список источников.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як список джерел."
+      }
+    ]
   },
   {
     "id": 1172,
@@ -24390,7 +27203,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about quotation in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как цитата.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як цитата."
+      }
+    ]
   },
   {
     "id": 1173,
@@ -24408,7 +27227,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about thesis in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как тезис.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як теза."
+      }
+    ]
   },
   {
     "id": 1174,
@@ -24426,7 +27251,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about justification in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как обоснование.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як обґрунтування."
+      }
+    ]
   },
   {
     "id": 1175,
@@ -24444,7 +27275,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about finding.",
+        "ru": "Врач поговорил с пациентом о том, что такое заключение.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке висновок."
+      }
+    ]
   },
   {
     "id": 1176,
@@ -24461,7 +27298,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used sample to interpret the data.",
+        "ru": "В отчёте мы использовали выборка, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували вибірка, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1177,
@@ -24478,7 +27321,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used variance to interpret the data.",
+        "ru": "В отчёте мы использовали дисперсия, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували дисперсія, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1178,
@@ -24495,7 +27344,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used average to interpret the data.",
+        "ru": "В отчёте мы использовали среднее значение, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували середнє значення, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1179,
@@ -24512,7 +27367,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used correlation to interpret the data.",
+        "ru": "В отчёте мы использовали корреляция, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували кореляція, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1180,
@@ -24530,7 +27391,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about view.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать понимание.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти розуміння."
+      }
+    ]
   },
   {
     "id": 1181,
@@ -24548,7 +27415,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about dispute.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать дискуссия.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти дискусія."
+      }
+    ]
   },
   {
     "id": 1182,
@@ -24566,7 +27439,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about influence.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать влияние.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти вплив."
+      }
+    ]
   },
   {
     "id": 1183,
@@ -24584,7 +27463,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, outrage can be very important.",
+        "ru": "В повседневной жизни возмущение может играть очень важную роль.",
+        "uk": "У повсякденному житті обурення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1184,
@@ -24602,7 +27487,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, approval played a central role.",
+        "ru": "В обсуждении новых правил общественная поддержка сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил суспільна підтримка відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1185,
@@ -24620,7 +27511,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, rejection played a central role.",
+        "ru": "В обсуждении новых правил общественное неприятие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил суспільне відторгнення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1186,
@@ -24638,7 +27535,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, polarisation played a central role.",
+        "ru": "В обсуждении новых правил поляризация сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил поляризація відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1187,
@@ -24655,7 +27558,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about media coverage.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать освещение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти висвітлення."
+      }
+    ]
   },
   {
     "id": 1188,
@@ -24672,7 +27581,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about disinformation.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать дезинформация.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти дезінформація."
+      }
+    ]
   },
   {
     "id": 1189,
@@ -24690,7 +27605,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about source in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как источник.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як джерело."
+      }
+    ]
   },
   {
     "id": 1190,
@@ -24708,7 +27629,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Collective agreement is an important topic at our workplace.",
+        "ru": "Тарифный договор — важная тема на нашей работе.",
+        "uk": "Тарифна угода — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1191,
@@ -24726,7 +27653,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Wage development is an important topic at our workplace.",
+        "ru": "Динамика зарплат — важная тема на нашей работе.",
+        "uk": "Динаміка зарплат — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1192,
@@ -24743,7 +27676,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Working time regulation is an important topic at our workplace.",
+        "ru": "Регулирование рабочего времени — важная тема на нашей работе.",
+        "uk": "Регулювання робочого часу — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1193,
@@ -24760,7 +27699,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Remuneration is an important topic at our workplace.",
+        "ru": "Вознаграждение — важная тема на нашей работе.",
+        "uk": "Винагорода — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1194,
@@ -24777,7 +27722,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Overtime hour is an important topic at our workplace.",
+        "ru": "Сверхурочный час — важная тема на нашей работе.",
+        "uk": "Понаднормова година — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1195,
@@ -24795,7 +27746,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Allowance is an important topic at our workplace.",
+        "ru": "Надбавка — важная тема на нашей работе.",
+        "uk": "Надбавка — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1196,
@@ -24813,7 +27770,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Severance pay is an important topic at our workplace.",
+        "ru": "Выходное пособие — важная тема на нашей работе.",
+        "uk": "Вихідна допомога — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1197,
@@ -24830,7 +27793,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how reimbursement affects the company.",
+        "ru": "Менеджер объяснил, как возмещение влияет на работу компании.",
+        "uk": "Менеджер пояснив, як відшкодування впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1198,
@@ -24847,7 +27816,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Substitution rules is an important topic at our workplace.",
+        "ru": "Порядок замещения — важная тема на нашей работе.",
+        "uk": "Порядок заміщення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1199,
@@ -24865,7 +27840,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Works agreement is an important topic at our workplace.",
+        "ru": "Соглашение на предприятии — важная тема на нашей работе.",
+        "uk": "Угода на підприємстві — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1200,
@@ -24883,7 +27864,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Occupational safety is an important topic at our workplace.",
+        "ru": "Охрана труда — важная тема на нашей работе.",
+        "uk": "Охорона праці — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1201,
@@ -24902,7 +27889,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Risk assessment is an important topic at our workplace.",
+        "ru": "Оценка рисков — важная тема на нашей работе.",
+        "uk": "Оцінка ризиків — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1202,
@@ -24920,7 +27913,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about perception.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать восприятие.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти сприйняття."
+      }
+    ]
   },
   {
     "id": 1203,
@@ -24938,7 +27937,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Assessment is an important topic at our workplace.",
+        "ru": "Оценка — важная тема на нашей работе.",
+        "uk": "Оцінювання — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1204,
@@ -24956,7 +27961,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, interpretation played a central role.",
+        "ru": "В обсуждении новых правил толкование сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил тлумачення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1205,
@@ -24974,7 +27985,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, inclination can be very important.",
+        "ru": "В повседневной жизни склонность может играть очень важную роль.",
+        "uk": "У повсякденному житті схильність може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1206,
@@ -24992,7 +28009,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, stability can be very important.",
+        "ru": "В повседневной жизни устойчивость может играть очень важную роль.",
+        "uk": "У повсякденному житті стійкість може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1207,
@@ -25010,7 +28033,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about resilience.",
+        "ru": "Врач поговорил с пациентом о том, что такое выносливость.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке витривалість."
+      }
+    ]
   },
   {
     "id": 1208,
@@ -25028,7 +28057,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, agreement played a central role.",
+        "ru": "В обсуждении новых правил соответствие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил відповідність відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1209,
@@ -25046,7 +28081,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, discrepancy played a central role.",
+        "ru": "В обсуждении новых правил несоответствие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил невідповідність відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1210,
@@ -25064,7 +28105,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the report, we used reference value to interpret the data.",
+        "ru": "В отчёте мы использовали ориентировочное значение, чтобы интерпретировать данные.",
+        "uk": "У звіті ми використовували орієнтовне значення, щоб інтерпретувати дані."
+      }
+    ]
   },
   {
     "id": 1211,
@@ -25082,7 +28129,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how stock level affects the company.",
+        "ru": "Менеджер объяснил, как складской остаток влияет на работу компании.",
+        "uk": "Менеджер пояснив, як складський залишок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1212,
@@ -25100,7 +28153,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how supply shortage affects the company.",
+        "ru": "Менеджер объяснил, как дефицит поставок влияет на работу компании.",
+        "uk": "Менеджер пояснив, як дефіцит постачання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1213,
@@ -25118,7 +28177,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, reorder can be very important.",
+        "ru": "В повседневной жизни дозаказ может играть очень важную роль.",
+        "uk": "У повсякденному житті додаткове замовлення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1214,
@@ -25136,7 +28201,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, return shipment can be very important.",
+        "ru": "В повседневной жизни возврат может играть очень важную роль.",
+        "uk": "У повсякденному житті повернення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1215,
@@ -25154,7 +28225,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with availability every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как наличие, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як наявність."
+      }
+    ]
   },
   {
     "id": 1216,
@@ -25171,7 +28248,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, shipment tracking can be very important.",
+        "ru": "В повседневной жизни отслеживание отправления может играть очень важную роль.",
+        "uk": "У повсякденному житті відстеження відправлення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1217,
@@ -25188,7 +28271,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, tracking number can be very important.",
+        "ru": "В повседневной жизни трек-номер может играть очень важную роль.",
+        "uk": "У повсякденному житті номер відправлення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1218,
@@ -25206,7 +28295,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, delivery address can be very important.",
+        "ru": "В повседневной жизни адрес доставки может играть очень важную роль.",
+        "uk": "У повсякденному житті адреса доставки може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1219,
@@ -25224,7 +28319,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, residence permit played a central role.",
+        "ru": "В обсуждении новых правил вид на жительство сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил дозвіл на проживання відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1220,
@@ -25241,7 +28342,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, registration certificate can be very important.",
+        "ru": "В повседневной жизни справка о регистрации может играть очень важную роль.",
+        "uk": "У повсякденному житті довідка про реєстрацію може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1221,
@@ -25259,7 +28366,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, temporary residence permit played a central role.",
+        "ru": "В обсуждении новых правил разрешение на пребывание сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил дозвіл на перебування відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1222,
@@ -25277,7 +28390,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Work permit is an important topic at our workplace.",
+        "ru": "Разрешение на работу — важная тема на нашей работе.",
+        "uk": "Дозвіл на роботу — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1223,
@@ -25295,7 +28414,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, citizenship played a central role.",
+        "ru": "В обсуждении новых правил гражданство сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил громадянство відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1224,
@@ -25313,7 +28438,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, naturalisation played a central role.",
+        "ru": "В обсуждении новых правил натурализация сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил натуралізація відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1225,
@@ -25330,7 +28461,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, place of residence can be very important.",
+        "ru": "В повседневной жизни место жительства может играть очень важную роль.",
+        "uk": "У повсякденному житті місце проживання може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1226,
@@ -25348,7 +28485,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, danger played a central role.",
+        "ru": "В обсуждении новых правил опасность сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил неbezпека відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1227,
@@ -25366,7 +28509,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how liability affects the company.",
+        "ru": "Менеджер объяснил, как ответственность влияет на работу компании.",
+        "uk": "Менеджер пояснив, як відповідальність впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1228,
@@ -25384,7 +28533,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about expert opinion.",
+        "ru": "Врач поговорил с пациентом о том, что такое экспертное заключение.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке експертний висновок."
+      }
+    ]
   },
   {
     "id": 1229,
@@ -25402,7 +28557,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, condition played a central role.",
+        "ru": "В обсуждении новых правил условие сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил умова відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1230,
@@ -25420,7 +28581,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Appointment confirmation is an important topic at our workplace.",
+        "ru": "Подтверждение встречи — важная тема на нашей работе.",
+        "uk": "Підтвердження зустрічі — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1231,
@@ -25438,7 +28605,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Rescheduling of an appointment is an important topic at our workplace.",
+        "ru": "Перенос встречи — важная тема на нашей работе.",
+        "uk": "Перенесення зустрічі — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1232,
@@ -25456,7 +28629,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Reachability is an important topic at our workplace.",
+        "ru": "Доступность — важная тема на нашей работе.",
+        "uk": "Доступність — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1233,
@@ -25473,7 +28652,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how loan affects the company.",
+        "ru": "Менеджер объяснил, как заём влияет на работу компании.",
+        "uk": "Менеджер пояснив, як позика впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1234,
@@ -25490,7 +28675,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how interest affects the company.",
+        "ru": "Менеджер объяснил, как проценты влияет на работу компании.",
+        "uk": "Менеджер пояснив, як відсотки впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1235,
@@ -25508,7 +28699,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how tax return affects the company.",
+        "ru": "Менеджер объяснил, как налоговая декларация влияет на работу компании.",
+        "uk": "Менеджер пояснив, як податкова декларація впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1236,
@@ -25526,7 +28723,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how levy affects the company.",
+        "ru": "Менеджер объяснил, как сбор влияет на работу компании.",
+        "uk": "Менеджер пояснив, як збір впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1237,
@@ -25544,7 +28747,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about insurance.",
+        "ru": "Врач поговорил с пациентом о том, что такое страховка.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке страхування."
+      }
+    ]
   },
   {
     "id": 1238,
@@ -25562,7 +28771,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how retirement provision affects the company.",
+        "ru": "Менеджер объяснил, как пенсионное обеспечение влияет на работу компании.",
+        "uk": "Менеджер пояснив, як пенсійне забезпечення впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1239,
@@ -25580,7 +28795,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how contribution affects the company.",
+        "ru": "Менеджер объяснил, как взнос влияет на работу компании.",
+        "uk": "Менеджер пояснив, як внесок впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1240,
@@ -25598,7 +28819,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how household budget affects the company.",
+        "ru": "Менеджер объяснил, как бюджет влияет на работу компании.",
+        "uk": "Менеджер пояснив, як бюджет впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1241,
@@ -25616,7 +28843,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how supply situation affects the company.",
+        "ru": "Менеджер объяснил, как ситуация с обеспечением влияет на работу компании.",
+        "uk": "Менеджер пояснив, як ситуація із забезпеченням впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1242,
@@ -25634,7 +28867,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how growth affects the company.",
+        "ru": "Менеджер объяснил, как рост влияет на работу компании.",
+        "uk": "Менеджер пояснив, як зростання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1243,
@@ -25652,7 +28891,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how development affects the company.",
+        "ru": "Менеджер объяснил, как развитие влияет на работу компании.",
+        "uk": "Менеджер пояснив, як розвиток впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1244,
@@ -25670,7 +28915,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how fluctuation affects the company.",
+        "ru": "Менеджер объяснил, как колебание влияет на работу компании.",
+        "uk": "Менеджер пояснив, як коливання впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1245,
@@ -25688,7 +28939,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about prevention.",
+        "ru": "Врач поговорил с пациентом о том, что такое профилактика.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке профілактика."
+      }
+    ]
   },
   {
     "id": 1246,
@@ -25705,7 +28962,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about treatment method.",
+        "ru": "Врач поговорил с пациентом о том, что такое метод лечения.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке метод лікування."
+      }
+    ]
   },
   {
     "id": 1247,
@@ -25722,7 +28985,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about medicine.",
+        "ru": "Врач поговорил с пациентом о том, что такое лекарство.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке ліки."
+      }
+    ]
   },
   {
     "id": 1248,
@@ -25739,7 +29008,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about healing.",
+        "ru": "Врач поговорил с пациентом о том, что такое исцеление.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке зцілення."
+      }
+    ]
   },
   {
     "id": 1249,
@@ -25756,7 +29031,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about type of therapy.",
+        "ru": "Врач поговорил с пациентом о том, что такое вид терапии.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке вид терапії."
+      }
+    ]
   },
   {
     "id": 1250,
@@ -25774,7 +29055,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about care worker.",
+        "ru": "Врач поговорил с пациентом о том, что такое медперсонал.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке медперсонал."
+      }
+    ]
   },
   {
     "id": 1251,
@@ -25791,7 +29078,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about patient.",
+        "ru": "Врач поговорил с пациентом о том, что такое пациент.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке пацієнт."
+      }
+    ]
   },
   {
     "id": 1252,
@@ -25808,7 +29101,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about surgery.",
+        "ru": "Врач поговорил с пациентом о том, что такое операция.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке операція."
+      }
+    ]
   },
   {
     "id": 1253,
@@ -25826,7 +29125,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The doctor talked with the patient about recovery.",
+        "ru": "Врач поговорил с пациентом о том, что такое отдых.",
+        "uk": "Лікар поговорив з пацієнтом про те, що таке відпочинок."
+      }
+    ]
   },
   {
     "id": 1254,
@@ -25843,7 +29148,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, provision played a central role.",
+        "ru": "В обсуждении новых правил положение сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил положення відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1255,
@@ -25861,7 +29172,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Regulation is an important topic at our workplace.",
+        "ru": "Регулирование — важная тема на нашей работе.",
+        "uk": "Регулювання — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1256,
@@ -25879,7 +29196,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Violation is an important topic at our workplace.",
+        "ru": "Нарушение — важная тема на нашей работе.",
+        "uk": "Порушення — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1257,
@@ -25897,7 +29220,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with monitoring every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как наблюдение, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як нагляд."
+      }
+    ]
   },
   {
     "id": 1258,
@@ -25915,7 +29244,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Order is an important topic at our workplace.",
+        "ru": "Распоряжение — важная тема на нашей работе.",
+        "uk": "Розпорядження — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1259,
@@ -25932,7 +29267,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Working hours is an important topic at our workplace.",
+        "ru": "Рабочее время — важная тема на нашей работе.",
+        "uk": "Робочий час — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1260,
@@ -25949,7 +29290,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Workplace is an important topic at our workplace.",
+        "ru": "Рабочее место — важная тема на нашей работе.",
+        "uk": "Робоче місце — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1261,
@@ -25966,7 +29313,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Employee is an important topic at our workplace.",
+        "ru": "Работник — важная тема на нашей работе.",
+        "uk": "Працівник — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1262,
@@ -25983,7 +29336,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Employer is an important topic at our workplace.",
+        "ru": "Работодатель — важная тема на нашей работе.",
+        "uk": "Роботодавець — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1263,
@@ -26000,7 +29359,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Meeting is an important topic at our workplace.",
+        "ru": "Совещание — важная тема на нашей работе.",
+        "uk": "Нарада — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1264,
@@ -26017,7 +29382,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Online meeting is an important topic at our workplace.",
+        "ru": "Встреча — важная тема на нашей работе.",
+        "uk": "Зустріч — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1265,
@@ -26035,7 +29406,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Presentation is an important topic at our workplace.",
+        "ru": "Презентация — важная тема на нашей работе.",
+        "uk": "Презентація — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1266,
@@ -26053,7 +29430,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Planning is an important topic at our workplace.",
+        "ru": "Планирование — важная тема на нашей работе.",
+        "uk": "Планування — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1267,
@@ -26070,7 +29453,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this course, we often talk about lessons in detail.",
+        "ru": "На этом курсе мы подробно говорим о таком понятии, как занятие.",
+        "uk": "На цьому курсі ми докладно говоримо про таке поняття, як заняття."
+      }
+    ]
   },
   {
     "id": 1268,
@@ -26088,7 +29477,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Competence is an important topic at our workplace.",
+        "ru": "Компетенция — важная тема на нашей работе.",
+        "uk": "Компетенція — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1269,
@@ -26105,7 +29500,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, participation can be very important.",
+        "ru": "В повседневной жизни участие может играть очень важную роль.",
+        "uk": "У повсякденному житті участь може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1270,
@@ -26122,7 +29523,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, event can be very important.",
+        "ru": "В повседневной жизни мероприятие может играть очень важную роль.",
+        "uk": "У повсякденному житті захід може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1271,
@@ -26139,7 +29546,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, vehicle can be very important.",
+        "ru": "В повседневной жизни транспортное средство может играть очень важную роль.",
+        "uk": "У повсякденному житті транспортний засіб може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1272,
@@ -26157,7 +29570,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with network every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как сеть, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як мережа."
+      }
+    ]
   },
   {
     "id": 1273,
@@ -26175,7 +29594,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with signal every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как сигнал, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як сигнал."
+      }
+    ]
   },
   {
     "id": 1274,
@@ -26192,7 +29617,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with control every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как управление, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як керування."
+      }
+    ]
   },
   {
     "id": 1275,
@@ -26210,7 +29641,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, voltage can be very important.",
+        "ru": "В повседневной жизни напряжение может играть очень важную роль.",
+        "uk": "У повсякденному житті напруга може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1276,
@@ -26227,7 +29664,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with battery every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как батарея, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як батарея."
+      }
+    ]
   },
   {
     "id": 1277,
@@ -26244,7 +29687,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about opinion.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать мнение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти думка."
+      }
+    ]
   },
   {
     "id": 1278,
@@ -26261,7 +29710,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, change can be very important.",
+        "ru": "В повседневной жизни изменение может играть очень важную роль.",
+        "uk": "У повсякденному житті зміна може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1279,
@@ -26278,7 +29733,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, opportunity can be very important.",
+        "ru": "В повседневной жизни случай может играть очень важную роль.",
+        "uk": "У повсякденному житті нагода може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1280,
@@ -26295,7 +29756,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In this project, we had to deal with access every day.",
+        "ru": "В этом проекте нам приходилось иметь дело с таким понятием, как доступ, каждый день.",
+        "uk": "У цьому проєкті нам доводилося щодня працювати з таким поняттям, як доступ."
+      }
+    ]
   },
   {
     "id": 1281,
@@ -26312,7 +29779,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, appreciation can be very important.",
+        "ru": "В повседневной жизни повышение стоимости может играть очень важную роль.",
+        "uk": "У повсякденному житті підвищення вартості може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1282,
@@ -26330,7 +29803,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Draft is an important topic at our workplace.",
+        "ru": "Черновик, эскиз — важная тема на нашей работе.",
+        "uk": "Чернетка, ескіз — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1283,
@@ -26347,7 +29826,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, anchoring can be very important.",
+        "ru": "В повседневной жизни укрепление, закрепление может играть очень важную роль.",
+        "uk": "У повсякденному житті закріплення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1284,
@@ -26364,7 +29849,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, turnaround can be very important.",
+        "ru": "В повседневной жизни перелом, поворот может играть очень важную роль.",
+        "uk": "У повсякденному житті злам, поворот може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1285,
@@ -26381,7 +29872,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, overloading can be very important.",
+        "ru": "В повседневной жизни перегруженность может играть очень важную роль.",
+        "uk": "У повсякденному житті перевантаженість може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1286,
@@ -26398,7 +29895,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The manager explained how client affects the company.",
+        "ru": "Менеджер объяснил, как заказчик влияет на работу компании.",
+        "uk": "Менеджер пояснив, як замовник впливає на роботу компанії."
+      }
+    ]
   },
   {
     "id": 1287,
@@ -26415,7 +29918,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, desire can be very important.",
+        "ru": "В повседневной жизни страсть, влечение может играть очень важную роль.",
+        "uk": "У повсякденному житті пристрасть, бажання може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1288,
@@ -26432,7 +29941,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, false assumption can be very important.",
+        "ru": "В повседневной жизни ошибочное предположение может играть очень важную роль.",
+        "uk": "У повсякденному житті помилкове припущення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1289,
@@ -26449,7 +29964,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the discussion about new rules, initiative played a central role.",
+        "ru": "В обсуждении новых правил инициатива, попытка продвижения сыграло ключевую роль.",
+        "uk": "В обговоренні нових правил ініціатива, спроба просування відіграло ключову роль."
+      }
+    ]
   },
   {
     "id": 1290,
@@ -26466,7 +29987,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Remedy is an important topic at our workplace.",
+        "ru": "Устранение проблемы — важная тема на нашей работе.",
+        "uk": "Усунення проблеми — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1291,
@@ -26483,7 +30010,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Redesign is an important topic at our workplace.",
+        "ru": "Преобразование, перестройка — важная тема на нашей работе.",
+        "uk": "Перетворення, перебудова — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1292,
@@ -26500,7 +30033,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Workforce is an important topic at our workplace.",
+        "ru": "Персонал, коллектив — важная тема на нашей работе.",
+        "uk": "Персонал, колектив — важлива тема на нашій роботі."
+      }
+    ]
   },
   {
     "id": 1293,
@@ -26517,7 +30056,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, inner reflection can be very important.",
+        "ru": "В повседневной жизни размышление, уединение может играть очень важную роль.",
+        "uk": "У повсякденному житті усамітнення, роздуми може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1294,
@@ -26534,7 +30079,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about reservation.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать оговорка, сомнение.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти застереження, сумнів."
+      }
+    ]
   },
   {
     "id": 1295,
@@ -26551,7 +30102,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, incident can be very important.",
+        "ru": "В повседневной жизни инцидент может играть очень важную роль.",
+        "uk": "У повсякденному житті інцидент може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1296,
@@ -26568,7 +30125,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, disappearance can be very important.",
+        "ru": "В повседневной жизни безвестность, исчезнение может играть очень важную роль.",
+        "uk": "У повсякденному житті загубленість, зникнення може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1297,
@@ -26585,7 +30148,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, payout can be very important.",
+        "ru": "В повседневной жизни выплата, распределение средств может играть очень важную роль.",
+        "uk": "У повсякденному житті виплата, розподіл коштів може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1298,
@@ -26602,7 +30171,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about favour.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать услуга, любезность.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти послуга, люб’язність."
+      }
+    ]
   },
   {
     "id": 1299,
@@ -26619,7 +30194,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, mistake can be very important.",
+        "ru": "В повседневной жизни ошибка, промах может играть очень важную роль.",
+        "uk": "У повсякденному житті помилка, промах може відігравати дуже важливу роль."
+      }
+    ]
   },
   {
     "id": 1300,
@@ -26636,7 +30217,13 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In the media, people argued for days about background.",
+        "ru": "В СМИ люди несколько дней спорили о том, как понимать суть дела, суть вопроса.",
+        "uk": "У ЗМІ люди кілька днів сперечалися про те, як розуміти сутність справи."
+      }
+    ]
   },
   {
     "id": 1301,
@@ -26654,6 +30241,12 @@ window.decks.en_nouns = [
     "deAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "In everyday life, twist of fate can be very important.",
+        "ru": "В повседневной жизни стечение обстоятельств может играть очень важную роль.",
+        "uk": "У повсякденному житті збіг обставин може відігравати дуже важливу роль."
+      }
+    ]
   }
 ];
