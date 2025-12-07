@@ -1,3 +1,5 @@
+window.decks = window.decks || {};
+
 window.decks.de_nouns = [
   {
     "id": 1,
