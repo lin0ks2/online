@@ -5,6 +5,8 @@
  * Version: 1.0
  * Last modified: 2025-10-19
 */
+window.decks = window.decks || {};
+
 window.decks.de_nouns = [
 {
   id: 1,
