@@ -8,7 +8,7 @@
 
 (function(){
   const App = window.App = (window.App||{});
-  App.APP_VER = '1.3.5';
+  App.APP_VER = '1.3.6';
 
     // Детектируем запуск как PWA (standalone) и помечаем root
   (function detectRunmodePwa(){
