@@ -7,7 +7,7 @@
 */
 window.decks = window.decks || {};
 
-window.decks.de_nouns = [
+window.decks.en_nouns = [
   {
     "id": 1,
     "word": "money",
