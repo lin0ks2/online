@@ -5,6 +5,7 @@
  * Version: 1.0
  * Last modified: 2025-10-19
 */
+
 window.decks.en_nouns = [
   {
     "id": 1,
@@ -12,7 +13,9 @@ window.decks.en_nouns = [
     "ru": "деньги",
     "uk": "гроші",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -33,7 +36,10 @@ window.decks.en_nouns = [
     "ru": "время",
     "uk": "час",
     "level": "B2",
-    "topics": ["shopping", "work"],
+    "topics": [
+      "work",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54,7 +60,9 @@ window.decks.en_nouns = [
     "ru": "год",
     "uk": "рік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -75,7 +83,9 @@ window.decks.en_nouns = [
     "ru": "человек",
     "uk": "людина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -96,7 +106,9 @@ window.decks.en_nouns = [
     "ru": "женщина",
     "uk": "жінка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -117,7 +129,9 @@ window.decks.en_nouns = [
     "ru": "мужчина",
     "uk": "чоловік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -138,7 +152,9 @@ window.decks.en_nouns = [
     "ru": "ребёнок",
     "uk": "дитина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -159,7 +175,9 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -180,7 +198,9 @@ window.decks.en_nouns = [
     "ru": "страна",
     "uk": "країна",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -201,7 +221,9 @@ window.decks.en_nouns = [
     "ru": "дом",
     "uk": "будинок",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -222,7 +244,9 @@ window.decks.en_nouns = [
     "ru": "квартира",
     "uk": "квартира",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -243,7 +267,9 @@ window.decks.en_nouns = [
     "ru": "комната",
     "uk": "кімната",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -264,7 +290,9 @@ window.decks.en_nouns = [
     "ru": "дверь",
     "uk": "двері",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -285,7 +313,9 @@ window.decks.en_nouns = [
     "ru": "окно",
     "uk": "вікно",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -306,7 +336,9 @@ window.decks.en_nouns = [
     "ru": "стол",
     "uk": "стіл",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -327,7 +359,9 @@ window.decks.en_nouns = [
     "ru": "стул",
     "uk": "стілець",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -348,7 +382,9 @@ window.decks.en_nouns = [
     "ru": "кровать",
     "uk": "ліжко",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -369,7 +405,9 @@ window.decks.en_nouns = [
     "ru": "шкаф",
     "uk": "шафа",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -390,7 +428,9 @@ window.decks.en_nouns = [
     "ru": "лампа",
     "uk": "лампа",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -411,7 +451,9 @@ window.decks.en_nouns = [
     "ru": "ковёр",
     "uk": "килим",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -432,7 +474,9 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "автомобіль",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -453,7 +497,9 @@ window.decks.en_nouns = [
     "ru": "автобус",
     "uk": "автобус",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -474,7 +520,9 @@ window.decks.en_nouns = [
     "ru": "поезд",
     "uk": "поїзд",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -495,7 +543,9 @@ window.decks.en_nouns = [
     "ru": "самолёт",
     "uk": "літак",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -516,7 +566,9 @@ window.decks.en_nouns = [
     "ru": "корабль",
     "uk": "корабель",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -537,7 +589,9 @@ window.decks.en_nouns = [
     "ru": "велосипед",
     "uk": "велосипед",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -558,7 +612,9 @@ window.decks.en_nouns = [
     "ru": "улица",
     "uk": "вулиця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -579,7 +635,9 @@ window.decks.en_nouns = [
     "ru": "мост",
     "uk": "міст",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -600,7 +658,9 @@ window.decks.en_nouns = [
     "ru": "путь",
     "uk": "шлях",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -621,7 +681,9 @@ window.decks.en_nouns = [
     "ru": "площадь",
     "uk": "площа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -642,7 +704,9 @@ window.decks.en_nouns = [
     "ru": "вода",
     "uk": "вода",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -663,7 +727,9 @@ window.decks.en_nouns = [
     "ru": "хлеб",
     "uk": "хліб",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -684,7 +750,10 @@ window.decks.en_nouns = [
     "ru": "молоко",
     "uk": "молоко",
     "level": "A1",
-    "topics": ["drink", "food"],
+    "topics": [
+      "drink",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -705,7 +774,9 @@ window.decks.en_nouns = [
     "ru": "сыр",
     "uk": "сир",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -726,7 +797,9 @@ window.decks.en_nouns = [
     "ru": "мясо",
     "uk": "м'ясо",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -747,7 +820,9 @@ window.decks.en_nouns = [
     "ru": "рыба",
     "uk": "риба",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -768,7 +843,9 @@ window.decks.en_nouns = [
     "ru": "овощи",
     "uk": "овочі",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -789,7 +866,9 @@ window.decks.en_nouns = [
     "ru": "фрукты",
     "uk": "фрукти",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -810,7 +889,9 @@ window.decks.en_nouns = [
     "ru": "яблоко",
     "uk": "яблуко",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -831,7 +912,9 @@ window.decks.en_nouns = [
     "ru": "банан",
     "uk": "банан",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -852,7 +935,9 @@ window.decks.en_nouns = [
     "ru": "работа",
     "uk": "робота",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -873,7 +958,9 @@ window.decks.en_nouns = [
     "ru": "профессия",
     "uk": "професія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -894,7 +981,9 @@ window.decks.en_nouns = [
     "ru": "школа",
     "uk": "школа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -915,7 +1004,9 @@ window.decks.en_nouns = [
     "ru": "университет",
     "uk": "університет",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -936,7 +1027,10 @@ window.decks.en_nouns = [
     "ru": "учитель",
     "uk": "вчитель",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -957,7 +1051,9 @@ window.decks.en_nouns = [
     "ru": "ученик",
     "uk": "учень",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -978,7 +1074,9 @@ window.decks.en_nouns = [
     "ru": "студент",
     "uk": "студент",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -999,7 +1097,10 @@ window.decks.en_nouns = [
     "ru": "книга",
     "uk": "книга",
     "level": "B1",
-    "topics": ["education", "media"],
+    "topics": [
+      "education",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1020,7 +1121,9 @@ window.decks.en_nouns = [
     "ru": "газета",
     "uk": "газета",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1041,7 +1144,9 @@ window.decks.en_nouns = [
     "ru": "тетрадь",
     "uk": "зошит",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1062,7 +1167,9 @@ window.decks.en_nouns = [
     "ru": "компьютер",
     "uk": "комп’ютер",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1083,7 +1190,9 @@ window.decks.en_nouns = [
     "ru": "ноутбук",
     "uk": "ноутбук",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1104,7 +1213,9 @@ window.decks.en_nouns = [
     "ru": "телефон",
     "uk": "телефон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1125,7 +1236,9 @@ window.decks.en_nouns = [
     "ru": "телефон",
     "uk": "телефон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1146,7 +1259,9 @@ window.decks.en_nouns = [
     "ru": "электронное письмо",
     "uk": "електронний лист",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1167,7 +1282,9 @@ window.decks.en_nouns = [
     "ru": "интернет",
     "uk": "інтернет",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1188,7 +1305,9 @@ window.decks.en_nouns = [
     "ru": "экран",
     "uk": "екран",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1209,7 +1328,9 @@ window.decks.en_nouns = [
     "ru": "мышь",
     "uk": "миша",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1230,7 +1351,9 @@ window.decks.en_nouns = [
     "ru": "клавиатура",
     "uk": "клавіатура",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1251,7 +1374,9 @@ window.decks.en_nouns = [
     "ru": "принтер",
     "uk": "принтер",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1272,7 +1397,9 @@ window.decks.en_nouns = [
     "ru": "семья",
     "uk": "родина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1293,7 +1420,9 @@ window.decks.en_nouns = [
     "ru": "отец",
     "uk": "батько",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1314,7 +1443,9 @@ window.decks.en_nouns = [
     "ru": "мать",
     "uk": "мати",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1335,7 +1466,9 @@ window.decks.en_nouns = [
     "ru": "сын",
     "uk": "син",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1356,7 +1489,9 @@ window.decks.en_nouns = [
     "ru": "дочь",
     "uk": "дочка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1377,7 +1512,9 @@ window.decks.en_nouns = [
     "ru": "брат",
     "uk": "брат",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1398,7 +1535,9 @@ window.decks.en_nouns = [
     "ru": "сестра",
     "uk": "сестра",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1419,7 +1558,9 @@ window.decks.en_nouns = [
     "ru": "друг",
     "uk": "друг",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1440,7 +1581,10 @@ window.decks.en_nouns = [
     "ru": "подруга",
     "uk": "подруга",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1461,7 +1605,9 @@ window.decks.en_nouns = [
     "ru": "родители",
     "uk": "батьки",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1482,7 +1628,9 @@ window.decks.en_nouns = [
     "ru": "еда",
     "uk": "їжа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1503,7 +1651,10 @@ window.decks.en_nouns = [
     "ru": "завтрак",
     "uk": "сніданок",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "daily routine",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1524,7 +1675,10 @@ window.decks.en_nouns = [
     "ru": "обед",
     "uk": "обід",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "daily routine",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1545,7 +1699,10 @@ window.decks.en_nouns = [
     "ru": "ужин",
     "uk": "вечеря",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "daily routine",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1566,7 +1723,9 @@ window.decks.en_nouns = [
     "ru": "напиток",
     "uk": "напій",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1587,7 +1746,9 @@ window.decks.en_nouns = [
     "ru": "сок",
     "uk": "сік",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1608,7 +1769,9 @@ window.decks.en_nouns = [
     "ru": "чай",
     "uk": "чай",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1629,7 +1792,9 @@ window.decks.en_nouns = [
     "ru": "кофе",
     "uk": "кава",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1650,7 +1815,9 @@ window.decks.en_nouns = [
     "ru": "пиво",
     "uk": "пиво",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1671,7 +1838,9 @@ window.decks.en_nouns = [
     "ru": "вино",
     "uk": "вино",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1692,7 +1861,9 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікар",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1713,7 +1884,10 @@ window.decks.en_nouns = [
     "ru": "врач (женщина)",
     "uk": "лікарка",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1734,7 +1908,9 @@ window.decks.en_nouns = [
     "ru": "больница",
     "uk": "лікарня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1755,7 +1931,9 @@ window.decks.en_nouns = [
     "ru": "клиника",
     "uk": "клініка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1776,7 +1954,9 @@ window.decks.en_nouns = [
     "ru": "таблетка",
     "uk": "таблетка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1797,7 +1977,9 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1818,7 +2000,9 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1839,7 +2023,9 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1860,7 +2046,9 @@ window.decks.en_nouns = [
     "ru": "боль",
     "uk": "біль",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1881,7 +2069,10 @@ window.decks.en_nouns = [
     "ru": "помощь",
     "uk": "допомога",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1902,7 +2093,9 @@ window.decks.en_nouns = [
     "ru": "погода",
     "uk": "погода",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1923,7 +2116,10 @@ window.decks.en_nouns = [
     "ru": "солнце",
     "uk": "сонце",
     "level": "A1",
-    "topics": ["nature", "weather"],
+    "topics": [
+      "nature",
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1944,7 +2140,9 @@ window.decks.en_nouns = [
     "ru": "луна",
     "uk": "місяць",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1965,7 +2163,10 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": ["nature", "ui"],
+    "topics": [
+      "ui",
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -1986,7 +2187,9 @@ window.decks.en_nouns = [
     "ru": "дождь",
     "uk": "дощ",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2007,7 +2210,9 @@ window.decks.en_nouns = [
     "ru": "снег",
     "uk": "сніг",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2028,7 +2233,9 @@ window.decks.en_nouns = [
     "ru": "ветер",
     "uk": "вітер",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2049,7 +2256,10 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "B2",
-    "topics": ["it", "nature"],
+    "topics": [
+      "it",
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2070,7 +2280,9 @@ window.decks.en_nouns = [
     "ru": "небо",
     "uk": "небо",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2091,7 +2303,9 @@ window.decks.en_nouns = [
     "ru": "температура",
     "uk": "температура",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2112,7 +2326,9 @@ window.decks.en_nouns = [
     "ru": "день",
     "uk": "день",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2133,7 +2349,9 @@ window.decks.en_nouns = [
     "ru": "ночь",
     "uk": "ніч",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2154,7 +2372,9 @@ window.decks.en_nouns = [
     "ru": "утро",
     "uk": "ранок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2175,7 +2395,9 @@ window.decks.en_nouns = [
     "ru": "вечер",
     "uk": "вечір",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2196,7 +2418,9 @@ window.decks.en_nouns = [
     "ru": "весна",
     "uk": "весна",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2217,7 +2441,9 @@ window.decks.en_nouns = [
     "ru": "лето",
     "uk": "літо",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2238,7 +2464,9 @@ window.decks.en_nouns = [
     "ru": "осень",
     "uk": "осінь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2259,7 +2487,9 @@ window.decks.en_nouns = [
     "ru": "зима",
     "uk": "зима",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2280,7 +2510,9 @@ window.decks.en_nouns = [
     "ru": "неделя",
     "uk": "тиждень",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2301,7 +2533,9 @@ window.decks.en_nouns = [
     "ru": "месяц",
     "uk": "місяць",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2322,7 +2556,9 @@ window.decks.en_nouns = [
     "ru": "голова",
     "uk": "голова",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2343,7 +2579,9 @@ window.decks.en_nouns = [
     "ru": "лицо",
     "uk": "обличчя",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2364,7 +2602,9 @@ window.decks.en_nouns = [
     "ru": "глаз",
     "uk": "око",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2385,7 +2625,9 @@ window.decks.en_nouns = [
     "ru": "нос",
     "uk": "ніс",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2406,7 +2648,9 @@ window.decks.en_nouns = [
     "ru": "рот",
     "uk": "рот",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2427,7 +2671,9 @@ window.decks.en_nouns = [
     "ru": "ухо",
     "uk": "вухо",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2448,7 +2694,9 @@ window.decks.en_nouns = [
     "ru": "шея",
     "uk": "шия",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2469,7 +2717,9 @@ window.decks.en_nouns = [
     "ru": "плечо",
     "uk": "плече",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2490,7 +2740,9 @@ window.decks.en_nouns = [
     "ru": "рука",
     "uk": "рука",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2511,7 +2763,9 @@ window.decks.en_nouns = [
     "ru": "ладонь",
     "uk": "долоня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2532,7 +2786,9 @@ window.decks.en_nouns = [
     "ru": "палец",
     "uk": "палець",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2553,7 +2809,9 @@ window.decks.en_nouns = [
     "ru": "нога",
     "uk": "нога",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2574,7 +2832,9 @@ window.decks.en_nouns = [
     "ru": "колено",
     "uk": "коліно",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2595,7 +2855,9 @@ window.decks.en_nouns = [
     "ru": "ступня",
     "uk": "ступня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2616,7 +2878,10 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": ["symbol", "ui"],
+    "topics": [
+      "ui",
+      "symbol"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2637,7 +2902,9 @@ window.decks.en_nouns = [
     "ru": "кровь",
     "uk": "кров",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2658,7 +2925,9 @@ window.decks.en_nouns = [
     "ru": "тело",
     "uk": "тіло",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2679,7 +2948,9 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2700,7 +2971,9 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2721,7 +2994,9 @@ window.decks.en_nouns = [
     "ru": "медицина",
     "uk": "медицина",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2742,7 +3017,9 @@ window.decks.en_nouns = [
     "ru": "игра",
     "uk": "гра",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2763,7 +3040,9 @@ window.decks.en_nouns = [
     "ru": "спорт",
     "uk": "спорт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2784,7 +3063,9 @@ window.decks.en_nouns = [
     "ru": "команда",
     "uk": "команда",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2805,7 +3086,9 @@ window.decks.en_nouns = [
     "ru": "мяч",
     "uk": "м'яч",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2826,7 +3109,9 @@ window.decks.en_nouns = [
     "ru": "бассейн",
     "uk": "басейн",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2847,7 +3132,9 @@ window.decks.en_nouns = [
     "ru": "море",
     "uk": "море",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2868,7 +3155,9 @@ window.decks.en_nouns = [
     "ru": "озеро",
     "uk": "озеро",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2889,7 +3178,9 @@ window.decks.en_nouns = [
     "ru": "река",
     "uk": "річка",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2910,7 +3201,9 @@ window.decks.en_nouns = [
     "ru": "гора",
     "uk": "гора",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2931,7 +3224,9 @@ window.decks.en_nouns = [
     "ru": "долина",
     "uk": "долина",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2952,7 +3247,9 @@ window.decks.en_nouns = [
     "ru": "лес",
     "uk": "ліс",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2973,7 +3270,9 @@ window.decks.en_nouns = [
     "ru": "дерево",
     "uk": "дерево",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -2994,7 +3293,9 @@ window.decks.en_nouns = [
     "ru": "цветок",
     "uk": "квітка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3015,7 +3316,9 @@ window.decks.en_nouns = [
     "ru": "животное",
     "uk": "тварина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3036,7 +3339,9 @@ window.decks.en_nouns = [
     "ru": "собака",
     "uk": "пес",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3057,7 +3362,9 @@ window.decks.en_nouns = [
     "ru": "кошка",
     "uk": "кішка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3078,7 +3385,9 @@ window.decks.en_nouns = [
     "ru": "птица",
     "uk": "птах",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3099,7 +3408,9 @@ window.decks.en_nouns = [
     "ru": "лошадь",
     "uk": "кінь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3120,7 +3431,9 @@ window.decks.en_nouns = [
     "ru": "корова",
     "uk": "корова",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3141,7 +3454,9 @@ window.decks.en_nouns = [
     "ru": "свинья",
     "uk": "свиня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3162,7 +3477,9 @@ window.decks.en_nouns = [
     "ru": "овца",
     "uk": "вівця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3183,7 +3500,9 @@ window.decks.en_nouns = [
     "ru": "коза",
     "uk": "коза",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3204,7 +3523,9 @@ window.decks.en_nouns = [
     "ru": "курица",
     "uk": "курка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3225,7 +3546,9 @@ window.decks.en_nouns = [
     "ru": "петух",
     "uk": "півень",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3246,7 +3569,9 @@ window.decks.en_nouns = [
     "ru": "яйцо",
     "uk": "яйце",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3267,7 +3592,9 @@ window.decks.en_nouns = [
     "ru": "деревня",
     "uk": "село",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3288,7 +3615,9 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3309,7 +3638,9 @@ window.decks.en_nouns = [
     "ru": "столица",
     "uk": "столиця",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3330,7 +3661,9 @@ window.decks.en_nouns = [
     "ru": "правительство",
     "uk": "уряд",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3351,7 +3684,10 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B2",
-    "topics": ["law", "politics"],
+    "topics": [
+      "law",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3372,7 +3708,10 @@ window.decks.en_nouns = [
     "ru": "полиция",
     "uk": "поліція",
     "level": "B2",
-    "topics": ["city", "law"],
+    "topics": [
+      "city",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3393,7 +3732,10 @@ window.decks.en_nouns = [
     "ru": "суд",
     "uk": "суд",
     "level": "B2",
-    "topics": ["food", "law"],
+    "topics": [
+      "law",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3414,7 +3756,9 @@ window.decks.en_nouns = [
     "ru": "судья",
     "uk": "суддя",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3435,7 +3779,10 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокат",
     "level": "B2",
-    "topics": ["job", "law"],
+    "topics": [
+      "job",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3456,7 +3803,9 @@ window.decks.en_nouns = [
     "ru": "тюрьма",
     "uk": "в'язниця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3477,7 +3826,9 @@ window.decks.en_nouns = [
     "ru": "свобода",
     "uk": "свобода",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3498,7 +3849,9 @@ window.decks.en_nouns = [
     "ru": "право",
     "uk": "право",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3519,7 +3872,10 @@ window.decks.en_nouns = [
     "ru": "обязанность",
     "uk": "обов’язок",
     "level": "B2",
-    "topics": ["bureaucracy", "law"],
+    "topics": [
+      "bureaucracy",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3540,7 +3896,9 @@ window.decks.en_nouns = [
     "ru": "наказание",
     "uk": "покарання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3561,7 +3919,10 @@ window.decks.en_nouns = [
     "ru": "безопасность",
     "uk": "безпека",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3582,7 +3943,9 @@ window.decks.en_nouns = [
     "ru": "искусство",
     "uk": "мистецтво",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3603,7 +3966,9 @@ window.decks.en_nouns = [
     "ru": "музыка",
     "uk": "музика",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3624,7 +3989,9 @@ window.decks.en_nouns = [
     "ru": "песня",
     "uk": "пісня",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3645,7 +4012,9 @@ window.decks.en_nouns = [
     "ru": "фильм",
     "uk": "фільм",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3666,7 +4035,10 @@ window.decks.en_nouns = [
     "ru": "театр",
     "uk": "театр",
     "level": "B1",
-    "topics": ["art", "culture"],
+    "topics": [
+      "culture",
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3687,7 +4059,9 @@ window.decks.en_nouns = [
     "ru": "музей",
     "uk": "музей",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3708,7 +4082,9 @@ window.decks.en_nouns = [
     "ru": "картина",
     "uk": "картина",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3729,7 +4105,9 @@ window.decks.en_nouns = [
     "ru": "цвет",
     "uk": "колір",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3750,7 +4128,9 @@ window.decks.en_nouns = [
     "ru": "форма",
     "uk": "форма",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3771,7 +4151,9 @@ window.decks.en_nouns = [
     "ru": "пример",
     "uk": "приклад",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3792,7 +4174,9 @@ window.decks.en_nouns = [
     "ru": "вопрос",
     "uk": "питання",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3813,7 +4197,9 @@ window.decks.en_nouns = [
     "ru": "ответ",
     "uk": "відповідь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3834,7 +4220,9 @@ window.decks.en_nouns = [
     "ru": "язык",
     "uk": "мова",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3855,7 +4243,9 @@ window.decks.en_nouns = [
     "ru": "слово",
     "uk": "слово",
     "level": "B1",
-    "topics": ["language"],
+    "topics": [
+      "language"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3876,7 +4266,10 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "речення",
     "level": "B2",
-    "topics": ["business", "economy"],
+    "topics": [
+      "economy",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3897,7 +4290,9 @@ window.decks.en_nouns = [
     "ru": "текст",
     "uk": "текст",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3918,7 +4313,9 @@ window.decks.en_nouns = [
     "ru": "разговор",
     "uk": "розмова",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3939,7 +4336,9 @@ window.decks.en_nouns = [
     "ru": "история",
     "uk": "історія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3960,7 +4359,9 @@ window.decks.en_nouns = [
     "ru": "проблема",
     "uk": "проблема",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -3981,7 +4382,10 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "B2",
-    "topics": ["logic", "work"],
+    "topics": [
+      "work",
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4002,7 +4406,9 @@ window.decks.en_nouns = [
     "ru": "начало",
     "uk": "початок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4023,7 +4429,9 @@ window.decks.en_nouns = [
     "ru": "конец",
     "uk": "кінець",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4044,7 +4452,9 @@ window.decks.en_nouns = [
     "ru": "середина",
     "uk": "середина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4065,7 +4475,9 @@ window.decks.en_nouns = [
     "ru": "сторона",
     "uk": "сторона",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4086,7 +4498,9 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4107,7 +4521,9 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4128,7 +4544,9 @@ window.decks.en_nouns = [
     "ru": "путешествие",
     "uk": "подорож",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4149,7 +4567,9 @@ window.decks.en_nouns = [
     "ru": "отпуск",
     "uk": "відпустка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4170,7 +4590,10 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "B2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4191,7 +4614,9 @@ window.decks.en_nouns = [
     "ru": "успех",
     "uk": "успіх",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4212,7 +4637,9 @@ window.decks.en_nouns = [
     "ru": "наука",
     "uk": "наука",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4233,7 +4660,10 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B2",
-    "topics": ["marketing", "science"],
+    "topics": [
+      "marketing",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4254,7 +4684,9 @@ window.decks.en_nouns = [
     "ru": "техника",
     "uk": "техніка",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4275,7 +4707,9 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "машина",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4296,7 +4730,9 @@ window.decks.en_nouns = [
     "ru": "инструмент",
     "uk": "інструмент",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4317,7 +4753,9 @@ window.decks.en_nouns = [
     "ru": "материал",
     "uk": "матеріал",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4338,7 +4776,10 @@ window.decks.en_nouns = [
     "ru": "энергия",
     "uk": "енергія",
     "level": "B2",
-    "topics": ["energy", "housing"],
+    "topics": [
+      "housing",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4359,7 +4800,9 @@ window.decks.en_nouns = [
     "ru": "ток",
     "uk": "струм",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4380,7 +4823,10 @@ window.decks.en_nouns = [
     "ru": "свет",
     "uk": "світло",
     "level": "B1",
-    "topics": ["art", "technology"],
+    "topics": [
+      "art",
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4401,7 +4847,9 @@ window.decks.en_nouns = [
     "ru": "тень",
     "uk": "тінь",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4422,7 +4870,9 @@ window.decks.en_nouns = [
     "ru": "звук",
     "uk": "звук",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4443,7 +4893,9 @@ window.decks.en_nouns = [
     "ru": "голос",
     "uk": "голос",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4464,7 +4916,9 @@ window.decks.en_nouns = [
     "ru": "шум",
     "uk": "шум",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4485,7 +4939,9 @@ window.decks.en_nouns = [
     "ru": "тишина",
     "uk": "тиша",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4506,7 +4962,9 @@ window.decks.en_nouns = [
     "ru": "шум",
     "uk": "гамір",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4527,7 +4985,9 @@ window.decks.en_nouns = [
     "ru": "запах",
     "uk": "запах",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4548,7 +5008,9 @@ window.decks.en_nouns = [
     "ru": "вкус",
     "uk": "смак",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4569,7 +5031,9 @@ window.decks.en_nouns = [
     "ru": "чувство",
     "uk": "почуття",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4590,7 +5054,9 @@ window.decks.en_nouns = [
     "ru": "радость",
     "uk": "радість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4611,7 +5077,9 @@ window.decks.en_nouns = [
     "ru": "любовь",
     "uk": "любов",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4632,7 +5100,9 @@ window.decks.en_nouns = [
     "ru": "ненависть",
     "uk": "ненависть",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4653,7 +5123,9 @@ window.decks.en_nouns = [
     "ru": "страх",
     "uk": "страх",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4674,7 +5146,9 @@ window.decks.en_nouns = [
     "ru": "надежда",
     "uk": "надія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4695,7 +5169,9 @@ window.decks.en_nouns = [
     "ru": "сон",
     "uk": "сон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4716,7 +5192,9 @@ window.decks.en_nouns = [
     "ru": "сон",
     "uk": "сон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4737,7 +5215,9 @@ window.decks.en_nouns = [
     "ru": "голод",
     "uk": "голод",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4758,7 +5238,9 @@ window.decks.en_nouns = [
     "ru": "жажда",
     "uk": "спрага",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4779,7 +5261,9 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4800,7 +5284,9 @@ window.decks.en_nouns = [
     "ru": "шаг",
     "uk": "крок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4821,7 +5307,9 @@ window.decks.en_nouns = [
     "ru": "бег",
     "uk": "біг",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4842,7 +5330,9 @@ window.decks.en_nouns = [
     "ru": "прыжок",
     "uk": "стрибок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4863,7 +5353,9 @@ window.decks.en_nouns = [
     "ru": "игрушка",
     "uk": "іграшка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4884,7 +5376,9 @@ window.decks.en_nouns = [
     "ru": "подарок",
     "uk": "подарунок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4905,7 +5399,9 @@ window.decks.en_nouns = [
     "ru": "сюрприз",
     "uk": "сюрприз",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4926,7 +5422,9 @@ window.decks.en_nouns = [
     "ru": "праздник",
     "uk": "свято",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4947,7 +5445,9 @@ window.decks.en_nouns = [
     "ru": "торжество",
     "uk": "урочистість",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4968,7 +5468,9 @@ window.decks.en_nouns = [
     "ru": "день рождения",
     "uk": "день народження",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -4989,7 +5491,9 @@ window.decks.en_nouns = [
     "ru": "Рождество",
     "uk": "Різдво",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5010,7 +5514,9 @@ window.decks.en_nouns = [
     "ru": "Новый год",
     "uk": "Новий рік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5031,7 +5537,9 @@ window.decks.en_nouns = [
     "ru": "Пасха",
     "uk": "Великдень",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5052,7 +5560,9 @@ window.decks.en_nouns = [
     "ru": "понедельник",
     "uk": "понеділок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5073,7 +5583,9 @@ window.decks.en_nouns = [
     "ru": "вторник",
     "uk": "вівторок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5094,7 +5606,9 @@ window.decks.en_nouns = [
     "ru": "среда",
     "uk": "середа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5115,7 +5629,9 @@ window.decks.en_nouns = [
     "ru": "четверг",
     "uk": "четвер",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5136,7 +5652,9 @@ window.decks.en_nouns = [
     "ru": "пятница",
     "uk": "п’ятниця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5157,7 +5675,9 @@ window.decks.en_nouns = [
     "ru": "суббота",
     "uk": "субота",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5178,7 +5698,9 @@ window.decks.en_nouns = [
     "ru": "воскресенье",
     "uk": "неділя",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5199,7 +5721,9 @@ window.decks.en_nouns = [
     "ru": "календарь",
     "uk": "календар",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5220,7 +5744,9 @@ window.decks.en_nouns = [
     "ru": "дата",
     "uk": "дата",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5241,7 +5767,9 @@ window.decks.en_nouns = [
     "ru": "часы",
     "uk": "годинник",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5262,7 +5790,9 @@ window.decks.en_nouns = [
     "ru": "минута",
     "uk": "хвилина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5283,7 +5813,9 @@ window.decks.en_nouns = [
     "ru": "секунда",
     "uk": "секунда",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5304,7 +5836,9 @@ window.decks.en_nouns = [
     "ru": "настоящее",
     "uk": "теперішнє",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5325,7 +5859,9 @@ window.decks.en_nouns = [
     "ru": "прошлое",
     "uk": "минуле",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5346,7 +5882,9 @@ window.decks.en_nouns = [
     "ru": "будущее",
     "uk": "майбутнє",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5367,7 +5905,9 @@ window.decks.en_nouns = [
     "ru": "пространство",
     "uk": "простір",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5388,7 +5928,9 @@ window.decks.en_nouns = [
     "ru": "расстояние",
     "uk": "відстань",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5409,7 +5951,9 @@ window.decks.en_nouns = [
     "ru": "близость",
     "uk": "близькість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5430,7 +5974,9 @@ window.decks.en_nouns = [
     "ru": "сторона",
     "uk": "сторона",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5451,7 +5997,9 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5472,7 +6020,9 @@ window.decks.en_nouns = [
     "ru": "север",
     "uk": "північ",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5493,7 +6043,9 @@ window.decks.en_nouns = [
     "ru": "юг",
     "uk": "південь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5514,7 +6066,9 @@ window.decks.en_nouns = [
     "ru": "восток",
     "uk": "схід",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5535,7 +6089,9 @@ window.decks.en_nouns = [
     "ru": "запад",
     "uk": "захід",
     "level": "A2",
-    "topics": ["events"],
+    "topics": [
+      "events"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5556,7 +6112,9 @@ window.decks.en_nouns = [
     "ru": "середина",
     "uk": "середина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5577,7 +6135,9 @@ window.decks.en_nouns = [
     "ru": "окрестность",
     "uk": "оточення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5598,7 +6158,9 @@ window.decks.en_nouns = [
     "ru": "ландшафт",
     "uk": "ландшафт",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5619,7 +6181,9 @@ window.decks.en_nouns = [
     "ru": "природа",
     "uk": "природа",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5640,7 +6204,9 @@ window.decks.en_nouns = [
     "ru": "окружающая среда",
     "uk": "довкілля",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5661,7 +6227,10 @@ window.decks.en_nouns = [
     "ru": "защита окружающей среды",
     "uk": "захист довкілля",
     "level": "B2",
-    "topics": ["it", "law"],
+    "topics": [
+      "it",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5682,7 +6251,9 @@ window.decks.en_nouns = [
     "ru": "огонь",
     "uk": "вогонь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5703,7 +6274,9 @@ window.decks.en_nouns = [
     "ru": "земля",
     "uk": "земля",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5724,7 +6297,9 @@ window.decks.en_nouns = [
     "ru": "воздух",
     "uk": "повітря",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5745,7 +6320,9 @@ window.decks.en_nouns = [
     "ru": "климат",
     "uk": "клімат",
     "level": "B2",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5766,7 +6343,9 @@ window.decks.en_nouns = [
     "ru": "тепло",
     "uk": "тепло",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5787,7 +6366,9 @@ window.decks.en_nouns = [
     "ru": "холод",
     "uk": "холод",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5808,7 +6389,10 @@ window.decks.en_nouns = [
     "ru": "жара",
     "uk": "спека",
     "level": "B2",
-    "topics": ["energy", "housing"],
+    "topics": [
+      "housing",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5829,7 +6413,9 @@ window.decks.en_nouns = [
     "ru": "высота",
     "uk": "висота",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5850,7 +6436,9 @@ window.decks.en_nouns = [
     "ru": "глубина",
     "uk": "глибина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5871,7 +6459,9 @@ window.decks.en_nouns = [
     "ru": "размер",
     "uk": "розмір",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5892,7 +6482,9 @@ window.decks.en_nouns = [
     "ru": "длина",
     "uk": "довжина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5913,7 +6505,9 @@ window.decks.en_nouns = [
     "ru": "ширина",
     "uk": "ширина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5934,7 +6528,9 @@ window.decks.en_nouns = [
     "ru": "толщина",
     "uk": "товщина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5955,7 +6551,9 @@ window.decks.en_nouns = [
     "ru": "число",
     "uk": "число",
     "level": "B2",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5976,7 +6574,9 @@ window.decks.en_nouns = [
     "ru": "номер",
     "uk": "номер",
     "level": "B2",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -5997,7 +6597,9 @@ window.decks.en_nouns = [
     "ru": "количество",
     "uk": "кількість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6018,7 +6620,9 @@ window.decks.en_nouns = [
     "ru": "пара",
     "uk": "пара",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6039,7 +6643,9 @@ window.decks.en_nouns = [
     "ru": "группа",
     "uk": "група",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6060,7 +6666,9 @@ window.decks.en_nouns = [
     "ru": "ряд",
     "uk": "ряд",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6081,7 +6689,10 @@ window.decks.en_nouns = [
     "ru": "список",
     "uk": "список",
     "level": "B1",
-    "topics": ["education", "science"],
+    "topics": [
+      "education",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6102,7 +6713,9 @@ window.decks.en_nouns = [
     "ru": "начало",
     "uk": "початок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6123,7 +6736,9 @@ window.decks.en_nouns = [
     "ru": "конец",
     "uk": "кінець",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6144,7 +6759,9 @@ window.decks.en_nouns = [
     "ru": "продолжение",
     "uk": "продовження",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6165,7 +6782,10 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "B2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6186,7 +6806,9 @@ window.decks.en_nouns = [
     "ru": "назначение",
     "uk": "призначення",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6207,7 +6829,10 @@ window.decks.en_nouns = [
     "ru": "задание",
     "uk": "завдання",
     "level": "B2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6228,7 +6853,10 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B2",
-    "topics": ["ethics", "work"],
+    "topics": [
+      "ethics",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6249,7 +6877,10 @@ window.decks.en_nouns = [
     "ru": "план",
     "uk": "план",
     "level": "B2",
-    "topics": ["business", "education"],
+    "topics": [
+      "business",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6270,7 +6901,9 @@ window.decks.en_nouns = [
     "ru": "проект",
     "uk": "проєкт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6291,7 +6924,9 @@ window.decks.en_nouns = [
     "ru": "стратегия",
     "uk": "стратегія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6312,7 +6947,10 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "B2",
-    "topics": ["psychology", "work"],
+    "topics": [
+      "work",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6333,7 +6971,9 @@ window.decks.en_nouns = [
     "ru": "попытка",
     "uk": "спроба",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6354,7 +6994,9 @@ window.decks.en_nouns = [
     "ru": "успех",
     "uk": "успіх",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6375,7 +7017,10 @@ window.decks.en_nouns = [
     "ru": "результат",
     "uk": "результат",
     "level": "B1",
-    "topics": ["general", "science"],
+    "topics": [
+      "general",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6396,7 +7041,9 @@ window.decks.en_nouns = [
     "ru": "прибыль",
     "uk": "прибуток",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6417,7 +7064,9 @@ window.decks.en_nouns = [
     "ru": "потеря",
     "uk": "втрата",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6438,7 +7087,9 @@ window.decks.en_nouns = [
     "ru": "преимущество",
     "uk": "перевага",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6459,7 +7110,9 @@ window.decks.en_nouns = [
     "ru": "недостаток",
     "uk": "недолік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6480,7 +7133,9 @@ window.decks.en_nouns = [
     "ru": "возможность",
     "uk": "можливість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6501,7 +7156,9 @@ window.decks.en_nouns = [
     "ru": "вероятность",
     "uk": "ймовірність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6522,7 +7179,10 @@ window.decks.en_nouns = [
     "ru": "опасность",
     "uk": "небезпека",
     "level": "B2",
-    "topics": ["law", "safety"],
+    "topics": [
+      "safety",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6543,7 +7203,10 @@ window.decks.en_nouns = [
     "ru": "риск",
     "uk": "ризик",
     "level": "B2",
-    "topics": ["law", "safety"],
+    "topics": [
+      "safety",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6564,7 +7227,9 @@ window.decks.en_nouns = [
     "ru": "шанс",
     "uk": "шанс",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6585,7 +7250,9 @@ window.decks.en_nouns = [
     "ru": "выборы",
     "uk": "вибори",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6606,7 +7273,10 @@ window.decks.en_nouns = [
     "ru": "голос",
     "uk": "голос",
     "level": "B1",
-    "topics": ["communication", "politics"],
+    "topics": [
+      "communication",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6627,7 +7297,9 @@ window.decks.en_nouns = [
     "ru": "большинство",
     "uk": "більшість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6648,7 +7320,9 @@ window.decks.en_nouns = [
     "ru": "меньшинство",
     "uk": "меншість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6669,7 +7343,9 @@ window.decks.en_nouns = [
     "ru": "общество",
     "uk": "суспільство",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6690,7 +7366,9 @@ window.decks.en_nouns = [
     "ru": "сообщество",
     "uk": "спільнота",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6711,7 +7389,9 @@ window.decks.en_nouns = [
     "ru": "организация",
     "uk": "організація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6732,7 +7412,9 @@ window.decks.en_nouns = [
     "ru": "компания",
     "uk": "компанія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6753,7 +7435,9 @@ window.decks.en_nouns = [
     "ru": "предприятие",
     "uk": "підприємство",
     "level": "B2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6774,7 +7458,9 @@ window.decks.en_nouns = [
     "ru": "отдел",
     "uk": "відділ",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6795,7 +7481,9 @@ window.decks.en_nouns = [
     "ru": "шеф",
     "uk": "шеф",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6816,7 +7504,9 @@ window.decks.en_nouns = [
     "ru": "сотрудник",
     "uk": "співробітник",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6837,7 +7527,9 @@ window.decks.en_nouns = [
     "ru": "коллега",
     "uk": "колега",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6858,7 +7550,9 @@ window.decks.en_nouns = [
     "ru": "клиент",
     "uk": "клієнт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6879,7 +7573,9 @@ window.decks.en_nouns = [
     "ru": "клиентка",
     "uk": "клієнтка",
     "level": "B2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6900,7 +7596,10 @@ window.decks.en_nouns = [
     "ru": "заказ",
     "uk": "замовлення",
     "level": "A2",
-    "topics": ["restaurant", "shopping"],
+    "topics": [
+      "shopping",
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6921,7 +7620,10 @@ window.decks.en_nouns = [
     "ru": "договор",
     "uk": "договір",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6942,7 +7644,10 @@ window.decks.en_nouns = [
     "ru": "магазин",
     "uk": "магазин",
     "level": "B2",
-    "topics": ["economy", "shopping"],
+    "topics": [
+      "economy",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6963,7 +7668,9 @@ window.decks.en_nouns = [
     "ru": "лавка",
     "uk": "крамниця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -6984,7 +7691,10 @@ window.decks.en_nouns = [
     "ru": "рынок",
     "uk": "ринок",
     "level": "B2",
-    "topics": ["economy", "shopping"],
+    "topics": [
+      "economy",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7005,7 +7715,9 @@ window.decks.en_nouns = [
     "ru": "торговый центр",
     "uk": "торговий центр",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7026,7 +7738,9 @@ window.decks.en_nouns = [
     "ru": "касса",
     "uk": "каса",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7047,7 +7761,9 @@ window.decks.en_nouns = [
     "ru": "цена",
     "uk": "ціна",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7068,7 +7784,10 @@ window.decks.en_nouns = [
     "ru": "ценность",
     "uk": "вартість",
     "level": "B2",
-    "topics": ["economy", "planning"],
+    "topics": [
+      "economy",
+      "planning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7089,7 +7808,10 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "B2",
-    "topics": ["business", "economy"],
+    "topics": [
+      "business",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7110,7 +7832,9 @@ window.decks.en_nouns = [
     "ru": "спрос",
     "uk": "попит",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7131,7 +7855,9 @@ window.decks.en_nouns = [
     "ru": "товар",
     "uk": "товар",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7152,7 +7878,9 @@ window.decks.en_nouns = [
     "ru": "продукт",
     "uk": "продукт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7173,7 +7901,9 @@ window.decks.en_nouns = [
     "ru": "качество",
     "uk": "якість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7194,7 +7924,10 @@ window.decks.en_nouns = [
     "ru": "поставка",
     "uk": "поставка",
     "level": "B2",
-    "topics": ["it", "logistics"],
+    "topics": [
+      "logistics",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7215,7 +7948,10 @@ window.decks.en_nouns = [
     "ru": "замовлення",
     "uk": "замовлення",
     "level": "A2",
-    "topics": ["restaurant", "shopping"],
+    "topics": [
+      "shopping",
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7236,7 +7972,10 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "B2",
-    "topics": ["finance", "shopping"],
+    "topics": [
+      "finance",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7257,7 +7996,9 @@ window.decks.en_nouns = [
     "ru": "квитанция",
     "uk": "квитанція",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7278,7 +8019,9 @@ window.decks.en_nouns = [
     "ru": "скидка",
     "uk": "знижка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7299,7 +8042,9 @@ window.decks.en_nouns = [
     "ru": "гарантия",
     "uk": "гарантія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7320,7 +8065,10 @@ window.decks.en_nouns = [
     "ru": "сервис",
     "uk": "сервіс",
     "level": "B2",
-    "topics": ["business", "it"],
+    "topics": [
+      "it",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7341,7 +8089,10 @@ window.decks.en_nouns = [
     "ru": "реклама",
     "uk": "реклама",
     "level": "B2",
-    "topics": ["economy", "media"],
+    "topics": [
+      "economy",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7362,7 +8113,9 @@ window.decks.en_nouns = [
     "ru": "бренд",
     "uk": "бренд",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7383,7 +8136,9 @@ window.decks.en_nouns = [
     "ru": "этикетка",
     "uk": "етикетка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7404,7 +8159,9 @@ window.decks.en_nouns = [
     "ru": "упаковка",
     "uk": "упаковка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7425,7 +8182,9 @@ window.decks.en_nouns = [
     "ru": "склад",
     "uk": "склад",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7446,7 +8205,9 @@ window.decks.en_nouns = [
     "ru": "отправка",
     "uk": "відправлення",
     "level": "B2",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7467,7 +8228,10 @@ window.decks.en_nouns = [
     "ru": "срок поставки",
     "uk": "час поставки",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7488,7 +8252,9 @@ window.decks.en_nouns = [
     "ru": "кривая спроса",
     "uk": "крива попиту",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7509,7 +8275,9 @@ window.decks.en_nouns = [
     "ru": "конкуренция",
     "uk": "конкуренція",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7530,7 +8298,9 @@ window.decks.en_nouns = [
     "ru": "доля рынка",
     "uk": "частка ринку",
     "level": "B2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7551,7 +8321,10 @@ window.decks.en_nouns = [
     "ru": "налог",
     "uk": "податок",
     "level": "B2",
-    "topics": ["economy", "law"],
+    "topics": [
+      "economy",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7572,7 +8345,10 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B2",
-    "topics": ["economy", "finance"],
+    "topics": [
+      "economy",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7593,7 +8369,9 @@ window.decks.en_nouns = [
     "ru": "расход",
     "uk": "витрата",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7614,7 +8392,10 @@ window.decks.en_nouns = [
     "ru": "доход",
     "uk": "дохід",
     "level": "B2",
-    "topics": ["economy", "finance"],
+    "topics": [
+      "economy",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7635,7 +8416,9 @@ window.decks.en_nouns = [
     "ru": "долги",
     "uk": "борги",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7656,7 +8439,9 @@ window.decks.en_nouns = [
     "ru": "кредит",
     "uk": "кредит",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7677,7 +8462,9 @@ window.decks.en_nouns = [
     "ru": "банк",
     "uk": "банк",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7698,7 +8485,10 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "B2",
-    "topics": ["finance", "money"],
+    "topics": [
+      "finance",
+      "money"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7719,7 +8509,9 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переказ",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7740,7 +8532,9 @@ window.decks.en_nouns = [
     "ru": "наличные",
     "uk": "готівка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7761,7 +8555,10 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "картка",
     "level": "B2",
-    "topics": ["daily life", "finance"],
+    "topics": [
+      "finance",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7782,7 +8579,9 @@ window.decks.en_nouns = [
     "ru": "торговый автомат",
     "uk": "торговий автомат",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7803,7 +8602,9 @@ window.decks.en_nouns = [
     "ru": "процентная ставка",
     "uk": "відсоткова ставка",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7824,7 +8625,9 @@ window.decks.en_nouns = [
     "ru": "инфляция",
     "uk": "інфляція",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7845,7 +8648,9 @@ window.decks.en_nouns = [
     "ru": "дефляция",
     "uk": "дефляція",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7866,7 +8671,10 @@ window.decks.en_nouns = [
     "ru": "обменный курс",
     "uk": "обмінний курс",
     "level": "B2",
-    "topics": ["finance", "statistics"],
+    "topics": [
+      "statistics",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7887,7 +8695,9 @@ window.decks.en_nouns = [
     "ru": "валюта",
     "uk": "валюта",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7908,7 +8718,10 @@ window.decks.en_nouns = [
     "ru": "биржа",
     "uk": "біржа",
     "level": "B2",
-    "topics": ["business", "logistics"],
+    "topics": [
+      "business",
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7929,7 +8742,10 @@ window.decks.en_nouns = [
     "ru": "акция",
     "uk": "акція",
     "level": "B2",
-    "topics": ["business", "logistics"],
+    "topics": [
+      "business",
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7950,7 +8766,10 @@ window.decks.en_nouns = [
     "ru": "доля",
     "uk": "частка",
     "level": "B2",
-    "topics": ["business", "finance"],
+    "topics": [
+      "finance",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7971,7 +8790,9 @@ window.decks.en_nouns = [
     "ru": "политика",
     "uk": "політика",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -7992,7 +8813,9 @@ window.decks.en_nouns = [
     "ru": "партия",
     "uk": "партія",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8013,7 +8836,9 @@ window.decks.en_nouns = [
     "ru": "избирательная кампания",
     "uk": "виборча кампанія",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8034,7 +8859,9 @@ window.decks.en_nouns = [
     "ru": "парламент",
     "uk": "парламент",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8055,7 +8882,9 @@ window.decks.en_nouns = [
     "ru": "демократия",
     "uk": "демократія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8076,7 +8905,9 @@ window.decks.en_nouns = [
     "ru": "диктатура",
     "uk": "диктатура",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8097,7 +8928,9 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "кордон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8118,7 +8951,9 @@ window.decks.en_nouns = [
     "ru": "паспорт",
     "uk": "паспорт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8139,7 +8974,9 @@ window.decks.en_nouns = [
     "ru": "виза",
     "uk": "віза",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8160,7 +8997,9 @@ window.decks.en_nouns = [
     "ru": "гражданин",
     "uk": "громадянин",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8181,7 +9020,10 @@ window.decks.en_nouns = [
     "ru": "ведомство",
     "uk": "установа",
     "level": "B2",
-    "topics": ["bureaucracy", "law"],
+    "topics": [
+      "bureaucracy",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8202,7 +9044,10 @@ window.decks.en_nouns = [
     "ru": "бланк",
     "uk": "формуляр",
     "level": "B2",
-    "topics": ["data", "law"],
+    "topics": [
+      "data",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8223,7 +9068,9 @@ window.decks.en_nouns = [
     "ru": "регистрация",
     "uk": "реєстрація",
     "level": "B2",
-    "topics": ["administration"],
+    "topics": [
+      "administration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8244,7 +9091,9 @@ window.decks.en_nouns = [
     "ru": "снятие с учёта",
     "uk": "зняття з обліку",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8265,7 +9114,10 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": ["bureaucracy", "migration"],
+    "topics": [
+      "bureaucracy",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8286,7 +9138,10 @@ window.decks.en_nouns = [
     "ru": "заявление",
     "uk": "заява",
     "level": "B2",
-    "topics": ["data", "law"],
+    "topics": [
+      "law",
+      "data"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8307,7 +9162,9 @@ window.decks.en_nouns = [
     "ru": "уведомление",
     "uk": "повідомлення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8328,7 +9185,10 @@ window.decks.en_nouns = [
     "ru": "срок",
     "uk": "строк",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8349,7 +9209,10 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B2",
-    "topics": ["administration", "law"],
+    "topics": [
+      "administration",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -8370,7 +9233,10 @@ window.decks.en_nouns = [
     "ru": "вид",
     "uk": "вид",
     "level": "B2",
-    "topics": ["communication", "opinion"],
+    "topics": [
+      "communication",
+      "opinion"
+    ],
     "examples": [
       {
         "L2": "The view from the balcony is amazing at sunset.",
@@ -8391,7 +9257,9 @@ window.decks.en_nouns = [
     "ru": "опыт",
     "uk": "досвід",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "She has a lot of experience in sales.",
@@ -8412,7 +9280,9 @@ window.decks.en_nouns = [
     "ru": "знакомый",
     "uk": "знайомий",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "He is just a work acquaintance, not a close friend.",
@@ -8433,7 +9303,9 @@ window.decks.en_nouns = [
     "ru": "отношения",
     "uk": "стосунки",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "Their relationship has become much better lately.",
@@ -8454,7 +9326,9 @@ window.decks.en_nouns = [
     "ru": "связь",
     "uk": "зв’язок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "The connection between stress and sleep is very strong.",
@@ -8475,7 +9349,10 @@ window.decks.en_nouns = [
     "ru": "уход",
     "uk": "догляд",
     "level": "B2",
-    "topics": ["health", "work"],
+    "topics": [
+      "health",
+      "work"
+    ],
     "examples": [
       {
         "L2": "Good care is important for elderly people.",
@@ -8496,7 +9373,9 @@ window.decks.en_nouns = [
     "ru": "консультация",
     "uk": "консультація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "You can book a free consultation online.",
@@ -8517,7 +9396,10 @@ window.decks.en_nouns = [
     "ru": "поддержка",
     "uk": "підтримка",
     "level": "B2",
-    "topics": ["politics", "society"],
+    "topics": [
+      "society",
+      "politics"
+    ],
     "examples": [
       {
         "L2": "Thank you for your support during this project.",
@@ -8538,7 +9420,10 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": ["bureaucracy", "migration"],
+    "topics": [
+      "bureaucracy",
+      "migration"
+    ],
     "examples": [
       {
         "L2": "I finally got permission to work from home.",
@@ -8559,7 +9444,9 @@ window.decks.en_nouns = [
     "ru": "история",
     "uk": "історія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "She told us a funny story about her childhood.",
@@ -8580,7 +9467,9 @@ window.decks.en_nouns = [
     "ru": "описание",
     "uk": "опис",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "examples": [
       {
         "L2": "Please add a short description of your project.",
@@ -8601,7 +9490,9 @@ window.decks.en_nouns = [
     "ru": "объяснение",
     "uk": "пояснення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "The teacher gave a clear explanation of the rule.",
@@ -8622,7 +9513,9 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переклад",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "examples": [
       {
         "L2": "The translation sounds very natural in English.",
@@ -8643,7 +9536,9 @@ window.decks.en_nouns = [
     "ru": "сравнение",
     "uk": "порівняння",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "In comparison with last year, our costs are lower.",
@@ -8664,7 +9559,9 @@ window.decks.en_nouns = [
     "ru": "обзор",
     "uk": "огляд",
     "level": "B1",
-    "topics": ["information"],
+    "topics": [
+      "information"
+    ],
     "examples": [
       {
         "L2": "This chart gives a quick overview of the results.",
@@ -8685,7 +9582,9 @@ window.decks.en_nouns = [
     "ru": "уведомление",
     "uk": "сповіщення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "I got a notification about the meeting on my phone.",
@@ -8706,7 +9605,9 @@ window.decks.en_nouns = [
     "ru": "сообщение",
     "uk": "повідомлення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "I sent you a message on WhatsApp.",
@@ -8727,7 +9628,9 @@ window.decks.en_nouns = [
     "ru": "заметка",
     "uk": "нотатка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "I wrote a short note on a sticky pad.",
@@ -8748,7 +9651,10 @@ window.decks.en_nouns = [
     "ru": "объявление",
     "uk": "оголошення",
     "level": "B2",
-    "topics": ["media", "work"],
+    "topics": [
+      "media",
+      "work"
+    ],
     "examples": [
       {
         "L2": "The school made an announcement about the new timetable.",
@@ -8769,7 +9675,9 @@ window.decks.en_nouns = [
     "ru": "приглашение",
     "uk": "запрошення",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "examples": [
       {
         "L2": "Thanks for your invitation to the party.",
@@ -8790,7 +9698,10 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B2",
-    "topics": ["communication", "law"],
+    "topics": [
+      "law",
+      "communication"
+    ],
     "examples": [
       {
         "L2": "We need your written consent before we start.",
@@ -8811,7 +9722,10 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B2",
-    "topics": ["communication", "law"],
+    "topics": [
+      "communication",
+      "law"
+    ],
     "examples": [
       {
         "L2": "He was disappointed after the rejection of his idea.",
@@ -8832,7 +9746,9 @@ window.decks.en_nouns = [
     "ru": "жалоба",
     "uk": "скарга",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "You can file a complaint using this online form.",
@@ -8853,7 +9769,10 @@ window.decks.en_nouns = [
     "ru": "дискуссия",
     "uk": "дискусія",
     "level": "B2",
-    "topics": ["communication", "conflict"],
+    "topics": [
+      "communication",
+      "conflict"
+    ],
     "examples": [
       {
         "L2": "We had a long discussion about the budget.",
@@ -8874,7 +9793,9 @@ window.decks.en_nouns = [
     "ru": "дебаты",
     "uk": "дебати",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "The TV debate lasted more than two hours.",
@@ -8895,7 +9816,9 @@ window.decks.en_nouns = [
     "ru": "переговоры",
     "uk": "переговори",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "The salary negotiation went very well.",
@@ -8916,7 +9839,10 @@ window.decks.en_nouns = [
     "ru": "соглашение",
     "uk": "угода",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "examples": [
       {
         "L2": "Both sides signed the agreement yesterday.",
@@ -8937,7 +9863,9 @@ window.decks.en_nouns = [
     "ru": "контрагент",
     "uk": "контрагент",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "examples": [
       {
         "L2": "The contracting party is responsible for the delivery.",
@@ -8958,7 +9886,9 @@ window.decks.en_nouns = [
     "ru": "угроза",
     "uk": "загроза",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "Climate change is a serious threat to many species.",
@@ -8979,7 +9909,10 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B1",
-    "topics": ["education", "logic"],
+    "topics": [
+      "logic",
+      "education"
+    ],
     "examples": [
       {
         "L2": "Basic computer skills are a prerequisite for this course.",
@@ -9000,7 +9933,10 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B2",
-    "topics": ["it", "work"],
+    "topics": [
+      "it",
+      "work"
+    ],
     "examples": [
       {
         "L2": "A driving licence is a requirement for this job.",
@@ -9021,7 +9957,10 @@ window.decks.en_nouns = [
     "ru": "цепочка предпосылок",
     "uk": "ланцюг передумов",
     "level": "B2",
-    "topics": ["business", "logistics"],
+    "topics": [
+      "business",
+      "logistics"
+    ],
     "examples": [
       {
         "L2": "In big projects there is often a long chain of prerequisites.",
@@ -9042,7 +9981,10 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B2",
-    "topics": ["daily life", "psychology"],
+    "topics": [
+      "psychology",
+      "daily life"
+    ],
     "examples": [
       {
         "L2": "Drinking coffee in the morning is my favorite habit.",
@@ -9063,7 +10005,10 @@ window.decks.en_nouns = [
     "ru": "способность",
     "uk": "здатність",
     "level": "B2",
-    "topics": ["it", "network"],
+    "topics": [
+      "network",
+      "it"
+    ],
     "examples": [
       {
         "L2": "She has the ability to stay calm in difficult situations.",
@@ -9084,7 +10029,9 @@ window.decks.en_nouns = [
     "ru": "навык",
     "uk": "навичка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "Public speaking is an important skill in this job.",
@@ -9105,7 +10052,9 @@ window.decks.en_nouns = [
     "ru": "воспоминание",
     "uk": "спогад",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "This song brings back a nice memory from my childhood.",
@@ -9126,7 +10075,10 @@ window.decks.en_nouns = [
     "ru": "значение",
     "uk": "значення",
     "level": "B2",
-    "topics": ["math", "statistics"],
+    "topics": [
+      "statistics",
+      "math"
+    ],
     "examples": [
       {
         "L2": "What is the meaning of this expression?",
@@ -9147,7 +10099,9 @@ window.decks.en_nouns = [
     "ru": "рекомендация",
     "uk": "рекомендація",
     "level": "C1",
-    "topics": ["medicine"],
+    "topics": [
+      "medicine"
+    ],
     "examples": [
       {
         "L2": "Can you give me a recommendation for a good book?",
@@ -9168,7 +10122,10 @@ window.decks.en_nouns = [
     "ru": "разрешение",
     "uk": "дозвіл",
     "level": "B2",
-    "topics": ["bureaucracy", "migration"],
+    "topics": [
+      "bureaucracy",
+      "migration"
+    ],
     "examples": [
       {
         "L2": "We are still waiting for the authorization from the city.",
@@ -9189,7 +10146,9 @@ window.decks.en_nouns = [
     "ru": "одобрение",
     "uk": "схвалення",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "examples": [
       {
         "L2": "The project needs the approval of the manager.",
@@ -9210,7 +10169,10 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": ["communication", "ui"],
+    "topics": [
+      "communication",
+      "ui"
+    ],
     "examples": [
       {
         "L2": "The teacher gave us a small hint for the exam.",
@@ -9231,7 +10193,9 @@ window.decks.en_nouns = [
     "ru": "доказательство",
     "uk": "доказ",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "examples": [
       {
         "L2": "There is no proof that this method works.",
@@ -9252,7 +10216,9 @@ window.decks.en_nouns = [
     "ru": "последствие",
     "uk": "наслідок",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "examples": [
       {
         "L2": "Lack of sleep has a negative consequence for your health.",
@@ -9273,7 +10239,9 @@ window.decks.en_nouns = [
     "ru": "причина",
     "uk": "причина",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "examples": [
       {
         "L2": "Stress can be a cause of headaches.",
@@ -9294,7 +10262,10 @@ window.decks.en_nouns = [
     "ru": "эффект",
     "uk": "ефект",
     "level": "B2",
-    "topics": ["health", "science"],
+    "topics": [
+      "science",
+      "health"
+    ],
     "examples": [
       {
         "L2": "The medicine had no effect on his pain.",
@@ -9315,7 +10286,9 @@ window.decks.en_nouns = [
     "ru": "проверка",
     "uk": "перевірка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "examples": [
       {
         "L2": "There will be a safety inspection next week.",
@@ -9336,7 +10309,9 @@ window.decks.en_nouns = [
     "ru": "экзамен",
     "uk": "іспит",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "examples": [
       {
         "L2": "I have an important exam tomorrow.",
@@ -9357,7 +10332,9 @@ window.decks.en_nouns = [
     "ru": "письменный экзамен",
     "uk": "письмовий іспит",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "examples": [
       {
         "L2": "The written exam lasts ninety minutes.",
@@ -9378,7 +10355,10 @@ window.decks.en_nouns = [
     "ru": "лекция",
     "uk": "лекція",
     "level": "B1",
-    "topics": ["communication", "science"],
+    "topics": [
+      "communication",
+      "science"
+    ],
     "examples": [
       {
         "L2": "The lecture starts at nine o'clock.",
@@ -9399,7 +10379,9 @@ window.decks.en_nouns = [
     "ru": "семинар",
     "uk": "семінар",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9420,7 +10402,9 @@ window.decks.en_nouns = [
     "ru": "стажировка",
     "uk": "стажування",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9441,7 +10425,10 @@ window.decks.en_nouns = [
     "ru": "курсовая работа",
     "uk": "курсова робота",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "work",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9462,7 +10449,10 @@ window.decks.en_nouns = [
     "ru": "выпускная работа",
     "uk": "випускна робота",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "work",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9483,7 +10473,10 @@ window.decks.en_nouns = [
     "ru": "заявление на работу",
     "uk": "заява на роботу",
     "level": "B2",
-    "topics": ["law", "migration"],
+    "topics": [
+      "law",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9504,7 +10497,9 @@ window.decks.en_nouns = [
     "ru": "собеседование",
     "uk": "співбесіда",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9525,7 +10520,10 @@ window.decks.en_nouns = [
     "ru": "приём на работу",
     "uk": "прийом на роботу",
     "level": "B2",
-    "topics": ["migration", "work"],
+    "topics": [
+      "migration",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9546,7 +10544,10 @@ window.decks.en_nouns = [
     "ru": "повышение",
     "uk": "підвищення",
     "level": "B2",
-    "topics": ["economics", "education"],
+    "topics": [
+      "education",
+      "economics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9567,7 +10568,9 @@ window.decks.en_nouns = [
     "ru": "увольнение",
     "uk": "звільнення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9588,7 +10591,9 @@ window.decks.en_nouns = [
     "ru": "резюме",
     "uk": "резюме",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9609,7 +10614,9 @@ window.decks.en_nouns = [
     "ru": "сопроводительное письмо",
     "uk": "супровідний лист",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9630,7 +10637,9 @@ window.decks.en_nouns = [
     "ru": "отрасль",
     "uk": "галузь",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9651,7 +10660,9 @@ window.decks.en_nouns = [
     "ru": "сфера",
     "uk": "сфера",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9672,7 +10683,10 @@ window.decks.en_nouns = [
     "ru": "смена",
     "uk": "зміна",
     "level": "B2",
-    "topics": ["environment", "general"],
+    "topics": [
+      "general",
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9693,7 +10707,9 @@ window.decks.en_nouns = [
     "ru": "руководство",
     "uk": "керівництво",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9714,7 +10730,9 @@ window.decks.en_nouns = [
     "ru": "головной офис",
     "uk": "головний офіс",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9735,7 +10753,9 @@ window.decks.en_nouns = [
     "ru": "филиал",
     "uk": "філія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9756,7 +10776,9 @@ window.decks.en_nouns = [
     "ru": "банковский филиал",
     "uk": "банківська філія",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9777,7 +10799,10 @@ window.decks.en_nouns = [
     "ru": "папка соискателя",
     "uk": "папка заявника",
     "level": "B2",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9798,7 +10823,10 @@ window.decks.en_nouns = [
     "ru": "тендерное объявление",
     "uk": "тендерне оголошення",
     "level": "B2",
-    "topics": ["media", "work"],
+    "topics": [
+      "media",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9819,7 +10847,9 @@ window.decks.en_nouns = [
     "ru": "директива",
     "uk": "директива",
     "level": "C1",
-    "topics": ["medicine"],
+    "topics": [
+      "medicine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9840,7 +10870,10 @@ window.decks.en_nouns = [
     "ru": "регламент",
     "uk": "припис",
     "level": "B2",
-    "topics": ["it", "law"],
+    "topics": [
+      "it",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9861,7 +10894,9 @@ window.decks.en_nouns = [
     "ru": "мера",
     "uk": "захід",
     "level": "A2",
-    "topics": ["events"],
+    "topics": [
+      "events"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9882,7 +10917,9 @@ window.decks.en_nouns = [
     "ru": "внедрение",
     "uk": "впровадження",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9903,7 +10940,9 @@ window.decks.en_nouns = [
     "ru": "исполнение",
     "uk": "виконання",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9924,7 +10963,9 @@ window.decks.en_nouns = [
     "ru": "обслуживание",
     "uk": "обслуговування",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9945,7 +10986,9 @@ window.decks.en_nouns = [
     "ru": "содержание",
     "uk": "утримання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9966,7 +11009,9 @@ window.decks.en_nouns = [
     "ru": "неисправность",
     "uk": "несправність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -9987,7 +11032,10 @@ window.decks.en_nouns = [
     "ru": "сообщение об ошибке",
     "uk": "повідомлення про помилку",
     "level": "B2",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10008,7 +11056,10 @@ window.decks.en_nouns = [
     "ru": "справочная",
     "uk": "довідка",
     "level": "B2",
-    "topics": ["administration", "communication"],
+    "topics": [
+      "communication",
+      "administration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10029,7 +11080,9 @@ window.decks.en_nouns = [
     "ru": "обратная связь",
     "uk": "зворотний зв’язок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10050,7 +11103,10 @@ window.decks.en_nouns = [
     "ru": "список требований",
     "uk": "список вимог",
     "level": "B1",
-    "topics": ["education", "science"],
+    "topics": [
+      "education",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10071,7 +11127,10 @@ window.decks.en_nouns = [
     "ru": "срок поставки",
     "uk": "термін поставки",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10092,7 +11151,10 @@ window.decks.en_nouns = [
     "ru": "поставщик",
     "uk": "постачальник",
     "level": "B2",
-    "topics": ["business", "it"],
+    "topics": [
+      "it",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10113,7 +11175,9 @@ window.decks.en_nouns = [
     "ru": "производитель",
     "uk": "виробник",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10134,7 +11198,9 @@ window.decks.en_nouns = [
     "ru": "потребитель",
     "uk": "споживач",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10155,7 +11221,9 @@ window.decks.en_nouns = [
     "ru": "пользователь",
     "uk": "користувач",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10176,7 +11244,9 @@ window.decks.en_nouns = [
     "ru": "целевая аудитория",
     "uk": "цільова аудиторія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10197,7 +11267,10 @@ window.decks.en_nouns = [
     "ru": "возврат",
     "uk": "повернення",
     "level": "B2",
-    "topics": ["logistics", "shopping"],
+    "topics": [
+      "shopping",
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10218,7 +11291,9 @@ window.decks.en_nouns = [
     "ru": "обмен",
     "uk": "обмін",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10239,7 +11314,9 @@ window.decks.en_nouns = [
     "ru": "гарантия",
     "uk": "гарантія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10260,7 +11337,9 @@ window.decks.en_nouns = [
     "ru": "предпросмотр",
     "uk": "попередній перегляд",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10281,7 +11360,9 @@ window.decks.en_nouns = [
     "ru": "мнение",
     "uk": "думка",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10302,7 +11383,10 @@ window.decks.en_nouns = [
     "ru": "представление",
     "uk": "представлення",
     "level": "B2",
-    "topics": ["information", "it"],
+    "topics": [
+      "information",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10323,7 +11407,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": ["business", "work"],
+    "topics": [
+      "business",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10344,7 +11431,9 @@ window.decks.en_nouns = [
     "ru": "расчёт",
     "uk": "розрахунок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10365,7 +11454,9 @@ window.decks.en_nouns = [
     "ru": "отчёт",
     "uk": "звіт",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10386,7 +11477,9 @@ window.decks.en_nouns = [
     "ru": "статистика",
     "uk": "статистика",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10407,7 +11500,9 @@ window.decks.en_nouns = [
     "ru": "таблица",
     "uk": "таблиця",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10428,7 +11523,9 @@ window.decks.en_nouns = [
     "ru": "график",
     "uk": "графік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10449,7 +11546,9 @@ window.decks.en_nouns = [
     "ru": "диаграмма",
     "uk": "діаграма",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10470,7 +11569,10 @@ window.decks.en_nouns = [
     "ru": "провайдер",
     "uk": "постачальник послуг",
     "level": "B2",
-    "topics": ["business", "it"],
+    "topics": [
+      "it",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10491,7 +11593,9 @@ window.decks.en_nouns = [
     "ru": "доступ",
     "uk": "доступ",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10512,7 +11616,9 @@ window.decks.en_nouns = [
     "ru": "логин",
     "uk": "логін",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10533,7 +11639,9 @@ window.decks.en_nouns = [
     "ru": "выход из системы",
     "uk": "вихід із системи",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10554,7 +11662,9 @@ window.decks.en_nouns = [
     "ru": "пароль",
     "uk": "пароль",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10575,7 +11685,9 @@ window.decks.en_nouns = [
     "ru": "имя пользователя",
     "uk": "ім’я користувача",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10596,7 +11708,10 @@ window.decks.en_nouns = [
     "ru": "настройка безопасности",
     "uk": "налаштування безпеки",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10617,7 +11732,9 @@ window.decks.en_nouns = [
     "ru": "политика конфиденциальности",
     "uk": "політика конфіденційності",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10638,7 +11755,9 @@ window.decks.en_nouns = [
     "ru": "сессия",
     "uk": "сесія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10659,7 +11778,9 @@ window.decks.en_nouns = [
     "ru": "блокировка аккаунта",
     "uk": "блокування акаунта",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10680,7 +11801,9 @@ window.decks.en_nouns = [
     "ru": "доступ к файлу",
     "uk": "доступ до файлу",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10701,7 +11824,9 @@ window.decks.en_nouns = [
     "ru": "файл",
     "uk": "файл",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10722,7 +11847,9 @@ window.decks.en_nouns = [
     "ru": "папка",
     "uk": "тека",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10743,7 +11870,9 @@ window.decks.en_nouns = [
     "ru": "каталог",
     "uk": "каталог",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10764,7 +11893,9 @@ window.decks.en_nouns = [
     "ru": "резервное копирование",
     "uk": "резервне копіювання",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10785,7 +11916,9 @@ window.decks.en_nouns = [
     "ru": "восстановление",
     "uk": "відновлення",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10806,7 +11939,9 @@ window.decks.en_nouns = [
     "ru": "версия",
     "uk": "версія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10827,7 +11962,9 @@ window.decks.en_nouns = [
     "ru": "обновление",
     "uk": "оновлення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10848,7 +11985,10 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": ["it", "society"],
+    "topics": [
+      "it",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10869,7 +12009,10 @@ window.decks.en_nouns = [
     "ru": "сообщение об ошибке",
     "uk": "повідомлення про помилку",
     "level": "B2",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10890,7 +12033,10 @@ window.decks.en_nouns = [
     "ru": "черновик",
     "uk": "чернетка",
     "level": "B2",
-    "topics": ["design", "work"],
+    "topics": [
+      "design",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10911,7 +12057,9 @@ window.decks.en_nouns = [
     "ru": "шаблон",
     "uk": "шаблон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10932,7 +12080,9 @@ window.decks.en_nouns = [
     "ru": "настройка",
     "uk": "налаштування",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10953,7 +12103,9 @@ window.decks.en_nouns = [
     "ru": "параметр",
     "uk": "параметр",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10974,7 +12126,9 @@ window.decks.en_nouns = [
     "ru": "опция",
     "uk": "опція",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -10995,7 +12149,9 @@ window.decks.en_nouns = [
     "ru": "режим",
     "uk": "режим",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11016,7 +12172,10 @@ window.decks.en_nouns = [
     "ru": "настройка вида",
     "uk": "налаштування вигляду",
     "level": "B2",
-    "topics": ["communication", "opinion"],
+    "topics": [
+      "communication",
+      "opinion"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11037,7 +12196,9 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11058,7 +12219,10 @@ window.decks.en_nouns = [
     "ru": "расширение",
     "uk": "розширення",
     "level": "B2",
-    "topics": ["it", "law"],
+    "topics": [
+      "it",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11079,7 +12243,9 @@ window.decks.en_nouns = [
     "ru": "плагин",
     "uk": "плагін",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11100,7 +12266,10 @@ window.decks.en_nouns = [
     "ru": "строка",
     "uk": "рядок",
     "level": "B2",
-    "topics": ["it", "tables"],
+    "topics": [
+      "it",
+      "tables"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11121,7 +12290,10 @@ window.decks.en_nouns = [
     "ru": "столбец",
     "uk": "стовпчик",
     "level": "B2",
-    "topics": ["it", "tables"],
+    "topics": [
+      "it",
+      "tables"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11142,7 +12314,9 @@ window.decks.en_nouns = [
     "ru": "ячейка",
     "uk": "комірка",
     "level": "B2",
-    "topics": ["biology"],
+    "topics": [
+      "biology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11163,7 +12337,10 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B2",
-    "topics": ["data", "it"],
+    "topics": [
+      "data",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11184,7 +12361,10 @@ window.decks.en_nouns = [
     "ru": "набор данных",
     "uk": "набір даних",
     "level": "B2",
-    "topics": ["data", "it"],
+    "topics": [
+      "data",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11205,7 +12385,9 @@ window.decks.en_nouns = [
     "ru": "коллекция",
     "uk": "збірка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11226,7 +12408,10 @@ window.decks.en_nouns = [
     "ru": "соотнесение",
     "uk": "віднесення",
     "level": "B2",
-    "topics": ["it", "logic"],
+    "topics": [
+      "it",
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11247,7 +12432,10 @@ window.decks.en_nouns = [
     "ru": "сверка данных",
     "uk": "звірка даних",
     "level": "B2",
-    "topics": ["data", "it"],
+    "topics": [
+      "data",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11268,7 +12456,9 @@ window.decks.en_nouns = [
     "ru": "дедупликация",
     "uk": "дедуплікація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11289,7 +12479,9 @@ window.decks.en_nouns = [
     "ru": "приоритизация",
     "uk": "пріоритизація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11310,7 +12502,10 @@ window.decks.en_nouns = [
     "ru": "порядок",
     "uk": "послідовність",
     "level": "B2",
-    "topics": ["general", "work"],
+    "topics": [
+      "general",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11331,7 +12526,9 @@ window.decks.en_nouns = [
     "ru": "случайность",
     "uk": "випадковість",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11352,7 +12549,10 @@ window.decks.en_nouns = [
     "ru": "выбор",
     "uk": "вибір",
     "level": "B1",
-    "topics": ["general", "ui"],
+    "topics": [
+      "general",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11373,7 +12573,9 @@ window.decks.en_nouns = [
     "ru": "комбинация",
     "uk": "комбінація",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11394,7 +12596,9 @@ window.decks.en_nouns = [
     "ru": "вариант",
     "uk": "варіант",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11415,7 +12619,9 @@ window.decks.en_nouns = [
     "ru": "синхронизация",
     "uk": "синхронізація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11436,7 +12642,9 @@ window.decks.en_nouns = [
     "ru": "копия",
     "uk": "копія",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11457,7 +12665,9 @@ window.decks.en_nouns = [
     "ru": "резервная копия",
     "uk": "резервна копія",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11478,7 +12688,9 @@ window.decks.en_nouns = [
     "ru": "повторение",
     "uk": "повторення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11499,7 +12711,10 @@ window.decks.en_nouns = [
     "ru": "уровень сложности",
     "uk": "рівень складності",
     "level": "B2",
-    "topics": ["health", "statistics"],
+    "topics": [
+      "statistics",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11520,7 +12735,10 @@ window.decks.en_nouns = [
     "ru": "прогресс",
     "uk": "прогрес",
     "level": "B2",
-    "topics": ["it", "ui"],
+    "topics": [
+      "it",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11541,7 +12759,9 @@ window.decks.en_nouns = [
     "ru": "регресс",
     "uk": "регрес",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11562,7 +12782,10 @@ window.decks.en_nouns = [
     "ru": "промежуточный результат",
     "uk": "проміжний результат",
     "level": "B1",
-    "topics": ["general", "science"],
+    "topics": [
+      "general",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11583,7 +12806,9 @@ window.decks.en_nouns = [
     "ru": "ключевой показатель",
     "uk": "ключовий показник",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11604,7 +12829,9 @@ window.decks.en_nouns = [
     "ru": "счётчик",
     "uk": "лічильник",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11625,7 +12852,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": ["business", "work"],
+    "topics": [
+      "business",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11646,7 +12876,9 @@ window.decks.en_nouns = [
     "ru": "награда",
     "uk": "нагорода",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11667,7 +12899,9 @@ window.decks.en_nouns = [
     "ru": "наказание",
     "uk": "покарання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11688,7 +12922,9 @@ window.decks.en_nouns = [
     "ru": "картотека напоминаний",
     "uk": "картотека нагадувань",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11709,7 +12945,10 @@ window.decks.en_nouns = [
     "ru": "успехи в обучении",
     "uk": "успіхи в навчанні",
     "level": "B2",
-    "topics": ["it", "ui"],
+    "topics": [
+      "it",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11730,7 +12969,9 @@ window.decks.en_nouns = [
     "ru": "список избранного",
     "uk": "список улюбленого",
     "level": "A2",
-    "topics": ["ui"],
+    "topics": [
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11751,7 +12992,9 @@ window.decks.en_nouns = [
     "ru": "значок избранного",
     "uk": "значок обраного",
     "level": "A2",
-    "topics": ["ui"],
+    "topics": [
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11772,7 +13015,10 @@ window.decks.en_nouns = [
     "ru": "символ сердца",
     "uk": "символ серця",
     "level": "A2",
-    "topics": ["symbol", "ui"],
+    "topics": [
+      "ui",
+      "symbol"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11793,7 +13039,9 @@ window.decks.en_nouns = [
     "ru": "метка",
     "uk": "позначка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11814,7 +13062,9 @@ window.decks.en_nouns = [
     "ru": "деактивация",
     "uk": "деактивація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11835,7 +13085,9 @@ window.decks.en_nouns = [
     "ru": "активация",
     "uk": "активація",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11856,7 +13108,9 @@ window.decks.en_nouns = [
     "ru": "ползунок",
     "uk": "повзунок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11877,7 +13131,9 @@ window.decks.en_nouns = [
     "ru": "переключатель",
     "uk": "перемикач",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11898,7 +13154,9 @@ window.decks.en_nouns = [
     "ru": "кнопка",
     "uk": "кнопка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11919,7 +13177,9 @@ window.decks.en_nouns = [
     "ru": "кнопка OK",
     "uk": "кнопка OK",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11940,7 +13200,9 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11961,7 +13223,9 @@ window.decks.en_nouns = [
     "ru": "макет",
     "uk": "макет",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -11982,7 +13246,9 @@ window.decks.en_nouns = [
     "ru": "выравнивание",
     "uk": "вирівнювання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12003,7 +13269,9 @@ window.decks.en_nouns = [
     "ru": "отступ",
     "uk": "відступ",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12024,7 +13292,9 @@ window.decks.en_nouns = [
     "ru": "поле",
     "uk": "поле",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12045,7 +13315,9 @@ window.decks.en_nouns = [
     "ru": "ширина",
     "uk": "ширина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12066,7 +13338,9 @@ window.decks.en_nouns = [
     "ru": "высота",
     "uk": "висота",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12087,7 +13361,9 @@ window.decks.en_nouns = [
     "ru": "масштабирование",
     "uk": "масштабування",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12108,7 +13384,9 @@ window.decks.en_nouns = [
     "ru": "шрифт",
     "uk": "шрифт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12129,7 +13407,9 @@ window.decks.en_nouns = [
     "ru": "читаемость",
     "uk": "читабельність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12150,7 +13430,10 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": ["communication", "ui"],
+    "topics": [
+      "communication",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12171,7 +13454,10 @@ window.decks.en_nouns = [
     "ru": "устойчивость к ошибкам",
     "uk": "відмовостійкість",
     "level": "C1",
-    "topics": ["engineering", "it"],
+    "topics": [
+      "engineering",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12192,7 +13478,9 @@ window.decks.en_nouns = [
     "ru": "повторное использование",
     "uk": "повторне використання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12213,7 +13501,9 @@ window.decks.en_nouns = [
     "ru": "расширяемость",
     "uk": "розширюваність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12234,7 +13524,9 @@ window.decks.en_nouns = [
     "ru": "поддерживаемость",
     "uk": "підтримуваність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12255,7 +13547,10 @@ window.decks.en_nouns = [
     "ru": "стабильность",
     "uk": "стабільність",
     "level": "B2",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12276,7 +13571,9 @@ window.decks.en_nouns = [
     "ru": "надёжность",
     "uk": "надійність",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12297,7 +13594,10 @@ window.decks.en_nouns = [
     "ru": "производительность",
     "uk": "продуктивність",
     "level": "B2",
-    "topics": ["culture", "energy"],
+    "topics": [
+      "culture",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12318,7 +13618,10 @@ window.decks.en_nouns = [
     "ru": "узкое место",
     "uk": "вузьке місце",
     "level": "B2",
-    "topics": ["administration", "work"],
+    "topics": [
+      "administration",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12339,7 +13642,9 @@ window.decks.en_nouns = [
     "ru": "тест-кейс",
     "uk": "тест-кейс",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12360,7 +13665,10 @@ window.decks.en_nouns = [
     "ru": "покрытие",
     "uk": "покриття",
     "level": "B2",
-    "topics": ["statistics", "testing"],
+    "topics": [
+      "stats",
+      "testing"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12381,7 +13689,10 @@ window.decks.en_nouns = [
     "ru": "обеспечение",
     "uk": "забезпечення",
     "level": "B2",
-    "topics": ["finance", "it"],
+    "topics": [
+      "finance",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12402,7 +13713,9 @@ window.decks.en_nouns = [
     "ru": "соблюдение",
     "uk": "дотримання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12423,7 +13736,10 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B2",
-    "topics": ["it", "work"],
+    "topics": [
+      "it",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12444,7 +13760,9 @@ window.decks.en_nouns = [
     "ru": "отклонение",
     "uk": "відхилення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12465,7 +13783,9 @@ window.decks.en_nouns = [
     "ru": "коррекция",
     "uk": "виправлення",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12486,7 +13806,10 @@ window.decks.en_nouns = [
     "ru": "уровень допуска",
     "uk": "рівень допуску",
     "level": "B2",
-    "topics": ["health", "statistics"],
+    "topics": [
+      "statistics",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12507,7 +13830,9 @@ window.decks.en_nouns = [
     "ru": "версионирование",
     "uk": "версіонування",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12528,7 +13853,10 @@ window.decks.en_nouns = [
     "ru": "изменение схемы",
     "uk": "зміна схеми",
     "level": "B2",
-    "topics": ["environment", "general"],
+    "topics": [
+      "general",
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12549,7 +13877,10 @@ window.decks.en_nouns = [
     "ru": "обратная совместимость",
     "uk": "зворотна сумісність",
     "level": "B2",
-    "topics": ["it", "society"],
+    "topics": [
+      "it",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12570,7 +13901,9 @@ window.decks.en_nouns = [
     "ru": "тело",
     "uk": "тіло",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12591,7 +13924,9 @@ window.decks.en_nouns = [
     "ru": "голова",
     "uk": "голова",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12612,7 +13947,9 @@ window.decks.en_nouns = [
     "ru": "лицо",
     "uk": "обличчя",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12633,7 +13970,9 @@ window.decks.en_nouns = [
     "ru": "глаз",
     "uk": "око",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12654,7 +13993,9 @@ window.decks.en_nouns = [
     "ru": "ухо",
     "uk": "вухо",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12675,7 +14016,9 @@ window.decks.en_nouns = [
     "ru": "нос",
     "uk": "ніс",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12696,7 +14039,9 @@ window.decks.en_nouns = [
     "ru": "рот",
     "uk": "рот",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12717,7 +14062,9 @@ window.decks.en_nouns = [
     "ru": "зуб",
     "uk": "зуб",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12738,7 +14085,9 @@ window.decks.en_nouns = [
     "ru": "язык",
     "uk": "язик",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12759,7 +14108,9 @@ window.decks.en_nouns = [
     "ru": "волос",
     "uk": "волосся",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12780,7 +14131,9 @@ window.decks.en_nouns = [
     "ru": "шея",
     "uk": "шия",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12801,7 +14154,9 @@ window.decks.en_nouns = [
     "ru": "плечо",
     "uk": "плече",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12822,7 +14177,9 @@ window.decks.en_nouns = [
     "ru": "рука",
     "uk": "рука",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12843,7 +14200,9 @@ window.decks.en_nouns = [
     "ru": "локоть",
     "uk": "лікоть",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12864,7 +14223,9 @@ window.decks.en_nouns = [
     "ru": "кисть",
     "uk": "кисть",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12885,7 +14246,9 @@ window.decks.en_nouns = [
     "ru": "палец",
     "uk": "палець",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12906,7 +14269,9 @@ window.decks.en_nouns = [
     "ru": "грудь",
     "uk": "груди",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12927,7 +14292,9 @@ window.decks.en_nouns = [
     "ru": "спина",
     "uk": "спина",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12948,7 +14315,9 @@ window.decks.en_nouns = [
     "ru": "живот",
     "uk": "живіт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12969,7 +14338,9 @@ window.decks.en_nouns = [
     "ru": "нога",
     "uk": "нога",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -12990,7 +14361,9 @@ window.decks.en_nouns = [
     "ru": "колено",
     "uk": "коліно",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13011,7 +14384,9 @@ window.decks.en_nouns = [
     "ru": "стопа",
     "uk": "ступня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13032,7 +14407,10 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": ["symbol", "ui"],
+    "topics": [
+      "ui",
+      "symbol"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13053,7 +14431,9 @@ window.decks.en_nouns = [
     "ru": "легкое",
     "uk": "легеня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13074,7 +14454,9 @@ window.decks.en_nouns = [
     "ru": "печень",
     "uk": "печінка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13095,7 +14477,9 @@ window.decks.en_nouns = [
     "ru": "желудок",
     "uk": "шлунок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13116,7 +14500,9 @@ window.decks.en_nouns = [
     "ru": "кровь",
     "uk": "кров",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13137,7 +14523,9 @@ window.decks.en_nouns = [
     "ru": "мышца",
     "uk": "м’яз",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13158,7 +14546,9 @@ window.decks.en_nouns = [
     "ru": "кость",
     "uk": "кістка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13179,7 +14569,9 @@ window.decks.en_nouns = [
     "ru": "кожа",
     "uk": "шкіра",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13200,7 +14592,9 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікар",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13221,7 +14615,10 @@ window.decks.en_nouns = [
     "ru": "врач",
     "uk": "лікарка",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13242,7 +14639,9 @@ window.decks.en_nouns = [
     "ru": "больница",
     "uk": "лікарня",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13263,7 +14662,9 @@ window.decks.en_nouns = [
     "ru": "клиника",
     "uk": "клініка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13284,7 +14685,10 @@ window.decks.en_nouns = [
     "ru": "частная практика",
     "uk": "приватна практика",
     "level": "B2",
-    "topics": ["law", "science"],
+    "topics": [
+      "science",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13305,7 +14709,9 @@ window.decks.en_nouns = [
     "ru": "аптека",
     "uk": "аптека",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13326,7 +14732,9 @@ window.decks.en_nouns = [
     "ru": "рецепт",
     "uk": "рецепт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13347,7 +14755,9 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13368,7 +14778,9 @@ window.decks.en_nouns = [
     "ru": "укол",
     "uk": "укол",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13389,7 +14801,9 @@ window.decks.en_nouns = [
     "ru": "повязка",
     "uk": "пов’язка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13410,7 +14824,9 @@ window.decks.en_nouns = [
     "ru": "обследование",
     "uk": "обстеження",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13431,7 +14847,9 @@ window.decks.en_nouns = [
     "ru": "лечение",
     "uk": "лікування",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13452,7 +14870,9 @@ window.decks.en_nouns = [
     "ru": "здоровье",
     "uk": "здоров’я",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13473,7 +14893,9 @@ window.decks.en_nouns = [
     "ru": "болезнь",
     "uk": "хвороба",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13494,7 +14916,9 @@ window.decks.en_nouns = [
     "ru": "травма",
     "uk": "травма",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13515,7 +14939,9 @@ window.decks.en_nouns = [
     "ru": "жар",
     "uk": "гарячка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13536,7 +14962,9 @@ window.decks.en_nouns = [
     "ru": "простуда",
     "uk": "застуда",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13557,7 +14985,9 @@ window.decks.en_nouns = [
     "ru": "кашель",
     "uk": "кашель",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13578,7 +15008,9 @@ window.decks.en_nouns = [
     "ru": "грипп",
     "uk": "грип",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13599,7 +15031,10 @@ window.decks.en_nouns = [
     "ru": "уход",
     "uk": "догляд",
     "level": "B2",
-    "topics": ["health", "work"],
+    "topics": [
+      "health",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13620,7 +15055,9 @@ window.decks.en_nouns = [
     "ru": "город",
     "uk": "місто",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13641,7 +15078,9 @@ window.decks.en_nouns = [
     "ru": "деревня",
     "uk": "село",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13662,7 +15101,9 @@ window.decks.en_nouns = [
     "ru": "улица",
     "uk": "вулиця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13683,7 +15124,9 @@ window.decks.en_nouns = [
     "ru": "площадь",
     "uk": "площа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13704,7 +15147,9 @@ window.decks.en_nouns = [
     "ru": "перекресток",
     "uk": "перехрестя",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13725,7 +15170,9 @@ window.decks.en_nouns = [
     "ru": "мост",
     "uk": "міст",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13746,7 +15193,10 @@ window.decks.en_nouns = [
     "ru": "вокзал",
     "uk": "вокзал",
     "level": "B2",
-    "topics": ["energy", "traffic"],
+    "topics": [
+      "traffic",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13767,7 +15217,9 @@ window.decks.en_nouns = [
     "ru": "аэропорт",
     "uk": "аеропорт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13788,7 +15240,9 @@ window.decks.en_nouns = [
     "ru": "остановка",
     "uk": "зупинка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13809,7 +15263,9 @@ window.decks.en_nouns = [
     "ru": "метро",
     "uk": "метро",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13830,7 +15286,9 @@ window.decks.en_nouns = [
     "ru": "автобус",
     "uk": "автобус",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13851,7 +15309,9 @@ window.decks.en_nouns = [
     "ru": "трамвай",
     "uk": "трамвай",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13872,7 +15332,9 @@ window.decks.en_nouns = [
     "ru": "такси",
     "uk": "таксі",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13893,7 +15355,9 @@ window.decks.en_nouns = [
     "ru": "авто",
     "uk": "авто",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13914,7 +15378,9 @@ window.decks.en_nouns = [
     "ru": "велосипед",
     "uk": "велосипед",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13935,7 +15401,9 @@ window.decks.en_nouns = [
     "ru": "мотоцикл",
     "uk": "мотоцикл",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13956,7 +15424,9 @@ window.decks.en_nouns = [
     "ru": "поезд",
     "uk": "потяг",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13977,7 +15447,9 @@ window.decks.en_nouns = [
     "ru": "корабль",
     "uk": "корабель",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -13998,7 +15470,9 @@ window.decks.en_nouns = [
     "ru": "самолет",
     "uk": "літак",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14019,7 +15493,9 @@ window.decks.en_nouns = [
     "ru": "движение",
     "uk": "рух",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14040,7 +15516,9 @@ window.decks.en_nouns = [
     "ru": "светофор",
     "uk": "світлофор",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14061,7 +15539,10 @@ window.decks.en_nouns = [
     "ru": "билет",
     "uk": "квиток",
     "level": "A2",
-    "topics": ["culture", "travel"],
+    "topics": [
+      "culture",
+      "travel"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14082,7 +15563,10 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "карта",
     "level": "B2",
-    "topics": ["daily life", "finance"],
+    "topics": [
+      "finance",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14103,7 +15587,10 @@ window.decks.en_nouns = [
     "ru": "план",
     "uk": "план",
     "level": "B2",
-    "topics": ["business", "education"],
+    "topics": [
+      "business",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14124,7 +15611,9 @@ window.decks.en_nouns = [
     "ru": "направление",
     "uk": "напрямок",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14145,7 +15634,9 @@ window.decks.en_nouns = [
     "ru": "расстояние",
     "uk": "відстань",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14166,7 +15657,9 @@ window.decks.en_nouns = [
     "ru": "путешествие",
     "uk": "подорож",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14187,7 +15680,9 @@ window.decks.en_nouns = [
     "ru": "отпуск",
     "uk": "відпустка",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14208,7 +15703,9 @@ window.decks.en_nouns = [
     "ru": "жильё",
     "uk": "житло",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14229,7 +15726,9 @@ window.decks.en_nouns = [
     "ru": "отель",
     "uk": "готель",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14250,7 +15749,9 @@ window.decks.en_nouns = [
     "ru": "хостел",
     "uk": "хостел",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14271,7 +15772,9 @@ window.decks.en_nouns = [
     "ru": "ресепшн",
     "uk": "рецепція",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14292,7 +15795,9 @@ window.decks.en_nouns = [
     "ru": "бронирование",
     "uk": "бронювання",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14313,7 +15818,9 @@ window.decks.en_nouns = [
     "ru": "резервация",
     "uk": "резервація",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14334,7 +15841,10 @@ window.decks.en_nouns = [
     "ru": "удостоверение",
     "uk": "посвідчення",
     "level": "B2",
-    "topics": ["daily life", "finance"],
+    "topics": [
+      "finance",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14355,7 +15865,9 @@ window.decks.en_nouns = [
     "ru": "паспорт",
     "uk": "паспорт",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14376,7 +15888,9 @@ window.decks.en_nouns = [
     "ru": "таможня",
     "uk": "митниця",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14397,7 +15911,9 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "кордон",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14418,7 +15934,9 @@ window.decks.en_nouns = [
     "ru": "виза",
     "uk": "віза",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14439,7 +15957,10 @@ window.decks.en_nouns = [
     "ru": "пребывание",
     "uk": "перебування",
     "level": "B2",
-    "topics": ["law", "migration"],
+    "topics": [
+      "migration",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14460,7 +15981,9 @@ window.decks.en_nouns = [
     "ru": "школа",
     "uk": "школа",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14481,7 +16004,9 @@ window.decks.en_nouns = [
     "ru": "университет",
     "uk": "університет",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14502,7 +16027,10 @@ window.decks.en_nouns = [
     "ru": "лекция",
     "uk": "лекція",
     "level": "B1",
-    "topics": ["communication", "science"],
+    "topics": [
+      "communication",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14523,7 +16051,9 @@ window.decks.en_nouns = [
     "ru": "предмет",
     "uk": "предмет",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14544,7 +16074,10 @@ window.decks.en_nouns = [
     "ru": "домашнее задание",
     "uk": "домашнє завдання",
     "level": "B2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14565,7 +16098,9 @@ window.decks.en_nouns = [
     "ru": "экзамен",
     "uk": "іспит",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14586,7 +16121,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": ["business", "work"],
+    "topics": [
+      "business",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14607,7 +16145,9 @@ window.decks.en_nouns = [
     "ru": "ученик",
     "uk": "учень",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14628,7 +16168,10 @@ window.decks.en_nouns = [
     "ru": "ученица",
     "uk": "учениця",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14649,7 +16192,10 @@ window.decks.en_nouns = [
     "ru": "учитель",
     "uk": "вчитель",
     "level": "B1",
-    "topics": ["education", "job"],
+    "topics": [
+      "job",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14670,7 +16216,10 @@ window.decks.en_nouns = [
     "ru": "учительница",
     "uk": "вчителька",
     "level": "A1",
-    "topics": ["education", "job"],
+    "topics": [
+      "education",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14691,7 +16240,9 @@ window.decks.en_nouns = [
     "ru": "тетрадь",
     "uk": "зошит",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14712,7 +16263,10 @@ window.decks.en_nouns = [
     "ru": "книга",
     "uk": "книга",
     "level": "A1",
-    "topics": ["education", "media"],
+    "topics": [
+      "education",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14733,7 +16287,10 @@ window.decks.en_nouns = [
     "ru": "словарь",
     "uk": "словник",
     "level": "A1",
-    "topics": ["education", "language"],
+    "topics": [
+      "education",
+      "language"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14754,7 +16311,9 @@ window.decks.en_nouns = [
     "ru": "ручка",
     "uk": "ручка",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14775,7 +16334,9 @@ window.decks.en_nouns = [
     "ru": "лист",
     "uk": "аркуш",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14796,7 +16357,9 @@ window.decks.en_nouns = [
     "ru": "доска",
     "uk": "дошка",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14817,7 +16380,9 @@ window.decks.en_nouns = [
     "ru": "мел",
     "uk": "крейда",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14838,7 +16403,9 @@ window.decks.en_nouns = [
     "ru": "ластик",
     "uk": "гумка",
     "level": "A1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14859,7 +16426,10 @@ window.decks.en_nouns = [
     "ru": "рюкзак",
     "uk": "рюкзак",
     "level": "A1",
-    "topics": ["education", "travel"],
+    "topics": [
+      "education",
+      "travel"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14880,7 +16450,10 @@ window.decks.en_nouns = [
     "ru": "суд",
     "uk": "суд",
     "level": "B1",
-    "topics": ["food", "law"],
+    "topics": [
+      "law",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14901,7 +16474,9 @@ window.decks.en_nouns = [
     "ru": "судья",
     "uk": "суддя",
     "level": "B1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14922,7 +16497,10 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокат",
     "level": "B1",
-    "topics": ["job", "law"],
+    "topics": [
+      "law",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14943,7 +16521,10 @@ window.decks.en_nouns = [
     "ru": "адвокат",
     "uk": "адвокатка",
     "level": "B1",
-    "topics": ["job", "law"],
+    "topics": [
+      "law",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14964,7 +16545,10 @@ window.decks.en_nouns = [
     "ru": "полиция",
     "uk": "поліція",
     "level": "A2",
-    "topics": ["city", "law"],
+    "topics": [
+      "law",
+      "city"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -14985,7 +16569,9 @@ window.decks.en_nouns = [
     "ru": "заявление",
     "uk": "заява",
     "level": "B1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15006,7 +16592,9 @@ window.decks.en_nouns = [
     "ru": "штраф",
     "uk": "штраф",
     "level": "B1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15027,7 +16615,9 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15048,7 +16638,9 @@ window.decks.en_nouns = [
     "ru": "правило",
     "uk": "правило",
     "level": "A2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15069,7 +16661,9 @@ window.decks.en_nouns = [
     "ru": "порядок",
     "uk": "порядок",
     "level": "A2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15090,7 +16684,9 @@ window.decks.en_nouns = [
     "ru": "дом",
     "uk": "будинок",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15111,7 +16707,9 @@ window.decks.en_nouns = [
     "ru": "квартира",
     "uk": "квартира",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15132,7 +16730,9 @@ window.decks.en_nouns = [
     "ru": "комната",
     "uk": "кімната",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15153,7 +16753,10 @@ window.decks.en_nouns = [
     "ru": "кухня",
     "uk": "кухня",
     "level": "A1",
-    "topics": ["home", "kitchen"],
+    "topics": [
+      "home",
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15174,7 +16777,9 @@ window.decks.en_nouns = [
     "ru": "ванная",
     "uk": "ванна",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15195,7 +16800,9 @@ window.decks.en_nouns = [
     "ru": "спальня",
     "uk": "спальня",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15216,7 +16823,9 @@ window.decks.en_nouns = [
     "ru": "гостиная",
     "uk": "вітальня",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15237,7 +16846,9 @@ window.decks.en_nouns = [
     "ru": "коридор",
     "uk": "коридор",
     "level": "A2",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15258,7 +16869,9 @@ window.decks.en_nouns = [
     "ru": "балкон",
     "uk": "балкон",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15279,7 +16892,10 @@ window.decks.en_nouns = [
     "ru": "сад",
     "uk": "сад",
     "level": "A1",
-    "topics": ["home", "nature"],
+    "topics": [
+      "home",
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15300,7 +16916,9 @@ window.decks.en_nouns = [
     "ru": "стол",
     "uk": "стіл",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15321,7 +16939,9 @@ window.decks.en_nouns = [
     "ru": "стул",
     "uk": "стілець",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15342,7 +16962,9 @@ window.decks.en_nouns = [
     "ru": "кровать",
     "uk": "ліжко",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15363,7 +16985,9 @@ window.decks.en_nouns = [
     "ru": "шкаф",
     "uk": "шафа",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15384,7 +17008,9 @@ window.decks.en_nouns = [
     "ru": "полка",
     "uk": "полиця",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15405,7 +17031,9 @@ window.decks.en_nouns = [
     "ru": "лампа",
     "uk": "лампа",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15426,7 +17054,9 @@ window.decks.en_nouns = [
     "ru": "ковер",
     "uk": "килим",
     "level": "A2",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15447,7 +17077,9 @@ window.decks.en_nouns = [
     "ru": "зеркало",
     "uk": "дзеркало",
     "level": "A1",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15468,7 +17100,9 @@ window.decks.en_nouns = [
     "ru": "штора",
     "uk": "штора",
     "level": "A2",
-    "topics": ["home"],
+    "topics": [
+      "home"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15489,7 +17123,10 @@ window.decks.en_nouns = [
     "ru": "растение",
     "uk": "рослина",
     "level": "A1",
-    "topics": ["home", "nature"],
+    "topics": [
+      "home",
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15510,7 +17147,10 @@ window.decks.en_nouns = [
     "ru": "холодильник",
     "uk": "холодильник",
     "level": "A1",
-    "topics": ["home", "kitchen"],
+    "topics": [
+      "home",
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15531,7 +17171,10 @@ window.decks.en_nouns = [
     "ru": "плита",
     "uk": "плита",
     "level": "A1",
-    "topics": ["home", "kitchen"],
+    "topics": [
+      "home",
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15552,7 +17195,10 @@ window.decks.en_nouns = [
     "ru": "духовка",
     "uk": "духовка",
     "level": "A2",
-    "topics": ["home", "kitchen"],
+    "topics": [
+      "home",
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15573,7 +17219,9 @@ window.decks.en_nouns = [
     "ru": "сковорода",
     "uk": "пательня",
     "level": "A2",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15594,7 +17242,9 @@ window.decks.en_nouns = [
     "ru": "кастрюля",
     "uk": "каструля",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15615,7 +17265,9 @@ window.decks.en_nouns = [
     "ru": "нож",
     "uk": "ніж",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15636,7 +17288,9 @@ window.decks.en_nouns = [
     "ru": "вилка",
     "uk": "виделка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15657,7 +17311,9 @@ window.decks.en_nouns = [
     "ru": "ложка",
     "uk": "ложка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15678,7 +17334,9 @@ window.decks.en_nouns = [
     "ru": "тарелка",
     "uk": "тарілка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15699,7 +17357,9 @@ window.decks.en_nouns = [
     "ru": "чашка",
     "uk": "чашка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15720,7 +17380,9 @@ window.decks.en_nouns = [
     "ru": "стакан",
     "uk": "склянка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15741,7 +17403,9 @@ window.decks.en_nouns = [
     "ru": "бутылка",
     "uk": "пляшка",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15762,7 +17426,9 @@ window.decks.en_nouns = [
     "ru": "миска",
     "uk": "миска",
     "level": "A1",
-    "topics": ["kitchen"],
+    "topics": [
+      "kitchen"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15783,7 +17449,10 @@ window.decks.en_nouns = [
     "ru": "соль",
     "uk": "сіль",
     "level": "A1",
-    "topics": ["food", "kitchen"],
+    "topics": [
+      "kitchen",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15804,7 +17473,10 @@ window.decks.en_nouns = [
     "ru": "сахар",
     "uk": "цукор",
     "level": "A1",
-    "topics": ["food", "kitchen"],
+    "topics": [
+      "kitchen",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15825,7 +17497,10 @@ window.decks.en_nouns = [
     "ru": "перец",
     "uk": "перець",
     "level": "A2",
-    "topics": ["food", "kitchen"],
+    "topics": [
+      "kitchen",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15846,7 +17521,10 @@ window.decks.en_nouns = [
     "ru": "масло",
     "uk": "олія",
     "level": "A2",
-    "topics": ["food", "kitchen"],
+    "topics": [
+      "kitchen",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15867,7 +17545,10 @@ window.decks.en_nouns = [
     "ru": "уксус",
     "uk": "оцет",
     "level": "A2",
-    "topics": ["food", "kitchen"],
+    "topics": [
+      "kitchen",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15888,7 +17569,9 @@ window.decks.en_nouns = [
     "ru": "специя",
     "uk": "спеція",
     "level": "A2",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15909,7 +17592,10 @@ window.decks.en_nouns = [
     "ru": "завтрак",
     "uk": "сніданок",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "food",
+      "daily routine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15930,7 +17616,10 @@ window.decks.en_nouns = [
     "ru": "обед",
     "uk": "обід",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "food",
+      "daily routine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15951,7 +17640,10 @@ window.decks.en_nouns = [
     "ru": "ужин",
     "uk": "вечеря",
     "level": "A1",
-    "topics": ["daily routine", "food"],
+    "topics": [
+      "food",
+      "daily routine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15972,7 +17664,9 @@ window.decks.en_nouns = [
     "ru": "суп",
     "uk": "суп",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -15993,7 +17687,9 @@ window.decks.en_nouns = [
     "ru": "салат",
     "uk": "салат",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16014,7 +17710,9 @@ window.decks.en_nouns = [
     "ru": "хлеб",
     "uk": "хліб",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16035,7 +17733,9 @@ window.decks.en_nouns = [
     "ru": "сливочное масло",
     "uk": "вершкове масло",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16056,7 +17756,9 @@ window.decks.en_nouns = [
     "ru": "сыр",
     "uk": "сир",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16077,7 +17779,9 @@ window.decks.en_nouns = [
     "ru": "колбаса",
     "uk": "ковбаса",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16098,7 +17802,9 @@ window.decks.en_nouns = [
     "ru": "мясо",
     "uk": "м’ясо",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16119,7 +17825,9 @@ window.decks.en_nouns = [
     "ru": "рыба",
     "uk": "риба",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16140,7 +17848,9 @@ window.decks.en_nouns = [
     "ru": "овощи",
     "uk": "овочі",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16161,7 +17871,9 @@ window.decks.en_nouns = [
     "ru": "фрукты",
     "uk": "фрукти",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16182,7 +17894,9 @@ window.decks.en_nouns = [
     "ru": "яблоко",
     "uk": "яблуко",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16203,7 +17917,9 @@ window.decks.en_nouns = [
     "ru": "банан",
     "uk": "банан",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16224,7 +17940,9 @@ window.decks.en_nouns = [
     "ru": "апельсин",
     "uk": "апельсин",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16245,7 +17963,9 @@ window.decks.en_nouns = [
     "ru": "виноград",
     "uk": "виноград",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16266,7 +17986,9 @@ window.decks.en_nouns = [
     "ru": "клубника",
     "uk": "полуниця",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16287,7 +18009,9 @@ window.decks.en_nouns = [
     "ru": "картофель",
     "uk": "картопля",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16308,7 +18032,9 @@ window.decks.en_nouns = [
     "ru": "рис",
     "uk": "рис",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16329,7 +18055,9 @@ window.decks.en_nouns = [
     "ru": "лапша",
     "uk": "локшина",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16350,7 +18078,9 @@ window.decks.en_nouns = [
     "ru": "пирог",
     "uk": "пиріг",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16371,7 +18101,9 @@ window.decks.en_nouns = [
     "ru": "печенье",
     "uk": "печиво",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16392,7 +18124,9 @@ window.decks.en_nouns = [
     "ru": "шоколад",
     "uk": "шоколад",
     "level": "A1",
-    "topics": ["food"],
+    "topics": [
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16413,7 +18147,9 @@ window.decks.en_nouns = [
     "ru": "кофе",
     "uk": "кава",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16434,7 +18170,9 @@ window.decks.en_nouns = [
     "ru": "чай",
     "uk": "чай",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16455,7 +18193,9 @@ window.decks.en_nouns = [
     "ru": "вода",
     "uk": "вода",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16476,7 +18216,9 @@ window.decks.en_nouns = [
     "ru": "сок",
     "uk": "сік",
     "level": "A1",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16497,7 +18239,10 @@ window.decks.en_nouns = [
     "ru": "молоко",
     "uk": "молоко",
     "level": "A1",
-    "topics": ["drink", "food"],
+    "topics": [
+      "drink",
+      "food"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16518,7 +18263,9 @@ window.decks.en_nouns = [
     "ru": "пиво",
     "uk": "пиво",
     "level": "A2",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16539,7 +18286,9 @@ window.decks.en_nouns = [
     "ru": "вино",
     "uk": "вино",
     "level": "A2",
-    "topics": ["drink"],
+    "topics": [
+      "drink"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16560,7 +18309,10 @@ window.decks.en_nouns = [
     "ru": "бар",
     "uk": "бар",
     "level": "A2",
-    "topics": ["city", "restaurant"],
+    "topics": [
+      "restaurant",
+      "city"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16581,7 +18333,9 @@ window.decks.en_nouns = [
     "ru": "ресторан",
     "uk": "ресторан",
     "level": "A1",
-    "topics": ["restaurant"],
+    "topics": [
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16602,7 +18356,9 @@ window.decks.en_nouns = [
     "ru": "кафе",
     "uk": "кафе",
     "level": "A1",
-    "topics": ["restaurant"],
+    "topics": [
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16623,7 +18379,10 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": ["money", "restaurant"],
+    "topics": [
+      "restaurant",
+      "money"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16644,7 +18403,10 @@ window.decks.en_nouns = [
     "ru": "чаевые",
     "uk": "чайові",
     "level": "B1",
-    "topics": ["money", "restaurant"],
+    "topics": [
+      "restaurant",
+      "money"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16665,7 +18427,9 @@ window.decks.en_nouns = [
     "ru": "меню",
     "uk": "меню",
     "level": "A2",
-    "topics": ["restaurant"],
+    "topics": [
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16686,7 +18450,10 @@ window.decks.en_nouns = [
     "ru": "заказ",
     "uk": "замовлення",
     "level": "A2",
-    "topics": ["restaurant", "shopping"],
+    "topics": [
+      "restaurant",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16707,7 +18474,10 @@ window.decks.en_nouns = [
     "ru": "доставка",
     "uk": "доставка",
     "level": "B1",
-    "topics": ["restaurant", "shopping"],
+    "topics": [
+      "shopping",
+      "restaurant"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16728,7 +18498,10 @@ window.decks.en_nouns = [
     "ru": "время работы",
     "uk": "час роботи",
     "level": "A2",
-    "topics": ["restaurant", "shopping"],
+    "topics": [
+      "restaurant",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16749,7 +18522,9 @@ window.decks.en_nouns = [
     "ru": "газета",
     "uk": "газета",
     "level": "A1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16770,7 +18545,9 @@ window.decks.en_nouns = [
     "ru": "журнал",
     "uk": "журнал",
     "level": "A2",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16791,7 +18568,10 @@ window.decks.en_nouns = [
     "ru": "статья",
     "uk": "стаття",
     "level": "B1",
-    "topics": ["language", "media"],
+    "topics": [
+      "media",
+      "language"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16812,7 +18592,9 @@ window.decks.en_nouns = [
     "ru": "заголовок",
     "uk": "заголовок",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16833,7 +18615,9 @@ window.decks.en_nouns = [
     "ru": "кричащий заголовок",
     "uk": "сенсаційний заголовок",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16854,7 +18638,10 @@ window.decks.en_nouns = [
     "ru": "реклама",
     "uk": "реклама",
     "level": "A2",
-    "topics": ["economy", "media"],
+    "topics": [
+      "media",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16875,7 +18662,9 @@ window.decks.en_nouns = [
     "ru": "объявление",
     "uk": "оголошення",
     "level": "A2",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16896,7 +18685,9 @@ window.decks.en_nouns = [
     "ru": "редакция",
     "uk": "редакція",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16917,7 +18708,10 @@ window.decks.en_nouns = [
     "ru": "репортёр",
     "uk": "репортер",
     "level": "B1",
-    "topics": ["job", "media"],
+    "topics": [
+      "media",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16938,7 +18732,9 @@ window.decks.en_nouns = [
     "ru": "выпуск новостей",
     "uk": "випуск новин",
     "level": "B1",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16959,7 +18755,10 @@ window.decks.en_nouns = [
     "ru": "театр",
     "uk": "театр",
     "level": "A1",
-    "topics": ["art", "culture"],
+    "topics": [
+      "art",
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -16980,7 +18779,9 @@ window.decks.en_nouns = [
     "ru": "сцена",
     "uk": "сцена",
     "level": "A2",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17001,7 +18802,10 @@ window.decks.en_nouns = [
     "ru": "актёр",
     "uk": "актор",
     "level": "A2",
-    "topics": ["art", "job"],
+    "topics": [
+      "art",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17022,7 +18826,10 @@ window.decks.en_nouns = [
     "ru": "актриса",
     "uk": "акторка",
     "level": "A2",
-    "topics": ["art", "job"],
+    "topics": [
+      "art",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17043,7 +18850,9 @@ window.decks.en_nouns = [
     "ru": "публика",
     "uk": "публіка",
     "level": "A2",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17064,7 +18873,9 @@ window.decks.en_nouns = [
     "ru": "спектакль",
     "uk": "вистава",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17085,7 +18896,9 @@ window.decks.en_nouns = [
     "ru": "репетиция",
     "uk": "репетиція",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17106,7 +18919,9 @@ window.decks.en_nouns = [
     "ru": "премьера",
     "uk": "прем’єра",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17127,7 +18942,9 @@ window.decks.en_nouns = [
     "ru": "занавес",
     "uk": "завіса",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17148,7 +18965,10 @@ window.decks.en_nouns = [
     "ru": "входной билет",
     "uk": "вхідний квиток",
     "level": "A2",
-    "topics": ["culture", "travel"],
+    "topics": [
+      "culture",
+      "travel"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17169,7 +18989,9 @@ window.decks.en_nouns = [
     "ru": "музей",
     "uk": "музей",
     "level": "A1",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17190,7 +19012,9 @@ window.decks.en_nouns = [
     "ru": "выставка",
     "uk": "виставка",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17211,7 +19035,9 @@ window.decks.en_nouns = [
     "ru": "картина",
     "uk": "картина",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17232,7 +19058,9 @@ window.decks.en_nouns = [
     "ru": "скульптура",
     "uk": "скульптура",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17253,7 +19081,9 @@ window.decks.en_nouns = [
     "ru": "галерея",
     "uk": "галерея",
     "level": "A2",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17274,7 +19104,10 @@ window.decks.en_nouns = [
     "ru": "художник",
     "uk": "митць",
     "level": "B1",
-    "topics": ["art", "job"],
+    "topics": [
+      "art",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17295,7 +19128,9 @@ window.decks.en_nouns = [
     "ru": "полотно",
     "uk": "полотно",
     "level": "B1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17316,7 +19151,9 @@ window.decks.en_nouns = [
     "ru": "кисть",
     "uk": "пензлик",
     "level": "A2",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17337,7 +19174,9 @@ window.decks.en_nouns = [
     "ru": "краска",
     "uk": "фарба",
     "level": "A1",
-    "topics": ["art"],
+    "topics": [
+      "art"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17358,7 +19197,10 @@ window.decks.en_nouns = [
     "ru": "ателье",
     "uk": "ательє",
     "level": "B1",
-    "topics": ["art", "job"],
+    "topics": [
+      "art",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17379,7 +19221,9 @@ window.decks.en_nouns = [
     "ru": "музыка",
     "uk": "музика",
     "level": "A1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17400,7 +19244,10 @@ window.decks.en_nouns = [
     "ru": "певец",
     "uk": "співак",
     "level": "A2",
-    "topics": ["job", "music"],
+    "topics": [
+      "music",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17421,7 +19268,10 @@ window.decks.en_nouns = [
     "ru": "певица",
     "uk": "співачка",
     "level": "A2",
-    "topics": ["job", "music"],
+    "topics": [
+      "music",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17442,7 +19292,9 @@ window.decks.en_nouns = [
     "ru": "песня",
     "uk": "пісня",
     "level": "A1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17463,7 +19315,9 @@ window.decks.en_nouns = [
     "ru": "концерт",
     "uk": "концерт",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17484,7 +19338,9 @@ window.decks.en_nouns = [
     "ru": "группа",
     "uk": "гурт",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17505,7 +19361,9 @@ window.decks.en_nouns = [
     "ru": "оркестр",
     "uk": "оркестр",
     "level": "B1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17526,7 +19384,10 @@ window.decks.en_nouns = [
     "ru": "дирижёр",
     "uk": "диригент",
     "level": "B1",
-    "topics": ["job", "music"],
+    "topics": [
+      "music",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17547,7 +19408,10 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B1",
-    "topics": ["media", "music"],
+    "topics": [
+      "music",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17568,7 +19432,9 @@ window.decks.en_nouns = [
     "ru": "инструмент",
     "uk": "інструмент",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17589,7 +19455,9 @@ window.decks.en_nouns = [
     "ru": "гитара",
     "uk": "гітара",
     "level": "A1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17610,7 +19478,9 @@ window.decks.en_nouns = [
     "ru": "пианино",
     "uk": "піаніно",
     "level": "A1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17631,7 +19501,9 @@ window.decks.en_nouns = [
     "ru": "скрипка",
     "uk": "скрипка",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17652,7 +19524,9 @@ window.decks.en_nouns = [
     "ru": "барабан",
     "uk": "барабан",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17673,7 +19547,9 @@ window.decks.en_nouns = [
     "ru": "флейта",
     "uk": "флейта",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17694,7 +19570,9 @@ window.decks.en_nouns = [
     "ru": "звук",
     "uk": "звук",
     "level": "A2",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17715,7 +19593,9 @@ window.decks.en_nouns = [
     "ru": "ритм",
     "uk": "ритм",
     "level": "B1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17736,7 +19616,9 @@ window.decks.en_nouns = [
     "ru": "мелодия",
     "uk": "мелодія",
     "level": "B1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17757,7 +19639,9 @@ window.decks.en_nouns = [
     "ru": "аккорд",
     "uk": "акорд",
     "level": "B1",
-    "topics": ["music"],
+    "topics": [
+      "music"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17778,7 +19662,10 @@ window.decks.en_nouns = [
     "ru": "свет сцены",
     "uk": "сценічне освітлення",
     "level": "B2",
-    "topics": ["art", "technology"],
+    "topics": [
+      "art",
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17799,7 +19686,9 @@ window.decks.en_nouns = [
     "ru": "наука",
     "uk": "наука",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17820,7 +19709,10 @@ window.decks.en_nouns = [
     "ru": "исследователь",
     "uk": "дослідник",
     "level": "B1",
-    "topics": ["job", "science"],
+    "topics": [
+      "science",
+      "job"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17841,7 +19733,9 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17862,7 +19756,9 @@ window.decks.en_nouns = [
     "ru": "гипотеза",
     "uk": "гіпотеза",
     "level": "B2",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17883,7 +19779,9 @@ window.decks.en_nouns = [
     "ru": "эксперимент",
     "uk": "експеримент",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17904,7 +19802,10 @@ window.decks.en_nouns = [
     "ru": "результат",
     "uk": "результат",
     "level": "A2",
-    "topics": ["general", "science"],
+    "topics": [
+      "science",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17925,7 +19826,9 @@ window.decks.en_nouns = [
     "ru": "метод",
     "uk": "метод",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17946,7 +19849,9 @@ window.decks.en_nouns = [
     "ru": "теория",
     "uk": "теорія",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17967,7 +19872,9 @@ window.decks.en_nouns = [
     "ru": "практика",
     "uk": "практика",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -17988,7 +19895,9 @@ window.decks.en_nouns = [
     "ru": "открытие",
     "uk": "відкриття",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18009,7 +19918,9 @@ window.decks.en_nouns = [
     "ru": "природа",
     "uk": "природа",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18030,7 +19941,9 @@ window.decks.en_nouns = [
     "ru": "пейзаж",
     "uk": "краєвид",
     "level": "A2",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18051,7 +19964,9 @@ window.decks.en_nouns = [
     "ru": "лес",
     "uk": "ліс",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18072,7 +19987,9 @@ window.decks.en_nouns = [
     "ru": "дерево",
     "uk": "дерево",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18093,7 +20010,9 @@ window.decks.en_nouns = [
     "ru": "река",
     "uk": "річка",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18114,7 +20033,9 @@ window.decks.en_nouns = [
     "ru": "озеро",
     "uk": "озеро",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18135,7 +20056,9 @@ window.decks.en_nouns = [
     "ru": "море",
     "uk": "море",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18156,7 +20079,10 @@ window.decks.en_nouns = [
     "ru": "пляж",
     "uk": "пляж",
     "level": "A1",
-    "topics": ["nature", "travel"],
+    "topics": [
+      "nature",
+      "travel"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18177,7 +20103,9 @@ window.decks.en_nouns = [
     "ru": "гора",
     "uk": "гора",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18198,7 +20126,9 @@ window.decks.en_nouns = [
     "ru": "долина",
     "uk": "долина",
     "level": "A2",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18219,7 +20149,9 @@ window.decks.en_nouns = [
     "ru": "небо",
     "uk": "небо",
     "level": "A1",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18240,7 +20172,10 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "A1",
-    "topics": ["nature", "weather"],
+    "topics": [
+      "nature",
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18261,7 +20196,9 @@ window.decks.en_nouns = [
     "ru": "дождь",
     "uk": "дощ",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18282,7 +20219,9 @@ window.decks.en_nouns = [
     "ru": "снег",
     "uk": "сніг",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18303,7 +20242,9 @@ window.decks.en_nouns = [
     "ru": "ветер",
     "uk": "вітер",
     "level": "A1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18324,7 +20265,9 @@ window.decks.en_nouns = [
     "ru": "шторм",
     "uk": "буря",
     "level": "B1",
-    "topics": ["weather"],
+    "topics": [
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18345,7 +20288,10 @@ window.decks.en_nouns = [
     "ru": "солнце",
     "uk": "сонце",
     "level": "A1",
-    "topics": ["nature", "weather"],
+    "topics": [
+      "nature",
+      "weather"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18366,7 +20312,9 @@ window.decks.en_nouns = [
     "ru": "тень",
     "uk": "тінь",
     "level": "A2",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18387,7 +20335,9 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18408,7 +20358,9 @@ window.decks.en_nouns = [
     "ru": "луна",
     "uk": "місяць",
     "level": "A2",
-    "topics": ["nature"],
+    "topics": [
+      "nature"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18429,7 +20381,9 @@ window.decks.en_nouns = [
     "ru": "техника",
     "uk": "техніка",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18450,7 +20404,9 @@ window.decks.en_nouns = [
     "ru": "машина",
     "uk": "машина",
     "level": "A2",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18471,7 +20427,9 @@ window.decks.en_nouns = [
     "ru": "устройство",
     "uk": "пристрій",
     "level": "A2",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18492,7 +20450,9 @@ window.decks.en_nouns = [
     "ru": "установка",
     "uk": "установка",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18513,7 +20473,9 @@ window.decks.en_nouns = [
     "ru": "двигатель",
     "uk": "двигун",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18534,7 +20496,10 @@ window.decks.en_nouns = [
     "ru": "винт",
     "uk": "гвинт",
     "level": "A2",
-    "topics": ["technology", "tools"],
+    "topics": [
+      "tools",
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18555,7 +20520,10 @@ window.decks.en_nouns = [
     "ru": "гайка",
     "uk": "гайка",
     "level": "A2",
-    "topics": ["technology", "tools"],
+    "topics": [
+      "tools",
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18576,7 +20544,9 @@ window.decks.en_nouns = [
     "ru": "плоскогубцы",
     "uk": "кліщі",
     "level": "A2",
-    "topics": ["tools"],
+    "topics": [
+      "tools"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18597,7 +20567,9 @@ window.decks.en_nouns = [
     "ru": "молоток",
     "uk": "молоток",
     "level": "A1",
-    "topics": ["tools"],
+    "topics": [
+      "tools"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18618,7 +20590,9 @@ window.decks.en_nouns = [
     "ru": "отвёртка",
     "uk": "викрутка",
     "level": "A2",
-    "topics": ["tools"],
+    "topics": [
+      "tools"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18639,7 +20613,9 @@ window.decks.en_nouns = [
     "ru": "экономика",
     "uk": "економіка",
     "level": "B1",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18660,7 +20636,9 @@ window.decks.en_nouns = [
     "ru": "торговля",
     "uk": "торгівля",
     "level": "B1",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18681,7 +20659,10 @@ window.decks.en_nouns = [
     "ru": "магазин",
     "uk": "магазин",
     "level": "A1",
-    "topics": ["economy", "shopping"],
+    "topics": [
+      "economy",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18702,7 +20683,10 @@ window.decks.en_nouns = [
     "ru": "рынок",
     "uk": "ринок",
     "level": "A2",
-    "topics": ["economy", "shopping"],
+    "topics": [
+      "economy",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18723,7 +20707,9 @@ window.decks.en_nouns = [
     "ru": "спрос",
     "uk": "попит",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18744,7 +20730,9 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18765,7 +20753,9 @@ window.decks.en_nouns = [
     "ru": "прибыль",
     "uk": "прибуток",
     "level": "B1",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18786,7 +20776,9 @@ window.decks.en_nouns = [
     "ru": "убыток",
     "uk": "втрата",
     "level": "B1",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18807,7 +20799,10 @@ window.decks.en_nouns = [
     "ru": "налог",
     "uk": "податок",
     "level": "B1",
-    "topics": ["economy", "law"],
+    "topics": [
+      "economy",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18828,7 +20823,9 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18849,7 +20846,10 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": ["finance", "shopping"],
+    "topics": [
+      "finance",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18870,7 +20870,9 @@ window.decks.en_nouns = [
     "ru": "квитанция",
     "uk": "квитанція",
     "level": "A2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18891,7 +20893,9 @@ window.decks.en_nouns = [
     "ru": "перевод",
     "uk": "переказ",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18912,7 +20916,9 @@ window.decks.en_nouns = [
     "ru": "счёт",
     "uk": "рахунок",
     "level": "A2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18933,7 +20939,10 @@ window.decks.en_nouns = [
     "ru": "карта",
     "uk": "картка",
     "level": "A2",
-    "topics": ["daily life", "finance"],
+    "topics": [
+      "finance",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18954,7 +20963,9 @@ window.decks.en_nouns = [
     "ru": "кредит",
     "uk": "кредит",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18975,7 +20986,9 @@ window.decks.en_nouns = [
     "ru": "долги",
     "uk": "борги",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -18996,7 +21009,9 @@ window.decks.en_nouns = [
     "ru": "взнос",
     "uk": "внесок",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19017,7 +21032,9 @@ window.decks.en_nouns = [
     "ru": "выплата",
     "uk": "виплата",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19038,7 +21055,9 @@ window.decks.en_nouns = [
     "ru": "процентная ставка",
     "uk": "відсоткова ставка",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19059,7 +21078,9 @@ window.decks.en_nouns = [
     "ru": "политика",
     "uk": "політика",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19080,7 +21101,9 @@ window.decks.en_nouns = [
     "ru": "правительство",
     "uk": "уряд",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19101,7 +21124,9 @@ window.decks.en_nouns = [
     "ru": "парламент",
     "uk": "парламент",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19122,7 +21147,9 @@ window.decks.en_nouns = [
     "ru": "выборы",
     "uk": "вибори",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19143,7 +21170,9 @@ window.decks.en_nouns = [
     "ru": "партия",
     "uk": "партія",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19164,7 +21193,10 @@ window.decks.en_nouns = [
     "ru": "закон",
     "uk": "закон",
     "level": "B1",
-    "topics": ["law", "politics"],
+    "topics": [
+      "law",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19185,7 +21217,10 @@ window.decks.en_nouns = [
     "ru": "постановление",
     "uk": "постанова",
     "level": "B2",
-    "topics": ["law", "politics"],
+    "topics": [
+      "law",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19206,7 +21241,10 @@ window.decks.en_nouns = [
     "ru": "администрация",
     "uk": "адміністрація",
     "level": "B1",
-    "topics": ["law", "organization"],
+    "topics": [
+      "law",
+      "organization"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19227,7 +21265,10 @@ window.decks.en_nouns = [
     "ru": "ведомство",
     "uk": "установа",
     "level": "B1",
-    "topics": ["bureaucracy", "law"],
+    "topics": [
+      "law",
+      "bureaucracy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19248,7 +21289,10 @@ window.decks.en_nouns = [
     "ru": "голосование",
     "uk": "голосування",
     "level": "B1",
-    "topics": ["communication", "politics"],
+    "topics": [
+      "politics",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19269,7 +21313,9 @@ window.decks.en_nouns = [
     "ru": "культура",
     "uk": "культура",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19290,7 +21336,9 @@ window.decks.en_nouns = [
     "ru": "традиция",
     "uk": "традиція",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19311,7 +21359,9 @@ window.decks.en_nouns = [
     "ru": "обычай",
     "uk": "звичай",
     "level": "B1",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19332,7 +21382,9 @@ window.decks.en_nouns = [
     "ru": "праздник",
     "uk": "свято",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19353,7 +21405,9 @@ window.decks.en_nouns = [
     "ru": "празднование",
     "uk": "святкування",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19374,7 +21428,9 @@ window.decks.en_nouns = [
     "ru": "праздничный день",
     "uk": "святковий день",
     "level": "A2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19395,7 +21451,10 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B1",
-    "topics": ["daily life", "psychology"],
+    "topics": [
+      "psychology",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19416,7 +21475,9 @@ window.decks.en_nouns = [
     "ru": "нравы",
     "uk": "звичаї",
     "level": "B2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19437,7 +21498,9 @@ window.decks.en_nouns = [
     "ru": "молодожёны",
     "uk": "молодята",
     "level": "B1",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19458,7 +21521,9 @@ window.decks.en_nouns = [
     "ru": "церемония",
     "uk": "церемонія",
     "level": "B2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19479,7 +21544,9 @@ window.decks.en_nouns = [
     "ru": "коммуникация",
     "uk": "комунікація",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19500,7 +21567,9 @@ window.decks.en_nouns = [
     "ru": "разговор",
     "uk": "розмова",
     "level": "A2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19521,7 +21590,10 @@ window.decks.en_nouns = [
     "ru": "произношение",
     "uk": "вимова",
     "level": "B1",
-    "topics": ["communication", "language"],
+    "topics": [
+      "language",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19542,7 +21614,9 @@ window.decks.en_nouns = [
     "ru": "ударение",
     "uk": "наголос",
     "level": "B1",
-    "topics": ["language"],
+    "topics": [
+      "language"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19563,7 +21637,9 @@ window.decks.en_nouns = [
     "ru": "речь",
     "uk": "промова",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19584,7 +21660,10 @@ window.decks.en_nouns = [
     "ru": "доклад",
     "uk": "доповідь",
     "level": "B1",
-    "topics": ["communication", "science"],
+    "topics": [
+      "communication",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19605,7 +21684,10 @@ window.decks.en_nouns = [
     "ru": "конференция",
     "uk": "конференція",
     "level": "B1",
-    "topics": ["science", "work"],
+    "topics": [
+      "work",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19626,7 +21708,9 @@ window.decks.en_nouns = [
     "ru": "протокол",
     "uk": "протокол",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19647,7 +21731,9 @@ window.decks.en_nouns = [
     "ru": "приглашение",
     "uk": "запрошення",
     "level": "A2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19668,7 +21754,9 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19689,7 +21777,9 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19710,7 +21800,9 @@ window.decks.en_nouns = [
     "ru": "уточняющий вопрос",
     "uk": "уточнююче запитання",
     "level": "B2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19731,7 +21823,9 @@ window.decks.en_nouns = [
     "ru": "справка",
     "uk": "довідка",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19752,7 +21846,9 @@ window.decks.en_nouns = [
     "ru": "одобрение",
     "uk": "схвалення",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19773,7 +21869,9 @@ window.decks.en_nouns = [
     "ru": "разногласие",
     "uk": "розбіжність у думках",
     "level": "B2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19794,7 +21892,9 @@ window.decks.en_nouns = [
     "ru": "компромисс",
     "uk": "компроміс",
     "level": "B1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19815,7 +21915,10 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B1",
-    "topics": ["ethics", "work"],
+    "topics": [
+      "work",
+      "ethics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19836,7 +21939,10 @@ window.decks.en_nouns = [
     "ru": "компетенция",
     "uk": "компетенція",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19857,7 +21963,9 @@ window.decks.en_nouns = [
     "ru": "доверенность",
     "uk": "довіреність",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19878,7 +21986,9 @@ window.decks.en_nouns = [
     "ru": "подпись",
     "uk": "підпис",
     "level": "A2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19899,7 +22009,10 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "мета",
     "level": "A2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19920,7 +22033,9 @@ window.decks.en_nouns = [
     "ru": "цель",
     "uk": "призначення",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19941,7 +22056,10 @@ window.decks.en_nouns = [
     "ru": "задача",
     "uk": "завдання",
     "level": "A2",
-    "topics": ["learning", "work"],
+    "topics": [
+      "work",
+      "learning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19962,7 +22080,10 @@ window.decks.en_nouns = [
     "ru": "сложная задача",
     "uk": "виклик",
     "level": "B2",
-    "topics": ["psychology", "work"],
+    "topics": [
+      "work",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -19983,7 +22104,10 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "A2",
-    "topics": ["logic", "work"],
+    "topics": [
+      "logic",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20004,7 +22128,10 @@ window.decks.en_nouns = [
     "ru": "индикатор прогресса",
     "uk": "індикатор прогресу",
     "level": "B1",
-    "topics": ["it", "ui"],
+    "topics": [
+      "it",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20025,7 +22152,10 @@ window.decks.en_nouns = [
     "ru": "срок",
     "uk": "строк",
     "level": "B1",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20046,7 +22176,10 @@ window.decks.en_nouns = [
     "ru": "встреча",
     "uk": "зустріч",
     "level": "A2",
-    "topics": ["daily life", "work"],
+    "topics": [
+      "work",
+      "daily life"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20067,7 +22200,10 @@ window.decks.en_nouns = [
     "ru": "расписание",
     "uk": "розклад",
     "level": "B1",
-    "topics": ["time", "work"],
+    "topics": [
+      "work",
+      "time"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20088,7 +22224,10 @@ window.decks.en_nouns = [
     "ru": "приоритет",
     "uk": "пріоритет",
     "level": "B1",
-    "topics": ["time", "work"],
+    "topics": [
+      "work",
+      "time"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20109,7 +22248,9 @@ window.decks.en_nouns = [
     "ru": "преимущество",
     "uk": "перевага",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20130,7 +22271,9 @@ window.decks.en_nouns = [
     "ru": "недостаток",
     "uk": "недолік",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20151,7 +22294,10 @@ window.decks.en_nouns = [
     "ru": "подсказка",
     "uk": "підказка",
     "level": "B1",
-    "topics": ["communication", "ui"],
+    "topics": [
+      "communication",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20172,7 +22318,10 @@ window.decks.en_nouns = [
     "ru": "ошибка",
     "uk": "помилка",
     "level": "A2",
-    "topics": ["general", "it"],
+    "topics": [
+      "general",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20193,7 +22342,9 @@ window.decks.en_nouns = [
     "ru": "исключение",
     "uk": "виняток",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20214,7 +22365,9 @@ window.decks.en_nouns = [
     "ru": "регулярность",
     "uk": "регулярність",
     "level": "B2",
-    "topics": ["time"],
+    "topics": [
+      "time"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20235,7 +22388,9 @@ window.decks.en_nouns = [
     "ru": "случайность",
     "uk": "випадковість",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20256,7 +22411,9 @@ window.decks.en_nouns = [
     "ru": "уверенность",
     "uk": "упевненість",
     "level": "B2",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20277,7 +22434,9 @@ window.decks.en_nouns = [
     "ru": "сомнение",
     "uk": "сумнів",
     "level": "B1",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20298,7 +22457,10 @@ window.decks.en_nouns = [
     "ru": "решение",
     "uk": "рішення",
     "level": "A2",
-    "topics": ["psychology", "work"],
+    "topics": [
+      "psychology",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20319,7 +22481,9 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B2",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20340,7 +22504,10 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B1",
-    "topics": ["law", "logic"],
+    "topics": [
+      "logic",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20361,7 +22528,9 @@ window.decks.en_nouns = [
     "ru": "эффект",
     "uk": "дія",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20382,7 +22551,9 @@ window.decks.en_nouns = [
     "ru": "причина",
     "uk": "причина",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20403,7 +22574,9 @@ window.decks.en_nouns = [
     "ru": "последствие",
     "uk": "наслідок",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20424,7 +22597,9 @@ window.decks.en_nouns = [
     "ru": "обзор",
     "uk": "огляд",
     "level": "B1",
-    "topics": ["information"],
+    "topics": [
+      "information"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20445,7 +22620,10 @@ window.decks.en_nouns = [
     "ru": "представление",
     "uk": "представлення",
     "level": "B1",
-    "topics": ["information", "it"],
+    "topics": [
+      "information",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20466,7 +22644,10 @@ window.decks.en_nouns = [
     "ru": "выбор",
     "uk": "вибір",
     "level": "A2",
-    "topics": ["general", "ui"],
+    "topics": [
+      "general",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20487,7 +22668,9 @@ window.decks.en_nouns = [
     "ru": "комбинация",
     "uk": "комбінація",
     "level": "B1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20508,7 +22691,10 @@ window.decks.en_nouns = [
     "ru": "соответствие",
     "uk": "віднесення",
     "level": "B2",
-    "topics": ["it", "logic"],
+    "topics": [
+      "logic",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20529,7 +22715,9 @@ window.decks.en_nouns = [
     "ru": "список избранного",
     "uk": "список улюблених",
     "level": "A2",
-    "topics": ["ui"],
+    "topics": [
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20550,7 +22738,10 @@ window.decks.en_nouns = [
     "ru": "сердце",
     "uk": "серце",
     "level": "A2",
-    "topics": ["symbol", "ui"],
+    "topics": [
+      "symbol",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20571,7 +22762,10 @@ window.decks.en_nouns = [
     "ru": "звезда",
     "uk": "зірка",
     "level": "A2",
-    "topics": ["symbol", "ui"],
+    "topics": [
+      "symbol",
+      "ui"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20592,7 +22786,9 @@ window.decks.en_nouns = [
     "ru": "ступень",
     "uk": "щабель",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20613,7 +22809,9 @@ window.decks.en_nouns = [
     "ru": "порог",
     "uk": "поріг",
     "level": "B2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20634,7 +22832,9 @@ window.decks.en_nouns = [
     "ru": "граница",
     "uk": "межа",
     "level": "A2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20655,7 +22855,10 @@ window.decks.en_nouns = [
     "ru": "столбец",
     "uk": "стовпчик",
     "level": "B1",
-    "topics": ["it", "tables"],
+    "topics": [
+      "it",
+      "tables"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20676,7 +22879,10 @@ window.decks.en_nouns = [
     "ru": "строка",
     "uk": "рядок",
     "level": "B1",
-    "topics": ["it", "tables"],
+    "topics": [
+      "it",
+      "tables"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20697,7 +22903,10 @@ window.decks.en_nouns = [
     "ru": "запись",
     "uk": "запис",
     "level": "B1",
-    "topics": ["data", "it"],
+    "topics": [
+      "it",
+      "data"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20718,7 +22927,10 @@ window.decks.en_nouns = [
     "ru": "набор данных",
     "uk": "набір даних",
     "level": "B2",
-    "topics": ["data", "it"],
+    "topics": [
+      "it",
+      "data"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20739,7 +22951,9 @@ window.decks.en_nouns = [
     "ru": "резервное копирование",
     "uk": "резервне копіювання",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20760,7 +22974,9 @@ window.decks.en_nouns = [
     "ru": "восстановление",
     "uk": "відновлення",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20781,7 +22997,9 @@ window.decks.en_nouns = [
     "ru": "версионирование",
     "uk": "версіонування",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20802,7 +23020,9 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20823,7 +23043,10 @@ window.decks.en_nouns = [
     "ru": "стабильность",
     "uk": "стабільність",
     "level": "B2",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20844,7 +23067,9 @@ window.decks.en_nouns = [
     "ru": "расширение",
     "uk": "розширення",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20865,7 +23090,9 @@ window.decks.en_nouns = [
     "ru": "модуль",
     "uk": "модуль",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20886,7 +23113,9 @@ window.decks.en_nouns = [
     "ru": "интерфейс",
     "uk": "інтерфейс",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20907,7 +23136,10 @@ window.decks.en_nouns = [
     "ru": "документация",
     "uk": "документація",
     "level": "B1",
-    "topics": ["it", "work"],
+    "topics": [
+      "it",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20928,7 +23160,10 @@ window.decks.en_nouns = [
     "ru": "публикация",
     "uk": "публікація",
     "level": "B2",
-    "topics": ["it", "media"],
+    "topics": [
+      "it",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20949,7 +23184,9 @@ window.decks.en_nouns = [
     "ru": "население",
     "uk": "населення",
     "level": "B1",
-    "topics": ["society"],
+    "topics": [
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20970,7 +23207,10 @@ window.decks.en_nouns = [
     "ru": "равноправие",
     "uk": "рівноправність",
     "level": "B2",
-    "topics": ["law", "society"],
+    "topics": [
+      "society",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -20991,7 +23231,10 @@ window.decks.en_nouns = [
     "ru": "обязательство",
     "uk": "зобов'язання",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21012,7 +23255,10 @@ window.decks.en_nouns = [
     "ru": "ущерб",
     "uk": "обмеження",
     "level": "B2",
-    "topics": ["health", "law"],
+    "topics": [
+      "law",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21033,7 +23279,10 @@ window.decks.en_nouns = [
     "ru": "ограничение",
     "uk": "обмеження",
     "level": "B1",
-    "topics": ["general", "law"],
+    "topics": [
+      "law",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21054,7 +23303,9 @@ window.decks.en_nouns = [
     "ru": "толерантность",
     "uk": "толерантність",
     "level": "B1",
-    "topics": ["society"],
+    "topics": [
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21075,7 +23326,9 @@ window.decks.en_nouns = [
     "ru": "разнообразие",
     "uk": "різноманіття",
     "level": "B1",
-    "topics": ["society"],
+    "topics": [
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21096,7 +23349,9 @@ window.decks.en_nouns = [
     "ru": "интеграция",
     "uk": "інтеграція",
     "level": "B1",
-    "topics": ["society"],
+    "topics": [
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21117,7 +23372,10 @@ window.decks.en_nouns = [
     "ru": "участие",
     "uk": "участь",
     "level": "B2",
-    "topics": ["society", "work"],
+    "topics": [
+      "society",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21138,7 +23396,9 @@ window.decks.en_nouns = [
     "ru": "обоснование",
     "uk": "обґрунтування",
     "level": "B2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21159,7 +23419,9 @@ window.decks.en_nouns = [
     "ru": "заявление о согласии",
     "uk": "заява про згоду",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21180,7 +23442,10 @@ window.decks.en_nouns = [
     "ru": "требование",
     "uk": "вимога",
     "level": "B1",
-    "topics": ["it", "work"],
+    "topics": [
+      "work",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21201,7 +23466,10 @@ window.decks.en_nouns = [
     "ru": "процедура",
     "uk": "процедура",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21222,7 +23490,9 @@ window.decks.en_nouns = [
     "ru": "учреждение",
     "uk": "установа",
     "level": "B1",
-    "topics": ["society"],
+    "topics": [
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21243,7 +23513,9 @@ window.decks.en_nouns = [
     "ru": "община",
     "uk": "громада",
     "level": "B1",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21264,7 +23536,9 @@ window.decks.en_nouns = [
     "ru": "городской совет",
     "uk": "міська рада",
     "level": "B2",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21285,7 +23559,10 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": ["finance", "politics"],
+    "topics": [
+      "finance",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21306,7 +23583,9 @@ window.decks.en_nouns = [
     "ru": "проведение",
     "uk": "проведення",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21327,7 +23606,10 @@ window.decks.en_nouns = [
     "ru": "затраты",
     "uk": "витрати",
     "level": "B2",
-    "topics": ["finance", "work"],
+    "topics": [
+      "work",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21348,7 +23630,10 @@ window.decks.en_nouns = [
     "ru": "доход",
     "uk": "дохід",
     "level": "B2",
-    "topics": ["economy", "finance"],
+    "topics": [
+      "finance",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21369,7 +23654,9 @@ window.decks.en_nouns = [
     "ru": "оборот",
     "uk": "обіг",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21390,7 +23677,9 @@ window.decks.en_nouns = [
     "ru": "доставка",
     "uk": "доставка",
     "level": "B2",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21411,7 +23700,10 @@ window.decks.en_nouns = [
     "ru": "оснащение",
     "uk": "оснащення",
     "level": "B1",
-    "topics": ["technology", "work"],
+    "topics": [
+      "tech",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21432,7 +23724,10 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": ["society", "work"],
+    "topics": [
+      "work",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21453,7 +23748,10 @@ window.decks.en_nouns = [
     "ru": "приложение",
     "uk": "застосунок",
     "level": "B1",
-    "topics": ["general", "it"],
+    "topics": [
+      "it",
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21474,7 +23772,9 @@ window.decks.en_nouns = [
     "ru": "комплектация",
     "uk": "комплектація",
     "level": "B2",
-    "topics": ["technology"],
+    "topics": [
+      "tech"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21495,7 +23795,10 @@ window.decks.en_nouns = [
     "ru": "безопасность данных",
     "uk": "безпека даних",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21516,7 +23819,10 @@ window.decks.en_nouns = [
     "ru": "защита данных",
     "uk": "захист даних",
     "level": "B2",
-    "topics": ["it", "law"],
+    "topics": [
+      "it",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21537,7 +23843,9 @@ window.decks.en_nouns = [
     "ru": "программное обеспечение",
     "uk": "програмне забезпечення",
     "level": "A2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21558,7 +23866,9 @@ window.decks.en_nouns = [
     "ru": "аппаратное обеспечение",
     "uk": "апаратне забезпечення",
     "level": "A2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21579,7 +23889,10 @@ window.decks.en_nouns = [
     "ru": "пропускная способность",
     "uk": "пропускна здатність",
     "level": "B2",
-    "topics": ["it", "network"],
+    "topics": [
+      "it",
+      "network"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21600,7 +23913,10 @@ window.decks.en_nouns = [
     "ru": "шифрование",
     "uk": "шифрування",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21621,7 +23937,10 @@ window.decks.en_nouns = [
     "ru": "передача",
     "uk": "передача",
     "level": "B1",
-    "topics": ["it", "media"],
+    "topics": [
+      "it",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21642,7 +23961,9 @@ window.decks.en_nouns = [
     "ru": "заболевание",
     "uk": "захворювання",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21663,7 +23984,9 @@ window.decks.en_nouns = [
     "ru": "профилактика",
     "uk": "профілактика",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21684,7 +24007,9 @@ window.decks.en_nouns = [
     "ru": "диагноз",
     "uk": "діагноз",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21705,7 +24030,9 @@ window.decks.en_nouns = [
     "ru": "терапия",
     "uk": "терапія",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21726,7 +24053,9 @@ window.decks.en_nouns = [
     "ru": "прививка",
     "uk": "щеплення",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21747,7 +24076,9 @@ window.decks.en_nouns = [
     "ru": "выздоровление",
     "uk": "одужання",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21768,7 +24099,10 @@ window.decks.en_nouns = [
     "ru": "нагрузка",
     "uk": "навантаження",
     "level": "B2",
-    "topics": ["health", "work"],
+    "topics": [
+      "work",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21789,7 +24123,9 @@ window.decks.en_nouns = [
     "ru": "влияние",
     "uk": "вплив",
     "level": "B2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21810,7 +24146,9 @@ window.decks.en_nouns = [
     "ru": "кровяное давление",
     "uk": "артеріальний тиск",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21831,7 +24169,10 @@ window.decks.en_nouns = [
     "ru": "знание",
     "uk": "знання",
     "level": "B2",
-    "topics": ["psychology", "science"],
+    "topics": [
+      "science",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21852,7 +24193,9 @@ window.decks.en_nouns = [
     "ru": "исследование",
     "uk": "дослідження",
     "level": "B1",
-    "topics": ["science"],
+    "topics": [
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21873,7 +24216,9 @@ window.decks.en_nouns = [
     "ru": "изменение климата",
     "uk": "зміна клімату",
     "level": "B1",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21894,7 +24239,9 @@ window.decks.en_nouns = [
     "ru": "выброс",
     "uk": "викид",
     "level": "B2",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21915,7 +24262,9 @@ window.decks.en_nouns = [
     "ru": "эмиссия",
     "uk": "викид",
     "level": "B2",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21936,7 +24285,10 @@ window.decks.en_nouns = [
     "ru": "потребление",
     "uk": "споживання",
     "level": "B1",
-    "topics": ["economy", "environment"],
+    "topics": [
+      "environment",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21957,7 +24309,10 @@ window.decks.en_nouns = [
     "ru": "выработка",
     "uk": "виробництво",
     "level": "B2",
-    "topics": ["economy", "environment"],
+    "topics": [
+      "environment",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21978,7 +24333,10 @@ window.decks.en_nouns = [
     "ru": "снабжение",
     "uk": "забезпечення",
     "level": "B2",
-    "topics": ["economy", "health"],
+    "topics": [
+      "economy",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -21999,7 +24357,10 @@ window.decks.en_nouns = [
     "ru": "экономия",
     "uk": "економія",
     "level": "B2",
-    "topics": ["economy", "environment"],
+    "topics": [
+      "economy",
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22020,7 +24381,9 @@ window.decks.en_nouns = [
     "ru": "раздельный сбор отходов",
     "uk": "сортування відходів",
     "level": "B1",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22041,7 +24404,9 @@ window.decks.en_nouns = [
     "ru": "переработка",
     "uk": "переробка",
     "level": "B2",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22062,7 +24427,9 @@ window.decks.en_nouns = [
     "ru": "устойчивое развитие",
     "uk": "сталий розвиток",
     "level": "B2",
-    "topics": ["environment"],
+    "topics": [
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22083,7 +24450,9 @@ window.decks.en_nouns = [
     "ru": "рецессия",
     "uk": "рецесія",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22104,7 +24473,9 @@ window.decks.en_nouns = [
     "ru": "благосостояние",
     "uk": "добробут",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22125,7 +24496,9 @@ window.decks.en_nouns = [
     "ru": "имущество",
     "uk": "майно",
     "level": "B2",
-    "topics": ["economy"],
+    "topics": [
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22146,7 +24519,9 @@ window.decks.en_nouns = [
     "ru": "облигация",
     "uk": "облігація",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22167,7 +24542,9 @@ window.decks.en_nouns = [
     "ru": "доходность",
     "uk": "дохідність",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22188,7 +24565,9 @@ window.decks.en_nouns = [
     "ru": "резерв",
     "uk": "резерв",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22209,7 +24588,9 @@ window.decks.en_nouns = [
     "ru": "иск",
     "uk": "позов",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22230,7 +24611,10 @@ window.decks.en_nouns = [
     "ru": "обязательное разрешение",
     "uk": "обов'язковий дозвіл",
     "level": "C1",
-    "topics": ["bureaucracy", "law"],
+    "topics": [
+      "law",
+      "bureaucracy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22251,7 +24635,10 @@ window.decks.en_nouns = [
     "ru": "соглашение",
     "uk": "угода",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22272,7 +24659,9 @@ window.decks.en_nouns = [
     "ru": "подтверждение",
     "uk": "підтвердження",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22293,7 +24682,9 @@ window.decks.en_nouns = [
     "ru": "доказательная база",
     "uk": "доказова база",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22314,7 +24705,9 @@ window.decks.en_nouns = [
     "ru": "приговор",
     "uk": "вирок",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22335,7 +24728,9 @@ window.decks.en_nouns = [
     "ru": "апелляция",
     "uk": "апеляція",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22356,7 +24751,9 @@ window.decks.en_nouns = [
     "ru": "образование",
     "uk": "освіта",
     "level": "A2",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22377,7 +24774,10 @@ window.decks.en_nouns = [
     "ru": "повышение квалификации",
     "uk": "підвищення кваліфікації",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "education",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22398,7 +24798,10 @@ window.decks.en_nouns = [
     "ru": "повышение квалификации",
     "uk": "підвищення кваліфікації",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "education",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22419,7 +24822,9 @@ window.decks.en_nouns = [
     "ru": "учебный план",
     "uk": "навчальний план",
     "level": "B1",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22440,7 +24845,9 @@ window.decks.en_nouns = [
     "ru": "спектакль",
     "uk": "вистава",
     "level": "B1",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22461,7 +24868,9 @@ window.decks.en_nouns = [
     "ru": "литературное чтение",
     "uk": "читання",
     "level": "B2",
-    "topics": ["culture"],
+    "topics": [
+      "culture"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22482,7 +24891,9 @@ window.decks.en_nouns = [
     "ru": "вступительный экзамен",
     "uk": "вступний іспит",
     "level": "B2",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22503,7 +24914,9 @@ window.decks.en_nouns = [
     "ru": "вакансия",
     "uk": "оголошення про вакансію",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22524,7 +24937,9 @@ window.decks.en_nouns = [
     "ru": "введение в работу",
     "uk": "впровадження в роботу",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22545,7 +24960,9 @@ window.decks.en_nouns = [
     "ru": "сменная работа",
     "uk": "позмінна робота",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22566,7 +24983,9 @@ window.decks.en_nouns = [
     "ru": "замещение",
     "uk": "заміна",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22587,7 +25006,10 @@ window.decks.en_nouns = [
     "ru": "совместимость",
     "uk": "сумісність",
     "level": "B2",
-    "topics": ["society", "work"],
+    "topics": [
+      "work",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22608,7 +25030,9 @@ window.decks.en_nouns = [
     "ru": "руководитель",
     "uk": "керівник",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22629,7 +25053,9 @@ window.decks.en_nouns = [
     "ru": "специалист",
     "uk": "фахівець",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22650,7 +25076,10 @@ window.decks.en_nouns = [
     "ru": "рабочая нагрузка",
     "uk": "робоче навантаження",
     "level": "B2",
-    "topics": ["health", "work"],
+    "topics": [
+      "work",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22671,7 +25100,10 @@ window.decks.en_nouns = [
     "ru": "зона ответственности",
     "uk": "зона відповідальності",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22692,7 +25124,10 @@ window.decks.en_nouns = [
     "ru": "готовность",
     "uk": "готовність",
     "level": "B1",
-    "topics": ["psychology", "work"],
+    "topics": [
+      "work",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22713,7 +25148,9 @@ window.decks.en_nouns = [
     "ru": "свойство",
     "uk": "властивість",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22734,7 +25171,10 @@ window.decks.en_nouns = [
     "ru": "предпосылка",
     "uk": "передумова",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "work",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22755,7 +25195,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B2",
-    "topics": ["communication", "work"],
+    "topics": [
+      "work",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22776,7 +25219,9 @@ window.decks.en_nouns = [
     "ru": "привычка",
     "uk": "звичка",
     "level": "B1",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22797,7 +25242,10 @@ window.decks.en_nouns = [
     "ru": "зависимость",
     "uk": "залежність",
     "level": "B2",
-    "topics": ["psychology", "society"],
+    "topics": [
+      "psychology",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22818,7 +25266,10 @@ window.decks.en_nouns = [
     "ru": "независимость",
     "uk": "незалежність",
     "level": "B2",
-    "topics": ["psychology", "society"],
+    "topics": [
+      "society",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22839,7 +25290,10 @@ window.decks.en_nouns = [
     "ru": "безответственность",
     "uk": "безвідповідальність",
     "level": "B2",
-    "topics": ["personality", "society"],
+    "topics": [
+      "personality",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22860,7 +25314,10 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "згода",
     "level": "B1",
-    "topics": ["communication", "law"],
+    "topics": [
+      "communication",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22881,7 +25338,10 @@ window.decks.en_nouns = [
     "ru": "отказ",
     "uk": "відмова",
     "level": "B1",
-    "topics": ["communication", "law"],
+    "topics": [
+      "communication",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22902,7 +25362,10 @@ window.decks.en_nouns = [
     "ru": "платформа",
     "uk": "платформа",
     "level": "B1",
-    "topics": ["business", "it"],
+    "topics": [
+      "it",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22923,7 +25386,9 @@ window.decks.en_nouns = [
     "ru": "операционная система",
     "uk": "операційна система",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22944,7 +25409,9 @@ window.decks.en_nouns = [
     "ru": "программный интерфейс",
     "uk": "програмний інтерфейс",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22965,7 +25432,9 @@ window.decks.en_nouns = [
     "ru": "облако",
     "uk": "хмара",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -22986,7 +25455,9 @@ window.decks.en_nouns = [
     "ru": "сервер",
     "uk": "сервер",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23007,7 +25478,10 @@ window.decks.en_nouns = [
     "ru": "поставщик услуг",
     "uk": "постачальник послуг",
     "level": "B2",
-    "topics": ["business", "it"],
+    "topics": [
+      "business",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23028,7 +25502,10 @@ window.decks.en_nouns = [
     "ru": "технология шифрования",
     "uk": "технологія шифрування",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23049,7 +25526,10 @@ window.decks.en_nouns = [
     "ru": "аутентификация",
     "uk": "автентифікація",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23070,7 +25550,10 @@ window.decks.en_nouns = [
     "ru": "авторизация",
     "uk": "авторизація",
     "level": "B2",
-    "topics": ["it", "security"],
+    "topics": [
+      "it",
+      "security"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23091,7 +25574,9 @@ window.decks.en_nouns = [
     "ru": "база данных",
     "uk": "база даних",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23112,7 +25597,9 @@ window.decks.en_nouns = [
     "ru": "запрос к базе данных",
     "uk": "запит до бази даних",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23133,7 +25620,10 @@ window.decks.en_nouns = [
     "ru": "устойчивость к отказам",
     "uk": "відмовостійкість",
     "level": "C1",
-    "topics": ["engineering", "it"],
+    "topics": [
+      "it",
+      "engineering"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23154,7 +25644,9 @@ window.decks.en_nouns = [
     "ru": "журналирование",
     "uk": "журналювання",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23175,7 +25667,9 @@ window.decks.en_nouns = [
     "ru": "распределение нагрузки",
     "uk": "балансування навантаження",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23196,7 +25690,9 @@ window.decks.en_nouns = [
     "ru": "задержка",
     "uk": "затримка",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23217,7 +25713,9 @@ window.decks.en_nouns = [
     "ru": "ограничение пропускной способности",
     "uk": "обмеження пропускної здатності",
     "level": "C1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23238,7 +25736,9 @@ window.decks.en_nouns = [
     "ru": "описание интерфейса",
     "uk": "опис інтерфейсу",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23259,7 +25759,9 @@ window.decks.en_nouns = [
     "ru": "исходный код",
     "uk": "вихідний код",
     "level": "B1",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23280,7 +25782,10 @@ window.decks.en_nouns = [
     "ru": "коммит",
     "uk": "коміт",
     "level": "B2",
-    "topics": ["dev", "it"],
+    "topics": [
+      "it",
+      "dev"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23301,7 +25806,10 @@ window.decks.en_nouns = [
     "ru": "пулл-реквест",
     "uk": "запит на злиття",
     "level": "B2",
-    "topics": ["dev", "it"],
+    "topics": [
+      "it",
+      "dev"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23322,7 +25830,10 @@ window.decks.en_nouns = [
     "ru": "репозиторий",
     "uk": "репозиторій",
     "level": "B1",
-    "topics": ["dev", "it"],
+    "topics": [
+      "it",
+      "dev"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23343,7 +25854,10 @@ window.decks.en_nouns = [
     "ru": "пайплайн",
     "uk": "пайплайн",
     "level": "B2",
-    "topics": ["devops", "it"],
+    "topics": [
+      "it",
+      "devops"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23364,7 +25878,10 @@ window.decks.en_nouns = [
     "ru": "развёртывание",
     "uk": "розгортання",
     "level": "B2",
-    "topics": ["devops", "it"],
+    "topics": [
+      "it",
+      "devops"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23385,7 +25902,11 @@ window.decks.en_nouns = [
     "ru": "поставка",
     "uk": "постачання",
     "level": "B2",
-    "topics": ["business", "it", "logistics"],
+    "topics": [
+      "business",
+      "logistics",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23406,7 +25927,10 @@ window.decks.en_nouns = [
     "ru": "зависимость",
     "uk": "залежність",
     "level": "B2",
-    "topics": ["dev", "it"],
+    "topics": [
+      "it",
+      "dev"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23427,7 +25951,10 @@ window.decks.en_nouns = [
     "ru": "покрытие",
     "uk": "покриття",
     "level": "B2",
-    "topics": ["statistics", "testing"],
+    "topics": [
+      "testing",
+      "stats"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23448,7 +25975,9 @@ window.decks.en_nouns = [
     "ru": "исключение",
     "uk": "виняток",
     "level": "B2",
-    "topics": ["it"],
+    "topics": [
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23469,7 +25998,10 @@ window.decks.en_nouns = [
     "ru": "тракция",
     "uk": "тракція",
     "level": "C1",
-    "topics": ["business", "startups"],
+    "topics": [
+      "business",
+      "startups"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23490,7 +26022,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінка",
     "level": "B1",
-    "topics": ["business", "finance"],
+    "topics": [
+      "business",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23511,7 +26046,10 @@ window.decks.en_nouns = [
     "ru": "раунд финансирования",
     "uk": "раунд фінансування",
     "level": "B2",
-    "topics": ["finance", "startups"],
+    "topics": [
+      "finance",
+      "startups"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23532,7 +26070,9 @@ window.decks.en_nouns = [
     "ru": "инвестор",
     "uk": "інвестор",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23553,7 +26093,9 @@ window.decks.en_nouns = [
     "ru": "наблюдательный совет",
     "uk": "наглядова рада",
     "level": "C1",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23574,7 +26116,10 @@ window.decks.en_nouns = [
     "ru": "доля участия",
     "uk": "частка участі",
     "level": "B2",
-    "topics": ["business", "finance"],
+    "topics": [
+      "finance",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23595,7 +26140,9 @@ window.decks.en_nouns = [
     "ru": "бизнес-план",
     "uk": "бізнес-план",
     "level": "B2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23616,7 +26163,9 @@ window.decks.en_nouns = [
     "ru": "бизнес-модель",
     "uk": "бізнес-модель",
     "level": "B2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23637,7 +26186,10 @@ window.decks.en_nouns = [
     "ru": "вывод на рынок",
     "uk": "виведення на ринок",
     "level": "B2",
-    "topics": ["business", "marketing"],
+    "topics": [
+      "business",
+      "marketing"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23658,7 +26210,10 @@ window.decks.en_nouns = [
     "ru": "исследование рынка",
     "uk": "дослідження ринку",
     "level": "B2",
-    "topics": ["business", "marketing"],
+    "topics": [
+      "business",
+      "marketing"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23679,7 +26234,9 @@ window.decks.en_nouns = [
     "ru": "предложение",
     "uk": "пропозиція",
     "level": "A2",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23700,7 +26257,10 @@ window.decks.en_nouns = [
     "ru": "создание добавленной стоимости",
     "uk": "створення доданої вартості",
     "level": "C1",
-    "topics": ["business", "economy"],
+    "topics": [
+      "economy",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23721,7 +26281,10 @@ window.decks.en_nouns = [
     "ru": "цепочка поставок",
     "uk": "ланцюг постачання",
     "level": "B2",
-    "topics": ["business", "logistics"],
+    "topics": [
+      "logistics",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23742,7 +26305,10 @@ window.decks.en_nouns = [
     "ru": "анализ узких мест",
     "uk": "аналіз вузьких місць",
     "level": "C1",
-    "topics": ["business", "it"],
+    "topics": [
+      "business",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23763,7 +26329,10 @@ window.decks.en_nouns = [
     "ru": "уровень заболеваемости",
     "uk": "рівень захворюваності",
     "level": "B2",
-    "topics": ["health", "statistics"],
+    "topics": [
+      "health",
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23784,7 +26353,10 @@ window.decks.en_nouns = [
     "ru": "уровень смертности",
     "uk": "рівень смертності",
     "level": "B2",
-    "topics": ["health", "statistics"],
+    "topics": [
+      "health",
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23805,7 +26377,10 @@ window.decks.en_nouns = [
     "ru": "продолжительность жизни",
     "uk": "середня тривалість життя",
     "level": "B1",
-    "topics": ["health", "statistics"],
+    "topics": [
+      "health",
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23826,7 +26401,9 @@ window.decks.en_nouns = [
     "ru": "побочный эффект",
     "uk": "побічна дія",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23847,7 +26424,9 @@ window.decks.en_nouns = [
     "ru": "переносимость",
     "uk": "переносимість",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23868,7 +26447,9 @@ window.decks.en_nouns = [
     "ru": "дозировка",
     "uk": "дозування",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23889,7 +26470,9 @@ window.decks.en_nouns = [
     "ru": "введение",
     "uk": "введення",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23910,7 +26493,9 @@ window.decks.en_nouns = [
     "ru": "передозировка",
     "uk": "передозування",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23931,7 +26516,9 @@ window.decks.en_nouns = [
     "ru": "воспаление",
     "uk": "запалення",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23952,7 +26539,9 @@ window.decks.en_nouns = [
     "ru": "образец крови",
     "uk": "зразок крові",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23973,7 +26562,9 @@ window.decks.en_nouns = [
     "ru": "ткань",
     "uk": "тканина",
     "level": "B2",
-    "topics": ["biology"],
+    "topics": [
+      "biology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -23994,7 +26585,9 @@ window.decks.en_nouns = [
     "ru": "деление клеток",
     "uk": "поділ клітин",
     "level": "B2",
-    "topics": ["biology"],
+    "topics": [
+      "biology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24015,7 +26608,10 @@ window.decks.en_nouns = [
     "ru": "действующее вещество",
     "uk": "діюча речовина",
     "level": "B2",
-    "topics": ["health", "pharmacy"],
+    "topics": [
+      "health",
+      "pharmacy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24036,7 +26632,10 @@ window.decks.en_nouns = [
     "ru": "эффективность",
     "uk": "ефективність",
     "level": "B2",
-    "topics": ["health", "science"],
+    "topics": [
+      "health",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24057,7 +26656,10 @@ window.decks.en_nouns = [
     "ru": "доказательность",
     "uk": "доказовість",
     "level": "C1",
-    "topics": ["medicine", "science"],
+    "topics": [
+      "science",
+      "medicine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24078,7 +26680,9 @@ window.decks.en_nouns = [
     "ru": "клиническая рекомендация",
     "uk": "клінічна настанова",
     "level": "C1",
-    "topics": ["medicine"],
+    "topics": [
+      "medicine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24099,7 +26703,10 @@ window.decks.en_nouns = [
     "ru": "расширение полномочий",
     "uk": "розширення повноважень",
     "level": "C1",
-    "topics": ["law", "politics"],
+    "topics": [
+      "law",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24120,7 +26727,10 @@ window.decks.en_nouns = [
     "ru": "общий регламент по защите данных",
     "uk": "загальний регламент захисту даних",
     "level": "C1",
-    "topics": ["it", "law"],
+    "topics": [
+      "law",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24141,7 +26751,10 @@ window.decks.en_nouns = [
     "ru": "согласие",
     "uk": "заява згоди",
     "level": "B2",
-    "topics": ["data", "law"],
+    "topics": [
+      "law",
+      "data"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24162,7 +26775,9 @@ window.decks.en_nouns = [
     "ru": "возражение",
     "uk": "заперечення",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24183,7 +26798,9 @@ window.decks.en_nouns = [
     "ru": "апелляция",
     "uk": "заперечення",
     "level": "B2",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24204,7 +26821,9 @@ window.decks.en_nouns = [
     "ru": "полномочие на вручение",
     "uk": "повноваження на вручення",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24225,7 +26844,9 @@ window.decks.en_nouns = [
     "ru": "срок давности",
     "uk": "строк давності",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24246,7 +26867,9 @@ window.decks.en_nouns = [
     "ru": "судебная практика",
     "uk": "судова практика",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24267,7 +26890,10 @@ window.decks.en_nouns = [
     "ru": "разделение полномочий",
     "uk": "розподіл повноважень",
     "level": "C1",
-    "topics": ["law", "politics"],
+    "topics": [
+      "politics",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24288,7 +26914,10 @@ window.decks.en_nouns = [
     "ru": "фотовольтаика",
     "uk": "фотовольтаїка",
     "level": "B2",
-    "topics": ["energy", "environment"],
+    "topics": [
+      "energy",
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24309,7 +26938,10 @@ window.decks.en_nouns = [
     "ru": "ветроустановка",
     "uk": "вітрова установка",
     "level": "B2",
-    "topics": ["energy", "environment"],
+    "topics": [
+      "energy",
+      "environment"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24330,7 +26962,9 @@ window.decks.en_nouns = [
     "ru": "электросеть",
     "uk": "електромережа",
     "level": "B1",
-    "topics": ["energy"],
+    "topics": [
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24351,7 +26985,9 @@ window.decks.en_nouns = [
     "ru": "ввод в сеть",
     "uk": "подання в мережу",
     "level": "B2",
-    "topics": ["energy"],
+    "topics": [
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24372,7 +27008,10 @@ window.decks.en_nouns = [
     "ru": "накопитель",
     "uk": "накопичувач",
     "level": "B1",
-    "topics": ["energy", "it"],
+    "topics": [
+      "it",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24393,7 +27032,10 @@ window.decks.en_nouns = [
     "ru": "зарядная станция",
     "uk": "зарядна станція",
     "level": "B1",
-    "topics": ["energy", "traffic"],
+    "topics": [
+      "energy",
+      "traffic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24414,7 +27056,9 @@ window.decks.en_nouns = [
     "ru": "мощность зарядки",
     "uk": "потужність заряджання",
     "level": "B2",
-    "topics": ["energy"],
+    "topics": [
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24435,7 +27079,10 @@ window.decks.en_nouns = [
     "ru": "тепловой насос",
     "uk": "тепловий насос",
     "level": "B2",
-    "topics": ["energy", "housing"],
+    "topics": [
+      "energy",
+      "housing"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24456,7 +27103,10 @@ window.decks.en_nouns = [
     "ru": "утепление",
     "uk": "утеплення",
     "level": "B2",
-    "topics": ["energy", "housing"],
+    "topics": [
+      "housing",
+      "energy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24477,7 +27127,10 @@ window.decks.en_nouns = [
     "ru": "энергетический сертификат здания",
     "uk": "енергетичний сертифікат будівлі",
     "level": "C1",
-    "topics": ["energy", "housing"],
+    "topics": [
+      "energy",
+      "housing"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24498,7 +27151,10 @@ window.decks.en_nouns = [
     "ru": "специализированная литература",
     "uk": "фахова література",
     "level": "B2",
-    "topics": ["education", "science"],
+    "topics": [
+      "education",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24519,7 +27175,10 @@ window.decks.en_nouns = [
     "ru": "список источников",
     "uk": "список джерел",
     "level": "B2",
-    "topics": ["education", "science"],
+    "topics": [
+      "education",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24540,7 +27199,10 @@ window.decks.en_nouns = [
     "ru": "цитата",
     "uk": "цитата",
     "level": "B1",
-    "topics": ["communication", "education"],
+    "topics": [
+      "education",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24561,7 +27223,10 @@ window.decks.en_nouns = [
     "ru": "тезис",
     "uk": "теза",
     "level": "B2",
-    "topics": ["education", "science"],
+    "topics": [
+      "education",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24582,7 +27247,10 @@ window.decks.en_nouns = [
     "ru": "обоснование",
     "uk": "обґрунтування",
     "level": "B2",
-    "topics": ["education", "logic"],
+    "topics": [
+      "education",
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24603,7 +27271,10 @@ window.decks.en_nouns = [
     "ru": "заключение",
     "uk": "висновок",
     "level": "B2",
-    "topics": ["medicine", "science"],
+    "topics": [
+      "medicine",
+      "science"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24624,7 +27295,9 @@ window.decks.en_nouns = [
     "ru": "выборка",
     "uk": "вибірка",
     "level": "B2",
-    "topics": ["statistics"],
+    "topics": [
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24645,7 +27318,9 @@ window.decks.en_nouns = [
     "ru": "дисперсия",
     "uk": "дисперсія",
     "level": "C1",
-    "topics": ["statistics"],
+    "topics": [
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24666,7 +27341,9 @@ window.decks.en_nouns = [
     "ru": "среднее значение",
     "uk": "середнє значення",
     "level": "B1",
-    "topics": ["statistics"],
+    "topics": [
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24687,7 +27364,9 @@ window.decks.en_nouns = [
     "ru": "корреляция",
     "uk": "кореляція",
     "level": "B2",
-    "topics": ["statistics"],
+    "topics": [
+      "statistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24708,7 +27387,10 @@ window.decks.en_nouns = [
     "ru": "понимание",
     "uk": "розуміння",
     "level": "B2",
-    "topics": ["communication", "opinion"],
+    "topics": [
+      "communication",
+      "opinion"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24729,7 +27411,10 @@ window.decks.en_nouns = [
     "ru": "дискуссия",
     "uk": "дискусія",
     "level": "B2",
-    "topics": ["communication", "conflict"],
+    "topics": [
+      "communication",
+      "conflict"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24750,7 +27435,10 @@ window.decks.en_nouns = [
     "ru": "влияние",
     "uk": "вплив",
     "level": "B2",
-    "topics": ["communication", "psychology"],
+    "topics": [
+      "communication",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24771,7 +27459,10 @@ window.decks.en_nouns = [
     "ru": "возмущение",
     "uk": "обурення",
     "level": "B2",
-    "topics": ["emotion", "society"],
+    "topics": [
+      "emotion",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24792,7 +27483,10 @@ window.decks.en_nouns = [
     "ru": "общественная поддержка",
     "uk": "суспільна підтримка",
     "level": "B2",
-    "topics": ["politics", "society"],
+    "topics": [
+      "politics",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24813,7 +27507,10 @@ window.decks.en_nouns = [
     "ru": "общественное неприятие",
     "uk": "суспільне відторгнення",
     "level": "B2",
-    "topics": ["politics", "society"],
+    "topics": [
+      "politics",
+      "society"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24834,7 +27531,10 @@ window.decks.en_nouns = [
     "ru": "поляризация",
     "uk": "поляризація",
     "level": "C1",
-    "topics": ["politics", "society"],
+    "topics": [
+      "society",
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24855,7 +27555,9 @@ window.decks.en_nouns = [
     "ru": "освещение",
     "uk": "висвітлення",
     "level": "B2",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24876,7 +27578,9 @@ window.decks.en_nouns = [
     "ru": "дезинформация",
     "uk": "дезінформація",
     "level": "B2",
-    "topics": ["media"],
+    "topics": [
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24897,7 +27601,10 @@ window.decks.en_nouns = [
     "ru": "источник",
     "uk": "джерело",
     "level": "A2",
-    "topics": ["education", "media"],
+    "topics": [
+      "media",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24918,7 +27625,10 @@ window.decks.en_nouns = [
     "ru": "тарифный договор",
     "uk": "тарифна угода",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24939,7 +27649,10 @@ window.decks.en_nouns = [
     "ru": "динамика зарплат",
     "uk": "динаміка зарплат",
     "level": "B2",
-    "topics": ["economy", "work"],
+    "topics": [
+      "work",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24960,7 +27673,9 @@ window.decks.en_nouns = [
     "ru": "регулирование рабочего времени",
     "uk": "регулювання робочого часу",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -24981,7 +27696,9 @@ window.decks.en_nouns = [
     "ru": "вознаграждение",
     "uk": "винагорода",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25002,7 +27719,9 @@ window.decks.en_nouns = [
     "ru": "сверхурочный час",
     "uk": "понаднормова година",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25023,7 +27742,10 @@ window.decks.en_nouns = [
     "ru": "надбавка",
     "uk": "надбавка",
     "level": "B2",
-    "topics": ["finance", "work"],
+    "topics": [
+      "work",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25044,7 +27766,10 @@ window.decks.en_nouns = [
     "ru": "выходное пособие",
     "uk": "вихідна допомога",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25065,7 +27790,9 @@ window.decks.en_nouns = [
     "ru": "возмещение",
     "uk": "відшкодування",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25086,7 +27813,9 @@ window.decks.en_nouns = [
     "ru": "порядок замещения",
     "uk": "порядок заміщення",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25107,7 +27836,10 @@ window.decks.en_nouns = [
     "ru": "соглашение на предприятии",
     "uk": "угода на підприємстві",
     "level": "C1",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25128,7 +27860,10 @@ window.decks.en_nouns = [
     "ru": "охрана труда",
     "uk": "охорона праці",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "work",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25149,7 +27884,11 @@ window.decks.en_nouns = [
     "ru": "оценка рисков",
     "uk": "оцінка ризиків",
     "level": "C1",
-    "topics": ["law", "safety", "work"],
+    "topics": [
+      "work",
+      "safety",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25170,7 +27909,10 @@ window.decks.en_nouns = [
     "ru": "восприятие",
     "uk": "сприйняття",
     "level": "B2",
-    "topics": ["communication", "psychology"],
+    "topics": [
+      "psychology",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25191,7 +27933,10 @@ window.decks.en_nouns = [
     "ru": "оценка",
     "uk": "оцінювання",
     "level": "B2",
-    "topics": ["evaluation", "work"],
+    "topics": [
+      "work",
+      "evaluation"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25212,7 +27957,10 @@ window.decks.en_nouns = [
     "ru": "толкование",
     "uk": "тлумачення",
     "level": "C1",
-    "topics": ["communication", "law"],
+    "topics": [
+      "law",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25233,7 +27981,10 @@ window.decks.en_nouns = [
     "ru": "склонность",
     "uk": "схильність",
     "level": "B2",
-    "topics": ["personality", "psychology"],
+    "topics": [
+      "personality",
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25254,7 +28005,10 @@ window.decks.en_nouns = [
     "ru": "устойчивость",
     "uk": "стійкість",
     "level": "B2",
-    "topics": ["personality", "physics"],
+    "topics": [
+      "personality",
+      "physics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25275,7 +28029,10 @@ window.decks.en_nouns = [
     "ru": "выносливость",
     "uk": "витривалість",
     "level": "B2",
-    "topics": ["health", "work"],
+    "topics": [
+      "work",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25296,7 +28053,10 @@ window.decks.en_nouns = [
     "ru": "соответствие",
     "uk": "відповідність",
     "level": "B2",
-    "topics": ["law", "logic"],
+    "topics": [
+      "logic",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25317,7 +28077,10 @@ window.decks.en_nouns = [
     "ru": "несоответствие",
     "uk": "невідповідність",
     "level": "B2",
-    "topics": ["conflict", "law"],
+    "topics": [
+      "conflict",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25338,7 +28101,10 @@ window.decks.en_nouns = [
     "ru": "ориентировочное значение",
     "uk": "орієнтовне значення",
     "level": "B2",
-    "topics": ["math", "planning"],
+    "topics": [
+      "math",
+      "planning"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25359,7 +28125,10 @@ window.decks.en_nouns = [
     "ru": "складской остаток",
     "uk": "складський залишок",
     "level": "B2",
-    "topics": ["business", "logistics"],
+    "topics": [
+      "logistics",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25380,7 +28149,10 @@ window.decks.en_nouns = [
     "ru": "дефицит поставок",
     "uk": "дефіцит постачання",
     "level": "B2",
-    "topics": ["economy", "logistics"],
+    "topics": [
+      "logistics",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25401,7 +28173,10 @@ window.decks.en_nouns = [
     "ru": "дозаказ",
     "uk": "додаткове замовлення",
     "level": "B1",
-    "topics": ["logistics", "shopping"],
+    "topics": [
+      "logistics",
+      "shopping"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25422,7 +28197,10 @@ window.decks.en_nouns = [
     "ru": "возврат",
     "uk": "повернення",
     "level": "B1",
-    "topics": ["logistics", "shopping"],
+    "topics": [
+      "shopping",
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25443,7 +28221,10 @@ window.decks.en_nouns = [
     "ru": "наличие",
     "uk": "наявність",
     "level": "B1",
-    "topics": ["it", "shopping"],
+    "topics": [
+      "shopping",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25464,7 +28245,9 @@ window.decks.en_nouns = [
     "ru": "отслеживание отправления",
     "uk": "відстеження відправлення",
     "level": "B1",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25485,7 +28268,9 @@ window.decks.en_nouns = [
     "ru": "трек-номер",
     "uk": "номер відправлення",
     "level": "A2",
-    "topics": ["logistics"],
+    "topics": [
+      "logistics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25506,7 +28291,10 @@ window.decks.en_nouns = [
     "ru": "адрес доставки",
     "uk": "адреса доставки",
     "level": "A2",
-    "topics": ["forms", "logistics"],
+    "topics": [
+      "logistics",
+      "forms"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25527,7 +28315,10 @@ window.decks.en_nouns = [
     "ru": "вид на жительство",
     "uk": "дозвіл на проживання",
     "level": "B2",
-    "topics": ["law", "migration"],
+    "topics": [
+      "law",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25548,7 +28339,9 @@ window.decks.en_nouns = [
     "ru": "справка о регистрации",
     "uk": "довідка про реєстрацію",
     "level": "B2",
-    "topics": ["administration"],
+    "topics": [
+      "administration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25569,7 +28362,10 @@ window.decks.en_nouns = [
     "ru": "разрешение на пребывание",
     "uk": "дозвіл на перебування",
     "level": "B2",
-    "topics": ["law", "migration"],
+    "topics": [
+      "law",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25590,7 +28386,10 @@ window.decks.en_nouns = [
     "ru": "разрешение на работу",
     "uk": "дозвіл на роботу",
     "level": "B2",
-    "topics": ["migration", "work"],
+    "topics": [
+      "work",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25611,7 +28410,10 @@ window.decks.en_nouns = [
     "ru": "гражданство",
     "uk": "громадянство",
     "level": "B1",
-    "topics": ["law", "personal"],
+    "topics": [
+      "law",
+      "personal"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25632,7 +28434,10 @@ window.decks.en_nouns = [
     "ru": "натурализация",
     "uk": "натуралізація",
     "level": "C1",
-    "topics": ["law", "migration"],
+    "topics": [
+      "law",
+      "migration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25653,7 +28458,9 @@ window.decks.en_nouns = [
     "ru": "место жительства",
     "uk": "місце проживання",
     "level": "B1",
-    "topics": ["administration"],
+    "topics": [
+      "administration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25674,7 +28481,10 @@ window.decks.en_nouns = [
     "ru": "опасность",
     "uk": "неbezпека",
     "level": "B2",
-    "topics": ["law", "safety"],
+    "topics": [
+      "safety",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25695,7 +28505,10 @@ window.decks.en_nouns = [
     "ru": "ответственность",
     "uk": "відповідальність",
     "level": "B2",
-    "topics": ["business", "law"],
+    "topics": [
+      "law",
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25716,7 +28529,10 @@ window.decks.en_nouns = [
     "ru": "экспертное заключение",
     "uk": "експертний висновок",
     "level": "B2",
-    "topics": ["law", "medicine"],
+    "topics": [
+      "law",
+      "medicine"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25737,7 +28553,10 @@ window.decks.en_nouns = [
     "ru": "условие",
     "uk": "умова",
     "level": "B2",
-    "topics": ["administration", "law"],
+    "topics": [
+      "law",
+      "administration"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25758,7 +28577,10 @@ window.decks.en_nouns = [
     "ru": "подтверждение встречи",
     "uk": "підтвердження зустрічі",
     "level": "B1",
-    "topics": ["communication", "work"],
+    "topics": [
+      "work",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25779,7 +28601,10 @@ window.decks.en_nouns = [
     "ru": "перенос встречи",
     "uk": "перенесення зустрічі",
     "level": "B1",
-    "topics": ["communication", "work"],
+    "topics": [
+      "work",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25800,7 +28625,10 @@ window.decks.en_nouns = [
     "ru": "доступность",
     "uk": "доступність",
     "level": "B1",
-    "topics": ["communication", "work"],
+    "topics": [
+      "communication",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25821,7 +28649,9 @@ window.decks.en_nouns = [
     "ru": "заём",
     "uk": "позика",
     "level": "B2",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25842,7 +28672,9 @@ window.decks.en_nouns = [
     "ru": "проценты",
     "uk": "відсотки",
     "level": "B1",
-    "topics": ["finance"],
+    "topics": [
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25863,7 +28695,10 @@ window.decks.en_nouns = [
     "ru": "налоговая декларация",
     "uk": "податкова декларація",
     "level": "B2",
-    "topics": ["finance", "law"],
+    "topics": [
+      "finance",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25884,7 +28719,10 @@ window.decks.en_nouns = [
     "ru": "сбор",
     "uk": "збір",
     "level": "B2",
-    "topics": ["finance", "law"],
+    "topics": [
+      "finance",
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25905,7 +28743,10 @@ window.decks.en_nouns = [
     "ru": "страховка",
     "uk": "страхування",
     "level": "B1",
-    "topics": ["finance", "health"],
+    "topics": [
+      "finance",
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25926,7 +28767,10 @@ window.decks.en_nouns = [
     "ru": "пенсионное обеспечение",
     "uk": "пенсійне забезпечення",
     "level": "B2",
-    "topics": ["finance", "social"],
+    "topics": [
+      "finance",
+      "social"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25947,7 +28791,10 @@ window.decks.en_nouns = [
     "ru": "взнос",
     "uk": "внесок",
     "level": "B1",
-    "topics": ["finance", "media"],
+    "topics": [
+      "finance",
+      "media"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25968,7 +28815,10 @@ window.decks.en_nouns = [
     "ru": "бюджет",
     "uk": "бюджет",
     "level": "B1",
-    "topics": ["family", "finance"],
+    "topics": [
+      "family",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -25989,7 +28839,10 @@ window.decks.en_nouns = [
     "ru": "ситуация с обеспечением",
     "uk": "ситуація із забезпеченням",
     "level": "C1",
-    "topics": ["crisis", "economy"],
+    "topics": [
+      "economy",
+      "crisis"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26010,7 +28863,10 @@ window.decks.en_nouns = [
     "ru": "рост",
     "uk": "зростання",
     "level": "B1",
-    "topics": ["biology", "economy"],
+    "topics": [
+      "economy",
+      "biology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26031,7 +28887,10 @@ window.decks.en_nouns = [
     "ru": "развитие",
     "uk": "розвиток",
     "level": "B1",
-    "topics": ["economy", "general"],
+    "topics": [
+      "general",
+      "economy"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26052,7 +28911,10 @@ window.decks.en_nouns = [
     "ru": "колебание",
     "uk": "коливання",
     "level": "B2",
-    "topics": ["economy", "physics"],
+    "topics": [
+      "economy",
+      "physics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26073,7 +28935,10 @@ window.decks.en_nouns = [
     "ru": "профилактика",
     "uk": "профілактика",
     "level": "B2",
-    "topics": ["finance", "health"],
+    "topics": [
+      "health",
+      "finance"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26094,7 +28959,9 @@ window.decks.en_nouns = [
     "ru": "метод лечения",
     "uk": "метод лікування",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26115,7 +28982,9 @@ window.decks.en_nouns = [
     "ru": "лекарство",
     "uk": "ліки",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26136,7 +29005,9 @@ window.decks.en_nouns = [
     "ru": "исцеление",
     "uk": "зцілення",
     "level": "B1",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26157,7 +29028,9 @@ window.decks.en_nouns = [
     "ru": "вид терапии",
     "uk": "вид терапії",
     "level": "B2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26178,7 +29051,10 @@ window.decks.en_nouns = [
     "ru": "медперсонал",
     "uk": "медперсонал",
     "level": "B1",
-    "topics": ["health", "work"],
+    "topics": [
+      "health",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26199,7 +29075,9 @@ window.decks.en_nouns = [
     "ru": "пациент",
     "uk": "пацієнт",
     "level": "A2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26220,7 +29098,9 @@ window.decks.en_nouns = [
     "ru": "операция",
     "uk": "операція",
     "level": "A2",
-    "topics": ["health"],
+    "topics": [
+      "health"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26241,7 +29121,10 @@ window.decks.en_nouns = [
     "ru": "отдых",
     "uk": "відпочинок",
     "level": "B1",
-    "topics": ["free-time", "health"],
+    "topics": [
+      "health",
+      "free-time"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26262,7 +29145,9 @@ window.decks.en_nouns = [
     "ru": "положение",
     "uk": "положення",
     "level": "C1",
-    "topics": ["law"],
+    "topics": [
+      "law"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26283,7 +29168,10 @@ window.decks.en_nouns = [
     "ru": "регулирование",
     "uk": "регулювання",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26304,7 +29192,10 @@ window.decks.en_nouns = [
     "ru": "нарушение",
     "uk": "порушення",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26325,7 +29216,10 @@ window.decks.en_nouns = [
     "ru": "наблюдение",
     "uk": "нагляд",
     "level": "B2",
-    "topics": ["it", "safety"],
+    "topics": [
+      "safety",
+      "it"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26346,7 +29240,10 @@ window.decks.en_nouns = [
     "ru": "распоряжение",
     "uk": "розпорядження",
     "level": "B2",
-    "topics": ["law", "work"],
+    "topics": [
+      "law",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26367,7 +29264,9 @@ window.decks.en_nouns = [
     "ru": "рабочее время",
     "uk": "робочий час",
     "level": "A2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26388,7 +29287,9 @@ window.decks.en_nouns = [
     "ru": "рабочее место",
     "uk": "робоче місце",
     "level": "A2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26409,7 +29310,9 @@ window.decks.en_nouns = [
     "ru": "работник",
     "uk": "працівник",
     "level": "A2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26430,7 +29333,9 @@ window.decks.en_nouns = [
     "ru": "работодатель",
     "uk": "роботодавець",
     "level": "A2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26451,7 +29356,9 @@ window.decks.en_nouns = [
     "ru": "совещание",
     "uk": "нарада",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26472,7 +29379,9 @@ window.decks.en_nouns = [
     "ru": "встреча",
     "uk": "зустріч",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26493,7 +29402,10 @@ window.decks.en_nouns = [
     "ru": "презентация",
     "uk": "презентація",
     "level": "B1",
-    "topics": ["education", "work"],
+    "topics": [
+      "work",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26514,7 +29426,10 @@ window.decks.en_nouns = [
     "ru": "планирование",
     "uk": "планування",
     "level": "B1",
-    "topics": ["project", "work"],
+    "topics": [
+      "work",
+      "project"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26535,7 +29450,9 @@ window.decks.en_nouns = [
     "ru": "занятие",
     "uk": "заняття",
     "level": "A2",
-    "topics": ["education"],
+    "topics": [
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26556,7 +29473,10 @@ window.decks.en_nouns = [
     "ru": "компетенция",
     "uk": "компетенція",
     "level": "B2",
-    "topics": ["education", "work"],
+    "topics": [
+      "work",
+      "education"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26577,7 +29497,9 @@ window.decks.en_nouns = [
     "ru": "участие",
     "uk": "участь",
     "level": "A2",
-    "topics": ["events"],
+    "topics": [
+      "events"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26598,7 +29520,9 @@ window.decks.en_nouns = [
     "ru": "мероприятие",
     "uk": "захід",
     "level": "A2",
-    "topics": ["events"],
+    "topics": [
+      "events"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26619,7 +29543,9 @@ window.decks.en_nouns = [
     "ru": "транспортное средство",
     "uk": "транспортний засіб",
     "level": "A2",
-    "topics": ["traffic"],
+    "topics": [
+      "traffic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26640,7 +29566,10 @@ window.decks.en_nouns = [
     "ru": "сеть",
     "uk": "мережа",
     "level": "B1",
-    "topics": ["it", "social"],
+    "topics": [
+      "it",
+      "social"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26661,7 +29590,10 @@ window.decks.en_nouns = [
     "ru": "сигнал",
     "uk": "сигнал",
     "level": "A2",
-    "topics": ["communication", "technology"],
+    "topics": [
+      "tech",
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26682,7 +29614,9 @@ window.decks.en_nouns = [
     "ru": "управление",
     "uk": "керування",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "tech"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26703,7 +29637,10 @@ window.decks.en_nouns = [
     "ru": "напряжение",
     "uk": "напруга",
     "level": "B1",
-    "topics": ["emotion", "physics"],
+    "topics": [
+      "physics",
+      "emotion"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26724,7 +29661,9 @@ window.decks.en_nouns = [
     "ru": "батарея",
     "uk": "батарея",
     "level": "A2",
-    "topics": ["technology"],
+    "topics": [
+      "tech"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26745,7 +29684,9 @@ window.decks.en_nouns = [
     "ru": "мнение",
     "uk": "думка",
     "level": "A2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26766,7 +29707,9 @@ window.decks.en_nouns = [
     "ru": "изменение",
     "uk": "зміна",
     "level": "A2",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26787,7 +29730,9 @@ window.decks.en_nouns = [
     "ru": "случай",
     "uk": "нагода",
     "level": "B1",
-    "topics": ["general"],
+    "topics": [
+      "general"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26808,7 +29753,9 @@ window.decks.en_nouns = [
     "ru": "доступ",
     "uk": "доступ",
     "level": "B1",
-    "topics": ["technology"],
+    "topics": [
+      "technology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26829,7 +29776,9 @@ window.decks.en_nouns = [
     "ru": "повышение стоимости",
     "uk": "підвищення вартості",
     "level": "B2",
-    "topics": ["economics"],
+    "topics": [
+      "economics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26850,7 +29799,10 @@ window.decks.en_nouns = [
     "ru": "черновик, эскиз",
     "uk": "чернетка, ескіз",
     "level": "B1",
-    "topics": ["design", "work"],
+    "topics": [
+      "design",
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26871,7 +29823,9 @@ window.decks.en_nouns = [
     "ru": "укрепление, закрепление",
     "uk": "закріплення",
     "level": "B2",
-    "topics": ["abstract"],
+    "topics": [
+      "abstract"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26892,7 +29846,9 @@ window.decks.en_nouns = [
     "ru": "перелом, поворот",
     "uk": "злам, поворот",
     "level": "B2",
-    "topics": ["abstract"],
+    "topics": [
+      "abstract"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26913,7 +29869,9 @@ window.decks.en_nouns = [
     "ru": "перегруженность",
     "uk": "перевантаженість",
     "level": "C1",
-    "topics": ["abstract"],
+    "topics": [
+      "abstract"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26934,7 +29892,9 @@ window.decks.en_nouns = [
     "ru": "заказчик",
     "uk": "замовник",
     "level": "B1",
-    "topics": ["business"],
+    "topics": [
+      "business"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26955,7 +29915,9 @@ window.decks.en_nouns = [
     "ru": "страсть, влечение",
     "uk": "пристрасть, бажання",
     "level": "C1",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26976,7 +29938,9 @@ window.decks.en_nouns = [
     "ru": "ошибочное предположение",
     "uk": "помилкове припущення",
     "level": "C1",
-    "topics": ["logic"],
+    "topics": [
+      "logic"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -26997,7 +29961,9 @@ window.decks.en_nouns = [
     "ru": "инициатива, попытка продвижения",
     "uk": "ініціатива, спроба просування",
     "level": "B2",
-    "topics": ["politics"],
+    "topics": [
+      "politics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27018,7 +29984,9 @@ window.decks.en_nouns = [
     "ru": "устранение проблемы",
     "uk": "усунення проблеми",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27039,7 +30007,9 @@ window.decks.en_nouns = [
     "ru": "преобразование, перестройка",
     "uk": "перетворення, перебудова",
     "level": "B2",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27060,7 +30030,9 @@ window.decks.en_nouns = [
     "ru": "персонал, коллектив",
     "uk": "персонал, колектив",
     "level": "B1",
-    "topics": ["work"],
+    "topics": [
+      "work"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27081,7 +30053,9 @@ window.decks.en_nouns = [
     "ru": "размышление, уединение",
     "uk": "усамітнення, роздуми",
     "level": "C1",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27102,7 +30076,9 @@ window.decks.en_nouns = [
     "ru": "оговорка, сомнение",
     "uk": "застереження, сумнів",
     "level": "B2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27123,7 +30099,9 @@ window.decks.en_nouns = [
     "ru": "инцидент",
     "uk": "інцидент",
     "level": "B1",
-    "topics": ["crime"],
+    "topics": [
+      "crime"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27144,7 +30122,9 @@ window.decks.en_nouns = [
     "ru": "безвестность, исчезнение",
     "uk": "загубленість, зникнення",
     "level": "C1",
-    "topics": ["crime"],
+    "topics": [
+      "crime"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27165,7 +30145,9 @@ window.decks.en_nouns = [
     "ru": "выплата, распределение средств",
     "uk": "виплата, розподіл коштів",
     "level": "B2",
-    "topics": ["economics"],
+    "topics": [
+      "economics"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27186,7 +30168,9 @@ window.decks.en_nouns = [
     "ru": "услуга, любезность",
     "uk": "послуга, люб’язність",
     "level": "B2",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27207,7 +30191,9 @@ window.decks.en_nouns = [
     "ru": "ошибка, промах",
     "uk": "помилка, промах",
     "level": "B2",
-    "topics": ["psychology"],
+    "topics": [
+      "psychology"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27228,7 +30214,9 @@ window.decks.en_nouns = [
     "ru": "суть дела, суть вопроса",
     "uk": "сутність справи",
     "level": "C1",
-    "topics": ["communication"],
+    "topics": [
+      "communication"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27249,7 +30237,10 @@ window.decks.en_nouns = [
     "ru": "стечение обстоятельств",
     "uk": "збіг обставин",
     "level": "B2",
-    "topics": ["abstract", "philosophy"],
+    "topics": [
+      "philosophy",
+      "abstract"
+    ],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -27265,5205 +30256,11327 @@ window.decks.en_nouns = [
     ]
   }
 ];
-window.decks.en_verbs = [
 
-];
 window.decks.en_adjectives = [
-
+  {
+    "id": 1,
+    "word": "absent",
+    "ru": "отсутствующий",
+    "uk": "відсутній",
+    "level": "B1",
+    "topics": [
+      "description",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 2,
+    "word": "active",
+    "ru": "активный",
+    "uk": "активний",
+    "level": "A2",
+    "topics": [
+      "health",
+      "free_time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 3,
+    "word": "old",
+    "ru": "старый",
+    "uk": "старий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 4,
+    "word": "old-fashioned",
+    "ru": "старомодный",
+    "uk": "застарілий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 5,
+    "word": "pleasant",
+    "ru": "приятный",
+    "uk": "приємний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 6,
+    "word": "present",
+    "ru": "присутствующий",
+    "uk": "присутній",
+    "level": "B1",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 7,
+    "word": "poor",
+    "ru": "бедный",
+    "uk": "бідний",
+    "level": "A2",
+    "topics": [
+      "money",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 8,
+    "word": "excellent",
+    "ru": "отличный",
+    "uk": "відмінний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 9,
+    "word": "well-known",
+    "ru": "известный",
+    "uk": "відомий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 10,
+    "word": "popular",
+    "ru": "популярный",
+    "uk": "популярний",
+    "level": "B1",
+    "topics": [
+      "relationships",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 11,
+    "word": "comfortable",
+    "ru": "удобный",
+    "uk": "зручний",
+    "level": "A2",
+    "topics": [
+      "home",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 12,
+    "word": "ready",
+    "ru": "готовый",
+    "uk": "готовий",
+    "level": "A2",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 13,
+    "word": "famous",
+    "ru": "знаменитый",
+    "uk": "відомий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 14,
+    "word": "busy",
+    "ru": "занятый",
+    "uk": "зайнятий",
+    "level": "A2",
+    "topics": [
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 15,
+    "word": "occupied",
+    "ru": "занятый",
+    "uk": "зайнятий",
+    "level": "A2",
+    "topics": [
+      "work",
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 16,
+    "word": "cheap",
+    "ru": "дешёвый",
+    "uk": "дешевий",
+    "level": "A2",
+    "topics": [
+      "money",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 17,
+    "word": "bitter",
+    "ru": "горький",
+    "uk": "гіркий",
+    "level": "A2",
+    "topics": [
+      "food",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 18,
+    "word": "stupid",
+    "ru": "тупой",
+    "uk": "дурнуватий",
+    "level": "B1",
+    "topics": [
+      "communication",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 19,
+    "word": "wide",
+    "ru": "широкий",
+    "uk": "широкий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 20,
+    "word": "angry",
+    "ru": "злой",
+    "uk": "злий",
+    "level": "A2",
+    "topics": [
+      "relationships",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 21,
+    "word": "chaotic",
+    "ru": "хаотичный",
+    "uk": "хаотичний",
+    "level": "B1",
+    "topics": [
+      "description",
+      "home"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 22,
+    "word": "clear",
+    "ru": "чёткий",
+    "uk": "чіткий",
+    "level": "B1",
+    "topics": [
+      "education",
+      "communication"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 23,
+    "word": "thick",
+    "ru": "толстый",
+    "uk": "товстий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 24,
+    "word": "urgent",
+    "ru": "срочный",
+    "uk": "терміновий",
+    "level": "B1",
+    "topics": [
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 25,
+    "word": "stupid",
+    "ru": "глупый",
+    "uk": "дурний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 26,
+    "word": "dark",
+    "ru": "тёмный",
+    "uk": "темний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 27,
+    "word": "average",
+    "ru": "средний",
+    "uk": "середній",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 28,
+    "word": "thirsty",
+    "ru": "жаждущий",
+    "uk": "спраглий",
+    "level": "A2",
+    "topics": [
+      "health",
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 29,
+    "word": "thin",
+    "ru": "тонкий",
+    "uk": "тонкий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 30,
+    "word": "jealous",
+    "ru": "ревнивый",
+    "uk": "ревнивий",
+    "level": "B1",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 31,
+    "word": "simple",
+    "ru": "простой",
+    "uk": "простий",
+    "level": "A1",
+    "topics": [
+      "education",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 32,
+    "word": "sensitive",
+    "ru": "чувствительный",
+    "uk": "чутливий",
+    "level": "B1",
+    "topics": [
+      "health",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 33,
+    "word": "tight",
+    "ru": "узкий",
+    "uk": "вузький",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 34,
+    "word": "serious",
+    "ru": "серьёзный",
+    "uk": "серйозний",
+    "level": "A2",
+    "topics": [
+      "health",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 35,
+    "word": "wrong",
+    "ru": "неправильный",
+    "uk": "неправильний",
+    "level": "A2",
+    "topics": [
+      "education",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 36,
+    "word": "lazy",
+    "ru": "ленивый",
+    "uk": "ледачий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 37,
+    "word": "elegant",
+    "ru": "изящный",
+    "uk": "витончений",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 38,
+    "word": "distant",
+    "ru": "далёкий",
+    "uk": "далекий",
+    "level": "A2",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 39,
+    "word": "humid",
+    "ru": "влажный",
+    "uk": "вологий",
+    "level": "A2",
+    "topics": [
+      "description",
+      "weather"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 40,
+    "word": "fit",
+    "ru": "в форме",
+    "uk": "у гарній формі",
+    "level": "A2",
+    "topics": [
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 41,
+    "word": "flat",
+    "ru": "плоский",
+    "uk": "плаский",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 42,
+    "word": "hard-working",
+    "ru": "прилежный",
+    "uk": "працьовитий",
+    "level": "A2",
+    "topics": [
+      "education",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 43,
+    "word": "free",
+    "ru": "свободный",
+    "uk": "вільний",
+    "level": "A2",
+    "topics": [
+      "free_time",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 44,
+    "word": "voluntary",
+    "ru": "добровольный",
+    "uk": "добровільний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 45,
+    "word": "foreign",
+    "ru": "чужой",
+    "uk": "чужий",
+    "level": "A2",
+    "topics": [
+      "description",
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 46,
+    "word": "friendly",
+    "ru": "дружелюбный",
+    "uk": "дружній",
+    "level": "A2",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 47,
+    "word": "fresh",
+    "ru": "свежий",
+    "uk": "свіжий",
+    "level": "A2",
+    "topics": [
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 48,
+    "word": "early",
+    "ru": "ранний",
+    "uk": "ранній",
+    "level": "A1",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 49,
+    "word": "capable",
+    "ru": "способный",
+    "uk": "здатний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 50,
+    "word": "dangerous",
+    "ru": "опасный",
+    "uk": "небезпечний",
+    "level": "A2",
+    "topics": [
+      "health",
+      "transport"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 51,
+    "word": "shared",
+    "ru": "общий",
+    "uk": "спільний",
+    "level": "A2",
+    "topics": [
+      "relationships",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 52,
+    "word": "exact",
+    "ru": "точный",
+    "uk": "точний",
+    "level": "A2",
+    "topics": [
+      "education",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 53,
+    "word": "closed",
+    "ru": "закрытый",
+    "uk": "закритий",
+    "level": "A2",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 54,
+    "word": "healthy",
+    "ru": "здоровый",
+    "uk": "здоровий",
+    "level": "A1",
+    "topics": [
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 55,
+    "word": "usual",
+    "ru": "обычный",
+    "uk": "звичайний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 56,
+    "word": "smooth",
+    "ru": "гладкий",
+    "uk": "гладкий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 57,
+    "word": "same",
+    "ru": "одинаковый",
+    "uk": "однаковий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 58,
+    "word": "happy",
+    "ru": "счастливый",
+    "uk": "щасливий",
+    "level": "A2",
+    "topics": [
+      "relationships",
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 59,
+    "word": "rude",
+    "ru": "грубый",
+    "uk": "грубий",
+    "level": "B1",
+    "topics": [
+      "relationships",
+      "communication"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 60,
+    "word": "big",
+    "ru": "большой",
+    "uk": "великий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 61,
+    "word": "good",
+    "ru": "хороший",
+    "uk": "добрий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 62,
+    "word": "harmless",
+    "ru": "безвредный",
+    "uk": "нешкідливий",
+    "level": "B1",
+    "topics": [
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 63,
+    "word": "hard",
+    "ru": "твёрдый",
+    "uk": "твердий",
+    "level": "A2",
+    "topics": [
+      "description",
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 64,
+    "word": "hot",
+    "ru": "горячий",
+    "uk": "гарячий",
+    "level": "A1",
+    "topics": [
+      "food",
+      "weather"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 65,
+    "word": "hectic",
+    "ru": "суетливый",
+    "uk": "метушливий",
+    "level": "B1",
+    "topics": [
+      "work",
+      "city"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 66,
+    "word": "bright",
+    "ru": "светлый",
+    "uk": "світлий",
+    "level": "A1",
+    "topics": [
+      "home",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 67,
+    "word": "high",
+    "ru": "высокий",
+    "uk": "високий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 68,
+    "word": "hungry",
+    "ru": "голодный",
+    "uk": "голодний",
+    "level": "A1",
+    "topics": [
+      "food",
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 69,
+    "word": "ugly",
+    "ru": "уродливый",
+    "uk": "потворний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 70,
+    "word": "frequent",
+    "ru": "частый",
+    "uk": "частий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 71,
+    "word": "polite",
+    "ru": "вежливый",
+    "uk": "ввічливий",
+    "level": "A2",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 72,
+    "word": "illegal",
+    "ru": "незаконный",
+    "uk": "незаконний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 73,
+    "word": "inner",
+    "ru": "внутренний",
+    "uk": "внутрішній",
+    "level": "B1",
+    "topics": [
+      "description",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 74,
+    "word": "unofficial",
+    "ru": "неофициальный",
+    "uk": "неофіційний",
+    "level": "B2",
+    "topics": [
+      "work",
+      "communication"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 75,
+    "word": "intelligent",
+    "ru": "умный",
+    "uk": "розумний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 76,
+    "word": "interesting",
+    "ru": "интересный",
+    "uk": "цікавий",
+    "level": "A1",
+    "topics": [
+      "education",
+      "free_time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 77,
+    "word": "international",
+    "ru": "международный",
+    "uk": "міжнародний",
+    "level": "A2",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 78,
+    "word": "young",
+    "ru": "молодой",
+    "uk": "молодий",
+    "level": "A1",
+    "topics": [
+      "family",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 79,
+    "word": "cold",
+    "ru": "холодный",
+    "uk": "холодний",
+    "level": "A1",
+    "topics": [
+      "weather",
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 80,
+    "word": "clear",
+    "ru": "ясный",
+    "uk": "ясний",
+    "level": "A2",
+    "topics": [
+      "communication",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 81,
+    "word": "small",
+    "ru": "маленький",
+    "uk": "малий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 82,
+    "word": "clever",
+    "ru": "умный",
+    "uk": "кмітливий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 83,
+    "word": "strange",
+    "ru": "смешной",
+    "uk": "дивний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 84,
+    "word": "complicated",
+    "ru": "сложный",
+    "uk": "складний",
+    "level": "B1",
+    "topics": [
+      "education",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 85,
+    "word": "ill",
+    "ru": "больной",
+    "uk": "хворий",
+    "level": "A1",
+    "topics": [
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 86,
+    "word": "creative",
+    "ru": "креативный",
+    "uk": "креативний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 87,
+    "word": "cool",
+    "ru": "прохладный",
+    "uk": "прохолодний",
+    "level": "A2",
+    "topics": [
+      "weather",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 88,
+    "word": "slow",
+    "ru": "медленный",
+    "uk": "повільний",
+    "level": "A1",
+    "topics": [
+      "movement"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 89,
+    "word": "boring",
+    "ru": "скучный",
+    "uk": "нудний",
+    "level": "A2",
+    "topics": [
+      "education",
+      "free_time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 90,
+    "word": "loud",
+    "ru": "громкий",
+    "uk": "гучний",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 91,
+    "word": "empty",
+    "ru": "пустой",
+    "uk": "порожній",
+    "level": "A1",
+    "topics": [
+      "home",
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 92,
+    "word": "legal",
+    "ru": "законный",
+    "uk": "законний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 93,
+    "word": "easy",
+    "ru": "лёгкий",
+    "uk": "легкий",
+    "level": "A1",
+    "topics": [
+      "description",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 94,
+    "word": "local",
+    "ru": "местный",
+    "uk": "місцевий",
+    "level": "B1",
+    "topics": [
+      "city",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 95,
+    "word": "funny",
+    "ru": "весёлый",
+    "uk": "смішний",
+    "level": "A2",
+    "topics": [
+      "free_time",
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 96,
+    "word": "maximum",
+    "ru": "максимальный",
+    "uk": "максимальний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 97,
+    "word": "minimum",
+    "ru": "минимальный",
+    "uk": "мінімальний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 98,
+    "word": "modern",
+    "ru": "современный",
+    "uk": "сучасний",
+    "level": "A2",
+    "topics": [
+      "home",
+      "city"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 99,
+    "word": "brave",
+    "ru": "смелый",
+    "uk": "сміливий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 100,
+    "word": "possible",
+    "ru": "возможный",
+    "uk": "можливий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 101,
+    "word": "tired",
+    "ru": "уставший",
+    "uk": "втомлений",
+    "level": "A1",
+    "topics": [
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 102,
+    "word": "near",
+    "ru": "близкий",
+    "uk": "близький",
+    "level": "A2",
+    "topics": [
+      "place",
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 103,
+    "word": "national",
+    "ru": "национальный",
+    "uk": "національний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 104,
+    "word": "nervous",
+    "ru": "нервный",
+    "uk": "нервовий",
+    "level": "A2",
+    "topics": [
+      "health",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 105,
+    "word": "nice",
+    "ru": "милый",
+    "uk": "приємний",
+    "level": "A1",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 106,
+    "word": "new",
+    "ru": "новый",
+    "uk": "новий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 107,
+    "word": "curious",
+    "ru": "любопытный",
+    "uk": "допитливий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 108,
+    "word": "low",
+    "ru": "низкий",
+    "uk": "низький",
+    "level": "A2",
+    "topics": [
+      "description",
+      "money"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 109,
+    "word": "normal",
+    "ru": "нормальный",
+    "uk": "нормальний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 110,
+    "word": "necessary",
+    "ru": "необходимый",
+    "uk": "необхідний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 111,
+    "word": "useless",
+    "ru": "бесполезный",
+    "uk": "марний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 112,
+    "word": "useful",
+    "ru": "полезный",
+    "uk": "корисний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 113,
+    "word": "open",
+    "ru": "открытый",
+    "uk": "відкритий",
+    "level": "A2",
+    "topics": [
+      "description",
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 114,
+    "word": "official",
+    "ru": "официальный",
+    "uk": "офіційний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 115,
+    "word": "tidy",
+    "ru": "аккуратный",
+    "uk": "охайний",
+    "level": "A2",
+    "topics": [
+      "description",
+      "home"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 116,
+    "word": "passive",
+    "ru": "пассивный",
+    "uk": "пасивний",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 117,
+    "word": "personal",
+    "ru": "личный",
+    "uk": "особистий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 118,
+    "word": "practical",
+    "ru": "практичный",
+    "uk": "практичний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 119,
+    "word": "affordable",
+    "ru": "доступный по цене",
+    "uk": "недорогий",
+    "level": "A2",
+    "topics": [
+      "money"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 120,
+    "word": "private",
+    "ru": "частный",
+    "uk": "приватний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 121,
+    "word": "precise",
+    "ru": "прецизионный",
+    "uk": "прецизійний",
+    "level": "B2",
+    "topics": [
+      "work",
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 122,
+    "word": "punctual",
+    "ru": "пунктуальный",
+    "uk": "пунктуальний",
+    "level": "A2",
+    "topics": [
+      "work",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 123,
+    "word": "rough",
+    "ru": "шероховатый",
+    "uk": "шорсткий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 124,
+    "word": "rich",
+    "ru": "богатый",
+    "uk": "багатий",
+    "level": "A2",
+    "topics": [
+      "money"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 125,
+    "word": "correct",
+    "ru": "правильный",
+    "uk": "правильний",
+    "level": "A1",
+    "topics": [
+      "education"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 126,
+    "word": "robust",
+    "ru": "прочный",
+    "uk": "міцний",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 127,
+    "word": "quiet",
+    "ru": "спокойный",
+    "uk": "спокійний",
+    "level": "A2",
+    "topics": [
+      "description",
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 128,
+    "word": "salty",
+    "ru": "солёный",
+    "uk": "солоний",
+    "level": "A2",
+    "topics": [
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 129,
+    "word": "full",
+    "ru": "сытый",
+    "uk": "ситий",
+    "level": "A1",
+    "topics": [
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 130,
+    "word": "clean",
+    "ru": "чистый",
+    "uk": "чистий",
+    "level": "A1",
+    "topics": [
+      "home",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 131,
+    "word": "spicy",
+    "ru": "острый",
+    "uk": "гострий",
+    "level": "A2",
+    "topics": [
+      "food",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 132,
+    "word": "bad",
+    "ru": "плохой",
+    "uk": "поганий",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 133,
+    "word": "dirty",
+    "ru": "грязный",
+    "uk": "брудний",
+    "level": "A1",
+    "topics": [
+      "home",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 134,
+    "word": "fast",
+    "ru": "быстрый",
+    "uk": "швидкий",
+    "level": "A1",
+    "topics": [
+      "movement"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 135,
+    "word": "guilty",
+    "ru": "виновный",
+    "uk": "винний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 136,
+    "word": "innocent",
+    "ru": "невиновный",
+    "uk": "невинний",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 137,
+    "word": "weak",
+    "ru": "слабый",
+    "uk": "слабкий",
+    "level": "A2",
+    "topics": [
+      "health",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 138,
+    "word": "heavy",
+    "ru": "тяжёлый",
+    "uk": "важкий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 139,
+    "word": "difficult",
+    "ru": "сложный",
+    "uk": "складний",
+    "level": "A2",
+    "topics": [
+      "education",
+      "work"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 140,
+    "word": "beautiful",
+    "ru": "красивый",
+    "uk": "гарний",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 141,
+    "word": "shy",
+    "ru": "застенчивый",
+    "uk": "сором’язливий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 142,
+    "word": "rare",
+    "ru": "редкий",
+    "uk": "рідкісний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 143,
+    "word": "strange",
+    "ru": "странный",
+    "uk": "дивний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 144,
+    "word": "separate",
+    "ru": "отдельный",
+    "uk": "окремий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 145,
+    "word": "safe",
+    "ru": "надёжный",
+    "uk": "безпечний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 146,
+    "word": "exciting",
+    "ru": "увлекательный",
+    "uk": "захоплюючий",
+    "level": "A2",
+    "topics": [
+      "free_time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 147,
+    "word": "late",
+    "ru": "поздний",
+    "uk": "пізній",
+    "level": "A1",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 148,
+    "word": "strong",
+    "ru": "сильный",
+    "uk": "сильний",
+    "level": "A1",
+    "topics": [
+      "description",
+      "health"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 149,
+    "word": "proud",
+    "ru": "гордый",
+    "uk": "гордий",
+    "level": "B1",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 150,
+    "word": "sweet",
+    "ru": "сладкий",
+    "uk": "солодкий",
+    "level": "A1",
+    "topics": [
+      "food"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 151,
+    "word": "brave",
+    "ru": "храбрый",
+    "uk": "хоробрий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 152,
+    "word": "expensive",
+    "ru": "дорогой",
+    "uk": "дорогий",
+    "level": "A1",
+    "topics": [
+      "money"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 153,
+    "word": "deep",
+    "ru": "глубокий",
+    "uk": "глибокий",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 154,
+    "word": "sad",
+    "ru": "грустный",
+    "uk": "сумний",
+    "level": "A2",
+    "topics": [
+      "feelings"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 155,
+    "word": "typical",
+    "ru": "типичный",
+    "uk": "типовий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 156,
+    "word": "unknown",
+    "ru": "неизвестный",
+    "uk": "невідомий",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 157,
+    "word": "unfriendly",
+    "ru": "недружелюбный",
+    "uk": "недружній",
+    "level": "A2",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 158,
+    "word": "incapable",
+    "ru": "неспособный",
+    "uk": "нездатний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 159,
+    "word": "approximate",
+    "ru": "примерный",
+    "uk": "приблизний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 160,
+    "word": "unusual",
+    "ru": "необычный",
+    "uk": "незвичайний",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 161,
+    "word": "unhappy",
+    "ru": "несчастный",
+    "uk": "нещасний",
+    "level": "B1",
+    "topics": [
+      "feelings"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 162,
+    "word": "rude",
+    "ru": "невежливый",
+    "uk": "неввічливий",
+    "level": "A2",
+    "topics": [
+      "relationships"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 163,
+    "word": "impossible",
+    "ru": "невозможный",
+    "uk": "неможливий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 164,
+    "word": "unnecessary",
+    "ru": "ненужный",
+    "uk": "непотрібний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 165,
+    "word": "unpunctual",
+    "ru": "непунктуальный",
+    "uk": "непунктуальний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 166,
+    "word": "innocent",
+    "ru": "невиновный",
+    "uk": "невинний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 167,
+    "word": "unsafe",
+    "ru": "ненадёжный",
+    "uk": "небезпечний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 168,
+    "word": "different",
+    "ru": "различный",
+    "uk": "відмінний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 169,
+    "word": "incomplete",
+    "ru": "неполный",
+    "uk": "неповний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 170,
+    "word": "unimportant",
+    "ru": "неважный",
+    "uk": "неважливий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 171,
+    "word": "unreal",
+    "ru": "недействительный",
+    "uk": "несправжній",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 172,
+    "word": "available",
+    "ru": "доступный",
+    "uk": "доступний",
+    "level": "B1",
+    "topics": [
+      "work",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 173,
+    "word": "obligated",
+    "ru": "обязанный",
+    "uk": "зобов’язаний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 174,
+    "word": "different",
+    "ru": "разный",
+    "uk": "різний",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 175,
+    "word": "full",
+    "ru": "полный",
+    "uk": "повний",
+    "level": "A1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 176,
+    "word": "complete",
+    "ru": "полный",
+    "uk": "повний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 177,
+    "word": "true",
+    "ru": "правдивый",
+    "uk": "правдивий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 178,
+    "word": "warm",
+    "ru": "тёплый",
+    "uk": "теплий",
+    "level": "A1",
+    "topics": [
+      "weather",
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 179,
+    "word": "soft",
+    "ru": "мягкий",
+    "uk": "м’який",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 180,
+    "word": "important",
+    "ru": "важный",
+    "uk": "важливий",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 181,
+    "word": "real",
+    "ru": "действительный",
+    "uk": "справжній",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 182,
+    "word": "angry",
+    "ru": "разъярённый",
+    "uk": "розлючений",
+    "level": "B1",
+    "topics": [
+      "feelings"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 183,
+    "word": "satisfied",
+    "ru": "довольный",
+    "uk": "задоволений",
+    "level": "A2",
+    "topics": [
+      "feelings"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 184,
+    "word": "additional",
+    "ru": "дополнительный",
+    "uk": "додатковий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 185,
+    "word": "reliable",
+    "ru": "надёжный",
+    "uk": "надійний",
+    "level": "B1",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 186,
+    "word": "similar",
+    "ru": "похожий",
+    "uk": "подібний",
+    "level": "A2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 187,
+    "word": "fearful",
+    "ru": "боязливый",
+    "uk": "боязкий",
+    "level": "B1",
+    "topics": [
+      "feelings"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 188,
+    "word": "external",
+    "ru": "внешний",
+    "uk": "зовнішній",
+    "level": "B2",
+    "topics": [
+      "description"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 189,
+    "word": "public",
+    "ru": "публичный",
+    "uk": "публічний",
+    "level": "B1",
+    "topics": [
+      "city",
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  },
+  {
+    "id": 190,
+    "word": "usual",
+    "ru": "привычный",
+    "uk": "звичний",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": []
+  }
 ];
+
+window.decks.en_verbs = [
+];
+
 window.decks.en_adverbs = [
-
+  {
+    "id": 1,
+    "word": "alone",
+    "ru": "один",
+    "uk": "сам",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He lives alone.",
+        "ru": "Он живёт один.",
+        "uk": "Він живе сам."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "at most",
+    "ru": "в лучшем случае",
+    "uk": "у найкращому разі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The trip will take at most an hour.",
+        "ru": "Поездка займёт в лучшем случае час.",
+        "uk": "Подорож триватиме в кращому разі годину."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "however",
+    "ru": "однако",
+    "uk": "однак",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is possible; however, it is very expensive.",
+        "ru": "Это возможно, однако очень дорого.",
+        "uk": "Це можливо, однак дуже дорого."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "so",
+    "ru": "итак",
+    "uk": "отже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "So, what are we doing now?",
+        "ru": "Итак, что мы теперь делаем?",
+        "uk": "Отже, що ми тепер робимо?"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "most of all",
+    "ru": "больше всего",
+    "uk": "найбільше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I like pizza most of all.",
+        "ru": "Больше всего я люблю пиццу.",
+        "uk": "Найбільше я люблю піцу."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "differently",
+    "ru": "по-другому",
+    "uk": "інакше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Today everything feels differently.",
+        "ru": "Сегодня всё ощущается по-другому.",
+        "uk": "Сьогодні все відчувається інакше."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "in view of",
+    "ru": "ввиду",
+    "uk": "з огляду на",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In view of the situation, we have to save money.",
+        "ru": "Ввиду ситуации нам нужно экономить.",
+        "uk": "З огляду на ситуацію ми мусимо економити."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "otherwise",
+    "ru": "иначе",
+    "uk": "інакше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Hurry up, otherwise you will be late.",
+        "ru": "Поторопись, иначе опоздаешь.",
+        "uk": "Поспіши, інакше запізнишся."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "also",
+    "ru": "тоже",
+    "uk": "також",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I will come also.",
+        "ru": "Я тоже приду.",
+        "uk": "Я теж прийду."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "outside",
+    "ru": "снаружи",
+    "uk": "зовні",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The door is red outside.",
+        "ru": "Дверь снаружи красная.",
+        "uk": "Двері зовні червоні."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "soon",
+    "ru": "скоро",
+    "uk": "незабаром",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will see each other again soon.",
+        "ru": "Мы скоро снова увидимся.",
+        "uk": "Ми невдовзі знову побачимось."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "almost",
+    "ru": "почти",
+    "uk": "майже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I almost forgot to write to you.",
+        "ru": "Я почти забыл написать тебе.",
+        "uk": "Я майже забув написати тобі."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "word": "already",
+    "ru": "уже",
+    "uk": "вже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He has already arrived.",
+        "ru": "Он уже прибыл.",
+        "uk": "Він уже прибув."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "word": "especially",
+    "ru": "особенно",
+    "uk": "особливо",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The food was especially good.",
+        "ru": "Еда была особенно хорошей.",
+        "uk": "Їжа була особливо смачною."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "word": "definitely",
+    "ru": "точно",
+    "uk": "напевно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He will definitely come.",
+        "ru": "Он точно придёт.",
+        "uk": "Він напевно прийде."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "word": "there",
+    "ru": "там",
+    "uk": "там",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "There is a café over there.",
+        "ru": "Вон там есть кафе.",
+        "uk": "Он там є кафе."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "word": "back then",
+    "ru": "тогда",
+    "uk": "тоді",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Back then I was still a child.",
+        "ru": "Тогда я ещё был ребёнком.",
+        "uk": "Тоді я ще був дитиною."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "word": "afterwards",
+    "ru": "потом",
+    "uk": "потім",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will eat and afterwards we will go for a walk.",
+        "ru": "Мы поедим, а потом пойдём гулять.",
+        "uk": "Ми поїмо, а потім підемо гуляти."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "word": "then",
+    "ru": "потом",
+    "uk": "потім",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "First we have breakfast, then we work.",
+        "ru": "Сначала мы завтракаем, потом работаем.",
+        "uk": "Спочатку ми снідаємо, потім працюємо."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "word": "therefore",
+    "ru": "поэтому",
+    "uk": "тому",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is cold; therefore I stay at home.",
+        "ru": "Холодно, поэтому я остаюсь дома.",
+        "uk": "Холодно, тому я залишаюся вдома."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "word": "nevertheless",
+    "ru": "тем не менее",
+    "uk": "однак",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is raining; nevertheless we go out.",
+        "ru": "Идёт дождь, тем не менее мы выходим.",
+        "uk": "Йде дощ, однак ми все одно виходимо."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "word": "therefore",
+    "ru": "поэтому",
+    "uk": "тому",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I was ill; therefore I stayed at home.",
+        "ru": "Я был болен, поэтому остался дома.",
+        "uk": "Я був хворий, тому залишився вдома."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "word": "after all",
+    "ru": "всё-таки",
+    "uk": "все ж таки",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "You knew about it after all.",
+        "ru": "Ты всё-таки знал об этом.",
+        "uk": "Ти все ж таки знав про це."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "word": "there",
+    "ru": "там",
+    "uk": "там",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "There is a small café there.",
+        "ru": "Там есть маленькое кафе.",
+        "uk": "Там є маленьке кафе."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "word": "outside",
+    "ru": "снаружи",
+    "uk": "зовні",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The children are playing outside.",
+        "ru": "Дети играют на улице.",
+        "uk": "Діти грають надворі."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "word": "inside",
+    "ru": "внутри",
+    "uk": "всередині",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is cold; we stay inside.",
+        "ru": "Холодно, мы остаёмся внутри.",
+        "uk": "Холодно, ми залишаємося всередині."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "word": "over there",
+    "ru": "вон там",
+    "uk": "он там",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The bus stop is over there.",
+        "ru": "Остановка автобуса вон там.",
+        "uk": "Зупинка автобуса он там."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "word": "quite",
+    "ru": "вполне",
+    "uk": "цілком",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "That is quite possible.",
+        "ru": "Это вполне возможно.",
+        "uk": "Це цілком можливо."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "word": "exactly",
+    "ru": "именно",
+    "uk": "саме так",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "That is exactly what I mean.",
+        "ru": "Это именно то, что я имею в виду.",
+        "uk": "Це саме те, що я маю на увазі."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "word": "likewise",
+    "ru": "так же",
+    "uk": "так само",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Have a nice day! – Thanks, likewise.",
+        "ru": "Хорошего дня! – Спасибо, и вам так же.",
+        "uk": "Гарного дня! – Дякую, вам так само."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "word": "equally",
+    "ru": "так же",
+    "uk": "так само",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is equally tired as I am.",
+        "ru": "Он так же устал, как и я.",
+        "uk": "Він так само втомився, як і я."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "word": "to some extent",
+    "ru": "в известной мере",
+    "uk": "певною мірою",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "This is difficult to some extent.",
+        "ru": "Это в известной мере сложно.",
+        "uk": "Це певною мірою складно."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "word": "actually",
+    "ru": "вообще-то",
+    "uk": "власне",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "What is your name, actually?",
+        "ru": "Как тебя вообще-то зовут?",
+        "uk": "Як тебе, власне, звати?"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "word": "finally",
+    "ru": "наконец",
+    "uk": "нарешті",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Finally, you are here!",
+        "ru": "Наконец ты здесь!",
+        "uk": "Нарешті ти тут!"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "word": "only",
+    "ru": "только",
+    "uk": "лише",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is only nine o'clock.",
+        "ru": "Сейчас всего лишь девять часов.",
+        "uk": "Зараз лише дев’ята година."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "word": "extremely",
+    "ru": "чрезвычайно",
+    "uk": "надзвичайно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is extremely cold today.",
+        "ru": "Сегодня чрезвычайно холодно.",
+        "uk": "Сьогодні надзвичайно холодно."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "word": "almost",
+    "ru": "почти",
+    "uk": "майже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I have almost understood everything.",
+        "ru": "Я почти всё понял.",
+        "uk": "Я зрозумів майже все."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "word": "furthermore",
+    "ru": "кроме того",
+    "uk": "крім того",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Furthermore, it should be noted that ...",
+        "ru": "Кроме того, следует отметить, что ...",
+        "uk": "Крім того, слід зазначити, що ..."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "word": "consequently",
+    "ru": "следовательно",
+    "uk": "отже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He was ill; consequently, he stayed at home.",
+        "ru": "Он был болен, следовательно остался дома.",
+        "uk": "Він був хворий, отже залишився вдома."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "word": "earlier",
+    "ru": "раньше",
+    "uk": "раніше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Earlier I had more time.",
+        "ru": "Раньше у меня было больше времени.",
+        "uk": "Раніше я мав більше часу."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "word": "if necessary",
+    "ru": "в случае необходимости",
+    "uk": "за потреби",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Call me if necessary.",
+        "ru": "При необходимости позвоните мне.",
+        "uk": "У разі потреби зателефонуйте мені."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "word": "exactly",
+    "ru": "точно",
+    "uk": "точно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "That is exactly right.",
+        "ru": "Это точно правильно.",
+        "uk": "Це точно правильно."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "word": "enough",
+    "ru": "достаточно",
+    "uk": "досить",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I have enough time.",
+        "ru": "У меня достаточно времени.",
+        "uk": "У мене досить часу."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "word": "just",
+    "ru": "как раз сейчас",
+    "uk": "якраз зараз",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am just eating.",
+        "ru": "Я как раз ем.",
+        "uk": "Я якраз їм."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "word": "gladly",
+    "ru": "охотно",
+    "uk": "охоче",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I will gladly help you.",
+        "ru": "Я охотно помогу тебе.",
+        "uk": "Я охоче допоможу тобі."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "word": "yesterday",
+    "ru": "вчера",
+    "uk": "вчора",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I was at home yesterday.",
+        "ru": "Вчера я был дома.",
+        "uk": "Учора я був удома."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "word": "right away",
+    "ru": "сейчас же",
+    "uk": "зараз же",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I will be back right away.",
+        "ru": "Я сейчас же вернусь.",
+        "uk": "Я зараз же повернуся."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "word": "nevertheless",
+    "ru": "всё же",
+    "uk": "все ж таки",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It was hard; nevertheless he did not give up.",
+        "ru": "Было трудно, всё же он не сдался.",
+        "uk": "Було важко, все ж таки він не здався."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "word": "mainly",
+    "ru": "главным образом",
+    "uk": "переважно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He works mainly at home.",
+        "ru": "Он работает главным образом дома.",
+        "uk": "Він працює переважно вдома."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "word": "here",
+    "ru": "сюда",
+    "uk": "сюди",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Come here!",
+        "ru": "Иди сюда!",
+        "uk": "Іди сюди!"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "word": "today",
+    "ru": "сегодня",
+    "uk": "сьогодні",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Today I have a day off.",
+        "ru": "Сегодня у меня выходной.",
+        "uk": "Сьогодні в мене вихідний."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "word": "here",
+    "ru": "здесь",
+    "uk": "тут",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is quiet here.",
+        "ru": "Здесь тихо.",
+        "uk": "Тут тихо."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "word": "hereby",
+    "ru": "настоящим",
+    "uk": "цим",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I hereby cancel my contract.",
+        "ru": "Настоящим я расторгаю свой договор.",
+        "uk": "Цим я розриваю свій контракт."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "word": "there",
+    "ru": "туда",
+    "uk": "туди",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is walking over there.",
+        "ru": "Он идёт туда.",
+        "uk": "Він іде туди."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "word": "by contrast",
+    "ru": "напротив",
+    "uk": "натомість",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is quiet; she, by contrast, is very loud.",
+        "ru": "Он спокойный, она, напротив, очень шумная.",
+        "uk": "Він спокійний, вона ж натомість дуже гучна."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "word": "at the back",
+    "ru": "сзади",
+    "uk": "позаду",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The garden is at the back.",
+        "ru": "Сад находится сзади.",
+        "uk": "Сад знаходиться позаду."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "word": "always",
+    "ru": "всегда",
+    "uk": "завжди",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am always tired in the evening.",
+        "ru": "Я всегда устаю вечером.",
+        "uk": "Я завжди втомлююся ввечері."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "word": "meanwhile",
+    "ru": "между тем",
+    "uk": "між тим",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He was working; meanwhile, the others were sleeping.",
+        "ru": "Он работал, между тем остальные спали.",
+        "uk": "Він працював, між тим інші спали."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "word": "inside",
+    "ru": "внутри",
+    "uk": "всередині",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The jacket is warm inside.",
+        "ru": "Куртка тёплая внутри.",
+        "uk": "Куртка тепла всередині."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "word": "insofar",
+    "ru": "постольку",
+    "uk": "наскільки",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Insofar as I know, this is true.",
+        "ru": "Постольку, поскольку я знаю, это верно.",
+        "uk": "Наскільки я знаю, це правда."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "word": "in this respect",
+    "ru": "в этом отношении",
+    "uk": "у цьому відношенні",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In this respect it is correct.",
+        "ru": "В этом отношении это верно.",
+        "uk": "У цьому відношенні це правильно."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "word": "in the meantime",
+    "ru": "тем временем",
+    "uk": "тим часом",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I’m cooking; in the meantime, he is setting the table.",
+        "ru": "Я готовлю, тем временем он накрывает на стол.",
+        "uk": "Я готую, тим часом він накриває на стіл."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "word": "however",
+    "ru": "однако",
+    "uk": "однак",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He wanted to come; however, he was ill.",
+        "ru": "Он хотел прийти, однако был болен.",
+        "uk": "Він хотів прийти, однак був хворий."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "word": "now",
+    "ru": "сейчас",
+    "uk": "зараз",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I don’t have time now.",
+        "ru": "У меня сейчас нет времени.",
+        "uk": "Я зараз не маю часу."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "word": "hardly",
+    "ru": "едва",
+    "uk": "ледь",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I have hardly slept.",
+        "ru": "Я почти не спал.",
+        "uk": "Я майже не спав."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "word": "hardly anymore",
+    "ru": "едва уже",
+    "uk": "ледве вже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He can hardly walk anymore.",
+        "ru": "Он уже едва может ходить.",
+        "uk": "Він ледве вже може ходити."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "word": "by no means",
+    "ru": "ни в коем случае",
+    "uk": "ні в якому разі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "That is by no means certain.",
+        "ru": "Это ни в коем случае не наверняка.",
+        "uk": "Це ні в якому разі не напевно."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "word": "rather",
+    "ru": "лучше",
+    "uk": "краще",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I would rather drink tea than coffee.",
+        "ru": "Я лучше выпью чай, чем кофе.",
+        "uk": "Я краще вип’ю чай, ніж каву."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "word": "left",
+    "ru": "налево",
+    "uk": "ліворуч",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Turn left at the corner.",
+        "ru": "Поверните на углу налево.",
+        "uk": "Поверніть на розі ліворуч."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "word": "sometimes",
+    "ru": "иногда",
+    "uk": "іноді",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Sometimes I feel very tired.",
+        "ru": "Иногда я чувствую себя очень уставшим.",
+        "uk": "Іноді я почуваюся дуже втомленим."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "word": "with the help of",
+    "ru": "с помощью",
+    "uk": "за допомогою",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "With the help of friends he learned German.",
+        "ru": "С помощью друзей он выучил немецкий.",
+        "uk": "За допомогою друзів він вивчив німецьку."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "word": "thus",
+    "ru": "следовательно",
+    "uk": "отже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He was not there, thus he could not know anything.",
+        "ru": "Его там не было, следовательно он не мог ничего знать.",
+        "uk": "Його там не було, отже він не міг нічого знати."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "word": "tomorrow",
+    "ru": "завтра",
+    "uk": "завтра",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Tomorrow I have a meeting.",
+        "ru": "Завтра у меня встреча.",
+        "uk": "Завтра в мене зустріч."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "word": "of course",
+    "ru": "конечно",
+    "uk": "звісно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Of course I will help you.",
+        "ru": "Конечно, я тебе помогу.",
+        "uk": "Звісно, я тобі допоможу."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "word": "never",
+    "ru": "никогда",
+    "uk": "ніколи",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I never smoke.",
+        "ru": "Я никогда не курю.",
+        "uk": "Я ніколи не курю."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "word": "nowhere",
+    "ru": "нигде",
+    "uk": "ніде",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I can find my key nowhere.",
+        "ru": "Я нигде не могу найти свой ключ.",
+        "uk": "Я ніде не можу знайти свій ключ."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "word": "still",
+    "ru": "ещё",
+    "uk": "ще",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Are you still there?",
+        "ru": "Ты ещё здесь?",
+        "uk": "Ти ще тут?"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "word": "once again",
+    "ru": "ещё раз",
+    "uk": "ще раз",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Thank you once again.",
+        "ru": "Ещё раз спасибо.",
+        "uk": "Ще раз дякую."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "word": "only",
+    "ru": "только",
+    "uk": "тільки",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I have only ten euros.",
+        "ru": "У меня всего лишь десять евро.",
+        "uk": "Я маю тільки десять євро."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "word": "upstairs",
+    "ru": "наверху",
+    "uk": "вгорі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The apartment is upstairs.",
+        "ru": "Квартира наверху.",
+        "uk": "Квартира вгорі."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "word": "on top",
+    "ru": "сверху",
+    "uk": "нагорі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The books are lying on top.",
+        "ru": "Книги лежат сверху.",
+        "uk": "Книги лежать нагорі."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "word": "often",
+    "ru": "часто",
+    "uk": "часто",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I often go to the cinema.",
+        "ru": "Я часто хожу в кино.",
+        "uk": "Я часто ходжу в кіно."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "word": "suddenly",
+    "ru": "вдруг",
+    "uk": "раптом",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Suddenly it started to rain.",
+        "ru": "Вдруг начался дождь.",
+        "uk": "Раптом почався дощ."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "word": "right",
+    "ru": "направо",
+    "uk": "праворуч",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Drive to the right.",
+        "ru": "Езжай направо.",
+        "uk": "Їдь праворуч."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "word": "in the end",
+    "ru": "в конце концов",
+    "uk": "зрештою",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In the end he gave in.",
+        "ru": "В конце концов он уступил.",
+        "uk": "Зрештою він поступився."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "word": "already",
+    "ru": "уже",
+    "uk": "вже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am already finished.",
+        "ru": "Я уже закончил.",
+        "uk": "Я вже закінчив."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "word": "very",
+    "ru": "очень",
+    "uk": "дуже",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "This is very important.",
+        "ru": "Это очень важно.",
+        "uk": "Це дуже важливо."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "word": "rarely",
+    "ru": "редко",
+    "uk": "рідко",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I rarely go to the theatre.",
+        "ru": "Я редко хожу в театр.",
+        "uk": "Я рідко ходжу до театру."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "word": "certainly",
+    "ru": "конечно",
+    "uk": "звісно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He will certainly come.",
+        "ru": "Он точно придёт.",
+        "uk": "Він напевно прийде."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "word": "immediately",
+    "ru": "сразу",
+    "uk": "відразу",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Come here immediately!",
+        "ru": "Иди сюда немедленно!",
+        "uk": "Іди сюди відразу!"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "word": "thus",
+    "ru": "таким образом",
+    "uk": "таким чином",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is expensive; thus we cannot buy it.",
+        "ru": "Это дорого, таким образом мы не можем это купить.",
+        "uk": "Це дорого, таким чином ми не можемо це купити."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "word": "otherwise",
+    "ru": "иначе",
+    "uk": "інакше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Hurry up, otherwise you will miss the train.",
+        "ru": "Поторопись, иначе ты пропустишь поезд.",
+        "uk": "Поспіши, інакше пропустиш потяг."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "word": "later",
+    "ru": "позже",
+    "uk": "пізніше",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will talk about it later.",
+        "ru": "Мы поговорим об этом позже.",
+        "uk": "Ми поговоримо про це пізніше."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "word": "partly",
+    "ru": "частично",
+    "uk": "частково",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The statements are only partly true.",
+        "ru": "Утверждения лишь частично верны.",
+        "uk": "Твердження лише частково правильні."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "word": "totally",
+    "ru": "совсем",
+    "uk": "повністю",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am totally exhausted.",
+        "ru": "Я совсем вымотался.",
+        "uk": "Я повністю виснажений."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "word": "despite that",
+    "ru": "несмотря на это",
+    "uk": "попри це",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is raining; despite that we are going out.",
+        "ru": "Идёт дождь, несмотря на это мы выходим.",
+        "uk": "Йде дощ, попри це ми виходимо."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "word": "downstairs",
+    "ru": "внизу",
+    "uk": "внизу",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The garage is downstairs.",
+        "ru": "Гараж находится внизу.",
+        "uk": "Гараж розташований внизу."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "word": "maybe",
+    "ru": "может быть",
+    "uk": "можливо",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Maybe I will come tomorrow.",
+        "ru": "Может быть, я приду завтра.",
+        "uk": "Можливо, я прийду завтра."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "word": "from each other",
+    "ru": "друг от друга",
+    "uk": "один від одного",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We can learn a lot from each other.",
+        "ru": "Мы можем многому научиться друг у друга.",
+        "uk": "Ми можемо багато навчитися один від одного."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "word": "the day before yesterday",
+    "ru": "позавчера",
+    "uk": "позавчора",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The day before yesterday was Sunday.",
+        "ru": "Позавчера было воскресенье.",
+        "uk": "Позавчора була неділя."
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "word": "for now",
+    "ru": "пока",
+    "uk": "поки що",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "This is enough for now.",
+        "ru": "Этого пока достаточно.",
+        "uk": "Цього поки що досить."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "word": "in front",
+    "ru": "впереди",
+    "uk": "попереду",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I sit in front on the bus.",
+        "ru": "Я сижу впереди в автобусе.",
+        "uk": "Я сиджу попереду в автобусі."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "word": "primarily",
+    "ru": "преимущественно",
+    "uk": "переважно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "This affects primarily young people.",
+        "ru": "Это касается преимущественно молодых людей.",
+        "uk": "Це стосується переважно молодих людей."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "word": "from the outset",
+    "ru": "изначально",
+    "uk": "з самого початку",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It was clear from the outset.",
+        "ru": "Это было ясно изначально.",
+        "uk": "Це було зрозуміло з самого початку."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "word": "probably",
+    "ru": "вероятно",
+    "uk": "ймовірно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He will probably come later.",
+        "ru": "Он, вероятно, придёт позже.",
+        "uk": "Він, ймовірно, прийде пізніше."
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "word": "away",
+    "ru": "прочь",
+    "uk": "геть",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "My phone is gone; it is away.",
+        "ru": "Мой телефон пропал, он куда-то делся.",
+        "uk": "Мій телефон зник, його немає."
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "word": "further",
+    "ru": "дальше",
+    "uk": "далі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Please read further.",
+        "ru": "Пожалуйста, читай дальше.",
+        "uk": "Будь ласка, читай далі."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "word": "why",
+    "ru": "почему",
+    "uk": "чому",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Do you know why he is not coming?",
+        "ru": "Ты знаешь, почему он не приходит?",
+        "uk": "Ти знаєш, чому він не приходить?"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "word": "in return",
+    "ru": "в свою очередь",
+    "uk": "зі свого боку",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He helps him and in return expects help.",
+        "ru": "Он помогает ему и, в свою очередь, ждёт помощи.",
+        "uk": "Він йому допомагає й, зі свого боку, чекає допомоги."
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "word": "again",
+    "ru": "снова",
+    "uk": "знову",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will see each other again.",
+        "ru": "Мы увидимся снова.",
+        "uk": "Ми побачимось знову."
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "word": "in turn",
+    "ru": "в свою очередь",
+    "uk": "зі свого боку",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "She helped him; he, in turn, thanked her.",
+        "ru": "Она помогла ему, он, в свою очередь, поблагодарил её.",
+        "uk": "Вона йому допомогла, він, зі свого боку, подякував їй."
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "word": "somewhere else",
+    "ru": "в другом месте",
+    "uk": "деінде",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am looking for work somewhere else.",
+        "ru": "Я ищу работу в другом месте.",
+        "uk": "Я шукаю роботу деінде."
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "word": "quite",
+    "ru": "довольно",
+    "uk": "досить",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is quite cold today.",
+        "ru": "Сегодня довольно холодно.",
+        "uk": "Сьогодні досить холодно."
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "word": "in addition",
+    "ru": "к тому же",
+    "uk": "до того ж",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is expensive and, in addition, impractical.",
+        "ru": "Это дорого и к тому же непрактично.",
+        "uk": "Це дорого і до того ж непрактично."
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "word": "lastly",
+    "ru": "напоследок",
+    "uk": "наостанок",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Lastly, I would like to thank you.",
+        "ru": "Напоследок я хотел бы поблагодарить.",
+        "uk": "Наостанок я хотів би подякувати."
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "word": "especially since",
+    "ru": "тем более что",
+    "uk": "тим більше що",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I will stay at home, especially since it’s raining.",
+        "ru": "Я останусь дома, тем более что идёт дождь.",
+        "uk": "Я залишуся вдома, тим більше що йде дощ."
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "word": "first of all",
+    "ru": "сначала",
+    "uk": "спочатку",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "First of all, I would like to explain something.",
+        "ru": "Сначала я хотел бы кое-что объяснить.",
+        "uk": "Спочатку я хотів би дещо пояснити."
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "word": "back",
+    "ru": "назад",
+    "uk": "назад",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "When will you come back?",
+        "ru": "Когда ты вернёшься назад?",
+        "uk": "Коли ти повернешся назад?"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "word": "together",
+    "ru": "вместе",
+    "uk": "разом",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We are learning together.",
+        "ru": "Мы учимся вместе.",
+        "uk": "Ми вчимося разом."
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "word": "similarly",
+    "ru": "похоже",
+    "uk": "подібно",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We think similarly.",
+        "ru": "Мы думаем похоже.",
+        "uk": "Ми думаємо подібно."
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "word": "everywhere",
+    "ru": "везде",
+    "uk": "скрізь",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "You can hear music everywhere.",
+        "ru": "Музыку слышно везде.",
+        "uk": "Музику чути скрізь."
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "word": "moreover",
+    "ru": "кроме того",
+    "uk": "крім того",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is expensive and, moreover, complicated.",
+        "ru": "Это дорого и, кроме того, сложно.",
+        "uk": "Це дорого і, крім того, складно."
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "word": "at all",
+    "ru": "вообще",
+    "uk": "взагалі",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Do you understand this at all?",
+        "ru": "Ты вообще это понимаешь?",
+        "uk": "Ти це взагалі розумієш?"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "word": "the day after tomorrow",
+    "ru": "послезавтра",
+    "uk": "післязавтра",
+    "level": "",
+    "topics": [],
+    "deSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "deAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We are leaving the day after tomorrow.",
+        "ru": "Мы выезжаем послезавтра.",
+        "uk": "Ми виїжджаємо післязавтра."
+      }
+    ]
+  }
 ];
-window.decks.en_prepositions = [
-{
-  id: 1,
-  word: "from (time)",
-  ru: "с",
-  uk: "від",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "From tomorrow on, I will work in Berlin.",
-      ru: "С завтрашнего дня я буду работать в Берлине.",
-      uk: "Від завтра я працюватиму в Берліні."
-    }
-  ]
-},
-{
-  id: 2,
-  word: "away from",
-  ru: "в стороне от",
-  uk: "осторонь від",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The house is away from the road.",
-      ru: "Дом стоит в стороне от дороги.",
-      uk: "Будинок розташований осторонь від дороги."
-    }
-  ]
-},
-{
-  id: 3,
-  word: "minus",
-  ru: "за вычетом",
-  uk: "за вирахуванням",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The price is 100 euros minus the discount.",
-      ru: "Цена составляет 100 евро за вычетом скидки.",
-      uk: "Ціна становить 100 євро за вирахуванням знижки."
-    }
-  ]
-},
-{
-  id: 4,
-  word: "less (after deducting)",
-  ru: "за вычетом",
-  uk: "за вирахуванням",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Less taxes, not much remains.",
-      ru: "За вычетом налогов мало остаётся.",
-      uk: "За вирахуванням податків лишається небагато."
-    }
-  ]
-},
-{
-  id: 5,
-  word: "at",
-  ru: "у",
-  uk: "біля",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "We are meeting at the station.",
-      ru: "Мы встречаемся у вокзала.",
-      uk: "Ми зустрічаємося біля вокзалу."
-    }
-  ]
-},
-{
-  id: 6,
-  word: "in place of",
-  ru: "вместо",
-  uk: "замість",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In place of the boss, the deputy signs.",
-      ru: "Вместо начальника подписывает заместитель.",
-      uk: "Замість шефа підписує заступник."
-    }
-  ]
-},
-{
-  id: 7,
-  word: "in place of (someone)",
-  ru: "вместо",
-  uk: "замість",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He is working in place of his colleague.",
-      ru: "Он работает вместо своего коллеги.",
-      uk: "Він працює замість свого колеги."
-    }
-  ]
-},
-{
-  id: 8,
-  word: "in view of",
-  ru: "ввиду",
-  uk: "з огляду на",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In view of the situation, we have to save money.",
-      ru: "Ввиду ситуации нам нужно экономить.",
-      uk: "З огляду на ситуацію ми мусимо економити."
-    }
-  ]
-},
-{
-  id: 9,
-  word: "on the basis of",
-  ru: "на основании",
-  uk: "на підставі",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I will explain the rule on the basis of this example.",
-      ru: "На основании этого примера я объясню правило.",
-      uk: "На підставі цього прикладу я поясню правило."
-    }
-  ]
-},
-{
-  id: 10,
-  word: "on the occasion of",
-  ru: "по случаю",
-  uk: "з нагоди",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "There will be a party on the occasion of his birthday.",
-      ru: "По случаю его дня рождения будет праздник.",
-      uk: "З нагоди його дня народження буде свято."
-    }
-  ]
-},
-{
-  id: 11,
-  word: "instead of",
-  ru: "вместо",
-  uk: "замість",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Instead of an email, he wrote a letter.",
-      ru: "Вместо электронного письма он написал письмо.",
-      uk: "Замість електронного листа він написав лист."
-    }
-  ]
-},
-{
-  id: 12,
-  word: "on",
-  ru: "на",
-  uk: "на",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The book is on the table.",
-      ru: "Книга лежит на столе.",
-      uk: "Книга лежить на столі."
-    }
-  ]
-},
-{
-  id: 13,
-  word: "because of",
-  ru: "из-за",
-  uk: "через",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Because of the bad weather, we are staying at home.",
-      ru: "Из-за плохой погоды мы остаёмся дома.",
-      uk: "Через погану погоду ми залишаємося вдома."
-    }
-  ]
-},
-{
-  id: 14,
-  word: "from (origin)",
-  ru: "из",
-  uk: "з",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He is from Germany.",
-      ru: "Он из Германии.",
-      uk: "Він з Німеччини."
-    }
-  ]
-},
-{
-  id: 15,
-  word: "excluding",
-  ru: "исключая",
-  uk: "за винятком",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Excluding drinks, everything is included in the price.",
-      ru: "Исключая напитки, всё включено в цену.",
-      uk: "За винятком напоїв, усе включено в ціну."
-    }
-  ]
-},
-{
-  id: 16,
-  word: "except for",
-  ru: "кроме",
-  uk: "крім",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Except for me, nobody was there.",
-      ru: "Кроме меня там никого не было.",
-      uk: "Крім мене там нікого не було."
-    }
-  ]
-},
-{
-  id: 17,
-  word: "outside",
-  ru: "вне",
-  uk: "поза",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "It is quieter outside the city.",
-      ru: "Вне города спокойнее.",
-      uk: "Поза містом спокійніше."
-    }
-  ]
-},
-{
-  id: 18,
-  word: "at (someone's place)",
-  ru: "у",
-  uk: "у",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I live at my parents’ place.",
-      ru: "Я живу у родителей.",
-      uk: "Я живу в батьків."
-    }
-  ]
-},
-{
-  id: 19,
-  word: "on both sides of",
-  ru: "по обе стороны",
-  uk: "по обидва боки",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "There are trees on both sides of the street.",
-      ru: "По обе стороны улицы стоят деревья.",
-      uk: "По обидва боки вулиці стоять дерева."
-    }
-  ]
-},
-{
-  id: 20,
-  word: "regarding",
-  ru: "касательно",
-  uk: "щодо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Regarding your application, we will contact you later.",
-      ru: "Касательно вашего заявления мы свяжемся позже.",
-      uk: "Щодо вашої заяви ми зв’яжемося пізніше."
-    }
-  ]
-},
-{
-  id: 21,
-  word: "concerning",
-  ru: "относительно",
-  uk: "щодо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Concerning the payment, I have a question.",
-      ru: "Относительно оплаты у меня есть вопрос.",
-      uk: "Щодо оплати маю запитання."
-    }
-  ]
-},
-{
-  id: 22,
-  word: "until",
-  ru: "до",
-  uk: "до",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I am staying until tomorrow.",
-      ru: "Я останусь до завтра.",
-      uk: "Я залишуся до завтра."
-    }
-  ]
-},
-{
-  id: 23,
-  word: "against (formal)",
-  ru: "против",
-  uk: "проти",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Many voices were against the proposal.",
-      ru: "Многие голоса были против предложения.",
-      uk: "Багато голосів були проти пропозиції."
-    }
-  ]
-},
-{
-  id: 24,
-  word: "thanks to",
-  ru: "благодаря",
-  uk: "завдяки",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Thanks to your help, it was easy.",
-      ru: "Благодаря твоей помощи это было легко.",
-      uk: "Завдяки твоїй допомозі це було легко."
-    }
-  ]
-},
-{
-  id: 25,
-  word: "on this side of",
-  ru: "по эту сторону",
-  uk: "по цей бік",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "On this side of the river, there is a village.",
-      ru: "По эту сторону реки есть деревня.",
-      uk: "По цей бік річки є село."
-    }
-  ]
-},
-{
-  id: 26,
-  word: "through",
-  ru: "через",
-  uk: "через",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "We are walking through the park.",
-      ru: "Мы идём через парк.",
-      uk: "Ми йдемо через парк."
-    }
-  ]
-},
-{
-  id: 27,
-  word: "including",
-  ru: "включая",
-  uk: "включаючи",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Including drinks, it costs 20 euros.",
-      ru: "Включая напитки, это стоит 20 евро.",
-      uk: "Включаючи напої, це коштує 20 євро."
-    }
-  ]
-},
-{
-  id: 28,
-  word: "contrary to",
-  ru: "вопреки",
-  uk: "всупереч",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Contrary to the doctors’ advice, he keeps smoking.",
-      ru: "Вопреки совету врачей он продолжает курить.",
-      uk: "Всупереч пораді лікарів він далі палить."
-    }
-  ]
-},
-{
-  id: 29,
-  word: "along",
-  ru: "вдоль",
-  uk: "вздовж",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "We are walking along the river.",
-      ru: "Мы идём вдоль реки.",
-      uk: "Ми йдемо вздовж річки."
-    }
-  ]
-},
-{
-  id: 30,
-  word: "in accordance with",
-  ru: "соответственно",
-  uk: "відповідно до",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In accordance with the plan, we start at eight.",
-      ru: "Соответственно плану мы начинаем в восемь.",
-      uk: "Відповідно до плану ми починаємо о восьмій."
-    }
-  ]
-},
-{
-  id: 31,
-  word: "excluding (tax)",
-  ru: "за вычетом",
-  uk: "за винятком",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The price is given excluding tax.",
-      ru: "Цена указана без учёта налогов.",
-      uk: "Ціна вказана за винятком податків."
-    }
-  ]
-},
-{
-  id: 32,
-  word: "far from",
-  ru: "вдали от",
-  uk: "далеко від",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Far from the city, it is very quiet.",
-      ru: "Вдали от города очень тихо.",
-      uk: "Далеко від міста дуже тихо."
-    }
-  ]
-},
-{
-  id: 33,
-  word: "for",
-  ru: "для",
-  uk: "для",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The present is for you.",
-      ru: "Этот подарок для тебя.",
-      uk: "Цей подарунок для тебе."
-    }
-  ]
-},
-{
-  id: 34,
-  word: "against",
-  ru: "против",
-  uk: "проти",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "We will arrive at about eight o’clock.",
-      ru: "Мы придём около восьми часов.",
-      uk: "Ми прийдемо близько восьмої години."
-    }
-  ]
-},
-{
-  id: 35,
-  word: "opposite",
-  ru: "напротив",
-  uk: "навпроти",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The school is opposite the church.",
-      ru: "Школа находится напротив церкви.",
-      uk: "Школа розташована навпроти церкви."
-    }
-  ]
-},
-{
-  id: 36,
-  word: "across from",
-  ru: "напротив",
-  uk: "навпроти",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The bank is across from the post office.",
-      ru: "Банк напротив почты.",
-      uk: "Банк навпроти пошти."
-    }
-  ]
-},
-{
-  id: 37,
-  word: "according to",
-  ru: "согласно",
-  uk: "згідно з",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "According to the contract, we pay monthly.",
-      ru: "Согласно договору мы платим ежемесячно.",
-      uk: "Згідно з договором ми платимо щомісяця."
-    }
-  ]
-},
-{
-  id: 38,
-  word: "with respect to",
-  ru: "касательно",
-  uk: "стосовно",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "With respect to quality, there are no problems.",
-      ru: "Касательно качества проблем нет.",
-      uk: "Стосовно якості проблем немає."
-    }
-  ]
-},
-{
-  id: 39,
-  word: "behind",
-  ru: "за",
-  uk: "за",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The garden is behind the house.",
-      ru: "Сад находится за домом.",
-      uk: "Сад розташований позаду будинку."
-    }
-  ]
-},
-{
-  id: 40,
-  word: "in case of",
-  ru: "в случае",
-  uk: "у разі",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In case of an emergency, call 112.",
-      ru: "В случае чрезвычайной ситуации звоните 112.",
-      uk: "У разі надзвичайної ситуації телефонуйте 112."
-    }
-  ]
-},
-{
-  id: 41,
-  word: "with a view to",
-  ru: "ввиду",
-  uk: "з огляду на",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "With a view to the future, we are saving money.",
-      ru: "Ввиду будущего мы копим деньги.",
-      uk: "З огляду на майбутнє ми заощаджуємо гроші."
-    }
-  ]
-},
-{
-  id: 42,
-  word: "in the course of",
-  ru: "в течение",
-  uk: "упродовж",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In the course of the day, I will call you.",
-      ru: "В течение дня я тебе позвоню.",
-      uk: "Упродовж дня я тобі подзвоню."
-    }
-  ]
-},
-{
-  id: 43,
-  word: "within the framework of",
-  ru: "в рамках",
-  uk: "у межах",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Within the framework of the course, we are doing a trip.",
-      ru: "В рамках курса мы делаем экскурсию.",
-      uk: "У межах курсу ми робимо екскурсію."
-    }
-  ]
-},
-{
-  id: 44,
-  word: "in the sense of",
-  ru: "в смысле",
-  uk: "у сенсі",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In the sense of the law, this is forbidden.",
-      ru: "В смысле закона это запрещено.",
-      uk: "У сенсі закону це заборонено."
-    }
-  ]
-},
-{
-  id: 45,
-  word: "in the process of",
-  ru: "в ходе",
-  uk: "в ході",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "In the process of the reform, many things changed.",
-      ru: "В ходе реформы многое изменилось.",
-      uk: "В ході реформи багато змінилося."
-    }
-  ]
-},
-{
-  id: 46,
-  word: "in",
-  ru: "в",
-  uk: "в",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I live in Berlin.",
-      ru: "Я живу в Берлине.",
-      uk: "Я живу в Берліні."
-    }
-  ]
-},
-{
-  id: 47,
-  word: "given",
-  ru: "ввиду",
-  uk: "з огляду на",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Given the circumstances, that is understandable.",
-      ru: "Ввиду обстоятельств это понятно.",
-      uk: "З огляду на обставини це зрозуміло."
-    }
-  ]
-},
-{
-  id: 48,
-  word: "with regard to",
-  ru: "в отношении",
-  uk: "щодо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "With regard to your question, I have an idea.",
-      ru: "Относительно твоего вопроса у меня есть идея.",
-      uk: "Щодо твого запитання маю одну ідею."
-    }
-  ]
-},
-{
-  id: 49,
-  word: "as a result of",
-  ru: "вследствие",
-  uk: "внаслідок",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "As a result of the accident, there were traffic jams.",
-      ru: "Вследствие аварии возникли пробки.",
-      uk: "Внаслідок аварії утворилися затори."
-    }
-  ]
-},
-{
-  id: 50,
-  word: "including",
-  ru: "включая",
-  uk: "включно з",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The price is including breakfast.",
-      ru: "Цена включает завтрак.",
-      uk: "Ціна включає сніданок."
-    }
-  ]
-},
-{
-  id: 51,
-  word: "in the middle of",
-  ru: "посреди",
-  uk: "посеред",
-  level: "",
-  topics: [],
 
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The book is on the table.",
-      ru: "Дом стоит посреди леса.",
-      uk: "Будинок стоїть посеред лісу."
-    }
-  ]
-},
-{
-  id: 52,
-  word: "within",
-  ru: "в пределах",
-  uk: "в межах",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The cat is lying under the table.",
-      ru: "В течение недели ты получишь ответ.",
-      uk: "У межах тижня ти отримаєш відповідь."
-    }
-  ]
-},
-{
-  id: 53,
-  word: "per",
-  ru: "по",
-  uk: "по",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The picture hangs between the windows.",
-      ru: "Билеты стоят 10 евро с человека.",
-      uk: "Квитки коштують 10 євро з особи."
-    }
-  ]
-},
-{
-  id: 54,
-  word: "beyond",
-  ru: "по ту сторону",
-  uk: "по той бік",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "A lamp hangs above the table.",
-      ru: "По ту сторону реки начинается лес.",
-      uk: "По той бік річки починається ліс."
-    }
-  ]
-},
-{
-  id: 55,
-  word: "by virtue of",
-  ru: "в силу",
-  uk: "в силу",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "By virtue of the law, the contract is valid.",
-      ru: "В силу закона договор действителен.",
-      uk: "В силу закону договір чинний."
-    }
-  ]
-},
-{
-  id: 56,
-  word: "by virtue of",
-  ru: "в силу",
-  uk: "в силу",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "By virtue of Article 3, this rule applies.",
-      ru: "В силу статьи 3 действует это правило.",
-      uk: "В силу статті 3 діє це правило."
-    }
-  ]
-},
-{
-  id: 57,
-  word: "according to",
-  ru: "согласно",
-  uk: "згідно з",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "According to the report, everything is fine.",
-      ru: "Согласно отчёту, всё в порядке.",
-      uk: "Згідно зі звітом усе гаразд."
-    }
-  ]
-},
-{
-  id: 58,
-  word: "along",
-  ru: "вдоль",
-  uk: "вздовж",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "We are driving along the coast.",
-      ru: "Мы едем вдоль побережья.",
-      uk: "Ми їдемо вздовж узбережжя."
-    }
-  ]
-},
-{
-  id: 59,
-  word: "for lack of",
-  ru: "за неимением",
-  uk: "через відсутність",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "For lack of evidence, he was acquitted.",
-      ru: "За неимением доказательств его оправдали.",
-      uk: "Через відсутність доказів його виправдали."
-    }
-  ]
-},
-{
-  id: 60,
-  word: "with",
-  ru: "с",
-  uk: "з",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "I am going to the cinema with my friends.",
-      ru: "Я иду в кино с друзьями.",
-      uk: "Я йду з друзями в кіно."
-    }
-  ]
-},
-{
-  id: 61,
-  word: "with the help of",
-  ru: "с помощью",
-  uk: "за допомогою",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "With the help of friends, he found an apartment.",
-      ru: "С помощью друзей он нашёл квартиру.",
-      uk: "За допомогою друзів він знайшов квартиру."
-    }
-  ]
-},
-{
-  id: 62,
-  word: "with the help of",
-  ru: "с помощью",
-  uk: "за допомогою",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "With the help of a dictionary, she translated the text.",
-      ru: "С помощью словаря она перевела текст.",
-      uk: "За допомогою словника вона переклала текст."
-    }
-  ]
-},
-{
-  id: 63,
-  word: "by means of",
-  ru: "посредством",
-  uk: "за допомогою",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "In the middle of the night, the phone rang.",
-      ru: "Посредством теста это было проверено.",
-      uk: "За допомогою тесту це було перевірено."
-    }
-  ]
-},
-{
-  id: 64,
-  word: "in the middle of",
-  ru: "посреди",
-  uk: "посеред",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "After eating, we go for a walk.",
-      ru: "Посреди ночи зазвонил телефон.",
-      uk: "Посеред ночі задзвонив телефон."
-    }
-  ]
-},
-{
-  id: 65,
-  word: "after",
-  ru: "после",
-  uk: "після",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "She lives near the school.",
-      ru: "После еды мы идём гулять.",
-      uk: "Після їжі ми йдемо гуляти."
-    }
-  ]
-},
-{
-  id: 66,
-  word: "near",
-  ru: "рядом с",
-  uk: "поруч із",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The chair is next to the table.",
-      ru: "Она живёт рядом со школой.",
-      uk: "Вона живе поруч із школою."
-    }
-  ]
-},
-{
-  id: 67,
-  word: "next to",
-  ru: "рядом с",
-  uk: "поруч з",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The rent, together with the utilities, is high.",
-      ru: "Стул стоит рядом со столом.",
-      uk: "Стілець стоїть поруч зі столом."
-    }
-  ]
-},
-{
-  id: 68,
-  word: "together with",
-  ru: "вместе с",
-  uk: "разом із",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Above the village, there is a castle.",
-      ru: "Аренда вместе с коммунальными высока.",
-      uk: "Оренда разом із комунальними висока."
-    }
-  ]
-},
-{
-  id: 69,
-  word: "above",
-  ru: "выше",
-  uk: "вище",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "I drink coffee without sugar.",
-      ru: "Выше деревни находится замок.",
-      uk: "Вище села розташований замок."
-    }
-  ]
-},
-{
-  id: 70,
-  word: "without",
-  ru: "без",
-  uk: "без",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "He acts without regard for the consequences.",
-      ru: "Я пью кофе без сахара.",
-      uk: "Я п’ю каву без цукру."
-    }
-  ]
-},
-{
-  id: 71,
-  word: "regardless of",
-  ru: "невзирая на",
-  uk: "незважаючи на",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Send it to me by email.",
-      ru: "Он действует, не считаясь с последствиями.",
-      uk: "Він діє, не зважаючи на наслідки."
-    }
-  ]
-},
-{
-  id: 72,
-  word: "by",
-  ru: "по",
-  uk: "по",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "It costs 5 euros per hour.",
-      ru: "Пошлите мне это по электронной почте.",
-      uk: "Надішліть мені це по e-mail."
-    }
-  ]
-},
-{
-  id: 73,
-  word: "per",
-  ru: "в",
-  uk: "на",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "We ran across the park.",
-      ru: "Это стоит 5 евро в час.",
-      uk: "Це коштує 5 євро за годину."
-    }
-  ]
-},
-{
-  id: 74,
-  word: "across",
-  ru: "поперек",
-  uk: "упоперек",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "He came with his family.",
-      ru: "Мы бежали поперёк парка.",
-      uk: "Ми бігли навскрізь через парк."
-    }
-  ]
-},
-{
-  id: 75,
-  word: "together with",
-  ru: "вместе с",
-  uk: "разом із",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "I have been learning German for a year.",
-      ru: "Он пришёл вместе с семьёй.",
-      uk: "Він прийшов разом із сім’єю."
-    }
-  ]
-},
-{
-  id: 76,
-  word: "since",
-  ru: "с",
-  uk: "від",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "There was criticism from the teachers.",
-      ru: "Я учу немецкий уже год.",
-      uk: "Я вчу німецьку вже рік."
-    }
-  ]
-},
-{
-  id: 77,
-  word: "on the part of",
-  ru: "со стороны",
-  uk: "з боку",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "There was agreement on the part of the government.",
-      ru: "Была критика со стороны учителей.",
-      uk: "Була критика з боку вчителів."
-    }
-  ]
-},
-{
-  id: 78,
-  word: "on the part of",
-  ru: "со стороны",
-  uk: "з боку",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Instead of a car, he bought a bicycle.",
-      ru: "Со стороны правительства было согласие.",
-      uk: "З боку уряду була згода."
-    }
-  ]
-},
-{
-  id: 79,
-  word: "instead of",
-  ru: "вместо",
-  uk: "замість",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Despite the rain, we are going for a walk.",
-      ru: "Вместо машины он купил велосипед.",
-      uk: "Замість авто він купив велосипед."
-    }
-  ]
-},
-{
-  id: 80,
-  word: "despite",
-  ru: "несмотря на",
-  uk: "попри",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "We are meeting at eight o'clock.",
-      ru: "Несмотря на дождь, мы идём гулять.",
-      uk: "Попри дощ ми йдемо гуляти."
-    }
-  ]
-},
-{
-  id: 81,
-  word: "at",
-  ru: "вокруг",
-  uk: "навколо",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "This rule applies without prejudice to the rights of third parties.",
-      ru: "Мы встречаемся в восемь часов.",
-      uk: "Ми зустрічаємося о восьмій годині."
-    }
-  ]
-},
-{
-  id: 82,
-  word: "without prejudice to",
-  ru: "без ущерба для",
-  uk: "без шкоди для",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Not far from the station, there is a hotel.",
-      ru: "Без ущерба правам третьих лиц действует это правило.",
-      uk: "Без шкоди правам третіх осіб ця норма діє."
-    }
-  ]
-},
-{
-  id: 83,
-  word: "not far from",
-  ru: "недалеко от",
-  uk: "неподалік від",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Despite the criticism, he continued.",
-      ru: "Недалеко от вокзала находится отель.",
-      uk: "Неподалік від вокзалу є готель."
-    }
-  ]
-},
-{
-  id: 84,
-  word: "notwithstanding",
-  ru: "несмотря на",
-  uk: "незважаючи на",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The cat is sitting under the table.",
-      ru: "Несмотря на критику, он продолжал.",
-      uk: "Незважаючи на критику, він продовжував."
-    }
-  ]
-},
-{
-  id: 85,
-  word: "under",
-  ru: "под",
-  uk: "під",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The river flows under the bridge.",
-      ru: "Кошка сидит под столом.",
-      uk: "Кіт сидить під столом."
-    }
-  ]
-},
-{
-  id: 86,
-  word: "below",
-  ru: "ниже",
-  uk: "нижче",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Not far from the centre, there is a park.",
-      ru: "Под мостом течёт река.",
-      uk: "Під мостом тече річка."
-    }
-  ]
-},
-{
-  id: 87,
-  word: "not far from",
-  ru: "недалеко от",
-  uk: "неподалік від",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Not far from the centre, there is a park.",
-      ru: "Недалеко от центра есть парк.",
-      uk: "Неподалік від центру є парк."
-    }
-  ]
-},
-{
-  id: 88,
-  word: "not far from",
-  ru: "недалеко от",
-  uk: "неподалік від",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The school is located not far from the church.",
-      ru: "Школа находится недалеко от церкви.",
-      uk: "Школа розташована неподалік від церкви."
-    }
-  ]
-},
-{
-  id: 89,
-  word: "via",
-  ru: "через",
-  uk: "через",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "We are flying to Rome via Zurich.",
-      ru: "Мы летим в Рим через Цюрих.",
-      uk: "Ми летимо до Рима через Цюрих."
-    }
-  ]
-},
-{
-  id: 90,
-  word: "from",
-  ru: "от",
-  uk: "від",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "This is a present from my mother.",
-      ru: "Это подарок от моей мамы.",
-      uk: "Це подарунок від моєї мами."
-    }
-  ]
-},
-{
-  id: 91,
-  word: "in front of",
-  ru: "перед",
-  uk: "перед",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "This is a present from my mother.",
-      ru: "Перед домом стоит дерево.",
-      uk: "Перед будинком стоїть дерево."
-    }
-  ]
-},
-{
-  id: 92,
-  word: "because of",
-  ru: "из-за",
-  uk: "через",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "There is a tree in front of the house.",
-      ru: "Из-за шторма школы остаются закрыты.",
-      uk: "Через шторм школи залишаються зачиненими."
-    }
-  ]
-},
-{
-  id: 93,
-  word: "against",
-  ru: "против",
-  uk: "всупереч",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The table is between the chairs.",
-      ru: "Против своей воли он был вынужден остаться.",
-      uk: "Всупереч своїй волі він мусив залишитися."
-    }
-  ]
-},
-{
-  id: 94,
-  word: "during",
-  ru: "во время",
-  uk: "під час",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "During the holiday, he read a lot.",
-      ru: "Во время отпуска он много читал.",
-      uk: "Під час відпустки він багато читав."
-    }
-  ]
-},
-{
-  id: 95,
-  word: "to",
-  ru: "к",
-  uk: "до",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "I am going to my friend.",
-      ru: "Я иду к своей подруге.",
-      uk: "Я йду до своєї подруги."
-    }
-  ]
-},
-{
-  id: 96,
-  word: "according to",
-  ru: "согласно",
-  uk: "згідно з",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "According to the reports, everything is stable.",
-      ru: "Согласно сообщениям, всё стабильно.",
-      uk: "Згідно з повідомленнями, все стабільно."
-    }
-  ]
-},
-{
-  id: 97,
-  word: "in favour of",
-  ru: "в пользу",
-  uk: "на користь",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "They donated money for the benefit of the children.",
-      ru: "Они пожертвовали деньги в пользу детей.",
-      uk: "Вони пожертвували гроші на користь дітей."
-    }
-  ]
-},
-{
-  id: 98,
-  word: "at the expense of",
-  ru: "в ущерб",
-  uk: "на шкоду",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The costs are to the detriment of the company.",
-      ru: "Расходы идут в ущерб компании.",
-      uk: "Витрати йдуть на шкоду компанії."
-    }
-  ]
-},
-{
-  id: 99,
-  word: "contrary to",
-  ru: "вопреки",
-  uk: "всупереч",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "Contrary to the rules, he acted on his own.",
-      ru: "Вопреки правилам он действовал самовольно.",
-      uk: "Всупереч правилам він діяв самовільно."
-    }
-  ]
-},
-{
-  id: 100,
-  word: "in addition to",
-  ru: "плюс",
-  uk: "додатково",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The price is 50 euros plus VAT.",
-      ru: "Цена составляет 50 евро плюс НДС.",
-      uk: "Ціна становить 50 євро плюс ПДВ."
-    }
-  ]
-},
-{
-  id: 101,
-  word: "in addition to",
-  ru: "с прибавлением",
-  uk: "з додаванням",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "With the added fees, it becomes more expensive.",
-      ru: "С прибавлением сборов это становится дороже.",
-      uk: "З додаванням зборів це стає дорожче."
-    }
-  ]
-},
-{
-  id: 102,
-  word: "for the purpose of",
-  ru: "с целью",
-  uk: "з метою",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "In order to clarify the matter, we will call there.",
-      ru: "С целью прояснить вопрос мы туда позвоним.",
-      uk: "З метою з’ясувати питання ми туди зателефонуємо."
-    }
-  ]
-},
-{
-  id: 103,
-  word: "between",
-  ru: "между",
-  uk: "між",
-  level: "",
-  topics: [],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "The table is between the chairs.",
-      ru: "Стол стоит между стульями.",
-      uk: "Стіл стоїть між стільцями."
-    }
-  ]
-},
-{
-  id: 104,
-  word: "about",
-  ru: "о, об",
-  uk: "про",
-  level: "A2",
-  topics: ["prepositions", "topic"],
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  examples: [
-    {
-      en: "We talked about the problem.",
-      ru: "Мы говорили о проблеме.",
-      uk: "Ми говорили про проблему."
-    }
-  ]
-}
-];
-window.decks.en_conjunctions = [
-{
-  id: 1,
-  word: "but",
-  ru: "но",
-  uk: "але",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I'm tired, but I'm happy.",
-      ru: "Я устал, но я счастлив.",
-      uk: "Я втомився, але я щасливий."
-    }
-  ]
-},
-{
-  id: 2,
-  word: "so",
-  ru: "итак",
-  uk: "отже",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "It's late, so I'm going home.",
-      ru: "Поздно, так что я иду домой.",
-      uk: "Пізно, тож я йду додому."
-    }
-  ]
-},
-{
-  id: 3,
-  word: "before",
-  ru: "прежде чем",
-  uk: "перш ніж",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Wash your hands before you eat.",
-      ru: "Помой руки, прежде чем есть.",
-      uk: "Вимий руки, перш ніж їсти."
-    }
-  ]
-},
-{
-  id: 4,
-  word: "so that",
-  ru: "чтобы",
-  uk: "щоб",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I'm learning German so that I can work in Germany.",
-      ru: "Я учу немецкий, чтобы я мог работать в Германии.",
-      uk: "Я вчу німецьку, щоб я міг працювати в Німеччині."
-    }
-  ]
-},
-{
-  id: 5,
-  word: "that",
-  ru: "что",
-  uk: "що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I think that he is right.",
-      ru: "Я думаю, что он прав.",
-      uk: "Я думаю, що він має рацію."
-    }
-  ]
-},
-{
-  id: 6,
-  word: "because",
-  ru: "потому что",
-  uk: "бо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I'm going home because I'm tired.",
-      ru: "Я иду домой, потому что устал.",
-      uk: "Я йду додому, бо втомився."
-    }
-  ]
-},
-{
-  id: 7,
-  word: "therefore",
-  ru: "поэтому",
-  uk: "тому",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "It is raining; therefore I am staying at home.",
-      ru: "Идёт дождь, поэтому я остаюсь дома.",
-      uk: "Іде дощ, тому я залишаюся вдома."
-    }
-  ]
-},
-{
-  id: 8,
-  word: "however",
-  ru: "однако",
-  uk: "проте",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "It was cold, however we went for a walk.",
-      ru: "Было холодно, однако мы пошли гулять.",
-      uk: "Було холодно, проте ми пішли гуляти."
-    }
-  ]
-},
-{
-  id: 9,
-  word: "in case",
-  ru: "если",
-  uk: "якщо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Call me in case you have any questions.",
-      ru: "Позвони мне, если у тебя будут вопросы.",
-      uk: "Подзвони мені, якщо матимеш запитання."
-    }
-  ]
-},
-{
-  id: 10,
-  word: "by",
-  ru: "тем что",
-  uk: "тим що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He improves his German by reading a lot.",
-      ru: "Он улучшает свой немецкий тем, что много читает.",
-      uk: "Він покращує німецьку тим, що багато читає."
-    }
-  ]
-},
-{
-  id: 11,
-  word: "insofar",
-  ru: "настолько",
-  uk: "настільки",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Insofar as I know, he is coming tomorrow.",
-      ru: "Насколько мне известно, он придёт завтра.",
-      uk: "Наскільки мені відомо, він прийде завтра."
-    }
-  ]
-},
-{
-  id: 12,
-  word: "the ... the ...",
-  ru: "чем … тем",
-  uk: "чим … тим",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "The more you practise, the better you get.",
-      ru: "Чем больше ты тренируешься, тем лучше ты становишься.",
-      uk: "Чим більше ти тренуєшся, тим кращим ти стаєш."
-    }
-  ]
-},
-{
-  id: 13,
-  word: "after",
-  ru: "после того как",
-  uk: "після того як",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "After we ate, we went for a walk.",
-      ru: "После того как мы поели, мы пошли гулять.",
-      uk: "Після того як ми поїли, ми пішли гуляти."
-    }
-  ]
-},
-{
-  id: 14,
-  word: "although",
-  ru: "хотя",
-  uk: "хоча",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Although it was raining, the children played outside.",
-      ru: "Хотя шёл дождь, дети играли на улице.",
-      uk: "Хоча йшов дощ, діти грали надворі."
-    }
-  ]
-},
-{
-  id: 15,
-  word: "even though",
-  ru: "хотя",
-  uk: "хоча",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Even though he was tired, he kept working.",
-      ru: "Хотя он был уставшим, он продолжал работать.",
-      uk: "Хоча він був втомлений, він продовжував працювати."
-    }
-  ]
-},
-{
-  id: 16,
-  word: "although, even though",
-  ru: "хотя",
-  uk: "хоча",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Although it is cold, she is not wearing a jacket.",
-      ru: "Хотя холодно, она не надевает куртку.",
-      uk: "Хоча холодно, вона не вдягає куртку."
-    }
-  ]
-},
-{
-  id: 17,
-  word: "or",
-  ru: "или",
-  uk: "або",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Do you want tea or coffee?",
-      ru: "Ты хочешь чай или кофе?",
-      uk: "Хочеш чай або каву?"
-    }
-  ]
-},
-{
-  id: 18,
-  word: "as soon as",
-  ru: "как только",
-  uk: "як тільки",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "As soon as I have time, I will call you.",
-      ru: "Как только у меня будет время, я тебе позвоню.",
-      uk: "Як тільки в мене буде час, я тобі подзвоню."
-    }
-  ]
-},
-{
-  id: 19,
-  word: "so ... that",
-  ru: "так что",
-  uk: "так що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "It was so loud that I couldn't sleep.",
-      ru: "Было так шумно, что я не мог спать.",
-      uk: "Було так голосно, що я не міг спати."
-    }
-  ]
-},
-{
-  id: 20,
-  word: "provided that",
-  ru: "если только",
-  uk: "якщо тільки",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "We will go to the sea provided that the weather is good.",
-      ru: "Мы поедем к морю, если только погода будет хорошей.",
-      uk: "Ми поїдемо до моря, якщо тільки погода буде доброю."
-    }
-  ]
-},
-{
-  id: 21,
-  word: "but rather",
-  ru: "а",
-  uk: "а",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He doesn't drink coffee but rather tea.",
-      ru: "Он пьёт не кофе, а чай.",
-      uk: "Він п’є не каву, а чай."
-    }
-  ]
-},
-{
-  id: 22,
-  word: "as far as",
-  ru: "поскольку",
-  uk: "насколько",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "As far as I know, he is coming tomorrow.",
-      ru: "Насколько я знаю, он придёт завтра.",
-      uk: "Наскільки я знаю, він прийде завтра."
-    }
-  ]
-},
-{
-  id: 23,
-  word: "as well as",
-  ru: "а также",
-  uk: "а також",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He speaks German as well as English.",
-      ru: "Он говорит по-немецки, а также по-английски.",
-      uk: "Він говорить німецькою, а також англійською."
-    }
-  ]
-},
-{
-  id: 24,
-  word: "and",
-  ru: "и",
-  uk: "і",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I’m buying bread and milk.",
-      ru: "Я покупаю хлеб и молоко.",
-      uk: "Я купую хліб і молоко."
-    }
-  ]
-},
-{
-  id: 25,
-  word: "because",
-  ru: "потому что",
-  uk: "тому що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I'm staying at home because I'm ill.",
-      ru: "Я остаюсь дома, потому что я болен.",
-      uk: "Я залишаюся вдома, тому що я хворий."
-    }
-  ]
-},
-{
-  id: 26,
-  word: "if",
-  ru: "если",
-  uk: "якщо",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "If I have time, I read.",
-      ru: "Если у меня есть время, я читаю.",
-      uk: "Якщо в мене є час, я читаю."
-    }
-  ]
-},
-{
-  id: 27,
-  word: "why",
-  ru: "почему",
-  uk: "чому",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I don't know why he isn't coming.",
-      ru: "Я не знаю, почему он не приходит.",
-      uk: "Я не знаю, чому він не приходить."
-    }
-  ]
-},
-{
-  id: 28,
-  word: "why",
-  ru: "из-за чего",
-  uk: "через що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "Tell me why you are sad.",
-      ru: "Скажи мне, из-за чего ты грустишь.",
-      uk: "Скажи мені, через що ти сумуєш."
-    }
-  ]
-},
-{
-  id: 29,
-  word: "while",
-  ru: "при этом",
-  uk: "при цьому",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He is strict, while he is also very fair.",
-      ru: "Он строгий, при этом он очень справедлив.",
-      uk: "Він суворий, при цьому дуже справедливий."
-    }
-  ]
-},
-{
-  id: 30,
-  word: "whereas",
-  ru: "тогда как",
-  uk: "тоді як",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He loves sport, whereas she prefers reading.",
-      ru: "Он любит спорт, тогда как она предпочитает читать.",
-      uk: "Він любить спорт, тоді як вона більше любить читати."
-    }
-  ]
-},
-{
-  id: 31,
-  word: "while",
-  ru: "в то время как",
-  uk: "в той час як",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "While I am cooking, he is listening to music.",
-      ru: "Пока я готовлю, он слушает музыку.",
-      uk: "Поки я готую, він слухає музику."
-    }
-  ]
-},
-{
-  id: 32,
-  word: "with the aim that",
-  ru: "с той целью чтобы",
-  uk: "з тією метою щоб",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "He speaks slowly with the aim that everyone understands.",
-      ru: "Он говорит медленно с той целью, чтобы все поняли.",
-      uk: "Він говорить повільно з тією метою, щоб усі зрозуміли."
-    }
-  ]
-},
-{
-  id: 33,
-  word: "especially as",
-  ru: "тем более что",
-  uk: "тим більше що",
-  level: "",
-  topics: [],
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-  examples: [
-    {
-      L2: "I'll stay at home, especially as it is raining.",
-      ru: "Я останусь дома, тем более что идёт дождь.",
-      uk: "Я залишуся вдома, тим більше що йде дощ."
-    }
-  ]
-}
-
-];
-window.decks.en_particles = [
-{
-  id: 1,
-  word: "only",
-  ru: "только",
-  uk: "лише",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "emphasis",
-  register: "colloquial",
-  position: "afterImperativeVerb",
-  intonation: "обычно ударное, тон напряжённый при предупреждении",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Only don’t be late again, okay?",
-      ru: "Только больше не опаздывай, ладно?",
-      uk: "Лише більше не запізнюйся, гаразд?"
-    }
-  ]
-},
-{
-  id: 2,
-  word: "then",
-  ru: "же",
-  uk: "же",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "softening",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "мягкое, часто растянутое произнесение в середине вопроса",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "What are you doing here then?",
-      ru: "И что же ты здесь делаешь?",
-      uk: "А що ж ти тут робиш?"
-    }
-  ]
-},
-{
-  id: 3,
-  word: "though",
-  ru: "же",
-  uk: "ж",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "emphasis",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "часто ударное, с подъёмом тона при уговоре или возражении",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "It is strange, though, that he didn’t call.",
-      ru: "Странно, однако, что он не позвонил.",
-      uk: "Дивно, однак, що він не подзвонив."
-    }
-  ]
-},
-{
-  id: 4,
-  word: "exactly",
-  ru: "именно",
-  uk: "саме",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "resignation",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "скорее спокойное, слегка подчёркнутое при согласии",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "That’s exactly how it is.",
-      ru: "Именно так оно и есть.",
-      uk: "Саме так воно й є."
-    }
-  ]
-},
-{
-  id: 5,
-  word: "actually",
-  ru: "вообще-то",
-  uk: "власне",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "softening",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "мягкое, без сильного ударения, делает фразу менее прямой",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "What’s your name, actually?",
-      ru: "Как тебя вообще-то зовут?",
-      uk: "Як тебе, власне, звати?"
-    }
-  ]
-},
-{
-  id: 6,
-  word: "simply",
-  ru: "просто",
-  uk: "просто",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "resignation",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "спокойное, часто сокращённое, без сильного ударения",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "We simply can’t change it now.",
-      ru: "Мы просто уже не можем это изменить.",
-      uk: "Ми просто вже не можемо цього змінити."
-    }
-  ]
-},
-{
-  id: 7,
-  word: "indeed",
-  ru: "же",
-  uk: "же",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "emphasis",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "часто ударное при упрёке или напоминании",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "You do indeed know that.",
-      ru: "Ты же это знаешь.",
-      uk: "Ти ж це знаєш."
-    }
-  ]
-},
-{
-  id: 8,
-  word: "just",
-  ru: "разок",
-  uk: "якось",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "softening",
-  register: "colloquial",
-  position: "afterImperativeVerb",
-  intonation: "короткое, без сильного ударения, делает просьбу дружелюбной",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Just come over here for a second!",
-      ru: "Подойди-ка сюда на минутку!",
-      uk: "Підійди-но сюди на хвилинку!"
-    }
-  ]
-},
-{
-  id: 9,
-  word: "well",
-  ru: "ну",
-  uk: "ну",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "discourseMarker",
-  register: "neutral",
-  position: "sentenceInitial",
-  intonation: "часто с паузой после «well», как вступительное слово",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Well, what do you think about it?",
-      ru: "Ну, что ты об этом думаешь?",
-      uk: "Ну, що ти про це думаєш?"
-    }
-  ]
-},
-{
-  id: 10,
-  word: "feel free to",
-  ru: "смело",
-  uk: "сміливо",
-  level: "",
-  topics: ["particles", "communication"],
-
-  function: "encouragement",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "спокойное, с успокаивающим тоном",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "You can feel free to ask me anything.",
-      ru: "Ты можешь смело спросить у меня что угодно.",
-      uk: "Ти можеш сміливо запитати в мене що завгодно."
-    }
-  ]
-},
-{
-  id: 11,
-  word: "already",
-  ru: "уже",
-  uk: "вже",
-  level: "",
-  topics: ["particles", "time", "communication"],
-
-  function: "reassurance",
-  register: "colloquial",
-  position: "midfield",
-  intonation: "мягкое, с успокаивающим тоном, без резкого ударения",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "She is already feeling better.",
-      ru: "Ей уже становится лучше.",
-      uk: "Їй уже стає краще."
-    }
-  ]
-},
-{
-  id: 12,
-  word: "probably",
-  ru: "пожалуй",
-  uk: "мабуть",
-  level: "",
-  topics: ["particles", "abstract", "communication"],
-
-  function: "uncertainty",
-  register: "neutral",
-  position: "midfield",
-  intonation: "часто не очень ударное, с сомневающимся оттенком",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "He will probably arrive later.",
-      ru: "Он, пожалуй, приедет позже.",
-      uk: "Він, мабуть, приїде пізніше."
-    }
-  ]
-}
-
-];
 window.decks.en_pronouns = [
-{
-  id: 1,
-  word: "all",
-  ru: "все",
-  uk: "всі",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "склоняется по падежам во множественном числе; часто как подлежащее или определение к существительному во множественном числе",
-  function: "обозначает всю группу людей или предметов целиком, без исключений",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "All students must wear a name badge.",
-      ru: "Все студенты должны носить бейдж с именем.",
-      uk: "Усі студенти мають носити бейдж з ім’ям."
-    }
-  ]
-},
-{
-  id: 2,
-  word: "your",
-  ru: "твой",
-  uk: "твій",
-  level: "",
-  topics: [],
-
-  pronounType: "possessive",
-  person: 2,
-  number: "singular",
-  gender: "all",
-  caseUsage: "склоняется как притяжательное прилагательное; согласуется по роду, числу и падежу с существительным",
-  function: "обозначает принадлежность предмета адресату (2-е лицо ед. числа)",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Is this your phone on the table?",
-      ru: "Это твой телефон на столе?",
-      uk: "Це твій телефон на столі?"
-    }
-  ]
-},
-{
-  id: 3,
-  word: "whose",
-  ru: "чья",
-  uk: "чия",
-  level: "",
-  topics: [],
-
-  pronounType: "relative",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "форма, выражающая принадлежность; используется в относительных придаточных",
-  function: "связывает главное и придаточное предложение, выражая принадлежность группы или лица",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Those are the children whose mother is a teacher.",
-      ru: "Это дети, чья мать — учительница.",
-      uk: "Це діти, чия мама — вчителька."
-    }
-  ]
-},
-{
-  id: 4,
-  word: "the one who",
-  ru: "тот, кто",
-  uk: "той, хто",
-  level: "",
-  topics: [],
-
-  pronounType: "demonstrative",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "употребляется с придаточным предложением, которое уточняет лицо или предмет",
-  function: "указывает на конкретное лицо или предмет, который уточняется придаточным предложением",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "The one who finishes first can leave early.",
-      ru: "Тот, кто закончит первым, может уйти раньше.",
-      uk: "Той, хто закінчить першим, може піти раніше."
-    }
-  ]
-},
-{
-  id: 5,
-  word: "the same",
-  ru: "тот же самый",
-  uk: "той самий",
-  level: "",
-  topics: [],
-
-  pronounType: "demonstrative",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "часто употребляется с существительным; выражает полное тождество",
-  function: "указывает на полное тождество лица или предмета",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "We had the same idea yesterday.",
-      ru: "Вчера у нас была одна и та же идея.",
-      uk: "Учора в нас була та сама ідея."
-    }
-  ]
-},
-{
-  id: 6,
-  word: "whose",
-  ru: "чей",
-  uk: "чий",
-  level: "",
-  topics: [],
-
-  pronounType: "relative",
-  person: null,
-  number: "singular",
-  gender: "masculine",
-  caseUsage: "форма, выражающая принадлежность; относится к существительному в главном предложении",
-  function: "выражает принадлежность лица или предмета в придаточном предложении",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "The man whose car was stolen is talking to the police.",
-      ru: "Мужчина, чей автомобиль украли, разговаривает с полицией.",
-      uk: "Чоловік, чию машину вкрали, розмовляє з поліцією."
-    }
-  ]
-},
-{
-  id: 7,
-  word: "this",
-  ru: "этот",
-  uk: "цей",
-  level: "",
-  topics: [],
-
-  pronounType: "demonstrative",
-  person: null,
-  number: "both",
-  gender: "masculine",
-  caseUsage: "указывает на предмет, близкий в пространстве или контексте",
-  function: "указывает на конкретный предмет или человека, находящегося близко",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "This chair is free.",
-      ru: "Этот стул свободен.",
-      uk: "Цей стілець вільний."
-    }
-  ]
-},
-{
-  id: 8,
-  word: "you",
-  ru: "ты",
-  uk: "ти",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 2,
-  number: "singular",
-  gender: "all",
-  caseUsage: "личное местоимение во всех падежах; неформальное обращение к одному человеку",
-  function: "обозначает собеседника в неформальном общении",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "You look very tired today.",
-      ru: "Ты сегодня выглядишь очень усталым.",
-      uk: "Ти сьогодні виглядаєш дуже втомленим."
-    }
-  ]
-},
-{
-  id: 9,
-  word: "each other",
-  ru: "друг друга",
-  uk: "один одного",
-  level: "",
-  topics: [],
-
-  pronounType: "reciprocal",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "используется как дополнение; обозначает взаимное действие",
-  function: "обозначает взаимное действие между несколькими лицами",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "They support each other in difficult times.",
-      ru: "Они поддерживают друг друга в трудные времена.",
-      uk: "Вони підтримують один одного у важкі часи."
-    }
-  ]
-},
-{
-  id: 10,
-  word: "he",
-  ru: "он",
-  uk: "він",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 3,
-  number: "singular",
-  gender: "masculine",
-  caseUsage: "личное местоимение мужского рода во всех падежах",
-  function: "обозначает мужчину или предмет мужского рода",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "He is not working today.",
-      ru: "Он сегодня не работает.",
-      uk: "Він сьогодні не працює."
-    }
-  ]
-},
-{
-  id: 11,
-  word: "it",
-  ru: "оно",
-  uk: "воно",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 3,
-  number: "singular",
-  gender: "neuter",
-  caseUsage: "часто формальное подлежащее в безличных конструкциях",
-  function: "обозначает предмет среднего рода или используется как формальное подлежащее",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "It is raining outside.",
-      ru: "На улице идёт дождь.",
-      uk: "Надворі йде дощ."
-    }
-  ]
-},
-{
-  id: 12,
-  word: "quite a few",
-  ru: "некоторые",
-  uk: "деякі",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "используется в основном перед существительными во множественном числе",
-  function: "обозначает довольно большое, но неопределённое количество",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Quite a few people arrived late.",
-      ru: "Достаточно много людей пришли поздно.",
-      uk: "Чимало людей прийшли пізно."
-    }
-  ]
-},
-{
-  id: 13,
-  word: "your (plural, informal)",
-  ru: "ваш",
-  uk: "ваш",
-  level: "",
-  topics: [],
-
-  pronounType: "possessive",
-  person: 2,
-  number: "plural",
-  gender: "all",
-  caseUsage: "притяжательное местоимение для группы адресатов; согласуется с существительным",
-  function: "обозначает принадлежность группе адресатов (2-е лицо мн. числа)",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Is this your house, or your parents’?",
-      ru: "Это ваш дом или дом ваших родителей?",
-      uk: "Це ваш будинок чи будинок ваших батьків?"
-    }
-  ]
-},
-{
-  id: 14,
-  word: "I",
-  ru: "я",
-  uk: "я",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 1,
-  number: "singular",
-  gender: "all",
-  caseUsage: "личное местоимение 1-го лица ед. числа во всех падежах",
-  function: "обозначает говорящего",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "I come from Germany.",
-      ru: "Я из Германии.",
-      uk: "Я з Німеччини."
-    }
-  ]
-},
-{
-  id: 15,
-  word: "you (plural)",
-  ru: "вы",
-  uk: "ви",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 2,
-  number: "plural",
-  gender: "all",
-  caseUsage: "личное местоимение 2-го лица мн. числа",
-  function: "обозначает группу собеседников",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "You are very quiet today.",
-      ru: "Вы сегодня очень тихие.",
-      uk: "Ви сьогодні дуже тихі."
-    }
-  ]
-},
-{
-  id: 16,
-  word: "any",
-  ru: "любой",
-  uk: "будь-який",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "употребляется с существительными и самостоятельно; часто в отрицаниях и вопросах",
-  function: "подчеркивает, что нет исключений: всякий, любой",
-  register: "formal",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Any contact with the device is forbidden.",
-      ru: "Любой контакт с устройством запрещён.",
-      uk: "Будь-який контакт із пристроєм заборонений."
-    }
-  ]
-},
-{
-  id: 17,
-  word: "someone",
-  ru: "кто-то",
-  uk: "хтось",
-  level: "",
-  topics: [],
-
-  pronounType: "indefinite",
-  person: 3,
-  number: "singular",
-  gender: "all",
-  caseUsage: "неопределённое местоимение; употребляется как подлежащее или дополнение",
-  function: "обозначает неопределённое лицо: кто-то",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Someone is knocking at the door.",
-      ru: "Кто-то стучит в дверь.",
-      uk: "Хтось стукає в двері."
-    }
-  ]
-},
-{
-  id: 18,
-  word: "that (formal)",
-  ru: "тот",
-  uk: "той",
-  level: "",
-  topics: [],
-
-  pronounType: "demonstrative",
-  person: null,
-  number: "both",
-  gender: "masculine",
-  caseUsage: "указывает на отдалённый по времени или контексту объект",
-  function: "указывает на отдалённое во времени или контексте лицо/предмет",
-  register: "formal",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "That day was really special for us.",
-      ru: "Тот день был действительно особенным для нас.",
-      uk: "Той день був справді особливим для нас."
-    }
-  ]
-},
-{
-  id: 19,
-  word: "no … at all",
-  ru: "никакой",
-  uk: "ніякий",
-  level: "",
-  topics: [],
-
-  pronounType: "negative",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "часто используется с существительными или абстрактными понятиями",
-  function: "подчеркивает полное отсутствие чего-либо",
-  register: "formal",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "He shows no interest at all in sports.",
-      ru: "Он не проявляет никакого интереса к спорту.",
-      uk: "Він не виявляє жодного інтересу до спорту."
-    }
-  ]
-},
-{
-  id: 20,
-  word: "one",
-  ru: "кто-то",
-  uk: "хтось",
-  level: "",
-  topics: [],
-
-  pronounType: "indefinite-personal",
-  person: 3,
-  number: "singular",
-  gender: "all",
-  caseUsage: "употребляется как безличное подлежащее; глагол в 3-м лице ед. числа",
-  function: "обозначает людей вообще, неопределённого субъекта действия",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "In this city, one must register their address.",
-      ru: "В этом городе нужно регистрировать свой адрес.",
-      uk: "У цьому місті потрібно реєструвати свою адресу."
-    }
-  ]
-},
-{
-  id: 21,
-  word: "some",
-  ru: "некоторый",
-  uk: "деякий",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "может стоять самостоятельно или перед существительным",
-  function: "обозначает не одного, а несколько лиц/предметов: некоторые, многие",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Some students have trouble with math.",
-      ru: "У некоторых студентов проблемы с математикой.",
-      uk: "Деякі студенти мають проблеми з математикою."
-    }
-  ]
-},
-{
-  id: 22,
-  word: "several",
-  ru: "несколько",
-  uk: "кілька",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "используется только во множественном числе",
-  function: "обозначает количество больше двух, но неопределённое",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Several friends are coming over tonight.",
-      ru: "Сегодня вечером придут несколько друзей.",
-      uk: "Сьогодні ввечері прийдуть кілька друзів."
-    }
-  ]
-},
-{
-  id: 23,
-  word: "my",
-  ru: "мой",
-  uk: "мій",
-  level: "",
-  topics: [],
-
-  pronounType: "possessive",
-  person: 1,
-  number: "singular",
-  gender: "all",
-  caseUsage: "притяжательное местоимение, согласуется с существительным",
-  function: "обозначает принадлежность говорящему",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "My car is very old.",
-      ru: "Моя машина очень старая.",
-      uk: "Моя машина дуже стара."
-    }
-  ]
-},
-{
-  id: 24,
-  word: "nobody",
-  ru: "никто",
-  uk: "ніхто",
-  level: "",
-  topics: [],
-
-  pronounType: "negative",
-  person: 3,
-  number: "singular",
-  gender: "all",
-  caseUsage: "отрицательное местоимение; глагол обычно в 3-м лице ед. числа",
-  function: "обозначает полное отсутствие людей: ни один человек",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Nobody has time to help today.",
-      ru: "Сегодня ни у кого нет времени помочь.",
-      uk: "Сьогодні ніхто не має часу допомогти."
-    }
-  ]
-},
-{
-  id: 25,
-  word: "his",
-  ru: "его",
-  uk: "його",
-  level: "",
-  topics: [],
-
-  pronounType: "possessive",
-  person: 3,
-  number: "singular",
-  gender: "masculine",
-  caseUsage: "притяжательное местоимение; согласуется с существительным",
-  function: "обозначает принадлежность мужчине или предмету среднего рода",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "His room is very small.",
-      ru: "Его комната очень маленькая.",
-      uk: "Його кімната дуже маленька."
-    }
-  ]
-},
-{
-  id: 26,
-  word: "she",
-  ru: "она",
-  uk: "вона",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 3,
-  number: "both",
-  gender: "all",
-  caseUsage: "может означать «она» или часть группы значений «sie»; значение определяется контекстом",
-  function: "обозначает женщину или женский персонаж",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "She is my sister.",
-      ru: "Она моя сестра.",
-      uk: "Вона моя сестра."
-    }
-  ]
-},
-{
-  id: 27,
-  word: "such",
-  ru: "такой",
-  uk: "такий",
-  level: "",
-  topics: [],
-
-  pronounType: "demonstrative",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "употребляется с существительными и самостоятельно",
-  function: "обозначает тип, качество предмета: такой, подобный",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Such questions are always difficult.",
-      ru: "Такие вопросы всегда сложные.",
-      uk: "Такі запитання завжди складні."
-    }
-  ]
-},
-{
-  id: 28,
-  word: "all of",
-  ru: "все",
-  uk: "всі",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "книжное, подчёркивает полноту группы",
-  function: "подчеркивает полноту: все без исключения",
-  register: "formal",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "All of the documents are ready.",
-      ru: "Все документы готовы.",
-      uk: "Усі документи готові."
-    }
-  ]
-},
-{
-  id: 29,
-  word: "our",
-  ru: "наш",
-  uk: "наш",
-  level: "",
-  topics: [],
-
-  pronounType: "possessive",
-  person: 1,
-  number: "plural",
-  gender: "all",
-  caseUsage: "притяжательное местоимение; согласуется с существительным",
-  function: "обозначает принадлежность группе, включающей говорящего",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Our teacher is very friendly.",
-      ru: "Наш учитель очень дружелюбный.",
-      uk: "Наш учитель дуже привітний."
-    }
-  ]
-},
-{
-  id: 30,
-  word: "what",
-  ru: "что",
-  uk: "що",
-  level: "",
-  topics: [],
-
-  pronounType: "interrogative",
-  person: null,
-  number: "singular",
-  gender: "neuter",
-  caseUsage: "вопросительное/относительное местоимение; управляет глаголом или предлогом",
-  function: "используется для вопросов о предмете, действии или информации",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "What are you doing right now?",
-      ru: "Что ты делаешь прямо сейчас?",
-      uk: "Що ти робиш просто зараз?"
-    }
-  ]
-},
-{
-  id: 31,
-  word: "which",
-  ru: "которая",
-  uk: "яка",
-  level: "",
-  topics: [],
-
-  pronounType: "interrogative",
-  person: null,
-  number: "both",
-  gender: "feminine",
-  caseUsage: "вопросительное/относительное местоимение; склоняется по падежам в английском через позицию и предлоги",
-  function: "задаёт выбор или уточнение: какая? которая?",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Which color do you like most?",
-      ru: "Какой цвет ты любишь больше всего?",
-      uk: "Який колір ти любиш найбільше?"
-    }
-  ]
-},
-{
-  id: 32,
-  word: "which",
-  ru: "какой",
-  uk: "який",
-  level: "",
-  topics: [],
-
-  pronounType: "interrogative",
-  person: null,
-  number: "both",
-  gender: "masculine",
-  caseUsage: "используется для вопросов и относительных придаточных о предмете мужского рода (в немецком)",
-  function: "задаёт вопрос или уточнение о предмете",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Which day is today?",
-      ru: "Какой сегодня день?",
-      uk: "Який сьогодні день?"
-    }
-  ]
-},
-{
-  id: 33,
-  word: "which",
-  ru: "которое",
-  uk: "яке",
-  level: "",
-  topics: [],
-
-  pronounType: "interrogative",
-  person: null,
-  number: "both",
-  gender: "neuter",
-  caseUsage: "средний род вопросительного/относительного местоимения (для немецкого исходника)",
-  function: "задаёт вопрос или уточнение о предмете среднего рода",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Which book are you reading at the moment?",
-      ru: "Какую книгу ты сейчас читаешь?",
-      uk: "Яку книгу ти зараз читаєш?"
-    }
-  ]
-},
-{
-  id: 34,
-  word: "few",
-  ru: "немногие",
-  uk: "небагато",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "употребляется с исчисляемыми существительными во множественном числе",
-  function: "подчеркивает небольшое количество людей или предметов",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Only a few students passed the exam.",
-      ru: "Лишь немногие студенты сдали экзамен.",
-      uk: "Лише небагато студентів склали іспит."
-    }
-  ]
-},
-{
-  id: 35,
-  word: "who",
-  ru: "кто",
-  uk: "хто",
-  level: "",
-  topics: [],
-
-  pronounType: "interrogative",
-  person: null,
-  number: "singular",
-  gender: "all",
-  caseUsage: "вопросительное/относительное местоимение о лице",
-  function: "используется в вопросах и придаточных для обозначения лица",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Who is calling so late?",
-      ru: "Кто звонит так поздно?",
-      uk: "Хто телефонує так пізно?"
-    }
-  ]
-},
-{
-  id: 36,
-  word: "we",
-  ru: "мы",
-  uk: "ми",
-  level: "",
-  topics: [],
-
-  pronounType: "personal",
-  person: 1,
-  number: "plural",
-  gender: "all",
-  caseUsage: "личное местоимение 1-го лица мн. числа",
-  function: "обозначает говорящего вместе с другими людьми",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "We are going to the cinema tonight.",
-      ru: "Сегодня вечером мы идём в кино.",
-      uk: "Сьогодні ввечері ми йдемо в кіно."
-    }
-  ]
-},
-{
-  id: 37,
-  word: "numerous",
-  ru: "многочисленные",
-  uk: "численні",
-  level: "",
-  topics: [],
-
-  pronounType: "quantifier",
-  person: null,
-  number: "plural",
-  gender: "all",
-  caseUsage: "часто употребляется перед существительными во множественном числе",
-  function: "обозначает очень большое количество",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "Numerous guests came to the party.",
-      ru: "На вечеринку пришло множество гостей.",
-      uk: "На вечірку прийшло численно гостей."
-    }
-  ]
-},
-
-// числа — пока оставляем в этом же массиве, тип "numeral"
-{
-  id: 38,
-  word: "two and a half",
-  ru: "два с половиной",
-  uk: "два з половиною",
-  level: "",
-  topics: [],
-
-  pronounType: "numeral",
-  person: null,
-  number: null,
-  gender: null,
-  caseUsage: "дробное число, используется с существительными",
-  function: "обозначает количество 2,5",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "The trip takes two and a half hours.",
-      ru: "Поездка занимает два с половиной часа.",
-      uk: "Поїздка триває дві з половиною години."
-    }
-  ]
-},
-{
-  id: 39,
-  word: "second",
-  ru: "второй",
-  uk: "другий",
-  level: "",
-  topics: [],
-
-  pronounType: "numeral",
-  person: null,
-  number: "both",
-  gender: "all",
-  caseUsage: "порядковое числительное; употребляется как прилагательное",
-  function: "обозначает порядок: второй по счёту",
-  register: "neutral",
-
-  enSynonyms: [],
-  ruSynonyms: [],
-  ukSynonyms: [],
-
-  enAntonyms: [],
-  ruAntonyms: [],
-  ukAntonyms: [],
-
-  patterns: [],
-
-  examples: [
-    {
-      L2: "He lives on the second floor.",
-      ru: "Он живёт на втором этаже.",
-      uk: "Він живе на другому поверсі."
-    }
-  ]
-}
+  {
+    "id": 1,
+    "word": "all",
+    "ru": "все",
+    "uk": "всі",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "склоняется по падежам во множественном числе; часто как подлежащее или определение к существительному во множественном числе",
+    "function": "обозначает всю группу людей или предметов целиком, без исключений",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "All students must wear a name badge.",
+        "ru": "Все студенты должны носить бейдж с именем.",
+        "uk": "Усі студенти мають носити бейдж з ім’ям."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "your",
+    "ru": "твой",
+    "uk": "твій",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "possessive",
+    "person": 2,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "склоняется как притяжательное прилагательное; согласуется по роду, числу и падежу с существительным",
+    "function": "обозначает принадлежность предмета адресату (2-е лицо ед. числа)",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Is this your phone on the table?",
+        "ru": "Это твой телефон на столе?",
+        "uk": "Це твій телефон на столі?"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "whose",
+    "ru": "чья",
+    "uk": "чия",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "relative",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "форма, выражающая принадлежность; используется в относительных придаточных",
+    "function": "связывает главное и придаточное предложение, выражая принадлежность группы или лица",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Those are the children whose mother is a teacher.",
+        "ru": "Это дети, чья мать — учительница.",
+        "uk": "Це діти, чия мама — вчителька."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "the one who",
+    "ru": "тот, кто",
+    "uk": "той, хто",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "demonstrative",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "употребляется с придаточным предложением, которое уточняет лицо или предмет",
+    "function": "указывает на конкретное лицо или предмет, который уточняется придаточным предложением",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "The one who finishes first can leave early.",
+        "ru": "Тот, кто закончит первым, может уйти раньше.",
+        "uk": "Той, хто закінчить першим, може піти раніше."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "the same",
+    "ru": "тот же самый",
+    "uk": "той самий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "demonstrative",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "часто употребляется с существительным; выражает полное тождество",
+    "function": "указывает на полное тождество лица или предмета",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "We had the same idea yesterday.",
+        "ru": "Вчера у нас была одна и та же идея.",
+        "uk": "Учора в нас була та сама ідея."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "whose",
+    "ru": "чей",
+    "uk": "чий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "relative",
+    "person": null,
+    "number": "singular",
+    "gender": "masculine",
+    "caseUsage": "форма, выражающая принадлежность; относится к существительному в главном предложении",
+    "function": "выражает принадлежность лица или предмета в придаточном предложении",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "The man whose car was stolen is talking to the police.",
+        "ru": "Мужчина, чей автомобиль украли, разговаривает с полицией.",
+        "uk": "Чоловік, чию машину вкрали, розмовляє з поліцією."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "this",
+    "ru": "этот",
+    "uk": "цей",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "demonstrative",
+    "person": null,
+    "number": "both",
+    "gender": "masculine",
+    "caseUsage": "указывает на предмет, близкий в пространстве или контексте",
+    "function": "указывает на конкретный предмет или человека, находящегося близко",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "This chair is free.",
+        "ru": "Этот стул свободен.",
+        "uk": "Цей стілець вільний."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "you",
+    "ru": "ты",
+    "uk": "ти",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 2,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "личное местоимение во всех падежах; неформальное обращение к одному человеку",
+    "function": "обозначает собеседника в неформальном общении",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "You look very tired today.",
+        "ru": "Ты сегодня выглядишь очень усталым.",
+        "uk": "Ти сьогодні виглядаєш дуже втомленим."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "each other",
+    "ru": "друг друга",
+    "uk": "один одного",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "reciprocal",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "используется как дополнение; обозначает взаимное действие",
+    "function": "обозначает взаимное действие между несколькими лицами",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "They support each other in difficult times.",
+        "ru": "Они поддерживают друг друга в трудные времена.",
+        "uk": "Вони підтримують один одного у важкі часи."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "he",
+    "ru": "он",
+    "uk": "він",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 3,
+    "number": "singular",
+    "gender": "masculine",
+    "caseUsage": "личное местоимение мужского рода во всех падежах",
+    "function": "обозначает мужчину или предмет мужского рода",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "He is not working today.",
+        "ru": "Он сегодня не работает.",
+        "uk": "Він сьогодні не працює."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "it",
+    "ru": "оно",
+    "uk": "воно",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 3,
+    "number": "singular",
+    "gender": "neuter",
+    "caseUsage": "часто формальное подлежащее в безличных конструкциях",
+    "function": "обозначает предмет среднего рода или используется как формальное подлежащее",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "It is raining outside.",
+        "ru": "На улице идёт дождь.",
+        "uk": "Надворі йде дощ."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "quite a few",
+    "ru": "некоторые",
+    "uk": "деякі",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "используется в основном перед существительными во множественном числе",
+    "function": "обозначает довольно большое, но неопределённое количество",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Quite a few people arrived late.",
+        "ru": "Достаточно много людей пришли поздно.",
+        "uk": "Чимало людей прийшли пізно."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "word": "your (plural, informal)",
+    "ru": "ваш",
+    "uk": "ваш",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "possessive",
+    "person": 2,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "притяжательное местоимение для группы адресатов; согласуется с существительным",
+    "function": "обозначает принадлежность группе адресатов (2-е лицо мн. числа)",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Is this your house, or your parents’?",
+        "ru": "Это ваш дом или дом ваших родителей?",
+        "uk": "Це ваш будинок чи будинок ваших батьків?"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "word": "I",
+    "ru": "я",
+    "uk": "я",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 1,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "личное местоимение 1-го лица ед. числа во всех падежах",
+    "function": "обозначает говорящего",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "I come from Germany.",
+        "ru": "Я из Германии.",
+        "uk": "Я з Німеччини."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "word": "you (plural)",
+    "ru": "вы",
+    "uk": "ви",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 2,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "личное местоимение 2-го лица мн. числа",
+    "function": "обозначает группу собеседников",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "You are very quiet today.",
+        "ru": "Вы сегодня очень тихие.",
+        "uk": "Ви сьогодні дуже тихі."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "word": "any",
+    "ru": "любой",
+    "uk": "будь-який",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "употребляется с существительными и самостоятельно; часто в отрицаниях и вопросах",
+    "function": "подчеркивает, что нет исключений: всякий, любой",
+    "register": "formal",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Any contact with the device is forbidden.",
+        "ru": "Любой контакт с устройством запрещён.",
+        "uk": "Будь-який контакт із пристроєм заборонений."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "word": "someone",
+    "ru": "кто-то",
+    "uk": "хтось",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "indefinite",
+    "person": 3,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "неопределённое местоимение; употребляется как подлежащее или дополнение",
+    "function": "обозначает неопределённое лицо: кто-то",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Someone is knocking at the door.",
+        "ru": "Кто-то стучит в дверь.",
+        "uk": "Хтось стукає в двері."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "word": "that (formal)",
+    "ru": "тот",
+    "uk": "той",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "demonstrative",
+    "person": null,
+    "number": "both",
+    "gender": "masculine",
+    "caseUsage": "указывает на отдалённый по времени или контексту объект",
+    "function": "указывает на отдалённое во времени или контексте лицо/предмет",
+    "register": "formal",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "That day was really special for us.",
+        "ru": "Тот день был действительно особенным для нас.",
+        "uk": "Той день був справді особливим для нас."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "word": "no … at all",
+    "ru": "никакой",
+    "uk": "ніякий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "negative",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "часто используется с существительными или абстрактными понятиями",
+    "function": "подчеркивает полное отсутствие чего-либо",
+    "register": "formal",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "He shows no interest at all in sports.",
+        "ru": "Он не проявляет никакого интереса к спорту.",
+        "uk": "Він не виявляє жодного інтересу до спорту."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "word": "one",
+    "ru": "кто-то",
+    "uk": "хтось",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "indefinite-personal",
+    "person": 3,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "употребляется как безличное подлежащее; глагол в 3-м лице ед. числа",
+    "function": "обозначает людей вообще, неопределённого субъекта действия",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "In this city, one must register their address.",
+        "ru": "В этом городе нужно регистрировать свой адрес.",
+        "uk": "У цьому місті потрібно реєструвати свою адресу."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "word": "some",
+    "ru": "некоторый",
+    "uk": "деякий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "может стоять самостоятельно или перед существительным",
+    "function": "обозначает не одного, а несколько лиц/предметов: некоторые, многие",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Some students have trouble with math.",
+        "ru": "У некоторых студентов проблемы с математикой.",
+        "uk": "Деякі студенти мають проблеми з математикою."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "word": "several",
+    "ru": "несколько",
+    "uk": "кілька",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "используется только во множественном числе",
+    "function": "обозначает количество больше двух, но неопределённое",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Several friends are coming over tonight.",
+        "ru": "Сегодня вечером придут несколько друзей.",
+        "uk": "Сьогодні ввечері прийдуть кілька друзів."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "word": "my",
+    "ru": "мой",
+    "uk": "мій",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "possessive",
+    "person": 1,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "притяжательное местоимение, согласуется с существительным",
+    "function": "обозначает принадлежность говорящему",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "My car is very old.",
+        "ru": "Моя машина очень старая.",
+        "uk": "Моя машина дуже стара."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "word": "nobody",
+    "ru": "никто",
+    "uk": "ніхто",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "negative",
+    "person": 3,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "отрицательное местоимение; глагол обычно в 3-м лице ед. числа",
+    "function": "обозначает полное отсутствие людей: ни один человек",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Nobody has time to help today.",
+        "ru": "Сегодня ни у кого нет времени помочь.",
+        "uk": "Сьогодні ніхто не має часу допомогти."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "word": "his",
+    "ru": "его",
+    "uk": "його",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "possessive",
+    "person": 3,
+    "number": "singular",
+    "gender": "masculine",
+    "caseUsage": "притяжательное местоимение; согласуется с существительным",
+    "function": "обозначает принадлежность мужчине или предмету среднего рода",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "His room is very small.",
+        "ru": "Его комната очень маленькая.",
+        "uk": "Його кімната дуже маленька."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "word": "she",
+    "ru": "она",
+    "uk": "вона",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 3,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "может означать «она» или часть группы значений «sie»; значение определяется контекстом",
+    "function": "обозначает женщину или женский персонаж",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "She is my sister.",
+        "ru": "Она моя сестра.",
+        "uk": "Вона моя сестра."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "word": "such",
+    "ru": "такой",
+    "uk": "такий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "demonstrative",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "употребляется с существительными и самостоятельно",
+    "function": "обозначает тип, качество предмета: такой, подобный",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Such questions are always difficult.",
+        "ru": "Такие вопросы всегда сложные.",
+        "uk": "Такі запитання завжди складні."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "word": "all of",
+    "ru": "все",
+    "uk": "всі",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "книжное, подчёркивает полноту группы",
+    "function": "подчеркивает полноту: все без исключения",
+    "register": "formal",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "All of the documents are ready.",
+        "ru": "Все документы готовы.",
+        "uk": "Усі документи готові."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "word": "our",
+    "ru": "наш",
+    "uk": "наш",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "possessive",
+    "person": 1,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "притяжательное местоимение; согласуется с существительным",
+    "function": "обозначает принадлежность группе, включающей говорящего",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Our teacher is very friendly.",
+        "ru": "Наш учитель очень дружелюбный.",
+        "uk": "Наш учитель дуже привітний."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "word": "what",
+    "ru": "что",
+    "uk": "що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "interrogative",
+    "person": null,
+    "number": "singular",
+    "gender": "neuter",
+    "caseUsage": "вопросительное/относительное местоимение; управляет глаголом или предлогом",
+    "function": "используется для вопросов о предмете, действии или информации",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "What are you doing right now?",
+        "ru": "Что ты делаешь прямо сейчас?",
+        "uk": "Що ти робиш просто зараз?"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "word": "which",
+    "ru": "которая",
+    "uk": "яка",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "interrogative",
+    "person": null,
+    "number": "both",
+    "gender": "feminine",
+    "caseUsage": "вопросительное/относительное местоимение; склоняется по падежам в английском через позицию и предлоги",
+    "function": "задаёт выбор или уточнение: какая? которая?",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Which color do you like most?",
+        "ru": "Какой цвет ты любишь больше всего?",
+        "uk": "Який колір ти любиш найбільше?"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "word": "which",
+    "ru": "какой",
+    "uk": "який",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "interrogative",
+    "person": null,
+    "number": "both",
+    "gender": "masculine",
+    "caseUsage": "используется для вопросов и относительных придаточных о предмете мужского рода (в немецком)",
+    "function": "задаёт вопрос или уточнение о предмете",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Which day is today?",
+        "ru": "Какой сегодня день?",
+        "uk": "Який сьогодні день?"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "word": "which",
+    "ru": "которое",
+    "uk": "яке",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "interrogative",
+    "person": null,
+    "number": "both",
+    "gender": "neuter",
+    "caseUsage": "средний род вопросительного/относительного местоимения (для немецкого исходника)",
+    "function": "задаёт вопрос или уточнение о предмете среднего рода",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Which book are you reading at the moment?",
+        "ru": "Какую книгу ты сейчас читаешь?",
+        "uk": "Яку книгу ти зараз читаєш?"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "word": "few",
+    "ru": "немногие",
+    "uk": "небагато",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "употребляется с исчисляемыми существительными во множественном числе",
+    "function": "подчеркивает небольшое количество людей или предметов",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Only a few students passed the exam.",
+        "ru": "Лишь немногие студенты сдали экзамен.",
+        "uk": "Лише небагато студентів склали іспит."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "word": "who",
+    "ru": "кто",
+    "uk": "хто",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "interrogative",
+    "person": null,
+    "number": "singular",
+    "gender": "all",
+    "caseUsage": "вопросительное/относительное местоимение о лице",
+    "function": "используется в вопросах и придаточных для обозначения лица",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Who is calling so late?",
+        "ru": "Кто звонит так поздно?",
+        "uk": "Хто телефонує так пізно?"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "word": "we",
+    "ru": "мы",
+    "uk": "ми",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "personal",
+    "person": 1,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "личное местоимение 1-го лица мн. числа",
+    "function": "обозначает говорящего вместе с другими людьми",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "We are going to the cinema tonight.",
+        "ru": "Сегодня вечером мы идём в кино.",
+        "uk": "Сьогодні ввечері ми йдемо в кіно."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "word": "numerous",
+    "ru": "многочисленные",
+    "uk": "численні",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "quantifier",
+    "person": null,
+    "number": "plural",
+    "gender": "all",
+    "caseUsage": "часто употребляется перед существительными во множественном числе",
+    "function": "обозначает очень большое количество",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Numerous guests came to the party.",
+        "ru": "На вечеринку пришло множество гостей.",
+        "uk": "На вечірку прийшло численно гостей."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "word": "two and a half",
+    "ru": "два с половиной",
+    "uk": "два з половиною",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "numeral",
+    "person": null,
+    "number": null,
+    "gender": null,
+    "caseUsage": "дробное число, используется с существительными",
+    "function": "обозначает количество 2,5",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "The trip takes two and a half hours.",
+        "ru": "Поездка занимает два с половиной часа.",
+        "uk": "Поїздка триває дві з половиною години."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "word": "second",
+    "ru": "второй",
+    "uk": "другий",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "pronounType": "numeral",
+    "person": null,
+    "number": "both",
+    "gender": "all",
+    "caseUsage": "порядковое числительное; употребляется как прилагательное",
+    "function": "обозначает порядок: второй по счёту",
+    "register": "neutral",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "He lives on the second floor.",
+        "ru": "Он живёт на втором этаже.",
+        "uk": "Він живе на другому поверсі."
+      }
+    ]
+  }
 ];
+
+window.decks.en_prepositions = [
+  {
+    "id": 1,
+    "word": "from (time)",
+    "ru": "с",
+    "uk": "від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "From tomorrow on, I will work in Berlin.",
+        "ru": "С завтрашнего дня я буду работать в Берлине.",
+        "uk": "Від завтра я працюватиму в Берліні."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "away from",
+    "ru": "в стороне от",
+    "uk": "осторонь від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The house is away from the road.",
+        "ru": "Дом стоит в стороне от дороги.",
+        "uk": "Будинок розташований осторонь від дороги."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "minus",
+    "ru": "за вычетом",
+    "uk": "за вирахуванням",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The price is 100 euros minus the discount.",
+        "ru": "Цена составляет 100 евро за вычетом скидки.",
+        "uk": "Ціна становить 100 євро за вирахуванням знижки."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "less (after deducting)",
+    "ru": "за вычетом",
+    "uk": "за вирахуванням",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Less taxes, not much remains.",
+        "ru": "За вычетом налогов мало остаётся.",
+        "uk": "За вирахуванням податків лишається небагато."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "at",
+    "ru": "у",
+    "uk": "біля",
+    "level": "A1",
+    "topics": [
+      "place",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We are meeting at the station.",
+        "ru": "Мы встречаемся у вокзала.",
+        "uk": "Ми зустрічаємося біля вокзалу."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "in place of",
+    "ru": "вместо",
+    "uk": "замість",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In place of the boss, the deputy signs.",
+        "ru": "Вместо начальника подписывает заместитель.",
+        "uk": "Замість шефа підписує заступник."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "in place of (someone)",
+    "ru": "вместо",
+    "uk": "замість",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is working in place of his colleague.",
+        "ru": "Он работает вместо своего коллеги.",
+        "uk": "Він працює замість свого колеги."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "in view of",
+    "ru": "ввиду",
+    "uk": "з огляду на",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In view of the situation, we have to save money.",
+        "ru": "Ввиду ситуации нам нужно экономить.",
+        "uk": "З огляду на ситуацію ми мусимо економити."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "on the basis of",
+    "ru": "на основании",
+    "uk": "на підставі",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I will explain the rule on the basis of this example.",
+        "ru": "На основании этого примера я объясню правило.",
+        "uk": "На підставі цього прикладу я поясню правило."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "on the occasion of",
+    "ru": "по случаю",
+    "uk": "з нагоди",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "There will be a party on the occasion of his birthday.",
+        "ru": "По случаю его дня рождения будет праздник.",
+        "uk": "З нагоди його дня народження буде свято."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "instead of",
+    "ru": "вместо",
+    "uk": "замість",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Instead of an email, he wrote a letter.",
+        "ru": "Вместо электронного письма он написал письмо.",
+        "uk": "Замість електронного листа він написав лист."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "on",
+    "ru": "на",
+    "uk": "на",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The book is on the table.",
+        "ru": "Книга лежит на столе.",
+        "uk": "Книга лежить на столі."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "word": "because of",
+    "ru": "из-за",
+    "uk": "через",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Because of the bad weather, we are staying at home.",
+        "ru": "Из-за плохой погоды мы остаёмся дома.",
+        "uk": "Через погану погоду ми залишаємося вдома."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "word": "from (origin)",
+    "ru": "из",
+    "uk": "з",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is from Germany.",
+        "ru": "Он из Германии.",
+        "uk": "Він з Німеччини."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "word": "excluding",
+    "ru": "исключая",
+    "uk": "за винятком",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Excluding drinks, everything is included in the price.",
+        "ru": "Исключая напитки, всё включено в цену.",
+        "uk": "За винятком напоїв, усе включено в ціну."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "word": "except for",
+    "ru": "кроме",
+    "uk": "крім",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Except for me, nobody was there.",
+        "ru": "Кроме меня там никого не было.",
+        "uk": "Крім мене там нікого не було."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "word": "outside",
+    "ru": "вне",
+    "uk": "поза",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is quieter outside the city.",
+        "ru": "Вне города спокойнее.",
+        "uk": "Поза містом спокійніше."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "word": "at (someone's place)",
+    "ru": "у",
+    "uk": "у",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I live at my parents’ place.",
+        "ru": "Я живу у родителей.",
+        "uk": "Я живу в батьків."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "word": "on both sides of",
+    "ru": "по обе стороны",
+    "uk": "по обидва боки",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "There are trees on both sides of the street.",
+        "ru": "По обе стороны улицы стоят деревья.",
+        "uk": "По обидва боки вулиці стоять дерева."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "word": "regarding",
+    "ru": "касательно",
+    "uk": "щодо",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Regarding your application, we will contact you later.",
+        "ru": "Касательно вашего заявления мы свяжемся позже.",
+        "uk": "Щодо вашої заяви ми зв’яжемося пізніше."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "word": "concerning",
+    "ru": "относительно",
+    "uk": "щодо",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Concerning the payment, I have a question.",
+        "ru": "Относительно оплаты у меня есть вопрос.",
+        "uk": "Щодо оплати маю запитання."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "word": "until",
+    "ru": "до",
+    "uk": "до",
+    "level": "A2",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I am staying until tomorrow.",
+        "ru": "Я останусь до завтра.",
+        "uk": "Я залишуся до завтра."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "word": "against (formal)",
+    "ru": "против",
+    "uk": "проти",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Many voices were against the proposal.",
+        "ru": "Многие голоса были против предложения.",
+        "uk": "Багато голосів були проти пропозиції."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "word": "thanks to",
+    "ru": "благодаря",
+    "uk": "завдяки",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Thanks to your help, it was easy.",
+        "ru": "Благодаря твоей помощи это было легко.",
+        "uk": "Завдяки твоїй допомозі це було легко."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "word": "on this side of",
+    "ru": "по эту сторону",
+    "uk": "по цей бік",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "On this side of the river, there is a village.",
+        "ru": "По эту сторону реки есть деревня.",
+        "uk": "По цей бік річки є село."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "word": "through",
+    "ru": "через",
+    "uk": "через",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We are walking through the park.",
+        "ru": "Мы идём через парк.",
+        "uk": "Ми йдемо через парк."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "word": "including",
+    "ru": "включая",
+    "uk": "включаючи",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Including drinks, it costs 20 euros.",
+        "ru": "Включая напитки, это стоит 20 евро.",
+        "uk": "Включаючи напої, це коштує 20 євро."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "word": "contrary to",
+    "ru": "вопреки",
+    "uk": "всупереч",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Contrary to the doctors’ advice, he keeps smoking.",
+        "ru": "Вопреки совету врачей он продолжает курить.",
+        "uk": "Всупереч пораді лікарів він далі палить."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "word": "along",
+    "ru": "вдоль",
+    "uk": "вздовж",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We are walking along the river.",
+        "ru": "Мы идём вдоль реки.",
+        "uk": "Ми йдемо вздовж річки."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "word": "in accordance with",
+    "ru": "соответственно",
+    "uk": "відповідно до",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In accordance with the plan, we start at eight.",
+        "ru": "Соответственно плану мы начинаем в восемь.",
+        "uk": "Відповідно до плану ми починаємо о восьмій."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "word": "excluding (tax)",
+    "ru": "за вычетом",
+    "uk": "за винятком",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The price is given excluding tax.",
+        "ru": "Цена указана без учёта налогов.",
+        "uk": "Ціна вказана за винятком податків."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "word": "far from",
+    "ru": "вдали от",
+    "uk": "далеко від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Far from the city, it is very quiet.",
+        "ru": "Вдали от города очень тихо.",
+        "uk": "Далеко від міста дуже тихо."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "word": "for",
+    "ru": "для",
+    "uk": "для",
+    "level": "A2",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The present is for you.",
+        "ru": "Этот подарок для тебя.",
+        "uk": "Цей подарунок для тебе."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "word": "against",
+    "ru": "против",
+    "uk": "проти",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will arrive at about eight o’clock.",
+        "ru": "Мы придём около восьми часов.",
+        "uk": "Ми прийдемо близько восьмої години."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "word": "opposite",
+    "ru": "напротив",
+    "uk": "навпроти",
+    "level": "B1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The school is opposite the church.",
+        "ru": "Школа находится напротив церкви.",
+        "uk": "Школа розташована навпроти церкви."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "word": "across from",
+    "ru": "напротив",
+    "uk": "навпроти",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The bank is across from the post office.",
+        "ru": "Банк напротив почты.",
+        "uk": "Банк навпроти пошти."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "word": "according to",
+    "ru": "согласно",
+    "uk": "згідно з",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "According to the contract, we pay monthly.",
+        "ru": "Согласно договору мы платим ежемесячно.",
+        "uk": "Згідно з договором ми платимо щомісяця."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "word": "with respect to",
+    "ru": "касательно",
+    "uk": "стосовно",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "With respect to quality, there are no problems.",
+        "ru": "Касательно качества проблем нет.",
+        "uk": "Стосовно якості проблем немає."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "word": "behind",
+    "ru": "за",
+    "uk": "за",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The garden is behind the house.",
+        "ru": "Сад находится за домом.",
+        "uk": "Сад розташований позаду будинку."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "word": "in case of",
+    "ru": "в случае",
+    "uk": "у разі",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In case of an emergency, call 112.",
+        "ru": "В случае чрезвычайной ситуации звоните 112.",
+        "uk": "У разі надзвичайної ситуації телефонуйте 112."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "word": "with a view to",
+    "ru": "ввиду",
+    "uk": "з огляду на",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "With a view to the future, we are saving money.",
+        "ru": "Ввиду будущего мы копим деньги.",
+        "uk": "З огляду на майбутнє ми заощаджуємо гроші."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "word": "in the course of",
+    "ru": "в течение",
+    "uk": "упродовж",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In the course of the day, I will call you.",
+        "ru": "В течение дня я тебе позвоню.",
+        "uk": "Упродовж дня я тобі подзвоню."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "word": "within the framework of",
+    "ru": "в рамках",
+    "uk": "у межах",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Within the framework of the course, we are doing a trip.",
+        "ru": "В рамках курса мы делаем экскурсию.",
+        "uk": "У межах курсу ми робимо екскурсію."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "word": "in the sense of",
+    "ru": "в смысле",
+    "uk": "у сенсі",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In the sense of the law, this is forbidden.",
+        "ru": "В смысле закона это запрещено.",
+        "uk": "У сенсі закону це заборонено."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "word": "in the process of",
+    "ru": "в ходе",
+    "uk": "в ході",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "In the process of the reform, many things changed.",
+        "ru": "В ходе реформы многое изменилось.",
+        "uk": "В ході реформи багато змінилося."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "word": "in",
+    "ru": "в",
+    "uk": "в",
+    "level": "A1",
+    "topics": [
+      "place",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I live in Berlin.",
+        "ru": "Я живу в Берлине.",
+        "uk": "Я живу в Берліні."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "word": "given",
+    "ru": "ввиду",
+    "uk": "з огляду на",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Given the circumstances, that is understandable.",
+        "ru": "Ввиду обстоятельств это понятно.",
+        "uk": "З огляду на обставини це зрозуміло."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "word": "with regard to",
+    "ru": "в отношении",
+    "uk": "щодо",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "With regard to your question, I have an idea.",
+        "ru": "Относительно твоего вопроса у меня есть идея.",
+        "uk": "Щодо твого запитання маю одну ідею."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "word": "as a result of",
+    "ru": "вследствие",
+    "uk": "внаслідок",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "As a result of the accident, there were traffic jams.",
+        "ru": "Вследствие аварии возникли пробки.",
+        "uk": "Внаслідок аварії утворилися затори."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "word": "including",
+    "ru": "включая",
+    "uk": "включно з",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The price is including breakfast.",
+        "ru": "Цена включает завтрак.",
+        "uk": "Ціна включає сніданок."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "word": "in the middle of",
+    "ru": "посреди",
+    "uk": "посеред",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in the middle of».",
+        "uk": "Це приклад зі словом «in the middle of».",
+        "L2": "This is an example with 'in the middle of'."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "word": "within",
+    "ru": "в пределах",
+    "uk": "в межах",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «within».",
+        "uk": "Це приклад зі словом «within».",
+        "L2": "This is an example with 'within'."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "word": "per",
+    "ru": "по",
+    "uk": "по",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «per».",
+        "uk": "Це приклад зі словом «per».",
+        "L2": "This is an example with 'per'."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "word": "beyond",
+    "ru": "по ту сторону",
+    "uk": "по той бік",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «beyond».",
+        "uk": "Це приклад зі словом «beyond».",
+        "L2": "This is an example with 'beyond'."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "word": "by virtue of",
+    "ru": "в силу",
+    "uk": "в силу",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «by virtue of».",
+        "uk": "Це приклад зі словом «by virtue of».",
+        "L2": "This is an example with 'by virtue of'."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "word": "by virtue of",
+    "ru": "в силу",
+    "uk": "в силу",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «by virtue of».",
+        "uk": "Це приклад зі словом «by virtue of».",
+        "L2": "This is an example with 'by virtue of'."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "word": "according to",
+    "ru": "согласно",
+    "uk": "згідно з",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «according to».",
+        "uk": "Це приклад зі словом «according to».",
+        "L2": "This is an example with 'according to'."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "word": "along",
+    "ru": "вдоль",
+    "uk": "вздовж",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «along».",
+        "uk": "Це приклад зі словом «along».",
+        "L2": "This is an example with 'along'."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "word": "for lack of",
+    "ru": "за неимением",
+    "uk": "через відсутність",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «for lack of».",
+        "uk": "Це приклад зі словом «for lack of».",
+        "L2": "This is an example with 'for lack of'."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "word": "with",
+    "ru": "с",
+    "uk": "з",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «with».",
+        "uk": "Це приклад зі словом «with».",
+        "L2": "This is an example with 'with'."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "word": "with the help of",
+    "ru": "с помощью",
+    "uk": "за допомогою",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «with the help of».",
+        "uk": "Це приклад зі словом «with the help of».",
+        "L2": "This is an example with 'with the help of'."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "word": "with the help of",
+    "ru": "с помощью",
+    "uk": "за допомогою",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «with the help of».",
+        "uk": "Це приклад зі словом «with the help of».",
+        "L2": "This is an example with 'with the help of'."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "word": "by means of",
+    "ru": "посредством",
+    "uk": "за допомогою",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «by means of».",
+        "uk": "Це приклад зі словом «by means of».",
+        "L2": "This is an example with 'by means of'."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "word": "in the middle of",
+    "ru": "посреди",
+    "uk": "посеред",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in the middle of».",
+        "uk": "Це приклад зі словом «in the middle of».",
+        "L2": "This is an example with 'in the middle of'."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "word": "after",
+    "ru": "после",
+    "uk": "після",
+    "level": "A1",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «after».",
+        "uk": "Це приклад зі словом «after».",
+        "L2": "This is an example with 'after'."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "word": "near",
+    "ru": "рядом с",
+    "uk": "поруч із",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «near».",
+        "uk": "Це приклад зі словом «near».",
+        "L2": "This is an example with 'near'."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "word": "next to",
+    "ru": "рядом с",
+    "uk": "поруч з",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «next to».",
+        "uk": "Це приклад зі словом «next to».",
+        "L2": "This is an example with 'next to'."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "word": "together with",
+    "ru": "вместе с",
+    "uk": "разом із",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «together with».",
+        "uk": "Це приклад зі словом «together with».",
+        "L2": "This is an example with 'together with'."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "word": "above",
+    "ru": "выше",
+    "uk": "вище",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «above».",
+        "uk": "Це приклад зі словом «above».",
+        "L2": "This is an example with 'above'."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "word": "without",
+    "ru": "без",
+    "uk": "без",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «without».",
+        "uk": "Це приклад зі словом «without».",
+        "L2": "This is an example with 'without'."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "word": "regardless of",
+    "ru": "невзирая на",
+    "uk": "незважаючи на",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «regardless of».",
+        "uk": "Це приклад зі словом «regardless of».",
+        "L2": "This is an example with 'regardless of'."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "word": "by",
+    "ru": "по",
+    "uk": "по",
+    "level": "A1",
+    "topics": [
+      "place",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «by».",
+        "uk": "Це приклад зі словом «by».",
+        "L2": "This is an example with 'by'."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "word": "per",
+    "ru": "в",
+    "uk": "на",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «per».",
+        "uk": "Це приклад зі словом «per».",
+        "L2": "This is an example with 'per'."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "word": "across",
+    "ru": "поперек",
+    "uk": "упоперек",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «across».",
+        "uk": "Це приклад зі словом «across».",
+        "L2": "This is an example with 'across'."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "word": "together with",
+    "ru": "вместе с",
+    "uk": "разом із",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «together with».",
+        "uk": "Це приклад зі словом «together with».",
+        "L2": "This is an example with 'together with'."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "word": "since",
+    "ru": "с",
+    "uk": "від",
+    "level": "A2",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «since».",
+        "uk": "Це приклад зі словом «since».",
+        "L2": "This is an example with 'since'."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "word": "on the part of",
+    "ru": "со стороны",
+    "uk": "з боку",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «on the part of».",
+        "uk": "Це приклад зі словом «on the part of».",
+        "L2": "This is an example with 'on the part of'."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "word": "on the part of",
+    "ru": "со стороны",
+    "uk": "з боку",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «on the part of».",
+        "uk": "Це приклад зі словом «on the part of».",
+        "L2": "This is an example with 'on the part of'."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "word": "instead of",
+    "ru": "вместо",
+    "uk": "замість",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «instead of».",
+        "uk": "Це приклад зі словом «instead of».",
+        "L2": "This is an example with 'instead of'."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "word": "despite",
+    "ru": "несмотря на",
+    "uk": "попри",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «despite».",
+        "uk": "Це приклад зі словом «despite».",
+        "L2": "This is an example with 'despite'."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "word": "at",
+    "ru": "вокруг",
+    "uk": "навколо",
+    "level": "A1",
+    "topics": [
+      "place",
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «at».",
+        "uk": "Це приклад зі словом «at».",
+        "L2": "This is an example with 'at'."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "word": "without prejudice to",
+    "ru": "без ущерба для",
+    "uk": "без шкоди для",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «without prejudice to».",
+        "uk": "Це приклад зі словом «without prejudice to».",
+        "L2": "This is an example with 'without prejudice to'."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "word": "not far from",
+    "ru": "недалеко от",
+    "uk": "неподалік від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «not far from».",
+        "uk": "Це приклад зі словом «not far from».",
+        "L2": "This is an example with 'not far from'."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "word": "notwithstanding",
+    "ru": "несмотря на",
+    "uk": "незважаючи на",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «notwithstanding».",
+        "uk": "Це приклад зі словом «notwithstanding».",
+        "L2": "This is an example with 'notwithstanding'."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "word": "under",
+    "ru": "под",
+    "uk": "під",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «under».",
+        "uk": "Це приклад зі словом «under».",
+        "L2": "This is an example with 'under'."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "word": "below",
+    "ru": "ниже",
+    "uk": "нижче",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «below».",
+        "uk": "Це приклад зі словом «below».",
+        "L2": "This is an example with 'below'."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "word": "not far from",
+    "ru": "недалеко от",
+    "uk": "неподалік від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «not far from».",
+        "uk": "Це приклад зі словом «not far from».",
+        "L2": "This is an example with 'not far from'."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "word": "not far from",
+    "ru": "недалеко от",
+    "uk": "неподалік від",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «not far from».",
+        "uk": "Це приклад зі словом «not far from».",
+        "L2": "This is an example with 'not far from'."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "word": "via",
+    "ru": "через",
+    "uk": "через",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «via».",
+        "uk": "Це приклад зі словом «via».",
+        "L2": "This is an example with 'via'."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "word": "from",
+    "ru": "от",
+    "uk": "від",
+    "level": "A1",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «from».",
+        "uk": "Це приклад зі словом «from».",
+        "L2": "This is an example with 'from'."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "word": "in front of",
+    "ru": "перед",
+    "uk": "перед",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in front of».",
+        "uk": "Це приклад зі словом «in front of».",
+        "L2": "This is an example with 'in front of'."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "word": "because of",
+    "ru": "из-за",
+    "uk": "через",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «because of».",
+        "uk": "Це приклад зі словом «because of».",
+        "L2": "This is an example with 'because of'."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "word": "against",
+    "ru": "против",
+    "uk": "всупереч",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «against».",
+        "uk": "Це приклад зі словом «against».",
+        "L2": "This is an example with 'against'."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "word": "during",
+    "ru": "во время",
+    "uk": "під час",
+    "level": "A1",
+    "topics": [
+      "time"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «during».",
+        "uk": "Це приклад зі словом «during».",
+        "L2": "This is an example with 'during'."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "word": "to",
+    "ru": "к",
+    "uk": "до",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «to».",
+        "uk": "Це приклад зі словом «to».",
+        "L2": "This is an example with 'to'."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "word": "according to",
+    "ru": "согласно",
+    "uk": "згідно з",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «according to».",
+        "uk": "Це приклад зі словом «according to».",
+        "L2": "This is an example with 'according to'."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "word": "in favour of",
+    "ru": "в пользу",
+    "uk": "на користь",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in favour of».",
+        "uk": "Це приклад зі словом «in favour of».",
+        "L2": "This is an example with 'in favour of'."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "word": "at the expense of",
+    "ru": "в ущерб",
+    "uk": "на шкоду",
+    "level": "B2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «at the expense of».",
+        "uk": "Це приклад зі словом «at the expense of».",
+        "L2": "This is an example with 'at the expense of'."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "word": "contrary to",
+    "ru": "вопреки",
+    "uk": "всупереч",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «contrary to».",
+        "uk": "Це приклад зі словом «contrary to».",
+        "L2": "This is an example with 'contrary to'."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "word": "in addition to",
+    "ru": "плюс",
+    "uk": "додатково",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in addition to».",
+        "uk": "Це приклад зі словом «in addition to».",
+        "L2": "This is an example with 'in addition to'."
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "word": "in addition to",
+    "ru": "с прибавлением",
+    "uk": "з додаванням",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «in addition to».",
+        "uk": "Це приклад зі словом «in addition to».",
+        "L2": "This is an example with 'in addition to'."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "word": "for the purpose of",
+    "ru": "с целью",
+    "uk": "з метою",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «for the purpose of».",
+        "uk": "Це приклад зі словом «for the purpose of».",
+        "L2": "This is an example with 'for the purpose of'."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "word": "between",
+    "ru": "между",
+    "uk": "між",
+    "level": "A1",
+    "topics": [
+      "place"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «between».",
+        "uk": "Це приклад зі словом «between».",
+        "L2": "This is an example with 'between'."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "word": "about",
+    "ru": "о, об",
+    "uk": "про",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "ru": "Это пример со словом «about».",
+        "uk": "Це приклад зі словом «about».",
+        "L2": "This is an example with 'about'."
+      }
+    ]
+  }
+];
+
+window.decks.en_conjunctions = [
+  {
+    "id": 1,
+    "word": "but",
+    "ru": "но",
+    "uk": "але",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I'm tired, but I'm happy.",
+        "ru": "Я устал, но я счастлив.",
+        "uk": "Я втомився, але я щасливий."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "so",
+    "ru": "итак",
+    "uk": "отже",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It's late, so I'm going home.",
+        "ru": "Поздно, так что я иду домой.",
+        "uk": "Пізно, тож я йду додому."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "before",
+    "ru": "прежде чем",
+    "uk": "перш ніж",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Wash your hands before you eat.",
+        "ru": "Помой руки, прежде чем есть.",
+        "uk": "Вимий руки, перш ніж їсти."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "so that",
+    "ru": "чтобы",
+    "uk": "щоб",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I'm learning German so that I can work in Germany.",
+        "ru": "Я учу немецкий, чтобы я мог работать в Германии.",
+        "uk": "Я вчу німецьку, щоб я міг працювати в Німеччині."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "that",
+    "ru": "что",
+    "uk": "що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I think that he is right.",
+        "ru": "Я думаю, что он прав.",
+        "uk": "Я думаю, що він має рацію."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "because",
+    "ru": "потому что",
+    "uk": "бо",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I'm going home because I'm tired.",
+        "ru": "Я иду домой, потому что устал.",
+        "uk": "Я йду додому, бо втомився."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "therefore",
+    "ru": "поэтому",
+    "uk": "тому",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It is raining; therefore I am staying at home.",
+        "ru": "Идёт дождь, поэтому я остаюсь дома.",
+        "uk": "Іде дощ, тому я залишаюся вдома."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "however",
+    "ru": "однако",
+    "uk": "проте",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It was cold, however we went for a walk.",
+        "ru": "Было холодно, однако мы пошли гулять.",
+        "uk": "Було холодно, проте ми пішли гуляти."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "in case",
+    "ru": "если",
+    "uk": "якщо",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Call me in case you have any questions.",
+        "ru": "Позвони мне, если у тебя будут вопросы.",
+        "uk": "Подзвони мені, якщо матимеш запитання."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "by",
+    "ru": "тем что",
+    "uk": "тим що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He improves his German by reading a lot.",
+        "ru": "Он улучшает свой немецкий тем, что много читает.",
+        "uk": "Він покращує німецьку тим, що багато читає."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "insofar",
+    "ru": "настолько",
+    "uk": "настільки",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Insofar as I know, he is coming tomorrow.",
+        "ru": "Насколько мне известно, он придёт завтра.",
+        "uk": "Наскільки мені відомо, він прийде завтра."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "the ... the ...",
+    "ru": "чем … тем",
+    "uk": "чим … тим",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "The more you practise, the better you get.",
+        "ru": "Чем больше ты тренируешься, тем лучше ты становишься.",
+        "uk": "Чим більше ти тренуєшся, тим кращим ти стаєш."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "word": "after",
+    "ru": "после того как",
+    "uk": "після того як",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "After we ate, we went for a walk.",
+        "ru": "После того как мы поели, мы пошли гулять.",
+        "uk": "Після того як ми поїли, ми пішли гуляти."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "word": "although",
+    "ru": "хотя",
+    "uk": "хоча",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Although it was raining, the children played outside.",
+        "ru": "Хотя шёл дождь, дети играли на улице.",
+        "uk": "Хоча йшов дощ, діти грали надворі."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "word": "even though",
+    "ru": "хотя",
+    "uk": "хоча",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Even though he was tired, he kept working.",
+        "ru": "Хотя он был уставшим, он продолжал работать.",
+        "uk": "Хоча він був втомлений, він продовжував працювати."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "word": "although, even though",
+    "ru": "хотя",
+    "uk": "хоча",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Although it is cold, she is not wearing a jacket.",
+        "ru": "Хотя холодно, она не надевает куртку.",
+        "uk": "Хоча холодно, вона не вдягає куртку."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "word": "or",
+    "ru": "или",
+    "uk": "або",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Do you want tea or coffee?",
+        "ru": "Ты хочешь чай или кофе?",
+        "uk": "Хочеш чай або каву?"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "word": "as soon as",
+    "ru": "как только",
+    "uk": "як тільки",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "As soon as I have time, I will call you.",
+        "ru": "Как только у меня будет время, я тебе позвоню.",
+        "uk": "Як тільки в мене буде час, я тобі подзвоню."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "word": "so ... that",
+    "ru": "так что",
+    "uk": "так що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "It was so loud that I couldn't sleep.",
+        "ru": "Было так шумно, что я не мог спать.",
+        "uk": "Було так голосно, що я не міг спати."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "word": "provided that",
+    "ru": "если только",
+    "uk": "якщо тільки",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "We will go to the sea provided that the weather is good.",
+        "ru": "Мы поедем к морю, если только погода будет хорошей.",
+        "uk": "Ми поїдемо до моря, якщо тільки погода буде доброю."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "word": "but rather",
+    "ru": "а",
+    "uk": "а",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He doesn't drink coffee but rather tea.",
+        "ru": "Он пьёт не кофе, а чай.",
+        "uk": "Він п’є не каву, а чай."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "word": "as far as",
+    "ru": "поскольку",
+    "uk": "насколько",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "As far as I know, he is coming tomorrow.",
+        "ru": "Насколько я знаю, он придёт завтра.",
+        "uk": "Наскільки я знаю, він прийде завтра."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "word": "as well as",
+    "ru": "а также",
+    "uk": "а також",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He speaks German as well as English.",
+        "ru": "Он говорит по-немецки, а также по-английски.",
+        "uk": "Він говорить німецькою, а також англійською."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "word": "and",
+    "ru": "и",
+    "uk": "і",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I’m buying bread and milk.",
+        "ru": "Я покупаю хлеб и молоко.",
+        "uk": "Я купую хліб і молоко."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "word": "because",
+    "ru": "потому что",
+    "uk": "тому що",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I'm staying at home because I'm ill.",
+        "ru": "Я остаюсь дома, потому что я болен.",
+        "uk": "Я залишаюся вдома, тому що я хворий."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "word": "if",
+    "ru": "если",
+    "uk": "якщо",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "If I have time, I read.",
+        "ru": "Если у меня есть время, я читаю.",
+        "uk": "Якщо в мене є час, я читаю."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "word": "why",
+    "ru": "почему",
+    "uk": "чому",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I don't know why he isn't coming.",
+        "ru": "Я не знаю, почему он не приходит.",
+        "uk": "Я не знаю, чому він не приходить."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "word": "why",
+    "ru": "из-за чего",
+    "uk": "через що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "Tell me why you are sad.",
+        "ru": "Скажи мне, из-за чего ты грустишь.",
+        "uk": "Скажи мені, через що ти сумуєш."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "word": "while",
+    "ru": "при этом",
+    "uk": "при цьому",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He is strict, while he is also very fair.",
+        "ru": "Он строгий, при этом он очень справедлив.",
+        "uk": "Він суворий, при цьому дуже справедливий."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "word": "whereas",
+    "ru": "тогда как",
+    "uk": "тоді як",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He loves sport, whereas she prefers reading.",
+        "ru": "Он любит спорт, тогда как она предпочитает читать.",
+        "uk": "Він любить спорт, тоді як вона більше любить читати."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "word": "while",
+    "ru": "в то время как",
+    "uk": "в той час як",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "While I am cooking, he is listening to music.",
+        "ru": "Пока я готовлю, он слушает музыку.",
+        "uk": "Поки я готую, він слухає музику."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "word": "with the aim that",
+    "ru": "с той целью чтобы",
+    "uk": "з тією метою щоб",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "He speaks slowly with the aim that everyone understands.",
+        "ru": "Он говорит медленно с той целью, чтобы все поняли.",
+        "uk": "Він говорить повільно з тією метою, щоб усі зрозуміли."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "word": "especially as",
+    "ru": "тем более что",
+    "uk": "тим більше що",
+    "level": "B1",
+    "topics": [
+      "abstract"
+    ],
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "examples": [
+      {
+        "L2": "I'll stay at home, especially as it is raining.",
+        "ru": "Я останусь дома, тем более что идёт дождь.",
+        "uk": "Я залишуся вдома, тим більше що йде дощ."
+      }
+    ]
+  }
+];
+
+window.decks.en_particles = [
+  {
+    "id": 1,
+    "word": "only",
+    "ru": "только",
+    "uk": "лише",
+    "level": "A2",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "emphasis",
+    "register": "colloquial",
+    "position": "afterImperativeVerb",
+    "intonation": "обычно ударное, тон напряжённый при предупреждении",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Only don’t be late again, okay?",
+        "ru": "Только больше не опаздывай, ладно?",
+        "uk": "Лише більше не запізнюйся, гаразд?"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "then",
+    "ru": "же",
+    "uk": "же",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "softening",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "мягкое, часто растянутое произнесение в середине вопроса",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "What are you doing here then?",
+        "ru": "И что же ты здесь делаешь?",
+        "uk": "А що ж ти тут робиш?"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "though",
+    "ru": "же",
+    "uk": "ж",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "emphasis",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "часто ударное, с подъёмом тона при уговоре или возражении",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "It is strange, though, that he didn’t call.",
+        "ru": "Странно, однако, что он не позвонил.",
+        "uk": "Дивно, однак, що він не подзвонив."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "exactly",
+    "ru": "именно",
+    "uk": "саме",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "resignation",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "скорее спокойное, слегка подчёркнутое при согласии",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "That’s exactly how it is.",
+        "ru": "Именно так оно и есть.",
+        "uk": "Саме так воно й є."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "actually",
+    "ru": "вообще-то",
+    "uk": "власне",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "softening",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "мягкое, без сильного ударения, делает фразу менее прямой",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "What’s your name, actually?",
+        "ru": "Как тебя вообще-то зовут?",
+        "uk": "Як тебе, власне, звати?"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "simply",
+    "ru": "просто",
+    "uk": "просто",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "resignation",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "спокойное, часто сокращённое, без сильного ударения",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "We simply can’t change it now.",
+        "ru": "Мы просто уже не можем это изменить.",
+        "uk": "Ми просто вже не можемо цього змінити."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "indeed",
+    "ru": "же",
+    "uk": "же",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "emphasis",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "часто ударное при упрёке или напоминании",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "You do indeed know that.",
+        "ru": "Ты же это знаешь.",
+        "uk": "Ти ж це знаєш."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "just",
+    "ru": "разок",
+    "uk": "якось",
+    "level": "A2",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "softening",
+    "register": "colloquial",
+    "position": "afterImperativeVerb",
+    "intonation": "короткое, без сильного ударения, делает просьбу дружелюбной",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Just come over here for a second!",
+        "ru": "Подойди-ка сюда на минутку!",
+        "uk": "Підійди-но сюди на хвилинку!"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "well",
+    "ru": "ну",
+    "uk": "ну",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "discourseMarker",
+    "register": "neutral",
+    "position": "sentenceInitial",
+    "intonation": "часто с паузой после «well», как вступительное слово",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "Well, what do you think about it?",
+        "ru": "Ну, что ты об этом думаешь?",
+        "uk": "Ну, що ти про це думаєш?"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "feel free to",
+    "ru": "смело",
+    "uk": "сміливо",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "communication"
+    ],
+    "function": "encouragement",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "спокойное, с успокаивающим тоном",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "You can feel free to ask me anything.",
+        "ru": "Ты можешь смело спросить у меня что угодно.",
+        "uk": "Ти можеш сміливо запитати в мене що завгодно."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "already",
+    "ru": "уже",
+    "uk": "вже",
+    "level": "A2",
+    "topics": [
+      "particles",
+      "time",
+      "communication"
+    ],
+    "function": "reassurance",
+    "register": "colloquial",
+    "position": "midfield",
+    "intonation": "мягкое, с успокаивающим тоном, без резкого ударения",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "She is already feeling better.",
+        "ru": "Ей уже становится лучше.",
+        "uk": "Їй уже стає краще."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "probably",
+    "ru": "пожалуй",
+    "uk": "мабуть",
+    "level": "B1",
+    "topics": [
+      "particles",
+      "abstract",
+      "communication"
+    ],
+    "function": "uncertainty",
+    "register": "neutral",
+    "position": "midfield",
+    "intonation": "часто не очень ударное, с сомневающимся оттенком",
+    "enSynonyms": [],
+    "ruSynonyms": [],
+    "ukSynonyms": [],
+    "enAntonyms": [],
+    "ruAntonyms": [],
+    "ukAntonyms": [],
+    "patterns": [],
+    "examples": [
+      {
+        "L2": "He will probably arrive later.",
+        "ru": "Он, пожалуй, приедет позже.",
+        "uk": "Він, мабуть, приїде пізніше."
+      }
+    ]
+  }
+];
+
 window.decks.en_numbers = [
-{
-  id: 1,
-  word: "eight",
-  ru: "восемь",
-  uk: "вісім",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We have eight chairs in the kitchen.", ru: "У нас на кухне восемь стульев.", uk: "У нас на кухні вісім стільців." }
-  ]
-},
-{
-  id: 2,
-  word: "eighteen",
-  ru: "восемнадцать",
-  uk: "вісімнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "She will turn eighteen next month.", ru: "В следующем месяце ей исполнится восемнадцать.", uk: "Наступного місяця їй виповниться вісімнадцять." }
-  ]
-},
-{
-  id: 3,
-  word: "eighty",
-  ru: "восемьдесят",
-  uk: "вісімдесят",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "My grandfather is already eighty years old.", ru: "Моему дедушке уже восемьдесят лет.", uk: "Моєму дідусю вже вісімдесят років." }
-  ]
-},
-{
-  id: 4,
-  word: "three",
-  ru: "три",
-  uk: "три",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We have three meetings today.", ru: "У нас сегодня три встречи.", uk: "У нас сьогодні три зустрічі." }
-  ]
-},
-{
-  id: 5,
-  word: "thirteen",
-  ru: "тринадцать",
-  uk: "тринадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "Their son is thirteen and goes to secondary school.", ru: "Их сыну тринадцать, и он ходит в среднюю школу.", uk: "Їхньому синові тринадцять, і він ходить до середньої школи." }
-  ]
-},
-{
-  id: 6,
-  word: "thirty",
-  ru: "тридцать",
-  uk: "тридцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The ticket costs thirty euros.", ru: "Билет стоит тридцать евро.", uk: "Квиток коштує тридцять євро." }
-  ]
-},
-{
-  id: 7,
-  word: "third",
-  ru: "третий",
-  uk: "третій",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "He came in third place in the race.", ru: "Он пришёл третьим в гонке.", uk: "Він прийшов третім у забігу." }
-  ]
-},
-{
-  id: 8,
-  word: "one and a half",
-  ru: "полтора",
-  uk: "півтора",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The meeting lasted one and a half hours.", ru: "Встреча длилась полтора часа.", uk: "Зустріч тривала півтори години." }
-  ]
-},
-{
-  id: 9,
-  word: "one",
-  ru: "один",
-  uk: "один",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "I have only one question.", ru: "У меня только один вопрос.", uk: "У мене лише одне запитання." }
-  ]
-},
-{
-  id: 10,
-  word: "eleven",
-  ru: "одиннадцать",
-  uk: "одинадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "There are eleven people in the room.", ru: "В комнате одиннадцать человек.", uk: "У кімнаті одинадцять людей." }
-  ]
-},
-{
-  id: 11,
-  word: "first",
-  ru: "первый",
-  uk: "перший",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "This is my first day at work.", ru: "Это мой первый день на работе.", uk: "Це мій перший день на роботі." }
-  ]
-},
-{
-  id: 12,
-  word: "five",
-  ru: "пять",
-  uk: "п’ять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "She bought five fresh apples.", ru: "Она купила пять свежих яблок.", uk: "Вона купила п’ять свіжих яблук." }
-  ]
-},
-{
-  id: 13,
-  word: "fifth",
-  ru: "пятый",
-  uk: "п’ятий",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "Our office is on the fifth floor.", ru: "Наш офис на пятом этаже.", uk: "Наш офіс на п’ятому поверсі." }
-  ]
-},
-{
-  id: 14,
-  word: "fifteen",
-  ru: "пятнадцать",
-  uk: "п’ятнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "He has been living here for fifteen years.", ru: "Он живёт здесь уже пятнадцать лет.", uk: "Він живе тут уже п’ятнадцять років." }
-  ]
-},
-{
-  id: 15,
-  word: "fifty",
-  ru: "пятьдесят",
-  uk: "п’ятдесят",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The restaurant has space for fifty guests.", ru: "В ресторане есть места для пятидесяти гостей.", uk: "У ресторані є місця для п’ятдесяти гостей." }
-  ]
-},
-{
-  id: 16,
-  word: "hundred",
-  ru: "сто",
-  uk: "сто",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "About a hundred people attended the event.", ru: "На мероприятие пришло около ста человек.", uk: "На захід прийшло близько ста людей." }
-  ]
-},
-{
-  id: 17,
-  word: "last",
-  ru: "последний",
-  uk: "останній",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "This is my last offer.", ru: "Это моё последнее предложение.", uk: "Це моя остання пропозиція." }
-  ]
-},
-{
-  id: 18,
-  word: "billion",
-  ru: "миллиард",
-  uk: "мільярд",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The company is worth several billion dollars.", ru: "Компания стоит несколько миллиардов долларов.", uk: "Компанія коштує кілька мільярдів доларів." }
-  ]
-},
-{
-  id: 19,
-  word: "million",
-  ru: "миллион",
-  uk: "мільйон",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The city has over one million inhabitants.", ru: "В городе более миллиона жителей.", uk: "У місті понад один мільйон жителів." }
-  ]
-},
-{
-  id: 20,
-  word: "nine",
-  ru: "девять",
-  uk: "дев’ять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The shop opens at nine o’clock.", ru: "Магазин открывается в девять часов.", uk: "Магазин відчиняється о дев’ятій годині." }
-  ]
-},
-{
-  id: 21,
-  word: "nineteen",
-  ru: "девятнадцать",
-  uk: "дев’ятнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "She is nineteen and studies at university.", ru: "Ей девятнадцать, и она учится в университете.", uk: "Їй дев’ятнадцять, і вона навчається в університеті." }
-  ]
-},
-{
-  id: 22,
-  word: "ninety",
-  ru: "девяносто",
-  uk: "дев’яносто",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "My grandmother will be ninety next year.", ru: "Моей бабушке в следующем году исполнится девяносто.", uk: "Моїй бабусі наступного року виповниться дев’яносто." }
-  ]
-},
-{
-  id: 23,
-  word: "zero",
-  ru: "ноль",
-  uk: "нуль",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The temperature dropped to zero degrees at night.", ru: "Ночью температура опустилась до нуля градусов.", uk: "Уночі температура опустилася до нуля градусів." }
-  ]
-},
-{
-  id: 24,
-  word: "six",
-  ru: "шесть",
-  uk: "шість",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We have six lessons on Monday.", ru: "В понедельник у нас шесть уроков.", uk: "У понеділок у нас шість уроків." }
-  ]
-},
-{
-  id: 25,
-  word: "sixteen",
-  ru: "шестнадцать",
-  uk: "шістнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "You are allowed to work here from the age of sixteen.", ru: "Здесь можно работать с шестнадцати лет.", uk: "Тут можна працювати з шістнадцяти років." }
-  ]
-},
-{
-  id: 26,
-  word: "sixty",
-  ru: "шестьдесят",
-  uk: "шістдесят",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "My father will be sixty this summer.", ru: "Этим летом моему отцу исполнится шестьдесят.", uk: "Цього літа моєму батькові виповниться шістдесят." }
-  ]
-},
-{
-  id: 27,
-  word: "seven",
-  ru: "семь",
-  uk: "сім",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We get up at seven every day.", ru: "Мы встаём в семь каждый день.", uk: "Ми встаємо о сьомій щодня." }
-  ]
-},
-{
-  id: 28,
-  word: "seventeen",
-  ru: "семнадцать",
-  uk: "сімнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "He will turn seventeen in May.", ru: "В мае ему исполнится семнадцать.", uk: "У травні йому виповниться сімнадцять." }
-  ]
-},
-{
-  id: 29,
-  word: "seventy",
-  ru: "семьдесят",
-  uk: "сімдесят",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "She is almost seventy but still very active.", ru: "Ей почти семьдесят, но она всё ещё очень активна.", uk: "Їй майже сімдесят, але вона досі дуже активна." }
-  ]
-},
-{
-  id: 30,
-  word: "thousand",
-  ru: "тысяча",
-  uk: "тисяча",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The village has about one thousand residents.", ru: "В деревне около тысячи жителей.", uk: "У селі близько тисячі жителів." }
-  ]
-},
-{
-  id: 31,
-  word: "four",
-  ru: "четыре",
-  uk: "чотири",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We have four exams this week.", ru: "У нас на этой неделе четыре экзамена.", uk: "У нас цього тижня чотири іспити." }
-  ]
-},
-{
-  id: 32,
-  word: "fourth",
-  ru: "четвёртый",
-  uk: "четвертий",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "Our classroom is on the fourth floor.", ru: "Наш класс находится на четвёртом этаже.", uk: "Наш клас знаходиться на четвертому поверсі." }
-  ]
-},
-{
-  id: 33,
-  word: "fourteen",
-  ru: "четырнадцать",
-  uk: "чотирнадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "Her daughter is fourteen years old.", ru: "Её дочери четырнадцать лет.", uk: "Її доньці чотирнадцять років." }
-  ]
-},
-{
-  id: 34,
-  word: "forty",
-  ru: "сорок",
-  uk: "сорок",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "He is going to be forty next year.", ru: "В следующем году ему исполнится сорок.", uk: "Наступного року йому виповниться сорок." }
-  ]
-},
-{
-  id: 35,
-  word: "ten",
-  ru: "десять",
-  uk: "десять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "We are staying here for ten days.", ru: "Мы остаёмся здесь на десять дней.", uk: "Ми залишаємося тут на десять днів." }
-  ]
-},
-{
-  id: 36,
-  word: "twenty",
-  ru: "двадцать",
-  uk: "двадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "She is twenty and looking for her first job.", ru: "Ей двадцать, и она ищет свою первую работу.", uk: "Їй двадцять, і вона шукає свою першу роботу." }
-  ]
-},
-{
-  id: 37,
-  word: "two",
-  ru: "два",
-  uk: "два",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "I would like two cups of coffee, please.", ru: "Я бы хотел две чашки кофе, пожалуйста.", uk: "Я хотів би дві чашки кави, будь ласка." }
-  ]
-},
-{
-  id: 38,
-  word: "two and a half",
-  ru: "два с половиной",
-  uk: "два з половиною",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "The trip takes two and a half hours.", ru: "Поездка занимает два с половиной часа.", uk: "Поїздка триває дві з половиною години." }
-  ]
-},
-{
-  id: 39,
-  word: "second",
-  ru: "второй",
-  uk: "другий",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "He lives on the second floor.", ru: "Он живёт на втором этаже.", uk: "Він живе на другому поверсі." }
-  ]
-},
-{
-  id: 40,
-  word: "twelve",
-  ru: "двенадцать",
-  uk: "дванадцять",
-  level: "",
-  topics: [],
-  examples: [
-    { L2: "It is twelve o’clock already.", ru: "Уже двенадцать часов.", uk: "Уже дванадцята година." }
-  ]
-}
+  {
+    "id": 1,
+    "word": "eight",
+    "ru": "восемь",
+    "uk": "вісім",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We have eight chairs in the kitchen.",
+        "ru": "У нас на кухне восемь стульев.",
+        "uk": "У нас на кухні вісім стільців."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "word": "eighteen",
+    "ru": "восемнадцать",
+    "uk": "вісімнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "She will turn eighteen next month.",
+        "ru": "В следующем месяце ей исполнится восемнадцать.",
+        "uk": "Наступного місяця їй виповниться вісімнадцять."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "word": "eighty",
+    "ru": "восемьдесят",
+    "uk": "вісімдесят",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "My grandfather is already eighty years old.",
+        "ru": "Моему дедушке уже восемьдесят лет.",
+        "uk": "Моєму дідусю вже вісімдесят років."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "word": "three",
+    "ru": "три",
+    "uk": "три",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We have three meetings today.",
+        "ru": "У нас сегодня три встречи.",
+        "uk": "У нас сьогодні три зустрічі."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "word": "thirteen",
+    "ru": "тринадцать",
+    "uk": "тринадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "Their son is thirteen and goes to secondary school.",
+        "ru": "Их сыну тринадцать, и он ходит в среднюю школу.",
+        "uk": "Їхньому синові тринадцять, і він ходить до середньої школи."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "word": "thirty",
+    "ru": "тридцать",
+    "uk": "тридцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The ticket costs thirty euros.",
+        "ru": "Билет стоит тридцать евро.",
+        "uk": "Квиток коштує тридцять євро."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "word": "third",
+    "ru": "третий",
+    "uk": "третій",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "He came in third place in the race.",
+        "ru": "Он пришёл третьим в гонке.",
+        "uk": "Він прийшов третім у забігу."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "word": "one and a half",
+    "ru": "полтора",
+    "uk": "півтора",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The meeting lasted one and a half hours.",
+        "ru": "Встреча длилась полтора часа.",
+        "uk": "Зустріч тривала півтори години."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "word": "one",
+    "ru": "один",
+    "uk": "один",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "I have only one question.",
+        "ru": "У меня только один вопрос.",
+        "uk": "У мене лише одне запитання."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "word": "eleven",
+    "ru": "одиннадцать",
+    "uk": "одинадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "There are eleven people in the room.",
+        "ru": "В комнате одиннадцать человек.",
+        "uk": "У кімнаті одинадцять людей."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "word": "first",
+    "ru": "первый",
+    "uk": "перший",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "This is my first day at work.",
+        "ru": "Это мой первый день на работе.",
+        "uk": "Це мій перший день на роботі."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "word": "five",
+    "ru": "пять",
+    "uk": "п’ять",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "She bought five fresh apples.",
+        "ru": "Она купила пять свежих яблок.",
+        "uk": "Вона купила п’ять свіжих яблук."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "word": "fifth",
+    "ru": "пятый",
+    "uk": "п’ятий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "Our office is on the fifth floor.",
+        "ru": "Наш офис на пятом этаже.",
+        "uk": "Наш офіс на п’ятому поверсі."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "word": "fifteen",
+    "ru": "пятнадцать",
+    "uk": "п’ятнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "He has been living here for fifteen years.",
+        "ru": "Он живёт здесь уже пятнадцать лет.",
+        "uk": "Він живе тут уже п’ятнадцять років."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "word": "fifty",
+    "ru": "пятьдесят",
+    "uk": "п’ятдесят",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The restaurant has space for fifty guests.",
+        "ru": "В ресторане есть места для пятидесяти гостей.",
+        "uk": "У ресторані є місця для п’ятдесяти гостей."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "word": "hundred",
+    "ru": "сто",
+    "uk": "сто",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "About a hundred people attended the event.",
+        "ru": "На мероприятие пришло около ста человек.",
+        "uk": "На захід прийшло близько ста людей."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "word": "last",
+    "ru": "последний",
+    "uk": "останній",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "This is my last offer.",
+        "ru": "Это моё последнее предложение.",
+        "uk": "Це моя остання пропозиція."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "word": "billion",
+    "ru": "миллиард",
+    "uk": "мільярд",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The company is worth several billion dollars.",
+        "ru": "Компания стоит несколько миллиардов долларов.",
+        "uk": "Компанія коштує кілька мільярдів доларів."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "word": "million",
+    "ru": "миллион",
+    "uk": "мільйон",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The city has over one million inhabitants.",
+        "ru": "В городе более миллиона жителей.",
+        "uk": "У місті понад один мільйон жителів."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "word": "nine",
+    "ru": "девять",
+    "uk": "дев’ять",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The shop opens at nine o’clock.",
+        "ru": "Магазин открывается в девять часов.",
+        "uk": "Магазин відчиняється о дев’ятій годині."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "word": "nineteen",
+    "ru": "девятнадцать",
+    "uk": "дев’ятнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "She is nineteen and studies at university.",
+        "ru": "Ей девятнадцать, и она учится в университете.",
+        "uk": "Їй дев’ятнадцять, і вона навчається в університеті."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "word": "ninety",
+    "ru": "девяносто",
+    "uk": "дев’яносто",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "My grandmother will be ninety next year.",
+        "ru": "Моей бабушке в следующем году исполнится девяносто.",
+        "uk": "Моїй бабусі наступного року виповниться дев’яносто."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "word": "zero",
+    "ru": "ноль",
+    "uk": "нуль",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The temperature dropped to zero degrees at night.",
+        "ru": "Ночью температура опустилась до нуля градусов.",
+        "uk": "Уночі температура опустилася до нуля градусів."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "word": "six",
+    "ru": "шесть",
+    "uk": "шість",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We have six lessons on Monday.",
+        "ru": "В понедельник у нас шесть уроков.",
+        "uk": "У понеділок у нас шість уроків."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "word": "sixteen",
+    "ru": "шестнадцать",
+    "uk": "шістнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "You are allowed to work here from the age of sixteen.",
+        "ru": "Здесь можно работать с шестнадцати лет.",
+        "uk": "Тут можна працювати з шістнадцяти років."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "word": "sixty",
+    "ru": "шестьдесят",
+    "uk": "шістдесят",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "My father will be sixty this summer.",
+        "ru": "Этим летом моему отцу исполнится шестьдесят.",
+        "uk": "Цього літа моєму батькові виповниться шістдесят."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "word": "seven",
+    "ru": "семь",
+    "uk": "сім",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We get up at seven every day.",
+        "ru": "Мы встаём в семь каждый день.",
+        "uk": "Ми встаємо о сьомій щодня."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "word": "seventeen",
+    "ru": "семнадцать",
+    "uk": "сімнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "He will turn seventeen in May.",
+        "ru": "В мае ему исполнится семнадцать.",
+        "uk": "У травні йому виповниться сімнадцять."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "word": "seventy",
+    "ru": "семьдесят",
+    "uk": "сімдесят",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "She is almost seventy but still very active.",
+        "ru": "Ей почти семьдесят, но она всё ещё очень активна.",
+        "uk": "Їй майже сімдесят, але вона досі дуже активна."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "word": "thousand",
+    "ru": "тысяча",
+    "uk": "тисяча",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The village has about one thousand residents.",
+        "ru": "В деревне около тысячи жителей.",
+        "uk": "У селі близько тисячі жителів."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "word": "four",
+    "ru": "четыре",
+    "uk": "чотири",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We have four exams this week.",
+        "ru": "У нас на этой неделе четыре экзамена.",
+        "uk": "У нас цього тижня чотири іспити."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "word": "fourth",
+    "ru": "четвёртый",
+    "uk": "четвертий",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "Our classroom is on the fourth floor.",
+        "ru": "Наш класс находится на четвёртом этаже.",
+        "uk": "Наш клас знаходиться на четвертому поверсі."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "word": "fourteen",
+    "ru": "четырнадцать",
+    "uk": "чотирнадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "Her daughter is fourteen years old.",
+        "ru": "Её дочери четырнадцать лет.",
+        "uk": "Її доньці чотирнадцять років."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "word": "forty",
+    "ru": "сорок",
+    "uk": "сорок",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "He is going to be forty next year.",
+        "ru": "В следующем году ему исполнится сорок.",
+        "uk": "Наступного року йому виповниться сорок."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "word": "ten",
+    "ru": "десять",
+    "uk": "десять",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "We are staying here for ten days.",
+        "ru": "Мы остаёмся здесь на десять дней.",
+        "uk": "Ми залишаємося тут на десять днів."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "word": "twenty",
+    "ru": "двадцать",
+    "uk": "двадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "She is twenty and looking for her first job.",
+        "ru": "Ей двадцать, и она ищет свою первую работу.",
+        "uk": "Їй двадцять, і вона шукає свою першу роботу."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "word": "two",
+    "ru": "два",
+    "uk": "два",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "I would like two cups of coffee, please.",
+        "ru": "Я бы хотел две чашки кофе, пожалуйста.",
+        "uk": "Я хотів би дві чашки кави, будь ласка."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "word": "two and a half",
+    "ru": "два с половиной",
+    "uk": "два з половиною",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "The trip takes two and a half hours.",
+        "ru": "Поездка занимает два с половиной часа.",
+        "uk": "Поїздка триває дві з половиною години."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "word": "second",
+    "ru": "второй",
+    "uk": "другий",
+    "level": "A1",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "He lives on the second floor.",
+        "ru": "Он живёт на втором этаже.",
+        "uk": "Він живе на другому поверсі."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "word": "twelve",
+    "ru": "двенадцать",
+    "uk": "дванадцять",
+    "level": "A2",
+    "topics": [
+      "abstract"
+    ],
+    "examples": [
+      {
+        "L2": "It is twelve o’clock already.",
+        "ru": "Уже двенадцать часов.",
+        "uk": "Уже дванадцята година."
+      }
+    ]
+  }
 ];
 /* ====================== End of file =======================
  * File: deck.de.js • Version: 1.1 • 2025-10-19
