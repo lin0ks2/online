@@ -6,7 +6,6 @@
  * Last modified: 2025-10-19
 */
 window.decks = window.decks || {};
-
 window.decks.de_nouns = [
 {
   id: 1,
@@ -7214,7 +7213,7 @@ window.decks.de_nouns = [
 {
   id: 345,
   word: "die Bestellung",
-  ru: "замовлення",
+  ru: "заказ",
   uk: "замовлення",
   level: "A2",
   topics: ["shopping", "business"],
