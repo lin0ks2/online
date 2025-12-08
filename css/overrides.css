@@ -361,8 +361,8 @@ html[data-runmode="pwa"] .home-hints .hints-body{
      и dark-тему (height:2.6em) одним махом */
   display: block;
   min-height: 0;
-  height: 5.2em;              /* подгони по вкусу: 3.8–4.6em */
-  max-height: 5.2em;
+  height: 5.8em;              /* подгони по вкусу: 3.8–4.6em */
+  max-height: 5.8em;
 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
