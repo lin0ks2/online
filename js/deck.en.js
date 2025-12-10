@@ -30273,7 +30273,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He was absent yesterday.",
+        "ru": "Вчера он был отсутствующим.",
+        "uk": "Учора він був відсутнім."
+      }
+    ]
   },
   {
     "id": 2,
@@ -30291,7 +30297,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very active today.",
+        "ru": "Сегодня он чувствует себя очень активный.",
+        "uk": "Сьогодні він почувається дуже активний."
+      }
+    ]
   },
   {
     "id": 3,
@@ -30308,7 +30320,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially old.",
+        "ru": "Сегодня он особенно старый.",
+        "uk": "Сьогодні він особливо старий."
+      }
+    ]
   },
   {
     "id": 4,
@@ -30325,7 +30343,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always old-fashioned.",
+        "ru": "Дома он всегда старомодный.",
+        "uk": "Вдома він завжди застарілий."
+      }
+    ]
   },
   {
     "id": 5,
@@ -30342,7 +30366,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very pleasant in this situation.",
+        "ru": "В этой ситуации он кажется очень приятный.",
+        "uk": "У цій ситуації він здається дуже приємний."
+      }
+    ]
   },
   {
     "id": 6,
@@ -30360,7 +30390,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite present.",
+        "ru": "Урок был довольно присутствующий.",
+        "uk": "Урок був досить присутній."
+      }
+    ]
   },
   {
     "id": 7,
@@ -30378,7 +30414,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is poor.",
+        "ru": "Наша финансовая ситуация бедный.",
+        "uk": "Наша фінансова ситуація бідний."
+      }
+    ]
   },
   {
     "id": 8,
@@ -30395,7 +30437,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually excellent with his friends.",
+        "ru": "Обычно он с друзьями отличный.",
+        "uk": "Зазвичай він з друзями відмінний."
+      }
+    ]
   },
   {
     "id": 9,
@@ -30412,7 +30460,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially well-known.",
+        "ru": "Сегодня он особенно известный.",
+        "uk": "Сьогодні він особливо відомий."
+      }
+    ]
   },
   {
     "id": 10,
@@ -30430,7 +30484,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very popular in relationships.",
+        "ru": "В отношениях он очень популярный.",
+        "uk": "У стосунках він дуже популярний."
+      }
+    ]
   },
   {
     "id": 11,
@@ -30448,7 +30508,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very comfortable.",
+        "ru": "Это место очень удобный.",
+        "uk": "Це місце дуже зручний."
+      }
+    ]
   },
   {
     "id": 12,
@@ -30466,7 +30532,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite ready.",
+        "ru": "Урок был довольно готовый.",
+        "uk": "Урок був досить готовий."
+      }
+    ]
   },
   {
     "id": 13,
@@ -30483,7 +30555,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very famous.",
+        "ru": "Он очень знаменитый.",
+        "uk": "Він дуже відомий."
+      }
+    ]
   },
   {
     "id": 14,
@@ -30500,7 +30578,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very busy.",
+        "ru": "Проект оказался очень занятый.",
+        "uk": "Проєкт виявився дуже зайнятий."
+      }
+    ]
   },
   {
     "id": 15,
@@ -30518,7 +30602,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very occupied.",
+        "ru": "Это место очень занятый.",
+        "uk": "Це місце дуже зайнятий."
+      }
+    ]
   },
   {
     "id": 16,
@@ -30536,7 +30626,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is cheap.",
+        "ru": "Наша финансовая ситуация дешёвый.",
+        "uk": "Наша фінансова ситуація дешевий."
+      }
+    ]
   },
   {
     "id": 17,
@@ -30554,7 +30650,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very bitter.",
+        "ru": "Это блюдо очень горький.",
+        "uk": "Ця страва дуже гіркий."
+      }
+    ]
   },
   {
     "id": 18,
@@ -30572,7 +30674,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "His message was very stupid.",
+        "ru": "Его сообщение было очень тупой.",
+        "uk": "Його повідомлення було дуже дурнуватий."
+      }
+    ]
   },
   {
     "id": 19,
@@ -30589,7 +30697,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very wide.",
+        "ru": "Он очень широкий.",
+        "uk": "Він дуже широкий."
+      }
+    ]
   },
   {
     "id": 20,
@@ -30607,7 +30721,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very angry in relationships.",
+        "ru": "В отношениях он очень злой.",
+        "uk": "У стосунках він дуже злий."
+      }
+    ]
   },
   {
     "id": 21,
@@ -30625,7 +30745,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very chaotic.",
+        "ru": "Это место очень хаотичный.",
+        "uk": "Це місце дуже хаотичний."
+      }
+    ]
   },
   {
     "id": 22,
@@ -30643,7 +30769,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite clear.",
+        "ru": "Урок был довольно чёткий.",
+        "uk": "Урок був досить чіткий."
+      }
+    ]
   },
   {
     "id": 23,
@@ -30660,7 +30792,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very thick in this situation.",
+        "ru": "В этой ситуации он кажется очень толстый.",
+        "uk": "У цій ситуації він здається дуже товстий."
+      }
+    ]
   },
   {
     "id": 24,
@@ -30677,7 +30815,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very urgent.",
+        "ru": "Проект оказался очень срочный.",
+        "uk": "Проєкт виявився дуже терміновий."
+      }
+    ]
   },
   {
     "id": 25,
@@ -30694,7 +30838,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very stupid.",
+        "ru": "Он очень глупый.",
+        "uk": "Він дуже дурний."
+      }
+    ]
   },
   {
     "id": 26,
@@ -30711,7 +30861,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually dark with his friends.",
+        "ru": "Обычно он с друзьями тёмный.",
+        "uk": "Зазвичай він з друзями темний."
+      }
+    ]
   },
   {
     "id": 27,
@@ -30728,7 +30884,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially average.",
+        "ru": "Сегодня он особенно средний.",
+        "uk": "Сьогодні він особливо середній."
+      }
+    ]
   },
   {
     "id": 28,
@@ -30746,7 +30908,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very thirsty.",
+        "ru": "Это блюдо очень жаждущий.",
+        "uk": "Ця страва дуже спраглий."
+      }
+    ]
   },
   {
     "id": 29,
@@ -30763,7 +30931,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very thin in this situation.",
+        "ru": "В этой ситуации он кажется очень тонкий.",
+        "uk": "У цій ситуації він здається дуже тонкий."
+      }
+    ]
   },
   {
     "id": 30,
@@ -30780,7 +30954,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very jealous in relationships.",
+        "ru": "В отношениях он очень ревнивый.",
+        "uk": "У стосунках він дуже ревнивий."
+      }
+    ]
   },
   {
     "id": 31,
@@ -30798,7 +30978,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very simple.",
+        "ru": "Этот курс очень простой.",
+        "uk": "Цей курс дуже простий."
+      }
+    ]
   },
   {
     "id": 32,
@@ -30816,7 +31002,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very sensitive today.",
+        "ru": "Сегодня он чувствует себя очень чувствительный.",
+        "uk": "Сьогодні він почувається дуже чутливий."
+      }
+    ]
   },
   {
     "id": 33,
@@ -30833,7 +31025,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially tight.",
+        "ru": "Сегодня он особенно узкий.",
+        "uk": "Сьогодні він особливо вузький."
+      }
+    ]
   },
   {
     "id": 34,
@@ -30851,7 +31049,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very serious today.",
+        "ru": "Сегодня он чувствует себя очень серьёзный.",
+        "uk": "Сьогодні він почувається дуже серйозний."
+      }
+    ]
   },
   {
     "id": 35,
@@ -30869,7 +31073,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very wrong.",
+        "ru": "Этот курс очень неправильный.",
+        "uk": "Цей курс дуже неправильний."
+      }
+    ]
   },
   {
     "id": 36,
@@ -30886,7 +31096,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is lazy.",
+        "ru": "Все знают, что он ленивый.",
+        "uk": "Усі знають, що він ледачий."
+      }
+    ]
   },
   {
     "id": 37,
@@ -30903,7 +31119,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very elegant.",
+        "ru": "Он очень изящный.",
+        "uk": "Він дуже витончений."
+      }
+    ]
   },
   {
     "id": 38,
@@ -30920,7 +31142,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very distant.",
+        "ru": "Это место очень далёкий.",
+        "uk": "Це місце дуже далекий."
+      }
+    ]
   },
   {
     "id": 39,
@@ -30938,7 +31166,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The weather is humid today.",
+        "ru": "Сегодня погода влажный.",
+        "uk": "Сьогодні погода вологий."
+      }
+    ]
   },
   {
     "id": 40,
@@ -30955,7 +31189,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very fit today.",
+        "ru": "Сегодня он чувствует себя очень в форме.",
+        "uk": "Сьогодні він почувається дуже у гарній формі."
+      }
+    ]
   },
   {
     "id": 41,
@@ -30972,7 +31212,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very flat in this situation.",
+        "ru": "В этой ситуации он кажется очень плоский.",
+        "uk": "У цій ситуації він здається дуже плаский."
+      }
+    ]
   },
   {
     "id": 42,
@@ -30990,7 +31236,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite hard-working.",
+        "ru": "Урок был довольно прилежный.",
+        "uk": "Урок був досить працьовитий."
+      }
+    ]
   },
   {
     "id": 43,
@@ -31008,7 +31260,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The job is quite free.",
+        "ru": "Эта работа довольно свободный.",
+        "uk": "Ця робота досить вільний."
+      }
+    ]
   },
   {
     "id": 44,
@@ -31026,7 +31284,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very voluntary.",
+        "ru": "Проект оказался очень добровольный.",
+        "uk": "Проєкт виявився дуже добровільний."
+      }
+    ]
   },
   {
     "id": 45,
@@ -31044,7 +31308,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very foreign.",
+        "ru": "Это место очень чужой.",
+        "uk": "Це місце дуже чужий."
+      }
+    ]
   },
   {
     "id": 46,
@@ -31061,7 +31331,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very friendly in relationships.",
+        "ru": "В отношениях он очень дружелюбный.",
+        "uk": "У стосунках він дуже дружній."
+      }
+    ]
   },
   {
     "id": 47,
@@ -31078,7 +31354,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very fresh.",
+        "ru": "Это блюдо очень свежий.",
+        "uk": "Ця страва дуже свіжий."
+      }
+    ]
   },
   {
     "id": 48,
@@ -31095,7 +31377,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is early.",
+        "ru": "Все знают, что он ранний.",
+        "uk": "Усі знають, що він ранній."
+      }
+    ]
   },
   {
     "id": 49,
@@ -31113,7 +31401,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very capable.",
+        "ru": "Этот курс очень способный.",
+        "uk": "Цей курс дуже здатний."
+      }
+    ]
   },
   {
     "id": 50,
@@ -31131,7 +31425,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very dangerous today.",
+        "ru": "Сегодня он чувствует себя очень опасный.",
+        "uk": "Сьогодні він почувається дуже небезпечний."
+      }
+    ]
   },
   {
     "id": 51,
@@ -31149,7 +31449,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very shared in relationships.",
+        "ru": "В отношениях он очень общий.",
+        "uk": "У стосунках він дуже спільний."
+      }
+    ]
   },
   {
     "id": 52,
@@ -31167,7 +31473,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite exact.",
+        "ru": "Урок был довольно точный.",
+        "uk": "Урок був досить точний."
+      }
+    ]
   },
   {
     "id": 53,
@@ -31184,7 +31496,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very closed.",
+        "ru": "Это место очень закрытый.",
+        "uk": "Це місце дуже закритий."
+      }
+    ]
   },
   {
     "id": 54,
@@ -31201,7 +31519,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very healthy today.",
+        "ru": "Сегодня он чувствует себя очень здоровый.",
+        "uk": "Сьогодні він почувається дуже здоровий."
+      }
+    ]
   },
   {
     "id": 55,
@@ -31218,7 +31542,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very usual.",
+        "ru": "Он очень обычный.",
+        "uk": "Він дуже звичайний."
+      }
+    ]
   },
   {
     "id": 56,
@@ -31235,7 +31565,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually smooth with his friends.",
+        "ru": "Обычно он с друзьями гладкий.",
+        "uk": "Зазвичай він з друзями гладкий."
+      }
+    ]
   },
   {
     "id": 57,
@@ -31252,7 +31588,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially same.",
+        "ru": "Сегодня он особенно одинаковый.",
+        "uk": "Сьогодні він особливо однаковий."
+      }
+    ]
   },
   {
     "id": 58,
@@ -31270,7 +31612,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very happy in relationships.",
+        "ru": "В отношениях он очень счастливый.",
+        "uk": "У стосунках він дуже щасливий."
+      }
+    ]
   },
   {
     "id": 59,
@@ -31288,7 +31636,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very rude in relationships.",
+        "ru": "В отношениях он очень грубый.",
+        "uk": "У стосунках він дуже грубий."
+      }
+    ]
   },
   {
     "id": 60,
@@ -31305,7 +31659,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is big.",
+        "ru": "Все знают, что он большой.",
+        "uk": "Усі знають, що він великий."
+      }
+    ]
   },
   {
     "id": 61,
@@ -31322,7 +31682,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very good.",
+        "ru": "Он очень хороший.",
+        "uk": "Він дуже добрий."
+      }
+    ]
   },
   {
     "id": 62,
@@ -31339,7 +31705,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very harmless today.",
+        "ru": "Сегодня он чувствует себя очень безвредный.",
+        "uk": "Сьогодні він почувається дуже нешкідливий."
+      }
+    ]
   },
   {
     "id": 63,
@@ -31357,7 +31729,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very hard.",
+        "ru": "Это блюдо очень твёрдый.",
+        "uk": "Ця страва дуже твердий."
+      }
+    ]
   },
   {
     "id": 64,
@@ -31375,7 +31753,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The weather is hot today.",
+        "ru": "Сегодня погода горячий.",
+        "uk": "Сьогодні погода гарячий."
+      }
+    ]
   },
   {
     "id": 65,
@@ -31393,7 +31777,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The city is surprisingly hectic.",
+        "ru": "Город удивительно суетливый.",
+        "uk": "Місто напрочуд метушливий."
+      }
+    ]
   },
   {
     "id": 66,
@@ -31411,7 +31801,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very bright.",
+        "ru": "Это место очень светлый.",
+        "uk": "Це місце дуже світлий."
+      }
+    ]
   },
   {
     "id": 67,
@@ -31428,7 +31824,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very high.",
+        "ru": "Он очень высокий.",
+        "uk": "Він дуже високий."
+      }
+    ]
   },
   {
     "id": 68,
@@ -31446,7 +31848,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very hungry.",
+        "ru": "Это блюдо очень голодный.",
+        "uk": "Ця страва дуже голодний."
+      }
+    ]
   },
   {
     "id": 69,
@@ -31463,7 +31871,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially ugly.",
+        "ru": "Сегодня он особенно уродливый.",
+        "uk": "Сьогодні він особливо потворний."
+      }
+    ]
   },
   {
     "id": 70,
@@ -31480,7 +31894,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always frequent.",
+        "ru": "Дома он всегда частый.",
+        "uk": "Вдома він завжди частий."
+      }
+    ]
   },
   {
     "id": 71,
@@ -31497,7 +31917,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very polite in relationships.",
+        "ru": "В отношениях он очень вежливый.",
+        "uk": "У стосунках він дуже ввічливий."
+      }
+    ]
   },
   {
     "id": 72,
@@ -31514,7 +31940,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is illegal.",
+        "ru": "Все знают, что он незаконный.",
+        "uk": "Усі знають, що він незаконний."
+      }
+    ]
   },
   {
     "id": 73,
@@ -31532,7 +31964,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very inner.",
+        "ru": "Он очень внутренний.",
+        "uk": "Він дуже внутрішній."
+      }
+    ]
   },
   {
     "id": 74,
@@ -31550,7 +31988,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very unofficial.",
+        "ru": "Проект оказался очень неофициальный.",
+        "uk": "Проєкт виявився дуже неофіційний."
+      }
+    ]
   },
   {
     "id": 75,
@@ -31567,7 +32011,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially intelligent.",
+        "ru": "Сегодня он особенно умный.",
+        "uk": "Сьогодні він особливо розумний."
+      }
+    ]
   },
   {
     "id": 76,
@@ -31585,7 +32035,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite interesting.",
+        "ru": "Урок был довольно интересный.",
+        "uk": "Урок був досить цікавий."
+      }
+    ]
   },
   {
     "id": 77,
@@ -31603,7 +32059,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very international.",
+        "ru": "Этот курс очень международный.",
+        "uk": "Цей курс дуже міжнародний."
+      }
+    ]
   },
   {
     "id": 78,
@@ -31621,7 +32083,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very young in relationships.",
+        "ru": "В отношениях он очень молодой.",
+        "uk": "У стосунках він дуже молодий."
+      }
+    ]
   },
   {
     "id": 79,
@@ -31639,7 +32107,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The weather is cold today.",
+        "ru": "Сегодня погода холодный.",
+        "uk": "Сьогодні погода холодний."
+      }
+    ]
   },
   {
     "id": 80,
@@ -31657,7 +32131,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "His message was very clear.",
+        "ru": "Его сообщение было очень ясный.",
+        "uk": "Його повідомлення було дуже ясний."
+      }
+    ]
   },
   {
     "id": 81,
@@ -31674,7 +32154,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially small.",
+        "ru": "Сегодня он особенно маленький.",
+        "uk": "Сьогодні він особливо малий."
+      }
+    ]
   },
   {
     "id": 82,
@@ -31691,7 +32177,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always clever.",
+        "ru": "Дома он всегда умный.",
+        "uk": "Вдома він завжди кмітливий."
+      }
+    ]
   },
   {
     "id": 83,
@@ -31708,7 +32200,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very strange in this situation.",
+        "ru": "В этой ситуации он кажется очень смешной.",
+        "uk": "У цій ситуації він здається дуже дивний."
+      }
+    ]
   },
   {
     "id": 84,
@@ -31726,7 +32224,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite complicated.",
+        "ru": "Урок был довольно сложный.",
+        "uk": "Урок був досить складний."
+      }
+    ]
   },
   {
     "id": 85,
@@ -31743,7 +32247,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very ill today.",
+        "ru": "Сегодня он чувствует себя очень больной.",
+        "uk": "Сьогодні він почувається дуже хворий."
+      }
+    ]
   },
   {
     "id": 86,
@@ -31761,7 +32271,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The lesson was quite creative.",
+        "ru": "Урок был довольно креативный.",
+        "uk": "Урок був досить креативний."
+      }
+    ]
   },
   {
     "id": 87,
@@ -31779,7 +32295,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The weather is cool today.",
+        "ru": "Сегодня погода прохладный.",
+        "uk": "Сьогодні погода прохолодний."
+      }
+    ]
   },
   {
     "id": 88,
@@ -31796,7 +32318,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always slow.",
+        "ru": "Дома он всегда медленный.",
+        "uk": "Вдома він завжди повільний."
+      }
+    ]
   },
   {
     "id": 89,
@@ -31814,7 +32342,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very boring.",
+        "ru": "Этот курс очень скучный.",
+        "uk": "Цей курс дуже нудний."
+      }
+    ]
   },
   {
     "id": 90,
@@ -31831,7 +32365,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is loud.",
+        "ru": "Все знают, что он громкий.",
+        "uk": "Усі знають, що він гучний."
+      }
+    ]
   },
   {
     "id": 91,
@@ -31849,7 +32389,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very empty.",
+        "ru": "Это место очень пустой.",
+        "uk": "Це місце дуже порожній."
+      }
+    ]
   },
   {
     "id": 92,
@@ -31866,7 +32412,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually legal with his friends.",
+        "ru": "Обычно он с друзьями законный.",
+        "uk": "Зазвичай він з друзями законний."
+      }
+    ]
   },
   {
     "id": 93,
@@ -31884,7 +32436,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very easy.",
+        "ru": "Этот курс очень лёгкий.",
+        "uk": "Цей курс дуже легкий."
+      }
+    ]
   },
   {
     "id": 94,
@@ -31902,7 +32460,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The city is surprisingly local.",
+        "ru": "Город удивительно местный.",
+        "uk": "Місто напрочуд місцевий."
+      }
+    ]
   },
   {
     "id": 95,
@@ -31920,7 +32484,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very funny in relationships.",
+        "ru": "В отношениях он очень весёлый.",
+        "uk": "У стосунках він дуже смішний."
+      }
+    ]
   },
   {
     "id": 96,
@@ -31937,7 +32507,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is maximum.",
+        "ru": "Все знают, что он максимальный.",
+        "uk": "Усі знають, що він максимальний."
+      }
+    ]
   },
   {
     "id": 97,
@@ -31954,7 +32530,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very minimum.",
+        "ru": "Он очень минимальный.",
+        "uk": "Він дуже мінімальний."
+      }
+    ]
   },
   {
     "id": 98,
@@ -31972,7 +32554,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The city is surprisingly modern.",
+        "ru": "Город удивительно современный.",
+        "uk": "Місто напрочуд сучасний."
+      }
+    ]
   },
   {
     "id": 99,
@@ -31989,7 +32577,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially brave.",
+        "ru": "Сегодня он особенно смелый.",
+        "uk": "Сьогодні він особливо сміливий."
+      }
+    ]
   },
   {
     "id": 100,
@@ -32006,7 +32600,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always possible.",
+        "ru": "Дома он всегда возможный.",
+        "uk": "Вдома він завжди можливий."
+      }
+    ]
   },
   {
     "id": 101,
@@ -32023,7 +32623,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very tired today.",
+        "ru": "Сегодня он чувствует себя очень уставший.",
+        "uk": "Сьогодні він почувається дуже втомлений."
+      }
+    ]
   },
   {
     "id": 102,
@@ -32041,7 +32647,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very near in relationships.",
+        "ru": "В отношениях он очень близкий.",
+        "uk": "У стосунках він дуже близький."
+      }
+    ]
   },
   {
     "id": 103,
@@ -32058,7 +32670,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very national.",
+        "ru": "Он очень национальный.",
+        "uk": "Він дуже національний."
+      }
+    ]
   },
   {
     "id": 104,
@@ -32076,7 +32694,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very nervous today.",
+        "ru": "Сегодня он чувствует себя очень нервный.",
+        "uk": "Сьогодні він почувається дуже нервовий."
+      }
+    ]
   },
   {
     "id": 105,
@@ -32093,7 +32717,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very nice in relationships.",
+        "ru": "В отношениях он очень милый.",
+        "uk": "У стосунках він дуже приємний."
+      }
+    ]
   },
   {
     "id": 106,
@@ -32110,7 +32740,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always new.",
+        "ru": "Дома он всегда новый.",
+        "uk": "Вдома він завжди новий."
+      }
+    ]
   },
   {
     "id": 107,
@@ -32127,7 +32763,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very curious in this situation.",
+        "ru": "В этой ситуации он кажется очень любопытный.",
+        "uk": "У цій ситуації він здається дуже допитливий."
+      }
+    ]
   },
   {
     "id": 108,
@@ -32145,7 +32787,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is low.",
+        "ru": "Наша финансовая ситуация низкий.",
+        "uk": "Наша фінансова ситуація низький."
+      }
+    ]
   },
   {
     "id": 109,
@@ -32162,7 +32810,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very normal.",
+        "ru": "Он очень нормальный.",
+        "uk": "Він дуже нормальний."
+      }
+    ]
   },
   {
     "id": 110,
@@ -32179,7 +32833,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually necessary with his friends.",
+        "ru": "Обычно он с друзьями необходимый.",
+        "uk": "Зазвичай він з друзями необхідний."
+      }
+    ]
   },
   {
     "id": 111,
@@ -32196,7 +32856,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially useless.",
+        "ru": "Сегодня он особенно бесполезный.",
+        "uk": "Сьогодні він особливо марний."
+      }
+    ]
   },
   {
     "id": 112,
@@ -32213,7 +32879,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always useful.",
+        "ru": "Дома он всегда полезный.",
+        "uk": "Вдома він завжди корисний."
+      }
+    ]
   },
   {
     "id": 113,
@@ -32231,7 +32903,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very open.",
+        "ru": "Это место очень открытый.",
+        "uk": "Це місце дуже відкритий."
+      }
+    ]
   },
   {
     "id": 114,
@@ -32249,7 +32927,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very official.",
+        "ru": "Проект оказался очень официальный.",
+        "uk": "Проєкт виявився дуже офіційний."
+      }
+    ]
   },
   {
     "id": 115,
@@ -32267,7 +32951,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very tidy.",
+        "ru": "Это место очень аккуратный.",
+        "uk": "Це місце дуже охайний."
+      }
+    ]
   },
   {
     "id": 116,
@@ -32284,7 +32974,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually passive with his friends.",
+        "ru": "Обычно он с друзьями пассивный.",
+        "uk": "Зазвичай він з друзями пасивний."
+      }
+    ]
   },
   {
     "id": 117,
@@ -32301,7 +32997,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially personal.",
+        "ru": "Сегодня он особенно личный.",
+        "uk": "Сьогодні він особливо особистий."
+      }
+    ]
   },
   {
     "id": 118,
@@ -32318,7 +33020,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always practical.",
+        "ru": "Дома он всегда практичный.",
+        "uk": "Вдома він завжди практичний."
+      }
+    ]
   },
   {
     "id": 119,
@@ -32335,7 +33043,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is affordable.",
+        "ru": "Наша финансовая ситуация доступный по цене.",
+        "uk": "Наша фінансова ситуація недорогий."
+      }
+    ]
   },
   {
     "id": 120,
@@ -32352,7 +33066,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is private.",
+        "ru": "Все знают, что он частный.",
+        "uk": "Усі знають, що він приватний."
+      }
+    ]
   },
   {
     "id": 121,
@@ -32370,7 +33090,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very precise.",
+        "ru": "Этот курс очень прецизионный.",
+        "uk": "Цей курс дуже прецизійний."
+      }
+    ]
   },
   {
     "id": 122,
@@ -32388,7 +33114,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very punctual.",
+        "ru": "Проект оказался очень пунктуальный.",
+        "uk": "Проєкт виявився дуже пунктуальний."
+      }
+    ]
   },
   {
     "id": 123,
@@ -32405,7 +33137,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially rough.",
+        "ru": "Сегодня он особенно шероховатый.",
+        "uk": "Сьогодні він особливо шорсткий."
+      }
+    ]
   },
   {
     "id": 124,
@@ -32422,7 +33160,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is rich.",
+        "ru": "Наша финансовая ситуация богатый.",
+        "uk": "Наша фінансова ситуація багатий."
+      }
+    ]
   },
   {
     "id": 125,
@@ -32439,7 +33183,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very correct.",
+        "ru": "Этот курс очень правильный.",
+        "uk": "Цей курс дуже правильний."
+      }
+    ]
   },
   {
     "id": 126,
@@ -32456,7 +33206,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is robust.",
+        "ru": "Все знают, что он прочный.",
+        "uk": "Усі знають, що він міцний."
+      }
+    ]
   },
   {
     "id": 127,
@@ -32474,7 +33230,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very quiet.",
+        "ru": "Это место очень спокойный.",
+        "uk": "Це місце дуже спокійний."
+      }
+    ]
   },
   {
     "id": 128,
@@ -32491,7 +33253,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very salty.",
+        "ru": "Это блюдо очень солёный.",
+        "uk": "Ця страва дуже солоний."
+      }
+    ]
   },
   {
     "id": 129,
@@ -32508,7 +33276,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very full.",
+        "ru": "Это блюдо очень сытый.",
+        "uk": "Ця страва дуже ситий."
+      }
+    ]
   },
   {
     "id": 130,
@@ -32526,7 +33300,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very clean.",
+        "ru": "Это место очень чистый.",
+        "uk": "Це місце дуже чистий."
+      }
+    ]
   },
   {
     "id": 131,
@@ -32544,7 +33324,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very spicy.",
+        "ru": "Это блюдо очень острый.",
+        "uk": "Ця страва дуже гострий."
+      }
+    ]
   },
   {
     "id": 132,
@@ -32561,7 +33347,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is bad.",
+        "ru": "Все знают, что он плохой.",
+        "uk": "Усі знають, що він поганий."
+      }
+    ]
   },
   {
     "id": 133,
@@ -32579,7 +33371,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This place is very dirty.",
+        "ru": "Это место очень грязный.",
+        "uk": "Це місце дуже брудний."
+      }
+    ]
   },
   {
     "id": 134,
@@ -32596,7 +33394,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually fast with his friends.",
+        "ru": "Обычно он с друзьями быстрый.",
+        "uk": "Зазвичай він з друзями швидкий."
+      }
+    ]
   },
   {
     "id": 135,
@@ -32613,7 +33417,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially guilty.",
+        "ru": "Сегодня он особенно виновный.",
+        "uk": "Сьогодні він особливо винний."
+      }
+    ]
   },
   {
     "id": 136,
@@ -32630,7 +33440,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always innocent.",
+        "ru": "Дома он всегда невиновный.",
+        "uk": "Вдома він завжди невинний."
+      }
+    ]
   },
   {
     "id": 137,
@@ -32648,7 +33464,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very weak today.",
+        "ru": "Сегодня он чувствует себя очень слабый.",
+        "uk": "Сьогодні він почувається дуже слабкий."
+      }
+    ]
   },
   {
     "id": 138,
@@ -32665,7 +33487,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is heavy.",
+        "ru": "Все знают, что он тяжёлый.",
+        "uk": "Усі знають, що він важкий."
+      }
+    ]
   },
   {
     "id": 139,
@@ -32683,7 +33511,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This course is very difficult.",
+        "ru": "Этот курс очень сложный.",
+        "uk": "Цей курс дуже складний."
+      }
+    ]
   },
   {
     "id": 140,
@@ -32700,7 +33534,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually beautiful with his friends.",
+        "ru": "Обычно он с друзьями красивый.",
+        "uk": "Зазвичай він з друзями гарний."
+      }
+    ]
   },
   {
     "id": 141,
@@ -32717,7 +33557,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially shy.",
+        "ru": "Сегодня он особенно застенчивый.",
+        "uk": "Сьогодні він особливо сором’язливий."
+      }
+    ]
   },
   {
     "id": 142,
@@ -32734,7 +33580,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always rare.",
+        "ru": "Дома он всегда редкий.",
+        "uk": "Вдома він завжди рідкісний."
+      }
+    ]
   },
   {
     "id": 143,
@@ -32751,7 +33603,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very strange in this situation.",
+        "ru": "В этой ситуации он кажется очень странный.",
+        "uk": "У цій ситуації він здається дуже дивний."
+      }
+    ]
   },
   {
     "id": 144,
@@ -32768,7 +33626,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is separate.",
+        "ru": "Все знают, что он отдельный.",
+        "uk": "Усі знають, що він окремий."
+      }
+    ]
   },
   {
     "id": 145,
@@ -32785,7 +33649,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very safe.",
+        "ru": "Он очень надёжный.",
+        "uk": "Він дуже безпечний."
+      }
+    ]
   },
   {
     "id": 146,
@@ -32802,7 +33672,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The game is really exciting.",
+        "ru": "Эта игра действительно увлекательный.",
+        "uk": "Ця гра справді захоплюючий."
+      }
+    ]
   },
   {
     "id": 147,
@@ -32819,7 +33695,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially late.",
+        "ru": "Сегодня он особенно поздний.",
+        "uk": "Сьогодні він особливо пізній."
+      }
+    ]
   },
   {
     "id": 148,
@@ -32837,7 +33719,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He feels very strong today.",
+        "ru": "Сегодня он чувствует себя очень сильный.",
+        "uk": "Сьогодні він почувається дуже сильний."
+      }
+    ]
   },
   {
     "id": 149,
@@ -32854,7 +33742,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very proud in relationships.",
+        "ru": "В отношениях он очень гордый.",
+        "uk": "У стосунках він дуже гордий."
+      }
+    ]
   },
   {
     "id": 150,
@@ -32871,7 +33765,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "This dish is very sweet.",
+        "ru": "Это блюдо очень сладкий.",
+        "uk": "Ця страва дуже солодкий."
+      }
+    ]
   },
   {
     "id": 151,
@@ -32888,7 +33788,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very brave.",
+        "ru": "Он очень храбрый.",
+        "uk": "Він дуже хоробрий."
+      }
+    ]
   },
   {
     "id": 152,
@@ -32905,7 +33811,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Our financial situation is expensive.",
+        "ru": "Наша финансовая ситуация дорогой.",
+        "uk": "Наша фінансова ситуація дорогий."
+      }
+    ]
   },
   {
     "id": 153,
@@ -32922,7 +33834,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially deep.",
+        "ru": "Сегодня он особенно глубокий.",
+        "uk": "Сьогодні він особливо глибокий."
+      }
+    ]
   },
   {
     "id": 154,
@@ -32939,7 +33857,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is really sad about it.",
+        "ru": "Он действительно грустный по этому поводу.",
+        "uk": "Він справді сумний через це."
+      }
+    ]
   },
   {
     "id": 155,
@@ -32956,7 +33880,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very typical in this situation.",
+        "ru": "В этой ситуации он кажется очень типичный.",
+        "uk": "У цій ситуації він здається дуже типовий."
+      }
+    ]
   },
   {
     "id": 156,
@@ -32973,7 +33903,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is unknown.",
+        "ru": "Все знают, что он неизвестный.",
+        "uk": "Усі знають, що він невідомий."
+      }
+    ]
   },
   {
     "id": 157,
@@ -32990,7 +33926,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very unfriendly in relationships.",
+        "ru": "В отношениях он очень недружелюбный.",
+        "uk": "У стосунках він дуже недружній."
+      }
+    ]
   },
   {
     "id": 158,
@@ -33007,7 +33949,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually incapable with his friends.",
+        "ru": "Обычно он с друзьями неспособный.",
+        "uk": "Зазвичай він з друзями нездатний."
+      }
+    ]
   },
   {
     "id": 159,
@@ -33024,7 +33972,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially approximate.",
+        "ru": "Сегодня он особенно примерный.",
+        "uk": "Сьогодні він особливо приблизний."
+      }
+    ]
   },
   {
     "id": 160,
@@ -33041,7 +33995,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always unusual.",
+        "ru": "Дома он всегда необычный.",
+        "uk": "Вдома він завжди незвичайний."
+      }
+    ]
   },
   {
     "id": 161,
@@ -33058,7 +34018,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is really unhappy about it.",
+        "ru": "Он действительно несчастный по этому поводу.",
+        "uk": "Він справді нещасний через це."
+      }
+    ]
   },
   {
     "id": 162,
@@ -33075,7 +34041,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very rude in relationships.",
+        "ru": "В отношениях он очень невежливый.",
+        "uk": "У стосунках він дуже неввічливий."
+      }
+    ]
   },
   {
     "id": 163,
@@ -33092,7 +34064,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very impossible.",
+        "ru": "Он очень невозможный.",
+        "uk": "Він дуже неможливий."
+      }
+    ]
   },
   {
     "id": 164,
@@ -33109,7 +34087,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually unnecessary with his friends.",
+        "ru": "Обычно он с друзьями ненужный.",
+        "uk": "Зазвичай він з друзями непотрібний."
+      }
+    ]
   },
   {
     "id": 165,
@@ -33127,7 +34111,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The job is quite unpunctual.",
+        "ru": "Эта работа довольно непунктуальный.",
+        "uk": "Ця робота досить непунктуальний."
+      }
+    ]
   },
   {
     "id": 166,
@@ -33144,7 +34134,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always innocent.",
+        "ru": "Дома он всегда невиновный.",
+        "uk": "Вдома він завжди невинний."
+      }
+    ]
   },
   {
     "id": 167,
@@ -33161,7 +34157,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very unsafe in this situation.",
+        "ru": "В этой ситуации он кажется очень ненадёжный.",
+        "uk": "У цій ситуації він здається дуже небезпечний."
+      }
+    ]
   },
   {
     "id": 168,
@@ -33178,7 +34180,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is different.",
+        "ru": "Все знают, что он различный.",
+        "uk": "Усі знають, що він відмінний."
+      }
+    ]
   },
   {
     "id": 169,
@@ -33195,7 +34203,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very incomplete.",
+        "ru": "Он очень неполный.",
+        "uk": "Він дуже неповний."
+      }
+    ]
   },
   {
     "id": 170,
@@ -33212,7 +34226,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually unimportant with his friends.",
+        "ru": "Обычно он с друзьями неважный.",
+        "uk": "Зазвичай він з друзями неважливий."
+      }
+    ]
   },
   {
     "id": 171,
@@ -33229,7 +34249,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially unreal.",
+        "ru": "Сегодня он особенно недействительный.",
+        "uk": "Сьогодні він особливо несправжній."
+      }
+    ]
   },
   {
     "id": 172,
@@ -33247,7 +34273,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The project is very available.",
+        "ru": "Проект оказался очень доступный.",
+        "uk": "Проєкт виявився дуже доступний."
+      }
+    ]
   },
   {
     "id": 173,
@@ -33264,7 +34296,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very obligated in this situation.",
+        "ru": "В этой ситуации он кажется очень обязанный.",
+        "uk": "У цій ситуації він здається дуже зобов’язаний."
+      }
+    ]
   },
   {
     "id": 174,
@@ -33281,7 +34319,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is different.",
+        "ru": "Все знают, что он разный.",
+        "uk": "Усі знають, що він різний."
+      }
+    ]
   },
   {
     "id": 175,
@@ -33298,7 +34342,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very full.",
+        "ru": "Он очень полный.",
+        "uk": "Він дуже повний."
+      }
+    ]
   },
   {
     "id": 176,
@@ -33315,7 +34365,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually complete with his friends.",
+        "ru": "Обычно он с друзьями полный.",
+        "uk": "Зазвичай він з друзями повний."
+      }
+    ]
   },
   {
     "id": 177,
@@ -33332,7 +34388,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Today he is especially true.",
+        "ru": "Сегодня он особенно правдивый.",
+        "uk": "Сьогодні він особливо правдивий."
+      }
+    ]
   },
   {
     "id": 178,
@@ -33350,7 +34412,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The weather is warm today.",
+        "ru": "Сегодня погода тёплый.",
+        "uk": "Сьогодні погода теплий."
+      }
+    ]
   },
   {
     "id": 179,
@@ -33367,7 +34435,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very soft in this situation.",
+        "ru": "В этой ситуации он кажется очень мягкий.",
+        "uk": "У цій ситуації він здається дуже м’який."
+      }
+    ]
   },
   {
     "id": 180,
@@ -33384,7 +34458,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is important.",
+        "ru": "Все знают, что он важный.",
+        "uk": "Усі знають, що він важливий."
+      }
+    ]
   },
   {
     "id": 181,
@@ -33401,7 +34481,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is very real.",
+        "ru": "Он очень действительный.",
+        "uk": "Він дуже справжній."
+      }
+    ]
   },
   {
     "id": 182,
@@ -33418,7 +34504,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is really angry about it.",
+        "ru": "Он действительно разъярённый по этому поводу.",
+        "uk": "Він справді розлючений через це."
+      }
+    ]
   },
   {
     "id": 183,
@@ -33435,7 +34527,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is really satisfied about it.",
+        "ru": "Он действительно довольный по этому поводу.",
+        "uk": "Він справді задоволений через це."
+      }
+    ]
   },
   {
     "id": 184,
@@ -33452,7 +34550,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always additional.",
+        "ru": "Дома он всегда дополнительный.",
+        "uk": "Вдома він завжди додатковий."
+      }
+    ]
   },
   {
     "id": 185,
@@ -33469,7 +34573,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He seems very reliable in this situation.",
+        "ru": "В этой ситуации он кажется очень надёжный.",
+        "uk": "У цій ситуації він здається дуже надійний."
+      }
+    ]
   },
   {
     "id": 186,
@@ -33486,7 +34596,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "Everyone knows he is similar.",
+        "ru": "Все знают, что он похожий.",
+        "uk": "Усі знають, що він подібний."
+      }
+    ]
   },
   {
     "id": 187,
@@ -33503,7 +34619,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is really fearful about it.",
+        "ru": "Он действительно боязливый по этому поводу.",
+        "uk": "Він справді боязкий через це."
+      }
+    ]
   },
   {
     "id": 188,
@@ -33520,7 +34642,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "He is usually external with his friends.",
+        "ru": "Обычно он с друзьями внешний.",
+        "uk": "Зазвичай він з друзями зовнішній."
+      }
+    ]
   },
   {
     "id": 189,
@@ -33538,7 +34666,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "The city is surprisingly public.",
+        "ru": "Город удивительно публичный.",
+        "uk": "Місто напрочуд публічний."
+      }
+    ]
   },
   {
     "id": 190,
@@ -33555,7 +34689,13 @@ window.decks.en_adjectives = [
     "enAntonyms": [],
     "ruAntonyms": [],
     "ukAntonyms": [],
-    "examples": []
+    "examples": [
+      {
+        "L2": "At home he is always usual.",
+        "ru": "Дома он всегда привычный.",
+        "uk": "Вдома він завжди звичний."
+      }
+    ]
   }
 ];
 window.decks.en_verbs = [
@@ -37808,8 +38948,7 @@ window.decks.en_verbs = [
       uk: "Вона надсилає йому повідомлення."
     }
   ]
-},
-{
+},{
   id: 151,
   word: "to answer",
   ru: "отвечать",
@@ -49869,8 +51008,8 @@ window.decks.en_verbs = [
   word: "to log in",
   ru: "логиниться",
   uk: "входити",
-  level: "B1",
-  topics: ["tech", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -49891,8 +51030,8 @@ window.decks.en_verbs = [
   word: "to restrict",
   ru: "ограничивать",
   uk: "обмежувати",
-  level: "B2",
-  topics: ["law", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -49913,8 +51052,8 @@ window.decks.en_verbs = [
   word: "to assess",
   ru: "оценивать",
   uk: "оцінювати",
-  level: "B2",
-  topics: ["education", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -49935,8 +51074,8 @@ window.decks.en_verbs = [
   word: "to adjust",
   ru: "настраивать",
   uk: "налаштовувати",
-  level: "B2",
-  topics: ["work", "tech"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -49957,8 +51096,8 @@ window.decks.en_verbs = [
   word: "to enter",
   ru: "вступать",
   uk: "вступати",
-  level: "B1",
-  topics: ["movement", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -49979,8 +51118,8 @@ window.decks.en_verbs = [
   word: "to immigrate",
   ru: "иммигрировать",
   uk: "іммігрувати",
-  level: "B2",
-  topics: ["migration", "politics"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50001,8 +51140,8 @@ window.decks.en_verbs = [
   word: "to affect",
   ru: "воздействовать",
   uk: "впливати",
-  level: "B2",
-  topics: ["abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50023,8 +51162,8 @@ window.decks.en_verbs = [
   word: "to move in",
   ru: "въезжать",
   uk: "в'їжджати",
-  level: "B1",
-  topics: ["movement", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50045,8 +51184,8 @@ window.decks.en_verbs = [
   word: "to feel",
   ru: "ощущать",
   uk: "відчувати",
-  level: "B1",
-  topics: ["emotion", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50067,8 +51206,8 @@ window.decks.en_verbs = [
   word: "to be cancelled",
   ru: "выпадать / отменяться",
   uk: "скасовуватися",
-  level: "B1",
-  topics: ["time", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50089,8 +51228,8 @@ window.decks.en_verbs = [
   word: "to accommodate",
   ru: "идти навстречу",
   uk: "йти назустріч",
-  level: "B2",
-  topics: ["work", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50111,8 +51250,8 @@ window.decks.en_verbs = [
   word: "to relieve",
   ru: "разгружать",
   uk: "розвантажувати",
-  level: "B2",
-  topics: ["health", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50133,8 +51272,8 @@ window.decks.en_verbs = [
   word: "to withdraw",
   ru: "извлекать",
   uk: "вилучати",
-  level: "B2",
-  topics: ["finance", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50155,8 +51294,8 @@ window.decks.en_verbs = [
   word: "to decide",
   ru: "решать",
   uk: "вирішувати",
-  level: "B1",
-  topics: ["abstract", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50177,8 +51316,8 @@ window.decks.en_verbs = [
   word: "to resolve",
   ru: "решаться",
   uk: "вирішуватися",
-  level: "B2",
-  topics: ["abstract", "conflict"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50199,8 +51338,8 @@ window.decks.en_verbs = [
   word: "to disappoint",
   ru: "разочаровывать",
   uk: "розчаровувати",
-  level: "B1",
-  topics: ["emotion", "social"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50221,8 +51360,8 @@ window.decks.en_verbs = [
   word: "to deprive",
   ru: "лишать",
   uk: "позбавляти",
-  level: "B2",
-  topics: ["law", "social"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50243,8 +51382,8 @@ window.decks.en_verbs = [
   word: "to develop",
   ru: "разрабатывать",
   uk: "опрацьовувати",
-  level: "B2",
-  topics: ["work", "learning"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50265,8 +51404,8 @@ window.decks.en_verbs = [
   word: "to learn",
   ru: "узнавать",
   uk: "дізнаватися",
-  level: "B1",
-  topics: ["learning"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50287,8 +51426,8 @@ window.decks.en_verbs = [
   word: "to record",
   ru: "фиксировать",
   uk: "фіксувати",
-  level: "B1",
-  topics: ["work", "media"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50309,8 +51448,8 @@ window.decks.en_verbs = [
   word: "to invent",
   ru: "изобретать",
   uk: "винаходити",
-  level: "B2",
-  topics: ["science", "art"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50331,8 +51470,8 @@ window.decks.en_verbs = [
   word: "to fulfill",
   ru: "выполнять",
   uk: "виконувати",
-  level: "B2",
-  topics: ["work", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50353,8 +51492,8 @@ window.decks.en_verbs = [
   word: "to result",
   ru: "получаться",
   uk: "виявлятися",
-  level: "B2",
-  topics: ["abstract", "science"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50375,8 +51514,8 @@ window.decks.en_verbs = [
   word: "to receive",
   ru: "получать",
   uk: "отримувати",
-  level: "B1",
-  topics: ["daily life", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50397,8 +51536,8 @@ window.decks.en_verbs = [
   word: "to accomplish",
   ru: "заканчивать",
   uk: "завершувати",
-  level: "B2",
-  topics: ["work", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50419,8 +51558,8 @@ window.decks.en_verbs = [
   word: "to ease",
   ru: "облегчать",
   uk: "полегшувати",
-  level: "B2",
-  topics: ["health", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50441,8 +51580,8 @@ window.decks.en_verbs = [
   word: "to experience",
   ru: "переживать",
   uk: "переживати",
-  level: "B2",
-  topics: ["emotion", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50463,8 +51602,8 @@ window.decks.en_verbs = [
   word: "to replace",
   ru: "заменять",
   uk: "замінювати",
-  level: "B1",
-  topics: ["work", "daily life"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50485,8 +51624,8 @@ window.decks.en_verbs = [
   word: "to create",
   ru: "создавать",
   uk: "створювати",
-  level: "B1",
-  topics: ["art", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50507,8 +51646,8 @@ window.decks.en_verbs = [
   word: "to mention",
   ru: "упоминать",
   uk: "згадувати",
-  level: "B1",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50529,8 +51668,8 @@ window.decks.en_verbs = [
   word: "to finance",
   ru: "финансировать",
   uk: "фінансувати",
-  level: "B2",
-  topics: ["finance", "business"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50551,8 +51690,8 @@ window.decks.en_verbs = [
   word: "to shape",
   ru: "формировать",
   uk: "формувати",
-  level: "B2",
-  topics: ["abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50573,8 +51712,8 @@ window.decks.en_verbs = [
   word: "to continue",
   ru: "продолжать",
   uk: "продовжувати",
-  level: "B1",
-  topics: ["time", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50595,8 +51734,8 @@ window.decks.en_verbs = [
   word: "to wonder",
   ru: "спрашивать себя",
   uk: "запитувати себе",
-  level: "B1",
-  topics: ["emotion", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50617,8 +51756,8 @@ window.decks.en_verbs = [
   word: "to release",
   ru: "высвобождать",
   uk: "вивільняти",
-  level: "B2",
-  topics: ["media", "business"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50639,8 +51778,8 @@ window.decks.en_verbs = [
   word: "to ensure",
   ru: "гарантировать",
   uk: "гарантувати",
-  level: "B2",
-  topics: ["work", "abstract"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50661,8 +51800,8 @@ window.decks.en_verbs = [
   word: "to get used to",
   ru: "привыкать",
   uk: "звикати",
-  level: "B1",
-  topics: ["daily life", "emotion"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50683,8 +51822,8 @@ window.decks.en_verbs = [
   word: "to succeed",
   ru: "удаваться",
   uk: "вдаватися",
-  level: "B2",
-  topics: ["work", "education"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50705,8 +51844,8 @@ window.decks.en_verbs = [
   word: "to find out",
   ru: "выяснить",
   uk: "з’ясувати",
-  level: "B1",
-  topics: ["daily life", "learning"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50727,8 +51866,8 @@ window.decks.en_verbs = [
   word: "to point out",
   ru: "указывать",
   uk: "вказувати",
-  level: "B2",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50749,8 +51888,8 @@ window.decks.en_verbs = [
   word: "to emphasize",
   ru: "подчёркивать",
   uk: "підкреслювати",
-  level: "B2",
-  topics: ["communication", "education"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50771,8 +51910,8 @@ window.decks.en_verbs = [
   word: "to prevent",
   ru: "мешать",
   uk: "заважати",
-  level: "B2",
-  topics: ["health", "law"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50793,8 +51932,8 @@ window.decks.en_verbs = [
   word: "to import",
   ru: "импортировать",
   uk: "імпортувати",
-  level: "B2",
-  topics: ["economy", "business"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50815,8 +51954,8 @@ window.decks.en_verbs = [
   word: "to initiate",
   ru: "инициировать",
   uk: "ініціювати",
-  level: "B2",
-  topics: ["work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50837,8 +51976,8 @@ window.decks.en_verbs = [
   word: "to concentrate",
   ru: "концентрироваться",
   uk: "концентруватися",
-  level: "B1",
-  topics: ["learning", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50859,8 +51998,8 @@ window.decks.en_verbs = [
   word: "to correct",
   ru: "корректировать",
   uk: "виправляти",
-  level: "B1",
-  topics: ["education", "work"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50881,8 +52020,8 @@ window.decks.en_verbs = [
   word: "to criticize",
   ru: "критиковать",
   uk: "критикувати",
-  level: "B2",
-  topics: ["communication", "conflict"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50903,8 +52042,8 @@ window.decks.en_verbs = [
   word: "to take care of",
   ru: "заботиться",
   uk: "піклуватися",
-  level: "B1",
-  topics: ["daily life", "family"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50925,8 +52064,8 @@ window.decks.en_verbs = [
   word: "to perform",
   ru: "совершать",
   uk: "виконувати",
-  level: "B2",
-  topics: ["work", "art"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50947,8 +52086,8 @@ window.decks.en_verbs = [
   word: "to steer",
   ru: "рулить",
   uk: "керувати",
-  level: "B2",
-  topics: ["movement", "transport"],
+  level: "",
+  topics: [],
   deSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50969,8 +52108,8 @@ window.decks.en_verbs = [
   word: "to loosen",
   ru: "ослаблять",
   uk: "послаблювати",
-  level: "B2",
-  topics: ["daily life"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -50991,8 +52130,8 @@ window.decks.en_verbs = [
   word: "to maximize",
   ru: "максимизировать",
   uk: "максимізувати",
-  level: "B2",
-  topics: ["math", "business"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51013,8 +52152,8 @@ window.decks.en_verbs = [
   word: "to minimize",
   ru: "минимизировать",
   uk: "мінімізувати",
-  level: "B2",
-  topics: ["math", "business"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51035,8 +52174,8 @@ window.decks.en_verbs = [
   word: "to misunderstand",
   ru: "неправильно понимать",
   uk: "неправильно розуміти",
-  level: "B1",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51057,8 +52196,8 @@ window.decks.en_verbs = [
   word: "to inform",
   ru: "сообщать",
   uk: "повідомляти",
-  level: "B1",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51079,8 +52218,8 @@ window.decks.en_verbs = [
   word: "to prove",
   ru: "доказывать",
   uk: "доводити",
-  level: "B2",
-  topics: ["science", "logic"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51101,8 +52240,8 @@ window.decks.en_verbs = [
   word: "to ask again",
   ru: "переспрашивать",
   uk: "перепитувати",
-  level: "B1",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51123,8 +52262,8 @@ window.decks.en_verbs = [
   word: "to catch up",
   ru: "наверстывать",
   uk: "наздоганяти",
-  level: "B1",
-  topics: ["learning", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51145,8 +52284,8 @@ window.decks.en_verbs = [
   word: "to ease",
   ru: "ослабевать",
   uk: "послаблюватися",
-  level: "B2",
-  topics: ["health", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51167,8 +52306,8 @@ window.decks.en_verbs = [
   word: "to look up",
   ru: "смотреть (в словаре)",
   uk: "дивитися (в словнику)",
-  level: "B1",
-  topics: ["learning", "tech"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51189,8 +52328,8 @@ window.decks.en_verbs = [
   word: "to identify oneself",
   ru: "подтверждать личность",
   uk: "підтверджувати особу",
-  level: "B2",
-  topics: ["bureaucracy", "security"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51211,8 +52350,8 @@ window.decks.en_verbs = [
   word: "to tend",
   ru: "склоняться",
   uk: "схилятися",
-  level: "B2",
-  topics: ["abstract", "statistics"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51233,8 +52372,8 @@ window.decks.en_verbs = [
   word: "to shape",
   ru: "формировать",
   uk: "формувати",
-  level: "B2",
-  topics: ["abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51255,8 +52394,8 @@ window.decks.en_verbs = [
   word: "to prioritize",
   ru: "приоритизировать",
   uk: "пріоритезувати",
-  level: "B2",
-  topics: ["work", "time"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51277,8 +52416,8 @@ window.decks.en_verbs = [
   word: "to realize",
   ru: "осознавать",
   uk: "усвідомлювати",
-  level: "B2",
-  topics: ["abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51299,8 +52438,8 @@ window.decks.en_verbs = [
   word: "to reflect",
   ru: "рефлексировать",
   uk: "рефлексувати",
-  level: "B2",
-  topics: ["abstract", "science"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51321,8 +52460,8 @@ window.decks.en_verbs = [
   word: "to contextualize",
   ru: "относить к контексту",
   uk: "ставити в контекст",
-  level: "C1",
-  topics: ["education", "abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51343,8 +52482,8 @@ window.decks.en_verbs = [
   word: "to reproduce",
   ru: "воспроизводить",
   uk: "відтворювати",
-  level: "B2",
-  topics: ["biology", "education"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51365,8 +52504,8 @@ window.decks.en_verbs = [
   word: "to revise",
   ru: "пересматривать",
   uk: "переглядати",
-  level: "B2",
-  topics: ["education", "learning"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51387,8 +52526,8 @@ window.decks.en_verbs = [
   word: "to be addressed to",
   ru: "быть адресованным",
   uk: "бути адресованим",
-  level: "B2",
-  topics: ["communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51409,8 +52548,8 @@ window.decks.en_verbs = [
   word: "to risk",
   ru: "рисковать",
   uk: "ризикувати",
-  level: "B2",
-  topics: ["finance", "health"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51431,8 +52570,8 @@ window.decks.en_verbs = [
   word: "to harm",
   ru: "вредить",
   uk: "шкодити",
-  level: "B2",
-  topics: ["health", "law"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51453,8 +52592,8 @@ window.decks.en_verbs = [
   word: "to appreciate",
   ru: "ценить",
   uk: "цінувати",
-  level: "B1",
-  topics: ["emotion", "communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51475,8 +52614,8 @@ window.decks.en_verbs = [
   word: "to describe",
   ru: "описывать",
   uk: "описувати",
-  level: "B1",
-  topics: ["communication", "education"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51497,8 +52636,8 @@ window.decks.en_verbs = [
   word: "to fluctuate",
   ru: "колебаться",
   uk: "хитатися / коливатися",
-  level: "B2",
-  topics: ["economy", "statistics"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51519,8 +52658,8 @@ window.decks.en_verbs = [
   word: "to deal with",
   ru: "заниматься",
   uk: "займатися",
-  level: "B1",
-  topics: ["work", "daily life"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51541,8 +52680,8 @@ window.decks.en_verbs = [
   word: "to be located",
   ru: "находиться",
   uk: "знаходитися",
-  level: "B1",
-  topics: ["city", "travel"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51563,8 +52702,8 @@ window.decks.en_verbs = [
   word: "to try hard",
   ru: "стараться",
   uk: "намагатися",
-  level: "B1",
-  topics: ["learning", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51585,8 +52724,8 @@ window.decks.en_verbs = [
   word: "to develop",
   ru: "развиваться",
   uk: "розвиватися",
-  level: "B2",
-  topics: ["work", "science"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51607,8 +52746,8 @@ window.decks.en_verbs = [
   word: "to occur",
   ru: "происходить",
   uk: "відбуватися",
-  level: "B2",
-  topics: ["science", "abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51629,8 +52768,8 @@ window.decks.en_verbs = [
   word: "to recover",
   ru: "отдыхать / восстанавливаться",
   uk: "відпочивати / відновлюватися",
-  level: "B2",
-  topics: ["health"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51651,8 +52790,8 @@ window.decks.en_verbs = [
   word: "to afford",
   ru: "позволить себе",
   uk: "дозволити собі",
-  level: "B2",
-  topics: ["finance", "daily life"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51673,8 +52812,8 @@ window.decks.en_verbs = [
   word: "to be worth it",
   ru: "окупаться / иметь смысл",
   uk: "окупатися / мати сенс",
-  level: "B1",
-  topics: ["finance", "daily life"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51695,8 +52834,8 @@ window.decks.en_verbs = [
   word: "to behave",
   ru: "вести себя",
   uk: "поводитися",
-  level: "B1",
-  topics: ["social", "education"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51717,8 +52856,8 @@ window.decks.en_verbs = [
   word: "to commit",
   ru: "обязываться",
   uk: "зобов’язуватися",
-  level: "B2",
-  topics: ["crime", "law"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51739,8 +52878,8 @@ window.decks.en_verbs = [
   word: "to secure",
   ru: "страховать / защищать",
   uk: "страхувати / захищати",
-  level: "B2",
-  topics: ["security", "finance"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51761,8 +52900,8 @@ window.decks.en_verbs = [
   word: "to specialize",
   ru: "специализироваться",
   uk: "спеціалізуватися",
-  level: "B2",
-  topics: ["education", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51783,8 +52922,8 @@ window.decks.en_verbs = [
   word: "to increase",
   ru: "повышать",
   uk: "підвищувати",
-  level: "B1",
-  topics: ["math", "statistics"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51805,8 +52944,8 @@ window.decks.en_verbs = [
   word: "to control",
   ru: "управлять",
   uk: "керувати",
-  level: "B2",
-  topics: ["work", "technology"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51827,8 +52966,8 @@ window.decks.en_verbs = [
   word: "to vote",
   ru: "голосовать",
   uk: "голосувати",
-  level: "B1",
-  topics: ["politics"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51849,8 +52988,8 @@ window.decks.en_verbs = [
   word: "to encounter",
   ru: "натыкаться",
   uk: "натрапляти",
-  level: "B2",
-  topics: ["travel", "daily life"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51871,8 +53010,8 @@ window.decks.en_verbs = [
   word: "to strengthen",
   ru: "укреплять",
   uk: "зміцнювати",
-  level: "B2",
-  topics: ["health", "abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51893,8 +53032,8 @@ window.decks.en_verbs = [
   word: "to structure",
   ru: "структурировать",
   uk: "структурувати",
-  level: "B2",
-  topics: ["education", "abstract"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51915,8 +53054,8 @@ window.decks.en_verbs = [
   word: "to participate",
   ru: "принимать участие",
   uk: "брати участь",
-  level: "B1",
-  topics: ["education", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51937,8 +53076,8 @@ window.decks.en_verbs = [
   word: "to revise",
   ru: "перерабатывать",
   uk: "переробляти",
-  level: "B2",
-  topics: ["education", "learning"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51959,8 +53098,8 @@ window.decks.en_verbs = [
   word: "to overview",
   ru: "обозревать",
   uk: "охоплювати поглядом",
-  level: "C1",
-  topics: ["education", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -51981,8 +53120,8 @@ window.decks.en_verbs = [
   word: "to get through",
   ru: "переживать (период)",
   uk: "переживати",
-  level: "B2",
-  topics: ["emotion", "crisis"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -52003,8 +53142,8 @@ window.decks.en_verbs = [
   word: "to take on",
   ru: "принимать на себя",
   uk: "брати на себе",
-  level: "B2",
-  topics: ["work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -52025,8 +53164,8 @@ window.decks.en_verbs = [
   word: "to check",
   ru: "проверять",
   uk: "перевіряти",
-  level: "A2",
-  topics: ["daily life", "work"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -52047,8 +53186,8 @@ window.decks.en_verbs = [
   word: "to broadcast",
   ru: "транслировать",
   uk: "транслювати",
-  level: "B2",
-  topics: ["media", "communication"],
+  level: "",
+  topics: [],
   enSynonyms: [],
   ruSynonyms: [],
   ukSynonyms: [],
@@ -54271,10 +55410,8 @@ window.decks.en_adverbs = [
     "word": "alone",
     "ru": "один",
     "uk": "сам",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54294,10 +55431,8 @@ window.decks.en_adverbs = [
     "word": "at most",
     "ru": "в лучшем случае",
     "uk": "у найкращому разі",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54317,11 +55452,8 @@ window.decks.en_adverbs = [
     "word": "however",
     "ru": "однако",
     "uk": "однак",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54341,11 +55473,8 @@ window.decks.en_adverbs = [
     "word": "so",
     "ru": "итак",
     "uk": "отже",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54365,10 +55494,8 @@ window.decks.en_adverbs = [
     "word": "most of all",
     "ru": "больше всего",
     "uk": "найбільше",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54388,10 +55515,8 @@ window.decks.en_adverbs = [
     "word": "differently",
     "ru": "по-другому",
     "uk": "інакше",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54411,11 +55536,8 @@ window.decks.en_adverbs = [
     "word": "in view of",
     "ru": "ввиду",
     "uk": "з огляду на",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54435,10 +55557,8 @@ window.decks.en_adverbs = [
     "word": "otherwise",
     "ru": "иначе",
     "uk": "інакше",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54458,10 +55578,8 @@ window.decks.en_adverbs = [
     "word": "also",
     "ru": "тоже",
     "uk": "також",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54481,10 +55599,8 @@ window.decks.en_adverbs = [
     "word": "outside",
     "ru": "снаружи",
     "uk": "зовні",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54504,10 +55620,8 @@ window.decks.en_adverbs = [
     "word": "soon",
     "ru": "скоро",
     "uk": "незабаром",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54527,10 +55641,8 @@ window.decks.en_adverbs = [
     "word": "almost",
     "ru": "почти",
     "uk": "майже",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54550,10 +55662,8 @@ window.decks.en_adverbs = [
     "word": "already",
     "ru": "уже",
     "uk": "вже",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54573,10 +55683,8 @@ window.decks.en_adverbs = [
     "word": "especially",
     "ru": "особенно",
     "uk": "особливо",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54596,10 +55704,8 @@ window.decks.en_adverbs = [
     "word": "definitely",
     "ru": "точно",
     "uk": "напевно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54619,10 +55725,8 @@ window.decks.en_adverbs = [
     "word": "there",
     "ru": "там",
     "uk": "там",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54642,10 +55746,8 @@ window.decks.en_adverbs = [
     "word": "back then",
     "ru": "тогда",
     "uk": "тоді",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54665,10 +55767,8 @@ window.decks.en_adverbs = [
     "word": "afterwards",
     "ru": "потом",
     "uk": "потім",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54688,10 +55788,8 @@ window.decks.en_adverbs = [
     "word": "then",
     "ru": "потом",
     "uk": "потім",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54711,11 +55809,8 @@ window.decks.en_adverbs = [
     "word": "therefore",
     "ru": "поэтому",
     "uk": "тому",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54735,11 +55830,8 @@ window.decks.en_adverbs = [
     "word": "nevertheless",
     "ru": "тем не менее",
     "uk": "однак",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54759,11 +55851,8 @@ window.decks.en_adverbs = [
     "word": "therefore",
     "ru": "поэтому",
     "uk": "тому",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54783,11 +55872,8 @@ window.decks.en_adverbs = [
     "word": "after all",
     "ru": "всё-таки",
     "uk": "все ж таки",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54807,10 +55893,8 @@ window.decks.en_adverbs = [
     "word": "there",
     "ru": "там",
     "uk": "там",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54830,10 +55914,8 @@ window.decks.en_adverbs = [
     "word": "outside",
     "ru": "снаружи",
     "uk": "зовні",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54853,10 +55935,8 @@ window.decks.en_adverbs = [
     "word": "inside",
     "ru": "внутри",
     "uk": "всередині",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54876,10 +55956,8 @@ window.decks.en_adverbs = [
     "word": "over there",
     "ru": "вон там",
     "uk": "он там",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54899,10 +55977,8 @@ window.decks.en_adverbs = [
     "word": "quite",
     "ru": "вполне",
     "uk": "цілком",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54922,10 +55998,8 @@ window.decks.en_adverbs = [
     "word": "exactly",
     "ru": "именно",
     "uk": "саме так",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54945,11 +56019,8 @@ window.decks.en_adverbs = [
     "word": "likewise",
     "ru": "так же",
     "uk": "так само",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54969,10 +56040,8 @@ window.decks.en_adverbs = [
     "word": "equally",
     "ru": "так же",
     "uk": "так само",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -54992,10 +56061,8 @@ window.decks.en_adverbs = [
     "word": "to some extent",
     "ru": "в известной мере",
     "uk": "певною мірою",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55015,11 +56082,8 @@ window.decks.en_adverbs = [
     "word": "actually",
     "ru": "вообще-то",
     "uk": "власне",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55039,11 +56103,8 @@ window.decks.en_adverbs = [
     "word": "finally",
     "ru": "наконец",
     "uk": "нарешті",
-    "level": "B1",
-    "topics": [
-      "time",
-      "communication"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55063,10 +56124,8 @@ window.decks.en_adverbs = [
     "word": "only",
     "ru": "только",
     "uk": "лише",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55086,10 +56145,8 @@ window.decks.en_adverbs = [
     "word": "extremely",
     "ru": "чрезвычайно",
     "uk": "надзвичайно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55109,10 +56166,8 @@ window.decks.en_adverbs = [
     "word": "almost",
     "ru": "почти",
     "uk": "майже",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55132,11 +56187,8 @@ window.decks.en_adverbs = [
     "word": "furthermore",
     "ru": "кроме того",
     "uk": "крім того",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55156,11 +56208,8 @@ window.decks.en_adverbs = [
     "word": "consequently",
     "ru": "следовательно",
     "uk": "отже",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55180,10 +56229,8 @@ window.decks.en_adverbs = [
     "word": "earlier",
     "ru": "раньше",
     "uk": "раніше",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55203,10 +56250,8 @@ window.decks.en_adverbs = [
     "word": "if necessary",
     "ru": "в случае необходимости",
     "uk": "за потреби",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55226,10 +56271,8 @@ window.decks.en_adverbs = [
     "word": "exactly",
     "ru": "точно",
     "uk": "точно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55249,10 +56292,8 @@ window.decks.en_adverbs = [
     "word": "enough",
     "ru": "достаточно",
     "uk": "досить",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55272,10 +56313,8 @@ window.decks.en_adverbs = [
     "word": "just",
     "ru": "как раз сейчас",
     "uk": "якраз зараз",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55295,10 +56334,8 @@ window.decks.en_adverbs = [
     "word": "gladly",
     "ru": "охотно",
     "uk": "охоче",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55318,10 +56355,8 @@ window.decks.en_adverbs = [
     "word": "yesterday",
     "ru": "вчера",
     "uk": "вчора",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55341,10 +56376,8 @@ window.decks.en_adverbs = [
     "word": "right away",
     "ru": "сейчас же",
     "uk": "зараз же",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55364,11 +56397,8 @@ window.decks.en_adverbs = [
     "word": "nevertheless",
     "ru": "всё же",
     "uk": "все ж таки",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55388,10 +56418,8 @@ window.decks.en_adverbs = [
     "word": "mainly",
     "ru": "главным образом",
     "uk": "переважно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55411,10 +56439,8 @@ window.decks.en_adverbs = [
     "word": "here",
     "ru": "сюда",
     "uk": "сюди",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55434,10 +56460,8 @@ window.decks.en_adverbs = [
     "word": "today",
     "ru": "сегодня",
     "uk": "сьогодні",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55457,10 +56481,8 @@ window.decks.en_adverbs = [
     "word": "here",
     "ru": "здесь",
     "uk": "тут",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55480,11 +56502,8 @@ window.decks.en_adverbs = [
     "word": "hereby",
     "ru": "настоящим",
     "uk": "цим",
-    "level": "B2",
-    "topics": [
-      "bureaucracy",
-      "communication"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55504,10 +56523,8 @@ window.decks.en_adverbs = [
     "word": "there",
     "ru": "туда",
     "uk": "туди",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55527,11 +56544,8 @@ window.decks.en_adverbs = [
     "word": "by contrast",
     "ru": "напротив",
     "uk": "натомість",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55551,10 +56565,8 @@ window.decks.en_adverbs = [
     "word": "at the back",
     "ru": "сзади",
     "uk": "позаду",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55574,10 +56586,8 @@ window.decks.en_adverbs = [
     "word": "always",
     "ru": "всегда",
     "uk": "завжди",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55597,10 +56607,8 @@ window.decks.en_adverbs = [
     "word": "meanwhile",
     "ru": "между тем",
     "uk": "між тим",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55620,10 +56628,8 @@ window.decks.en_adverbs = [
     "word": "inside",
     "ru": "внутри",
     "uk": "всередині",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55643,10 +56649,8 @@ window.decks.en_adverbs = [
     "word": "insofar",
     "ru": "постольку",
     "uk": "наскільки",
-    "level": "C1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55666,11 +56670,8 @@ window.decks.en_adverbs = [
     "word": "in this respect",
     "ru": "в этом отношении",
     "uk": "у цьому відношенні",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55690,10 +56691,8 @@ window.decks.en_adverbs = [
     "word": "in the meantime",
     "ru": "тем временем",
     "uk": "тим часом",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55713,11 +56712,8 @@ window.decks.en_adverbs = [
     "word": "however",
     "ru": "однако",
     "uk": "однак",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55737,10 +56733,8 @@ window.decks.en_adverbs = [
     "word": "now",
     "ru": "сейчас",
     "uk": "зараз",
-    "level": "A1",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55760,10 +56754,8 @@ window.decks.en_adverbs = [
     "word": "hardly",
     "ru": "едва",
     "uk": "ледь",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55783,10 +56775,8 @@ window.decks.en_adverbs = [
     "word": "hardly anymore",
     "ru": "едва уже",
     "uk": "ледве вже",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55806,10 +56796,8 @@ window.decks.en_adverbs = [
     "word": "by no means",
     "ru": "ни в коем случае",
     "uk": "ні в якому разі",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55829,10 +56817,8 @@ window.decks.en_adverbs = [
     "word": "rather",
     "ru": "лучше",
     "uk": "краще",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55852,10 +56838,8 @@ window.decks.en_adverbs = [
     "word": "left",
     "ru": "налево",
     "uk": "ліворуч",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55875,10 +56859,8 @@ window.decks.en_adverbs = [
     "word": "sometimes",
     "ru": "иногда",
     "uk": "іноді",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55898,10 +56880,8 @@ window.decks.en_adverbs = [
     "word": "with the help of",
     "ru": "с помощью",
     "uk": "за допомогою",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55921,11 +56901,8 @@ window.decks.en_adverbs = [
     "word": "thus",
     "ru": "следовательно",
     "uk": "отже",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55945,10 +56922,8 @@ window.decks.en_adverbs = [
     "word": "tomorrow",
     "ru": "завтра",
     "uk": "завтра",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55968,11 +56943,8 @@ window.decks.en_adverbs = [
     "word": "of course",
     "ru": "конечно",
     "uk": "звісно",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -55992,10 +56964,8 @@ window.decks.en_adverbs = [
     "word": "never",
     "ru": "никогда",
     "uk": "ніколи",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56015,10 +56985,8 @@ window.decks.en_adverbs = [
     "word": "nowhere",
     "ru": "нигде",
     "uk": "ніде",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56038,10 +57006,8 @@ window.decks.en_adverbs = [
     "word": "still",
     "ru": "ещё",
     "uk": "ще",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56061,10 +57027,8 @@ window.decks.en_adverbs = [
     "word": "once again",
     "ru": "ещё раз",
     "uk": "ще раз",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56084,10 +57048,8 @@ window.decks.en_adverbs = [
     "word": "only",
     "ru": "только",
     "uk": "тільки",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56107,10 +57069,8 @@ window.decks.en_adverbs = [
     "word": "upstairs",
     "ru": "наверху",
     "uk": "вгорі",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56130,10 +57090,8 @@ window.decks.en_adverbs = [
     "word": "on top",
     "ru": "сверху",
     "uk": "нагорі",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56153,10 +57111,8 @@ window.decks.en_adverbs = [
     "word": "often",
     "ru": "часто",
     "uk": "часто",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56176,10 +57132,8 @@ window.decks.en_adverbs = [
     "word": "suddenly",
     "ru": "вдруг",
     "uk": "раптом",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56199,10 +57153,8 @@ window.decks.en_adverbs = [
     "word": "right",
     "ru": "направо",
     "uk": "праворуч",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56222,11 +57174,8 @@ window.decks.en_adverbs = [
     "word": "in the end",
     "ru": "в конце концов",
     "uk": "зрештою",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56246,10 +57195,8 @@ window.decks.en_adverbs = [
     "word": "already",
     "ru": "уже",
     "uk": "вже",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56269,10 +57216,8 @@ window.decks.en_adverbs = [
     "word": "very",
     "ru": "очень",
     "uk": "дуже",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56292,10 +57237,8 @@ window.decks.en_adverbs = [
     "word": "rarely",
     "ru": "редко",
     "uk": "рідко",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56315,10 +57258,8 @@ window.decks.en_adverbs = [
     "word": "certainly",
     "ru": "конечно",
     "uk": "звісно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56338,10 +57279,8 @@ window.decks.en_adverbs = [
     "word": "immediately",
     "ru": "сразу",
     "uk": "відразу",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56361,11 +57300,8 @@ window.decks.en_adverbs = [
     "word": "thus",
     "ru": "таким образом",
     "uk": "таким чином",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56385,10 +57321,8 @@ window.decks.en_adverbs = [
     "word": "otherwise",
     "ru": "иначе",
     "uk": "інакше",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56408,10 +57342,8 @@ window.decks.en_adverbs = [
     "word": "later",
     "ru": "позже",
     "uk": "пізніше",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56431,10 +57363,8 @@ window.decks.en_adverbs = [
     "word": "partly",
     "ru": "частично",
     "uk": "частково",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56454,10 +57384,8 @@ window.decks.en_adverbs = [
     "word": "totally",
     "ru": "совсем",
     "uk": "повністю",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56477,11 +57405,8 @@ window.decks.en_adverbs = [
     "word": "despite that",
     "ru": "несмотря на это",
     "uk": "попри це",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56501,10 +57426,8 @@ window.decks.en_adverbs = [
     "word": "downstairs",
     "ru": "внизу",
     "uk": "внизу",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56524,10 +57447,8 @@ window.decks.en_adverbs = [
     "word": "maybe",
     "ru": "может быть",
     "uk": "можливо",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56547,10 +57468,8 @@ window.decks.en_adverbs = [
     "word": "from each other",
     "ru": "друг от друга",
     "uk": "один від одного",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56570,10 +57489,8 @@ window.decks.en_adverbs = [
     "word": "the day before yesterday",
     "ru": "позавчера",
     "uk": "позавчора",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56593,10 +57510,8 @@ window.decks.en_adverbs = [
     "word": "for now",
     "ru": "пока",
     "uk": "поки що",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56616,10 +57531,8 @@ window.decks.en_adverbs = [
     "word": "in front",
     "ru": "впереди",
     "uk": "попереду",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56639,11 +57552,8 @@ window.decks.en_adverbs = [
     "word": "primarily",
     "ru": "преимущественно",
     "uk": "переважно",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56663,11 +57573,8 @@ window.decks.en_adverbs = [
     "word": "from the outset",
     "ru": "изначально",
     "uk": "з самого початку",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56687,10 +57594,8 @@ window.decks.en_adverbs = [
     "word": "probably",
     "ru": "вероятно",
     "uk": "ймовірно",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56710,10 +57615,8 @@ window.decks.en_adverbs = [
     "word": "away",
     "ru": "прочь",
     "uk": "геть",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56733,10 +57636,8 @@ window.decks.en_adverbs = [
     "word": "further",
     "ru": "дальше",
     "uk": "далі",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56756,10 +57657,8 @@ window.decks.en_adverbs = [
     "word": "why",
     "ru": "почему",
     "uk": "чому",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56779,11 +57678,8 @@ window.decks.en_adverbs = [
     "word": "in return",
     "ru": "в свою очередь",
     "uk": "зі свого боку",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56803,10 +57699,8 @@ window.decks.en_adverbs = [
     "word": "again",
     "ru": "снова",
     "uk": "знову",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56826,11 +57720,8 @@ window.decks.en_adverbs = [
     "word": "in turn",
     "ru": "в свою очередь",
     "uk": "зі свого боку",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56850,10 +57741,8 @@ window.decks.en_adverbs = [
     "word": "somewhere else",
     "ru": "в другом месте",
     "uk": "деінде",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56873,10 +57762,8 @@ window.decks.en_adverbs = [
     "word": "quite",
     "ru": "довольно",
     "uk": "досить",
-    "level": "B1",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56896,11 +57783,8 @@ window.decks.en_adverbs = [
     "word": "in addition",
     "ru": "к тому же",
     "uk": "до того ж",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56920,11 +57804,8 @@ window.decks.en_adverbs = [
     "word": "lastly",
     "ru": "напоследок",
     "uk": "наостанок",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56944,11 +57825,8 @@ window.decks.en_adverbs = [
     "word": "especially since",
     "ru": "тем более что",
     "uk": "тим більше що",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56968,11 +57846,8 @@ window.decks.en_adverbs = [
     "word": "first of all",
     "ru": "сначала",
     "uk": "спочатку",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -56992,10 +57867,8 @@ window.decks.en_adverbs = [
     "word": "back",
     "ru": "назад",
     "uk": "назад",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57015,10 +57888,8 @@ window.decks.en_adverbs = [
     "word": "together",
     "ru": "вместе",
     "uk": "разом",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57038,10 +57909,8 @@ window.decks.en_adverbs = [
     "word": "similarly",
     "ru": "похоже",
     "uk": "подібно",
-    "level": "B1",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57061,10 +57930,8 @@ window.decks.en_adverbs = [
     "word": "everywhere",
     "ru": "везде",
     "uk": "скрізь",
-    "level": "A2",
-    "topics": [
-      "daily life"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57084,11 +57951,8 @@ window.decks.en_adverbs = [
     "word": "moreover",
     "ru": "кроме того",
     "uk": "крім того",
-    "level": "B2",
-    "topics": [
-      "communication",
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57108,10 +57972,8 @@ window.decks.en_adverbs = [
     "word": "at all",
     "ru": "вообще",
     "uk": "взагалі",
-    "level": "B2",
-    "topics": [
-      "abstract"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
@@ -57131,10 +57993,8 @@ window.decks.en_adverbs = [
     "word": "the day after tomorrow",
     "ru": "послезавтра",
     "uk": "післязавтра",
-    "level": "A2",
-    "topics": [
-      "time"
-    ],
+    "level": "",
+    "topics": [],
     "deSynonyms": [],
     "ruSynonyms": [],
     "ukSynonyms": [],
