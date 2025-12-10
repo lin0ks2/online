@@ -30256,7 +30256,6 @@ window.decks.en_nouns = [
     ]
   }
 ];
-
 window.decks.en_adjectives = [
   {
     "id": 1,
@@ -33559,10 +33558,20712 @@ window.decks.en_adjectives = [
     "examples": []
   }
 ];
-
 window.decks.en_verbs = [
+{
+  id: 1,
+  word: "to be",
+  ru: "быть",
+  uk: "бути",
+  level: "A1",
+  topics: ["daily", "abstract"],
+  enSynonyms: ["to exist"],
+  ruSynonyms: ["являться", "находиться"],
+  ukSynonyms: ["бути", "знаходитися"],
+  enAntonyms: ["to disappear"],
+  ruAntonyms: ["исчезать", "отсутствовать"],
+  ukAntonyms: ["зникати", "бути відсутнім"],
+  collocations: [
+    { L2: "to be late", ru: "опаздывать", uk: "спізнюватися" },
+    { L2: "to be tired", ru: "быть уставшим", uk: "бути втомленим" },
+    { L2: "to be there", ru: "присутствовать", uk: "бути присутнім" }
+  ],
+  examples: [
+    {
+      L2: "I am tired today.",
+      ru: "Я сегодня устал.",
+      uk: "Я сьогодні втомився."
+    }
+  ]
+},
+{
+  id: 2,
+  word: "to have",
+  ru: "иметь",
+  uk: "мати",
+  level: "A1",
+  topics: ["daily", "abstract"],
+  enSynonyms: ["to possess"],
+  ruSynonyms: ["обладать", "располагать"],
+  ukSynonyms: ["володіти", "мати в розпорядженні"],
+  enAntonyms: ["to lose"],
+  ruAntonyms: ["терять", "не иметь"],
+  ukAntonyms: ["втрачати", "не мати"],
+  collocations: [
+    { L2: "to have time", ru: "иметь время", uk: "мати час" },
+    { L2: "to be right", ru: "быть правым", uk: "мати рацію" },
+    { L2: "to be afraid", ru: "бояться", uk: "боятися" }
+  ],
+  examples: [
+    {
+      L2: "I have little time today.",
+      ru: "Сегодня у меня мало времени.",
+      uk: "Сьогодні в мене мало часу."
+    }
+  ]
+},
+{
+  id: 3,
+  word: "to become",
+  ru: "становиться",
+  uk: "ставати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to turn into"],
+  ruSynonyms: ["становиться", "превращаться"],
+  ukSynonyms: ["ставати", "перетворюватися"],
+  enAntonyms: ["to remain"],
+  ruAntonyms: ["оставаться"],
+  ukAntonyms: ["залишатися"],
+  collocations: [
+    { L2: "to become ill", ru: "заболеть", uk: "захворіти" },
+    { L2: "to become old", ru: "стареть", uk: "старіти" },
+    { L2: "to become nervous", ru: "становиться нервным", uk: "ставати нервовим" }
+  ],
+  examples: [
+    {
+      L2: "It is slowly becoming dark.",
+      ru: "Постепенно темнеет.",
+      uk: "Поступово темніє."
+    }
+  ]
+},
+{
+  id: 4,
+  word: "to be able to",
+  ru: "мочь",
+  uk: "могти",
+  level: "A1",
+  topics: ["daily", "work"],
+  enSynonyms: ["to manage to", "to be capable of"],
+  ruSynonyms: ["быть в состоянии", "уметь"],
+  ukSynonyms: ["бути спроможним", "уміти"],
+  enAntonyms: ["to be unable to"],
+  ruAntonyms: ["не мочь"],
+  ukAntonyms: ["не могти"],
+  collocations: [
+    { L2: "to be able to swim well", ru: "уметь хорошо плавать", uk: "уміти добре плавати" },
+    { L2: "to be unable to sleep", ru: "не мочь спать", uk: "не могти спати" },
+    { L2: "not to be to blame", ru: "быть ни при чём", uk: "бути ні до чого" }
+  ],
+  examples: [
+    {
+      L2: "I can’t come today.",
+      ru: "Я сегодня не могу прийти.",
+      uk: "Я сьогодні не можу прийти."
+    }
+  ]
+},
+{
+  id: 5,
+  word: "to have to",
+  ru: "быть должным",
+  uk: "мусити",
+  level: "A1",
+  topics: ["daily", "work"],
+  enSynonyms: ["to must", "to be obliged to"],
+  ruSynonyms: ["быть вынужденным", "нужно"],
+  ukSynonyms: ["бути змушеним", "треба"],
+  enAntonyms: ["to be free not to"],
+  ruAntonyms: ["не быть обязанным", "быть свободным"],
+  ukAntonyms: ["не мусити", "бути вільним"],
+  collocations: [
+    { L2: "to have to work", ru: "быть вынужденным работать", uk: "мусити працювати" },
+    { L2: "to have to leave", ru: "быть вынужденным уйти", uk: "мусити йти" },
+    { L2: "to have to study", ru: "должен учиться", uk: "мусити вчитися" }
+  ],
+  examples: [
+    {
+      L2: "I have to get up early.",
+      ru: "Мне нужно рано вставать.",
+      uk: "Мені треба рано вставати."
+    }
+  ]
+},
+{
+  id: 6,
+  word: "to say",
+  ru: "сказать",
+  uk: "казати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to tell"],
+  ruSynonyms: ["говорить", "сообщать"],
+  ukSynonyms: ["говорити", "повідомляти"],
+  enAntonyms: ["to keep silent"],
+  ruAntonyms: ["молчать"],
+  ukAntonyms: ["мовчати"],
+  collocations: [
+    { L2: "to tell the truth", ru: "говорить правду", uk: "казати правду" },
+    { L2: "to let someone know", ru: "сообщить", uk: "дати знати" },
+    { L2: "to say thank you", ru: "сказать спасибо", uk: "сказати дякую" }
+  ],
+  examples: [
+    {
+      L2: "Can you say that again?",
+      ru: "Можешь сказать это ещё раз?",
+      uk: "Можеш сказати це ще раз?"
+    }
+  ]
+},
+{
+  id: 7,
+  word: "to do",
+  ru: "делать",
+  uk: "робити",
+  level: "A1",
+  topics: ["daily", "work"],
+  enSynonyms: ["to carry out"],
+  ruSynonyms: ["делать", "совершать"],
+  ukSynonyms: ["робити", "здійснювати"],
+  enAntonyms: ["to refrain", "to do nothing"],
+  ruAntonyms: ["не делать", "воздержаться"],
+  ukAntonyms: ["не робити", "утриматися"],
+  collocations: [
+    { L2: "to make mistakes", ru: "делать ошибки", uk: "робити помилки" },
+    { L2: "to take a break", ru: "делать перерыв", uk: "робити перерву" },
+    { L2: "to do sports", ru: "заниматься спортом", uk: "займатися спортом" }
+  ],
+  examples: [
+    {
+      L2: "What are you doing this evening?",
+      ru: "Что ты делаешь сегодня вечером?",
+      uk: "Що ти робиш сьогодні ввечері?"
+    }
+  ]
+},
+{
+  id: 8,
+  word: "to give",
+  ru: "давать",
+  uk: "давати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to hand", "to pass"],
+  ruSynonyms: ["передавать", "вручать"],
+  ukSynonyms: ["передавати", "вручати"],
+  enAntonyms: ["to take", "to keep"],
+  ruAntonyms: ["брать", "оставлять себе"],
+  ukAntonyms: ["брати", "залишати собі"],
+  collocations: [
+    { L2: "to admit that someone is right", ru: "признавать правоту", uk: "визнавати рацію" },
+    { L2: "to give a present", ru: "дарить подарок", uk: "дарувати подарунок" },
+    { L2: "to give up", ru: "сдаваться", uk: "здаватися" }
+  ],
+  examples: [
+    {
+      L2: "Can you give me your number?",
+      ru: "Можешь дать мне свой номер?",
+      uk: "Можеш дати мені свій номер?"
+    }
+  ]
+},
+{
+  id: 9,
+  word: "to come",
+  ru: "приходить",
+  uk: "приходити",
+  level: "A1",
+  topics: ["movement"],
+  enSynonyms: ["to arrive", "to appear"],
+  ruSynonyms: ["являться", "прибывать"],
+  ukSynonyms: ["з’являтися", "прибувати"],
+  enAntonyms: ["to go away", "to leave"],
+  ruAntonyms: ["уходить", "уезжать"],
+  ukAntonyms: ["йти", "виїжджати"],
+  collocations: [
+    { L2: "to come late", ru: "опаздывать", uk: "спізнюватися" },
+    { L2: "to come home", ru: "приходить домой", uk: "приходити додому" },
+    { L2: "to come up with an idea", ru: "придумать, прийти к мысли", uk: "вигадати, спасти на думку" }
+  ],
+  examples: [
+    {
+      L2: "He comes home later.",
+      ru: "Он придёт домой позже.",
+      uk: "Він прийде додому пізніше."
+    }
+  ]
+},
+{
+  id: 10,
+  word: "to should",
+  ru: "следует",
+  uk: "слід",
+  level: "A2",
+  topics: ["daily", "health"],
+  enSynonyms: ["to be supposed to"],
+  ruSynonyms: ["следует", "рекомендуется"],
+  ukSynonyms: ["слід", "рекомендується"],
+  enAntonyms: [],
+  ruAntonyms: ["не следует"],
+  ukAntonyms: ["не слід"],
+  collocations: [
+    { L2: "to sleep more", ru: "следует больше спать", uk: "слід більше спати" },
+    { L2: "not to work so much", ru: "не следует так много работать", uk: "не слід стільки працювати" },
+    { L2: "one should...", ru: "следует...", uk: "слід..." }
+  ],
+  examples: [
+    {
+      L2: "You should drink more water.",
+      ru: "Тебе следует пить больше воды.",
+      uk: "Тобі слід пити більше води."
+    }
+  ]
+},
+{
+  id: 11,
+  word: "to want",
+  ru: "хотеть",
+  uk: "хотіти",
+  level: "A1",
+  topics: ["daily", "free_time"],
+  enSynonyms: ["to wish", "to intend"],
+  ruSynonyms: ["желать", "быть намеренным"],
+  ukSynonyms: ["бажати", "мати намір"],
+  enAntonyms: ["to refuse"],
+  ruAntonyms: ["не хотеть", "отказываться"],
+  ukAntonyms: ["не хотіти", "відмовлятися"],
+  collocations: [
+    { L2: "to want to go home", ru: "хотеть домой", uk: "хотіти додому" },
+    { L2: "to want more time", ru: "хотеть больше времени", uk: "хотіти більше часу" },
+    { L2: "not to want to accept something", ru: "не хотеть признавать что-то", uk: "не хотіти визнавати щось" }
+  ],
+  examples: [
+    {
+      L2: "I want to stay at home today.",
+      ru: "Я хочу сегодня остаться дома.",
+      uk: "Я хочу сьогодні залишитися вдома."
+    }
+  ]
+},
+{
+  id: 12,
+  word: "to go",
+  ru: "идти",
+  uk: "йти",
+  level: "A1",
+  topics: ["movement"],
+  enSynonyms: ["to walk", "to move"],
+  ruSynonyms: ["ходить", "двигаться"],
+  ukSynonyms: ["йти пішки", "рухатися"],
+  enAntonyms: ["to stop"],
+  ruAntonyms: ["останавливаться", "стоять"],
+  ukAntonyms: ["зупинятися", "стояти"],
+  collocations: [
+    { L2: "to go for a walk", ru: "гулять", uk: "йти на прогулянку" },
+    { L2: "to go to bed", ru: "ложиться спать", uk: "лягати спати" },
+    { L2: "to go to work", ru: "ходить на работу", uk: "ходити на роботу" }
+  ],
+  examples: [
+    {
+      L2: "We are going shopping now.",
+      ru: "Мы сейчас идём за покупками.",
+      uk: "Ми зараз йдемо за покупками."
+    }
+  ]
+},
+{
+  id: 13,
+  word: "to know",
+  ru: "знать",
+  uk: "знати",
+  level: "A1",
+  topics: ["education", "abstract"],
+  enSynonyms: ["to be aware of"],
+  ruSynonyms: ["знать", "быть в курсе"],
+  ukSynonyms: ["знати", "бути в курсі"],
+  enAntonyms: ["to not know"],
+  ruAntonyms: ["не знать", "не иметь понятия"],
+  ukAntonyms: ["не знати", "не мати уявлення"],
+  collocations: [
+    { L2: "not to know exactly", ru: "точно не знать", uk: "точно не знати" },
+    { L2: "to be informed", ru: "быть в курсе", uk: "бути в курсі" },
+    { L2: "to know everything better", ru: "знать всё лучше других", uk: "знати все краще за інших" }
+  ],
+  examples: [
+    {
+      L2: "I don’t know exactly.",
+      ru: "Я точно этого не знаю.",
+      uk: "Я цього точно не знаю."
+    }
+  ]
+},
+{
+  id: 14,
+  word: "to see",
+  ru: "видеть",
+  uk: "бачити",
+  level: "A1",
+  topics: ["senses", "free_time"],
+  enSynonyms: ["to look at"],
+  ruSynonyms: ["увидеть", "рассматривать"],
+  ukSynonyms: ["побачити", "розглядати"],
+  enAntonyms: ["to overlook"],
+  ruAntonyms: ["не замечать", "быть слепым"],
+  ukAntonyms: ["не помічати", "бути сліпим"],
+  collocations: [
+    { L2: "to watch TV", ru: "смотреть телевизор", uk: "дивитися телевізор" },
+    { L2: "to see well", ru: "хорошо видеть", uk: "добре бачити" },
+    { L2: "to see each other again", ru: "увидеться снова", uk: "побачитися знову" }
+  ],
+  examples: [
+    {
+      L2: "I can’t see you well.",
+      ru: "Я плохо тебя вижу.",
+      uk: "Я погано тебе бачу."
+    }
+  ]
+},
+{
+  id: 15,
+  word: "to let",
+  ru: "позволять",
+  uk: "дозволяти",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to allow"],
+  ruSynonyms: ["разрешать", "давать возможность"],
+  ukSynonyms: ["дозволяти", "давати можливість"],
+  enAntonyms: ["to forbid"],
+  ruAntonyms: ["запрещать"],
+  ukAntonyms: ["забороняти"],
+  collocations: [
+    { L2: "to let someone finish speaking", ru: "давать кому-то договорить", uk: "дати комусь договорити" },
+    { L2: "to leave something lying", ru: "оставить что-то лежать", uk: "залишити щось лежати" },
+    { L2: "to get divorced", ru: "развестись", uk: "розлучитися" }
+  ],
+  examples: [
+    {
+      L2: "Please let me finish.",
+      ru: "Дай мне, пожалуйста, договорить.",
+      uk: "Дай мені, будь ласка, договорити."
+    }
+  ]
+},
+{
+  id: 16,
+  word: "to stand",
+  ru: "стоять",
+  uk: "стояти",
+  level: "A1",
+  topics: ["place", "description"],
+  enSynonyms: ["to be upright"],
+  ruSynonyms: ["находиться", "стоять вертикально"],
+  ukSynonyms: ["знаходитися", "стояти вертикально"],
+  enAntonyms: ["to sit", "to lie"],
+  ruAntonyms: ["сидеть", "лежать"],
+  ukAntonyms: ["сидіти", "лежати"],
+  collocations: [
+    { L2: "to be stuck in a traffic jam", ru: "стоять в пробке", uk: "стояти в заторі" },
+    { L2: "to stand on the shelf", ru: "стоять на полке", uk: "стояти на полиці" },
+    { L2: "to stand by someone", ru: "поддерживать кого-то", uk: "підтримувати когось" }
+  ],
+  examples: [
+    {
+      L2: "The bottle is standing on the table.",
+      ru: "Бутылка стоит на столе.",
+      uk: "Пляшка стоїть на столі."
+    }
+  ]
+},
+{
+  id: 17,
+  word: "to find",
+  ru: "находить",
+  uk: "знаходити",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to discover"],
+  ruSynonyms: ["отыскивать", "находить"],
+  ukSynonyms: ["віднаходити", "знаходити"],
+  enAntonyms: ["to lose"],
+  ruAntonyms: ["терять", "не находить"],
+  ukAntonyms: ["губити", "не знаходити"],
+  collocations: [
+    { L2: "to find a solution", ru: "найти решение", uk: "знайти рішення" },
+    { L2: "to find time", ru: "находить время", uk: "знаходити час" },
+    { L2: "to find something good", ru: "считать хорошим", uk: "вважати хорошим" }
+  ],
+  examples: [
+    {
+      L2: "I can’t find my keys.",
+      ru: "Я не могу найти свои ключи.",
+      uk: "Я не можу знайти свої ключі."
+    }
+  ]
+},
+{
+  id: 18,
+  word: "to stay",
+  ru: "оставаться",
+  uk: "залишатися",
+  level: "A2",
+  topics: ["daily", "place"],
+  enSynonyms: ["to remain"],
+  ruSynonyms: ["пребывать", "оставаться"],
+  ukSynonyms: ["пробувати", "залишатися"],
+  enAntonyms: ["to leave"],
+  ruAntonyms: ["уходить", "покидать"],
+  ukAntonyms: ["йти", "полишати"],
+  collocations: [
+    { L2: "to stay at home", ru: "оставаться дома", uk: "залишатися вдома" },
+    { L2: "to stay calm", ru: "оставаться спокойным", uk: "залишатися спокійним" },
+    { L2: "to stay in touch", ru: "оставаться на связи", uk: "залишатися на зв’язку" }
+  ],
+  examples: [
+    {
+      L2: "We are staying at home today.",
+      ru: "Мы остаёмся сегодня дома.",
+      uk: "Ми залишаємося сьогодні вдома."
+    }
+  ]
+},
+{
+  id: 19,
+  word: "to lie",
+  ru: "лежать",
+  uk: "лежати",
+  level: "A1",
+  topics: ["place"],
+  enSynonyms: ["to rest"],
+  ruSynonyms: ["располагаться", "покоиться"],
+  ukSynonyms: ["розташовуватися", "спочивати"],
+  enAntonyms: ["to stand", "to sit"],
+  ruAntonyms: ["стоять", "сидеть"],
+  ukAntonyms: ["стояти", "сидіти"],
+  collocations: [
+    { L2: "to lie in bed", ru: "лежать в кровати", uk: "лежати в ліжку" },
+    { L2: "to lie on the coast", ru: "располагаться на побережье", uk: "лежати на узбережжі" },
+    { L2: "to be trendy", ru: "быть в тренде", uk: "бути в тренді" }
+  ],
+  examples: [
+    {
+      L2: "The book is lying on the bed.",
+      ru: "Книга лежит на кровати.",
+      uk: "Книга лежить на ліжку."
+    }
+  ]
+},
+{
+  id: 20,
+  word: "to be called",
+  ru: "называться",
+  uk: "зватися",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to be named"],
+  ruSynonyms: ["именоваться", "зваться"],
+  ukSynonyms: ["називатися", "зватися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "What is this called?", ru: "Как это называется?", uk: "Як це називається?" },
+    { L2: "to be called by surname", ru: "называться по фамилии", uk: "мати таке прізвище" },
+    { L2: "X is called ... in German", ru: "X по-немецки называется ...", uk: "X німецькою називається ..." }
+  ],
+  examples: [
+    {
+      L2: "What is your name?",
+      ru: "Как тебя зовут?",
+      uk: "Як тебе звати?"
+    }
+  ]
+},
+{
+  id: 21,
+  word: "to think",
+  ru: "думать",
+  uk: "думати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to reflect", "to consider"],
+  ruSynonyms: ["размышлять", "обдумывать"],
+  ukSynonyms: ["міркувати", "обдумувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to think of something", ru: "думать о чём-то", uk: "думати про щось" },
+    { L2: "to think about something", ru: "раздумывать о чём-то", uk: "розмірковувати над чимось" },
+    { L2: "to think positively", ru: "думать позитивно", uk: "думати позитивно" }
+  ],
+  examples: [
+    {
+      L2: "I often think of my family.",
+      ru: "Я часто думаю о своей семье.",
+      uk: "Я часто думаю про свою родину."
+    }
+  ]
+},
+{
+  id: 22,
+  word: "to take",
+  ru: "брать",
+  uk: "брати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to grab", "to pick up"],
+  ruSynonyms: ["забирать", "принимать"],
+  ukSynonyms: ["забирати", "приймати"],
+  enAntonyms: ["to give", "to leave"],
+  ruAntonyms: ["давать", "оставлять"],
+  ukAntonyms: ["давати", "залишати"],
+  collocations: [
+    { L2: "to take a seat", ru: "садиться", uk: "сісти" },
+    { L2: "to take part", ru: "принимать участие", uk: "брати участь" },
+    { L2: "to take something seriously", ru: "воспринимать всерьёз", uk: "сприймати серйозно" }
+  ],
+  examples: [
+    {
+      L2: "I will take a coffee.",
+      ru: "Я возьму кофе.",
+      uk: "Я візьму каву."
+    }
+  ]
+},
+{
+  id: 23,
+  word: "to do",
+  ru: "делать",
+  uk: "робити",
+  level: "A2",
+  topics: ["abstract", "daily"],
+  enSynonyms: ["to act"],
+  ruSynonyms: ["делать", "поступать"],
+  ukSynonyms: ["робити", "чинити"],
+  enAntonyms: ["to do nothing"],
+  ruAntonyms: ["ничего не делать", "воздержаться"],
+  ukAntonyms: ["нічого не робити", "утриматися"],
+  collocations: [
+    { L2: "to hurt", ru: "болеть, причинять боль", uk: "боліти, завдавати болю" },
+    { L2: "to do something good", ru: "сделать что-то хорошее", uk: "зробити щось добре" },
+    { L2: "to pretend", ru: "делать вид, будто", uk: "робити вигляд, ніби" }
+  ],
+  examples: [
+    {
+      L2: "What can I do for you?",
+      ru: "Что я могу для тебя сделать?",
+      uk: "Що я можу для тебе зробити?"
+    }
+  ]
+},
+{
+  id: 24,
+  word: "to be allowed to",
+  ru: "иметь право",
+  uk: "мати право",
+  level: "A1",
+  topics: ["daily", "grammar"],
+  enSynonyms: ["may", "to be permitted to"],
+  ruSynonyms: ["быть разрешённым", "иметь разрешение"],
+  ukSynonyms: ["бути дозволеним", "мати дозвіл"],
+  enAntonyms: ["to be forbidden"],
+  ruAntonyms: ["быть запрещённым"],
+  ukAntonyms: ["бути забороненим"],
+  collocations: [
+    { L2: "not be allowed to smoke", ru: "нельзя курить", uk: "не можна палити" },
+    { L2: "be allowed to say anything", ru: "иметь право говорить всё", uk: "мати право говорити все" },
+    { L2: "this must not happen", ru: "этого не должно случиться", uk: "цього не повинно статися" }
+  ],
+  examples: [
+    {
+      L2: "You are not allowed to smoke here.",
+      ru: "Здесь нельзя курить.",
+      uk: "Тут не можна палити."
+    }
+  ]
+},
+{
+  id: 25,
+  word: "to believe",
+  ru: "верить",
+  uk: "вірити",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to think", "to assume"],
+  ruSynonyms: ["полагать", "думать"],
+  ukSynonyms: ["вважати", "думати"],
+  enAntonyms: ["to doubt"],
+  ruAntonyms: ["сомневаться"],
+  ukAntonyms: ["сумніватися"],
+  collocations: [
+    { L2: "to believe in God", ru: "верить в Бога", uk: "вірити в Бога" },
+    { L2: "to believe you", ru: "верить тебе", uk: "вірити тобі" },
+    { L2: "hard to believe", ru: "трудно поверить", uk: "важко повірити" }
+  ],
+  examples: [
+    {
+      L2: "I believe you.",
+      ru: "Я верю тебе.",
+      uk: "Я вірю тобі."
+    }
+  ]
+},
+{
+  id: 26,
+  word: "to hold",
+  ru: "держать",
+  uk: "тримати",
+  level: "A2",
+  topics: ["daily", "abstract"],
+  enSynonyms: ["to keep"],
+  ruSynonyms: ["удерживать", "сохранять"],
+  ukSynonyms: ["утримувати", "зберігати"],
+  enAntonyms: ["to let go"],
+  ruAntonyms: ["отпускать"],
+  ukAntonyms: ["відпускати"],
+  collocations: [
+    { L2: "to hold the door open", ru: "подержать дверь открытой", uk: "притримати двері відчиненими" },
+    { L2: "to give a talk", ru: "читать доклад", uk: "читати доповідь" },
+    { L2: "to keep clean", ru: "держать в чистоте", uk: "тримати в чистоті" }
+  ],
+  examples: [
+    {
+      L2: "Can you hold this for a moment?",
+      ru: "Можешь подержать это недолго?",
+      uk: "Можеш потримати це недовго?"
+    }
+  ]
+},
+{
+  id: 27,
+  word: "to name",
+  ru: "называть",
+  uk: "називати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to call", "to label"],
+  ruSynonyms: ["именовать", "называть"],
+  ukSynonyms: ["іменувати", "називати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to call someone by name", ru: "назвать кого-то по имени", uk: "назвати когось на ім’я" },
+    { L2: "to give examples", ru: "привести примеры", uk: "навести приклади" },
+    { L2: "to name yourself", ru: "назвать себя", uk: "назвати себе" }
+  ],
+  examples: [
+    {
+      L2: "What is this called in German?",
+      ru: "Как это называется по-немецки?",
+      uk: "Як це називається німецькою?"
+    }
+  ]
+},
+{
+  id: 28,
+  word: "to like",
+  ru: "нравиться",
+  uk: "подобатися",
+  level: "A1",
+  topics: ["food", "free_time"],
+  enSynonyms: ["to enjoy"],
+  ruSynonyms: ["любить", "нравиться"],
+  ukSynonyms: ["любити", "подобатися"],
+  enAntonyms: ["to dislike", "to hate"],
+  ruAntonyms: ["не любить", "ненавидеть"],
+  ukAntonyms: ["не любити", "ненавидіти"],
+  collocations: [
+    { L2: "to really like", ru: "очень любить", uk: "дуже любити" },
+    { L2: "to like chocolate", ru: "любить шоколад", uk: "любити шоколад" },
+    { L2: "not to like someone very much", ru: "не особенно любить кого-то", uk: "не дуже любити когось" }
+  ],
+  examples: [
+    {
+      L2: "I like chocolate very much.",
+      ru: "Я очень люблю шоколад.",
+      uk: "Я дуже люблю шоколад."
+    }
+  ]
+},
+{
+  id: 29,
+  word: "to show",
+  ru: "показывать",
+  uk: "показувати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to demonstrate"],
+  ruSynonyms: ["демонстрировать", "показывать"],
+  ukSynonyms: ["демонструвати", "показувати"],
+  enAntonyms: ["to hide"],
+  ruAntonyms: ["скрывать", "прятать"],
+  ukAntonyms: ["приховувати", "ховати"],
+  collocations: [
+    { L2: "to show the way", ru: "показать дорогу", uk: "показати дорогу" },
+    { L2: "to show interest", ru: "проявлять интерес", uk: "виявляти інтерес" },
+    { L2: "to show up", ru: "показаться, проявиться", uk: "показатися, проявитися" }
+  ],
+  examples: [
+    {
+      L2: "Can you show me the way?",
+      ru: "Можешь показать мне дорогу?",
+      uk: "Можеш показати мені дорогу?"
+    }
+  ]
+},
+{
+  id: 30,
+  word: "to lead",
+  ru: "вести",
+  uk: "вести",
+  level: "B1",
+  topics: ["work", "abstract"],
+  enSynonyms: ["to manage", "to guide"],
+  ruSynonyms: ["руководить", "управлять"],
+  ukSynonyms: ["керувати", "управляти"],
+  enAntonyms: ["to follow"],
+  ruAntonyms: ["следовать"],
+  ukAntonyms: ["слідувати"],
+  collocations: [
+    { L2: "to run a company", ru: "руководить компанией", uk: "керувати компанією" },
+    { L2: "to lead a conversation", ru: "вести разговор", uk: "вести розмову" },
+    { L2: "to lead to something", ru: "привести к чему-то", uk: "призвести до чогось" }
+  ],
+  examples: [
+    {
+      L2: "She leads a small company.",
+      ru: "Она руководит небольшой компанией.",
+      uk: "Вона керує невеликою компанією."
+    }
+  ]
+},
+{
+  id: 31,
+  word: "to speak",
+  ru: "говорить",
+  uk: "говорити",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to talk"],
+  ruSynonyms: ["разговаривать", "беседовать"],
+  ukSynonyms: ["розмовляти", "спілкуватися"],
+  enAntonyms: ["to be silent"],
+  ruAntonyms: ["молчать"],
+  ukAntonyms: ["мовчати"],
+  collocations: [
+    { L2: "to speak German", ru: "говорить по-немецки", uk: "говорити німецькою" },
+    { L2: "to speak about something", ru: "говорить о чём-то", uk: "говорити про щось" },
+    { L2: "to speak with someone", ru: "говорить с кем-то", uk: "говорити з кимось" }
+  ],
+  examples: [
+    {
+      L2: "We will speak about it later.",
+      ru: "Мы поговорим об этом позже.",
+      uk: "Ми поговоримо про це пізніше."
+    }
+  ]
+},
+{
+  id: 32,
+  word: "to bring",
+  ru: "приносить",
+  uk: "приносити",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to deliver"],
+  ruSynonyms: ["доставлять", "привозить"],
+  ukSynonyms: ["доставляти", "привозити"],
+  enAntonyms: ["to take away"],
+  ruAntonyms: ["забирать", "запирать у себя"],
+  ukAntonyms: ["забирати", "лишати в себе"],
+  collocations: [
+    { L2: "to bring something to someone", ru: "принести кому-то что-то", uk: "принести комусь щось" },
+    { L2: "to put someone to bed", ru: "уложить в кровать", uk: "покласти в ліжко" },
+    { L2: "to get to the point", ru: "сформулировать по существу", uk: "сформулювати по суті" }
+  ],
+  examples: [
+    {
+      L2: "I will bring you the book tomorrow.",
+      ru: "Я принесу тебе завтра книгу.",
+      uk: "Я принесу тобі завтра книгу."
+    }
+  ]
+},
+{
+  id: 33,
+  word: "to live",
+  ru: "жить",
+  uk: "жити",
+  level: "A1",
+  topics: ["daily", "abstract"],
+  enSynonyms: ["to reside", "to exist"],
+  ruSynonyms: ["проживать", "существовать"],
+  ukSynonyms: ["проживати", "існувати"],
+  enAntonyms: ["to die"],
+  ruAntonyms: ["умирать"],
+  ukAntonyms: ["помирати"],
+  collocations: [
+    { L2: "to live in the city", ru: "жить в городе", uk: "жити в місті" },
+    { L2: "to live well", ru: "хорошо жить", uk: "добре жити" },
+    { L2: "to live on something", ru: "жить за счёт чего-то", uk: "жити за рахунок чогось" }
+  ],
+  examples: [
+    {
+      L2: "She lives in Berlin.",
+      ru: "Она живёт в Берлине.",
+      uk: "Вона живе в Берліні."
+    }
+  ]
+},
+{
+  id: 34,
+  word: "to drive",
+  ru: "ехать",
+  uk: "їхати",
+  level: "A1",
+  topics: ["transport", "movement"],
+  enSynonyms: ["to travel"],
+  ruSynonyms: ["ездить", "путешествовать"],
+  ukSynonyms: ["їздити", "подорожувати"],
+  enAntonyms: ["to stop"],
+  ruAntonyms: ["останавливаться"],
+  ukAntonyms: ["зупинятися"],
+  collocations: [
+    { L2: "to go by car", ru: "ехать на машине", uk: "їхати на автомобілі" },
+    { L2: "to drive to work", ru: "ездить на работу", uk: "їздити на роботу" },
+    { L2: "to drive fast", ru: "ехать быстро", uk: "їхати швидко" }
+  ],
+  examples: [
+    {
+      L2: "We are driving to Munich tomorrow.",
+      ru: "Мы завтра едем в Мюнхен.",
+      uk: "Ми завтра їдемо до Мюнхена."
+    }
+  ]
+},
+{
+  id: 35,
+  word: "to mean",
+  ru: "считать",
+  uk: "вважати",
+  level: "A2",
+  topics: ["abstract", "communication"],
+  enSynonyms: ["to think", "to intend"],
+  ruSynonyms: ["полагать", "думать"],
+  ukSynonyms: ["думати", "вважати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "What do you mean?", ru: "Как ты считаешь?", uk: "Що ти вважаєш?" },
+    { L2: "to mean well", ru: "желать добра", uk: "мати добрі наміри" },
+    { L2: "it means that...", ru: "под этим имеется в виду, что...", uk: "мається на увазі, що..." }
+  ],
+  examples: [
+    {
+      L2: "What do you mean by that?",
+      ru: "Что ты этим хочешь сказать?",
+      uk: "Що ти маєш на увазі?"
+    }
+  ]
+},
+{
+  id: 36,
+  word: "to ask",
+  ru: "спрашивать",
+  uk: "питати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to inquire"],
+  ruSynonyms: ["задавать вопрос", "спрашивать"],
+  ukSynonyms: ["ставити запитання", "запитувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to ask a question", ru: "задать вопрос", uk: "поставити запитання" },
+    { L2: "to ask the way", ru: "спросить дорогу", uk: "спитати дорогу" },
+    { L2: "to ask someone for help", ru: "просить кого-то о помощи", uk: "просити когось про допомогу" }
+  ],
+  examples: [
+    {
+      L2: "I would like to ask you something.",
+      ru: "Я хочу тебя кое-что спросить.",
+      uk: "Я хочу тобі дещо спитати."
+    }
+  ]
+},
+{
+  id: 37,
+  word: "to know (someone/something)",
+  ru: "знать",
+  uk: "знати",
+  level: "A2",
+  topics: ["relationships"],
+  enSynonyms: ["to be familiar with"],
+  ruSynonyms: ["быть знакомым с", "знать лично"],
+  ukSynonyms: ["бути знайомим з", "знати особисто"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to know someone well", ru: "хорошо знать кого-то", uk: "добре знати когось" },
+    { L2: "to know each other", ru: "быть знакомыми", uk: "бути знайомими" },
+    { L2: "to know the city", ru: "знать город", uk: "знати місто" }
+  ],
+  examples: [
+    {
+      L2: "Do you know this film?",
+      ru: "Ты знаешь этот фильм?",
+      uk: "Ти знаєш цей фільм?"
+    }
+  ]
+},
+{
+  id: 38,
+  word: "to be valid",
+  ru: "считаться",
+  uk: "діяти",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to apply", "to count"],
+  ruSynonyms: ["действовать", "считаться"],
+  ukSynonyms: ["бути чинним", "вважатися"],
+  enAntonyms: ["to not apply"],
+  ruAntonyms: ["не действовать"],
+  ukAntonyms: ["не діяти"],
+  collocations: [
+    { L2: "for the rules to apply", ru: "правила действуют", uk: "правила діють" },
+    { L2: "to be considered polite", ru: "считаться вежливым", uk: "вважатися ввічливим" },
+    { L2: "to be valid for everyone", ru: "действовать для всех", uk: "діяти для всіх" }
+  ],
+  examples: [
+    {
+      L2: "The rules are valid for everyone.",
+      ru: "Правила действуют для всех.",
+      uk: "Правила діють для всіх."
+    }
+  ]
+},
+{
+  id: 39,
+  word: "to put",
+  ru: "ставить",
+  uk: "ставити",
+  level: "A2",
+  topics: ["home", "description"],
+  enSynonyms: ["to place"],
+  ruSynonyms: ["поставить", "расположить"],
+  ukSynonyms: ["поставити", "розмістити"],
+  enAntonyms: ["to remove"],
+  ruAntonyms: ["убрать", "забрать"],
+  ukAntonyms: ["забрати", "прибрати"],
+  collocations: [
+    { L2: "to ask a question", ru: "задать вопрос", uk: "поставити запитання" },
+    { L2: "to put on the shelf", ru: "поставить на полку", uk: "поставити на полицю" },
+    { L2: "to put down / to switch off", ru: "ставить, отключать", uk: "ставити, вимикати" }
+  ],
+  examples: [
+    {
+      L2: "Please put the cup on the table.",
+      ru: "Постав, пожалуйста, чашку на стол.",
+      uk: "Постав, будь ласка, чашку на стіл."
+    }
+  ]
+},
+{
+  id: 40,
+  word: "to play",
+  ru: "играть",
+  uk: "грати",
+  level: "A1",
+  topics: ["free_time"],
+  enSynonyms: ["to have fun"],
+  ruSynonyms: ["играть", "заниматься игрой"],
+  ukSynonyms: ["грати", "бавитися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to play football", ru: "играть в футбол", uk: "грати у футбол" },
+    { L2: "to play the piano", ru: "играть на пианино", uk: "грати на піаніно" },
+    { L2: "to play a role", ru: "играть роль", uk: "відігравати роль" }
+  ],
+  examples: [
+    {
+      L2: "The children are playing in the garden.",
+      ru: "Дети играют в саду.",
+      uk: "Діти грають у саду."
+    }
+  ]
+},
+{
+  id: 41,
+  word: "to work",
+  ru: "работать",
+  uk: "працювати",
+  level: "A1",
+  topics: ["work"],
+  enSynonyms: ["to be employed"],
+  ruSynonyms: ["трудиться", "работать"],
+  ukSynonyms: ["працювати", "трудитися"],
+  enAntonyms: ["to be lazy", "to not work"],
+  ruAntonyms: ["бездельничать", "не работать"],
+  ukAntonyms: ["ледарювати", "не працювати"],
+  collocations: [
+    { L2: "to work a lot", ru: "много работать", uk: "багато працювати" },
+    { L2: "to work in an office", ru: "работать в офисе", uk: "працювати в офісі" },
+    { L2: "to work on a project", ru: "работать над проектом", uk: "працювати над проєктом" }
+  ],
+  examples: [
+    {
+      L2: "I am working until six today.",
+      ru: "Я работаю сегодня до шести.",
+      uk: "Я сьогодні працюю до шостої."
+    }
+  ]
+},
+{
+  id: 42,
+  word: "to need",
+  ru: "нуждаться",
+  uk: "потребувати",
+  level: "A1",
+  topics: ["daily", "money"],
+  enSynonyms: ["to require"],
+  ruSynonyms: ["требовать", "нуждаться в"],
+  ukSynonyms: ["мати потребу в", "потребувати"],
+  enAntonyms: ["to not need"],
+  ruAntonyms: ["не нуждаться", "обходиться без"],
+  ukAntonyms: ["не потребувати", "обходитися без"],
+  collocations: [
+    { L2: "to need help", ru: "нуждаться в помощи", uk: "потребувати допомоги" },
+    { L2: "to need time", ru: "нуждаться во времени", uk: "потребувати часу" },
+    { L2: "to need money", ru: "нуждаться в деньгах", uk: "потребувати грошей" }
+  ],
+  examples: [
+    {
+      L2: "I need your help.",
+      ru: "Мне нужна твоя помощь.",
+      uk: "Мені потрібна твоя допомога."
+    }
+  ]
+},
+{
+  id: 43,
+  word: "to follow",
+  ru: "следовать",
+  uk: "слідувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to go after"],
+  ruSynonyms: ["идти следом", "подчиняться"],
+  ukSynonyms: ["йти слідом", "підкорятися"],
+  enAntonyms: ["to lead"],
+  ruAntonyms: ["вести", "возглавлять"],
+  ukAntonyms: ["вести", "очолювати"],
+  collocations: [
+    { L2: "to follow someone", ru: "следовать за кем-то", uk: "слідувати за кимось" },
+    { L2: "to follow the instructions", ru: "следовать указаниям", uk: "слідувати вказівкам" },
+    { L2: "it follows that...", ru: "из чего-то следует, что...", uk: "з чогось випливає, що..." }
+  ],
+  examples: [
+    {
+      L2: "Please follow me.",
+      ru: "Пожалуйста, следуйте за мной.",
+      uk: "Будь ласка, слідуйте за мною."
+    }
+  ]
+},
+{
+  id: 44,
+  word: "to learn",
+  ru: "учиться",
+  uk: "вчитися",
+  level: "A1",
+  topics: ["education"],
+  enSynonyms: ["to study"],
+  ruSynonyms: ["изучать", "учиться"],
+  ukSynonyms: ["вивчати", "вчитися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to learn German", ru: "учить немецкий", uk: "вчити німецьку" },
+    { L2: "to study for the exam", ru: "готовиться к экзамену", uk: "готуватися до іспиту" },
+    { L2: "to learn from mistakes", ru: "учиться на ошибках", uk: "вчитися на помилках" }
+  ],
+  examples: [
+    {
+      L2: "I am learning German.",
+      ru: "Я учу немецкий.",
+      uk: "Я вчу німецьку."
+    }
+  ]
+},
+{
+  id: 45,
+  word: "to consist (of)",
+  ru: "состоять",
+  uk: "складатися",
+  level: "B1",
+  topics: ["abstract", "education"],
+  enSynonyms: ["to be made up of"],
+  ruSynonyms: ["состоять из", "заключаться в"],
+  ukSynonyms: ["складатися з", "полягати в"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to consist of two parts", ru: "состоять из двух частей", uk: "складатися з двох частин" },
+    { L2: "to insist on something", ru: "настаивать на чём-то", uk: "наполягати на чомусь" },
+    { L2: "to pass the exam", ru: "сдать экзамен", uk: "скласти іспит" }
+  ],
+  examples: [
+    {
+      L2: "The exam consists of two parts.",
+      ru: "Экзамен состоит из двух частей.",
+      uk: "Іспит складається з двох частин."
+    }
+  ]
+},
+{
+  id: 46,
+  word: "to understand",
+  ru: "понимать",
+  uk: "розуміти",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to grasp"],
+  ruSynonyms: ["осознавать", "соображать"],
+  ukSynonyms: ["усвідомлювати", "тямити"],
+  enAntonyms: ["to misunderstand"],
+  ruAntonyms: ["неправильно понимать"],
+  ukAntonyms: ["неправильно розуміти"],
+  collocations: [
+    { L2: "to understand well", ru: "хорошо понимать", uk: "добре розуміти" },
+    { L2: "to not understand a word", ru: "ничего не понимать", uk: "нічого не розуміти" },
+    { L2: "to get along well", ru: "хорошо ладить", uk: "добре ладнати" }
+  ],
+  examples: [
+    {
+      L2: "I understand you very well.",
+      ru: "Я очень хорошо тебя понимаю.",
+      uk: "Я дуже добре тебе розумію."
+    }
+  ]
+},
+{
+  id: 47,
+  word: "to sit down",
+  ru: "садиться",
+  uk: "сідати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to take a seat"],
+  ruSynonyms: ["присаживаться", "садиться"],
+  ukSynonyms: ["присідати", "сідати"],
+  enAntonyms: ["to stand up"],
+  ruAntonyms: ["вставать"],
+  ukAntonyms: ["вставати"],
+  collocations: [
+    { L2: "to sit down at the table", ru: "садиться за стол", uk: "сісти за стіл" },
+    { L2: "to sit down next to someone", ru: "сесть рядом с кем-то", uk: "сісти поряд з кимось" },
+    { L2: "to put someone on the chair", ru: "посадить на стул", uk: "посадити на стілець" }
+  ],
+  examples: [
+    {
+      L2: "Please sit down.",
+      ru: "Пожалуйста, присядь.",
+      uk: "Сядь, будь ласка."
+    }
+  ]
+},
+{
+  id: 48,
+  word: "to get",
+  ru: "получать",
+  uk: "отримувати",
+  level: "A1",
+  topics: ["daily", "money"],
+  enSynonyms: ["to receive"],
+  ruSynonyms: ["получать", "доставать"],
+  ukSynonyms: ["отримувати", "діставати"],
+  enAntonyms: ["to give", "to lose"],
+  ruAntonyms: ["давать", "терять"],
+  ukAntonyms: ["давати", "втрачати"],
+  collocations: [
+    { L2: "to get money", ru: "получать деньги", uk: "отримувати гроші" },
+    { L2: "to get mail", ru: "получать почту", uk: "отримувати пошту" },
+    { L2: "to get into trouble", ru: "получить проблемы", uk: "мати проблеми" }
+  ],
+  examples: [
+    {
+      L2: "I am getting my salary tomorrow.",
+      ru: "Я завтра получу зарплату.",
+      uk: "Я завтра отримаю зарплату."
+    }
+  ]
+},
+{
+  id: 49,
+  word: "to start",
+  ru: "начинать",
+  uk: "починати",
+  level: "A2",
+  topics: ["time"],
+  enSynonyms: ["to begin"],
+  ruSynonyms: ["запускать", "начинать"],
+  ukSynonyms: ["розпочинати", "починати"],
+  enAntonyms: ["to finish", "to stop"],
+  ruAntonyms: ["заканчивать", "прекращать"],
+  ukAntonyms: ["закінчувати", "припиняти"],
+  collocations: [
+    { L2: "to start work", ru: "начать работу", uk: "почати роботу" },
+    { L2: "to start on time", ru: "начинаться вовремя", uk: "починатися вчасно" },
+    { L2: "to start from the beginning", ru: "начать сначала", uk: "почати спочатку" }
+  ],
+  examples: [
+    {
+      L2: "The course starts at nine o’clock.",
+      ru: "Курс начинается в девять часов.",
+      uk: "Курс починається о дев’ятій годині."
+    }
+  ]
+},
+{
+  id: 50,
+  word: "to tell",
+  ru: "рассказывать",
+  uk: "розповідати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to narrate", "to relate"],
+  ruSynonyms: ["повествовать", "излагать"],
+  ukSynonyms: ["оповідати", "описувати"],
+  enAntonyms: ["to keep secret"],
+  ruAntonyms: ["утаивать", "умалчивать"],
+  ukAntonyms: ["замовчувати"],
+  collocations: [
+    { L2: "to tell a story", ru: "рассказывать историю", uk: "розповідати історію" },
+    { L2: "to tell about something", ru: "рассказывать о чём-то", uk: "розповідати про щось" },
+    { L2: "to have a lot to tell", ru: "иметь много, что рассказать", uk: "мати багато, що розповісти" }
+  ],
+  examples: [
+    {
+      L2: "Can you tell me a story?",
+      ru: "Можешь рассказать мне историю?",
+      uk: "Можеш розповісти мені історію?"
+    }
+  ]
+},
+{
+  id: 51,
+  word: "to try",
+  ru: "пытаться",
+  uk: "намагатися",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to attempt", "to make an effort"],
+  ruSynonyms: ["стараться", "делать попытку"],
+  ukSynonyms: ["пробувати", "докладати зусиль"],
+  enAntonyms: ["to give up"],
+  ruAntonyms: ["сдаваться"],
+  ukAntonyms: ["здаватися"],
+  collocations: [
+    { L2: "to try again", ru: "попробовать ещё раз", uk: "спробувати ще раз" },
+    { L2: "to do your best", ru: "пытаться изо всех сил", uk: "намагатися з усіх сил" },
+    { L2: "to try in vain", ru: "пытаться напрасно", uk: "даремно намагатися" }
+  ],
+  examples: [
+    {
+      L2: "I try to speak German every day.",
+      ru: "Я стараюсь говорить по-немецки каждый день.",
+      uk: "Я намагаюся щодня говорити німецькою."
+    }
+  ]
+},
+{
+  id: 52,
+  word: "to write",
+  ru: "писать",
+  uk: "писати",
+  level: "A1",
+  topics: ["education", "work"],
+  enSynonyms: ["to note down", "to compose"],
+  ruSynonyms: ["записывать", "сочинять"],
+  ukSynonyms: ["записувати", "формулювати"],
+  enAntonyms: ["to erase"],
+  ruAntonyms: ["стирать", "удалять"],
+  ukAntonyms: ["стирати", "видаляти"],
+  collocations: [
+    { L2: "to write a letter", ru: "писать письмо", uk: "писати листа" },
+    { L2: "to write a message", ru: "написать сообщение", uk: "написати повідомлення" },
+    { L2: "to write neatly", ru: "писать аккуратно", uk: "писати акуратно" }
+  ],
+  examples: [
+    {
+      L2: "She is writing an email.",
+      ru: "Она пишет электронное письмо.",
+      uk: "Вона пише електронного листа."
+    }
+  ]
+},
+{
+  id: 53,
+  word: "to run",
+  ru: "бежать",
+  uk: "бігти",
+  level: "A2",
+  topics: ["movement", "health"],
+  enSynonyms: ["to jog"],
+  ruSynonyms: ["бегать", "нестись"],
+  ukSynonyms: ["бігати", "мчати"],
+  enAntonyms: ["to stop"],
+  ruAntonyms: ["останавливаться"],
+  ukAntonyms: ["зупинятися"],
+  collocations: [
+    { L2: "to run every morning", ru: "бегать каждое утро", uk: "бігати щоранку" },
+    { L2: "to run fast", ru: "бежать быстро", uk: "бігти швидко" },
+    { L2: "to run in the park", ru: "бегать в парке", uk: "бігати в парку" }
+  ],
+  examples: [
+    {
+      L2: "I run in the park every morning.",
+      ru: "Я бегаю каждое утро в парке.",
+      uk: "Я бігаю щоранку в парку."
+    }
+  ]
+},
+{
+  id: 54,
+  word: "to explain",
+  ru: "объяснять",
+  uk: "пояснювати",
+  level: "A2",
+  topics: ["education", "communication"],
+  enSynonyms: ["to clarify", "to set out"],
+  ruSynonyms: ["разъяснять", "толковать"],
+  ukSynonyms: ["роз’яснювати", "тлумачити"],
+  enAntonyms: ["to confuse"],
+  ruAntonyms: ["запутывать"],
+  ukAntonyms: ["плутати"],
+  collocations: [
+    { L2: "to explain something in detail", ru: "подробно что-то объяснить", uk: "детально щось пояснити" },
+    { L2: "to explain the difference", ru: "объяснить разницу", uk: "пояснити різницю" },
+    { L2: "to be hard to explain", ru: "быть трудно объяснимым", uk: "важко пояснюватися" }
+  ],
+  examples: [
+    {
+      L2: "Can you explain that again, please?",
+      ru: "Можешь, пожалуйста, объяснить это ещё раз?",
+      uk: "Можеш, будь ласка, пояснити це ще раз?"
+    }
+  ]
+},
+{
+  id: 55,
+  word: "to correspond (to)",
+  ru: "соответствовать",
+  uk: "відповідати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to match", "to fit"],
+  ruSynonyms: ["соответствовать", "совпадать"],
+  ukSynonyms: ["відповідати", "збігатися"],
+  enAntonyms: ["to contradict"],
+  ruAntonyms: ["противоречить"],
+  ukAntonyms: ["суперечити"],
+  collocations: [
+    { L2: "to meet expectations", ru: "соответствовать ожиданиям", uk: "відповідати очікуванням" },
+    { L2: "to correspond to reality", ru: "соответствовать реальности", uk: "відповідати реальності" },
+    { L2: "to meet the requirements", ru: "соответствовать требованиям", uk: "відповідати вимогам" }
+  ],
+  examples: [
+    {
+      L2: "The result meets my expectations.",
+      ru: "Результат соответствует моим ожиданиям.",
+      uk: "Результат відповідає моїм очікуванням."
+    }
+  ]
+},
+{
+  id: 56,
+  word: "to sit",
+  ru: "сидеть",
+  uk: "сидіти",
+  level: "A1",
+  topics: ["place"],
+  enSynonyms: ["to be seated"],
+  ruSynonyms: ["располагаться сидя", "сидеть"],
+  ukSynonyms: ["розташовуватися сидячи", "сидіти"],
+  enAntonyms: ["to stand", "to lie"],
+  ruAntonyms: ["стоять", "лежать"],
+  ukAntonyms: ["стояти", "лежати"],
+  collocations: [
+    { L2: "to sit at the table", ru: "сидеть за столом", uk: "сидіти за столом" },
+    { L2: "to sit on the train", ru: "сидеть в поезде", uk: "сидіти в поїзді" },
+    { L2: "to sit next to each other", ru: "сидеть рядом", uk: "сидіти поруч" }
+  ],
+  examples: [
+    {
+      L2: "We are sitting in a café.",
+      ru: "Мы сидим в кафе.",
+      uk: "Ми сидимо в кафе."
+    }
+  ]
+},
+{
+  id: 57,
+  word: "to pull",
+  ru: "тянуть",
+  uk: "тягнути",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to drag"],
+  ruSynonyms: ["тащить", "тянуть"],
+  ukSynonyms: ["волокти", "тягнути"],
+  enAntonyms: ["to push"],
+  ruAntonyms: ["толкать"],
+  ukAntonyms: ["штовхати"],
+  collocations: [
+    { L2: "to pull the door", ru: "тянуть дверь", uk: "тягнути двері" },
+    { L2: "to draw a card", ru: "тянуть карту", uk: "тягнути карту" },
+    { L2: "to move to a city", ru: "переезжать в город", uk: "переїжджати в місто" }
+  ],
+  examples: [
+    {
+      L2: "Don’t pull the door so hard.",
+      ru: "Не тяни так сильно дверь.",
+      uk: "Не тягни так сильно двері."
+    }
+  ]
+},
+{
+  id: 58,
+  word: "to seem",
+  ru: "казаться",
+  uk: "здаватися",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to appear"],
+  ruSynonyms: ["производить впечатление", "выглядеть"],
+  ukSynonyms: ["створювати враження", "виглядати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to seem happy", ru: "казаться счастливым", uk: "здаватися щасливим" },
+    { L2: "to seem as if ...", ru: "казаться, будто...", uk: "здаватися, ніби..." },
+    { L2: "for the sun to shine brightly", ru: "ярко светить (о солнце)", uk: "яскраво світити (про сонце)" }
+  ],
+  examples: [
+    {
+      L2: "It seems that it will be sunny today.",
+      ru: "Похоже, сегодня будет солнечно.",
+      uk: "Схоже, сьогодні буде сонячно."
+    }
+  ]
+},
+{
+  id: 59,
+  word: "to fall",
+  ru: "падать",
+  uk: "падати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to drop"],
+  ruSynonyms: ["опускаться", "сваливаться"],
+  ukSynonyms: ["опускатися", "зриватися"],
+  enAntonyms: ["to rise"],
+  ruAntonyms: ["подниматься", "взлетать"],
+  ukAntonyms: ["підніматися", "злітати"],
+  collocations: [
+    { L2: "to fall to the ground", ru: "упасть на землю", uk: "впасти на землю" },
+    { L2: "to fall into the water", ru: "упасть в воду", uk: "впасти у воду" },
+    { L2: "to fail an exam", ru: "провалить экзамен", uk: "завалити іспит" }
+  ],
+  examples: [
+    {
+      L2: "The leaves fall in autumn.",
+      ru: "Осенью падают листья.",
+      uk: "Восени падає листя."
+    }
+  ]
+},
+{
+  id: 60,
+  word: "to belong",
+  ru: "принадлежать",
+  uk: "належати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to be part of"],
+  ruSynonyms: ["относиться к", "быть собственностью"],
+  ukSynonyms: ["належати до", "бути власністю"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to belong to someone", ru: "принадлежать кому-то", uk: "належати комусь" },
+    { L2: "to belong to the family", ru: "принадлежать к семье", uk: "належати до родини" },
+    { L2: "to be part of everyday life", ru: "быть частью повседневности", uk: "належати до щоденності" }
+  ],
+  examples: [
+    {
+      L2: "The book belongs to me.",
+      ru: "Эта книга принадлежит мне.",
+      uk: "Ця книга належить мені."
+    }
+  ]
+},
+{
+  id: 61,
+  word: "to arise",
+  ru: "возникать",
+  uk: "виникати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to develop", "to come into being"],
+  ruSynonyms: ["образовываться", "формироваться"],
+  ukSynonyms: ["утворюватися", "формуватися"],
+  enAntonyms: ["to disappear"],
+  ruAntonyms: ["исчезать"],
+  ukAntonyms: ["зникати"],
+  collocations: [
+    { L2: "problems arise", ru: "возникают проблемы", uk: "виникають проблеми" },
+    { L2: "conflicts arise", ru: "возникают конфликты", uk: "виникають конфлікти" },
+    { L2: "the impression arises that ...", ru: "создаётся впечатление, что...", uk: "складається враження, що..." }
+  ],
+  examples: [
+    {
+      L2: "This is how misunderstandings arise.",
+      ru: "Так возникают недоразумения.",
+      uk: "Так виникають непорозуміння."
+    }
+  ]
+},
+{
+  id: 62,
+  word: "to meet",
+  ru: "встречать",
+  uk: "зустрічати",
+  level: "A2",
+  topics: ["relationships", "free_time"],
+  enSynonyms: ["to encounter"],
+  ruSynonyms: ["видеться", "пересекаться"],
+  ukSynonyms: ["бачитися", "зустрічатися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to meet friends", ru: "встречаться с друзьями", uk: "зустрічатися з друзями" },
+    { L2: "to make a decision", ru: "принимать решение", uk: "приймати рішення" },
+    { L2: "to meet by chance", ru: "случайно встретиться", uk: "випадково зустрітися" }
+  ],
+  examples: [
+    {
+      L2: "I meet my friends in the park.",
+      ru: "Я встречаюсь с друзьями в парке.",
+      uk: "Я зустрічаюся з друзями в парку."
+    }
+  ]
+},
+{
+  id: 63,
+  word: "to look for",
+  ru: "искать",
+  uk: "шукати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to search for"],
+  ruSynonyms: ["разыскивать", "подыскивать"],
+  ukSynonyms: ["розшукувати", "підшукувати"],
+  enAntonyms: ["to find"],
+  ruAntonyms: ["находить"],
+  ukAntonyms: ["знаходити"],
+  collocations: [
+    { L2: "to look for a flat", ru: "искать квартиру", uk: "шукати квартиру" },
+    { L2: "to look for information", ru: "искать информацию", uk: "шукати інформацію" },
+    { L2: "to have to look for a long time", ru: "быть вынужденным долго искать", uk: "мусити довго шукати" }
+  ],
+  examples: [
+    {
+      L2: "I am looking for my glasses.",
+      ru: "Я ищу свои очки.",
+      uk: "Я шукаю свої окуляри."
+    }
+  ]
+},
+{
+  id: 64,
+  word: "to lay",
+  ru: "класть",
+  uk: "класти",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: ["to put down", "to place"],
+  ruSynonyms: ["положить", "уложить"],
+  ukSynonyms: ["покласти", "розмістити"],
+  enAntonyms: ["to pick up", "to take away"],
+  ruAntonyms: ["забирать", "поднимать"],
+  ukAntonyms: ["забирати", "піднімати"],
+  collocations: [
+    { L2: "to lay on the table", ru: "класть на стол", uk: "класти на стіл" },
+    { L2: "to lie down", ru: "лечь", uk: "лігти" },
+    { L2: "to put great value on something", ru: "придавать большое значение чему-то", uk: "надавати великого значення чомусь" }
+  ],
+  examples: [
+    {
+      L2: "Please lay the phone on the table.",
+      ru: "Положи, пожалуйста, телефон на стол.",
+      uk: "Поклади, будь ласка, телефон на стіл."
+    }
+  ]
+},
+{
+  id: 65,
+  word: "to introduce",
+  ru: "представлять",
+  uk: "уявляти",
+  level: "A2",
+  topics: ["communication", "abstract"],
+  enSynonyms: ["to present", "to imagine"],
+  ruSynonyms: ["знакомить", "воображать"],
+  ukSynonyms: ["знайомити", "уявляти собі"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to imagine something", ru: "представлять себе что-то", uk: "уявляти собі щось" },
+    { L2: "to introduce yourself", ru: "представляться (назвать имя)", uk: "представлятися (назвати ім’я)" },
+    { L2: "to introduce someone", ru: "представлять кого-то", uk: "представляти когось" }
+  ],
+  examples: [
+    {
+      L2: "I just can’t imagine it.",
+      ru: "Я не могу этого представить.",
+      uk: "Я не можу цього уявити."
+    }
+  ]
+},
+{
+  id: 66,
+  word: "to act",
+  ru: "действовать",
+  uk: "діяти",
+  level: "B1",
+  topics: ["abstract", "work"],
+  enSynonyms: ["to take action", "to proceed"],
+  ruSynonyms: ["поступать", "действовать"],
+  ukSynonyms: ["чинити", "вчиняти"],
+  enAntonyms: ["to wait", "to hesitate"],
+  ruAntonyms: ["выжидать", "медлить"],
+  ukAntonyms: ["вичікувати", "баритися"],
+  collocations: [
+    { L2: "to act quickly", ru: "действовать быстро", uk: "діяти швидко" },
+    { L2: "to act responsibly", ru: "действовать ответственно", uk: "діяти відповідально" },
+    { L2: "to act out of fear", ru: "действовать из страха", uk: "діяти зі страху" }
+  ],
+  examples: [
+    {
+      L2: "You have to act quickly.",
+      ru: "Нужно действовать быстро.",
+      uk: "Потрібно діяти швидко."
+    }
+  ]
+},
+{
+  id: 67,
+  word: "to reach",
+  ru: "достигать",
+  uk: "досягати",
+  level: "B1",
+  topics: ["work", "abstract"],
+  enSynonyms: ["to achieve"],
+  ruSynonyms: ["добиваться", "дотягиваться"],
+  ukSynonyms: ["домагатися", "діставати"],
+  enAntonyms: ["to miss"],
+  ruAntonyms: ["не достигнуть", "промахнуться"],
+  ukAntonyms: ["не досягти", "промахнутися"],
+  collocations: [
+    { L2: "to reach a goal", ru: "достигать цели", uk: "досягати мети" },
+    { L2: "to be unable to reach anyone", ru: "не удаётся до кого-то дозвониться", uk: "не вдається до когось додзвонитися" },
+    { L2: "to still catch the train", ru: "успеть на поезд", uk: "встигнути на потяг" }
+  ],
+  examples: [
+    {
+      L2: "We want to reach this goal soon.",
+      ru: "Мы хотим вскоре достичь этой цели.",
+      uk: "Ми хочемо скоро досягти цієї мети."
+    }
+  ]
+},
+{
+  id: 68,
+  word: "to wear",
+  ru: "носить",
+  uk: "носити",
+  level: "A2",
+  topics: ["daily", "movement"],
+  enSynonyms: ["to carry"],
+  ruSynonyms: ["надевать", "переносить"],
+  ukSynonyms: ["мати на собі", "переносити"],
+  enAntonyms: ["to take off"],
+  ruAntonyms: ["снимать (одежду)", "оставлять"],
+  ukAntonyms: ["знімати (одяг)", "полишати"],
+  collocations: [
+    { L2: "to wear a jacket", ru: "носить куртку", uk: "носити куртку" },
+    { L2: "to bear responsibility", ru: "нести ответственность", uk: "нести відповідальність" },
+    { L2: "to carry a bag", ru: "нести сумку", uk: "нести сумку" }
+  ],
+  examples: [
+    {
+      L2: "She is wearing a blue jacket today.",
+      ru: "Сегодня на ней синяя куртка.",
+      uk: "Сьогодні на ній синя куртка."
+    }
+  ]
+},
+{
+  id: 69,
+  word: "to manage",
+  ru: "создавать",
+  uk: "створювати",
+  level: "B1",
+  topics: ["work", "abstract"],
+  enSynonyms: ["to cope", "to create"],
+  ruSynonyms: ["справляться", "создавать"],
+  ukSynonyms: ["справлятися", "створювати"],
+  enAntonyms: ["to fail"],
+  ruAntonyms: ["провалиться", "не справиться"],
+  ukAntonyms: ["зазнати поразки", "не впоратися"],
+  collocations: [
+    { L2: "to manage the work", ru: "справиться с работой", uk: "впоратися з роботою" },
+    { L2: "to create jobs", ru: "создавать рабочие места", uk: "створювати робочі місця" },
+    { L2: "to barely manage something", ru: "едва справиться с чем-то", uk: "ледве впоратися з чимось" }
+  ],
+  examples: [
+    {
+      L2: "We will manage it together.",
+      ru: "Мы справимся с этим вместе.",
+      uk: "Ми впораємося з цим разом."
+    }
+  ]
+},
+{
+  id: 70,
+  word: "to read",
+  ru: "читать",
+  uk: "читати",
+  level: "A1",
+  topics: ["education", "free_time"],
+  enSynonyms: ["to study (a text)"],
+  ruSynonyms: ["прочитывать", "изучать"],
+  ukSynonyms: ["прочитувати", "вивчати (текст)"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to read a book", ru: "читать книгу", uk: "читати книжку" },
+    { L2: "to read aloud", ru: "читать вслух", uk: "читати вголос" },
+    { L2: "to like reading", ru: "любить читать", uk: "любити читати" }
+  ],
+  examples: [
+    {
+      L2: "I like reading before sleep.",
+      ru: "Я люблю читать перед сном.",
+      uk: "Я люблю читати перед сном."
+    }
+  ]
+},
+{
+  id: 71,
+  word: "to lose",
+  ru: "терять",
+  uk: "втрачати",
+  level: "A2",
+  topics: ["daily"],
+  enSynonyms: ["to misplace"],
+  ruSynonyms: ["утрачивать", "проигрывать"],
+  ukSynonyms: ["утрачувати", "програвати"],
+  enAntonyms: ["to find", "to win"],
+  ruAntonyms: ["находить", "выигрывать"],
+  ukAntonyms: ["знаходити", "вигравати"],
+  collocations: [
+    { L2: "to lose the key", ru: "потерять ключ", uk: "загубити ключ" },
+    { L2: "to lose interest", ru: "потерять интерес", uk: "втратити інтерес" },
+    { L2: "to lose the game", ru: "проиграть игру", uk: "програти гру" }
+  ],
+  examples: [
+    {
+      L2: "I don’t want to lose my ticket.",
+      ru: "Я не хочу потерять свой билет.",
+      uk: "Я не хочу втратити свій квиток."
+    }
+  ]
+},
+{
+  id: 72,
+  word: "to represent",
+  ru: "изображать",
+  uk: "зображати",
+  level: "B1",
+  topics: ["education", "abstract"],
+  enSynonyms: ["to depict", "to illustrate"],
+  ruSynonyms: ["представлять", "символизировать"],
+  ukSynonyms: ["представляти", "символізувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to represent a problem", ru: "представлять проблему", uk: "становити проблему" },
+    { L2: "to represent something graphically", ru: "изображать графически", uk: "графічно зображати" },
+    { L2: "to represent realistically", ru: "реалистично изображать", uk: "реалістично зображати" }
+  ],
+  examples: [
+    {
+      L2: "The chart represents the results.",
+      ru: "График изображает результаты.",
+      uk: "Графік зображає результати."
+    }
+  ]
+},
+{
+  id: 73,
+  word: "to recognize",
+  ru: "узнавать",
+  uk: "розпізнавати",
+  level: "B1",
+  topics: ["senses", "abstract"],
+  enSynonyms: ["to identify"],
+  ruSynonyms: ["распознавать", "опознавать"],
+  ukSynonyms: ["ідентифікувати", "упізнавати"],
+  enAntonyms: ["to overlook"],
+  ruAntonyms: ["не замечать"],
+  ukAntonyms: ["не помічати"],
+  collocations: [
+    { L2: "to recognize someone in the photo", ru: "узнать на фото", uk: "упізнати на фото" },
+    { L2: "to see the mistake", ru: "распознать ошибку", uk: "побачити помилку" },
+    { L2: "to recognize in time", ru: "распознать вовремя", uk: "вчасно розпізнати" }
+  ],
+  examples: [
+    {
+      L2: "I recognized him immediately.",
+      ru: "Я сразу его узнал.",
+      uk: "Я відразу його впізнав."
+    }
+  ]
+},
+{
+  id: 74,
+  word: "to develop",
+  ru: "развивать",
+  uk: "розвивати",
+  level: "B1",
+  topics: ["work", "education"],
+  enSynonyms: ["to design", "to work out"],
+  ruSynonyms: ["разрабатывать", "эволюционировать (что-то)"],
+  ukSynonyms: ["розробляти", "удосконалювати"],
+  enAntonyms: ["to dismantle", "to regress"],
+  ruAntonyms: ["свертывать", "деградировать"],
+  ukAntonyms: ["згортати", "деградувати"],
+  collocations: [
+    { L2: "to develop an app", ru: "разрабатывать приложение", uk: "розробляти додаток" },
+    { L2: "to develop positively", ru: "развиваться положительно", uk: "розвиватися позитивно" },
+    { L2: "to develop a strategy", ru: "разработать стратегию", uk: "розробити стратегію" }
+  ],
+  examples: [
+    {
+      L2: "They are developing a new app.",
+      ru: "Они разрабатывают новое приложение.",
+      uk: "Вони розробляють новий додаток."
+    }
+  ]
+},
+{
+  id: 75,
+  word: "to talk",
+  ru: "разговаривать",
+  uk: "балакати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to chat"],
+  ruSynonyms: ["болтать", "разговаривать"],
+  ukSynonyms: ["розмовляти", "балакати"],
+  enAntonyms: ["to be silent"],
+  ruAntonyms: ["молчать"],
+  ukAntonyms: ["мовчати"],
+  collocations: [
+    { L2: "to talk about something", ru: "говорить о чём-то", uk: "говорити про щось" },
+    { L2: "to talk openly", ru: "говорить откровенно", uk: "говорити відверто" },
+    { L2: "to not talk for long", ru: "не говорить долго", uk: "не говорити довго" }
+  ],
+  examples: [
+    {
+      L2: "We have to talk about it.",
+      ru: "Нам нужно об этом поговорить.",
+      uk: "Нам потрібно про це поговорити."
+    }
+  ]
+},
+{
+  id: 76,
+  word: "to look",
+  ru: "выглядеть",
+  uk: "виглядати",
+  level: "A2",
+  topics: ["description"],
+  enSynonyms: ["to appear"],
+  ruSynonyms: ["выглядеть", "производить впечатление"],
+  ukSynonyms: ["виглядати", "створювати враження"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to look good", ru: "хорошо выглядеть", uk: "добре виглядати" },
+    { L2: "to look tired", ru: "выглядеть уставшим", uk: "виглядати втомленим" },
+    { L2: "to look as if ...", ru: "выглядеть так, будто...", uk: "виглядати так, ніби..." }
+  ],
+  examples: [
+    {
+      L2: "You look tired today.",
+      ru: "Ты сегодня выглядишь уставшим.",
+      uk: "Ти сьогодні виглядаєш втомленим."
+    }
+  ]
+},
+{
+  id: 77,
+  word: "to appear",
+  ru: "появляться",
+  uk: "з'являтися",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to show up", "to be published"],
+  ruSynonyms: ["появляться", "выходить (в свет)"],
+  ukSynonyms: ["з’являтися", "виходити (у світ)"],
+  enAntonyms: ["to disappear"],
+  ruAntonyms: ["исчезать"],
+  ukAntonyms: ["зникати"],
+  collocations: [
+    { L2: "to appear on the internet", ru: "появиться в интернете", uk: "з’явитися в інтернеті" },
+    { L2: "to appear regularly", ru: "выходить регулярно", uk: "виходити регулярно" },
+    { L2: "to appear suddenly", ru: "внезапно появиться", uk: "раптово з’явитися" }
+  ],
+  examples: [
+    {
+      L2: "The article appears online tomorrow.",
+      ru: "Статья выйдет онлайн завтра.",
+      uk: "Стаття з’явиться онлайн завтра."
+    }
+  ]
+},
+{
+  id: 78,
+  word: "to form",
+  ru: "образовывать",
+  uk: "формувати",
+  level: "B1",
+  topics: ["education", "grammar"],
+  enSynonyms: ["to shape", "to create"],
+  ruSynonyms: ["формировать", "создавать"],
+  ukSynonyms: ["формувати", "утворювати"],
+  enAntonyms: ["to dissolve", "to destroy"],
+  ruAntonyms: ["растворять", "разрушать"],
+  ukAntonyms: ["розчиняти", "руйнувати"],
+  collocations: [
+    { L2: "to form sentences", ru: "образовывать предложения", uk: "утворювати речення" },
+    { L2: "to form a group", ru: "образовать группу", uk: "утворити групу" },
+    { L2: "to form the perfect tense", ru: "образовывать Perfekt", uk: "утворювати Perfekt" }
+  ],
+  examples: [
+    {
+      L2: "How do you form the perfect tense?",
+      ru: "Как образуют Perfekt?",
+      uk: "Як утворюють Perfekt?"
+    }
+  ]
+},
+{
+  id: 79,
+  word: "to start",
+  ru: "начинать",
+  uk: "починати",
+  level: "A2",
+  topics: ["time"],
+  enSynonyms: ["to begin"],
+  ruSynonyms: ["приступать", "запускать"],
+  ukSynonyms: ["розпочинати", "стартувати"],
+  enAntonyms: ["to stop", "to end"],
+  ruAntonyms: ["заканчивать", "прекращать"],
+  ukAntonyms: ["закінчувати", "припиняти"],
+  collocations: [
+    { L2: "to start work", ru: "начать работу", uk: "почати роботу" },
+    { L2: "to start early", ru: "начать рано", uk: "почати рано" },
+    { L2: "to start from the beginning", ru: "начать сначала", uk: "почати спочатку" }
+  ],
+  examples: [
+    {
+      L2: "When does the film start?",
+      ru: "Когда начинается фильм?",
+      uk: "Коли починається фільм?"
+    }
+  ]
+},
+{
+  id: 80,
+  word: "to expect",
+  ru: "ожидать",
+  uk: "очікувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to anticipate"],
+  ruSynonyms: ["предполагать", "надеяться на"],
+  ukSynonyms: ["розраховувати на", "сподіватися на"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to expect a lot", ru: "много ожидать", uk: "багато очікувати" },
+    { L2: "to expect little", ru: "мало ожидать", uk: "мало очікувати" },
+    { L2: "to expect something from someone", ru: "ожидать чего-то от кого-то", uk: "очікувати чогось від когось" }
+  ],
+  examples: [
+    {
+      L2: "What do you expect from this course?",
+      ru: "Чего ты ожидаешь от этого курса?",
+      uk: "Чого ти очікуєш від цього курсу?"
+    }
+  ]
+},
+{
+  id: 81,
+  word: "to live (somewhere)",
+  ru: "жить",
+  uk: "жити",
+  level: "A1",
+  topics: ["home", "city"],
+  enSynonyms: ["to reside"],
+  ruSynonyms: ["проживать", "обитать"],
+  ukSynonyms: ["проживати", "мешкати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to live in a city", ru: "жить в городе", uk: "жити в місті" },
+    { L2: "to live in a rented flat", ru: "жить в аренде", uk: "жити в орендованому житлі" },
+    { L2: "to live together", ru: "жить вместе", uk: "жити разом" }
+  ],
+  examples: [
+    {
+      L2: "I live in a small town.",
+      ru: "Я живу в маленьком городе.",
+      uk: "Я живу в невеликому місті."
+    }
+  ]
+},
+{
+  id: 82,
+  word: "to concern",
+  ru: "касаться",
+  uk: "стосуватися",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to affect"],
+  ruSynonyms: ["затрагивать", "относиться к"],
+  ukSynonyms: ["стосуватися", "торкатися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to concern everyone", ru: "касаться всех", uk: "стосуватися всіх" },
+    { L2: "to concern only you", ru: "касаться только тебя", uk: "стосуватися лише тебе" },
+    { L2: "to be directly affected", ru: "быть непосредственно затронутым", uk: "бути безпосередньо зачепленим" }
+  ],
+  examples: [
+    {
+      L2: "This rule concerns all employees.",
+      ru: "Это правило касается всех сотрудников.",
+      uk: "Це правило стосується всіх працівників."
+    }
+  ]
+},
+{
+  id: 83,
+  word: "to wait",
+  ru: "ждать",
+  uk: "чекати",
+  level: "A1",
+  topics: ["time", "daily"],
+  enSynonyms: ["to hang on"],
+  ruSynonyms: ["подождать", "ожидать"],
+  ukSynonyms: ["зачекати", "очікувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to wait for the bus", ru: "ждать автобус", uk: "чекати на автобус" },
+    { L2: "to have to wait a long time", ru: "быть вынужденным долго ждать", uk: "мусити довго чекати" },
+    { L2: "to not be able to wait any longer", ru: "не мочь больше ждать", uk: "більше не могти чекати" }
+  ],
+  examples: [
+    {
+      L2: "We are waiting for the bus.",
+      ru: "Мы ждём автобус.",
+      uk: "Ми чекаємо на автобус."
+    }
+  ]
+},
+{
+  id: 84,
+  word: "to pass",
+  ru: "проходить",
+  uk: "минати",
+  level: "B1",
+  topics: ["time"],
+  enSynonyms: ["to go by"],
+  ruSynonyms: ["протекать", "истекать"],
+  ukSynonyms: ["спливати", "минати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "time passes quickly", ru: "Время проходит быстро.", uk: "Час минає швидко." },
+    { L2: "the day passes", ru: "День проходит", uk: "День минає" },
+    { L2: "the pain passes", ru: "Боль проходит", uk: "Біль минає" }
+  ],
+  examples: [
+    {
+      L2: "Time passes quickly.",
+      ru: "Время проходит быстро.",
+      uk: "Час минає швидко."
+    }
+  ]
+},
+{
+  id: 85,
+  word: "to help",
+  ru: "помогать",
+  uk: "допомагати",
+  level: "A1",
+  topics: ["relationships"],
+  enSynonyms: ["to support", "to assist"],
+  ruSynonyms: ["поддерживать", "выручать"],
+  ukSynonyms: ["підтримувати", "виручати"],
+  enAntonyms: ["to abandon"],
+  ruAntonyms: ["бросать в беде"],
+  ukAntonyms: ["кидати в біді"],
+  collocations: [
+    { L2: "to help someone", ru: "помогать кому-то", uk: "допомагати комусь" },
+    { L2: "to help with the housework", ru: "помогать по дому", uk: "допомагати по дому" },
+    { L2: "to like helping", ru: "охотно помогать", uk: "із задоволенням допомагати" }
+  ],
+  examples: [
+    {
+      L2: "Can you help me, please?",
+      ru: "Можешь мне, пожалуйста, помочь?",
+      uk: "Можеш, будь ласка, допомогти мені?"
+    }
+  ]
+},
+{
+  id: 86,
+  word: "to win",
+  ru: "выигрывать",
+  uk: "вигравати",
+  level: "A2",
+  topics: ["free_time", "money"],
+  enSynonyms: ["to gain"],
+  ruSynonyms: ["одержать победу", "получать (выигрыш)"],
+  ukSynonyms: ["перемагати", "отримувати (виграш)"],
+  enAntonyms: ["to lose"],
+  ruAntonyms: ["проигрывать"],
+  ukAntonyms: ["програвати"],
+  collocations: [
+    { L2: "to win a game", ru: "выиграть игру", uk: "виграти гру" },
+    { L2: "to win money", ru: "выиграть деньги", uk: "виграти гроші" },
+    { L2: "to gain importance", ru: "приобретать значение", uk: "набирати значення" }
+  ],
+  examples: [
+    {
+      L2: "Our team wants to win today.",
+      ru: "Наша команда хочет сегодня выиграть.",
+      uk: "Наша команда хоче сьогодні виграти."
+    }
+  ]
+},
+{
+  id: 87,
+  word: "to close",
+  ru: "закрывать",
+  uk: "закривати",
+  level: "A1",
+  topics: ["home", "city"],
+  enSynonyms: ["to shut", "to conclude"],
+  ruSynonyms: ["запирать", "завершать"],
+  ukSynonyms: ["зачиняти", "завершувати"],
+  enAntonyms: ["to open"],
+  ruAntonyms: ["открывать"],
+  ukAntonyms: ["відкривати"],
+  collocations: [
+    { L2: "to close the door", ru: "закрыть дверь", uk: "зачинити двері" },
+    { L2: "to close the window", ru: "закрыть окно", uk: "зачинити вікно" },
+    { L2: "to make an agreement", ru: "заключить соглашение", uk: "укласти угоду" }
+  ],
+  examples: [
+    {
+      L2: "Please close the door.",
+      ru: "Пожалуйста, закрой дверь.",
+      uk: "Будь ласка, зачинь двері."
+    }
+  ]
+},
+{
+  id: 88,
+  word: "to feel",
+  ru: "чувствовать",
+  uk: "відчувати",
+  level: "A2",
+  topics: ["feelings", "health"],
+  enSynonyms: ["to sense"],
+  ruSynonyms: ["ощущать", "испытывать"],
+  ukSynonyms: ["відчувати", "переживати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to feel good", ru: "чувствовать себя хорошо", uk: "почуватися добре" },
+    { L2: "to feel bad", ru: "чувствовать себя плохо", uk: "почуватися погано" },
+    { L2: "to feel the pain", ru: "чувствовать боль", uk: "відчувати біль" }
+  ],
+  examples: [
+    {
+      L2: "I feel better today.",
+      ru: "Я сегодня чувствую себя лучше.",
+      uk: "Я сьогодні почуваюся краще."
+    }
+  ]
+},
+{
+  id: 89,
+  word: "to offer",
+  ru: "предлагать",
+  uk: "пропонувати",
+  level: "B1",
+  topics: ["work", "money"],
+  enSynonyms: ["to provide"],
+  ruSynonyms: ["предоставлять", "предлагать"],
+  ukSynonyms: ["надавати", "пропонувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to offer a chance", ru: "давать шанс", uk: "давати шанс" },
+    { L2: "to offer opportunities", ru: "предоставлять возможности", uk: "надавати можливості" },
+    { L2: "to offer good conditions", ru: "предлагать хорошие условия", uk: "пропонувати хороші умови" }
+  ],
+  examples: [
+    {
+      L2: "The company offers good conditions.",
+      ru: "Фирма предлагает хорошие условия.",
+      uk: "Фірма пропонує хороші умови."
+    }
+  ]
+},
+{
+  id: 90,
+  word: "to interest",
+  ru: "интересовать",
+  uk: "цікавити",
+  level: "A2",
+  topics: ["free_time", "education"],
+  enSynonyms: ["to attract"],
+  ruSynonyms: ["вызывать интерес", "привлекать"],
+  ukSynonyms: ["викликати інтерес", "приваблювати"],
+  enAntonyms: ["to bore"],
+  ruAntonyms: ["наводить скуку"],
+  ukAntonyms: ["наводити нудьгу"],
+  collocations: [
+    { L2: "to be interested in something", ru: "интересоваться чем-то", uk: "цікавитися чимось" },
+    { L2: "to hardly interest", ru: "мало интересовать", uk: "мало цікавити" },
+    { L2: "to really interest", ru: "действительно интересовать", uk: "справді цікавити" }
+  ],
+  examples: [
+    {
+      L2: "The topic really interests me.",
+      ru: "Эта тема меня очень интересует.",
+      uk: "Ця тема мене дуже цікавить."
+    }
+  ]
+},
+{
+  id: 91,
+  word: "to remember",
+  ru: "помнить",
+  uk: "пам'ятати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to recall"],
+  ruSynonyms: ["вспоминать", "напоминать"],
+  ukSynonyms: ["згадувати", "нагадувати"],
+  enAntonyms: ["to forget"],
+  ruAntonyms: ["забывать"],
+  ukAntonyms: ["забувати"],
+  collocations: [
+    { L2: "to remember something", ru: "помнить что-то", uk: "пам’ятати щось" },
+    { L2: "to no longer remember", ru: "уже не помнить", uk: "вже не пам’ятати" },
+    { L2: "to remind someone of something", ru: "напомнить кому-то о чём-то", uk: "нагадати комусь про щось" }
+  ],
+  examples: [
+    {
+      L2: "I don’t remember it anymore.",
+      ru: "Я больше этого не помню.",
+      uk: "Я цього вже не пам’ятаю."
+    }
+  ]
+},
+{
+  id: 92,
+  word: "to result in",
+  ru: "давать",
+  uk: "давати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to amount to"],
+  ruSynonyms: ["давать в результате", "оборачиваться чем-то"],
+  ukSynonyms: ["давати в результаті", "обертатися чимось"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "That makes sense.", ru: "Это имеет смысл.", uk: "Це має сенс." },
+    { L2: "The bill comes to 20 euros.", ru: "Счёт составляет 20 евро.", uk: "Рахунок становить 20 євро." },
+    { L2: "to result from data", ru: "следовать из данных", uk: "випливати з даних" }
+  ],
+  examples: [
+    {
+      L2: "That doesn’t make any sense.",
+      ru: "Это не имеет смысла.",
+      uk: "Це не має сенсу."
+    }
+  ]
+},
+{
+  id: 93,
+  word: "to assume",
+  ru: "предполагать",
+  uk: "припускати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to suppose"],
+  ruSynonyms: ["допускать", "предполагать"],
+  ukSynonyms: ["здогадуватися", "припускати"],
+  enAntonyms: ["to reject"],
+  ruAntonyms: ["отклонять", "отказывать"],
+  ukAntonyms: ["відхиляти", "відмовляти"],
+  collocations: [
+    { L2: "to accept an offer", ru: "принять предложение", uk: "прийняти пропозицію" },
+    { L2: "I assume that ...", ru: "Я предполагаю, что...", uk: "Я припускаю, що..." },
+    { L2: "to accept criticism", ru: "принимать критику", uk: "приймати критику" }
+  ],
+  examples: [
+    {
+      L2: "I assume that he is right.",
+      ru: "Я предполагаю, что он прав.",
+      uk: "Я припускаю, що він має рацію."
+    }
+  ]
+},
+{
+  id: 94,
+  word: "to study",
+  ru: "изучать",
+  uk: "вивчати",
+  level: "A2",
+  topics: ["education"],
+  enSynonyms: ["to do a degree"],
+  ruSynonyms: ["учиться в вузе", "изучать"],
+  ukSynonyms: ["навчатися в університеті", "вивчати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to study at university", ru: "учиться в университете", uk: "навчатися в університеті" },
+    { L2: "to study medicine", ru: "изучать медицину", uk: "вивчати медицину" },
+    { L2: "to study abroad", ru: "учиться за границей", uk: "навчатися за кордоном" }
+  ],
+  examples: [
+    {
+      L2: "She is studying medicine.",
+      ru: "Она изучает медицину.",
+      uk: "Вона вивчає медицину."
+    }
+  ]
+},
+{
+  id: 95,
+  word: "to connect",
+  ru: "соединять",
+  uk: "з'єднувати",
+  level: "B1",
+  topics: ["abstract", "work"],
+  enSynonyms: ["to link", "to combine"],
+  ruSynonyms: ["связывать", "объединять"],
+  ukSynonyms: ["поєднувати", "об’єднувати"],
+  enAntonyms: ["to separate"],
+  ruAntonyms: ["разделять", "отделять"],
+  ukAntonyms: ["роз’єднувати", "відокремлювати"],
+  collocations: [
+    { L2: "to connect theory and practice", ru: "соединять теорию и практику", uk: "поєднувати теорію і практику" },
+    { L2: "to connect to the internet", ru: "подключаться к интернету", uk: "з’єднуватися з інтернетом" },
+    { L2: "to put someone through on the phone", ru: "соединить кого-то по телефону", uk: "з’єднати когось телефоном" }
+  ],
+  examples: [
+    {
+      L2: "This project connects theory and practice.",
+      ru: "Этот проект соединяет теорию и практику.",
+      uk: "Цей проєкт поєднує теорію і практику."
+    }
+  ]
+},
+{
+  id: 96,
+  word: "to be missing",
+  ru: "не хватать",
+  uk: "бракувати",
+  level: "A2",
+  topics: ["abstract", "feelings"],
+  enSynonyms: ["to lack"],
+  ruSynonyms: ["отсутствовать", "не доставать"],
+  ukSynonyms: ["бути відсутнім", "не вистачати"],
+  enAntonyms: ["to be available"],
+  ruAntonyms: ["иметься", "присутствовать"],
+  ukAntonyms: ["бути в наявності"],
+  collocations: [
+    { L2: "to miss someone", ru: "скучать по кому-то", uk: "сумувати за кимось" },
+    { L2: "money is missing", ru: "не хватает денег", uk: "бракує грошей" },
+    { L2: "there is a lack of time", ru: "не хватает времени", uk: "бракує часу" }
+  ],
+  examples: [
+    {
+      L2: "I miss you very much.",
+      ru: "Мне тебя очень не хватает.",
+      uk: "Мені тебе дуже бракує."
+    }
+  ]
+},
+{
+  id: 97,
+  word: "to mean",
+  ru: "значить",
+  uk: "означати",
+  level: "A2",
+  topics: ["education", "abstract"],
+  enSynonyms: ["to signify"],
+  ruSynonyms: ["означать", "иметь значение"],
+  ukSynonyms: ["мати значення", "значити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to mean a lot to me", ru: "много значить для меня", uk: "багато означати для мене" },
+    { L2: "to mean literally", ru: "буквально означать", uk: "буквально означати" },
+    { L2: "to mean very little", ru: "почти ничего не значить", uk: "майже нічого не означати" }
+  ],
+  examples: [
+    {
+      L2: "What does this word mean?",
+      ru: "Что означает это слово?",
+      uk: "Що означає це слово?"
+    }
+  ]
+},
+{
+  id: 98,
+  word: "to compare",
+  ru: "сравнивать",
+  uk: "порівнювати",
+  level: "B1",
+  topics: ["education", "abstract"],
+  enSynonyms: ["to contrast"],
+  ruSynonyms: ["сопоставлять", "сравнивать"],
+  ukSynonyms: ["зіставляти", "порівнювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    { L2: "to compare prices", ru: "сравнивать цены", uk: "порівнювати ціни" },
+    { L2: "to compare two texts", ru: "сравнивать два текста", uk: "порівнювати два тексти" },
+    { L2: "to compare yourself with others", ru: "сравнивать себя с другими", uk: "порівнювати себе з іншими" }
+  ],
+  examples: [
+    {
+      L2: "Compare the two texts.",
+      ru: "Сравните два текста.",
+      uk: "Порівняйте два тексти."
+    }
+  ]
+},
+{
+  id: 99,
+  word: "to open",
+  ru: "открывать",
+  uk: "відкривати",
+  level: "A1",
+  topics: ["home", "city"],
+  enSynonyms: ["to unlock"],
+  ruSynonyms: ["распахивать", "отпирать"],
+  ukSynonyms: ["розчиняти", "відмикати"],
+  enAntonyms: ["to close"],
+  ruAntonyms: ["закрывать"],
+  ukAntonyms: ["закривати"],
+  collocations: [
+    { L2: "to open the window", ru: "открыть окно", uk: "відкрити вікно" },
+    { L2: "to open your eyes", ru: "открыть глаза", uk: "відкрити очі" },
+    { L2: "to open a shop", ru: "открыть магазин", uk: "відкрити магазин" }
+  ],
+  examples: [
+    {
+      L2: "She opens the window.",
+      ru: "Она открывает окно.",
+      uk: "Вона відкриває вікно."
+    }
+  ]
+},
+{
+  id: 100,
+  word: "to buy",
+  ru: "покупать",
+  uk: "купувати",
+  level: "A1",
+  topics: ["money", "daily"],
+  enSynonyms: ["to purchase"],
+  ruSynonyms: ["приобретать", "закупать"],
+  ukSynonyms: ["придбавати", "закуповувати"],
+  enAntonyms: ["to sell"],
+  ruAntonyms: ["продавать"],
+  ukAntonyms: ["продавати"],
+  collocations: [
+    { L2: "to buy groceries", ru: "покупать продукты", uk: "купувати продукти" },
+    { L2: "to buy online", ru: "покупать онлайн", uk: "купувати онлайн" },
+    { L2: "to buy something cheaply", ru: "купить что-то недорого", uk: "купити щось недорого" }
+  ],
+  examples: [
+    {
+      L2: "I buy bread at the supermarket.",
+      ru: "Я покупаю хлеб в супермаркете.",
+      uk: "Я купую хліб у супермаркеті."
+    }
+  ]
+},
+{
+  id: 101,
+  word: "to use",
+  ru: "использовать",
+  uk: "використовувати",
+  level: "B1",
+  topics: ["work", "abstract"],
+  enSynonyms: ["to make use of", "to apply"],
+  ruSynonyms: ["использовать", "применять"],
+  ukSynonyms: ["використовувати", "застосовувати"],
+  enAntonyms: ["to waste"],
+  ruAntonyms: ["растрачивать", "тратить впустую"],
+  ukAntonyms: ["марнувати", "витрачати даремно"],
+  collocations: [
+    {
+      L2: "to seize an opportunity",
+      ru: "воспользоваться шансом",
+      uk: "скористатися шансом"
+    },
+    {
+      L2: "to use time wisely",
+      ru: "разумно использовать время",
+      uk: "раціонально використовувати час"
+    }
+  ],
+  examples: [
+    {
+      L2: "We use the time wisely.",
+      ru: "Мы используем время с пользой.",
+      uk: "Ми корисно використовуємо час."
+    }
+  ]
+},
+{
+  id: 102,
+  word: "to pay",
+  ru: "платить",
+  uk: "платити",
+  level: "A1",
+  topics: ["money", "shopping"],
+  enSynonyms: ["to pay for"],
+  ruSynonyms: ["платить", "оплачивать"],
+  ukSynonyms: ["платити", "оплачувати"],
+  enAntonyms: ["to owe"],
+  ruAntonyms: ["задолжать", "быть должным"],
+  ukAntonyms: ["заборгувати", "бути винним"],
+  collocations: [
+    {
+      L2: "to pay the rent",
+      ru: "платить за аренду",
+      uk: "платити за оренду"
+    },
+    {
+      L2: "to pay in cash",
+      ru: "платить наличными",
+      uk: "платити готівкою"
+    }
+  ],
+  examples: [
+    {
+      L2: "I have to pay the rent today.",
+      ru: "Мне нужно сегодня заплатить за аренду.",
+      uk: "Мені потрібно сьогодні заплатити за оренду."
+    }
+  ]
+},
+{
+  id: 103,
+  word: "to travel",
+  ru: "путешествовать",
+  uk: "подорожувати",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: ["to go on a trip"],
+  ruSynonyms: ["путешествовать", "ездить"],
+  ukSynonyms: ["подорожувати", "їздити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to travel by train",
+      ru: "путешествовать на поезде",
+      uk: "подорожувати поїздом"
+    },
+    {
+      L2: "to travel around the world",
+      ru: "путешествовать по миру",
+      uk: "подорожувати світом"
+    }
+  ],
+  examples: [
+    {
+      L2: "We like traveling in summer.",
+      ru: "Мы любим путешествовать летом.",
+      uk: "Ми любимо подорожувати влітку."
+    }
+  ]
+},
+{
+  id: 104,
+  word: "to cook",
+  ru: "готовить",
+  uk: "готувати",
+  level: "A1",
+  topics: ["food", "home"],
+  enSynonyms: ["to prepare food"],
+  ruSynonyms: ["готовить", "варить"],
+  ukSynonyms: ["готувати", "варити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to cook lunch",
+      ru: "готовить обед",
+      uk: "готувати обід"
+    },
+    {
+      L2: "to cook for the family",
+      ru: "готовить для семьи",
+      uk: "готувати для родини"
+    }
+  ],
+  examples: [
+    {
+      L2: "I am cooking pasta today.",
+      ru: "Я сегодня готовлю макароны.",
+      uk: "Я сьогодні готую макарони."
+    }
+  ]
+},
+{
+  id: 105,
+  word: "to eat",
+  ru: "есть",
+  uk: "їсти",
+  level: "A1",
+  topics: ["food"],
+  enSynonyms: ["to dine"],
+  ruSynonyms: ["есть", "кушать"],
+  ukSynonyms: ["їсти", "споживати їжу"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to have dinner",
+      ru: "ужинать",
+      uk: "вечеряти"
+    },
+    {
+      L2: "to eat together",
+      ru: "есть вместе",
+      uk: "їсти разом"
+    }
+  ],
+  examples: [
+    {
+      L2: "We have dinner together.",
+      ru: "Мы ужинаем вместе.",
+      uk: "Ми вечеряємо разом."
+    }
+  ]
+},
+{
+  id: 106,
+  word: "to drink",
+  ru: "пить",
+  uk: "пити",
+  level: "A1",
+  topics: ["food"],
+  enSynonyms: [],
+  ruSynonyms: ["пить", "употреблять напитки"],
+  ukSynonyms: ["пити", "уживати напої"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to drink coffee",
+      ru: "пить кофе",
+      uk: "пити каву"
+    },
+    {
+      L2: "to drink enough water",
+      ru: "пить достаточно воды",
+      uk: "пити достатньо води"
+    }
+  ],
+  examples: [
+    {
+      L2: "He drinks coffee in the morning.",
+      ru: "Он пьёт по утрам кофе.",
+      uk: "Він вранці п’є каву."
+    }
+  ]
+},
+{
+  id: 107,
+  word: "to sleep",
+  ru: "спать",
+  uk: "спати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to rest"],
+  ruSynonyms: ["спать", "дремать"],
+  ukSynonyms: ["спати", "дрімати"],
+  enAntonyms: ["to be awake"],
+  ruAntonyms: ["не спать", "бодрствовать"],
+  ukAntonyms: ["не спати", "бути бадьорим"],
+  collocations: [
+    {
+      L2: "to sleep deeply",
+      ru: "крепко спать",
+      uk: "міцно спати"
+    },
+    {
+      L2: "to sleep enough",
+      ru: "достаточно спать",
+      uk: "достатньо спати"
+    }
+  ],
+  examples: [
+    {
+      L2: "The baby is sleeping deeply.",
+      ru: "Младенец спит крепко.",
+      uk: "Немовля міцно спить."
+    }
+  ]
+},
+{
+  id: 108,
+  word: "to get up",
+  ru: "вставать",
+  uk: "вставати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: [],
+  ruSynonyms: ["вставать", "подниматься"],
+  ukSynonyms: ["вставати", "підніматися"],
+  enAntonyms: ["to lie down"],
+  ruAntonyms: ["ложиться", "лечь"],
+  ukAntonyms: ["лягати", "лягти"],
+  collocations: [
+    {
+      L2: "to get up early",
+      ru: "рано вставать",
+      uk: "рано вставати"
+    },
+    {
+      L2: "to struggle to get up",
+      ru: "с трудом вставать",
+      uk: "насилу вставати"
+    }
+  ],
+  examples: [
+    {
+      L2: "I get up at seven o’clock.",
+      ru: "Я встаю в семь часов.",
+      uk: "Я встаю о сьомій годині."
+    }
+  ]
+},
+{
+  id: 109,
+  word: "to finish",
+  ru: "заканчивать",
+  uk: "закінчувати",
+  level: "A2",
+  topics: ["work", "school"],
+  enSynonyms: ["to complete"],
+  ruSynonyms: ["заканчивать", "завершать"],
+  ukSynonyms: ["закінчувати", "завершувати"],
+  enAntonyms: ["to begin", "to start"],
+  ruAntonyms: ["начинать"],
+  ukAntonyms: ["починати"],
+  collocations: [
+    {
+      L2: "to finish a project",
+      ru: "закончить проект",
+      uk: "закінчити проєкт"
+    },
+    {
+      L2: "to end a conversation",
+      ru: "закончить разговор",
+      uk: "закінчити розмову"
+    }
+  ],
+  examples: [
+    {
+      L2: "We finish the meeting at four.",
+      ru: "Мы заканчиваем встречу в четыре.",
+      uk: "Ми закінчуємо зустріч о четвертій."
+    }
+  ]
+},
+{
+  id: 110,
+  word: "to send",
+  ru: "посылать",
+  uk: "надсилати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to dispatch"],
+  ruSynonyms: ["посылать", "отправлять"],
+  ukSynonyms: ["надсилати", "відправляти"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to send an email",
+      ru: "послать электронное письмо",
+      uk: "надіслати електронного листа"
+    },
+    {
+      L2: "to send a parcel",
+      ru: "послать посылку",
+      uk: "надіслати посилку"
+    }
+  ],
+  examples: [
+    {
+      L2: "I will send you the email later.",
+      ru: "Я отправлю тебе письмо позже.",
+      uk: "Я надішлю тобі лист пізніше."
+    }
+  ]
+},
+{
+  id: 111,
+  word: "to receive",
+  ru: "принимать",
+  uk: "приймати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to welcome"],
+  ruSynonyms: ["принимать", "встречать"],
+  ukSynonyms: ["приймати", "зустрічати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to receive guests",
+      ru: "принимать гостей",
+      uk: "приймати гостей"
+    },
+    {
+      L2: "to receive a signal",
+      ru: "принимать сигнал",
+      uk: "приймати сигнал"
+    }
+  ],
+  examples: [
+    {
+      L2: "The hotel can welcome many guests.",
+      ru: "Отель может принять много гостей.",
+      uk: "Готель може прийняти багато гостей."
+    }
+  ]
+},
+{
+  id: 112,
+  word: "to dance",
+  ru: "танцевать",
+  uk: "танцювати",
+  level: "A1",
+  topics: ["hobby"],
+  enSynonyms: [],
+  ruSynonyms: ["танцевать"],
+  ukSynonyms: ["танцювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to dance to the music",
+      ru: "танцевать под музыку",
+      uk: "танцювати під музику"
+    },
+    {
+      L2: "to dance all night",
+      ru: "танцевать всю ночь",
+      uk: "танцювати всю ніч"
+    }
+  ],
+  examples: [
+    {
+      L2: "She loves dancing.",
+      ru: "Она очень любит танцевать.",
+      uk: "Вона дуже любить танцювати."
+    }
+  ]
+},
+{
+  id: 113,
+  word: "to sing",
+  ru: "петь",
+  uk: "співати",
+  level: "A1",
+  topics: ["hobby"],
+  enSynonyms: [],
+  ruSynonyms: ["петь"],
+  ukSynonyms: ["співати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to sing in a choir",
+      ru: "петь в хоре",
+      uk: "співати в хорі"
+    },
+    {
+      L2: "to sing loudly",
+      ru: "громко петь",
+      uk: "голосно співати"
+    }
+  ],
+  examples: [
+    {
+      L2: "He sings in a band.",
+      ru: "Он поёт в группе.",
+      uk: "Він співає в гурті."
+    }
+  ]
+},
+{
+  id: 114,
+  word: "to hear",
+  ru: "слышать",
+  uk: "чути",
+  level: "A1",
+  topics: ["senses"],
+  enSynonyms: ["to listen"],
+  ruSynonyms: ["слышать", "слушать"],
+  ukSynonyms: ["чути", "слухати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to listen to music",
+      ru: "слушать музыку",
+      uk: "слухати музику"
+    },
+    {
+      L2: "to listen carefully",
+      ru: "внимательно прислушаться",
+      uk: "уважно прислухатися"
+    }
+  ],
+  examples: [
+    {
+      L2: "I can hear your voice.",
+      ru: "Я слышу твой голос.",
+      uk: "Я чую твій голос."
+    }
+  ]
+},
+{
+  id: 115,
+  word: "to watch",
+  ru: "смотреть",
+  uk: "дивитися",
+  level: "A1",
+  topics: ["senses"],
+  enSynonyms: ["to see"],
+  ruSynonyms: ["смотреть", "глядеть"],
+  ukSynonyms: ["дивитися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to watch a film",
+      ru: "смотреть фильм",
+      uk: "дивитися фільм"
+    },
+    {
+      L2: "to look out of the window",
+      ru: "смотреть в окно",
+      uk: "дивитися у вікно"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are watching a film.",
+      ru: "Мы смотрим фильм.",
+      uk: "Ми дивимося фільм."
+    }
+  ]
+},
+{
+  id: 116,
+  word: "to teach",
+  ru: "преподавать",
+  uk: "викладати",
+  level: "B1",
+  topics: ["education"],
+  enSynonyms: ["to instruct"],
+  ruSynonyms: ["преподавать", "обучать"],
+  ukSynonyms: ["викладати", "навчати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to teach German",
+      ru: "преподавать немецкий",
+      uk: "викладати німецьку"
+    },
+    {
+      L2: "to teach at a school",
+      ru: "преподавать в школе",
+      uk: "викладати в школі"
+    }
+  ],
+  examples: [
+    {
+      L2: "She teaches German at a school.",
+      ru: "Она преподаёт немецкий в школе.",
+      uk: "Вона викладає німецьку в школі."
+    }
+  ]
+},
+{
+  id: 117,
+  word: "to check",
+  ru: "проверять",
+  uk: "перевіряти",
+  level: "A2",
+  topics: ["school", "work"],
+  enSynonyms: ["to examine"],
+  ruSynonyms: ["проверять", "контролировать"],
+  ukSynonyms: ["перевіряти", "контролювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to check the results",
+      ru: "проверять результаты",
+      uk: "перевіряти результати"
+    },
+    {
+      L2: "to check the blood pressure",
+      ru: "проверять давление",
+      uk: "перевіряти тиск"
+    }
+  ],
+  examples: [
+    {
+      L2: "The doctor is checking the blood pressure.",
+      ru: "Врач проверяет давление.",
+      uk: "Лікар перевіряє тиск."
+    }
+  ]
+},
+{
+  id: 118,
+  word: "to earn",
+  ru: "зарабатывать",
+  uk: "заробляти",
+  level: "A2",
+  topics: ["money", "work"],
+  enSynonyms: [],
+  ruSynonyms: ["зарабатывать", "получать доход"],
+  ukSynonyms: ["заробляти", "отримувати дохід"],
+  enAntonyms: ["to spend money", "to lose money"],
+  ruAntonyms: ["тратить деньги", "терять деньги"],
+  ukAntonyms: ["витрачати гроші", "губити гроші"],
+  collocations: [
+    {
+      L2: "to earn money",
+      ru: "зарабатывать деньги",
+      uk: "заробляти гроші"
+    },
+    {
+      L2: "to earn well",
+      ru: "хорошо зарабатывать",
+      uk: "добре заробляти"
+    }
+  ],
+  examples: [
+    {
+      L2: "He earns quite well.",
+      ru: "Он неплохо зарабатывает.",
+      uk: "Він непогано заробляє."
+    }
+  ]
+},
+{
+  id: 119,
+  word: "to save (money)",
+  ru: "экономить",
+  uk: "заощаджувати",
+  level: "A2",
+  topics: ["money"],
+  enSynonyms: [],
+  ruSynonyms: ["экономить", "копить"],
+  ukSynonyms: ["заощаджувати", "накопичувати"],
+  enAntonyms: ["to spend", "to waste"],
+  ruAntonyms: ["тратить", "разбрасываться"],
+  ukAntonyms: ["витрачати", "марнувати"],
+  collocations: [
+    {
+      L2: "to save money",
+      ru: "экономить деньги",
+      uk: "заощаджувати гроші"
+    },
+    {
+      L2: "to save for a car",
+      ru: "копить на машину",
+      uk: "заощаджувати на авто"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are saving money for a car.",
+      ru: "Мы копим деньги на машину.",
+      uk: "Ми заощаджуємо гроші на авто."
+    }
+  ]
+},
+{
+  id: 120,
+  word: "to invest",
+  ru: "инвестировать",
+  uk: "інвестувати",
+  level: "B1",
+  topics: ["money"],
+  enSynonyms: ["to put money into"],
+  ruSynonyms: ["инвестировать", "вкладывать"],
+  ukSynonyms: ["інвестувати", "вкладати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to invest money in stocks",
+      ru: "инвестировать деньги в акции",
+      uk: "інвестувати гроші в акції"
+    },
+    {
+      L2: "to invest in start-ups",
+      ru: "инвестировать в стартапы",
+      uk: "інвестувати у стартапи"
+    }
+  ],
+  examples: [
+    {
+      L2: "They invest in start-ups.",
+      ru: "Они инвестируют в стартапы.",
+      uk: "Вони інвестують у стартапи."
+    }
+  ]
+},
+{
+  id: 121,
+  word: "to sell",
+  ru: "продавать",
+  uk: "продавати",
+  level: "A1",
+  topics: ["shopping"],
+  enSynonyms: [],
+  ruSynonyms: ["продавать", "реализовывать"],
+  ukSynonyms: ["продавати", "реалізовувати"],
+  enAntonyms: ["to buy"],
+  ruAntonyms: ["покупать"],
+  ukAntonyms: ["купувати"],
+  collocations: [
+    {
+      L2: "to sell something online",
+      ru: "продавать что-то онлайн",
+      uk: "продавати щось онлайн"
+    },
+    {
+      L2: "to sell your old bike",
+      ru: "продать свой старый велосипед",
+      uk: "продати свій старий велосипед"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is selling his old bike.",
+      ru: "Он продаёт свой старый велосипед.",
+      uk: "Він продає свій старий велосипед."
+    }
+  ]
+},
+{
+  id: 122,
+  word: "to rent",
+  ru: "арендовать",
+  uk: "орендувати",
+  level: "A2",
+  topics: ["home", "travel"],
+  enSynonyms: [],
+  ruSynonyms: ["арендовать", "снимать"],
+  ukSynonyms: ["орендувати", "знімати"],
+  enAntonyms: ["to rent out"],
+  ruAntonyms: ["сдавать в аренду"],
+  ukAntonyms: ["здавати в оренду"],
+  collocations: [
+    {
+      L2: "to rent a flat",
+      ru: "снимать квартиру",
+      uk: "орендувати квартиру"
+    },
+    {
+      L2: "to rent a car",
+      ru: "арендовать машину",
+      uk: "орендувати авто"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are renting a car for the weekend.",
+      ru: "Мы арендуем машину на выходные.",
+      uk: "Ми орендуємо авто на вихідні."
+    }
+  ]
+},
+{
+  id: 123,
+  word: "to rent out",
+  ru: "сдавать",
+  uk: "здавати",
+  level: "A2",
+  topics: ["home"],
+  enSynonyms: [],
+  ruSynonyms: ["сдавать в аренду"],
+  ukSynonyms: ["здавати в оренду"],
+  enAntonyms: ["to rent"],
+  ruAntonyms: ["арендовать", "снимать"],
+  ukAntonyms: ["орендувати", "знімати"],
+  collocations: [
+    {
+      L2: "to rent out a flat",
+      ru: "сдавать квартиру",
+      uk: "здавати квартиру"
+    },
+    {
+      L2: "to rent out a room",
+      ru: "сдавать комнату",
+      uk: "здавати кімнату"
+    }
+  ],
+  examples: [
+    {
+      L2: "They are renting out their flat.",
+      ru: "Они сдают свою квартиру.",
+      uk: "Вони здають свою квартиру."
+    }
+  ]
+},
+{
+  id: 124,
+  word: "to build",
+  ru: "строить",
+  uk: "будувати",
+  level: "A2",
+  topics: ["construction"],
+  enSynonyms: [],
+  ruSynonyms: ["строить", "возводить"],
+  ukSynonyms: ["будувати", "зводити"],
+  enAntonyms: ["to demolish"],
+  ruAntonyms: ["сносить"],
+  ukAntonyms: ["зносити"],
+  collocations: [
+    {
+      L2: "to build a house",
+      ru: "строить дом",
+      uk: "будувати будинок"
+    },
+    {
+      L2: "to build a bridge",
+      ru: "строить мост",
+      uk: "будувати міст"
+    }
+  ],
+  examples: [
+    {
+      L2: "They are building a new house.",
+      ru: "Они строят новый дом.",
+      uk: "Вони будують новий будинок."
+    }
+  ]
+},
+{
+  id: 125,
+  word: "to repair",
+  ru: "ремонтировать",
+  uk: "ремонтувати",
+  level: "A2",
+  topics: ["home", "tools"],
+  enSynonyms: ["to fix"],
+  ruSynonyms: ["ремонтировать", "чинить"],
+  ukSynonyms: ["ремонтувати", "лагодити"],
+  enAntonyms: ["to break", "to damage"],
+  ruAntonyms: ["ломать", "повреждать"],
+  ukAntonyms: ["ламати", "пошкоджувати"],
+  collocations: [
+    {
+      L2: "to repair a car",
+      ru: "ремонтировать машину",
+      uk: "ремонтувати авто"
+    },
+    {
+      L2: "to repair the computer",
+      ru: "ремонтировать компьютер",
+      uk: "ремонтувати комп’ютер"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is repairing the computer.",
+      ru: "Он ремонтирует компьютер.",
+      uk: "Він ремонтує комп’ютер."
+    }
+  ]
+},
+{
+  id: 126,
+  word: "to clean",
+  ru: "убирать",
+  uk: "прибирати",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: ["to clean thoroughly"],
+  ruSynonyms: ["убирать", "чистить"],
+  ukSynonyms: ["прибирати", "чистити"],
+  enAntonyms: ["to make dirty"],
+  ruAntonyms: ["загрязнять", "мусорить"],
+  ukAntonyms: ["бруднити", "засмічувати"],
+  collocations: [
+    {
+      L2: "to clean the flat",
+      ru: "убирать квартиру",
+      uk: "прибирати квартиру"
+    },
+    {
+      L2: "to clean the windows",
+      ru: "мыть окна",
+      uk: "мити вікна"
+    }
+  ],
+  examples: [
+    {
+      L2: "I clean the flat every Saturday.",
+      ru: "Я убираю квартиру каждую субботу.",
+      uk: "Я щосуботи прибираю квартиру."
+    }
+  ]
+},
+{
+  id: 127,
+  word: "to wash",
+  ru: "стирать",
+  uk: "прати",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: [],
+  ruSynonyms: ["стирать", "мыть"],
+  ukSynonyms: ["прати", "мити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to wash the clothes",
+      ru: "стирать одежду",
+      uk: "прати одяг"
+    },
+    {
+      L2: "to wash your hands",
+      ru: "мыть руки",
+      uk: "мити руки"
+    }
+  ],
+  examples: [
+    {
+      L2: "She is washing the clothes.",
+      ru: "Она стирает одежду.",
+      uk: "Вона пере одяг."
+    }
+  ]
+},
+{
+  id: 128,
+  word: "to end",
+  ru: "заканчиваться",
+  uk: "закінчуватися",
+  level: "A2",
+  topics: ["abstract", "time"],
+  enSynonyms: ["to come to an end"],
+  ruSynonyms: ["заканчиваться", "завершаться"],
+  ukSynonyms: ["закінчуватися", "завершуватися"],
+  enAntonyms: ["to begin", "to start"],
+  ruAntonyms: ["начинаться"],
+  ukAntonyms: ["починатися"],
+  collocations: [
+    {
+      L2: "The film ends at nine o’clock.",
+      ru: "Фильм заканчивается в девять.",
+      uk: "Фільм закінчується о дев’ятій."
+    },
+    {
+      L2: "the year comes to an end",
+      ru: "год заканчивается",
+      uk: "рік закінчується"
+    }
+  ],
+  examples: [
+    {
+      L2: "The film ends at nine o’clock.",
+      ru: "Фильм заканчивается в девять.",
+      uk: "Фільм закінчується о дев’ятій."
+    }
+  ]
+},
+{
+  id: 129,
+  word: "to fly",
+  ru: "лететь",
+  uk: "летіти",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: [],
+  ruSynonyms: ["лететь", "путешествовать самолётом"],
+  ukSynonyms: ["летіти", "подорожувати літаком"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to fly to Berlin",
+      ru: "лететь в Берлин",
+      uk: "летіти до Берліна"
+    },
+    {
+      L2: "to fly by plane",
+      ru: "лететь на самолёте",
+      uk: "летіти літаком"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are flying to Berlin.",
+      ru: "Мы летим в Берлин.",
+      uk: "Ми летимо до Берліна."
+    }
+  ]
+},
+{
+  id: 130,
+  word: "to return",
+  ru: "возвращаться",
+  uk: "повертатися",
+  level: "B1",
+  topics: ["travel"],
+  enSynonyms: ["to come back"],
+  ruSynonyms: ["возвращаться"],
+  ukSynonyms: ["повертатися"],
+  enAntonyms: ["to go away", "to leave"],
+  ruAntonyms: ["уходить", "уезжать"],
+  ukAntonyms: ["йти геть", "виїжджати"],
+  collocations: [
+    {
+      L2: "to return home",
+      ru: "возвращаться домой",
+      uk: "повертатися додому"
+    },
+    {
+      L2: "to return to your homeland",
+      ru: "вернуться на родину",
+      uk: "повернутися на батьківщину"
+    }
+  ],
+  examples: [
+    {
+      L2: "She is coming back tomorrow.",
+      ru: "Она возвращается завтра.",
+      uk: "Вона повертається завтра."
+    }
+  ]
+},
+{
+  id: 131,
+  word: "to hope",
+  ru: "надеяться",
+  uk: "сподіватися",
+  level: "A2",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["надеяться"],
+  ukSynonyms: ["сподіватися"],
+  enAntonyms: ["to despair"],
+  ruAntonyms: ["отчаиваться"],
+  ukAntonyms: ["відчайдушно зневірюватися"],
+  collocations: [
+    {
+      L2: "to hope for good weather",
+      ru: "надеяться на хорошую погоду",
+      uk: "сподіватися на гарну погоду"
+    },
+    {
+      L2: "to hope for help",
+      ru: "надеяться на помощь",
+      uk: "сподіватися на допомогу"
+    }
+  ],
+  examples: [
+    {
+      L2: "I hope for good weather.",
+      ru: "Я надеюсь на хорошую погоду.",
+      uk: "Я сподіваюся на хорошу погоду."
+    }
+  ]
+},
+{
+  id: 132,
+  word: "to love",
+  ru: "любить",
+  uk: "кохати",
+  level: "A1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["любить", "обожать"],
+  ukSynonyms: ["кохати", "любити"],
+  enAntonyms: ["to hate"],
+  ruAntonyms: ["ненавидеть"],
+  ukAntonyms: ["ненавидіти"],
+  collocations: [
+    {
+      L2: "to love someone with all your heart",
+      ru: "искренне кого-то любить",
+      uk: "щиро когось кохати"
+    },
+    {
+      L2: "to love your country",
+      ru: "любить свою страну",
+      uk: "любити свою країну"
+    }
+  ],
+  examples: [
+    {
+      L2: "They love each other very much.",
+      ru: "Они очень любят друг друга.",
+      uk: "Вони дуже кохають одне одного."
+    }
+  ]
+},
+{
+  id: 133,
+  word: "to hate",
+  ru: "ненавидеть",
+  uk: "ненавидіти",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["ненавидеть", "терпеть не мочь"],
+  ukSynonyms: ["ненавидіти", "терпіти не могти"],
+  enAntonyms: ["to love", "to like"],
+  ruAntonyms: ["любить", "нравиться"],
+  ukAntonyms: ["кохати", "подобатися"],
+  collocations: [
+    {
+      L2: "to hate traffic jams",
+      ru: "ненавидеть пробки",
+      uk: "ненавидіти затори"
+    },
+    {
+      L2: "to hate waiting",
+      ru: "ненавидеть ждать",
+      uk: "ненавидіти чекати"
+    }
+  ],
+  examples: [
+    {
+      L2: "He hates long queues.",
+      ru: "Он ненавидит длинные очереди.",
+      uk: "Він ненавидить довгі черги."
+    }
+  ]
+},
+{
+  id: 134,
+  word: "to fear",
+  ru: "бояться",
+  uk: "боятися",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to be afraid", "to worry"],
+  ruSynonyms: ["бояться", "опасаться"],
+  ukSynonyms: ["боятися", "побоюватися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to fear the dark",
+      ru: "бояться темноты",
+      uk: "боятися темряви"
+    },
+    {
+      L2: "to fear for the future",
+      ru: "бояться за будущее",
+      uk: "боятися за майбутнє"
+    }
+  ],
+  examples: [
+    {
+      L2: "The child is afraid of the dark.",
+      ru: "Ребёнок боится темноты.",
+      uk: "Дитина боїться темряви."
+    }
+  ]
+},
+{
+  id: 135,
+  word: "to laugh",
+  ru: "смеяться",
+  uk: "сміятися",
+  level: "A1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["смеяться", "хохотать"],
+  ukSynonyms: ["сміятися", "реготати"],
+  enAntonyms: ["to cry"],
+  ruAntonyms: ["плакать"],
+  ukAntonyms: ["плакати"],
+  collocations: [
+    {
+      L2: "to laugh at a joke",
+      ru: "смеяться над шуткой",
+      uk: "сміятися з жарту"
+    },
+    {
+      L2: "to laugh loudly",
+      ru: "громко смеяться",
+      uk: "голосно сміятися"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are laughing at the joke.",
+      ru: "Мы смеёмся над шуткой.",
+      uk: "Ми сміємося з жарту."
+    }
+  ]
+},
+{
+  id: 136,
+  word: "to cry",
+  ru: "плакать",
+  uk: "плакати",
+  level: "A1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["плакать", "рыдать"],
+  ukSynonyms: ["плакати", "ридати"],
+  enAntonyms: ["to laugh"],
+  ruAntonyms: ["смеяться"],
+  ukAntonyms: ["сміятися"],
+  collocations: [
+    {
+      L2: "to cry with joy",
+      ru: "плакать от радости",
+      uk: "плакати від радості"
+    },
+    {
+      L2: "to cry quietly",
+      ru: "тихо плакать",
+      uk: "тихо плакати"
+    }
+  ],
+  examples: [
+    {
+      L2: "She is crying with joy.",
+      ru: "Она плачет от радости.",
+      uk: "Вона плаче від радості."
+    }
+  ]
+},
+{
+  id: 137,
+  word: "to smile",
+  ru: "улыбаться",
+  uk: "усміхатися",
+  level: "A1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: ["улыбаться", "усмехаться"],
+  ukSynonyms: ["усміхатися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to smile in a friendly way",
+      ru: "дружелюбно улыбаться",
+      uk: "приязно усміхатися"
+    },
+    {
+      L2: "to smile at someone",
+      ru: "улыбнуться кому-то",
+      uk: "усміхнутися комусь"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is smiling kindly.",
+      ru: "Он дружелюбно улыбается.",
+      uk: "Він приязно усміхається."
+    }
+  ]
+},
+{
+  id: 138,
+  word: "to argue",
+  ru: "ссориться",
+  uk: "сваритися",
+  level: "B1",
+  topics: ["feelings", "communication"],
+  enSynonyms: ["to have a dispute"],
+  ruSynonyms: ["ссориться", "ругаться"],
+  ukSynonyms: ["сваритися", "конфліктувати"],
+  enAntonyms: ["to make up"],
+  ruAntonyms: ["мириться"],
+  ukAntonyms: ["миритися"],
+  collocations: [
+    {
+      L2: "to argue about little things",
+      ru: "ссориться из-за мелочей",
+      uk: "сваритися через дрібниці"
+    },
+    {
+      L2: "to argue fiercely",
+      ru: "сильно ссориться",
+      uk: "сильно сваритися"
+    }
+  ],
+  examples: [
+    {
+      L2: "They often argue about little things.",
+      ru: "Они часто ссорятся из-за мелочей.",
+      uk: "Вони часто сваряться через дрібниці."
+    }
+  ]
+},
+{
+  id: 139,
+  word: "to sit",
+  ru: "сидеть",
+  uk: "сидіти",
+  level: "A1",
+  topics: ["position"],
+  enSynonyms: [],
+  ruSynonyms: ["сидеть"],
+  ukSynonyms: ["сидіти"],
+  enAntonyms: ["to stand"],
+  ruAntonyms: ["стоять"],
+  ukAntonyms: ["стояти"],
+  collocations: [
+    {
+      L2: "to sit at the table",
+      ru: "сидеть за столом",
+      uk: "сидіти за столом"
+    },
+    {
+      L2: "to sit in the garden",
+      ru: "сидеть в саду",
+      uk: "сидіти в саду"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are sitting in the garden.",
+      ru: "Мы сидим в саду.",
+      uk: "Ми сидимо в саду."
+    }
+  ]
+},
+{
+  id: 140,
+  word: "to stand",
+  ru: "стоять",
+  uk: "стояти",
+  level: "A1",
+  topics: ["position"],
+  enSynonyms: [],
+  ruSynonyms: ["стоять"],
+  ukSynonyms: ["стояти"],
+  enAntonyms: ["to sit", "to lie"],
+  ruAntonyms: ["сидеть", "лежать"],
+  ukAntonyms: ["сидіти", "лежати"],
+  collocations: [
+    {
+      L2: "to stand by the window",
+      ru: "стоять у окна",
+      uk: "стояти біля вікна"
+    },
+    {
+      L2: "to be stuck in a traffic jam",
+      ru: "стоять в пробке",
+      uk: "стояти в заторі"
+    }
+  ],
+  examples: [
+    {
+      L2: "The table stands by the window.",
+      ru: "Стол стоит у окна.",
+      uk: "Стіл стоїть біля вікна."
+    }
+  ]
+},
+{
+  id: 141,
+  word: "to lie",
+  ru: "лежать",
+  uk: "лежати",
+  level: "A1",
+  topics: ["position"],
+  enSynonyms: [],
+  ruSynonyms: ["лежать"],
+  ukSynonyms: ["лежати"],
+  enAntonyms: ["to stand", "to sit"],
+  ruAntonyms: ["стоять", "сидеть"],
+  ukAntonyms: ["стояти", "сидіти"],
+  collocations: [
+    {
+      L2: "to lie in bed",
+      ru: "лежать в кровати",
+      uk: "лежати в ліжку"
+    },
+    {
+      L2: "to lie on the sofa",
+      ru: "лежать на диване",
+      uk: "лежати на дивані"
+    }
+  ],
+  examples: [
+    {
+      L2: "The book is lying on the bed.",
+      ru: "Книга лежит на кровати.",
+      uk: "Книжка лежить на ліжку."
+    }
+  ]
+},
+{
+  id: 142,
+  word: "to take along",
+  ru: "брать с собой",
+  uk: "брати із собою",
+  level: "A2",
+  topics: ["travel", "daily"],
+  enSynonyms: ["to take with you"],
+  ruSynonyms: ["брать с собой", "захватывать"],
+  ukSynonyms: ["брати із собою", "забирати з собою"],
+  enAntonyms: ["to leave behind"],
+  ruAntonyms: ["оставлять", "оставить"],
+  ukAntonyms: ["залишати", "залишити"],
+  collocations: [
+    {
+      L2: "to take the laptop along",
+      ru: "брать с собой ноутбук",
+      uk: "брати із собою ноутбук"
+    },
+    {
+      L2: "to take something to eat along",
+      ru: "взять с собой что-то поесть",
+      uk: "взяти із собою щось поїсти"
+    }
+  ],
+  examples: [
+    {
+      L2: "I am taking my laptop with me.",
+      ru: "Я беру с собой ноутбук.",
+      uk: "Я беру із собою ноутбук."
+    }
+  ]
+},
+{
+  id: 143,
+  word: "to pick up",
+  ru: "забирать",
+  uk: "забирати",
+  level: "A2",
+  topics: ["travel", "daily"],
+  enSynonyms: [],
+  ruSynonyms: ["забирать", "встречать (кого-то)"],
+  ukSynonyms: ["забирати", "зустрічати (когось)"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to pick someone up from the station",
+      ru: "забрать кого-то с вокзала",
+      uk: "забрати когось з вокзалу"
+    },
+    {
+      L2: "to pick up a parcel",
+      ru: "забрать посылку",
+      uk: "забрати посилку"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is picking me up at the station.",
+      ru: "Он забирает меня на вокзале.",
+      uk: "Він забирає мене на вокзалі."
+    }
+  ]
+},
+{
+  id: 144,
+  word: "to give back",
+  ru: "возвращать",
+  uk: "повертати",
+  level: "A2",
+  topics: ["shopping", "abstract"],
+  enSynonyms: ["to return (something)"],
+  ruSynonyms: ["возвращать", "отдавать обратно"],
+  ukSynonyms: ["повертати", "віддавати назад"],
+  enAntonyms: ["to keep"],
+  ruAntonyms: ["оставлять себе"],
+  ukAntonyms: ["залишати собі"],
+  collocations: [
+    {
+      L2: "to give a book back",
+      ru: "вернуть книгу",
+      uk: "повернути книжку"
+    },
+    {
+      L2: "to give money back",
+      ru: "вернуть деньги",
+      uk: "повернути гроші"
+    }
+  ],
+  examples: [
+    {
+      L2: "I have to give the book back.",
+      ru: "Мне нужно вернуть книгу.",
+      uk: "Мені треба повернути книжку."
+    }
+  ]
+},
+{
+  id: 145,
+  word: "to thank",
+  ru: "благодарить",
+  uk: "дякувати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: ["благодарить", "выражать благодарность"],
+  ukSynonyms: ["дякувати", "висловлювати подяку"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to thank someone for something",
+      ru: "благодарить кого-то за что-то",
+      uk: "дякувати комусь за щось"
+    },
+    {
+      L2: "to thank warmly",
+      ru: "сердечно поблагодарить",
+      uk: "щиро подякувати"
+    }
+  ],
+  examples: [
+    {
+      L2: "Thank you for your help.",
+      ru: "Я благодарю тебя за помощь.",
+      uk: "Я дякую тобі за допомогу."
+    }
+  ]
+},
+{
+  id: 146,
+  word: "to greet",
+  ru: "приветствовать",
+  uk: "вітати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: ["приветствовать", "передавать привет"],
+  ukSynonyms: ["вітати", "передавати вітання"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to greet someone in a friendly way",
+      ru: "дружелюбно поздороваться с кем-то",
+      uk: "привітно привітати когось"
+    },
+    {
+      L2: "to send someone greetings from me",
+      ru: "передать кому-то привет от меня",
+      uk: "передати комусь вітання від мене"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please say hello to your parents from me.",
+      ru: "Пожалуйста, передай привет своим родителям от меня.",
+      uk: "Будь ласка, передай вітання своїм батькам від мене."
+    }
+  ]
+},
+{
+  id: 147,
+  word: "to invite",
+  ru: "приглашать",
+  uk: "запрошувати",
+  level: "A2",
+  topics: ["social"],
+  enSynonyms: [],
+  ruSynonyms: ["приглашать", "звать"],
+  ukSynonyms: ["запрошувати", "кликати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to invite someone to dinner",
+      ru: "пригласить кого-то поесть",
+      uk: "запросити когось на вечерю"
+    },
+    {
+      L2: "to invite friends",
+      ru: "пригласить друзей",
+      uk: "запросити друзів"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are inviting our friends for a meal.",
+      ru: "Мы приглашаем друзей поесть.",
+      uk: "Ми запрошуємо друзів на вечерю."
+    }
+  ]
+},
+{
+  id: 148,
+  word: "to visit",
+  ru: "посещать",
+  uk: "відвідувати",
+  level: "A1",
+  topics: ["travel", "social"],
+  enSynonyms: [],
+  ruSynonyms: ["посещать", "навещать"],
+  ukSynonyms: ["відвідувати", "навідати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to visit your grandparents",
+      ru: "навещать бабушку и дедушку",
+      uk: "відвідувати дідусів і бабусь"
+    },
+    {
+      L2: "to visit a city",
+      ru: "посетить город",
+      uk: "відвідати місто"
+    }
+  ],
+  examples: [
+    {
+      L2: "She visits her grandparents every weekend.",
+      ru: "Она навещает своих бабушку и дедушку каждые выходные.",
+      uk: "Вона відвідує своїх дідусів і бабусь щовихідних."
+    }
+  ]
+},
+{
+  id: 149,
+  word: "to call",
+  ru: "звонить",
+  uk: "дзвонити",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to phone"],
+  ruSynonyms: ["звонить по телефону", "созваниваться"],
+  ukSynonyms: ["дзвонити", "телефонувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to call someone later",
+      ru: "перезвонить кому-то позже",
+      uk: "подзвонити комусь пізніше"
+    },
+    {
+      L2: "to call the hotline",
+      ru: "позвонить на горячую линию",
+      uk: "зателефонувати на гарячу лінію"
+    }
+  ],
+  examples: [
+    {
+      L2: "I will call you later.",
+      ru: "Я перезвоню тебе позже.",
+      uk: "Я подзвоню тобі пізніше."
+    }
+  ]
+},
+{
+  id: 150,
+  word: "to send",
+  ru: "отправлять",
+  uk: "надсилати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to dispatch"],
+  ruSynonyms: ["отправлять", "посылать"],
+  ukSynonyms: ["надсилати", "відправляти"],
+  enAntonyms: ["to receive"],
+  ruAntonyms: ["получать", "принимать"],
+  ukAntonyms: ["отримувати", "приймати"],
+  collocations: [
+    {
+      L2: "to send a message",
+      ru: "отправить сообщение",
+      uk: "надіслати повідомлення"
+    },
+    {
+      L2: "to send an email",
+      ru: "отправить электронное письмо",
+      uk: "надіслати електронного листа"
+    }
+  ],
+  examples: [
+    {
+      L2: "She is sending him a message.",
+      ru: "Она отправляет ему сообщение.",
+      uk: "Вона надсилає йому повідомлення."
+    }
+  ]
+},{
+  id: 151,
+  word: "to answer",
+  ru: "отвечать",
+  uk: "відповідати",
+  level: "A1",
+  topics: ["communication"],
+  enSynonyms: ["to react", "to reply"],
+  ruSynonyms: ["отвечать", "реагировать"],
+  ukSynonyms: ["відповідати", "реагувати"],
+  enAntonyms: ["to be silent"],
+  ruAntonyms: ["молчать"],
+  ukAntonyms: ["мовчати"],
+  collocations: [
+    {
+      L2: "to answer an email",
+      ru: "ответить на электронное письмо",
+      uk: "відповісти на електронного листа"
+    },
+    {
+      L2: "to answer quickly",
+      ru: "быстро ответить",
+      uk: "швидко відповісти"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please answer quickly.",
+      ru: "Пожалуйста, ответь быстро.",
+      uk: "Будь ласка, відповідай швидко."
+    }
+  ]
+},
+{
+  id: 152,
+  word: "to describe",
+  ru: "описывать",
+  uk: "описувати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to portray", "to depict"],
+  ruSynonyms: ["описывать", "излагать"],
+  ukSynonyms: ["описувати", "зображати словами"],
+  enAntonyms: ["to conceal"],
+  ruAntonyms: ["умалчивать", "скрывать"],
+  ukAntonyms: ["замовчувати", "приховувати"],
+  collocations: [
+    {
+      L2: "to describe a picture",
+      ru: "описать картинку",
+      uk: "описати картинку"
+    },
+    {
+      L2: "to describe a situation in detail",
+      ru: "подробно описать ситуацию",
+      uk: "детально описати ситуацію"
+    }
+  ],
+  examples: [
+    {
+      L2: "Can you describe the picture?",
+      ru: "Ты можешь описать картинку?",
+      uk: "Ти можеш описати цю картинку?"
+    }
+  ]
+},
+{
+  id: 153,
+  word: "to move",
+  ru: "двигать",
+  uk: "рухати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to shift", "to move something"],
+  ruSynonyms: ["двигать", "перемещать"],
+  ukSynonyms: ["рухати", "пересувати"],
+  enAntonyms: ["to leave still"],
+  ruAntonyms: ["оставлять на месте", "не двигать"],
+  ukAntonyms: ["залишати на місці", "не рухати"],
+  collocations: [
+    {
+      L2: "to move the chair to the left",
+      ru: "подвинуть стул налево",
+      uk: "посунути стілець ліворуч"
+    },
+    {
+      L2: "to move freely",
+      ru: "свободно двигаться",
+      uk: "вільно рухатися"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please move the chair to the left.",
+      ru: "Передвинь, пожалуйста, стул налево.",
+      uk: "Посунь, будь ласка, стілець ліворуч."
+    }
+  ]
+},
+{
+  id: 154,
+  word: "to change",
+  ru: "менять",
+  uk: "міняти",
+  level: "A2",
+  topics: ["money", "abstract"],
+  enSynonyms: ["to exchange", "to swap"],
+  ruSynonyms: ["менять", "обменивать"],
+  ukSynonyms: ["міняти", "обмінювати"],
+  enAntonyms: ["to keep"],
+  ruAntonyms: ["оставлять себе"],
+  ukAntonyms: ["залишати собі"],
+  collocations: [
+    {
+      L2: "to change money",
+      ru: "обменять деньги",
+      uk: "обміняти гроші"
+    },
+    {
+      L2: "to change the topic",
+      ru: "сменить тему",
+      uk: "змінити тему"
+    }
+  ],
+  examples: [
+    {
+      L2: "I would like to change money.",
+      ru: "Я хочу обменять деньги.",
+      uk: "Я хочу обміняти гроші."
+    }
+  ]
+},
+{
+  id: 155,
+  word: "to exchange",
+  ru: "обменивать",
+  uk: "обмінювати",
+  level: "A2",
+  topics: ["shopping"],
+  enSynonyms: ["to swap", "to trade"],
+  ruSynonyms: ["обменивать", "меняться"],
+  ukSynonyms: ["обмінювати", "мінятися"],
+  enAntonyms: ["to keep"],
+  ruAntonyms: ["оставлять себе"],
+  ukAntonyms: ["залишати собі"],
+  collocations: [
+    {
+      L2: "to exchange books",
+      ru: "обмениваться книгами",
+      uk: "обмінюватися книжками"
+    },
+    {
+      L2: "to exchange seats",
+      ru: "поменяться местами",
+      uk: "помінятися місцями"
+    }
+  ],
+  examples: [
+    {
+      L2: "They exchange books with each other.",
+      ru: "Они обмениваются книгами.",
+      uk: "Вони обмінюються книжками."
+    }
+  ]
+},
+{
+  id: 156,
+  word: "to park",
+  ru: "парковать",
+  uk: "паркувати",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: ["to park the car"],
+  ruSynonyms: ["парковать", "ставить на стоянку"],
+  ukSynonyms: ["паркувати", "ставити на паркінг"],
+  enAntonyms: ["to drive away", "to set off"],
+  ruAntonyms: ["уехать", "отъехать"],
+  ukAntonyms: ["виїхати", "від’їхати"],
+  collocations: [
+    {
+      L2: "not to park here",
+      ru: "здесь нельзя парковаться",
+      uk: "тут не можна паркуватися"
+    },
+    {
+      L2: "to park in the car park",
+      ru: "парковаться на парковке",
+      uk: "паркуватися на паркінгу"
+    }
+  ],
+  examples: [
+    {
+      L2: "You must not park here.",
+      ru: "Тебе нельзя парковаться здесь.",
+      uk: "Тобі не можна тут паркуватися."
+    }
+  ]
+},
+{
+  id: 157,
+  word: "to choose",
+  ru: "выбирать",
+  uk: "вибирати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to select", "to decide"],
+  ruSynonyms: ["выбирать", "делать выбор"],
+  ukSynonyms: ["вибирати", "робити вибір"],
+  enAntonyms: ["to reject", "to turn down"],
+  ruAntonyms: ["отклонять", "отказываться"],
+  ukAntonyms: ["відхиляти", "відмовлятися"],
+  collocations: [
+    {
+      L2: "to choose the best offer",
+      ru: "выбрать лучшее предложение",
+      uk: "обрати найкращу пропозицію"
+    },
+    {
+      L2: "to dial a number",
+      ru: "набирать номер",
+      uk: "набирати номер"
+    }
+  ],
+  examples: [
+    {
+      L2: "We choose the best offer.",
+      ru: "Мы выбираем лучшее предложение.",
+      uk: "Ми обираємо найкращу пропозицію."
+    }
+  ]
+},
+{
+  id: 158,
+  word: "to use",
+  ru: "пользоваться",
+  uk: "користуватися",
+  level: "A2",
+  topics: ["abstract", "tools"],
+  enSynonyms: ["to apply", "to make use of"],
+  ruSynonyms: ["пользоваться", "использовать"],
+  ukSynonyms: ["користуватися", "використовувати"],
+  enAntonyms: ["to avoid"],
+  ruAntonyms: ["избегать"],
+  ukAntonyms: ["уникати"],
+  collocations: [
+    {
+      L2: "to use the bike every day",
+      ru: "каждый день пользоваться велосипедом",
+      uk: "щодня користуватися велосипедом"
+    },
+    {
+      L2: "to use an app regularly",
+      ru: "регулярно пользоваться приложением",
+      uk: "регулярно користуватися застосунком"
+    }
+  ],
+  examples: [
+    {
+      L2: "I use my bike every day.",
+      ru: "Я каждый день пользуюсь велосипедом.",
+      uk: "Я щодня користуюся своїм велосипедом."
+    }
+  ]
+},
+{
+  id: 159,
+  word: "to improve",
+  ru: "улучшать",
+  uk: "покращувати",
+  level: "B1",
+  topics: ["abstract", "study"],
+  enSynonyms: ["to optimize", "to develop further"],
+  ruSynonyms: ["улучшать", "совершенствовать"],
+  ukSynonyms: ["покращувати", "удосконалювати"],
+  enAntonyms: ["to worsen"],
+  ruAntonyms: ["ухудшать"],
+  ukAntonyms: ["погіршувати"],
+  collocations: [
+    {
+      L2: "to improve your German",
+      ru: "улучшать свой немецкий",
+      uk: "покращувати свою німецьку"
+    },
+    {
+      L2: "to improve the quality",
+      ru: "улучшать качество",
+      uk: "покращувати якість"
+    }
+  ],
+  examples: [
+    {
+      L2: "She wants to improve her German.",
+      ru: "Она хочет улучшить свой немецкий.",
+      uk: "Вона хоче покращити свою німецьку."
+    }
+  ]
+},
+{
+  id: 160,
+  word: "to worsen",
+  ru: "ухудшать",
+  uk: "погіршувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to make worse"],
+  ruSynonyms: ["ухудшать"],
+  ukSynonyms: ["погіршувати"],
+  enAntonyms: ["to improve"],
+  ruAntonyms: ["улучшать"],
+  ukAntonyms: ["покращувати"],
+  collocations: [
+    {
+      L2: "to worsen the situation",
+      ru: "ухудшать ситуацию",
+      uk: "погіршувати ситуацію"
+    },
+    {
+      L2: "The weather is getting worse.",
+      ru: "Погода ухудшается.",
+      uk: "Погода погіршується."
+    }
+  ],
+  examples: [
+    {
+      L2: "The weather is getting worse.",
+      ru: "Погода ухудшается.",
+      uk: "Погода погіршується."
+    }
+  ]
+},
+{
+  id: 161,
+  word: "to forget",
+  ru: "забывать",
+  uk: "забувати",
+  level: "A2",
+  topics: ["memory"],
+  enSynonyms: ["to overlook", "to lose from memory"],
+  ruSynonyms: ["забывать", "вылетать из головы"],
+  ukSynonyms: ["забувати", "вилітати з голови"],
+  enAntonyms: ["to remember"],
+  ruAntonyms: ["помнить", "вспоминать"],
+  ukAntonyms: ["пам’ятати", "згадувати"],
+  collocations: [
+    {
+      L2: "to forget an appointment",
+      ru: "забыть о встрече",
+      uk: "забути про зустріч"
+    },
+    {
+      L2: "to forget the name",
+      ru: "забыть имя",
+      uk: "забути ім’я"
+    }
+  ],
+  examples: [
+    {
+      L2: "I often forget names.",
+      ru: "Я часто забываю имена.",
+      uk: "Я часто забуваю імена."
+    }
+  ]
+},
+{
+  id: 162,
+  word: "to own",
+  ru: "владеть",
+  uk: "володіти",
+  level: "B1",
+  topics: ["abstract", "money"],
+  enSynonyms: ["to have", "to possess"],
+  ruSynonyms: ["владеть", "иметь в собственности"],
+  ukSynonyms: ["володіти", "мати у власності"],
+  enAntonyms: ["to lose", "to give up"],
+  ruAntonyms: ["терять", "отдавать"],
+  ukAntonyms: ["губити", "віддавати"],
+  collocations: [
+    {
+      L2: "to own a house",
+      ru: "владеть домом",
+      uk: "володіти будинком"
+    },
+    {
+      L2: "to own a lot of money",
+      ru: "владеть большими деньгами",
+      uk: "володіти великими грошима"
+    }
+  ],
+  examples: [
+    {
+      L2: "They own a house by the lake.",
+      ru: "Они владеют домом у озера.",
+      uk: "Вони володіють будинком біля озера."
+    }
+  ]
+},
+{
+  id: 163,
+  word: "to belong",
+  ru: "принадлежать",
+  uk: "належати",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to be assigned to"],
+  ruSynonyms: ["принадлежать"],
+  ukSynonyms: ["належати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "The book belongs to me.",
+      ru: "Эта книга принадлежит мне.",
+      uk: "Ця книжка належить мені."
+    },
+    {
+      L2: "to belong to a group",
+      ru: "принадлежать группе",
+      uk: "належати до групи"
+    }
+  ],
+  examples: [
+    {
+      L2: "The book belongs to me.",
+      ru: "Эта книга принадлежит мне.",
+      uk: "Ця книжка належить мені."
+    }
+  ]
+},
+{
+  id: 164,
+  word: "to teach",
+  ru: "обучать",
+  uk: "навчати",
+  level: "B1",
+  topics: ["education"],
+  enSynonyms: ["to instruct", "to educate"],
+  ruSynonyms: ["обучать", "преподавать"],
+  ukSynonyms: ["навчати", "викладати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to teach children maths",
+      ru: "учить детей математике",
+      uk: "навчати дітей математики"
+    },
+    {
+      L2: "to teach at a school",
+      ru: "преподавать в школе",
+      uk: "викладати в школі"
+    }
+  ],
+  examples: [
+    {
+      L2: "He teaches children maths.",
+      ru: "Он учит детей математике.",
+      uk: "Він навчає дітей математики."
+    }
+  ]
+},
+{
+  id: 165,
+  word: "to grow",
+  ru: "расти",
+  uk: "рости",
+  level: "A2",
+  topics: ["nature", "abstract"],
+  enSynonyms: ["to get bigger", "to increase"],
+  ruSynonyms: ["расти", "увеличиваться"],
+  ukSynonyms: ["рости", "збільшуватися"],
+  enAntonyms: ["to shrink"],
+  ruAntonyms: ["сокращаться", "уменьшаться"],
+  ukAntonyms: ["скорочуватися", "зменшуватися"],
+  collocations: [
+    {
+      L2: "to grow quickly",
+      ru: "быстро расти",
+      uk: "швидко рости"
+    },
+    {
+      L2: "to grow tall",
+      ru: "расти в высоту",
+      uk: "рости вгору"
+    }
+  ],
+  examples: [
+    {
+      L2: "The plants grow quickly.",
+      ru: "Растения растут быстро.",
+      uk: "Рослини швидко ростуть."
+    }
+  ]
+},
+{
+  id: 166,
+  word: "to plan",
+  ru: "планировать",
+  uk: "планувати",
+  level: "A2",
+  topics: ["work", "abstract"],
+  enSynonyms: ["to intend", "to organize"],
+  ruSynonyms: ["планировать", "намечать"],
+  ukSynonyms: ["планувати", "заплановувати"],
+  enAntonyms: ["to improvise"],
+  ruAntonyms: ["импровизировать"],
+  ukAntonyms: ["імпровізувати"],
+  collocations: [
+    {
+      L2: "to plan a trip",
+      ru: "планировать поездку",
+      uk: "планувати подорож"
+    },
+    {
+      L2: "to plan a project carefully",
+      ru: "тщательно планировать проект",
+      uk: "ретельно планувати проєкт"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are planning a trip.",
+      ru: "Мы планируем поездку.",
+      uk: "Ми плануємо подорож."
+    }
+  ]
+},
+{
+  id: 167,
+  word: "to try",
+  ru: "пробовать",
+  uk: "пробувати",
+  level: "A2",
+  topics: ["food", "abstract"],
+  enSynonyms: ["to attempt", "to taste"],
+  ruSynonyms: ["пробовать", "пытаться"],
+  ukSynonyms: ["пробувати", "намагатися"],
+  enAntonyms: ["to refuse"],
+  ruAntonyms: ["отказываться"],
+  ukAntonyms: ["відмовлятися"],
+  collocations: [
+    {
+      L2: "to try the cake",
+      ru: "попробовать торт",
+      uk: "спробувати торт"
+    },
+    {
+      L2: "to try something new",
+      ru: "попробовать что-то новое",
+      uk: "спробувати щось нове"
+    }
+  ],
+  examples: [
+    {
+      L2: "Do you want to try the cake?",
+      ru: "Хочешь попробовать торт?",
+      uk: "Хочеш спробувати торт?"
+    }
+  ]
+},
+{
+  id: 168,
+  word: "to calculate",
+  ru: "считать",
+  uk: "рахувати",
+  level: "A2",
+  topics: ["math", "school"],
+  enSynonyms: ["to calculate"],
+  ruSynonyms: ["считать", "вычислять"],
+  ukSynonyms: ["рахувати", "обчислювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to calculate in your head",
+      ru: "считать в уме",
+      uk: "рахувати в голові"
+    },
+    {
+      L2: "to learn to calculate correctly",
+      ru: "учиться правильно считать",
+      uk: "вчитися правильно рахувати"
+    }
+  ],
+  examples: [
+    {
+      L2: "The children are learning to calculate.",
+      ru: "Дети учатся считать.",
+      uk: "Діти вчаться рахувати."
+    }
+  ]
+},
+{
+  id: 169,
+  word: "to rain",
+  ru: "дождить",
+  uk: "дощити",
+  level: "A1",
+  topics: ["weather"],
+  enSynonyms: [],
+  ruSynonyms: ["идти (о дожде)", "дождить"],
+  ukSynonyms: ["йти (про дощ)", "дощити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "It rains all day.",
+      ru: "целый день идёт дождь",
+      uk: "цілий день дощить"
+    },
+    {
+      L2: "It rains heavily.",
+      ru: "идёт сильный дождь",
+      uk: "дуже сильно дощить"
+    }
+  ],
+  examples: [
+    {
+      L2: "Today it rains all day.",
+      ru: "Сегодня целый день идёт дождь.",
+      uk: "Сьогодні цілий день дощить."
+    }
+  ]
+},
+{
+  id: 170,
+  word: "to smell",
+  ru: "пахнуть",
+  uk: "пахнути",
+  level: "A2",
+  topics: ["senses"],
+  enSynonyms: ["to smell good"],
+  ruSynonyms: ["пахнуть", "чувствовать запах"],
+  ukSynonyms: ["пахнути", "відчувати запах"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to smell good",
+      ru: "хорошо пахнуть",
+      uk: "добре пахнути"
+    },
+    {
+      L2: "to smell like flowers",
+      ru: "пахнуть цветами",
+      uk: "пахнути квітами"
+    }
+  ],
+  examples: [
+    {
+      L2: "The flowers smell good.",
+      ru: "Цветы хорошо пахнут.",
+      uk: "Квіти гарно пахнуть."
+    }
+  ]
+},
+{
+  id: 171,
+  word: "to call",
+  ru: "звать",
+  uk: "кликати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to shout", "to call out"],
+  ruSynonyms: ["звать", "окликать"],
+  ukSynonyms: ["кликати", "вигукувати"],
+  enAntonyms: ["to be silent"],
+  ruAntonyms: ["молчать"],
+  ukAntonyms: ["мовчати"],
+  collocations: [
+    {
+      L2: "to call for someone",
+      ru: "звать кого-то",
+      uk: "кликати когось"
+    },
+    {
+      L2: "to call for help",
+      ru: "звать на помощь",
+      uk: "кликати на допомогу"
+    }
+  ],
+  examples: [
+    {
+      L2: "The mother calls her child.",
+      ru: "Мать зовёт своего ребёнка.",
+      uk: "Мати кличе свою дитину."
+    }
+  ]
+},
+{
+  id: 172,
+  word: "to collect",
+  ru: "собирать",
+  uk: "збирати",
+  level: "A2",
+  topics: ["hobby"],
+  enSynonyms: ["to gather together"],
+  ruSynonyms: ["собирать", "коллекционировать"],
+  ukSynonyms: ["збирати", "колекціонувати"],
+  enAntonyms: ["to distribute", "to throw away"],
+  ruAntonyms: ["раздавать", "выбрасывать"],
+  ukAntonyms: ["роздавати", "викидати"],
+  collocations: [
+    {
+      L2: "to collect old coins",
+      ru: "собирать старые монеты",
+      uk: "збирати старі монети"
+    },
+    {
+      L2: "to collect information",
+      ru: "собирать информацию",
+      uk: "збирати інформацію"
+    }
+  ],
+  examples: [
+    {
+      L2: "He collects old coins.",
+      ru: "Он собирает старые монеты.",
+      uk: "Він збирає старі монети."
+    }
+  ]
+},
+{
+  id: 173,
+  word: "to taste",
+  ru: "нравиться на вкус",
+  uk: "смакувати",
+  level: "A2",
+  topics: ["food"],
+  enSynonyms: ["to be tasty"],
+  ruSynonyms: ["быть вкусным", "нравиться на вкус"],
+  ukSynonyms: ["бути смачним", "смакувати"],
+  enAntonyms: ["to taste disgusting"],
+  ruAntonyms: ["быть отвратительным на вкус"],
+  ukAntonyms: ["бути огидним на смак"],
+  collocations: [
+    {
+      L2: "to taste good",
+      ru: "быть вкусным",
+      uk: "бути смачним"
+    },
+    {
+      L2: "to taste of garlic",
+      ru: "отдавать чесноком",
+      uk: "мати смак часнику"
+    }
+  ],
+  examples: [
+    {
+      L2: "The soup tastes good.",
+      ru: "Суп вкусный.",
+      uk: "Суп смачний."
+    }
+  ]
+},
+{
+  id: 174,
+  word: "to swim",
+  ru: "плавать",
+  uk: "плавати",
+  level: "A1",
+  topics: ["sport"],
+  enSynonyms: [],
+  ruSynonyms: ["плавать"],
+  ukSynonyms: ["плавати"],
+  enAntonyms: ["to go under", "to sink"],
+  ruAntonyms: ["тонуть"],
+  ukAntonyms: ["тонути"],
+  collocations: [
+    {
+      L2: "to swim in the lake",
+      ru: "плавать в озере",
+      uk: "плавати в озері"
+    },
+    {
+      L2: "to swim fast",
+      ru: "быстро плавать",
+      uk: "швидко плавати"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are swimming in the lake.",
+      ru: "Мы плаваем в озере.",
+      uk: "Ми плаваємо в озері."
+    }
+  ]
+},
+{
+  id: 175,
+  word: "to jump",
+  ru: "прыгать",
+  uk: "стрибати",
+  level: "A2",
+  topics: ["sport"],
+  enSynonyms: ["to hop"],
+  ruSynonyms: ["прыгать", "подпрыгивать"],
+  ukSynonyms: ["стрибати", "підстрибувати"],
+  enAntonyms: ["to stand still"],
+  ruAntonyms: ["оставаться стоять"],
+  ukAntonyms: ["залишатися стояти"],
+  collocations: [
+    {
+      L2: "to jump high",
+      ru: "высоко прыгать",
+      uk: "високо стрибати"
+    },
+    {
+      L2: "to jump over something",
+      ru: "перепрыгивать через что-то",
+      uk: "стрибати через щось"
+    }
+  ],
+  examples: [
+    {
+      L2: "The child jumps high.",
+      ru: "Ребёнок высоко прыгает.",
+      uk: "Дитина високо стрибає."
+    }
+  ]
+},
+{
+  id: 176,
+  word: "to die",
+  ru: "умирать",
+  uk: "помирати",
+  level: "B1",
+  topics: ["life"],
+  enSynonyms: ["to lose one's life"],
+  ruSynonyms: ["умирать", "скончаться"],
+  ukSynonyms: ["помирати", "сісти зі світу (розм.)"],
+  enAntonyms: ["to live", "to be born"],
+  ruAntonyms: ["жить", "родиться"],
+  ukAntonyms: ["жити", "народитися"],
+  collocations: [
+    {
+      L2: "to die from an illness",
+      ru: "умереть от болезни",
+      uk: "померти від хвороби"
+    },
+    {
+      L2: "to die in a war",
+      ru: "умереть на войне",
+      uk: "померти на війні"
+    }
+  ],
+  examples: [
+    {
+      L2: "Many trees do not die in winter.",
+      ru: "Многие деревья не умирают зимой.",
+      uk: "Багато дерев не помирають узимку."
+    }
+  ]
+},
+{
+  id: 177,
+  word: "to rise",
+  ru: "подниматься",
+  uk: "підніматися",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to increase", "to go up"],
+  ruSynonyms: ["подниматься", "расти"],
+  ukSynonyms: ["підніматися", "зростати"],
+  enAntonyms: ["to sink", "to fall"],
+  ruAntonyms: ["снижаться", "падать"],
+  ukAntonyms: ["знижуватися", "падати"],
+  collocations: [
+    {
+      L2: "Prices rise.",
+      ru: "Цены растут.",
+      uk: "Ціни зростають."
+    },
+    {
+      L2: "The temperature rises.",
+      ru: "температура повышается",
+      uk: "температура підвищується"
+    }
+  ],
+  examples: [
+    {
+      L2: "Prices rise every year.",
+      ru: "Цены растут каждый год.",
+      uk: "Ціни зростають щороку."
+    }
+  ]
+},
+{
+  id: 178,
+  word: "to agree",
+  ru: "соглашаться",
+  uk: "погоджуватися",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to approve", "to concur"],
+  ruSynonyms: ["соглашаться", "быть согласным"],
+  ukSynonyms: ["погоджуватися", "бути згодним"],
+  enAntonyms: ["to contradict"],
+  ruAntonyms: ["возражать"],
+  ukAntonyms: ["заперечувати"],
+  collocations: [
+    {
+      L2: "to agree with someone",
+      ru: "соглашаться с кем-то",
+      uk: "погоджуватися з кимось"
+    },
+    {
+      L2: "to vote for a proposal",
+      ru: "голосовать за предложение",
+      uk: "голосувати за пропозицію"
+    }
+  ],
+  examples: [
+    {
+      L2: "I agree with you.",
+      ru: "Я с тобой согласен.",
+      uk: "Я з тобою погоджуюся."
+    }
+  ]
+},
+{
+  id: 179,
+  word: "to share",
+  ru: "делить",
+  uk: "ділити",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to divide up", "to split"],
+  ruSynonyms: ["делить", "разделять"],
+  ukSynonyms: ["ділити", "розділяти"],
+  enAntonyms: ["to unite"],
+  ruAntonyms: ["объединять"],
+  ukAntonyms: ["об’єднувати"],
+  collocations: [
+    {
+      L2: "to share the costs",
+      ru: "делить расходы",
+      uk: "ділити витрати"
+    },
+    {
+      L2: "to share a flat",
+      ru: "делить квартиру",
+      uk: "ділити квартиру"
+    }
+  ],
+  examples: [
+    {
+      L2: "We share the costs.",
+      ru: "Мы делим расходы.",
+      uk: "Ми ділимо витрати."
+    }
+  ]
+},
+{
+  id: 180,
+  word: "to do sports",
+  ru: "заниматься",
+  uk: "займатися",
+  level: "B1",
+  topics: ["sport"],
+  enSynonyms: [],
+  ruSynonyms: ["заниматься (спортом)"],
+  ukSynonyms: ["займатися (спортом)"],
+  enAntonyms: ["to laze around"],
+  ruAntonyms: ["бездельничать", "лентяйничать"],
+  ukAntonyms: ["ледарювати", "нічого не робити"],
+  collocations: [
+    {
+      L2: "to do a lot of sport",
+      ru: "много заниматься спортом",
+      uk: "багато займатися спортом"
+    },
+    {
+      L2: "to do sport regularly",
+      ru: "регулярно заниматься спортом",
+      uk: "регулярно займатися спортом"
+    }
+  ],
+  examples: [
+    {
+      L2: "They do a lot of sport.",
+      ru: "Они много занимаются спортом.",
+      uk: "Вони багато займаються спортом."
+    }
+  ]
+},
+{
+  id: 181,
+  word: "to step",
+  ru: "ступать",
+  uk: "ступати",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to stride", "to walk"],
+  ruSynonyms: ["ступать", "вступать"],
+  ukSynonyms: ["ступати", "входити"],
+  enAntonyms: ["to stand still"],
+  ruAntonyms: ["оставаться стоять"],
+  ukAntonyms: ["залишатися стояти"],
+  collocations: [
+    {
+      L2: "to step closer",
+      ru: "подойти ближе",
+      uk: "підійти ближче"
+    },
+    {
+      L2: "to step into the room",
+      ru: "войти в комнату",
+      uk: "увійти до кімнати"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please step closer.",
+      ru: "Подойди, пожалуйста, ближе.",
+      uk: "Підійди, будь ласка, ближче."
+    }
+  ]
+},
+{
+  id: 182,
+  word: "to stay overnight",
+  ru: "ночевать",
+  uk: "ночувати",
+  level: "A2",
+  topics: ["travel"],
+  enSynonyms: [],
+  ruSynonyms: ["ночевать"],
+  ukSynonyms: ["ночувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to stay overnight in a hotel",
+      ru: "ночевать в отеле",
+      uk: "ночувати в готелі"
+    },
+    {
+      L2: "to stay overnight at friends",
+      ru: "ночевать у друзей",
+      uk: "ночувати в друзів"
+    }
+  ],
+  examples: [
+    {
+      L2: "We stay overnight at the hotel.",
+      ru: "Мы ночуем в отеле.",
+      uk: "Ми ночуємо в готелі."
+    }
+  ]
+},
+{
+  id: 183,
+  word: "to transfer",
+  ru: "переводить",
+  uk: "переказувати",
+  level: "B1",
+  topics: ["money"],
+  enSynonyms: ["to transfer (money)"],
+  ruSynonyms: ["делать перевод", "переводить деньги"],
+  ukSynonyms: ["робити переказ", "переказувати гроші"],
+  enAntonyms: ["to pay cash"],
+  ruAntonyms: ["платить наличными"],
+  ukAntonyms: ["платити готівкою"],
+  collocations: [
+    {
+      L2: "to transfer money",
+      ru: "перевести деньги",
+      uk: "переказати гроші"
+    },
+    {
+      L2: "to transfer the rent",
+      ru: "переводить плату за аренду",
+      uk: "переказувати оплату за оренду"
+    }
+  ],
+  examples: [
+    {
+      L2: "I will transfer the money to you tomorrow.",
+      ru: "Я переведу тебе деньги завтра.",
+      uk: "Я перекажу тобі гроші завтра."
+    }
+  ]
+},
+{
+  id: 184,
+  word: "to move (house)",
+  ru: "переезжать",
+  uk: "переїжджати",
+  level: "A2",
+  topics: ["home"],
+  enSynonyms: ["to change residence"],
+  ruSynonyms: ["переезжать", "сменять жильё"],
+  ukSynonyms: ["переїжджати", "змінювати житло"],
+  enAntonyms: ["to stay"],
+  ruAntonyms: ["оставаться"],
+  ukAntonyms: ["залишатися"],
+  collocations: [
+    {
+      L2: "to move to another city",
+      ru: "переехать в другой город",
+      uk: "переїхати до іншого міста"
+    },
+    {
+      L2: "to move next week",
+      ru: "переезжать на следующей неделе",
+      uk: "переїжджати наступного тижня"
+    }
+  ],
+  examples: [
+    {
+      L2: "They are moving next week.",
+      ru: "Они переезжают на следующей неделе.",
+      uk: "Вони переїжджають наступного тижня."
+    }
+  ]
+},
+{
+  id: 185,
+  word: "to sign",
+  ru: "подписывать",
+  uk: "підписувати",
+  level: "B1",
+  topics: ["work", "documents"],
+  enSynonyms: ["to sign"],
+  ruSynonyms: ["подписывать"],
+  ukSynonyms: ["підписувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to sign a contract",
+      ru: "подписать контракт",
+      uk: "підписати контракт"
+    },
+    {
+      L2: "to sign here",
+      ru: "подписать здесь",
+      uk: "підписати тут"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please sign here.",
+      ru: "Пожалуйста, подпишите здесь.",
+      uk: "Будь ласка, підпишіть тут."
+    }
+  ]
+},
+{
+  id: 186,
+  word: "to examine",
+  ru: "исследовать",
+  uk: "досліджувати",
+  level: "B1",
+  topics: ["science", "health"],
+  enSynonyms: ["to check", "to analyze"],
+  ruSynonyms: ["исследовать", "осматривать"],
+  ukSynonyms: ["досліджувати", "оглядати"],
+  enAntonyms: ["to ignore"],
+  ruAntonyms: ["игнорировать"],
+  ukAntonyms: ["ігнорувати"],
+  collocations: [
+    {
+      L2: "to examine the patient",
+      ru: "осматривать пациента",
+      uk: "обстежувати пацієнта"
+    },
+    {
+      L2: "to examine a problem thoroughly",
+      ru: "тщательно исследовать проблему",
+      uk: "ретельно дослідити проблему"
+    }
+  ],
+  examples: [
+    {
+      L2: "The doctor examines the patient.",
+      ru: "Врач осматривает пациента.",
+      uk: "Лікар обстежує пацієнта."
+    }
+  ]
+},
+{
+  id: 187,
+  word: "to spend (time)",
+  ru: "проводить",
+  uk: "проводити",
+  level: "A2",
+  topics: ["time"],
+  enSynonyms: ["to spend time", "to pass time"],
+  ruSynonyms: ["проводить (время)"],
+  ukSynonyms: ["проводити (час)"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to spend the weekend at home",
+      ru: "проводить выходные дома",
+      uk: "проводити вихідні вдома"
+    },
+    {
+      L2: "to spend time with the family",
+      ru: "проводить время с семьёй",
+      uk: "проводити час із родиною"
+    }
+  ],
+  examples: [
+    {
+      L2: "We spend the weekend at home.",
+      ru: "Мы проводим выходные дома.",
+      uk: "Ми проводимо вихідні вдома."
+    }
+  ]
+},
+{
+  id: 188,
+  word: "to pay",
+  ru: "оплачивать",
+  uk: "сплачувати",
+  level: "A1",
+  topics: ["money", "shopping"],
+  enSynonyms: ["to settle", "to foot the bill"],
+  ruSynonyms: ["платить", "оплачивать"],
+  ukSynonyms: ["платити", "сплачувати"],
+  enAntonyms: ["to owe"],
+  ruAntonyms: ["быть должным"],
+  ukAntonyms: ["бути винним"],
+  collocations: [
+    {
+      L2: "to pay in cash",
+      ru: "платить наличными",
+      uk: "платити готівкою"
+    },
+    {
+      L2: "to pay the bill",
+      ru: "оплатить счёт",
+      uk: "оплатити рахунок"
+    }
+  ],
+  examples: [
+    {
+      L2: "I pay in cash.",
+      ru: "Я плачу наличными.",
+      uk: "Я плачу готівкою."
+    }
+  ]
+},
+{
+  id: 189,
+  word: "to ask (for)",
+  ru: "просить",
+  uk: "просити",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to request"],
+  ruSynonyms: ["просить", "умолять"],
+  ukSynonyms: ["просити", "благати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to ask someone for help",
+      ru: "просить кого-то о помощи",
+      uk: "просити когось про допомогу"
+    },
+    {
+      L2: "to ask someone to do something",
+      ru: "просить кого-то что-то сделать",
+      uk: "просити когось щось зробити"
+    }
+  ],
+  examples: [
+    {
+      L2: "I ask you for help.",
+      ru: "Я прошу тебя о помощи.",
+      uk: "Я прошу тебе про допомогу."
+    }
+  ]
+},
+{
+  id: 190,
+  word: "to break",
+  ru: "ломать",
+  uk: "ламати",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to shatter", "to break something"],
+  ruSynonyms: ["ломать", "разламывать"],
+  ukSynonyms: ["ламати", "розламувати"],
+  enAntonyms: ["to repair"],
+  ruAntonyms: ["ремонтировать", "чинить"],
+  ukAntonyms: ["ремонтувати", "лагодити"],
+  collocations: [
+    {
+      L2: "to break the wood",
+      ru: "ломать дерево/дерево на части",
+      uk: "ламати дерево на частини"
+    },
+    {
+      L2: "to break your arm",
+      ru: "сломать руку",
+      uk: "зламати руку"
+    }
+  ],
+  examples: [
+    {
+      L2: "He breaks the wood into two parts.",
+      ru: "Он ломает дерево на две части.",
+      uk: "Він ламає дерево на дві частини."
+    }
+  ]
+},
+{
+  id: 191,
+  word: "to tie",
+  ru: "вязать",
+  uk: "в'язати",
+  level: "B1",
+  topics: ["home"],
+  enSynonyms: ["to fasten", "to lace"],
+  ruSynonyms: ["вязать", "перевязывать"],
+  ukSynonyms: ["в’язати", "перев’язувати"],
+  enAntonyms: ["to untie"],
+  ruAntonyms: ["развязывать"],
+  ukAntonyms: ["розв’язувати"],
+  collocations: [
+    {
+      L2: "to tie the parcel with a ribbon",
+      ru: "перевязать посылку лентой",
+      uk: "перев’язати пакунок стрічкою"
+    },
+    {
+      L2: "to tie your shoes",
+      ru: "завязывать шнурки",
+      uk: "зав’язувати шнурівки"
+    }
+  ],
+  examples: [
+    {
+      L2: "She ties the parcel with a ribbon.",
+      ru: "Она перевязывает посылку лентой.",
+      uk: "Вона перев’язує пакунок стрічкою."
+    }
+  ]
+},
+{
+  id: 192,
+  word: "to bend",
+  ru: "гнуть",
+  uk: "гнути",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to curve"],
+  ruSynonyms: ["гнуть", "сгибать"],
+  ukSynonyms: ["гнути", "згинати"],
+  enAntonyms: ["to leave straight"],
+  ruAntonyms: ["оставлять прямым"],
+  ukAntonyms: ["залишати прямим"],
+  collocations: [
+    {
+      L2: "to bend the metal",
+      ru: "гнуть металл",
+      uk: "гнути метал"
+    },
+    {
+      L2: "to turn right",
+      ru: "повернуть направо (о движении)",
+      uk: "повернути праворуч"
+    }
+  ],
+  examples: [
+    {
+      L2: "Bend the metal carefully.",
+      ru: "Аккуратно согни металл.",
+      uk: "Обережно зігни метал."
+    }
+  ]
+},
+{
+  id: 193,
+  word: "to blow",
+  ru: "дуть",
+  uk: "дути",
+  level: "B1",
+  topics: ["senses"],
+  enSynonyms: ["to puff", "to gust"],
+  ruSynonyms: ["дуть"],
+  ukSynonyms: ["дути"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "The wind blows strongly.",
+      ru: "Ветер сильно дует.",
+      uk: "Вітер сильно дує."
+    },
+    {
+      L2: "to blow out the candles",
+      ru: "задуть свечи",
+      uk: "задувати свічки"
+    }
+  ],
+  examples: [
+    {
+      L2: "The wind blows strongly.",
+      ru: "Ветер сильно дует.",
+      uk: "Вітер сильно дує."
+    }
+  ]
+},
+{
+  id: 194,
+  word: "to burn",
+  ru: "гореть",
+  uk: "горіти",
+  level: "A2",
+  topics: ["nature"],
+  enSynonyms: ["to blaze"],
+  ruSynonyms: ["гореть"],
+  ukSynonyms: ["горіти"],
+  enAntonyms: ["to extinguish", "to go out"],
+  ruAntonyms: ["тушить", "гаснуть"],
+  ukAntonyms: ["гасити", "гаснути"],
+  collocations: [
+    {
+      L2: "The fire is burning.",
+      ru: "Огонь горит.",
+      uk: "Вогонь горить."
+    },
+    {
+      L2: "A candle is burning.",
+      ru: "горит свеча",
+      uk: "горить свічка"
+    }
+  ],
+  examples: [
+    {
+      L2: "The fire is still burning.",
+      ru: "Огонь всё ещё горит.",
+      uk: "Вогонь усе ще горить."
+    }
+  ]
+},
+{
+  id: 195,
+  word: "to flow",
+  ru: "течь",
+  uk: "текти",
+  level: "A2",
+  topics: ["nature"],
+  enSynonyms: ["to stream", "to run"],
+  ruSynonyms: ["течь"],
+  ukSynonyms: ["текти"],
+  enAntonyms: ["to stop", "to stagnate"],
+  ruAntonyms: ["останавливаться", "застревать"],
+  ukAntonyms: ["зупинятися", "застрявати"],
+  collocations: [
+    {
+      L2: "The water flows slowly.",
+      ru: "Вода течёт медленно.",
+      uk: "Вода повільно тече."
+    },
+    {
+      L2: "Blood flows.",
+      ru: "течёт кровь",
+      uk: "тече кров"
+    }
+  ],
+  examples: [
+    {
+      L2: "The water flows slowly.",
+      ru: "Вода течёт медленно.",
+      uk: "Вода повільно тече."
+    }
+  ]
+},
+{
+  id: 196,
+  word: "to freeze",
+  ru: "мерзнуть",
+  uk: "мерзнути",
+  level: "A2",
+  topics: ["weather"],
+  enSynonyms: ["to feel cold"],
+  ruSynonyms: ["мерзнуть"],
+  ukSynonyms: ["мерзнути"],
+  enAntonyms: ["to sweat"],
+  ruAntonyms: ["потеть"],
+  ukAntonyms: ["пітніти"],
+  collocations: [
+    {
+      L2: "to freeze without a jacket",
+      ru: "мерзнуть без куртки",
+      uk: "мерзнути без куртки"
+    },
+    {
+      L2: "to freeze from the cold",
+      ru: "дрожать от холода",
+      uk: "дрижати від холоду"
+    }
+  ],
+  examples: [
+    {
+      L2: "I freeze without a jacket.",
+      ru: "Я мёрзну без куртки.",
+      uk: "Я мерзну без куртки."
+    }
+  ]
+},
+{
+  id: 197,
+  word: "to succeed",
+  ru: "удаваться",
+  uk: "вдаватися",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to work out", "to turn out well"],
+  ruSynonyms: ["удаваться", "получаться"],
+  ukSynonyms: ["вдаватися", "виходити"],
+  enAntonyms: ["to fail", "to be unsuccessful"],
+  ruAntonyms: ["не удаваться", "проваливаться"],
+  ukAntonyms: ["не вдаватися", "зазнавати поразки"],
+  collocations: [
+    {
+      L2: "The cake turned out well.",
+      ru: "Торт хорошо получился.",
+      uk: "Торт добре вдався."
+    },
+    {
+      L2: "Something succeeds well.",
+      ru: "что-то хорошо удаётся",
+      uk: "щось добре вдається"
+    }
+  ],
+  examples: [
+    {
+      L2: "The cake turned out well.",
+      ru: "Торт хорошо получился.",
+      uk: "Торт добре вдався."
+    }
+  ]
+},
+{
+  id: 198,
+  word: "to enjoy",
+  ru: "наслаждаться",
+  uk: "насолоджуватися",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to savor"],
+  ruSynonyms: ["наслаждаться", "получать удовольствие"],
+  ukSynonyms: ["насолоджуватися", "отримувати задоволення"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to enjoy the silence",
+      ru: "наслаждаться тишиной",
+      uk: "насолоджуватися тишею"
+    },
+    {
+      L2: "to enjoy life",
+      ru: "наслаждаться жизнью",
+      uk: "насолоджуватися життям"
+    }
+  ],
+  examples: [
+    {
+      L2: "We enjoy the silence.",
+      ru: "Мы наслаждаемся тишиной.",
+      uk: "Ми насолоджуємося тишею."
+    }
+  ]
+},
+{
+  id: 199,
+  word: "to pour",
+  ru: "лить",
+  uk: "лити",
+  level: "A2",
+  topics: ["home", "nature"],
+  enSynonyms: ["to pour out", "to water"],
+  ruSynonyms: ["лить", "поливать"],
+  ukSynonyms: ["лити", "поливати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to water the flowers",
+      ru: "поливать цветы",
+      uk: "поливати квіти"
+    },
+    {
+      L2: "to pour water into the glass",
+      ru: "наливать воду в стакан",
+      uk: "наливати воду в склянку"
+    }
+  ],
+  examples: [
+    {
+      L2: "She waters the flowers every morning.",
+      ru: "Она поливает цветы каждое утро.",
+      uk: "Вона поливає квіти щоранку."
+    }
+  ]
+},
+{
+  id: 200,
+  word: "to grab",
+  ru: "хватать",
+  uk: "хапати",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to grasp", "to reach for"],
+  ruSynonyms: ["схватывать", "хвататься"],
+  ukSynonyms: ["схоплювати", "хапати"],
+  enAntonyms: ["to let go"],
+  ruAntonyms: ["отпускать"],
+  ukAntonyms: ["відпускати"],
+  collocations: [
+    {
+      L2: "to grab someone’s hand",
+      ru: "хватать за руку",
+      uk: "хапати за руку"
+    },
+    {
+      L2: "to reach for the pen",
+      ru: "тянуться за ручкой",
+      uk: "тягнутися за ручкою"
+    },
+    {
+      L2: "to crack down hard",
+      ru: "действовать жёстко",
+      uk: "діяти жорстко"
+    }
+  ],
+  examples: [
+    {
+      L2: "He quickly grabs the ball.",
+      ru: "Он быстро хватается за мяч.",
+      uk: "Він швидко хапає м’яч."
+    }
+  ]
+},
+{
+  id: 201,
+  word: "to hang",
+  ru: "висеть",
+  uk: "висіти",
+  level: "A2",
+  topics: ["position", "home"],
+  enSynonyms: ["to dangle", "to hang down"],
+  ruSynonyms: ["висеть", "свисать"],
+  ukSynonyms: ["висіти", "звисати"],
+  enAntonyms: ["to take down"],
+  ruAntonyms: ["снимать"],
+  ukAntonyms: ["знімати"],
+  collocations: [
+    {
+      L2: "to hang on the wall",
+      ru: "висеть на стене",
+      uk: "висіти на стіні"
+    },
+    {
+      L2: "to hang crooked",
+      ru: "висеть криво",
+      uk: "висіти криво"
+    },
+    {
+      L2: "to be very attached to someone",
+      ru: "быть привязанным к кому-то",
+      uk: "бути прив’язаним до когось"
+    }
+  ],
+  examples: [
+    {
+      L2: "The picture hangs on the wall.",
+      ru: "Картина висит на стене.",
+      uk: "Картина висить на стіні."
+    }
+  ]
+},
+{
+  id: 202,
+  word: "to lift",
+  ru: "поднимать",
+  uk: "піднімати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to lift up", "to raise"],
+  ruSynonyms: ["поднимать", "возвышать"],
+  ukSynonyms: ["піднімати", "підіймати"],
+  enAntonyms: ["to lower"],
+  ruAntonyms: ["опускать"],
+  ukAntonyms: ["опускати"],
+  collocations: [
+    {
+      L2: "to lift weights",
+      ru: "поднимать штангу",
+      uk: "підіймати штангу"
+    },
+    {
+      L2: "to raise your hand",
+      ru: "поднять руку",
+      uk: "підняти руку"
+    },
+    {
+      L2: "to raise your voice",
+      ru: "повышать голос",
+      uk: "підвищувати голос"
+    }
+  ],
+  examples: [
+    {
+      L2: "He lifts the box carefully.",
+      ru: "Он осторожно поднимает ящик.",
+      uk: "Він обережно піднімає ящик."
+    }
+  ]
+},
+{
+  id: 203,
+  word: "to suffer",
+  ru: "страдать",
+  uk: "страждати",
+  level: "B1",
+  topics: ["health", "feelings"],
+  enSynonyms: ["to be in pain", "to go through a hard time"],
+  ruSynonyms: ["мучиться", "переживать"],
+  ukSynonyms: ["мучитися", "терпіти"],
+  enAntonyms: ["to recover", "to get better"],
+  ruAntonyms: ["выздоравливать", "исцеляться"],
+  ukAntonyms: ["одужувати"],
+  collocations: [
+    {
+      L2: "to suffer from an illness",
+      ru: "страдать от болезни",
+      uk: "страждати від хвороби"
+    },
+    {
+      L2: "to suffer from stress",
+      ru: "страдать от стресса",
+      uk: "страждати від стресу"
+    },
+    {
+      L2: "to suffer badly",
+      ru: "сильно страдать",
+      uk: "сильно страждати"
+    }
+  ],
+  examples: [
+    {
+      L2: "Many people suffer from stress.",
+      ru: "Многие люди страдают от стресса.",
+      uk: "Багато людей страждають від стресу."
+    }
+  ]
+},
+{
+  id: 204,
+  word: "to lend",
+  ru: "одалживать",
+  uk: "позичати",
+  level: "A2",
+  topics: ["money", "shopping"],
+  enSynonyms: ["to lend out", "to loan"],
+  ruSynonyms: ["дать взаймы", "одолжить"],
+  ukSynonyms: ["позичати", "дати в борг"],
+  enAntonyms: ["to give back", "to return"],
+  ruAntonyms: ["возвращать"],
+  ukAntonyms: ["повертати"],
+  collocations: [
+    {
+      L2: "to lend someone money",
+      ru: "одолжить кому-то деньги",
+      uk: "позичити комусь гроші"
+    },
+    {
+      L2: "to borrow a book",
+      ru: "взять книгу напрокат",
+      uk: "позичити книжку"
+    },
+    {
+      L2: "to lend for a while",
+      ru: "одолжить на время",
+      uk: "позичити на час"
+    }
+  ],
+  examples: [
+    {
+      L2: "Can you lend me your car?",
+      ru: "Можешь одолжить мне свою машину?",
+      uk: "Можеш позичити мені своє авто?"
+    }
+  ]
+},
+{
+  id: 205,
+  word: "to lie",
+  ru: "лгать",
+  uk: "брехати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to tell lies", "to tell an untruth"],
+  ruSynonyms: ["врать", "говорить неправду"],
+  ukSynonyms: ["брехати", "говорити неправду"],
+  enAntonyms: ["to tell the truth"],
+  ruAntonyms: ["говорить правду"],
+  ukAntonyms: ["говорити правду"],
+  collocations: [
+    {
+      L2: "to lie to someone",
+      ru: "обманывать кого-то",
+      uk: "обманювати когось"
+    },
+    {
+      L2: "to lie without hesitation",
+      ru: "лгать не раздумывая",
+      uk: "брехати не задумуючись"
+    },
+    {
+      L2: "to lie straight to someone’s face",
+      ru: "лгать в лицо",
+      uk: "брехати в обличчя"
+    }
+  ],
+  examples: [
+    {
+      L2: "He tells the truth, he does not lie.",
+      ru: "Он говорит правду, он не лжёт.",
+      uk: "Він каже правду, він не бреше."
+    }
+  ]
+},
+{
+  id: 206,
+  word: "to measure",
+  ru: "измерять",
+  uk: "міряти",
+  level: "B1",
+  topics: ["science", "tools"],
+  enSynonyms: ["to gauge", "to take measurements"],
+  ruSynonyms: ["замерять", "измерять"],
+  ukSynonyms: ["вимірювати", "міряти"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to measure the temperature",
+      ru: "измерять температуру",
+      uk: "вимірювати температуру"
+    },
+    {
+      L2: "to measure blood pressure",
+      ru: "мерить давление",
+      uk: "міряти тиск"
+    },
+    {
+      L2: "to measure exactly",
+      ru: "измерять точно",
+      uk: "вимірювати точно"
+    }
+  ],
+  examples: [
+    {
+      L2: "The technician measures the voltage.",
+      ru: "Техник измеряет напряжение.",
+      uk: "Технік міряє напругу."
+    }
+  ]
+},
+{
+  id: 207,
+  word: "to whistle",
+  ru: "свистеть",
+  uk: "свистіти",
+  level: "B1",
+  topics: ["sound"],
+  enSynonyms: ["to whistle a tune"],
+  ruSynonyms: ["насвистывать", "свистеть"],
+  ukSynonyms: ["насвистувати", "свистіти"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to whistle a song",
+      ru: "насвистывать песенку",
+      uk: "насвистувати пісеньку"
+    },
+    {
+      L2: "to not care about someone",
+      ru: "плевать на кого-то",
+      uk: "не зважати на когось"
+    },
+    {
+      L2: "to whistle loudly",
+      ru: "громко свистеть",
+      uk: "голосно свистіти"
+    }
+  ],
+  examples: [
+    {
+      L2: "He whistles a melody.",
+      ru: "Он насвистывает мелодию.",
+      uk: "Він насвистує мелодію."
+    }
+  ]
+},
+{
+  id: 208,
+  word: "to advise",
+  ru: "советовать",
+  uk: "радити",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to recommend", "to give advice"],
+  ruSynonyms: ["давать совет", "советовать"],
+  ukSynonyms: ["радити", "давати пораду"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to advise someone to do something",
+      ru: "советовать кому-то что-то",
+      uk: "радити комусь щось"
+    },
+    {
+      L2: "to advise against something",
+      ru: "отговаривать от чего-то",
+      uk: "відраджувати від чогось"
+    },
+    {
+      L2: "to advise with good intentions",
+      ru: "советовать из лучших побуждений",
+      uk: "радити з найкращих міркувань"
+    }
+  ],
+  examples: [
+    {
+      L2: "What do you advise me?",
+      ru: "Что ты мне посоветуешь?",
+      uk: "Що ти мені порадиш?"
+    }
+  ]
+},
+{
+  id: 209,
+  word: "to rub",
+  ru: "тереть",
+  uk: "терти",
+  level: "B1",
+  topics: ["home"],
+  enSynonyms: ["to grate", "to rub against"],
+  ruSynonyms: ["натирать", "тереть"],
+  ukSynonyms: ["натирати", "терти"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to grate cheese",
+      ru: "тереть сыр",
+      uk: "терти сир"
+    },
+    {
+      L2: "to rub your eyes",
+      ru: "тереть глаза",
+      uk: "терти очі"
+    },
+    {
+      L2: "to rub against something",
+      ru: "тереться об что-то",
+      uk: "тертися об щось"
+    }
+  ],
+  examples: [
+    {
+      L2: "She grates the cheese for the pizza.",
+      ru: "Она трёт сыр для пиццы.",
+      uk: "Вона треть сир для піци."
+    }
+  ]
+},
+{
+  id: 210,
+  word: "to tear",
+  ru: "рвать",
+  uk: "рвати",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to rip", "to tear apart"],
+  ruSynonyms: ["разрывать", "оторвать"],
+  ukSynonyms: ["розривати", "обривати"],
+  enAntonyms: ["to put together"],
+  ruAntonyms: ["соединять"],
+  ukAntonyms: ["з’єднувати"],
+  collocations: [
+    {
+      L2: "to tear the paper to pieces",
+      ru: "разорвать бумагу",
+      uk: "розірвати папір"
+    },
+    {
+      L2: "to break free",
+      ru: "вырваться",
+      uk: "вирватися"
+    },
+    {
+      L2: "to throw something out of joint",
+      ru: "выбить из колеи",
+      uk: "вибити з колії"
+    }
+  ],
+  examples: [
+    {
+      L2: "He tears the paper into two pieces.",
+      ru: "Он рвёт бумагу на две части.",
+      uk: "Він рве папір на дві частини."
+    }
+  ]
+},
+{
+  id: 211,
+  word: "to ride (a horse)",
+  ru: "ездить верхом",
+  uk: "їздити верхи",
+  level: "A2",
+  topics: ["animals", "sport"],
+  enSynonyms: ["to go riding"],
+  ruSynonyms: ["скакать верхом", "ездить верхом"],
+  ukSynonyms: ["їздити верхи", "кататися верхи"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to ride a horse",
+      ru: "ездить на лошади",
+      uk: "їздити на коні"
+    },
+    {
+      L2: "to ride at a gallop",
+      ru: "скакать галопом",
+      uk: "скакати галопом"
+    },
+    {
+      L2: "to like riding",
+      ru: "любить ездить верхом",
+      uk: "любити їздити верхи"
+    }
+  ],
+  examples: [
+    {
+      L2: "She goes riding every weekend.",
+      ru: "Она катается верхом каждые выходные.",
+      uk: "Вона їздить верхи щовихідних."
+    }
+  ]
+},
+{
+  id: 212,
+  word: "to run",
+  ru: "бежать",
+  uk: "бігти",
+  level: "A2",
+  topics: ["sport"],
+  enSynonyms: ["to sprint", "to race"],
+  ruSynonyms: ["нестись", "бежать"],
+  ukSynonyms: ["мчати", "бігти"],
+  enAntonyms: ["to walk", "to stroll"],
+  ruAntonyms: ["идти пешком"],
+  ukAntonyms: ["йти пішки"],
+  collocations: [
+    {
+      L2: "to race each other",
+      ru: "бежать наперегонки",
+      uk: "бігти наввипередки"
+    },
+    {
+      L2: "to run fast",
+      ru: "быстро бежать",
+      uk: "швидко бігти"
+    },
+    {
+      L2: "to run to the finish",
+      ru: "добежать до финиша",
+      uk: "добігти до фінішу"
+    }
+  ],
+  examples: [
+    {
+      L2: "The children run across the yard.",
+      ru: "Дети бегут по двору.",
+      uk: "Діти біжать подвір’ям."
+    }
+  ]
+},
+{
+  id: 213,
+  word: "to push",
+  ru: "толкать",
+  uk: "штовхати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to shove", "to roll (by pushing)"],
+  ruSynonyms: ["перемещать", "толкать"],
+  ukSynonyms: ["пересувати", "штовхати"],
+  enAntonyms: ["to pull"],
+  ruAntonyms: ["тянуть"],
+  ukAntonyms: ["тягнути"],
+  collocations: [
+    {
+      L2: "to push the pram",
+      ru: "катить детскую коляску",
+      uk: "котити дитячий візок"
+    },
+    {
+      L2: "to push someone aside",
+      ru: "оттолкнуть кого-то в сторону",
+      uk: "відштовхнути когось убік"
+    },
+    {
+      L2: "to push away responsibility",
+      ru: "сбрасывать с себя ответственность",
+      uk: "знімати з себе відповідальність"
+    }
+  ],
+  examples: [
+    {
+      L2: "He pushes the bike up the hill.",
+      ru: "Он толкает велосипед в гору.",
+      uk: "Він штовхає велосипед угору."
+    }
+  ]
+},
+{
+  id: 214,
+  word: "to shoot",
+  ru: "стрелять",
+  uk: "стріляти",
+  level: "B1",
+  topics: ["sport"],
+  enSynonyms: ["to fire", "to take a shot"],
+  ruSynonyms: ["вести стрельбу", "стрелять"],
+  ukSynonyms: ["стріляти", "відкривати вогонь"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to score a goal",
+      ru: "забить гол",
+      uk: "забити гол"
+    },
+    {
+      L2: "to shoot into the air",
+      ru: "стрелять в воздух",
+      uk: "стріляти в повітря"
+    },
+    {
+      L2: "to shoot live rounds",
+      ru: "стрелять боевыми",
+      uk: "стріляти бойовими"
+    }
+  ],
+  examples: [
+    {
+      L2: "The player scores a goal.",
+      ru: "Игрок забивает гол.",
+      uk: "Гравець забиває гол."
+    }
+  ]
+},
+{
+  id: 215,
+  word: "to hit",
+  ru: "бить",
+  uk: "бити",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to beat", "to strike"],
+  ruSynonyms: ["ударять", "колотить"],
+  ukSynonyms: ["вдаряти", "гамселити"],
+  enAntonyms: ["to stroke", "to caress"],
+  ruAntonyms: ["гладить", "ласкать"],
+  ukAntonyms: ["гладити", "пестити"],
+  collocations: [
+    {
+      L2: "to hit with your fist",
+      ru: "ударить кулаком",
+      uk: "вдарити кулаком"
+    },
+    {
+      L2: "to beat someone unconscious",
+      ru: "избить кого-то до потери сознания",
+      uk: "забити когось до непритомності"
+    },
+    {
+      L2: "the heart beats faster",
+      ru: "сердце бьётся быстрее",
+      uk: "серце б’ється швидше"
+    }
+  ],
+  examples: [
+    {
+      L2: "He hits the table with his fist.",
+      ru: "Он бьёт кулаком по столу.",
+      uk: "Він б’є кулаком по столу."
+    }
+  ]
+},
+{
+  id: 216,
+  word: "to melt",
+  ru: "таять",
+  uk: "танути",
+  level: "B1",
+  topics: ["nature"],
+  enSynonyms: ["to thaw"],
+  ruSynonyms: ["расплавляться", "таять"],
+  ukSynonyms: ["плавитися", "танути"],
+  enAntonyms: ["to freeze"],
+  ruAntonyms: ["замерзать"],
+  ukAntonyms: ["замерзати"],
+  collocations: [
+    {
+      L2: "the snow melts",
+      ru: "снег тает",
+      uk: "сніг тане"
+    },
+    {
+      L2: "to melt in your mouth",
+      ru: "таять во рту",
+      uk: "танути в роті"
+    },
+    {
+      L2: "to melt in water",
+      ru: "растворяться/таять в воде",
+      uk: "танути у воді"
+    }
+  ],
+  examples: [
+    {
+      L2: "In spring the snow melts.",
+      ru: "Весной снег тает.",
+      uk: "Навесні сніг тане."
+    }
+  ]
+},
+{
+  id: 217,
+  word: "to cut",
+  ru: "резать",
+  uk: "різати",
+  level: "A2",
+  topics: ["home", "food"],
+  enSynonyms: ["to slice", "to cut up"],
+  ruSynonyms: ["нарезать", "разрезать"],
+  ukSynonyms: ["нарізати", "розрізати"],
+  enAntonyms: ["to leave whole"],
+  ruAntonyms: ["оставлять целым"],
+  ukAntonyms: ["залишати цілим"],
+  collocations: [
+    {
+      L2: "to cut the vegetables into small pieces",
+      ru: "мелко нарезать овощи",
+      uk: "дрібно нарізати овочі"
+    },
+    {
+      L2: "to cut your finger",
+      ru: "порезаться в палец",
+      uk: "порізати палець"
+    },
+    {
+      L2: "to cut hair",
+      ru: "стричь волосы",
+      uk: "стригти волосся"
+    }
+  ],
+  examples: [
+    {
+      L2: "She cuts the vegetables into small pieces.",
+      ru: "Она мелко режет овощи.",
+      uk: "Вона дрібно ріже овочі."
+    }
+  ]
+},
+{
+  id: 218,
+  word: "to scream",
+  ru: "кричать",
+  uk: "кричати",
+  level: "A2",
+  topics: ["feelings"],
+  enSynonyms: ["to shout", "to yell"],
+  ruSynonyms: ["орать", "вопить"],
+  ukSynonyms: ["волати", "горлати"],
+  enAntonyms: ["to whisper", "to be silent"],
+  ruAntonyms: ["шептать", "молчать"],
+  ukAntonyms: ["шепотіти", "мовчати"],
+  collocations: [
+    {
+      L2: "to scream with fear",
+      ru: "кричать от страха",
+      uk: "кричати від страху"
+    },
+    {
+      L2: "to scream loudly",
+      ru: "громко кричать",
+      uk: "голосно кричати"
+    },
+    {
+      L2: "to scream for help",
+      ru: "кричать о помощи",
+      uk: "кричати про допомогу"
+    }
+  ],
+  examples: [
+    {
+      L2: "The child screams with fear.",
+      ru: "Ребёнок кричит от страха.",
+      uk: "Дитина кричить від страху."
+    }
+  ]
+},
+{
+  id: 219,
+  word: "to be silent",
+  ru: "молчать",
+  uk: "мовчати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to keep quiet"],
+  ruSynonyms: ["хранить молчание", "умолкать"],
+  ukSynonyms: ["мовчати", "мовчати як вода"],
+  enAntonyms: ["to talk", "to speak"],
+  ruAntonyms: ["говорить", "разговаривать"],
+  ukAntonyms: ["говорити", "розмовляти"],
+  collocations: [
+    {
+      L2: "to remain silent as a stone",
+      ru: "упрямо молчать",
+      uk: "уперто мовчати"
+    },
+    {
+      L2: "to listen in silence",
+      ru: "молча слушать",
+      uk: "мовчки слухати"
+    },
+    {
+      L2: "to prefer to stay silent",
+      ru: "предпочесть промолчать",
+      uk: "воліти промовчати"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is silent and says nothing.",
+      ru: "Он молчит и ничего не говорит.",
+      uk: "Він мовчить і нічого не каже."
+    }
+  ]
+},
+{
+  id: 220,
+  word: "to steal",
+  ru: "красть",
+  uk: "красти",
+  level: "B1",
+  topics: ["crime"],
+  enSynonyms: ["to swipe", "to take unlawfully"],
+  ruSynonyms: ["воровать", "совершать кражу"],
+  ukSynonyms: ["красти", "поцупити"],
+  enAntonyms: ["to give back", "to return"],
+  ruAntonyms: ["возвращать"],
+  ukAntonyms: ["повертати"],
+  collocations: [
+    {
+      L2: "to steal a bike",
+      ru: "украсть велосипед",
+      uk: "вкрасти велосипед"
+    },
+    {
+      L2: "to steal money",
+      ru: "украсть деньги",
+      uk: "вкрасти гроші"
+    },
+    {
+      L2: "to steal secretly",
+      ru: "красть тайком",
+      uk: "таємно красти"
+    }
+  ],
+  examples: [
+    {
+      L2: "Someone has stolen my bike.",
+      ru: "Кто-то украл мой велосипед.",
+      uk: "Хтось украв мій велосипед."
+    }
+  ]
+},
+{
+  id: 221,
+  word: "to stink",
+  ru: "вонять",
+  uk: "смердіти",
+  level: "B1",
+  topics: ["senses"],
+  enSynonyms: ["to smell bad", "to reek"],
+  ruSynonyms: ["плохо пахнуть", "вонять"],
+  ukSynonyms: ["погано пахнути", "смердіти"],
+  enAntonyms: ["to smell good"],
+  ruAntonyms: ["хорошо пахнуть"],
+  ukAntonyms: ["добре пахнути"],
+  collocations: [
+    {
+      L2: "it stinks of smoke",
+      ru: "воняет дымом",
+      uk: "смердить димом"
+    },
+    {
+      L2: "to stink terribly",
+      ru: "ужасно вонять",
+      uk: "страшенно смердіти"
+    },
+    {
+      L2: "to stink of garbage",
+      ru: "вонять мусором",
+      uk: "смердіти сміттям"
+    }
+  ],
+  examples: [
+    {
+      L2: "The garbage stinks terribly.",
+      ru: "Мусор ужасно воняет.",
+      uk: "Сміття страшенно смердить."
+    }
+  ]
+},
+{
+  id: 222,
+  word: "to bump",
+  ru: "ударять",
+  uk: "штовхати",
+  level: "B1",
+  topics: ["movement"],
+  enSynonyms: ["to nudge", "to bump into"],
+  ruSynonyms: ["толкнуть", "удариться"],
+  ukSynonyms: ["штовхнути", "вдаритися"],
+  enAntonyms: ["to pull"],
+  ruAntonyms: ["тянуть"],
+  ukAntonyms: ["тягнути"],
+  collocations: [
+    {
+      L2: "to nudge someone",
+      ru: "легко подтолкнуть кого-то",
+      uk: "легенько штовхнути когось"
+    },
+    {
+      L2: "to bump your head on the ceiling",
+      ru: "упереться головой в потолок",
+      uk: "упертися головою в стелю"
+    },
+    {
+      L2: "to encounter resistance",
+      ru: "натолкнуться на сопротивление",
+      uk: "натрапити на опір"
+    }
+  ],
+  examples: [
+    {
+      L2: "He pushes the door open.",
+      ru: "Он распахивает дверь.",
+      uk: "Він розштовхує двері."
+    }
+  ]
+},
+{
+  id: 223,
+  word: "to paint",
+  ru: "красить",
+  uk: "фарбувати",
+  level: "A2",
+  topics: ["home"],
+  enSynonyms: ["to paint (walls)"],
+  ruSynonyms: ["покрасить", "окрашивать"],
+  ukSynonyms: ["малювати стіни", "фарбувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to paint the walls",
+      ru: "красить стены",
+      uk: "фарбувати стіни"
+    },
+    {
+      L2: "to paint the ceiling white",
+      ru: "покрасить потолок в белый",
+      uk: "пофарбувати стелю в білий"
+    },
+    {
+      L2: "to paint the window frame",
+      ru: "красить раму окна",
+      uk: "фарбувати раму вікна"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are repainting the walls.",
+      ru: "Мы заново красим стены.",
+      uk: "Ми фарбуємо стіни наново."
+    }
+  ]
+},
+{
+  id: 224,
+  word: "to meet",
+  ru: "встречать",
+  uk: "зустрічати",
+  level: "A2",
+  topics: ["social"],
+  enSynonyms: ["to encounter", "to get together"],
+  ruSynonyms: ["встречаться", "повидаться"],
+  ukSynonyms: ["зустрічатися", "бачитися"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to meet friends",
+      ru: "встречаться с друзьями",
+      uk: "зустрічатися з друзями"
+    },
+    {
+      L2: "to make a decision",
+      ru: "принять решение",
+      uk: "ухвалити рішення"
+    },
+    {
+      L2: "to hit the mark",
+      ru: "попасть в точку",
+      uk: "влучити в саме яблучко"
+    }
+  ],
+  examples: [
+    {
+      L2: "I meet my friends in the evening.",
+      ru: "Я встречаюсь с друзьями вечером.",
+      uk: "Я зустрічаюся з друзями ввечері."
+    }
+  ]
+},
+{
+  id: 225,
+  word: "to throw",
+  ru: "бросать",
+  uk: "кидати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to toss", "to chuck"],
+  ruSynonyms: ["кинуть", "метать"],
+  ukSynonyms: ["закинути", "жбурляти"],
+  enAntonyms: ["to catch"],
+  ruAntonyms: ["ловить"],
+  ukAntonyms: ["ловити"],
+  collocations: [
+    {
+      L2: "to throw the ball",
+      ru: "бросать мяч",
+      uk: "кидати м’яч"
+    },
+    {
+      L2: "to throw something in the bin",
+      ru: "выкинуть что-то в мусор",
+      uk: "викинути щось у смітник"
+    },
+    {
+      L2: "to cast a glance",
+      ru: "бросить взгляд",
+      uk: "кинути погляд"
+    }
+  ],
+  examples: [
+    {
+      L2: "He throws the ball into the goal.",
+      ru: "Он бросает мяч в ворота.",
+      uk: "Він кидає м’яч у ворота."
+    }
+  ]
+},
+{
+  id: 226,
+  word: "to weigh",
+  ru: "взвешивать",
+  uk: "важити",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to determine the weight", "to weigh up"],
+  ruSynonyms: ["весить", "определять вес"],
+  ukSynonyms: ["важити", "зважувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to weigh the parcel",
+      ru: "взвесить посылку",
+      uk: "зважити пакунок"
+    },
+    {
+      L2: "to stand on the scales and weigh yourself",
+      ru: "взвеситься на весах",
+      uk: "зважитися на вагах"
+    },
+    {
+      L2: "to weigh heavily",
+      ru: "много весить",
+      uk: "важити багато"
+    }
+  ],
+  examples: [
+    {
+      L2: "The parcel weighs five kilos.",
+      ru: "Посылка весит пять килограммов.",
+      uk: "Пакунок важить п’ять кілограмів."
+    }
+  ]
+},
+{
+  id: 227,
+  word: "to force",
+  ru: "принуждать",
+  uk: "примушувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to compel", "to coerce"],
+  ruSynonyms: ["заставлять", "принуждать"],
+  ukSynonyms: ["змушувати", "примушувати"],
+  enAntonyms: ["to leave free", "to not force"],
+  ruAntonyms: ["не принуждать", "оставлять свободу"],
+  ukAntonyms: ["не примушувати", "залишати свободу"],
+  collocations: [
+    {
+      L2: "to force someone to do something",
+      ru: "заставить кого-то что-то сделать",
+      uk: "змусити когось щось зробити"
+    },
+    {
+      L2: "to force yourself to do something",
+      ru: "заставлять себя что-то делать",
+      uk: "примушувати себе щось робити"
+    },
+    {
+      L2: "to force by using violence",
+      ru: "принуждать силой",
+      uk: "примушувати силою"
+    }
+  ],
+  examples: [
+    {
+      L2: "No one forces you to stay.",
+      ru: "Никто не принуждает тебя оставаться.",
+      uk: "Ніхто не примушує тебе залишатися."
+    }
+  ]
+},
+{
+  id: 228,
+  word: "to repeat",
+  ru: "повторять",
+  uk: "повторювати",
+  level: "A2",
+  topics: ["study"],
+  enSynonyms: ["to say again", "to revise"],
+  ruSynonyms: ["повторять", "репетировать"],
+  ukSynonyms: ["повторювати", "репетирувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to repeat the question",
+      ru: "повторить вопрос",
+      uk: "повторити запитання"
+    },
+    {
+      L2: "to revise the material",
+      ru: "повторять материал",
+      uk: "повторювати матеріал"
+    },
+    {
+      L2: "to repeat constantly",
+      ru: "постоянно повторять",
+      uk: "постійно повторювати"
+    }
+  ],
+  examples: [
+    {
+      L2: "Could you repeat that, please?",
+      ru: "Не могли бы вы это повторить?",
+      uk: "Чи не могли б ви це повторити?"
+    }
+  ]
+},
+{
+  id: 229,
+  word: "to prepare",
+  ru: "подготавливать",
+  uk: "готуватися",
+  level: "A2",
+  topics: ["study", "work"],
+  enSynonyms: ["to plan", "to get ready"],
+  ruSynonyms: ["подготавливать", "готовиться"],
+  ukSynonyms: ["готувати", "готуватися"],
+  enAntonyms: ["to leave unprepared", "to surprise without preparation"],
+  ruAntonyms: ["не готовить", "оставлять без подготовки"],
+  ukAntonyms: ["не готувати", "залишати без підготовки"],
+  collocations: [
+    {
+      L2: "to prepare for the exam",
+      ru: "готовиться к экзамену",
+      uk: "готуватися до іспиту"
+    },
+    {
+      L2: "to prepare a presentation",
+      ru: "подготовить презентацию",
+      uk: "підготувати презентацію"
+    },
+    {
+      L2: "to prepare thoroughly",
+      ru: "тщательно подготовить",
+      uk: "ретельно підготувати"
+    }
+  ],
+  examples: [
+    {
+      L2: "I am preparing for the exam.",
+      ru: "Я готовлюсь к экзамену.",
+      uk: "Я готуюся до іспиту."
+    }
+  ]
+},
+{
+  id: 230,
+  word: "to intend",
+  ru: "намереваться",
+  uk: "мати намір",
+  level: "A2",
+  topics: ["plans"],
+  enSynonyms: ["to plan", "to mean to do something"],
+  ruSynonyms: ["планировать", "намереваться"],
+  ukSynonyms: ["планувати", "мати намір"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to have plans for tonight",
+      ru: "намереваться что-то делать вечером",
+      uk: "мати плани на вечір"
+    },
+    {
+      L2: "to have a lot planned",
+      ru: "много планировать",
+      uk: "мати багато планів"
+    },
+    {
+      L2: "to have nothing special planned",
+      ru: "не иметь особых планов",
+      uk: "не мати особливих планів"
+    }
+  ],
+  examples: [
+    {
+      L2: "What are you planning to do tonight?",
+      ru: "Что ты намереваешься делать сегодня вечером?",
+      uk: "Що ти маєш намір робити сьогодні ввечері?"
+    }
+  ]
+},
+{
+  id: 231,
+  word: "to agree",
+  ru: "одобрять",
+  uk: "погоджуватися",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to be in agreement", "to approve"],
+  ruSynonyms: ["соглашаться", "одобрять"],
+  ukSynonyms: ["погоджуватися", "схвалювати"],
+  enAntonyms: ["to object", "to reject"],
+  ruAntonyms: ["возражать", "отклонять"],
+  ukAntonyms: ["заперечувати", "відхиляти"],
+  collocations: [
+    {
+      L2: "to agree to a proposal",
+      ru: "одобрить предложение",
+      uk: "погодитися з пропозицією"
+    },
+    {
+      L2: "to agree completely",
+      ru: "полностью согласиться",
+      uk: "повністю погодитися"
+    },
+    {
+      L2: "to agree only partly",
+      ru: "согласиться лишь частично",
+      uk: "погодитися лише частково"
+    }
+  ],
+  examples: [
+    {
+      L2: "I agree with your proposal.",
+      ru: "Я одобряю твое предложение.",
+      uk: "Я погоджуюся з твоєю пропозицією."
+    }
+  ]
+},
+{
+  id: 232,
+  word: "to destroy",
+  ru: "разрушать",
+  uk: "руйнувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to ruin", "to wreck"],
+  ruSynonyms: ["уничтожать", "ломать"],
+  ukSynonyms: ["нищити", "руйнувати"],
+  enAntonyms: ["to build", "to create"],
+  ruAntonyms: ["строить", "создавать"],
+  ukAntonyms: ["будувати", "створювати"],
+  collocations: [
+    {
+      L2: "to destroy nature",
+      ru: "разрушать природу",
+      uk: "руйнувати природу"
+    },
+    {
+      L2: "to destroy a building",
+      ru: "разрушить здание",
+      uk: "зруйнувати будівлю"
+    },
+    {
+      L2: "to destroy someone’s trust",
+      ru: "разрушить доверие",
+      uk: "зруйнувати чиюсь довіру"
+    }
+  ],
+  examples: [
+    {
+      L2: "The storm destroys many houses.",
+      ru: "Шторм разрушает много домов.",
+      uk: "Буря руйнує багато будинків."
+    }
+  ]
+},
+{
+  id: 233,
+  word: "to keep",
+  ru: "сохранять",
+  uk: "зберігати",
+  level: "B1",
+  topics: ["memory", "abstract"],
+  enSynonyms: ["to keep for yourself", "to preserve"],
+  ruSynonyms: ["оставлять у себя", "сохранять"],
+  ukSynonyms: ["залишати собі", "зберігати"],
+  enAntonyms: ["to give away", "to lose"],
+  ruAntonyms: ["отдать", "потерять"],
+  ukAntonyms: ["віддати", "втратити"],
+  collocations: [
+    {
+      L2: "to keep something to yourself",
+      ru: "оставить что-то при себе",
+      uk: "залишити щось при собі"
+    },
+    {
+      L2: "to keep an overview",
+      ru: "сохранять обзор/контроль",
+      uk: "зберігати огляд / контроль"
+    },
+    {
+      L2: "to turn out to be right",
+      ru: "оказаться правым",
+      uk: "виявитися правим"
+    }
+  ],
+  examples: [
+    {
+      L2: "Keep this note safe.",
+      ru: "Сохрани эту записку.",
+      uk: "Добре збережи цю записку."
+    }
+  ]
+},
+{
+  id: 234,
+  word: "to preserve",
+  ru: "беречь",
+  uk: "берегти",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to protect", "to maintain"],
+  ruSynonyms: ["сохранять", "оберегать"],
+  ukSynonyms: ["зберігати", "оберігати"],
+  enAntonyms: ["to destroy", "to neglect"],
+  ruAntonyms: ["разрушать", "запускать"],
+  ukAntonyms: ["руйнувати", "запускати"],
+  collocations: [
+    {
+      L2: "to preserve nature",
+      ru: "беречь природу",
+      uk: "берегти природу"
+    },
+    {
+      L2: "to keep calm",
+      ru: "сохранять спокойствие",
+      uk: "зберігати спокій"
+    },
+    {
+      L2: "to cherish memories",
+      ru: "беречь воспоминания",
+      uk: "берегти спогади"
+    }
+  ],
+  examples: [
+    {
+      L2: "We must preserve nature.",
+      ru: "Мы должны беречь природу.",
+      uk: "Ми повинні берегти природу."
+    }
+  ]
+},
+{
+  id: 235,
+  word: "to order",
+  ru: "заказывать",
+  uk: "замовляти",
+  level: "A1",
+  topics: ["shopping", "food"],
+  enSynonyms: ["to place an order"],
+  ruSynonyms: ["делать заказ", "заказывать"],
+  ukSynonyms: ["робити замовлення", "замовляти"],
+  enAntonyms: ["to cancel an order"],
+  ruAntonyms: ["отменять заказ"],
+  ukAntonyms: ["скасовувати замовлення"],
+  collocations: [
+    {
+      L2: "to order food",
+      ru: "заказывать еду",
+      uk: "замовляти їжу"
+    },
+    {
+      L2: "to order online",
+      ru: "заказывать онлайн",
+      uk: "замовляти онлайн"
+    },
+    {
+      L2: "to order a pizza",
+      ru: "заказать пиццу",
+      uk: "замовити піцу"
+    }
+  ],
+  examples: [
+    {
+      L2: "I am ordering a pizza.",
+      ru: "Я заказываю пиццу.",
+      uk: "Я замовляю піцу."
+    }
+  ]
+},
+{
+  id: 236,
+  word: "to confirm",
+  ru: "подтверждать",
+  uk: "підтверджувати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to affirm", "to acknowledge"],
+  ruSynonyms: ["подтверждать", "утверждать"],
+  ukSynonyms: ["підтверджувати", "засвідчувати"],
+  enAntonyms: ["to deny", "to revoke"],
+  ruAntonyms: ["опровергать", "отрицать"],
+  ukAntonyms: ["спростовувати", "заперечувати"],
+  collocations: [
+    {
+      L2: "to confirm an appointment",
+      ru: "подтвердить встречу",
+      uk: "підтвердити зустріч"
+    },
+    {
+      L2: "to confirm in writing",
+      ru: "подтвердить письменно",
+      uk: "підтвердити письмово"
+    },
+    {
+      L2: "to confirm receipt",
+      ru: "подтвердить получение",
+      uk: "підтвердити отримання"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please confirm the appointment.",
+      ru: "Пожалуйста, подтвердите встречу.",
+      uk: "Будь ласка, підтвердьте зустріч."
+    }
+  ]
+},
+{
+  id: 237,
+  word: "to rate",
+  ru: "оценивать",
+  uk: "оцінювати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to assess", "to evaluate"],
+  ruSynonyms: ["давать оценку", "оценивать"],
+  ukSynonyms: ["давати оцінку", "оцінювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to rate a product",
+      ru: "оценивать продукт",
+      uk: "оцінювати продукт"
+    },
+    {
+      L2: "to rate a performance",
+      ru: "оценивать результат",
+      uk: "оцінювати результат"
+    },
+    {
+      L2: "to rate positively",
+      ru: "оценивать положительно",
+      uk: "оцінювати позитивно"
+    }
+  ],
+  examples: [
+    {
+      L2: "Customers rate the product highly.",
+      ru: "Клиенты хорошо оценивают продукт.",
+      uk: "Клієнти добре оцінюють продукт."
+    }
+  ]
+},
+{
+  id: 238,
+  word: "to demand",
+  ru: "требовать",
+  uk: "вимагати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to ask for", "to insist on"],
+  ruSynonyms: ["настаивать", "требовать"],
+  ukSynonyms: ["вимагати", "настоювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to demand an explanation",
+      ru: "требовать объяснения",
+      uk: "вимагати пояснення"
+    },
+    {
+      L2: "to demand too much",
+      ru: "слишком много требовать",
+      uk: "вимагати забагато"
+    },
+    {
+      L2: "to demand more money",
+      ru: "требовать больше денег",
+      uk: "вимагати більше грошей"
+    }
+  ],
+  examples: [
+    {
+      L2: "He demands an explanation.",
+      ru: "Он требует объяснения.",
+      uk: "Він вимагає пояснення."
+    }
+  ]
+},
+{
+  id: 239,
+  word: "to avoid",
+  ru: "избегать",
+  uk: "уникати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to steer clear of"],
+  ruSynonyms: ["стараться не допустить", "избегать"],
+  ukSynonyms: ["намагатися не допустити", "уникати"],
+  enAntonyms: ["to face", "to provoke"],
+  ruAntonyms: ["столкнуться с", "провоцировать"],
+  ukAntonyms: ["зіштовхнутися з", "провокувати"],
+  collocations: [
+    {
+      L2: "to avoid mistakes",
+      ru: "избегать ошибок",
+      uk: "уникати помилок"
+    },
+    {
+      L2: "to avoid conflicts",
+      ru: "избегать конфликтов",
+      uk: "уникати конфліктів"
+    },
+    {
+      L2: "to avoid a topic",
+      ru: "избегать темы",
+      uk: "уникати теми"
+    }
+  ],
+  examples: [
+    {
+      L2: "We want to avoid mistakes.",
+      ru: "Мы хотим избежать ошибок.",
+      uk: "Ми хочемо уникати помилок."
+    }
+  ]
+},
+{
+  id: 240,
+  word: "to forgive",
+  ru: "прощать",
+  uk: "пробачати",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to pardon", "to excuse"],
+  ruSynonyms: ["прощать", "извинять"],
+  ukSynonyms: ["пробачати", "дарувати"],
+  enAntonyms: ["to bear a grudge", "to not forgive"],
+  ruAntonyms: ["не прощать", "таить обиду"],
+  ukAntonyms: ["не пробачати", "таїти образу"],
+  collocations: [
+    {
+      L2: "to forgive someone something",
+      ru: "простить кому-то что-то",
+      uk: "пробачити комусь щось"
+    },
+    {
+      L2: "to find it hard to forgive",
+      ru: "с трудом уметь прощать",
+      uk: "важко вміти пробачати"
+    },
+    {
+      L2: "to not forgive yet",
+      ru: "ещё не простить",
+      uk: "ще не пробачити"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please forgive me.",
+      ru: "Пожалуйста, прости меня.",
+      uk: "Будь ласка, пробач мене."
+    }
+  ]
+},
+{
+  id: 241,
+  word: "to introduce",
+  ru: "представлять",
+  uk: "представляти",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to present"],
+  ruSynonyms: ["знакомить", "представлять"],
+  ukSynonyms: ["знайомити", "представляти"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to introduce someone",
+      ru: "представить кого-то",
+      uk: "представити когось"
+    },
+    {
+      L2: "to introduce yourself to someone",
+      ru: "представиться кому-то",
+      uk: "представитися комусь"
+    },
+    {
+      L2: "to not be able to imagine something",
+      ru: "не мочь себе что-то представить",
+      uk: "не могти собі щось уявити"
+    }
+  ],
+  examples: [
+    {
+      L2: "May I introduce my friend to you?",
+      ru: "Можно представить тебе моего друга?",
+      uk: "Можна представити тобі мого друга?"
+    }
+  ]
+},
+{
+  id: 242,
+  word: "to wish",
+  ru: "желать",
+  uk: "бажати",
+  level: "A2",
+  topics: ["feelings"],
+  enSynonyms: ["to desire", "to long for"],
+  ruSynonyms: ["желать", "пожелать"],
+  ukSynonyms: ["бажати", "зичити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to wish someone luck",
+      ru: "желать кому-то удачи",
+      uk: "бажати комусь успіху"
+    },
+    {
+      L2: "to wish for something for yourself",
+      ru: "желать себе чего-то",
+      uk: "бажати собі чогось"
+    },
+    {
+      L2: "to wish Merry Christmas",
+      ru: "поздравлять с Рождеством",
+      uk: "вітати з Різдвом"
+    }
+  ],
+  examples: [
+    {
+      L2: "I wish you good luck.",
+      ru: "Я желаю тебе удачи.",
+      uk: "Я бажаю тобі успіху."
+    }
+  ]
+},
+{
+  id: 243,
+  word: "to draw",
+  ru: "рисовать",
+  uk: "малювати",
+  level: "A1",
+  topics: ["hobby"],
+  enSynonyms: ["to sketch"],
+  ruSynonyms: ["черпать", "рисовать"],
+  ukSynonyms: ["креслити", "малювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to draw a picture",
+      ru: "рисовать картину",
+      uk: "малювати картину"
+    },
+    {
+      L2: "to draw with a pencil",
+      ru: "рисовать карандашом",
+      uk: "малювати олівцем"
+    },
+    {
+      L2: "to draw a sketch",
+      ru: "нарисовать эскиз",
+      uk: "намалювати ескіз"
+    }
+  ],
+  examples: [
+    {
+      L2: "The child draws a house.",
+      ru: "Ребёнок рисует дом.",
+      uk: "Дитина малює будинок."
+    }
+  ]
+},
+{
+  id: 244,
+  word: "to listen (to someone)",
+  ru: "слушать",
+  uk: "прислухатися",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to listen carefully", "to pay attention"],
+  ruSynonyms: ["внимательно слушать", "прислушиваться"],
+  ukSynonyms: ["уважно слухати", "прислухатися"],
+  enAntonyms: ["to ignore", "to not listen"],
+  ruAntonyms: ["игнорировать", "не слушать"],
+  ukAntonyms: ["ігнорувати", "не слухати"],
+  collocations: [
+    {
+      L2: "to listen carefully to someone",
+      ru: "внимательно слушать кого-то",
+      uk: "уважно слухати когось"
+    },
+    {
+      L2: "to nod without listening",
+      ru: "кивать, не слушая",
+      uk: "кивати, не слухаючи"
+    },
+    {
+      L2: "to listen in class",
+      ru: "слушать на уроке",
+      uk: "слухати на уроці"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please listen to me carefully.",
+      ru: "Пожалуйста, хорошенько меня послушай.",
+      uk: "Будь ласка, добре мене послухай."
+    }
+  ]
+},
+{
+  id: 245,
+  word: "to put together",
+  ru: "составлять",
+  uk: "складати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to assemble", "to combine"],
+  ruSynonyms: ["собирать из частей", "составлять"],
+  ukSynonyms: ["складати з частин", "комбінувати"],
+  enAntonyms: ["to take apart", "to separate"],
+  ruAntonyms: ["разобрать", "разъединить"],
+  ukAntonyms: ["розібрати", "роз’єднати"],
+  collocations: [
+    {
+      L2: "to put a text together",
+      ru: "составлять текст из частей",
+      uk: "складати текст із частин"
+    },
+    {
+      L2: "to assemble a piece of furniture",
+      ru: "собрать мебель",
+      uk: "зібрати меблі"
+    },
+    {
+      L2: "to consist of parts",
+      ru: "состоять из частей",
+      uk: "складатися з частин"
+    }
+  ],
+  examples: [
+    {
+      L2: "We put the text together from parts.",
+      ru: "Мы составляем текст из частей.",
+      uk: "Ми складаємо текст із частин."
+    }
+  ]
+},
+{
+  id: 246,
+  word: "to offer",
+  ru: "предлагать",
+  uk: "пропонувати",
+  level: "A2",
+  topics: ["shopping", "communication"],
+  enSynonyms: ["to offer something", "to propose"],
+  ruSynonyms: ["предложить", "предлагать"],
+  ukSynonyms: ["пропонувати", "запропонувати"],
+  enAntonyms: ["to refuse", "to not offer"],
+  ruAntonyms: ["отказывать", "не предлагать"],
+  ukAntonyms: ["відмовляти", "не пропонувати"],
+  collocations: [
+    {
+      L2: "to offer help",
+      ru: "предлагать помощь",
+      uk: "пропонувати допомогу"
+    },
+    {
+      L2: "to offer a coffee",
+      ru: "предложить кофе",
+      uk: "запропонувати каву"
+    },
+    {
+      L2: "to offer products",
+      ru: "предлагать товары",
+      uk: "пропонувати товари"
+    }
+  ],
+  examples: [
+    {
+      L2: "They offer their help.",
+      ru: "Они предлагают свою помощь.",
+      uk: "Вони пропонують свою допомогу."
+    }
+  ]
+},
+{
+  id: 247,
+  word: "to arrive",
+  ru: "прибывать",
+  uk: "прибувати",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: ["to get in", "to reach a place"],
+  ruSynonyms: ["добираться", "прибывать"],
+  ukSynonyms: ["діставатися", "прибувати"],
+  enAntonyms: ["to depart"],
+  ruAntonyms: ["отправляться"],
+  ukAntonyms: ["відправлятися"],
+  collocations: [
+    {
+      L2: "to arrive at the station",
+      ru: "прибыть на вокзал",
+      uk: "прибути на вокзал"
+    },
+    {
+      L2: "to arrive on time",
+      ru: "прибыть вовремя",
+      uk: "прибути вчасно"
+    },
+    {
+      L2: "to arrive late",
+      ru: "поздно прибыть",
+      uk: "пізно прибути"
+    }
+  ],
+  examples: [
+    {
+      L2: "The train arrives at ten o’clock.",
+      ru: "Поезд прибывает в десять часов.",
+      uk: "Поїзд прибуває о десятій годині."
+    }
+  ]
+},
+{
+  id: 248,
+  word: "to put on (clothes)",
+  ru: "надевать",
+  uk: "одягати",
+  level: "A1",
+  topics: ["clothes"],
+  enSynonyms: ["to dress", "to put on"],
+  ruSynonyms: ["натягивать", "надевать"],
+  ukSynonyms: ["надягати", "одягати"],
+  enAntonyms: ["to take off (clothes)"],
+  ruAntonyms: ["снимать (одежду)"],
+  ukAntonyms: ["знімати (одяг)"],
+  collocations: [
+    {
+      L2: "to put on a jacket",
+      ru: "надеть куртку",
+      uk: "надягти куртку"
+    },
+    {
+      L2: "to dress warmly",
+      ru: "тепло одеться",
+      uk: "тепло вдягтися"
+    },
+    {
+      L2: "to dress elegantly",
+      ru: "одеться элегантно",
+      uk: "елегантно вдягтися"
+    }
+  ],
+  examples: [
+    {
+      L2: "I put on a jacket.",
+      ru: "Я надеваю куртку.",
+      uk: "Я надягаю куртку."
+    }
+  ]
+},
+{
+  id: 249,
+  word: "to take off (clothes)",
+  ru: "снимать",
+  uk: "роздягати",
+  level: "A1",
+  topics: ["clothes"],
+  enSynonyms: ["to undress", "to take off clothes"],
+  ruSynonyms: ["снимать одежду", "раздеваться"],
+  ukSynonyms: ["знімати одяг", "роздягатися"],
+  enAntonyms: ["to put on (clothes)"],
+  ruAntonyms: ["надевать"],
+  ukAntonyms: ["одягати"],
+  collocations: [
+    {
+      L2: "to take off your shoes",
+      ru: "снять обувь",
+      uk: "зняти взуття"
+    },
+    {
+      L2: "to undress completely",
+      ru: "полностью раздеться",
+      uk: "повністю роздягтися"
+    },
+    {
+      L2: "to take off your jacket",
+      ru: "снять куртку",
+      uk: "зняти куртку"
+    }
+  ],
+  examples: [
+    {
+      L2: "He takes off his shoes.",
+      ru: "Он снимает обувь.",
+      uk: "Він знімає взуття."
+    }
+  ]
+},
+{
+  id: 250,
+  word: "to open",
+  ru: "открывать",
+  uk: "відкривати",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: ["to open up", "to unlock"],
+  ruSynonyms: ["открывать", "раскрывать"],
+  ukSynonyms: ["відкривати", "розчиняти"],
+  enAntonyms: ["to close", "to shut"],
+  ruAntonyms: ["закрывать"],
+  ukAntonyms: ["закривати"],
+  collocations: [
+    {
+      L2: "to open the window",
+      ru: "открыть окно",
+      uk: "відкрити вікно"
+    },
+    {
+      L2: "to open the door",
+      ru: "открыть дверь",
+      uk: "відкрити двері"
+    },
+    {
+      L2: "to open a parcel",
+      ru: "открыть посылку",
+      uk: "відкрити посилку"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please open the window.",
+      ru: "Пожалуйста, открой окно.",
+      uk: "Будь ласка, відкрий вікно."
+    }
+  ]
+},
+{
+  id: 251,
+  word: "to close",
+  ru: "закрывать",
+  uk: "закривати",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: ["to shut"],
+  ruSynonyms: ["закрывать", "захлопывать"],
+  ukSynonyms: ["закривати", "зачиняти"],
+  enAntonyms: ["to open"],
+  ruAntonyms: ["открывать"],
+  ukAntonyms: ["відкривати"],
+  collocations: [
+    {
+      L2: "to close the door",
+      ru: "закрыть дверь",
+      uk: "зачинити двері"
+    },
+    {
+      L2: "to close the window",
+      ru: "закрыть окно",
+      uk: "зачинити вікно"
+    },
+    {
+      L2: "to close your eyes",
+      ru: "закрыть глаза",
+      uk: "заплющити очі"
+    }
+  ],
+  examples: [
+    {
+      L2: "She closes the door.",
+      ru: "Она закрывает дверь.",
+      uk: "Вона зачиняє двері."
+    }
+  ]
+},
+{
+  id: 252,
+  word: "to stop",
+  ru: "прекращать",
+  uk: "припиняти",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to stop doing something", "to cease"],
+  ruSynonyms: ["переставать", "заканчивать"],
+  ukSynonyms: ["переставати", "закінчувати"],
+  enAntonyms: ["to start", "to continue"],
+  ruAntonyms: ["начинать", "продолжать"],
+  ukAntonyms: ["починати", "продовжувати"],
+  collocations: [
+    {
+      L2: "to stop doing something",
+      ru: "прекратить что-то",
+      uk: "припинити щось"
+    },
+    {
+      L2: "to finally stop",
+      ru: "наконец прекратить",
+      uk: "нарешті припинити"
+    },
+    {
+      L2: "to never stop",
+      ru: "никогда не прекращать",
+      uk: "ніколи не припиняти"
+    }
+  ],
+  examples: [
+    {
+      L2: "When will you finally stop?",
+      ru: "Когда ты, наконец, остановишься?",
+      uk: "Коли ти нарешті перестанеш?"
+    }
+  ]
+},
+{
+  id: 253,
+  word: "to pay attention",
+  ru: "следить",
+  uk: "стежити",
+  level: "A2",
+  topics: ["abstract"],
+  enSynonyms: ["to watch", "to be attentive"],
+  ruSynonyms: ["присматривать", "следить"],
+  ukSynonyms: ["доглядати", "стежити"],
+  enAntonyms: ["to be inattentive", "to not pay attention"],
+  ruAntonyms: ["не следить", "не обращать внимания"],
+  ukAntonyms: ["не стежити", "не зважати"],
+  collocations: [
+    {
+      L2: "to look after the children",
+      ru: "присматривать за детьми",
+      uk: "наглядати за дітьми"
+    },
+    {
+      L2: "to pay close attention",
+      ru: "хорошо следить",
+      uk: "добре стежити"
+    },
+    {
+      L2: "to pay attention in class",
+      ru: "быть внимательным на уроке",
+      uk: "бути уважним на уроці"
+    }
+  ],
+  examples: [
+    {
+      L2: "Watch the children carefully.",
+      ru: "Хорошо присмотри за детьми.",
+      uk: "Добре наглядай за дітьми."
+    }
+  ]
+},
+{
+  id: 254,
+  word: "to tidy up",
+  ru: "убирать",
+  uk: "прибирати",
+  level: "A1",
+  topics: ["home"],
+  enSynonyms: ["to clean up"],
+  ruSynonyms: ["наводить порядок", "убирать"],
+  ukSynonyms: ["наводити лад", "прибирати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to tidy up the room",
+      ru: "убирать комнату",
+      uk: "прибирати кімнату"
+    },
+    {
+      L2: "to tidy up after eating",
+      ru: "убраться после еды",
+      uk: "прибирати після їжі"
+    },
+    {
+      L2: "to tidy up thoroughly",
+      ru: "убирать основательно",
+      uk: "ретельно прибирати"
+    }
+  ],
+  examples: [
+    {
+      L2: "I tidy up my room.",
+      ru: "Я убираю свою комнату.",
+      uk: "Я прибираю свою кімнату."
+    }
+  ]
+},
+{
+  id: 255,
+  word: "to get up",
+  ru: "вставать",
+  uk: "вставати",
+  level: "A1",
+  topics: ["daily"],
+  enSynonyms: ["to rise", "to get out of bed"],
+  ruSynonyms: ["подниматься", "просыпаться"],
+  ukSynonyms: ["підійматися", "вставати"],
+  enAntonyms: ["to lie down"],
+  ruAntonyms: ["ложиться", "садиться"],
+  ukAntonyms: ["лягати", "сідати"],
+  collocations: [
+    {
+      L2: "to get up early",
+      ru: "рано вставать",
+      uk: "рано вставати"
+    },
+    {
+      L2: "to get up late",
+      ru: "поздно вставать",
+      uk: "пізно вставати"
+    },
+    {
+      L2: "to get up from the chair",
+      ru: "встать со стула",
+      uk: "встати зі стільця"
+    }
+  ],
+  examples: [
+    {
+      L2: "She gets up early every day.",
+      ru: "Она каждый день рано встаёт.",
+      uk: "Вона щодня рано встає."
+    }
+  ]
+},
+{
+  id: 256,
+  word: "to go out",
+  ru: "выходить",
+  uk: "виходити",
+  level: "A2",
+  topics: ["social", "daily"],
+  enSynonyms: ["to go out on the town", "to go out for the evening"],
+  ruSynonyms: ["выбираться в город", "гулять"],
+  ukSynonyms: ["виходити кудись", "йти розважатися"],
+  enAntonyms: ["to stay at home"],
+  ruAntonyms: ["оставаться дома"],
+  ukAntonyms: ["залишатися вдома"],
+  collocations: [
+    {
+      L2: "to go out in the evening",
+      ru: "выходить вечером",
+      uk: "виходити ввечері"
+    },
+    {
+      L2: "to go out with friends",
+      ru: "гулять с друзьями",
+      uk: "гуляти з друзями"
+    },
+    {
+      L2: "to go out dressed up",
+      ru: "выйти «в свет»",
+      uk: "вийти «в люди»"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are going out tonight.",
+      ru: "Мы сегодня вечером выходим в город.",
+      uk: "Ми сьогодні ввечері кудись виходимо."
+    }
+  ]
+},
+{
+  id: 257,
+  word: "to get on (transport)",
+  ru: "садиться",
+  uk: "сідати",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: ["to board"],
+  ruSynonyms: ["садиться (в транспорт)", "входить"],
+  ukSynonyms: ["сідати (в транспорт)", "заходити"],
+  enAntonyms: ["to get off (transport)"],
+  ruAntonyms: ["выходить"],
+  ukAntonyms: ["виходити"],
+  collocations: [
+    {
+      L2: "to get on the train",
+      ru: "садиться в поезд",
+      uk: "сідати на потяг"
+    },
+    {
+      L2: "to get on quickly",
+      ru: "быстро заходить",
+      uk: "швидко заходити"
+    },
+    {
+      L2: "please get on",
+      ru: "пожалуйста, заходите",
+      uk: "будь ласка, заходьте"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please get on quickly.",
+      ru: "Пожалуйста, быстрее садитесь.",
+      uk: "Будь ласка, швидше сідайте."
+    }
+  ]
+},
+{
+  id: 258,
+  word: "to get off (transport)",
+  ru: "выходить",
+  uk: "виходити",
+  level: "A1",
+  topics: ["travel"],
+  enSynonyms: ["to get out", "to get off the bus/train"],
+  ruSynonyms: ["выходить (из транспорта)"],
+  ukSynonyms: ["виходити (з транспорту)"],
+  enAntonyms: ["to get on (transport)"],
+  ruAntonyms: ["садиться (в транспорт)"],
+  ukAntonyms: ["сідати (в транспорт)"],
+  collocations: [
+    {
+      L2: "to get off at the next station",
+      ru: "выйти на следующей станции",
+      uk: "вийти на наступній зупинці"
+    },
+    {
+      L2: "to get off early",
+      ru: "выйти раньше",
+      uk: "вийти раніше"
+    },
+    {
+      L2: "to get off the bus",
+      ru: "выйти из автобуса",
+      uk: "вийти з автобуса"
+    }
+  ],
+  examples: [
+    {
+      L2: "I get off at the next stop.",
+      ru: "Я выхожу на следующей станции.",
+      uk: "Я виходжу на наступній зупинці."
+    }
+  ]
+},
+{
+  id: 259,
+  word: "to change trains",
+  ru: "делать пересадку",
+  uk: "пересідати",
+  level: "A2",
+  topics: ["travel"],
+  enSynonyms: ["to transfer (to another train)", "to change (trains)"],
+  ruSynonyms: ["пересаживаться", "делать пересадку"],
+  ukSynonyms: ["пересідати", "робити пересадку"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to change trains in Zurich",
+      ru: "делать пересадку в Цюрихе",
+      uk: "пересідати в Цюриху"
+    },
+    {
+      L2: "to change twice",
+      ru: "делать пересадку два раза",
+      uk: "двічі пересідати"
+    },
+    {
+      L2: "to travel without changing",
+      ru: "ехать без пересадок",
+      uk: "їхати без пересадок"
+    }
+  ],
+  examples: [
+    {
+      L2: "We have to change trains in Zurich.",
+      ru: "Нам нужно сделать пересадку в Цюрихе.",
+      uk: "Нам треба пересісти в Цюриху."
+    }
+  ]
+},
+{
+  id: 260,
+  word: "to come along",
+  ru: "пойти вместе",
+  uk: "йти разом",
+  level: "A1",
+  topics: ["social"],
+  enSynonyms: ["to go along", "to join"],
+  ruSynonyms: ["пойти с кем-то", "идти вместе"],
+  ukSynonyms: ["йти з кимось", "іти разом"],
+  enAntonyms: ["to stay at home", "to not come along"],
+  ruAntonyms: ["остаться дома"],
+  ukAntonyms: ["залишатися вдома"],
+  collocations: [
+    {
+      L2: "to come along to the cinema",
+      ru: "пойти вместе в кино",
+      uk: "піти разом у кіно"
+    },
+    {
+      L2: "to not be able to come along",
+      ru: "не мочь пойти вместе",
+      uk: "не могти піти разом"
+    },
+    {
+      L2: "to gladly come along",
+      ru: "с радостью пойти",
+      uk: "із задоволенням піти"
+    }
+  ],
+  examples: [
+    {
+      L2: "Are you coming to the cinema with us?",
+      ru: "Пойдёшь с нами в кино?",
+      uk: "Підеш з нами в кіно?"
+    }
+  ]
+},
+{
+  id: 261,
+  word: "to bring along",
+  ru: "принести с собой",
+  uk: "принести з собою",
+  level: "A2",
+  topics: ["social"],
+  enSynonyms: ["to bring with you", "to take along"],
+  ruSynonyms: ["приносить с собой", "захватить"],
+  ukSynonyms: ["приносити з собою", "узяти із собою"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to bring something to eat",
+      ru: "принести с собой что-нибудь поесть",
+      uk: "принести з собою щось поїсти"
+    },
+    {
+      L2: "to bring a present",
+      ru: "принести подарок",
+      uk: "принести подарунок"
+    },
+    {
+      L2: "to bring friends along",
+      ru: "привести с собой друзей",
+      uk: "привести з собою друзів"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please bring something to eat with you.",
+      ru: "Пожалуйста, принеси с собой что-нибудь поесть.",
+      uk: "Будь ласка, принеси з собою щось поїсти."
+    }
+  ]
+},
+{
+  id: 262,
+  word: "to take part",
+  ru: "участвовать",
+  uk: "брати участь",
+  level: "A2",
+  topics: ["social"],
+  enSynonyms: ["to participate", "to join in"],
+  ruSynonyms: ["принимать участие", "участвовать"],
+  ukSynonyms: ["брати участь", "долучатися"],
+  enAntonyms: ["to not take part", "to refuse to join"],
+  ruAntonyms: ["отказываться участвовать"],
+  ukAntonyms: ["відмовлятися брати участь"],
+  collocations: [
+    {
+      L2: "to take part in a project",
+      ru: "участвовать в проекте",
+      uk: "брати участь у проєкті"
+    },
+    {
+      L2: "to gladly take part",
+      ru: "охотно участвовать",
+      uk: "із задоволенням брати участь"
+    },
+    {
+      L2: "to not want to take part anymore",
+      ru: "больше не хотеть участвовать",
+      uk: "більше не хотіти брати участь"
+    }
+  ],
+  examples: [
+    {
+      L2: "Do you want to take part in the project?",
+      ru: "Хочешь поучаствовать в этом проекте?",
+      uk: "Хочеш взяти участь у цьому проєкті?"
+    }
+  ]
+},
+{
+  id: 263,
+  word: "to come back",
+  ru: "возвращаться",
+  uk: "повертатися",
+  level: "A2",
+  topics: ["travel"],
+  enSynonyms: ["to return", "to come back again"],
+  ruSynonyms: ["вернуться", "возвращаться"],
+  ukSynonyms: ["повертатися", "вертатися"],
+  enAntonyms: ["to go away", "to leave"],
+  ruAntonyms: ["уходить", "уезжать"],
+  ukAntonyms: ["іти геть", "виїжджати"],
+  collocations: [
+    {
+      L2: "to come back on Monday",
+      ru: "вернуться в понедельник",
+      uk: "повернутися в понеділок"
+    },
+    {
+      L2: "to come back soon",
+      ru: "скоро вернуться",
+      uk: "скоро повернутися"
+    },
+    {
+      L2: "to come back from vacation",
+      ru: "вернуться из отпуска",
+      uk: "повернутися з відпустки"
+    }
+  ],
+  examples: [
+    {
+      L2: "He is coming back on Monday.",
+      ru: "Он возвращается в понедельник.",
+      uk: "Він повертається в понеділок."
+    }
+  ]
+},
+{
+  id: 264,
+  word: "to drop by",
+  ru: "зайти",
+  uk: "зайти",
+  level: "A2",
+  topics: ["social"],
+  enSynonyms: ["to come by", "to stop by"],
+  ruSynonyms: ["заглянуть", "зайти в гости"],
+  ukSynonyms: ["забігти", "зайти в гості"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to drop by someone’s place",
+      ru: "зайти к кому-то",
+      uk: "зайти до когось"
+    },
+    {
+      L2: "to drop by later",
+      ru: "зайти позже",
+      uk: "зайти пізніше"
+    },
+    {
+      L2: "to drop by briefly",
+      ru: "зайти ненадолго",
+      uk: "зайти ненадовго"
+    }
+  ],
+  examples: [
+    {
+      L2: "Drop by this evening.",
+      ru: "Зайди сегодня вечером.",
+      uk: "Зайди сьогодні ввечері."
+    }
+  ]
+},
+{
+  id: 265,
+  word: "to go away",
+  ru: "уходить",
+  uk: "йти геть",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to leave", "to go off"],
+  ruSynonyms: ["уходить", "удаляться"],
+  ukSynonyms: ["йти геть", "відходити"],
+  enAntonyms: ["to stay"],
+  ruAntonyms: ["оставаться"],
+  ukAntonyms: ["залишатися"],
+  collocations: [
+    {
+      L2: "to go away early",
+      ru: "рано уйти",
+      uk: "рано піти"
+    },
+    {
+      L2: "to leave home",
+      ru: "уйти из дома",
+      uk: "піти з дому"
+    },
+    {
+      L2: "to go away without saying goodbye",
+      ru: "уйти не попрощавшись",
+      uk: "піти, не попрощавшись"
+    }
+  ],
+  examples: [
+    {
+      L2: "I have to go now.",
+      ru: "Мне нужно сейчас уйти.",
+      uk: "Мені зараз треба йти геть."
+    }
+  ]
+},
+{
+  id: 266,
+  word: "to go on",
+  ru: "продолжать идти",
+  uk: "продовжувати",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to continue", "to carry on"],
+  ruSynonyms: ["продолжать идти", "двигаться дальше"],
+  ukSynonyms: ["продовжувати йти", "рухатися далі"],
+  enAntonyms: ["to stop", "to halt"],
+  ruAntonyms: ["остановиться"],
+  ukAntonyms: ["зупинитися"],
+  collocations: [
+    {
+      L2: "to go on after the break",
+      ru: "продолжить после перерыва",
+      uk: "продовжити після перерви"
+    },
+    {
+      L2: "to go on on foot",
+      ru: "продолжить идти пешком",
+      uk: "далі йти пішки"
+    },
+    {
+      L2: "life has to go on",
+      ru: "надо двигаться дальше",
+      uk: "треба рухатися далі"
+    }
+  ],
+  examples: [
+    {
+      L2: "We continue after the break.",
+      ru: "После перерыва мы продолжим идти.",
+      uk: "Після перерви ми підемо далі."
+    }
+  ]
+},
+{
+  id: 267,
+  word: "to cooperate",
+  ru: "сотрудничать",
+  uk: "співпрацювати",
+  level: "B1",
+  topics: ["work"],
+  enSynonyms: ["to work together", "to collaborate"],
+  ruSynonyms: ["работать вместе", "сотрудничать"],
+  ukSynonyms: ["працювати разом", "співпрацювати"],
+  enAntonyms: ["to compete"],
+  ruAntonyms: ["конкурировать"],
+  ukAntonyms: ["конкурувати"],
+  collocations: [
+    {
+      L2: "to cooperate closely",
+      ru: "тесно сотрудничать",
+      uk: "тісно співпрацювати"
+    },
+    {
+      L2: "to cooperate with other companies",
+      ru: "сотрудничать с другими фирмами",
+      uk: "співпрацювати з іншими компаніями"
+    },
+    {
+      L2: "to cooperate in a team",
+      ru: "работать в команде",
+      uk: "працювати в команді"
+    }
+  ],
+  examples: [
+    {
+      L2: "The companies work closely together.",
+      ru: "Компании тесно сотрудничают.",
+      uk: "Компанії тісно співпрацюють."
+    }
+  ]
+},
+{
+  id: 268,
+  word: "to summarize",
+  ru: "резюмировать",
+  uk: "підсумовувати",
+  level: "B1",
+  topics: ["study"],
+  enSynonyms: ["to sum up", "to give a summary"],
+  ruSynonyms: ["обобщать", "резюмировать"],
+  ukSynonyms: ["узагальнювати", "підсумовувати"],
+  enAntonyms: ["to ramble", "to digress"],
+  ruAntonyms: ["растекаться мыслью", "углубляться в детали"],
+  ukAntonyms: ["розпливатися в деталях"],
+  collocations: [
+    {
+      L2: "to summarize the text",
+      ru: "резюмировать текст",
+      uk: "підсумувати текст"
+    },
+    {
+      L2: "to summarize briefly",
+      ru: "кратко подытожить",
+      uk: "коротко підсумувати"
+    },
+    {
+      L2: "to summarize at the end",
+      ru: "подытожить в конце",
+      uk: "підсумувати в кінці"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please summarize the text briefly.",
+      ru: "Пожалуйста, кратко резюмируйте текст.",
+      uk: "Будь ласка, коротко підсумуйте текст."
+    }
+  ]
+},
+{
+  id: 269,
+  word: "to cope",
+  ru: "справляться",
+  uk: "ладнати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to manage", "to get along"],
+  ruSynonyms: ["справляться", "уживаться"],
+  ukSynonyms: ["давати раду", "ладнати"],
+  enAntonyms: ["to be overwhelmed"],
+  ruAntonyms: ["не справляться"],
+  ukAntonyms: ["не давати собі ради"],
+  collocations: [
+    {
+      L2: "to cope with the task",
+      ru: "справляться с заданием",
+      uk: "ладнати із завданням"
+    },
+    {
+      L2: "to cope well",
+      ru: "хорошо справляться",
+      uk: "добре давати раду"
+    },
+    {
+      L2: "to not get along with someone",
+      ru: "не ладить с кем-то",
+      uk: "не ладнати з кимось"
+    }
+  ],
+  examples: [
+    {
+      L2: "Are you managing with the task?",
+      ru: "Ты справляешься с заданием?",
+      uk: "Ти ладнаєш із завданням?"
+    }
+  ]
+},
+{
+  id: 270,
+  word: "to deliver",
+  ru: "доставлять",
+  uk: "доставляти",
+  level: "B1",
+  topics: ["post"],
+  enSynonyms: ["to deliver", "to bring"],
+  ruSynonyms: ["доставлять", "привозить"],
+  ukSynonyms: ["доставляти", "привозити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to deliver a parcel",
+      ru: "доставить посылку",
+      uk: "доставити посилку"
+    },
+    {
+      L2: "to deliver by post",
+      ru: "доставить по почте",
+      uk: "доставити поштою"
+    },
+    {
+      L2: "to deliver personally",
+      ru: "доставить лично",
+      uk: "доставити особисто"
+    }
+  ],
+  examples: [
+    {
+      L2: "The parcel will be delivered tomorrow.",
+      ru: "Посылку доставят завтра.",
+      uk: "Посилку доставлять завтра."
+    }
+  ]
+},
+{
+  id: 271,
+  word: "to depart",
+  ru: "отъезжать",
+  uk: "від'їжджати",
+  level: "A2",
+  topics: ["travel"],
+  enSynonyms: ["to leave", "to drive off"],
+  ruSynonyms: ["отправляться", "отъезжать"],
+  ukSynonyms: ["від’їжджати", "вирушати"],
+  enAntonyms: ["to arrive"],
+  ruAntonyms: ["прибывать"],
+  ukAntonyms: ["прибувати"],
+  collocations: [
+    {
+      L2: "the bus departs",
+      ru: "автобус отправляется",
+      uk: "автобус від’їжджає"
+    },
+    {
+      L2: "to depart on time",
+      ru: "отъезжать вовремя",
+      uk: "від’їжджати вчасно"
+    },
+    {
+      L2: "to depart soon",
+      ru: "скоро отправляться",
+      uk: "незабаром від’їжджати"
+    }
+  ],
+  examples: [
+    {
+      L2: "The bus is leaving in a moment.",
+      ru: "Автобус сейчас отъезжает.",
+      uk: "Автобус ось-ось від’їжджає."
+    }
+  ]
+},
+{
+  id: 272,
+  word: "to announce",
+  ru: "объявлять",
+  uk: "оголошувати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to make known", "to notify"],
+  ruSynonyms: ["анонсировать", "объявлять"],
+  ukSynonyms: ["анонсовувати", "оголошувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to announce new rules",
+      ru: "объявлять новые правила",
+      uk: "оголошувати нові правила"
+    },
+    {
+      L2: "to announce a change",
+      ru: "объявить изменение",
+      uk: "оголосити зміну"
+    },
+    {
+      L2: "to announce publicly",
+      ru: "объявить публично",
+      uk: "публічно оголосити"
+    }
+  ],
+  examples: [
+    {
+      L2: "They announce new rules.",
+      ru: "Они объявляют новые правила.",
+      uk: "Вони оголошують нові правила."
+    }
+  ]
+},
+{
+  id: 273,
+  word: "to register",
+  ru: "регистрировать",
+  uk: "реєструвати",
+  level: "A2",
+  topics: ["admin"],
+  enSynonyms: ["to sign up", "to enroll"],
+  ruSynonyms: ["регистрироваться", "записываться"],
+  ukSynonyms: ["реєструватися", "записуватися"],
+  enAntonyms: ["to deregister", "to unsubscribe"],
+  ruAntonyms: ["снимать с учёта", "отписываться"],
+  ukAntonyms: ["знімати з обліку", "відписуватися"],
+  collocations: [
+    {
+      L2: "to register online",
+      ru: "зарегистрироваться онлайн",
+      uk: "зареєструватися онлайн"
+    },
+    {
+      L2: "to register for the exam",
+      ru: "записаться на экзамен",
+      uk: "зареєструватися на іспит"
+    },
+    {
+      L2: "to register in time",
+      ru: "заранее зарегистрироваться",
+      uk: "вчасно зареєструватися"
+    }
+  ],
+  examples: [
+    {
+      L2: "You need to register online.",
+      ru: "Тебе нужно зарегистрироваться онлайн.",
+      uk: "Тобі потрібно зареєструватися онлайн."
+    }
+  ]
+},
+{
+  id: 274,
+  word: "to deregister",
+  ru: "снимать с учета",
+  uk: "знімати з обліку",
+  level: "B1",
+  topics: ["admin"],
+  enSynonyms: ["to unregister", "to cancel registration"],
+  ruSynonyms: ["снимать с учёта", "отписывать"],
+  ukSynonyms: ["знімати з обліку", "відписувати"],
+  enAntonyms: ["to register"],
+  ruAntonyms: ["ставить на учёт", "регистрировать"],
+  ukAntonyms: ["ставити на облік", "реєструвати"],
+  collocations: [
+    {
+      L2: "to deregister the car",
+      ru: "снять машину с учёта",
+      uk: "зняти авто з обліку"
+    },
+    {
+      L2: "to deregister from the course",
+      ru: "отписаться от курса",
+      uk: "відписатися від курсу"
+    },
+    {
+      L2: "to deregister in time",
+      ru: "вовремя сняться с учёта",
+      uk: "вчасно знятися з обліку"
+    }
+  ],
+  examples: [
+    {
+      L2: "He has deregistered the car.",
+      ru: "Он снял машину с учёта.",
+      uk: "Він зняв авто з обліку."
+    }
+  ]
+},
+{
+  id: 275,
+  word: "to break off",
+  ru: "прерывать",
+  uk: "переривати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to interrupt", "to cancel"],
+  ruSynonyms: ["прекращать", "обрывать"],
+  ukSynonyms: ["переривати", "припиняти"],
+  enAntonyms: ["to continue"],
+  ruAntonyms: ["продолжать"],
+  ukAntonyms: ["продовжувати"],
+  collocations: [
+    {
+      L2: "to break off a conversation",
+      ru: "прервать разговор",
+      uk: "перервати розмову"
+    },
+    {
+      L2: "to drop out of university",
+      ru: "бросить учёбу",
+      uk: "кинути навчання"
+    },
+    {
+      L2: "the connection breaks off",
+      ru: "связь прерывается",
+      uk: "зв’язок переривається"
+    }
+  ],
+  examples: [
+    {
+      L2: "We had to break off the conversation.",
+      ru: "Нам пришлось прервать разговор.",
+      uk: "Нам довелося перервати розмову."
+    }
+  ]
+},
+{
+  id: 276,
+  word: "to complete",
+  ru: "завершать",
+  uk: "закінчувати",
+  level: "B1",
+  topics: ["work", "study"],
+  enSynonyms: ["to finish", "to conclude"],
+  ruSynonyms: ["завершать", "заканчивать"],
+  ukSynonyms: ["завершувати", "закінчувати"],
+  enAntonyms: ["to start", "to begin"],
+  ruAntonyms: ["начинать"],
+  ukAntonyms: ["починати"],
+  collocations: [
+    {
+      L2: "to complete your studies",
+      ru: "закончить учёбу",
+      uk: "закінчити навчання"
+    },
+    {
+      L2: "to conclude a contract",
+      ru: "заключить договор",
+      uk: "укласти договір"
+    },
+    {
+      L2: "to successfully complete a project",
+      ru: "успешно завершить проект",
+      uk: "успішно завершити проєкт"
+    }
+  ],
+  examples: [
+    {
+      L2: "She has finished her studies.",
+      ru: "Она завершила учёбу.",
+      uk: "Вона закінчила навчання."
+    }
+  ]
+},
+{
+  id: 277,
+  word: "to answer",
+  ru: "отвечать",
+  uk: "відповідати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to reply", "to respond to"],
+  ruSynonyms: ["давать ответ", "отвечать"],
+  ukSynonyms: ["давати відповідь", "відповідати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to answer a question",
+      ru: "ответить на вопрос",
+      uk: "відповісти на запитання"
+    },
+    {
+      L2: "to answer an email",
+      ru: "ответить на электронное письмо",
+      uk: "відповісти на електронного листа"
+    },
+    {
+      L2: "to answer everything honestly",
+      ru: "отвечать на всё честно",
+      uk: "відповідати на все чесно"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please answer the questions.",
+      ru: "Пожалуйста, ответьте на вопросы.",
+      uk: "Будь ласка, дайте відповіді на запитання."
+    }
+  ]
+},
+{
+  id: 278,
+  word: "to serve",
+  ru: "обслуживать",
+  uk: "обслуговувати",
+  level: "A2",
+  topics: ["service"],
+  enSynonyms: ["to serve", "to operate (a machine)"],
+  ruSynonyms: ["обслуживать", "управлять (прибором)"],
+  ukSynonyms: ["обслуговувати", "керувати (приладом)"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to serve guests",
+      ru: "обслуживать гостей",
+      uk: "обслуговувати гостей"
+    },
+    {
+      L2: "to operate a machine",
+      ru: "управлять машиной",
+      uk: "керувати машиною"
+    },
+    {
+      L2: "to serve yourself",
+      ru: "обслуживать себя самому",
+      uk: "обслуговувати себе самостійно"
+    }
+  ],
+  examples: [
+    {
+      L2: "The waitress serves the guests.",
+      ru: "Официантка обслуживает гостей.",
+      uk: "Офіціантка обслуговує гостей."
+    }
+  ]
+},
+{
+  id: 279,
+  word: "to accompany",
+  ru: "сопровождать",
+  uk: "супроводжувати",
+  level: "B1",
+  topics: ["social"],
+  enSynonyms: ["to go with", "to escort"],
+  ruSynonyms: ["провожать", "сопровождать"],
+  ukSynonyms: ["проводжати", "супроводжувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to accompany someone to the doctor",
+      ru: "сопроводить кого-то к врачу",
+      uk: "супроводжувати когось до лікаря"
+    },
+    {
+      L2: "to accompany someone home",
+      ru: "проводить кого-то домой",
+      uk: "провести когось додому"
+    },
+    {
+      L2: "to accompany musically",
+      ru: "музыкально сопровождать",
+      uk: "музично супроводжувати"
+    }
+  ],
+  examples: [
+    {
+      L2: "I will accompany you to the doctor.",
+      ru: "Я сопровожу тебя к врачу.",
+      uk: "Я проведу тебе до лікаря."
+    }
+  ]
+},
+{
+  id: 280,
+  word: "to greet",
+  ru: "приветствовать",
+  uk: "вітати",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: ["to welcome"],
+  ruSynonyms: ["приветствовать", "встречать"],
+  ukSynonyms: ["вітати", "зустрічати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to greet the new employees",
+      ru: "приветствовать новых сотрудников",
+      uk: "вітати нових працівників"
+    },
+    {
+      L2: "to greet someone warmly",
+      ru: "сердечно приветствовать",
+      uk: "щиро вітати когось"
+    },
+    {
+      L2: "to greet someone with a handshake",
+      ru: "приветствовать рукопожатием",
+      uk: "вітати потисканням руки"
+    }
+  ],
+  examples: [
+    {
+      L2: "The boss greets the new employees.",
+      ru: "Шеф приветствует новых сотрудников.",
+      uk: "Шеф вітає нових працівників."
+    }
+  ]
+},
+{
+  id: 281,
+  word: "to keep",
+  ru: "сохранять",
+  uk: "зберігати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to keep for yourself", "to preserve"],
+  ruSynonyms: ["оставлять при себе", "сохранять"],
+  ukSynonyms: ["залишати собі", "зберігати"],
+  enAntonyms: ["to give away", "to lose"],
+  ruAntonyms: ["отдать", "потерять"],
+  ukAntonyms: ["віддати", "втратити"],
+  collocations: [
+    {
+      L2: "to keep a secret to yourself",
+      ru: "держать секрет при себе",
+      uk: "тримати таємницю при собі"
+    },
+    {
+      L2: "to keep something in your head",
+      ru: "держать что-то в голове",
+      uk: "тримати щось у голові"
+    },
+    {
+      L2: "to turn out to be right",
+      ru: "оказаться правым",
+      uk: "виявитися правим"
+    }
+  ],
+  examples: [
+    {
+      L2: "Keep the secret to yourself.",
+      ru: "Сохрани секрет при себе.",
+      uk: "Збережи цю таємницю при собі."
+    }
+  ]
+},
+{
+  id: 282,
+  word: "to observe",
+  ru: "наблюдать",
+  uk: "спостерігати",
+  level: "B1",
+  topics: ["nature", "science"],
+  enSynonyms: ["to watch", "to look at"],
+  ruSynonyms: ["наблюдать", "следить"],
+  ukSynonyms: ["спостерігати", "наглядати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to observe birds",
+      ru: "наблюдать за птицами",
+      uk: "спостерігати за птахами"
+    },
+    {
+      L2: "to observe someone secretly",
+      ru: "тайно за кем-то наблюдать",
+      uk: "таємно за кимось спостерігати"
+    },
+    {
+      L2: "to observe nature",
+      ru: "наблюдать природу",
+      uk: "спостерігати природу"
+    }
+  ],
+  examples: [
+    {
+      L2: "We are watching the birds by the lake.",
+      ru: "Мы наблюдаем за птицами у озера.",
+      uk: "Ми спостерігаємо за птахами біля озера."
+    }
+  ]
+},
+{
+  id: 283,
+  word: "to advise",
+  ru: "консультировать",
+  uk: "консультувати",
+  level: "B1",
+  topics: ["work", "service"],
+  enSynonyms: ["to recommend", "to give advice"],
+  ruSynonyms: ["давать советы", "консультировать"],
+  ukSynonyms: ["давати поради", "консультувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to advise customers",
+      ru: "консультировать клиентов",
+      uk: "консультувати клієнтів"
+    },
+    {
+      L2: "to advise someone well",
+      ru: "добре проконсультировать",
+      uk: "гарно когось проконсультувати"
+    },
+    {
+      L2: "to advise professionally",
+      ru: "консультировать профессионально",
+      uk: "професійно консультувати"
+    }
+  ],
+  examples: [
+    {
+      L2: "The sales assistant advises the customers.",
+      ru: "Продавец консультирует клиентов.",
+      uk: "Продавець консультує клієнтів."
+    }
+  ]
+},
+{
+  id: 284,
+  word: "to report",
+  ru: "сообщать",
+  uk: "звiтувати",
+  level: "B1",
+  topics: ["media", "communication"],
+  enSynonyms: ["to report", "to inform"],
+  ruSynonyms: ["сообщать", "репортировать"],
+  ukSynonyms: ["повідомляти", "звітувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to report on an event",
+      ru: "сообщать о событии",
+      uk: "повідомляти про подію"
+    },
+    {
+      L2: "to report in detail",
+      ru: "подробно сообщать",
+      uk: "детально звітувати"
+    },
+    {
+      L2: "to report on the radio",
+      ru: "сообщать по радио",
+      uk: "повідомляти по радіо"
+    }
+  ],
+  examples: [
+    {
+      L2: "The newspaper reports on the event.",
+      ru: "Газета сообщает о событии.",
+      uk: "Газета звітує про подію."
+    }
+  ]
+},
+{
+  id: 285,
+  word: "to complain",
+  ru: "жаловаться",
+  uk: "скаржитися",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to grumble", "to moan"],
+  ruSynonyms: ["жаловаться", "роптать"],
+  ukSynonyms: ["скаржитися", "нарікати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to complain about the noise",
+      ru: "жаловаться на шум",
+      uk: "скаржитися на шум"
+    },
+    {
+      L2: "to complain to the boss",
+      ru: "пожаловаться шефу",
+      uk: "поскаржитися шефові"
+    },
+    {
+      L2: "to complain all the time",
+      ru: "постоянно жаловаться",
+      uk: "постійно скаржитися"
+    }
+  ],
+  examples: [
+    {
+      L2: "He complains about the noise.",
+      ru: "Он жалуется на шум.",
+      uk: "Він скаржиться на шум."
+    }
+  ]
+},
+{
+  id: 286,
+  word: "to determine",
+  ru: "определять",
+  uk: "визначати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to define", "to set"],
+  ruSynonyms: ["определять", "устанавливать"],
+  ukSynonyms: ["визначати", "встановлювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to determine the goal",
+      ru: "определять цель",
+      uk: "визначати ціль"
+    },
+    {
+      L2: "to determine together",
+      ru: "определять вместе",
+      uk: "визначати разом"
+    },
+    {
+      L2: "to determine the price",
+      ru: "определять цену",
+      uk: "визначати ціну"
+    }
+  ],
+  examples: [
+    {
+      L2: "We determine the goal together.",
+      ru: "Мы вместе определяем цель.",
+      uk: "Ми разом визначаємо ціль."
+    }
+  ]
+},
+{
+  id: 287,
+  word: "to discuss",
+  ru: "обсуждать",
+  uk: "обговорювати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to talk about", "to go through"],
+  ruSynonyms: ["обсуждать", "разговаривать о"],
+  ukSynonyms: ["обговорювати", "дискутувати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to discuss a problem",
+      ru: "обсуждать проблему",
+      uk: "обговорювати проблему"
+    },
+    {
+      L2: "to discuss together",
+      ru: "обсуждать вместе",
+      uk: "обговорювати разом"
+    },
+    {
+      L2: "to discuss in detail",
+      ru: "обсуждать детально",
+      uk: "детально обговорювати"
+    }
+  ],
+  examples: [
+    {
+      L2: "Let’s discuss the problem.",
+      ru: "Давай обсудим эту проблему.",
+      uk: "Давай обговоримо цю проблему."
+    }
+  ]
+},
+{
+  id: 288,
+  word: "to emphasize",
+  ru: "подчёркивать",
+  uk: "наголошувати",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: ["to highlight", "to stress"],
+  ruSynonyms: ["подчёркивать", "выделять"],
+  ukSynonyms: ["наголошувати", "підкреслювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to emphasize the importance",
+      ru: "подчёркивать важность",
+      uk: "наголошувати на важливості"
+    },
+    {
+      L2: "to emphasize again and again",
+      ru: "постоянно подчёркивать",
+      uk: "постійно наголошувати"
+    },
+    {
+      L2: "to emphasize especially",
+      ru: "особо подчеркнуть",
+      uk: "особливо наголосити"
+    }
+  ],
+  examples: [
+    {
+      L2: "He emphasizes the importance of the project.",
+      ru: "Он подчёркивает важность проекта.",
+      uk: "Він наголошує на важливості проєкту."
+    }
+  ]
+},
+{
+  id: 289,
+  word: "to prefer",
+  ru: "предпочитать",
+  uk: "надавати перевагу",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to like better", "to favour"],
+  ruSynonyms: ["больше любить", "отдавать предпочтение"],
+  ukSynonyms: ["більше любити", "надавати перевагу"],
+  enAntonyms: ["to dislike", "to reject"],
+  ruAntonyms: ["не любить", "отвергать"],
+  ukAntonyms: ["не любити", "відкидати"],
+  collocations: [
+    {
+      L2: "to prefer tea to coffee",
+      ru: "предпочитать чай вместо кофе",
+      uk: "надавати перевагу чаю замість кави"
+    },
+    {
+      L2: "to clearly prefer something",
+      ru: "явно предпочитать что-то",
+      uk: "чітко надавати перевагу чомусь"
+    },
+    {
+      L2: "to prefer one option",
+      ru: "предпочитать один вариант",
+      uk: "надавати перевагу одному варіанту"
+    }
+  ],
+  examples: [
+    {
+      L2: "I prefer tea to coffee.",
+      ru: "Я предпочитаю чай вместо кофе.",
+      uk: "Я надаю перевагу чаю, а не каві."
+    }
+  ]
+},
+{
+  id: 290,
+  word: "to admire",
+  ru: "восхищаться",
+  uk: "захоплюватися",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to look up to", "to marvel at"],
+  ruSynonyms: ["восхищаться", "любоваться"],
+  ukSynonyms: ["захоплюватися", "милуватися"],
+  enAntonyms: ["to despise"],
+  ruAntonyms: ["презирать"],
+  ukAntonyms: ["зневажати"],
+  collocations: [
+    {
+      L2: "to admire someone’s courage",
+      ru: "восхищаться чьей-то смелостью",
+      uk: "захоплюватися чиєюсь сміливістю"
+    },
+    {
+      L2: "to admire the view",
+      ru: "любоваться видом",
+      uk: "милуватися краєвидом"
+    },
+    {
+      L2: "to admire silently",
+      ru: "молча восхищаться",
+      uk: "мовчки захоплюватися"
+    }
+  ],
+  examples: [
+    {
+      L2: "I admire her courage.",
+      ru: "Я восхищаюсь её мужеством.",
+      uk: "Я захоплююся її сміливістю."
+    }
+  ]
+},
+{
+  id: 291,
+  word: "to doubt",
+  ru: "сомневаться",
+  uk: "сумніватися",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to question", "to have doubts about"],
+  ruSynonyms: ["подвергать сомнению", "сомневаться"],
+  ukSynonyms: ["ставити під сумнів", "сумніватися"],
+  enAntonyms: ["to believe", "to trust"],
+  ruAntonyms: ["верить", "доверять"],
+  ukAntonyms: ["вірити", "довіряти"],
+  collocations: [
+    {
+      L2: "to doubt a story",
+      ru: "сомневаться в рассказе",
+      uk: "сумніватися в історії"
+    },
+    {
+      L2: "to strongly doubt",
+      ru: "сильно сомневаться",
+      uk: "сильно сумніватися"
+    },
+    {
+      L2: "to be beyond doubt",
+      ru: "не вызывать сомнений",
+      uk: "не викликати сумнівів"
+    }
+  ],
+  examples: [
+    {
+      L2: "I doubt his story.",
+      ru: "Я сомневаюсь в его рассказе.",
+      uk: "Я сумніваюся в його історії."
+    }
+  ]
+},
+{
+  id: 292,
+  word: "to block",
+  ru: "блокировать",
+  uk: "блокувати",
+  level: "B1",
+  topics: ["tech", "abstract"],
+  enSynonyms: ["to obstruct", "to block off"],
+  ruSynonyms: ["перекрывать", "блокировать"],
+  ukSynonyms: ["перекривати", "блокувати"],
+  enAntonyms: ["to clear", "to unblock"],
+  ruAntonyms: ["освобождать", "разблокировать"],
+  ukAntonyms: ["звільняти", "розблоковувати"],
+  collocations: [
+    {
+      L2: "to block the driveway",
+      ru: "блокировать въезд",
+      uk: "блокувати в’їзд"
+    },
+    {
+      L2: "to block a road",
+      ru: "перекрыть дорогу",
+      uk: "перекрити дорогу"
+    },
+    {
+      L2: "to block access",
+      ru: "заблокировать доступ",
+      uk: "заблокувати доступ"
+    }
+  ],
+  examples: [
+    {
+      L2: "The car is blocking the driveway.",
+      ru: "Машина блокирует въезд.",
+      uk: "Авто блокує в’їзд."
+    }
+  ]
+},
+{
+  id: 293,
+  word: "to bleach",
+  ru: "белить",
+  uk: "вибілювати",
+  level: "B1",
+  topics: ["home"],
+  enSynonyms: ["to whiten", "to lighten"],
+  ruSynonyms: ["отбеливать", "выцветать"],
+  ukSynonyms: ["вибілювати", "відбілювати"],
+  enAntonyms: ["to dye"],
+  ruAntonyms: ["красить"],
+  ukAntonyms: ["фарбувати"],
+  collocations: [
+    {
+      L2: "to bleach the laundry",
+      ru: "отбеливать бельё",
+      uk: "вибілювати білизну"
+    },
+    {
+      L2: "to bleach in the sun",
+      ru: "выгорать на солнце",
+      uk: "вигоряти на сонці"
+    },
+    {
+      L2: "to bleach your hair",
+      ru: "осветлять волосы",
+      uk: "вибілювати волосся"
+    }
+  ],
+  examples: [
+    {
+      L2: "She bleaches the laundry in the sun.",
+      ru: "Она выбеливает бельё на солнце.",
+      uk: "Вона вибілює білизну на сонці."
+    }
+  ]
+},
+{
+  id: 294,
+  word: "to bleed",
+  ru: "кровоточить",
+  uk: "кровоточити",
+  level: "A2",
+  topics: ["health"],
+  enSynonyms: ["to bleed"],
+  ruSynonyms: ["идти кровью", "кровоточить"],
+  ukSynonyms: ["йти кров’ю", "кровоточити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "the wound bleeds",
+      ru: "рана кровоточит",
+      uk: "рана кровоточить"
+    },
+    {
+      L2: "to bleed heavily",
+      ru: "сильно кровоточить",
+      uk: "сильно кровоточити"
+    },
+    {
+      L2: "to still bleed a little",
+      ru: "ещё немного кровоточить",
+      uk: "ще трохи кровоточити"
+    }
+  ],
+  examples: [
+    {
+      L2: "The wound is bleeding heavily.",
+      ru: "Рана сильно кровоточит.",
+      uk: "Рана сильно кровоточить."
+    }
+  ]
+},
+{
+  id: 295,
+  word: "to drill",
+  ru: "сверлить",
+  uk: "свердлити",
+  level: "B1",
+  topics: ["home", "tools"],
+  enSynonyms: ["to drill a hole"],
+  ruSynonyms: ["делать отверстие", "сверлить"],
+  ukSynonyms: ["робити отвір", "свердлити"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to drill a hole",
+      ru: "сверлить отверстие",
+      uk: "свердлити отвір"
+    },
+    {
+      L2: "to drill into the wall",
+      ru: "сверлить стену",
+      uk: "свердлити стіну"
+    },
+    {
+      L2: "to drill with a drill machine",
+      ru: "сверлить дрелью",
+      uk: "свердлити дрилем"
+    }
+  ],
+  examples: [
+    {
+      L2: "He drills a hole in the wall.",
+      ru: "Он сверлит отверстие в стене.",
+      uk: "Він свердлить отвір у стіні."
+    }
+  ]
+},
+{
+  id: 296,
+  word: "to brew",
+  ru: "варить",
+  uk: "варити",
+  level: "B1",
+  topics: ["food"],
+  enSynonyms: ["to brew beer"],
+  ruSynonyms: ["варить (пиво)", "заваривать"],
+  ukSynonyms: ["варити (пиво)", "заварювати"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to brew beer",
+      ru: "варить пиво",
+      uk: "варити пиво"
+    },
+    {
+      L2: "to brew yourself",
+      ru: "варить самому",
+      uk: "варити самостійно"
+    },
+    {
+      L2: "to brew in a brewery",
+      ru: "варить у пивоварне",
+      uk: "варити в пивоварні"
+    }
+  ],
+  examples: [
+    {
+      L2: "The company brews its own beer.",
+      ru: "Компания варит собственное пиво.",
+      uk: "Компанія варить власне пиво."
+    }
+  ]
+},
+{
+  id: 297,
+  word: "to last",
+  ru: "длиться",
+  uk: "тривати",
+  level: "A2",
+  topics: ["time"],
+  enSynonyms: ["to go on", "to continue"],
+  ruSynonyms: ["продолжаться", "длиться"],
+  ukSynonyms: ["продовжуватися", "тривати"],
+  enAntonyms: ["to end", "to stop"],
+  ruAntonyms: ["заканчиваться", "прекращаться"],
+  ukAntonyms: ["закінчуватися", "припинятися"],
+  collocations: [
+    {
+      L2: "to last two hours",
+      ru: "длиться два часа",
+      uk: "тривати дві години"
+    },
+    {
+      L2: "to not last long",
+      ru: "долго не продлиться",
+      uk: "довго не тривати"
+    },
+    {
+      L2: "to last forever",
+      ru: "длиться вечно",
+      uk: "тривати вічно"
+    }
+  ],
+  examples: [
+    {
+      L2: "The film lasts two hours.",
+      ru: "Фильм длится два часа.",
+      uk: "Фільм триває дві години."
+    }
+  ]
+},
+{
+  id: 298,
+  word: "to serve",
+  ru: "служить",
+  uk: "служити",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: ["to be useful", "to serve as"],
+  ruSynonyms: ["служить", "быть полезным"],
+  ukSynonyms: ["служити", "бути корисним"],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [
+    {
+      L2: "to serve as an example",
+      ru: "служить примером",
+      uk: "слугувати прикладом"
+    },
+    {
+      L2: "to serve for explanation",
+      ru: "служить для объяснения",
+      uk: "слугувати для пояснення"
+    },
+    {
+      L2: "to serve as a basis",
+      ru: "служить основой",
+      uk: "слугувати основою"
+    }
+  ],
+  examples: [
+    {
+      L2: "This example serves to explain.",
+      ru: "Этот пример служит для объяснения.",
+      uk: "Цей приклад слугує для пояснення."
+    }
+  ]
+},
+{
+  id: 299,
+  word: "to press",
+  ru: "нажимать",
+  uk: "тиснути",
+  level: "A2",
+  topics: ["movement"],
+  enSynonyms: ["to push", "to press down"],
+  ruSynonyms: ["нажимать", "давить"],
+  ukSynonyms: ["натискати", "тиснути"],
+  enAntonyms: ["to pull"],
+  ruAntonyms: ["тянуть"],
+  ukAntonyms: ["тягнути"],
+  collocations: [
+    {
+      L2: "to press the button",
+      ru: "нажать на кнопку",
+      uk: "натиснути на кнопку"
+    },
+    {
+      L2: "to push the door",
+      ru: "толкнуть дверь",
+      uk: "штовхнути двері"
+    },
+    {
+      L2: "to press too hard",
+      ru: "нажимать слишком сильно",
+      uk: "тиснути надто сильно"
+    }
+  ],
+  examples: [
+    {
+      L2: "Please press the button.",
+      ru: "Нажми, пожалуйста, на кнопку.",
+      uk: "Натисни, будь ласка, на кнопку."
+    }
+  ]
+},
+{
+  id: 300,
+  word: "to tolerate",
+  ru: "терпеть",
+  uk: "терпіти",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: ["to put up with", "to endure"],
+  ruSynonyms: ["выносить", "терпеть"],
+  ukSynonyms: ["зносити", "терпіти"],
+  enAntonyms: ["to forbid", "to not allow"],
+  ruAntonyms: ["запрещать", "не допускать"],
+  ukAntonyms: ["забороняти", "не допускати"],
+  collocations: [
+    {
+      L2: "to not tolerate a behaviour",
+      ru: "не терпеть поведение",
+      uk: "не терпіти поведінку"
+    },
+    {
+      L2: "to tolerate something for a long time",
+      ru: "долго терпеть что-то",
+      uk: "довго терпіти щось"
+    },
+    {
+      L2: "to not tolerate any criticism",
+      ru: "не терпеть критики",
+      uk: "не терпіти критики"
+    }
+  ],
+  examples: [
+    {
+      L2: "I cannot tolerate such behaviour.",
+      ru: "Такое поведение я не могу терпеть.",
+      uk: "Таку поведінку я не можу терпіти."
+    }
+  ]
+},
+{
+  id: 301,
+  word: "to breathe in",
+  ru: "вдыхать",
+  uk: "вдихати",
+  level: "A2",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Breathe in slowly through your nose.",
+      ru: "Медленно вдыхай через нос.",
+      uk: "Повільно вдихай носом."
+    }
+  ]
+},
+{
+  id: 302,
+  word: "to come to mind",
+  ru: "приходить в голову",
+  uk: "спадати на думку",
+  level: "B1",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Nothing comes to mind right now.",
+      ru: "Сейчас ничего не приходит в голову.",
+      uk: "Зараз нічого не спадає на думку."
+    }
+  ]
+},
+{
+  id: 303,
+  word: "to go shopping",
+  ru: "ходить за покупками",
+  uk: "ходити за покупками",
+  level: "A1",
+  topics: ["shopping"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We go shopping every Saturday.",
+      ru: "Мы ходим за покупками каждую субботу.",
+      uk: "Ми ходимо за покупками щосуботи."
+    }
+  ]
+},
+{
+  id: 304,
+  word: "to furnish",
+  ru: "обставлять",
+  uk: "умеблювать",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They furnish their new apartment.",
+      ru: "Они обставляют свою новую квартиру.",
+      uk: "Вони умебльовують свою нову квартиру."
+    }
+  ]
+},
+{
+  id: 305,
+  word: "to switch on",
+  ru: "включать",
+  uk: "вмикати",
+  level: "A1",
+  topics: ["tech"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please switch on the computer.",
+      ru: "Пожалуйста, включи компьютер.",
+      uk: "Будь ласка, увімкни комп’ютер."
+    }
+  ]
+},
+{
+  id: 306,
+  word: "to switch off",
+  ru: "выключать",
+  uk: "вимикати",
+  level: "A1",
+  topics: ["tech"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Don’t forget to switch off the lights.",
+      ru: "Не забудь выключить свет.",
+      uk: "Не забудь вимкнути світло."
+    }
+  ]
+},
+{
+  id: 307,
+  word: "to use",
+  ru: "использовать",
+  uk: "використовувати",
+  level: "B1",
+  topics: ["work", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We use new methods at work.",
+      ru: "Мы используем новые методы на работе.",
+      uk: "Ми використовуємо нові методи на роботі."
+    }
+  ]
+},
+{
+  id: 308,
+  word: "to enter",
+  ru: "вносить",
+  uk: "вносити",
+  level: "A2",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please enter your name here.",
+      ru: "Пожалуйста, введите здесь своё имя.",
+      uk: "Будь ласка, введіть тут своє ім’я."
+    }
+  ]
+},
+{
+  id: 309,
+  word: "to recommend",
+  ru: "рекомендовать",
+  uk: "рекомендувати",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Which restaurant can you recommend?",
+      ru: "Какой ресторан ты можешь порекомендовать?",
+      uk: "Який ресторан ти можеш порадити?"
+    }
+  ]
+},
+{
+  id: 310,
+  word: "to discover",
+  ru: "открывать",
+  uk: "відкривати",
+  level: "B1",
+  topics: ["travel", "science"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They discover a new city together.",
+      ru: "Они вместе открывают новый город.",
+      uk: "Вони разом відкривають нове місто."
+    }
+  ]
+},
+{
+  id: 311,
+  word: "to remove",
+  ru: "удалять",
+  uk: "видаляти",
+  level: "A2",
+  topics: ["tech", "home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please remove this stain.",
+      ru: "Пожалуйста, удалите это пятно.",
+      uk: "Будь ласка, видаліть цю пляму."
+    }
+  ]
+},
+{
+  id: 312,
+  word: "to contain",
+  ru: "содержать",
+  uk: "містити",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This product contains sugar.",
+      ru: "Этот продукт содержит сахар.",
+      uk: "Цей продукт містить цукор."
+    }
+  ]
+},
+{
+  id: 313,
+  word: "to fire",
+  ru: "увольнять",
+  uk: "звільняти",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company fires ten employees.",
+      ru: "Компания увольняет десять сотрудников.",
+      uk: "Компанія звільняє десять працівників."
+    }
+  ]
+},
+{
+  id: 314,
+  word: "to decide",
+  ru: "решать",
+  uk: "вирішувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You have to decide quickly.",
+      ru: "Ты должен быстро решить.",
+      uk: "Ти маєш швидко вирішити."
+    }
+  ]
+},
+{
+  id: 315,
+  word: "to apologize",
+  ru: "извиняться",
+  uk: "вибачатися",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I want to apologize for my mistake.",
+      ru: "Я хочу извиниться за свою ошибку.",
+      uk: "Я хочу вибачитися за свою помилку."
+    }
+  ]
+},
+{
+  id: 316,
+  word: "to allow",
+  ru: "разрешать",
+  uk: "дозволяти",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Smoking is not allowed here.",
+      ru: "Курить здесь не разрешается.",
+      uk: "Тут не дозволено курити."
+    }
+  ]
+},
+{
+  id: 317,
+  word: "to research",
+  ru: "исследовать",
+  uk: "досліджувати",
+  level: "B1",
+  topics: ["science"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They research the problem in detail.",
+      ru: "Они подробно исследуют проблему.",
+      uk: "Вони детально досліджують проблему."
+    }
+  ]
+},
+{
+  id: 318,
+  word: "to increase",
+  ru: "повышать",
+  uk: "підвищувати",
+  level: "B1",
+  topics: ["economy"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company increases the prices.",
+      ru: "Компания повышает цены.",
+      uk: "Компанія підвищує ціни."
+    }
+  ]
+},
+{
+  id: 319,
+  word: "to climb",
+  ru: "взбираться",
+  uk: "видиратися",
+  level: "B2",
+  topics: ["movement", "nature"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They climb a high mountain.",
+      ru: "Они взбираются на высокую гору.",
+      uk: "Вони видираються на високу гору."
+    }
+  ]
+},
+{
+  id: 320,
+  word: "to free",
+  ru: "освобождать",
+  uk: "звільняти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This decision frees us from many problems.",
+      ru: "Это решение освобождает нас от многих проблем.",
+      uk: "Це рішення звільняє нас від багатьох проблем."
+    }
+  ]
+},
+{
+  id: 321,
+  word: "to enable",
+  ru: "делать возможным",
+  uk: "робити можливим",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The Internet enables new forms of work.",
+      ru: "Интернет делает возможными новые формы работы.",
+      uk: "Інтернет робить можливими нові форми роботи."
+    }
+  ]
+},
+{
+  id: 322,
+  word: "to renew",
+  ru: "обновлять",
+  uk: "оновлювати",
+  level: "B1",
+  topics: ["home", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We renew the contract every year.",
+      ru: "Мы обновляем контракт каждый год.",
+      uk: "Ми щороку оновлюємо контракт."
+    }
+  ]
+},
+{
+  id: 323,
+  word: "to reach",
+  ru: "достигать",
+  uk: "досягати",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I want to reach this goal.",
+      ru: "Я хочу достичь этой цели.",
+      uk: "Я хочу досягти цієї мети."
+    }
+  ]
+},
+{
+  id: 324,
+  word: "to endure",
+  ru: "терпеть",
+  uk: "терпіти",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can’t endure this noise anymore.",
+      ru: "Я больше не могу терпеть этот шум.",
+      uk: "Я більше не можу терпіти цей шум."
+    }
+  ]
+},
+{
+  id: 325,
+  word: "to expand",
+  ru: "расширять",
+  uk: "розширювати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company expands its offer.",
+      ru: "Компания расширяет своё предложение.",
+      uk: "Компанія розширює свою пропозицію."
+    }
+  ]
+},
+{
+  id: 326,
+  word: "to achieve",
+  ru: "добиваться",
+  uk: "досягати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We want to achieve good results.",
+      ru: "Мы хотим добиться хороших результатов.",
+      uk: "Ми хочемо досягти хороших результатів."
+    }
+  ]
+},
+{
+  id: 327,
+  word: "to hold on",
+  ru: "удерживать",
+  uk: "утримувати",
+  level: "B1",
+  topics: ["movement", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Hold on to the railing, please.",
+      ru: "Пожалуйста, держись за перила.",
+      uk: "Будь ласка, тримайся за перила."
+    }
+  ]
+},
+{
+  id: 328,
+  word: "to set",
+  ru: "устанавливать",
+  uk: "визначати",
+  level: "B1",
+  topics: ["work", "admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We set the date together.",
+      ru: "Мы вместе устанавливаем дату.",
+      uk: "Ми разом визначаємо дату."
+    }
+  ]
+},
+{
+  id: 329,
+  word: "to find out",
+  ru: "выяснять",
+  uk: "з’ясовувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The doctor finds out what the problem is.",
+      ru: "Врач выясняет, в чём проблема.",
+      uk: "Лікар з’ясовує, у чому проблема."
+    }
+  ]
+},
+{
+  id: 330,
+  word: "to promote",
+  ru: "поощрять",
+  uk: "сприяти",
+  level: "B1",
+  topics: ["education", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The school promotes talented children.",
+      ru: "Школа поощряет талантливых детей.",
+      uk: "Школа сприяє талановитим дітям."
+    }
+  ]
+},
+{
+  id: 331,
+  word: "to photograph",
+  ru: "фотографировать",
+  uk: "фотографувати",
+  level: "A1",
+  topics: ["hobby"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I like to photograph on trips.",
+      ru: "Я люблю фотографировать в поездках.",
+      uk: "Я люблю фотографувати в подорожах."
+    }
+  ]
+},
+{
+  id: 332,
+  word: "to feel cold",
+  ru: "мерзнуть",
+  uk: "мерзнути",
+  level: "A2",
+  topics: ["weather"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I often feel cold in winter.",
+      ru: "Зимой я часто мёрзну.",
+      uk: "Взимку я часто мерзну."
+    }
+  ]
+},
+{
+  id: 333,
+  word: "to feed",
+  ru: "кормить",
+  uk: "годувати",
+  level: "A1",
+  topics: ["animals"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The child feeds the cat.",
+      ru: "Ребёнок кормит кошку.",
+      uk: "Дитина годує кішку."
+    }
+  ]
+},
+{
+  id: 334,
+  word: "to be suitable",
+  ru: "подходить",
+  uk: "підходити",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This course is suitable for beginners.",
+      ru: "Этот курс подходит для новичков.",
+      uk: "Цей курс підходить для початківців."
+    }
+  ]
+},
+{
+  id: 335,
+  word: "to be valid",
+  ru: "быть действительным",
+  uk: "бути чинним",
+  level: "B1",
+  topics: ["law", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "These rules are valid for everyone.",
+      ru: "Эти правила действительны для всех.",
+      uk: "Ці правила чинні для всіх."
+    }
+  ]
+},
+{
+  id: 336,
+  word: "to approve",
+  ru: "утверждать",
+  uk: "затверджувати",
+  level: "B1",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The boss approves the vacation.",
+      ru: "Шеф утверждает отпуск.",
+      uk: "Шеф затверджує відпустку."
+    }
+  ]
+},
+{
+  id: 337,
+  word: "to be enough",
+  ru: "хватать",
+  uk: "вистачати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "One example is enough here.",
+      ru: "Здесь достаточно одного примера.",
+      uk: "Тут достатньо одного прикладу."
+    }
+  ]
+},
+{
+  id: 338,
+  word: "to get into",
+  ru: "попадать в",
+  uk: "потрапляти в",
+  level: "B1",
+  topics: ["movement", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He often gets into trouble.",
+      ru: "Он часто попадает в неприятности.",
+      uk: "Він часто потрапляє в неприємності."
+    }
+  ]
+},
+{
+  id: 339,
+  word: "to design",
+  ru: "оформлять",
+  uk: "оформлювати",
+  level: "B1",
+  topics: ["design"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We design a new website.",
+      ru: "Мы оформляем новый сайт.",
+      uk: "Ми оформлюємо новий сайт."
+    }
+  ]
+},
+{
+  id: 340,
+  word: "to pour",
+  ru: "лить",
+  uk: "лити",
+  level: "A2",
+  topics: ["home", "garden"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She pours water into the glass.",
+      ru: "Она наливает воду в стакан.",
+      uk: "Вона наливає воду в склянку."
+    }
+  ]
+},
+{
+  id: 341,
+  word: "to resemble",
+  ru: "быть похожим",
+  uk: "бути схожим",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The twins resemble each other a lot.",
+      ru: "Близнецы очень похожи друг на друга.",
+      uk: "Близнюки дуже схожі один на одного."
+    }
+  ]
+},
+{
+  id: 342,
+  word: "to dig",
+  ru: "копать",
+  uk: "копати",
+  level: "B1",
+  topics: ["nature", "home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They dig a deep hole.",
+      ru: "Они копают глубокую яму.",
+      uk: "Вони копають глибоку яму."
+    }
+  ]
+},
+{
+  id: 343,
+  word: "to found",
+  ru: "основывать",
+  uk: "засновувати",
+  level: "B1",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They found a new company.",
+      ru: "Они основывают новую компанию.",
+      uk: "Вони засновують нову компанію."
+    }
+  ]
+},
+{
+  id: 344,
+  word: "to look",
+  ru: "смотреть",
+  uk: "дивитися",
+  level: "A2",
+  topics: ["daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We look out of the window.",
+      ru: "Мы смотрим в окно.",
+      uk: "Ми дивимося у вікно."
+    }
+  ]
+},
+{
+  id: 345,
+  word: "to chop",
+  ru: "рубить",
+  uk: "рубати",
+  level: "B1",
+  topics: ["home", "tools"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He chops wood for the winter.",
+      ru: "Он рубит дрова на зиму.",
+      uk: "Він рубає дрова на зиму."
+    }
+  ]
+},
+{
+  id: 346,
+  word: "to marry",
+  ru: "жениться",
+  uk: "одружуватися",
+  level: "A2",
+  topics: ["family"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They want to marry in summer.",
+      ru: "Они хотят пожениться летом.",
+      uk: "Вони хочуть одружитися влітку."
+    }
+  ]
+},
+{
+  id: 347,
+  word: "to produce",
+  ru: "производить",
+  uk: "виробляти",
+  level: "B1",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company produces furniture.",
+      ru: "Компания производит мебель.",
+      uk: "Компанія виробляє меблі."
+    }
+  ]
+},
+{
+  id: 348,
+  word: "to fetch",
+  ru: "сходить за",
+  uk: "сходити по",
+  level: "A1",
+  topics: ["daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I’ll fetch the car quickly.",
+      ru: "Я быстро схожу за машиной.",
+      uk: "Я швидко збігаю по авто."
+    }
+  ]
+},
+{
+  id: 349,
+  word: "to fight",
+  ru: "бороться",
+  uk: "боротися",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They fight for their rights.",
+      ru: "Они борются за свои права.",
+      uk: "Вони борються за свої права."
+    }
+  ]
+},
+{
+  id: 350,
+  word: "to complain",
+  ru: "жаловаться",
+  uk: "скаржитися",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He often complains about his job.",
+      ru: "Он часто жалуется на свою работу.",
+      uk: "Він часто скаржиться на свою роботу."
+    }
+  ]
+},
+{
+  id: 351,
+  word: "to sound",
+  ru: "звучать",
+  uk: "звучати",
+  level: "A2",
+  topics: ["sound"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "That sounds interesting.",
+      ru: "Это звучит интересно.",
+      uk: "Це звучить цікаво."
+    }
+  ]
+},
+{
+  id: 352,
+  word: "to climb",
+  ru: "карабкаться",
+  uk: "лізти",
+  level: "A2",
+  topics: ["sport", "nature"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The children climb the tree.",
+      ru: "Дети карабкаются на дерево.",
+      uk: "Діти лізуть на дерево."
+    }
+  ]
+},
+{
+  id: 353,
+  word: "to click",
+  ru: "кликать",
+  uk: "клацати",
+  level: "A1",
+  topics: ["tech"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Click on the link, please.",
+      ru: "Пожалуйста, кликни по ссылке.",
+      uk: "Будь ласка, клацни на посилання."
+    }
+  ]
+},
+{
+  id: 354,
+  word: "to cooperate",
+  ru: "сотрудничать",
+  uk: "співпрацювати",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The companies cooperate closely.",
+      ru: "Компании тесно сотрудничают.",
+      uk: "Компанії тісно співпрацюють."
+    }
+  ]
+},
+{
+  id: 355,
+  word: "to get",
+  ru: "получать",
+  uk: "отримувати",
+  level: "A2",
+  topics: ["daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "What do you get for your birthday?",
+      ru: "Что ты получаешь на день рождения?",
+      uk: "Що ти отримаєш на день народження?"
+    }
+  ]
+},
+{
+  id: 356,
+  word: "to crawl",
+  ru: "ползти",
+  uk: "повзти",
+  level: "B1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The baby crawls across the carpet.",
+      ru: "Малыш ползёт по ковру.",
+      uk: "Малюк повзе по килиму."
+    }
+  ]
+},
+{
+  id: 357,
+  word: "to quit a job",
+  ru: "увольняться",
+  uk: "звільнятися",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He wants to quit his job.",
+      ru: "Он хочет уволиться с работы.",
+      uk: "Він хоче звільнитися з роботи."
+    }
+  ]
+},
+{
+  id: 358,
+  word: "to shorten",
+  ru: "сокращать",
+  uk: "скорочувати",
+  level: "B1",
+  topics: ["work", "text"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to shorten the text.",
+      ru: "Нам нужно сократить текст.",
+      uk: "Нам треба скоротити текст."
+    }
+  ]
+},
+{
+  id: 359,
+  word: "to store",
+  ru: "хранить",
+  uk: "зберігати",
+  level: "B1",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We store the goods in the basement.",
+      ru: "Мы храним товар в подвале.",
+      uk: "Ми зберігаємо товар у підвалі."
+    }
+  ]
+},
+{
+  id: 360,
+  word: "to shine",
+  ru: "светить",
+  uk: "світити",
+  level: "A2",
+  topics: ["light"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The stars shine brightly.",
+      ru: "Звёзды ярко светят.",
+      uk: "Зірки яскраво світять."
+    }
+  ]
+},
+{
+  id: 361,
+  word: "to deliver",
+  ru: "доставлять",
+  uk: "доставляти",
+  level: "B1",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We deliver only within the EU.",
+      ru: "Мы доставляем только в пределах ЕС.",
+      uk: "Ми доставляємо лише в межах ЄС."
+    }
+  ]
+},
+{
+  id: 362,
+  word: "to solve",
+  ru: "решать",
+  uk: "вирішувати",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must solve this problem.",
+      ru: "Мы должны решить эту проблему.",
+      uk: "Ми маємо вирішити цю проблему."
+    }
+  ]
+},
+{
+  id: 363,
+  word: "to mark",
+  ru: "отмечать",
+  uk: "позначати",
+  level: "A2",
+  topics: ["study"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Mark the correct answer.",
+      ru: "Отметьте правильный ответ.",
+      uk: "Позначте правильну відповідь."
+    }
+  ]
+},
+{
+  id: 364,
+  word: "to avoid",
+  ru: "избегать",
+  uk: "уникати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He tries to avoid conflicts.",
+      ru: "Он старается избегать конфликтов.",
+      uk: "Він намагається уникати конфліктів."
+    }
+  ]
+},
+{
+  id: 365,
+  word: "to report",
+  ru: "сообщать",
+  uk: "повідомляти",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Report the damage immediately.",
+      ru: "Сообщите о повреждении немедленно.",
+      uk: "Повідомте про пошкодження негайно."
+    }
+  ]
+},
+{
+  id: 366,
+  word: "to remember",
+  ru: "запоминать",
+  uk: "запам’ятовувати",
+  level: "A2",
+  topics: ["study"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can’t remember this number.",
+      ru: "Я не могу запомнить этот номер.",
+      uk: "Я не можу запам’ятати цей номер."
+    }
+  ]
+},
+{
+  id: 367,
+  word: "to mix",
+  ru: "смешивать",
+  uk: "змішувати",
+  level: "A2",
+  topics: ["food"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Mix the flour with the sugar.",
+      ru: "Смешай муку с сахаром.",
+      uk: "Змішай борошно з цукром."
+    }
+  ]
+},
+{
+  id: 368,
+  word: "to assemble",
+  ru: "собирать",
+  uk: "збирати",
+  level: "B1",
+  topics: ["home", "tools"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We assemble the new shelf.",
+      ru: "Мы собираем новый стеллаж.",
+      uk: "Ми збираємо нову полицю."
+    }
+  ]
+},
+{
+  id: 369,
+  word: "to motivate",
+  ru: "мотивировать",
+  uk: "мотивувати",
+  level: "B1",
+  topics: ["work", "education"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The teacher motivates the students.",
+      ru: "Учитель мотивирует учеников.",
+      uk: "Учитель мотивує учнів."
+    }
+  ]
+},
+{
+  id: 370,
+  word: "to organize",
+  ru: "организовывать",
+  uk: "організовувати",
+  level: "A2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We organize a trip for the class.",
+      ru: "Мы организуем поездку для класса.",
+      uk: "Ми організовуємо поїздку для класу."
+    }
+  ]
+},
+{
+  id: 371,
+  word: "to pack",
+  ru: "упаковывать",
+  uk: "пакувати",
+  level: "A1",
+  topics: ["travel"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I pack my suitcase for the trip.",
+      ru: "Я пакую свой чемодан для поездки.",
+      uk: "Я пакую свою валізу для подорожі."
+    }
+  ]
+},
+{
+  id: 372,
+  word: "to happen",
+  ru: "случаться",
+  uk: "траплятися",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "What happened yesterday?",
+      ru: "Что случилось вчера?",
+      uk: "Що сталося вчора?"
+    }
+  ]
+},
+{
+  id: 373,
+  word: "to take care of",
+  ru: "ухаживать",
+  uk: "доглядати",
+  level: "B1",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She takes care of her sick mother.",
+      ru: "Она ухаживает за своей больной матерью.",
+      uk: "Вона доглядає за своєю хворою мамою."
+    }
+  ]
+},
+{
+  id: 374,
+  word: "to pee",
+  ru: "писать",
+  uk: "пісяти",
+  level: "A2",
+  topics: ["daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The boy needs to pee urgently.",
+      ru: "Мальчику срочно нужно пописать.",
+      uk: "Хлопчикові терміново треба пісяти."
+    }
+  ]
+},
+{
+  id: 375,
+  word: "to plan",
+  ru: "планировать",
+  uk: "планувати",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We plan a party for Friday.",
+      ru: "Мы планируем вечеринку на пятницу.",
+      uk: "Ми плануємо вечірку на п’ятницю."
+    }
+  ]
+},
+{
+  id: 376,
+  word: "to produce",
+  ru: "производить",
+  uk: "виробляти",
+  level: "B1",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The factory produces cars.",
+      ru: "Фабрика производит автомобили.",
+      uk: "Фабрика виробляє автомобілі."
+    }
+  ]
+},
+{
+  id: 377,
+  word: "to check",
+  ru: "проверять",
+  uk: "перевіряти",
+  level: "A2",
+  topics: ["study"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please check the information.",
+      ru: "Пожалуйста, проверьте информацию.",
+      uk: "Будь ласка, перевірте інформацію."
+    }
+  ]
+},
+{
+  id: 378,
+  word: "to accommodate",
+  ru: "размещать",
+  uk: "розміщувати",
+  level: "B2",
+  topics: ["travel"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They accommodate the guests in a hotel.",
+      ru: "Они размещают гостей в отеле.",
+      uk: "Вони розміщують гостей у готелі."
+    }
+  ]
+},
+{
+  id: 379,
+  word: "to smoke",
+  ru: "курить",
+  uk: "курити",
+  level: "A2",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Smoking is forbidden here.",
+      ru: "Курить здесь запрещено.",
+      uk: "Тут заборонено курити."
+    }
+  ]
+},
+{
+  id: 380,
+  word: "to react",
+  ru: "реагировать",
+  uk: "реагувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How do you react to criticism?",
+      ru: "Как ты реагируешь на критику?",
+      uk: "Як ти реагуєш на критику?"
+    }
+  ]
+},
+{
+  id: 381,
+  word: "to reduce",
+  ru: "сокращать",
+  uk: "зменшувати",
+  level: "B1",
+  topics: ["economy"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to reduce the costs.",
+      ru: "Нам нужно сократить расходы.",
+      uk: "Нам потрібно зменшити витрати."
+    }
+  ]
+},
+{
+  id: 382,
+  word: "to give a talk",
+  ru: "делать доклад",
+  uk: "робити доповідь",
+  level: "B2",
+  topics: ["study", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She gives a talk on climate.",
+      ru: "Она делает доклад о климате.",
+      uk: "Вона робить доповідь про клімат."
+    }
+  ]
+},
+{
+  id: 383,
+  word: "to regulate",
+  ru: "регулировать",
+  uk: "регулювати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The contract regulates the details.",
+      ru: "Договор регулирует детали.",
+      uk: "Договір регулює деталі."
+    }
+  ]
+},
+{
+  id: 384,
+  word: "to clean",
+  ru: "чистить",
+  uk: "чистити",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They clean the apartment thoroughly.",
+      ru: "Они тщательно чистят квартиру.",
+      uk: "Вони ретельно чистять квартиру."
+    }
+  ]
+},
+{
+  id: 385,
+  word: "to repair",
+  ru: "ремонтировать",
+  uk: "ремонтувати",
+  level: "A2",
+  topics: ["home", "tech"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The technician repairs the machine.",
+      ru: "Мастер ремонтирует машину.",
+      uk: "Майстер ремонтує машину."
+    }
+  ]
+},
+{
+  id: 386,
+  word: "to rescue",
+  ru: "спасать",
+  uk: "рятувати",
+  level: "B1",
+  topics: ["emergency"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The dog rescues the child from the water.",
+      ru: "Собака спасает ребёнка из воды.",
+      uk: "Собака рятує дитину з води."
+    }
+  ]
+},
+{
+  id: 387,
+  word: "to direct",
+  ru: "направлять",
+  uk: "спрямовувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please direct your questions to me.",
+      ru: "Пожалуйста, направляйте свои вопросы мне.",
+      uk: "Будь ласка, спрямовуйте свої запитання до мене."
+    }
+  ]
+},
+{
+  id: 388,
+  word: "to call",
+  ru: "звать",
+  uk: "кликати",
+  level: "A1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He calls loudly for help.",
+      ru: "Он громко зовёт на помощь.",
+      uk: "Він голосно кличе на допомогу."
+    }
+  ]
+},
+{
+  id: 389,
+  word: "to collect",
+  ru: "собирать",
+  uk: "збирати",
+  level: "A2",
+  topics: ["hobby"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She collects old coins.",
+      ru: "Она собирает старые монеты.",
+      uk: "Вона збирає старі монети."
+    }
+  ]
+},
+{
+  id: 390,
+  word: "to vacuum",
+  ru: "пылесосить",
+  uk: "пилососити",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I vacuum the apartment once a week.",
+      ru: "Я пылесошу квартиру раз в неделю.",
+      uk: "Я пилосошу квартиру раз на тиждень."
+    }
+  ]
+},
+{
+  id: 391,
+  word: "to manage",
+  ru: "справляться",
+  uk: "впоратися",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Don’t worry, I can manage it.",
+      ru: "Не переживай, я могу с этим справиться.",
+      uk: "Не хвилюйся, я можу з цим впоратися."
+    }
+  ]
+},
+{
+  id: 392,
+  word: "to look",
+  ru: "смотреть",
+  uk: "дивитися",
+  level: "A1",
+  topics: ["daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Look at this picture.",
+      ru: "Посмотри на эту картинку.",
+      uk: "Поглянь на цю картинку."
+    }
+  ]
+},
+{
+  id: 393,
+  word: "to fail",
+  ru: "терпеть неудачу",
+  uk: "зазнавати невдачі",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The plan failed in the end.",
+      ru: "В конце концов план потерпел неудачу.",
+      uk: "Зрештою план зазнав невдачі."
+    }
+  ]
+},
+{
+  id: 394,
+  word: "to send",
+  ru: "отправлять",
+  uk: "надсилати",
+  level: "A1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I send you an email later.",
+      ru: "Я позже отправлю тебе письмо.",
+      uk: "Я пізніше надішлю тобі лист."
+    }
+  ]
+},
+{
+  id: 395,
+  word: "to scold",
+  ru: "ругать",
+  uk: "лаяти",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The mother scolds the child.",
+      ru: "Мать ругает ребёнка.",
+      uk: "Мати лає дитину."
+    }
+  ]
+},
+{
+  id: 396,
+  word: "to cut",
+  ru: "резать",
+  uk: "різати",
+  level: "A1",
+  topics: ["food"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He cuts the bread.",
+      ru: "Он режет хлеб.",
+      uk: "Він ріже хліб."
+    }
+  ]
+},
+{
+  id: 397,
+  word: "to snow",
+  ru: "снежить",
+  uk: "сніжити",
+  level: "A2",
+  topics: ["weather"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "It is snowing heavily today.",
+      ru: "Сегодня сильно снежит.",
+      uk: "Сьогодні сильно сніжить."
+    }
+  ]
+},
+{
+  id: 398,
+  word: "to protect",
+  ru: "защищать",
+  uk: "захищати",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must protect the environment.",
+      ru: "Мы должны защищать окружающую среду.",
+      uk: "Ми маємо захищати довкілля."
+    }
+  ]
+},
+{
+  id: 399,
+  word: "to sweat",
+  ru: "потеть",
+  uk: "пітніти",
+  level: "A2",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I sweat a lot when I do sports.",
+      ru: "Я сильно потею, когда занимаюсь спортом.",
+      uk: "Я сильно пітнію, коли займаюся спортом."
+    }
+  ]
+},
+{
+  id: 400,
+  word: "to secure",
+  ru: "обеспечивать",
+  uk: "забезпечувати",
+  level: "B1",
+  topics: ["tech", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should secure your data regularly.",
+      ru: "Тебе стоит регулярно обеспечивать сохранность своих данных.",
+      uk: "Тобі варто регулярно забезпечувати збереження своїх даних."
+    }
+  ]
+},
+{
+  id: 401,
+  word: "to win",
+  ru: "побеждать, выигрывать",
+  uk: "перемагати, вигравати",
+  level: "B1",
+  topics: ["sport", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Our team will win today.",
+      ru: "Наша команда сегодня победит.",
+      uk: "Наша команда сьогодні переможе."
+    }
+  ]
+},
+{
+  id: 402,
+  word: "to sink",
+  ru: "тонуть, опускаться, снижаться",
+  uk: "тонути, опускатися, знижуватися",
+  level: "B1",
+  topics: ["nature", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Temperatures drop in autumn.",
+      ru: "Осенью температура понижается.",
+      uk: "Восени температура знижується."
+    }
+  ]
+},
+{
+  id: 403,
+  word: "to save",
+  ru: "экономить, копить",
+  uk: "економити, заощаджувати",
+  level: "A2",
+  topics: ["money"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I am saving money for the holidays.",
+      ru: "Я коплю деньги на отпуск.",
+      uk: "Я заощаджую гроші на відпустку."
+    }
+  ]
+},
+{
+  id: 404,
+  word: "to go for a walk",
+  ru: "гулять, прогуливаться",
+  uk: "гуляти, прогулюватися",
+  level: "A1",
+  topics: ["leisure"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We go for a walk every evening.",
+      ru: "Мы каждый вечер гуляем.",
+      uk: "Ми щовечора гуляємо."
+    }
+  ]
+},
+{
+  id: 405,
+  word: "to do the dishes",
+  ru: "мыть посуду",
+  uk: "мити посуд",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I do the dishes after dinner.",
+      ru: "После еды я мою посуду.",
+      uk: "Після їжі я мию посуд."
+    }
+  ]
+},
+{
+  id: 406,
+  word: "to stare",
+  ru: "пялиться, пристально смотреть",
+  uk: "витріщатися, пильно дивитися",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He is staring at the screen all the time.",
+      ru: "Он всё время пялится в экран.",
+      uk: "Він увесь час витріщається в екран."
+    }
+  ]
+},
+{
+  id: 407,
+  word: "to disturb",
+  ru: "мешать, беспокоить, тревожить",
+  uk: "заважати, турбувати",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Sorry, am I disturbing you?",
+      ru: "Извини, я тебе мешаю?",
+      uk: "Вибач, я тобі заважаю?"
+    }
+  ]
+},
+{
+  id: 408,
+  word: "to stretch",
+  ru: "растягивать, вытягивать",
+  uk: "розтягувати, витягувати",
+  level: "B1",
+  topics: ["body", "sport"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Stretch your arms up.",
+      ru: "Вытяни руки вверх.",
+      uk: "Витягни руки вгору."
+    }
+  ]
+},
+{
+  id: 409,
+  word: "to study",
+  ru: "изучать, учиться (в вузе)",
+  uk: "вивчати, навчатися (в університеті)",
+  level: "A2",
+  topics: ["education"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She studies medicine at university.",
+      ru: "Она изучает медицину в университете.",
+      uk: "Вона вивчає медицину в університеті."
+    }
+  ]
+},
+{
+  id: 410,
+  word: "to exchange",
+  ru: "обменивать, меняться",
+  uk: "обмінювати, мінятися",
+  level: "A2",
+  topics: ["money", "daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We are swapping our seats.",
+      ru: "Мы меняемся местами.",
+      uk: "Ми міняємося місцями."
+    }
+  ]
+},
+{
+  id: 411,
+  word: "to share",
+  ru: "делить, делиться, разделять",
+  uk: "ділити, ділитися, розділяти",
+  level: "A2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We share the bill.",
+      ru: "Мы делим счёт.",
+      uk: "Ми ділимо рахунок."
+    }
+  ]
+},
+{
+  id: 412,
+  word: "to kill",
+  ru: "убивать, лишать жизни",
+  uk: "вбивати, позбавляти життя",
+  level: "B1",
+  topics: ["crime"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Smoking can slowly kill.",
+      ru: "Курение может медленно убивать.",
+      uk: "Куріння може повільно вбивати."
+    }
+  ]
+},
+{
+  id: 413,
+  word: "to dry",
+  ru: "сушить, просушивать",
+  uk: "сушити, просушувати",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The laundry is drying on the balcony.",
+      ru: "Бельё сушится на балконе.",
+      uk: "Прання сушиться на балконі."
+    }
+  ]
+},
+{
+  id: 414,
+  word: "to surprise",
+  ru: "удивлять, поражать",
+  uk: "дивувати, вражати",
+  level: "A2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The news really surprised me.",
+      ru: "Новость очень меня удивила.",
+      uk: "Ця новина мене дуже здивувала."
+    }
+  ]
+},
+{
+  id: 415,
+  word: "to persuade",
+  ru: "уговаривать, убеждать",
+  uk: "вмовляти, переконувати",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He persuaded me to come along.",
+      ru: "Он уговорил меня пойти с ним.",
+      uk: "Він вмовив мене піти з ним."
+    }
+  ]
+},
+{
+  id: 416,
+  word: "to translate",
+  ru: "переводить, делать перевод",
+  uk: "перекладати, робити переклад",
+  level: "B1",
+  topics: ["language"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Can you translate this text into German?",
+      ru: "Ты можешь перевести этот текст на немецкий?",
+      uk: "Ти можеш перекласти цей текст німецькою?"
+    }
+  ]
+},
+{
+  id: 417,
+  word: "to convince",
+  ru: "убеждать, уверять",
+  uk: "переконувати, запевняти",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The argument does not convince me.",
+      ru: "Этот аргумент меня не убеждает.",
+      uk: "Цей аргумент мене не переконує."
+    }
+  ]
+},
+{
+  id: 418,
+  word: "to hug",
+  ru: "обнимать, прижимать к себе",
+  uk: "обіймати, пригорнути до себе",
+  level: "A2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They hug each other to say goodbye.",
+      ru: "Они обнимаются на прощание.",
+      uk: "Вони обіймаються на прощання."
+    }
+  ]
+},
+{
+  id: 419,
+  word: "to exchange (a product)",
+  ru: "обменивать (товар)",
+  uk: "обмінювати (товар)",
+  level: "A2",
+  topics: ["shopping"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Can I still exchange this jacket?",
+      ru: "Я могу ещё обменять эту куртку?",
+      uk: "Чи можу я ще обміняти цю куртку?"
+    }
+  ]
+},
+{
+  id: 420,
+  word: "to interrupt",
+  ru: "прерывать, перебивать",
+  uk: "переривати, перебивати",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please do not interrupt me.",
+      ru: "Пожалуйста, не перебивай меня.",
+      uk: "Будь ласка, не перебивай мене."
+    }
+  ]
+},
+{
+  id: 421,
+  word: "to do something",
+  ru: "что-то предпринимать, делать",
+  uk: "щось робити, щось підприємати",
+  level: "B1",
+  topics: ["leisure", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We want to do something together at the weekend.",
+      ru: "На выходных мы хотим что-нибудь вместе предпринять.",
+      uk: "На вихідних ми хочемо щось разом зробити."
+    }
+  ]
+},
+{
+  id: 422,
+  word: "to distinguish",
+  ru: "различать, отличать",
+  uk: "розрізняти, відрізняти",
+  level: "B1",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Children can easily distinguish colours.",
+      ru: "Дети легко различают цвета.",
+      uk: "Діти легко розрізняють кольори."
+    }
+  ]
+},
+{
+  id: 423,
+  word: "to shorten",
+  ru: "укорачивать, сокращать",
+  uk: "скорочувати, зменшувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to shorten the waiting time.",
+      ru: "Нам нужно сократить время ожидания.",
+      uk: "Нам потрібно скоротити час очікування."
+    }
+  ]
+},
+{
+  id: 424,
+  word: "to leave",
+  ru: "покидать, оставлять",
+  uk: "залишати, покидати",
+  level: "A2",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She leaves the house very early.",
+      ru: "Она очень рано выходит из дома.",
+      uk: "Вона дуже рано залишає дім."
+    }
+  ]
+},
+{
+  id: 425,
+  word: "to injure",
+  ru: "травмировать, ранить, повредить",
+  uk: "травмувати, поранити, ушкодити",
+  level: "B1",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He injured himself while doing sport.",
+      ru: "Во время спорта он поранился.",
+      uk: "Під час спорту він травмувався."
+    }
+  ]
+},
+{
+  id: 426,
+  word: "to fall in love",
+  ru: "влюбляться",
+  uk: "закохуватися",
+  level: "A2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He has fallen in love with her.",
+      ru: "Он влюбился в неё.",
+      uk: "Він у неї закохався."
+    }
+  ]
+},
+{
+  id: 427,
+  word: "to miss",
+  ru: "скучать, тосковать",
+  uk: "сумувати, тужити",
+  level: "A2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I miss my friends.",
+      ru: "Я скучаю по своим друзьям.",
+      uk: "Я сумую за своїми друзями."
+    }
+  ]
+},
+{
+  id: 428,
+  word: "to suppose",
+  ru: "предполагать, догадываться",
+  uk: "припускати, здогадуватися",
+  level: "B1",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I suppose that he is ill.",
+      ru: "Я предполагаю, что он болен.",
+      uk: "Я припускаю, що він хворий."
+    }
+  ]
+},
+{
+  id: 429,
+  word: "to pack",
+  ru: "упаковывать, заворачивать",
+  uk: "запаковувати, загортати",
+  level: "A2",
+  topics: ["shopping", "logistics"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We pack the presents nicely.",
+      ru: "Мы красиво упаковываем подарки.",
+      uk: "Ми гарно запаковуємо подарунки."
+    }
+  ]
+},
+{
+  id: 430,
+  word: "to miss",
+  ru: "пропускать, упускать",
+  uk: "пропускати, упускати",
+  level: "A2",
+  topics: ["time"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I do not want to miss the train.",
+      ru: "Я не хочу пропустить поезд.",
+      uk: "Я не хочу пропустити потяг."
+    }
+  ]
+},
+{
+  id: 431,
+  word: "to betray",
+  ru: "предавать, выдавать секрет",
+  uk: "зраджувати, виказувати таємницю",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He betrayed his friend.",
+      ru: "Он предал своего друга.",
+      uk: "Він зрадив свого друга."
+    }
+  ]
+},
+{
+  id: 432,
+  word: "to postpone",
+  ru: "переносить, откладывать",
+  uk: "переносити, відкладати",
+  level: "B1",
+  topics: ["time"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to postpone the appointment.",
+      ru: "Нам нужно перенести встречу.",
+      uk: "Нам потрібно перенести зустріч."
+    }
+  ]
+},
+{
+  id: 433,
+  word: "to disappear",
+  ru: "исчезать, пропадать",
+  uk: "зникати, пропадати",
+  level: "B1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The sun disappears behind the clouds.",
+      ru: "Солнце исчезает за облаками.",
+      uk: "Сонце зникає за хмарами."
+    }
+  ]
+},
+{
+  id: 434,
+  word: "to provide for",
+  ru: "снабжать, обеспечивать",
+  uk: "забезпечувати, постачати",
+  level: "B1",
+  topics: ["family", "economy"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He provides for his family.",
+      ru: "Он обеспечивает свою семью.",
+      uk: "Він забезпечує свою родину."
+    }
+  ]
+},
+{
+  id: 435,
+  word: "to defend",
+  ru: "защищать, отстаивать",
+  uk: "захищати, відстоювати",
+  level: "B1",
+  topics: ["law", "conflict"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The lawyer defends his client.",
+      ru: "Адвокат защищает своего клиента.",
+      uk: "Адвокат захищає свого клієнта."
+    }
+  ]
+},
+{
+  id: 436,
+  word: "to represent",
+  ru: "представлять (интересы), замещать",
+  uk: "представляти (інтереси), заміщати",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She is representing the boss today.",
+      ru: "Сегодня она заменяет начальника.",
+      uk: "Сьогодні вона заміщує шефа."
+    }
+  ]
+},
+{
+  id: 437,
+  word: "to cause",
+  ru: "вызывать, быть причиной",
+  uk: "спричиняти, бути причиною",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "That causes big problems.",
+      ru: "Это вызывает большие проблемы.",
+      uk: "Це спричиняє великі проблеми."
+    }
+  ]
+},
+{
+  id: 438,
+  word: "to manage",
+  ru: "управлять, распоряжаться",
+  uk: "керувати, розпоряджатися",
+  level: "B2",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She manages the company’s budget.",
+      ru: "Она управляет бюджетом фирмы.",
+      uk: "Вона керує бюджетом компанії."
+    }
+  ]
+},
+{
+  id: 439,
+  word: "to refuse",
+  ru: "отказывать, отказывать в чём-то",
+  uk: "відмовляти, відмовляти в чомусь",
+  level: "B2",
+  topics: ["law", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He refuses to testify.",
+      ru: "Он отказывается давать показания.",
+      uk: "Він відмовляється давати показання."
+    }
+  ]
+},
+{
+  id: 440,
+  word: "to read aloud",
+  ru: "читать вслух, зачитывать",
+  uk: "читати вголос, зачитувати",
+  level: "A2",
+  topics: ["reading"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The mother reads aloud to the child.",
+      ru: "Мама читает ребёнку вслух.",
+      uk: "Мама читає дитині вголос."
+    }
+  ]
+},
+{
+  id: 441,
+  word: "to suggest",
+  ru: "предлагать, советовать",
+  uk: "пропонувати, радити",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I suggest taking a break.",
+      ru: "Я предлагаю сделать перерыв.",
+      uk: "Я пропоную зробити перерву."
+    }
+  ]
+},
+{
+  id: 442,
+  word: "to show (for inspection)",
+  ru: "показывать, предъявлять",
+  uk: "показувати, пред’являти",
+  level: "A2",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please show your ID.",
+      ru: "Пожалуйста, предъявите ваше удостоверение.",
+      uk: "Будь ласка, покажіть ваше посвідчення."
+    }
+  ]
+},
+{
+  id: 443,
+  word: "to grow",
+  ru: "расти, увеличиваться",
+  uk: "рости, збільшуватися",
+  level: "A2",
+  topics: ["nature", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The children grow fast.",
+      ru: "Дети быстро растут.",
+      uk: "Діти швидко ростуть."
+    }
+  ]
+},
+{
+  id: 444,
+  word: "to watch over",
+  ru: "бодрствовать, наблюдать, стеречь",
+  uk: "пильнувати, стежити, стерегти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The parents watch over their children.",
+      ru: "Родители бдят над своими детьми.",
+      uk: "Батьки пильнують за своїми дітьми."
+    }
+  ]
+},
+{
+  id: 445,
+  word: "to choose",
+  ru: "выбирать, избирать",
+  uk: "обирати, голосувати",
+  level: "A2",
+  topics: ["politics", "daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They are electing a new president.",
+      ru: "Они выбирают нового президента.",
+      uk: "Вони обирають нового президента."
+    }
+  ]
+},
+{
+  id: 446,
+  word: "to preserve",
+  ru: "соблюдать, охранять, отстаивать",
+  uk: "оберігати, зберігати, відстоювати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must preserve our rights.",
+      ru: "Мы должны соблюдать свои права.",
+      uk: "Ми маємо оберігати свої права."
+    }
+  ]
+},
+{
+  id: 447,
+  word: "to warn",
+  ru: "предупреждать, предостерегать",
+  uk: "попереджати, застерігати",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I warned you about that.",
+      ru: "Я предупреждал тебя об этом.",
+      uk: "Я попереджав тебе про це."
+    }
+  ]
+},
+{
+  id: 448,
+  word: "to wash",
+  ru: "мыть, стирать, умываться",
+  uk: "мити, прати, умиватися",
+  level: "A1",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I wash my hands.",
+      ru: "Я мою руки.",
+      uk: "Я мию руки."
+    }
+  ]
+},
+{
+  id: 449,
+  word: "to change",
+  ru: "менять, заменять",
+  uk: "міняти, замінювати",
+  level: "A2",
+  topics: ["money", "daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He changes the tyres on the car.",
+      ru: "Он меняет шины на машине.",
+      uk: "Він міняє шини на авто."
+    }
+  ]
+},
+{
+  id: 450,
+  word: "to refuse",
+  ru: "отказываться, упорствовать",
+  uk: "відмовлятися, упиратися",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She refuses to do that.",
+      ru: "Она отказывается это делать.",
+      uk: "Вона відмовляється це робити."
+    }
+  ]
+},
+{
+  id: 451,
+  word: "to cry",
+  ru: "плакать, рыдать",
+  uk: "плакати, ридати",
+  level: "A1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The child is crying loudly.",
+      ru: "Ребёнок громко плачет.",
+      uk: "Дитина голосно плаче."
+    }
+  ]
+},
+{
+  id: 452,
+  word: "to indicate",
+  ru: "указывать, свидетельствовать",
+  uk: "вказувати, свідчити",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The numbers indicate a serious problem.",
+      ru: "Цифры указывают на серьёзную проблему.",
+      uk: "Цифри вказують на серйозну проблему."
+    }
+  ]
+},
+{
+  id: 453,
+  word: "to throw",
+  ru: "бросать, кидать",
+  uk: "кидати, жбурляти",
+  level: "A2",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He throws the ball into the goal.",
+      ru: "Он бросает мяч в ворота.",
+      uk: "Він кидає м’яч у ворота."
+    }
+  ]
+},
+{
+  id: 454,
+  word: "to resist",
+  ru: "сопротивляться, противостоять",
+  uk: "протистояти, чинити опір",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can hardly resist the temptation.",
+      ru: "Я едва могу противостоять искушению.",
+      uk: "Я ледве можу протистояти спокусі."
+    }
+  ]
+},
+{
+  id: 455,
+  word: "to wish",
+  ru: "желать, хотеть",
+  uk: "бажати, хотіти",
+  level: "A2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I wish you good luck.",
+      ru: "Я желаю тебе удачи.",
+      uk: "Я бажаю тобі успіху."
+    }
+  ]
+},
+{
+  id: 456,
+  word: "to pay",
+  ru: "платить, оплачивать",
+  uk: "платити, оплачувати",
+  level: "A1",
+  topics: ["money"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We pay in cash or by card.",
+      ru: "Мы платим наличными или картой.",
+      uk: "Ми платимо готівкою або карткою."
+    }
+  ]
+},
+{
+  id: 457,
+  word: "to draw",
+  ru: "рисовать, делать рисунок",
+  uk: "малювати, робити малюнок",
+  level: "A1",
+  topics: ["hobby"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The child is drawing a house.",
+      ru: "Ребёнок рисует дом.",
+      uk: "Дитина малює будинок."
+    }
+  ]
+},
+{
+  id: 458,
+  word: "to break",
+  ru: "разбивать, ломать",
+  uk: "розбивати, ламати",
+  level: "B1",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The glass fell on the floor and broke.",
+      ru: "Стакан упал на пол и разбился.",
+      uk: "Склянка впала на підлогу і розбилася."
+    }
+  ]
+},
+{
+  id: 459,
+  word: "to pull",
+  ru: "тянуть, тащить",
+  uk: "тягнути, тягти",
+  level: "A1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please pull the door, don’t push it.",
+      ru: "Пожалуйста, тяните дверь, не нажимайте.",
+      uk: "Будь ласка, тягніть двері, а не штовхайте."
+    }
+  ]
+},
+{
+  id: 460,
+  word: "to aim",
+  ru: "целиться, прицеливаться",
+  uk: "цілити, прицілюватися",
+  level: "B1",
+  topics: ["sport"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You have to aim more carefully.",
+      ru: "Тебе нужно целиться точнее.",
+      uk: "Тобі треба цілити точніше."
+    }
+  ]
+},
+{
+  id: 461,
+  word: "to listen (to)",
+  ru: "слушать, внимать",
+  uk: "слухати, уважно слухати",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Thank you for listening to me.",
+      ru: "Спасибо, что ты меня слушаешь.",
+      uk: "Дякую, що ти мене слухаєш."
+    }
+  ]
+},
+{
+  id: 462,
+  word: "to gain weight",
+  ru: "набирать вес, толстеть",
+  uk: "набирати вагу, повніти",
+  level: "B1",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "In winter I always gain a bit of weight.",
+      ru: "Зимой я всегда немного набираю вес.",
+      uk: "Взимку я завжди трохи набираю вагу."
+    }
+  ]
+},
+{
+  id: 463,
+  word: "to watch",
+  ru: "наблюдать, смотреть",
+  uk: "спостерігати, дивитися",
+  level: "A2",
+  topics: ["leisure"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The children just watch the game.",
+      ru: "Дети только наблюдают за игрой.",
+      uk: "Діти лише спостерігають за грою."
+    }
+  ]
+},
+{
+  id: 464,
+  word: "to agree",
+  ru: "соглашаться, одобрять",
+  uk: "погоджуватися, схвалювати",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I agree with your suggestion.",
+      ru: "Я согласен с твоим предложением.",
+      uk: "Я погоджуюся з твоєю пропозицією."
+    }
+  ]
+},
+{
+  id: 465,
+  word: "to doubt",
+  ru: "сомневаться, колебаться",
+  uk: "сумніватися, вагатися",
+  level: "B1",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I do not doubt it.",
+      ru: "Я в этом не сомневаюсь.",
+      uk: "Я в цьому не сумніваюся."
+    }
+  ]
+},
+{
+  id: 466,
+  word: "to bake",
+  ru: "печь, выпекать",
+  uk: "пекти, випікати",
+  level: "A2",
+  topics: ["food"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "My grandma bakes a cake every Sunday.",
+      ru: "Моя бабушка каждое воскресенье печёт пирог.",
+      uk: "Моя бабуся щонеділі пече пиріг."
+    }
+  ]
+},
+{
+  id: 467,
+  word: "to limit",
+  ru: "ограничивать, сужать",
+  uk: "обмежувати, звужувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to limit the number of participants.",
+      ru: "Нужно ограничить количество участников.",
+      uk: "Потрібно обмежити кількість учасників."
+    }
+  ]
+},
+{
+  id: 468,
+  word: "to fight against",
+  ru: "бороться с, противодействовать",
+  uk: "боротися з, протидіяти",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We fight against the causes of the problem.",
+      ru: "Мы боремся с причинами проблемы.",
+      uk: "Ми боремося з причинами проблеми."
+    }
+  ]
+},
+{
+  id: 469,
+  word: "to reward",
+  ru: "награждать, поощрять",
+  uk: "нагороджувати, заохочувати",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company rewards good performance.",
+      ru: "Фирма награждает за хорошие результаты.",
+      uk: "Компанія нагороджує за хороші результати."
+    }
+  ]
+},
+{
+  id: 470,
+  word: "to burden",
+  ru: "нагружать, отягощать",
+  uk: "навантажувати, обтяжувати",
+  level: "B1",
+  topics: ["health", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Too much work burdens your health.",
+      ru: "Слишком много работы нагружает здоровье.",
+      uk: "Надто багато роботи навантажує здоров’я."
+    }
+  ]
+},
+{
+  id: 471,
+  word: "to light up",
+  ru: "освещать, подсвечивать",
+  uk: "освітлювати, підсвічувати",
+  level: "B1",
+  topics: ["light"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The lamps light up the street.",
+      ru: "Фонари освещают улицу.",
+      uk: "Ліхтарі освітлюють вулицю."
+    }
+  ]
+},
+{
+  id: 472,
+  word: "to lie to (someone)",
+  ru: "обманывать, лгать кому-то",
+  uk: "обманювати, брехати комусь",
+  level: "B2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He has been lying to me the whole time.",
+      ru: "Он всё время меня обманывал.",
+      uk: "Він увесь час мене обманював."
+    }
+  ]
+},
+{
+  id: 473,
+  word: "to observe",
+  ru: "наблюдать, следить за",
+  uk: "спостерігати, стежити за",
+  level: "A2",
+  topics: ["nature", "daily"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We observe the birds in the park.",
+      ru: "Мы наблюдаем за птицами в парке.",
+      uk: "Ми спостерігаємо за птахами в парку."
+    }
+  ]
+},
+{
+  id: 474,
+  word: "to calm (down)",
+  ru: "успокаивать, утихомиривать",
+  uk: "заспокоювати, втихомирювати",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The mother calms the child.",
+      ru: "Мать успокаивает ребёнка.",
+      uk: "Мама заспокоює дитину."
+    }
+  ]
+},
+{
+  id: 475,
+  word: "to speed up",
+  ru: "ускорять, форсировать",
+  uk: "прискорювати, форсувати",
+  level: "B2",
+  topics: ["tech"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We want to speed up the process.",
+      ru: "Мы хотим ускорить процесс.",
+      uk: "Ми хочемо прискорити процес."
+    }
+  ]
+},
+{
+  id: 476,
+  word: "to punish",
+  ru: "наказывать, штрафовать",
+  uk: "карати, штрафувати",
+  level: "B1",
+  topics: ["law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The law punishes this act strictly.",
+      ru: "Закон строго наказывает за этот поступок.",
+      uk: "Закон суворо карає за цей вчинок."
+    }
+  ]
+},
+{
+  id: 477,
+  word: "to remove",
+  ru: "устранять, ликвидировать",
+  uk: "усувати, ліквідовувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to remove the errors.",
+      ru: "Нам нужно устранить ошибки.",
+      uk: "Нам потрібно усунути помилки."
+    }
+  ]
+},
+{
+  id: 478,
+  word: "to encourage",
+  ru: "укреплять, поддерживать, ободрять",
+  uk: "зміцнювати, підтримувати, підбадьорювати",
+  level: "B2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Her words encourage me in my decision.",
+      ru: "Её слова укрепляют меня в моём решении.",
+      uk: "Її слова зміцнюють мене в моєму рішенні."
+    }
+  ]
+},
+{
+  id: 479,
+  word: "to tax",
+  ru: "облагать налогом",
+  uk: "оподатковувати",
+  level: "B2",
+  topics: ["economy"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The state taxes the income.",
+      ru: "Государство облагает налогом доход.",
+      uk: "Держава оподатковує дохід."
+    }
+  ]
+},
+{
+  id: 480,
+  word: "to water",
+  ru: "поливать, орошать",
+  uk: "поливати, зрошувати",
+  level: "B1",
+  topics: ["garden"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We water the garden every evening.",
+      ru: "Мы поливаем сад каждый вечер.",
+      uk: "Ми поливаємо сад щовечора."
+    }
+  ]
+},
+{
+  id: 481,
+  word: "to testify",
+  ru: "свидетельствовать, подтверждать",
+  uk: "засвідчувати, підтверджувати",
+  level: "B2",
+  topics: ["law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The witnesses testify to the truth.",
+      ru: "Свидетели свидетельствуют правду.",
+      uk: "Свідки засвідчують правду."
+    }
+  ]
+},
+{
+  id: 482,
+  word: "to overcome",
+  ru: "преодолевать, побеждать",
+  uk: "долати, перемагати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He overcomes his fear.",
+      ru: "Он преодолевает свой страх.",
+      uk: "Він долає свій страх."
+    }
+  ]
+},
+{
+  id: 483,
+  word: "to bend",
+  ru: "гнуть, сгибать",
+  uk: "гнути, згинати",
+  level: "B1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Don’t bend the cable too much.",
+      ru: "Не сгибай кабель слишком сильно.",
+      uk: "Не гни кабель занадто сильно."
+    }
+  ]
+},
+{
+  id: 484,
+  word: "to dazzle",
+  ru: "ослеплять, слепить",
+  uk: "засліплювати, сліпити",
+  level: "B1",
+  topics: ["light"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The sun dazzles me.",
+      ru: "Солнце меня слепит.",
+      uk: "Сонце мене засліплює."
+    }
+  ]
+},
+{
+  id: 485,
+  word: "to roar",
+  ru: "шуметь, гудеть",
+  uk: "шуміти, гудіти",
+  level: "B2",
+  topics: ["nature"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The wind roars through the trees.",
+      ru: "Ветер шумит в деревьях.",
+      uk: "Вітер шумить у деревах."
+    }
+  ]
+},
+{
+  id: 486,
+  word: "to dampen",
+  ru: "приглушать, смягчать",
+  uk: "приглушувати, пом’якшувати",
+  level: "B2",
+  topics: ["sound"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The carpet dampens the noises.",
+      ru: "Ковёр приглушает звуки.",
+      uk: "Килим приглушує звуки."
+    }
+  ]
+},
+{
+  id: 487,
+  word: "to stretch",
+  ru: "растягивать, делать растяжку",
+  uk: "розтягувати, робити розтяжку",
+  level: "B1",
+  topics: ["sport"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should stretch before training.",
+      ru: "Перед тренировкой тебе стоит сделать растяжку.",
+      uk: "Перед тренуванням тобі варто розтягнутися."
+    }
+  ]
+},
+{
+  id: 488,
+  word: "to interpret",
+  ru: "толковать, интерпретировать",
+  uk: "тлумачити, інтерпретувати",
+  level: "B2",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How do you interpret this sign?",
+      ru: "Как ты толкуешь этот знак?",
+      uk: "Як ти тлумачиш цей знак?"
+    }
+  ]
+},
+{
+  id: 489,
+  word: "to turn",
+  ru: "крутить, поворачивать",
+  uk: "крутити, повертати",
+  level: "A2",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Turn the key to the right.",
+      ru: "Поверни ключ вправо.",
+      uk: "Поверни ключ вправо."
+    }
+  ]
+},
+{
+  id: 490,
+  word: "to inherit",
+  ru: "наследовать, получать по наследству",
+  uk: "успадковувати, отримувати у спадок",
+  level: "B2",
+  topics: ["law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She inherits her parents’ house.",
+      ru: "Она наследует дом своих родителей.",
+      uk: "Вона успадковує будинок своїх батьків."
+    }
+  ]
+},
+{
+  id: 491,
+  word: "to guess",
+  ru: "угадывать, отгадать",
+  uk: "відгадувати, вгадувати",
+  level: "A2",
+  topics: ["games"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Can you guess the solution?",
+      ru: "Ты можешь угадать решение?",
+      uk: "Ти можеш відгадати розв’язок?"
+    }
+  ]
+},
+{
+  id: 492,
+  word: "to build",
+  ru: "возводить, строить",
+  uk: "зводити, будувати",
+  level: "B2",
+  topics: ["construction"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They are building a new building.",
+      ru: "Они возводят новое здание.",
+      uk: "Вони зводять нову будівлю."
+    }
+  ]
+},
+{
+  id: 493,
+  word: "to warm (up)",
+  ru: "нагревать, согревать",
+  uk: "нагрівати, зігрівати",
+  level: "B1",
+  topics: ["science"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The sun warms the air.",
+      ru: "Солнце нагревает воздух.",
+      uk: "Сонце нагріває повітря."
+    }
+  ]
+},
+{
+  id: 494,
+  word: "to fold",
+  ru: "складывать, сгибать",
+  uk: "складати, згинати",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please fold the laundry neatly.",
+      ru: "Пожалуйста, аккуратно сложи бельё.",
+      uk: "Будь ласка, акуратно склади прання."
+    }
+  ]
+},
+{
+  id: 495,
+  word: "to join",
+  ru: "соединять, складывать вместе",
+  uk: "єднати, з’єднувати",
+  level: "B2",
+  topics: ["construction"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The parts are carefully joined together.",
+      ru: "Детали аккуратно соединяются.",
+      uk: "Деталі ретельно з’єднують."
+    }
+  ]
+},
+{
+  id: 496,
+  word: "to grill",
+  ru: "жарить на гриле, делать барбекю",
+  uk: "грилювати, смажити на грилі",
+  level: "A2",
+  topics: ["food"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "In summer we often grill in the garden.",
+      ru: "Летом мы часто жарим на гриле в саду.",
+      uk: "Влітку ми часто грилюємо в саду."
+    }
+  ]
+},
+{
+  id: 497,
+  word: "to budget",
+  ru: "хозяйничать, экономно распоряжаться",
+  uk: "господарювати, ощадливо розпоряджатися",
+  level: "B2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She has to budget well with little money.",
+      ru: "Ей нужно умело распоряжаться небольшими деньгами.",
+      uk: "Їй треба добре господарювати з невеликими грошима."
+    }
+  ]
+},
+{
+  id: 498,
+  word: "to cough",
+  ru: "кашлять",
+  uk: "кашляти",
+  level: "A2",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He has been coughing for three days.",
+      ru: "Он кашляет уже три дня.",
+      uk: "Він кашляє вже три дні."
+    }
+  ]
+},
+{
+  id: 499,
+  word: "to cool",
+  ru: "охлаждать, остужать",
+  uk: "охолоджувати, остуджувати",
+  level: "B1",
+  topics: ["food", "health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Cool the wound with water.",
+      ru: "Охлади рану водой.",
+      uk: "Охолоди рану водою."
+    }
+  ]
+},
+{
+  id: 500,
+  word: "to varnish",
+  ru: "лакировать, покрывать лаком",
+  uk: "лакувати, покривати лаком",
+  level: "B1",
+  topics: ["home", "tools"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He is varnishing the wooden door again.",
+      ru: "Он заново лакирует деревянную дверь.",
+      uk: "Він наново лакує дерев’яні двері."
+    }
+  ]
+},
+{
+  id: 501,
+  word: "to accept",
+  ru: "принимать",
+  uk: "приймати",
+  level: "B1",
+  topics: ["abstract", "communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I cannot accept this decision.",
+      ru: "Я не могу принять это решение.",
+      uk: "Я не можу прийняти це рішення."
+    }
+  ]
+},
+{
+  id: 502,
+  word: "to analyze",
+  ru: "анализировать",
+  uk: "аналізувати",
+  level: "B2",
+  topics: ["science", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team is analyzing the data in detail.",
+      ru: "Команда подробно анализирует данные.",
+      uk: "Команда детально аналізує дані."
+    }
+  ]
+},
+{
+  id: 503,
+  word: "to recognize",
+  ru: "признавать",
+  uk: "визнавати",
+  level: "B2",
+  topics: ["abstract", "law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "His diploma is recognized worldwide.",
+      ru: "Его диплом признаётся во всём мире.",
+      uk: "Його диплом визнають у всьому світі."
+    }
+  ]
+},
+{
+  id: 504,
+  word: "to make",
+  ru: "изготавливать",
+  uk: "виготовляти",
+  level: "B2",
+  topics: ["work", "craft"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The carpenter made a custom table for us.",
+      ru: "Плотник изготовил для нас стол на заказ.",
+      uk: "Столяр виготовив для нас стіл на замовлення."
+    }
+  ]
+},
+{
+  id: 505,
+  word: "to request",
+  ru: "запрашивать",
+  uk: "запитувати",
+  level: "B2",
+  topics: ["admin", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to request more information from the client.",
+      ru: "Нам нужно запросить у клиента больше информации.",
+      uk: "Нам потрібно запитати в клієнта більше інформації."
+    }
+  ]
+},
+{
+  id: 506,
+  word: "to state",
+  ru: "указывать",
+  uk: "вказувати",
+  level: "B1",
+  topics: ["admin", "communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please state your full name and address.",
+      ru: "Пожалуйста, укажите ваше полное имя и адрес.",
+      uk: "Будь ласка, вкажіть ваше повне ім’я та адресу."
+    }
+  ]
+},
+{
+  id: 507,
+  word: "to attack",
+  ru: "атаковать",
+  uk: "атакувати",
+  level: "B2",
+  topics: ["conflict"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team started to attack more aggressively.",
+      ru: "Команда начала атаковать более агрессивно.",
+      uk: "Команда почала атакувати більш агресивно."
+    }
+  ]
+},
+{
+  id: 508,
+  word: "to matter",
+  ru: "быть важным",
+  uk: "бути важливим",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This project really matters to me.",
+      ru: "Этот проект действительно важен для меня.",
+      uk: "Цей проєкт справді важливий для мене."
+    }
+  ]
+},
+{
+  id: 509,
+  word: "to register",
+  ru: "регистрироваться",
+  uk: "реєструватися",
+  level: "A2",
+  topics: ["admin", "internet"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You have to register online first.",
+      ru: "Сначала тебе нужно зарегистрироваться онлайн.",
+      uk: "Спочатку тобі потрібно зареєструватися онлайн."
+    }
+  ]
+},
+{
+  id: 510,
+  word: "to order",
+  ru: "распоряжаться",
+  uk: "розпоряджатися",
+  level: "B2",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The court ordered a new investigation.",
+      ru: "Суд распорядился провести новое расследование.",
+      uk: "Суд розпорядився провести нове розслідування."
+    }
+  ]
+},
+{
+  id: 511,
+  word: "to address",
+  ru: "затрагивать",
+  uk: "порушувати",
+  level: "B2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He directly addressed the problem in the meeting.",
+      ru: "Он напрямую затронул проблему на совещании.",
+      uk: "Він прямо порушив проблему на нараді."
+    }
+  ]
+},
+{
+  id: 512,
+  word: "to strive for",
+  ru: "стремиться к",
+  uk: "прагнути до",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She strives for a leading position in the company.",
+      ru: "Она стремится к руководящей должности в компании.",
+      uk: "Вона прагне керівної посади в компанії."
+    }
+  ]
+},
+{
+  id: 513,
+  word: "to apply",
+  ru: "применять",
+  uk: "застосовувати",
+  level: "B1",
+  topics: ["work", "science"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should apply this rule in every exercise.",
+      ru: "Тебе следует применять это правило в каждом упражнении.",
+      uk: "Тобі слід застосовувати це правило в кожній вправі."
+    }
+  ]
+},
+{
+  id: 514,
+  word: "to doubt",
+  ru: "ставить под сомнение",
+  uk: "ставити під сумнів",
+  level: "B2",
+  topics: ["thinking"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "No one doubts his honesty.",
+      ru: "Никто не ставит под сомнение его честность.",
+      uk: "Ніхто не ставить під сумнів його чесність."
+    }
+  ]
+},
+{
+  id: 515,
+  word: "to store",
+  ru: "хранить",
+  uk: "зберігати",
+  level: "A2",
+  topics: ["home"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Where do you store your documents?",
+      ru: "Где ты хранишь свои документы?",
+      uk: "Де ти зберігаєш свої документи?"
+    }
+  ]
+},
+{
+  id: 516,
+  word: "to uncover",
+  ru: "раскрывать",
+  uk: "розкривати",
+  level: "B2",
+  topics: ["crime", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The journalists uncovered a big scandal.",
+      ru: "Журналисты раскрыли большой скандал.",
+      uk: "Журналісти розкрили великий скандал."
+    }
+  ]
+},
+{
+  id: 517,
+  word: "to stand out",
+  ru: "бросаться в глаза",
+  uk: "кидаться в очи",
+  level: "B1",
+  topics: ["perception"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Her red dress really stands out.",
+      ru: "Её красное платье действительно бросается в глаза.",
+      uk: "Її червона сукня справді кидається в очі."
+    }
+  ]
+},
+{
+  id: 518,
+  word: "to urge",
+  ru: "призывать",
+  uk: "закликати",
+  level: "B2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The police urged the demonstrators to leave.",
+      ru: "Полиция призвала демонстрантов разойтись.",
+      uk: "Поліція закликала демонстрантів розійтися."
+    }
+  ]
+},
+{
+  id: 519,
+  word: "to stay",
+  ru: "пребывать",
+  uk: "перебувати",
+  level: "B1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Where are you staying at the moment?",
+      ru: "Где ты сейчас пребываешь?",
+      uk: "Де ти зараз перебуваєш?"
+    }
+  ]
+},
+{
+  id: 520,
+  word: "to educate",
+  ru: "просвещать",
+  uk: "просвітлювати",
+  level: "B2",
+  topics: ["education"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The campaign aims to educate people about the risks.",
+      ru: "Кампания направлена на то, чтобы просвещать людей о рисках.",
+      uk: "Кампанія спрямована на те, щоб просвітлювати людей щодо ризиків."
+    }
+  ]
+},
+{
+  id: 521,
+  word: "to dissolve",
+  ru: "растворять",
+  uk: "розчиняти",
+  level: "B2",
+  topics: ["chemistry", "abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Dissolve the tablet in a glass of water.",
+      ru: "Раствори таблетку в стакане воды.",
+      uk: "Розчини таблетку в склянці води."
+    }
+  ]
+},
+{
+  id: 522,
+  word: "to record",
+  ru: "записывать",
+  uk: "записувати",
+  level: "B1",
+  topics: ["media"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We record the podcast in a small studio.",
+      ru: "Мы записываем подкаст в небольшой студии.",
+      uk: "Ми записуємо подкаст у невеликій студії."
+    }
+  ]
+},
+{
+  id: 523,
+  word: "to maintain",
+  ru: "поддерживать",
+  uk: "підтримувати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "It is hard to maintain your motivation over time.",
+      ru: "Трудно со временем поддерживать мотивацию.",
+      uk: "Важко з часом підтримувати мотивацію."
+    }
+  ]
+},
+{
+  id: 524,
+  word: "to call for",
+  ru: "призывать к",
+  uk: "закликати до",
+  level: "B2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The organization called for donations.",
+      ru: "Организация призвала к пожертвованиям.",
+      uk: "Організація закликала до пожертв."
+    }
+  ]
+},
+{
+  id: 525,
+  word: "to set up",
+  ru: "создавать",
+  uk: "створювати",
+  level: "B2",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They set up a new team for the project.",
+      ru: "Они создали новую команду для проекта.",
+      uk: "Вони створили нову команду для проєкту."
+    }
+  ]
+},
+{
+  id: 526,
+  word: "to perform",
+  ru: "выступать",
+  uk: "виступати",
+  level: "B2",
+  topics: ["stage"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The singer will perform on stage tonight.",
+      ru: "Певец сегодня вечером будет выступать на сцене.",
+      uk: "Співак сьогодні ввечері виступатиме на сцені."
+    }
+  ]
+},
+{
+  id: 527,
+  word: "to spend",
+  ru: "затрачивать",
+  uk: "витрачати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We spent a lot of time on this project.",
+      ru: "Мы затратили много времени на этот проект.",
+      uk: "Ми витратили багато часу на цей проєкт."
+    }
+  ]
+},
+{
+  id: 528,
+  word: "to develop",
+  ru: "разрабатывать",
+  uk: "опрацьовувати",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to develop a detailed plan.",
+      ru: "Нам нужно разработать подробный план.",
+      uk: "Нам потрібно опрацювати детальний план."
+    }
+  ]
+},
+{
+  id: 529,
+  word: "to expand",
+  ru: "расширять",
+  uk: "розширювати",
+  level: "B2",
+  topics: ["infrastructure", "business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company wants to expand its network.",
+      ru: "Компания хочет расширить свою сеть.",
+      uk: "Компанія хоче розширити свою мережу."
+    }
+  ]
+},
+{
+  id: 530,
+  word: "to compensate",
+  ru: "компенсировать",
+  uk: "компенсувати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We can compensate the losses with this profit.",
+      ru: "Мы можем компенсировать потери этой прибылью.",
+      uk: "Ми можемо компенсувати втрати цим прибутком."
+    }
+  ]
+},
+{
+  id: 531,
+  word: "to borrow",
+  ru: "брать напрокат",
+  uk: "брати напрокат",
+  level: "A2",
+  topics: ["library", "money"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I often borrow books from the library.",
+      ru: "Я часто беру книги напрокат в библиотеке.",
+      uk: "Я часто беру книги в бібліотеці."
+    }
+  ]
+},
+{
+  id: 532,
+  word: "to trigger",
+  ru: "вызывать",
+  uk: "спричиняти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The news triggered panic in the city.",
+      ru: "Новость вызвала панику в городе.",
+      uk: "Новина спричинила паніку в місті."
+    }
+  ]
+},
+{
+  id: 533,
+  word: "to arrange",
+  ru: "договариваться",
+  uk: "домовлятися",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Let’s arrange a meeting for tomorrow.",
+      ru: "Давай договоримся о встрече на завтра.",
+      uk: "Давай домовимося про зустріч на завтра."
+    }
+  ]
+},
+{
+  id: 534,
+  word: "to be enough",
+  ru: "хватать",
+  uk: "вистачати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The money is barely enough for the rent.",
+      ru: "Денег едва хватает на аренду.",
+      uk: "Грошей ледь вистачає на оренду."
+    }
+  ]
+},
+{
+  id: 535,
+  word: "to testify",
+  ru: "свидетельствовать",
+  uk: "свідчити",
+  level: "B2",
+  topics: ["law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The witness refused to testify in court.",
+      ru: "Свидетель отказался свидетельствовать в суде.",
+      uk: "Свідок відмовився свідчити в суді."
+    }
+  ]
+},
+{
+  id: 536,
+  word: "to exclude",
+  ru: "исключать",
+  uk: "виключати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We cannot completely exclude this possibility.",
+      ru: "Мы не можем полностью исключить эту возможность.",
+      uk: "Ми не можемо повністю виключити цю можливість."
+    }
+  ]
+},
+{
+  id: 537,
+  word: "to suspend",
+  ru: "приостанавливать",
+  uk: "призупиняти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We had to suspend the payments temporarily.",
+      ru: "Нам пришлось временно приостановить платежи.",
+      uk: "Нам довелося тимчасово призупинити платежі."
+    }
+  ]
+},
+{
+  id: 538,
+  word: "to exert",
+  ru: "оказывать",
+  uk: "чинити",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He is exerting strong pressure on the government.",
+      ru: "Он оказывает сильное давление на правительство.",
+      uk: "Він чинить сильний тиск на уряд."
+    }
+  ]
+},
+{
+  id: 539,
+  word: "to expand",
+  ru: "расширять",
+  uk: "розширювати",
+  level: "B2",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company plans to expand its activities abroad.",
+      ru: "Компания планирует расширить свою деятельность за рубежом.",
+      uk: "Компанія планує розширити свою діяльність за кордоном."
+    }
+  ]
+},
+{
+  id: 540,
+  word: "to evaluate",
+  ru: "оценивать",
+  uk: "оцінювати",
+  level: "B2",
+  topics: ["science", "work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The results are still being evaluated.",
+      ru: "Результаты всё ещё оцениваются.",
+      uk: "Результати ще оцінюють."
+    }
+  ]
+},
+{
+  id: 541,
+  word: "to affect",
+  ru: "сказываться",
+  uk: "впливати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Stress can seriously affect your health.",
+      ru: "Стресс может серьёзно сказываться на здоровье.",
+      uk: "Стрес може серйозно впливати на здоров’я."
+    }
+  ]
+},
+{
+  id: 542,
+  word: "to apply for",
+  ru: "подавать заявление на",
+  uk: "подавати заявку на",
+  level: "B1",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I want to apply for a new visa.",
+      ru: "Я хочу подать заявление на новую визу.",
+      uk: "Я хочу подати заявку на нову візу."
+    }
+  ]
+},
+{
+  id: 543,
+  word: "to commission",
+  ru: "поручать",
+  uk: "доручати",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She commissioned a company to build the house.",
+      ru: "Она поручила компании построить дом.",
+      uk: "Вона доручила компанії збудувати будинок."
+    }
+  ]
+},
+{
+  id: 544,
+  word: "to regret",
+  ru: "сожалеть",
+  uk: "шкодувати",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I really regret my decision.",
+      ru: "Я действительно сожалею о своём решении.",
+      uk: "Я справді шкодую про своє рішення."
+    }
+  ]
+},
+{
+  id: 545,
+  word: "to threaten",
+  ru: "угрожать",
+  uk: "загрожувати",
+  level: "B2",
+  topics: ["conflict"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Climate change threatens many animal species.",
+      ru: "Изменение климата угрожает многим видам животных.",
+      uk: "Зміна клімату загрожує багатьом видам тварин."
+    }
+  ]
+},
+{
+  id: 546,
+  word: "to require",
+  ru: "требовать",
+  uk: "вимагати",
+  level: "C1",
+  topics: ["formal"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This plan still requires some changes.",
+      ru: "Этот план всё ещё требует некоторых изменений.",
+      uk: "Цей план ще потребує деяких змін."
+    }
+  ]
+},
+{
+  id: 547,
+  word: "to influence",
+  ru: "влиять",
+  uk: "впливати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The media strongly influence public opinion.",
+      ru: "СМИ сильно влияют на общественное мнение.",
+      uk: "ЗМІ сильно впливають на громадську думку."
+    }
+  ]
+},
+{
+  id: 548,
+  word: "to deal with",
+  ru: "заниматься",
+  uk: "займатися",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The study deals with the topic of migration.",
+      ru: "Исследование занимается темой миграции.",
+      uk: "Дослідження стосується теми міграції."
+    }
+  ]
+},
+{
+  id: 549,
+  word: "to question",
+  ru: "опрашивать",
+  uk: "опитувати",
+  level: "B2",
+  topics: ["research"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The police questioned several witnesses.",
+      ru: "Полиция опросила нескольких свидетелей.",
+      uk: "Поліція опитала кількох свідків."
+    }
+  ]
+},
+{
+  id: 550,
+  word: "to free",
+  ru: "освобождать",
+  uk: "звільняти",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Therapy can free you from fear.",
+      ru: "Терапия может освободить от страха.",
+      uk: "Терапія може звільнити від страху."
+    }
+  ]
+},
+{
+  id: 551,
+  word: "to fear",
+  ru: "опасаться",
+  uk: "побоюватися",
+  level: "B2",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I fear that it might be too late.",
+      ru: "Я опасаюсь, что может быть слишком поздно.",
+      uk: "Я побоююся, що може бути надто пізно."
+    }
+  ]
+},
+{
+  id: 552,
+  word: "to commit",
+  ru: "совершать",
+  uk: "вчиняти",
+  level: "B2",
+  topics: ["crime"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He committed a serious crime.",
+      ru: "Он совершил серьёзное преступление.",
+      uk: "Він вчинив серйозний злочин."
+    }
+  ]
+},
+{
+  id: 553,
+  word: "to be enthusiastic about",
+  ru: "восхищаться",
+  uk: "захоплюватися",
+  level: "B1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She is very enthusiastic about modern art.",
+      ru: "Она очень восхищается современным искусством.",
+      uk: "Вона дуже захоплюється сучасним мистецтвом."
+    }
+  ]
+},
+{
+  id: 554,
+  word: "to desire",
+  ru: "желать",
+  uk: "жадати",
+  level: "C1",
+  topics: ["feelings"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He strongly desires power and recognition.",
+      ru: "Он сильно желает власти и признания.",
+      uk: "Він сильно жадає влади й визнання."
+    }
+  ]
+},
+{
+  id: 555,
+  word: "to accompany",
+  ru: "сопровождать",
+  uk: "супроводжувати",
+  level: "B1",
+  topics: ["movement"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Can you accompany me to the doctor?",
+      ru: "Ты можешь сопроводить меня к врачу?",
+      uk: "Ти можеш супроводити мене до лікаря?"
+    }
+  ]
+},
+{
+  id: 556,
+  word: "to justify",
+  ru: "обосновывать",
+  uk: "обґрунтовувати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please justify your decision.",
+      ru: "Пожалуйста, обоснуйте своё решение.",
+      uk: "Будь ласка, обґрунтуйте своє рішення."
+    }
+  ]
+},
+{
+  id: 557,
+  word: "to treat",
+  ru: "лечить",
+  uk: "лікувати",
+  level: "B1",
+  topics: ["health", "social"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The doctor treats many patients every day.",
+      ru: "Врач каждый день лечит многих пациентов.",
+      uk: "Лікар щодня лікує багатьох пацієнтів."
+    }
+  ]
+},
+{
+  id: 558,
+  word: "to insist",
+  ru: "настаивать",
+  uk: "наполягати",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He insists on his opinion.",
+      ru: "Он настаивает на своём мнении.",
+      uk: "Він наполягає на своїй думці."
+    }
+  ]
+},
+{
+  id: 559,
+  word: "to master",
+  ru: "владеть",
+  uk: "володіти",
+  level: "B2",
+  topics: ["skills"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She has mastered three languages.",
+      ru: "Она владеет тремя языками.",
+      uk: "Вона володіє трьома мовами."
+    }
+  ]
+},
+{
+  id: 560,
+  word: "to contribute",
+  ru: "содействовать",
+  uk: "сприяти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Everyone can contribute to the success.",
+      ru: "Каждый может содействовать успеху.",
+      uk: "Кожен може сприяти успіху."
+    }
+  ]
+},
+{
+  id: 561,
+  word: "to join",
+  ru: "вступать",
+  uk: "вступати",
+  level: "B2",
+  topics: ["social"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many countries want to join the union.",
+      ru: "Многие страны хотят вступить в союз.",
+      uk: "Багато країн хочуть вступити до союзу."
+    }
+  ]
+},
+{
+  id: 562,
+  word: "to express",
+  ru: "выказывать",
+  uk: "виявляти",
+  level: "C1",
+  topics: ["formal"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They publicly express their support.",
+      ru: "Они публично выказывают свою поддержку.",
+      uk: "Вони публічно виявляють свою підтримку."
+    }
+  ]
+},
+{
+  id: 563,
+  word: "to criticize",
+  ru: "критиковать",
+  uk: "критикувати",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Customers criticize the poor quality.",
+      ru: "Клиенты критикуют плохое качество.",
+      uk: "Клієнти критикують погану якість."
+    }
+  ]
+},
+{
+  id: 564,
+  word: "to make an effort",
+  ru: "стараться",
+  uk: "намагатися",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I really make an effort to be on time.",
+      ru: "Я действительно стараюсь быть пунктуальным.",
+      uk: "Я справді намагаюся бути пунктуальним."
+    }
+  ]
+},
+{
+  id: 565,
+  word: "to disadvantage",
+  ru: "ущемлять",
+  uk: "обділяти",
+  level: "B2",
+  topics: ["social"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "No one may be disadvantaged because of their age.",
+      ru: "Никто не должен быть ущемлён из-за своего возраста.",
+      uk: "Ніхто не має бути обділений через свій вік."
+    }
+  ]
+},
+{
+  id: 566,
+  word: "to need",
+  ru: "нуждаться",
+  uk: "потребувати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need more time for the project.",
+      ru: "Нам нужно больше времени для проекта.",
+      uk: "Нам потрібно більше часу для проєкту."
+    }
+  ]
+},
+{
+  id: 567,
+  word: "to calculate",
+  ru: "вычислять",
+  uk: "обчислювати",
+  level: "B2",
+  topics: ["math"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to calculate the total costs.",
+      ru: "Нам нужно вычислить общие расходы.",
+      uk: "Нам потрібно обчислити загальні витрати."
+    }
+  ]
+},
+{
+  id: 568,
+  word: "to entitle",
+  ru: "управомочивать",
+  uk: "надавати право",
+  level: "B2",
+  topics: ["law"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This card entitles you to free entry.",
+      ru: "Эта карта управомочивает на бесплатный вход.",
+      uk: "Ця картка надає право на безкоштовний вхід."
+    }
+  ]
+},
+{
+  id: 569,
+  word: "to correct",
+  ru: "исправлять",
+  uk: "виправляти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please correct any possible mistakes.",
+      ru: "Пожалуйста, исправьте возможные ошибки.",
+      uk: "Будь ласка, виправте можливі помилки."
+    }
+  ]
+},
+{
+  id: 570,
+  word: "to take into account",
+  ru: "учитывать",
+  uk: "враховувати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must take all factors into account.",
+      ru: "Мы должны учитывать все факторы.",
+      uk: "Ми маємо врахувати всі фактори."
+    }
+  ]
+},
+{
+  id: 571,
+  word: "to be based on",
+  ru: "основываться на",
+  uk: "ґрунтуватися на",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The decision is based on facts.",
+      ru: "Решение основывается на фактах.",
+      uk: "Рішення ґрунтується на фактах."
+    }
+  ]
+},
+{
+  id: 572,
+  word: "to damage",
+  ru: "повреждать",
+  uk: "пошкоджувати",
+  level: "B1",
+  topics: ["objects"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The storm damaged many houses.",
+      ru: "Шторм повредил много домов.",
+      uk: "Шторм пошкодив багато будинків."
+    }
+  ]
+},
+{
+  id: 573,
+  word: "to obtain",
+  ru: "доставать",
+  uk: "діставати",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Who will obtain the materials?",
+      ru: "Кто достанет материалы?",
+      uk: "Хто дістане матеріали?"
+    }
+  ]
+},
+{
+  id: 574,
+  word: "to decide",
+  ru: "решать",
+  uk: "вирішувати",
+  level: "B1",
+  topics: ["admin"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Parliament is deciding on a new law.",
+      ru: "Парламент решает по поводу нового закона.",
+      uk: "Парламент вирішує щодо нового закону."
+    }
+  ]
+},
+{
+  id: 575,
+  word: "to complain",
+  ru: "жаловаться",
+  uk: "скаржитися",
+  level: "A2",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He is complaining about the noise.",
+      ru: "Он жалуется на шум.",
+      uk: "Він скаржиться на шум."
+    }
+  ]
+},
+{
+  id: 576,
+  word: "to insist",
+  ru: "настаивать",
+  uk: "наполягати",
+  level: "B1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He insists on his demand.",
+      ru: "Он настаивает на своём требовании.",
+      uk: "Він наполягає на своїй вимозі."
+    }
+  ]
+},
+{
+  id: 577,
+  word: "to dispute",
+  ru: "оспаривать",
+  uk: "заперечувати",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Nobody disputes his abilities.",
+      ru: "Никто не оспаривает его способности.",
+      uk: "Ніхто не заперечує його здібності."
+    }
+  ]
+},
+{
+  id: 578,
+  word: "to take part",
+  ru: "участвовать",
+  uk: "брати участь",
+  level: "B1",
+  topics: ["social"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many people take part in the campaign.",
+      ru: "Многие люди участвуют в акции.",
+      uk: "Багато людей беруть участь в акції."
+    }
+  ]
+},
+{
+  id: 579,
+  word: "to run (a business)",
+  ru: "заниматься",
+  uk: "займатися",
+  level: "B2",
+  topics: ["business"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They run a small restaurant.",
+      ru: "Они ведут небольшой ресторан.",
+      uk: "Вони ведуть невеликий ресторан."
+    }
+  ]
+},
+{
+  id: 580,
+  word: "to look after",
+  ru: "опекать",
+  uk: "опікуватися",
+  level: "B2",
+  topics: ["social"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He looks after the new employees.",
+      ru: "Он опекает новых сотрудников.",
+      uk: "Він опікується новими працівниками."
+    }
+  ]
+},
+{
+  id: 581,
+  word: "to apply (for a job)",
+  ru: "подаваться",
+  uk: "подаватися",
+  level: "B1",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She is applying for a job as a teacher.",
+      ru: "Она подаётся на должность учительницы.",
+      uk: "Вона подається на посаду вчительки."
+    }
+  ]
+},
+{
+  id: 582,
+  word: "to prove",
+  ru: "доказывать",
+  uk: "доводити",
+  level: "B2",
+  topics: ["law", "science"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This can be scientifically proved.",
+      ru: "Это можно доказать научно.",
+      uk: "Це можна довести науково."
+    }
+  ]
+},
+{
+  id: 583,
+  word: "to bring about",
+  ru: "вызывать",
+  uk: "спричиняти",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The new regulation brings about some relief.",
+      ru: "Новое регулирование вызывает некоторое облегчение.",
+      uk: "Нове регулювання спричиняє певне полегшення."
+    }
+  ]
+},
+{
+  id: 584,
+  word: "to cope with",
+  ru: "справляться",
+  uk: "впоратися",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She coped well with the crisis.",
+      ru: "Она хорошо справилась с кризисом.",
+      uk: "Вона добре впоралася з кризою."
+    }
+  ]
+},
+{
+  id: 585,
+  word: "to refer to",
+  ru: "ссылаться",
+  uk: "посилатися",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I refer to your letter from Monday.",
+      ru: "Я ссылаюсь на ваше письмо от понедельника.",
+      uk: "Я посилаюся на ваш лист від понеділка."
+    }
+  ]
+},
+{
+  id: 586,
+  word: "to aim at",
+  ru: "преследовать цель",
+  uk: "мати на меті",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "What are you aiming at with this question?",
+      ru: "Какую цель ты преследуешь этим вопросом?",
+      uk: "Чого ти прагнеш цим запитанням?"
+    }
+  ]
+},
+{
+  id: 587,
+  word: "to approve",
+  ru: "одобрять",
+  uk: "схвалювати",
+  level: "C1",
+  topics: ["formal"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Parliament approved the proposal.",
+      ru: "Парламент одобрил предложение.",
+      uk: "Парламент схвалив пропозицію."
+    }
+  ]
+},
+{
+  id: 588,
+  word: "to define",
+  ru: "определять",
+  uk: "визначати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How would you define success?",
+      ru: "Как бы ты определил успех?",
+      uk: "Як би ти визначив успіх?"
+    }
+  ]
+},
+{
+  id: 589,
+  word: "to stretch",
+  ru: "растягиваться",
+  uk: "розтягуватися",
+  level: "B1",
+  topics: ["sport"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should stretch before jogging.",
+      ru: "Перед бегом тебе стоит растянуться.",
+      uk: "Перед бігом тобі варто розтягнутися."
+    }
+  ]
+},
+{
+  id: 590,
+  word: "to delegate",
+  ru: "делегировать",
+  uk: "делегувати",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You can delegate some tasks to your team.",
+      ru: "Ты можешь делегировать некоторые задачи своей команде.",
+      uk: "Ти можеш делегувати деякі завдання своїй команді."
+    }
+  ]
+},
+{
+  id: 591,
+  word: "to demonstrate",
+  ru: "демонстрировать",
+  uk: "демонструвати",
+  level: "B2",
+  topics: ["politics"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many people demonstrate for more justice.",
+      ru: "Многие люди демонстрируют за большую справедливость.",
+      uk: "Багато людей демонструють за більшу справедливість."
+    }
+  ]
+},
+{
+  id: 592,
+  word: "to diagnose",
+  ru: "диагностировать",
+  uk: "діагностувати",
+  level: "C1",
+  topics: ["health"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The doctor diagnosed a rare disease.",
+      ru: "Врач диагностировал редкую болезнь.",
+      uk: "Лікар діагностував рідкісну хворобу."
+    }
+  ]
+},
+{
+  id: 593,
+  word: "to discuss",
+  ru: "обсуждать",
+  uk: "обговорювати",
+  level: "B1",
+  topics: ["communication"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We are discussing the topic in the group.",
+      ru: "Мы обсуждаем тему в группе.",
+      uk: "Ми обговорюємо тему в групі."
+    }
+  ]
+},
+{
+  id: 594,
+  word: "to document",
+  ru: "документировать",
+  uk: "документувати",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please document all the steps.",
+      ru: "Пожалуйста, задокументируйте все шаги.",
+      uk: "Будь ласка, задокументуйте всі кроки."
+    }
+  ]
+},
+{
+  id: 595,
+  word: "to carry out",
+  ru: "проводить",
+  uk: "проводити",
+  level: "B2",
+  topics: ["work"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We will carry out the training next week.",
+      ru: "Мы проведём обучение на следующей неделе.",
+      uk: "Ми проведемо навчання наступного тижня."
+    }
+  ]
+},
+{
+  id: 596,
+  word: "to assert oneself",
+  ru: "пробиваться",
+  uk: "пробиватися",
+  level: "C1",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She could not assert herself in the discussion.",
+      ru: "Она не смогла пробиться в дискуссии.",
+      uk: "Вона не змогла відстояти себе в дискусії."
+    }
+  ]
+},
+{
+  id: 597,
+  word: "to include",
+  ru: "включать",
+  uk: "включати",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We should include all participants in the decision.",
+      ru: "Нам следует включить всех участников в принятие решения.",
+      uk: "Ми маємо включити всіх учасників до ухвалення рішення."
+    }
+  ]
+},
+{
+  id: 598,
+  word: "to penetrate",
+  ru: "проникать",
+  uk: "проникати",
+  level: "C1",
+  topics: ["crime", "nature"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Water penetrated into the basement.",
+      ru: "Вода проникла в подвал.",
+      uk: "Вода проникла до підвалу."
+    }
+  ]
+},
+{
+  id: 599,
+  word: "to address (a point)",
+  ru: "останавливаться на",
+  uk: "зупинятися на",
+  level: "B2",
+  topics: ["abstract"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I would like to address this point briefly.",
+      ru: "Я хотел бы кратко остановиться на этом пункте.",
+      uk: "Я хочу коротко зупинитися на цьому пункті."
+    }
+  ]
+},
+{
+  id: 600,
+  word: "to comply with",
+  ru: "соблюдать",
+  uk: "дотримуватися",
+  level: "B2",
+  topics: ["law", "time"],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We absolutely have to comply with the deadline.",
+      ru: "Мы обязательно должны соблюсти срок.",
+      uk: "Ми обов’язково маємо дотриматися терміну."
+    }
+  ]
+},
+{
+  id: 601,
+  word: "to log in",
+  ru: "логиниться",
+  uk: "входити",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You need to log in before accessing your account.",
+      ru: "Тебе нужно залогиниться перед доступом к аккаунту.",
+      uk: "Тобі треба увійти перед доступом до акаунта."
+    }
+  ]
+},
+{
+  id: 602,
+  word: "to restrict",
+  ru: "ограничивать",
+  uk: "обмежувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to restrict our expenses this month.",
+      ru: "Нам нужно ограничить расходы в этом месяце.",
+      uk: "Нам потрібно обмежити витрати цього місяця."
+    }
+  ]
+},
+{
+  id: 603,
+  word: "to assess",
+  ru: "оценивать",
+  uk: "оцінювати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How do you assess the situation?",
+      ru: "Как вы оцениваете ситуацию?",
+      uk: "Як ви оцінюєте ситуацію?"
+    }
+  ]
+},
+{
+  id: 604,
+  word: "to adjust",
+  ru: "настраивать",
+  uk: "налаштовувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should adjust the settings before using the system.",
+      ru: "Тебе нужно настроить параметры перед использованием системы.",
+      uk: "Тобі потрібно налаштувати параметри перед використанням системи."
+    }
+  ]
+},
+{
+  id: 605,
+  word: "to enter",
+  ru: "вступать",
+  uk: "вступати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please enter the room quietly.",
+      ru: "Пожалуйста, войдите в комнату тихо.",
+      uk: "Будь ласка, увійдіть до кімнати тихо."
+    }
+  ]
+},
+{
+  id: 606,
+  word: "to immigrate",
+  ru: "иммигрировать",
+  uk: "іммігрувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many people immigrate to this country every year.",
+      ru: "Многие люди иммигрируют в эту страну каждый год.",
+      uk: "Багато людей іммігрують до цієї країни щороку."
+    }
+  ]
+},
+{
+  id: 607,
+  word: "to affect",
+  ru: "воздействовать",
+  uk: "впливати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Stress can affect the body in many ways.",
+      ru: "Стресс может воздействовать на организм разными способами.",
+      uk: "Стрес може впливати на організм різними способами."
+    }
+  ]
+},
+{
+  id: 608,
+  word: "to move in",
+  ru: "въезжать",
+  uk: "в'їжджати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They will move in next week.",
+      ru: "Они въезжают на следующей неделе.",
+      uk: "Вони в'їжджають наступного тижня."
+    }
+  ]
+},
+{
+  id: 609,
+  word: "to feel",
+  ru: "ощущать",
+  uk: "відчувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How do you feel about this?",
+      ru: "Что ты ощущаешь по этому поводу?",
+      uk: "Що ти відчуваєш з цього приводу?"
+    }
+  ]
+},
+{
+  id: 610,
+  word: "to be cancelled",
+  ru: "выпадать / отменяться",
+  uk: "скасовуватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The meeting was cancelled due to illness.",
+      ru: "Встреча была отменена из-за болезни.",
+      uk: "Зустріч була скасована через хворобу."
+    }
+  ]
+},
+{
+  id: 611,
+  word: "to accommodate",
+  ru: "идти навстречу",
+  uk: "йти назустріч",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company accommodated the clients with a discount.",
+      ru: "Компания пошла навстречу клиентам со скидкой.",
+      uk: "Компанія пішла назустріч клієнтам зі знижкою."
+    }
+  ]
+},
+{
+  id: 612,
+  word: "to relieve",
+  ru: "разгружать",
+  uk: "розвантажувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "New staff should relieve the team.",
+      ru: "Новые сотрудники должны разгрузить команду.",
+      uk: "Нові працівники мають розвантажити команду."
+    }
+  ]
+},
+{
+  id: 613,
+  word: "to withdraw",
+  ru: "извлекать",
+  uk: "вилучати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You can withdraw money from the account.",
+      ru: "Ты можешь снять деньги со счёта.",
+      uk: "Ти можеш зняти гроші з рахунку."
+    }
+  ]
+},
+{
+  id: 614,
+  word: "to decide",
+  ru: "решать",
+  uk: "вирішувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can't decide right now.",
+      ru: "Я не могу решить прямо сейчас.",
+      uk: "Я не можу вирішити прямо зараз."
+    }
+  ]
+},
+{
+  id: 615,
+  word: "to resolve",
+  ru: "решаться",
+  uk: "вирішуватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She resolved to move abroad.",
+      ru: "Она решилась переехать за границу.",
+      uk: "Вона наважилася переїхати за кордон."
+    }
+  ]
+},
+{
+  id: 616,
+  word: "to disappoint",
+  ru: "разочаровывать",
+  uk: "розчаровувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "His behavior disappointed me.",
+      ru: "Его поведение меня разочаровало.",
+      uk: "Його поведінка мене розчарувала."
+    }
+  ]
+},
+{
+  id: 617,
+  word: "to deprive",
+  ru: "лишать",
+  uk: "позбавляти",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They deprived him of his license.",
+      ru: "Его лишили лицензии.",
+      uk: "Його позбавили ліцензії."
+    }
+  ]
+},
+{
+  id: 618,
+  word: "to develop",
+  ru: "разрабатывать",
+  uk: "опрацьовувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team is developing a new concept.",
+      ru: "Команда разрабатывает новый концепт.",
+      uk: "Команда опрацьовує новий концепт."
+    }
+  ]
+},
+{
+  id: 619,
+  word: "to learn",
+  ru: "узнавать",
+  uk: "дізнаватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I learned about it only yesterday.",
+      ru: "Я узнал об этом только вчера.",
+      uk: "Я дізнався про це лише вчора."
+    }
+  ]
+},
+{
+  id: 620,
+  word: "to record",
+  ru: "фиксировать",
+  uk: "фіксувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "All data is recorded digitally.",
+      ru: "Все данные фиксируются в цифровом виде.",
+      uk: "Усі дані фіксують у цифровому вигляді."
+    }
+  ]
+},
+{
+  id: 621,
+  word: "to invent",
+  ru: "изобретать",
+  uk: "винаходити",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Who invented the telephone?",
+      ru: "Кто изобрёл телефон?",
+      uk: "Хто винайшов телефон?"
+    }
+  ]
+},
+{
+  id: 622,
+  word: "to fulfill",
+  ru: "выполнять",
+  uk: "виконувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The contract fulfills all conditions.",
+      ru: "Договор выполняет все условия.",
+      uk: "Договір відповідає всім умовам."
+    }
+  ]
+},
+{
+  id: 623,
+  word: "to result",
+  ru: "получаться",
+  uk: "виявлятися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "A clear result emerged from the study.",
+      ru: "Из исследования получился ясный результат.",
+      uk: "З дослідження виявився чіткий результат."
+    }
+  ]
+},
+{
+  id: 624,
+  word: "to receive",
+  ru: "получать",
+  uk: "отримувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I received your letter yesterday.",
+      ru: "Я получил твоё письмо вчера.",
+      uk: "Я отримав твій лист учора."
+    }
+  ]
+},
+{
+  id: 625,
+  word: "to accomplish",
+  ru: "заканчивать",
+  uk: "завершувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I still have a few tasks to accomplish.",
+      ru: "Мне нужно ещё закончить пару дел.",
+      uk: "Мені ще треба завершити кілька справ."
+    }
+  ]
+},
+{
+  id: 626,
+  word: "to ease",
+  ru: "облегчать",
+  uk: "полегшувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The app eases everyday life.",
+      ru: "Приложение облегчает повседневную жизнь.",
+      uk: "Додаток полегшує повсякденне життя."
+    }
+  ]
+},
+{
+  id: 627,
+  word: "to experience",
+  ru: "переживать",
+  uk: "переживати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We experienced a lot together.",
+      ru: "Мы много пережили вместе.",
+      uk: "Ми багато пережили разом."
+    }
+  ]
+},
+{
+  id: 628,
+  word: "to replace",
+  ru: "заменять",
+  uk: "замінювати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to replace the old system.",
+      ru: "Нам нужно заменить старую систему.",
+      uk: "Нам потрібно замінити стару систему."
+    }
+  ]
+},
+{
+  id: 629,
+  word: "to create",
+  ru: "создавать",
+  uk: "створювати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please create a report.",
+      ru: "Пожалуйста, создайте отчёт.",
+      uk: "Будь ласка, створіть звіт."
+    }
+  ]
+},
+{
+  id: 630,
+  word: "to mention",
+  ru: "упоминать",
+  uk: "згадувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "It was not mentioned in the report.",
+      ru: "Это не было упомянуто в отчёте.",
+      uk: "Це не було згадано у звіті."
+    }
+  ]
+},
+{
+  id: 631,
+  word: "to finance",
+  ru: "финансировать",
+  uk: "фінансувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The project is financed by the EU.",
+      ru: "Проект финансируется ЕС.",
+      uk: "Проєкт фінансує ЄС."
+    }
+  ]
+},
+{
+  id: 632,
+  word: "to shape",
+  ru: "формировать",
+  uk: "формувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Experiences shape a person's character.",
+      ru: "Опыт формирует характер человека.",
+      uk: "Досвід формує характер людини."
+    }
+  ]
+},
+{
+  id: 633,
+  word: "to continue",
+  ru: "продолжать",
+  uk: "продовжувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We will continue the discussion tomorrow.",
+      ru: "Мы продолжим дискуссию завтра.",
+      uk: "Ми продовжимо дискусію завтра."
+    }
+  ]
+},
+{
+  id: 634,
+  word: "to wonder",
+  ru: "спрашивать себя",
+  uk: "запитувати себе",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I wonder if this is right.",
+      ru: "Я спрашиваю себя, правильно ли это.",
+      uk: "Я запитую себе, чи це правильно."
+    }
+  ]
+},
+{
+  id: 635,
+  word: "to release",
+  ru: "высвобождать",
+  uk: "вивільняти",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Burning fuel releases energy.",
+      ru: "При сгорании высвобождается энергия.",
+      uk: "Під час згоряння вивільняється енергія."
+    }
+  ]
+},
+{
+  id: 636,
+  word: "to ensure",
+  ru: "гарантировать",
+  uk: "гарантувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must ensure the security of the data.",
+      ru: "Мы должны гарантировать безопасность данных.",
+      uk: "Ми маємо гарантувати безпеку даних."
+    }
+  ]
+},
+{
+  id: 637,
+  word: "to get used to",
+  ru: "привыкать",
+  uk: "звикати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You get used to everything.",
+      ru: "Ко всему привыкаешь.",
+      uk: "До всього звикаєш."
+    }
+  ]
+},
+{
+  id: 638,
+  word: "to succeed",
+  ru: "удаваться",
+  uk: "вдаватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Their plan finally succeeded.",
+      ru: "План у них в итоге удался.",
+      uk: "План у них зрештою удався."
+    }
+  ]
+},
+{
+  id: 639,
+  word: "to find out",
+  ru: "выяснить",
+  uk: "з’ясувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to find out the cause of the problem.",
+      ru: "Нам нужно выяснить причину проблемы.",
+      uk: "Нам треба з’ясувати причину проблеми."
+    }
+  ]
+},
+{
+  id: 640,
+  word: "to point out",
+  ru: "указывать",
+  uk: "вказувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I would like to point out one mistake.",
+      ru: "Я хочу указать на одну ошибку.",
+      uk: "Я хочу вказати на одну помилку."
+    }
+  ]
+},
+{
+  id: 641,
+  word: "to emphasize",
+  ru: "подчёркивать",
+  uk: "підкреслювати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He emphasized the advantages.",
+      ru: "Он подчеркнул преимущества.",
+      uk: "Він підкреслив переваги."
+    }
+  ]
+},
+{
+  id: 642,
+  word: "to prevent",
+  ru: "мешать",
+  uk: "заважати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Nothing prevents me from continuing.",
+      ru: "Ничто не мешает мне продолжать.",
+      uk: "Нічого не заважає мені продовжувати."
+    }
+  ]
+},
+{
+  id: 643,
+  word: "to import",
+  ru: "импортировать",
+  uk: "імпортувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many products are imported from Asia.",
+      ru: "Многие продукты импортируются из Азии.",
+      uk: "Багато товарів імпортують з Азії."
+    }
+  ]
+},
+{
+  id: 644,
+  word: "to initiate",
+  ru: "инициировать",
+  uk: "ініціювати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The government initiated a reform.",
+      ru: "Правительство инициировало реформу.",
+      uk: "Уряд ініціював реформу."
+    }
+  ]
+},
+{
+  id: 645,
+  word: "to concentrate",
+  ru: "концентрироваться",
+  uk: "концентруватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can't concentrate today.",
+      ru: "Я сегодня плохо могу сосредоточиться.",
+      uk: "Я сьогодні погано можу сконцентруватися."
+    }
+  ]
+},
+{
+  id: 646,
+  word: "to correct",
+  ru: "корректировать",
+  uk: "виправляти",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The teacher corrects the tests.",
+      ru: "Учительница исправляет тесты.",
+      uk: "Вчителька виправляє тести."
+    }
+  ]
+},
+{
+  id: 647,
+  word: "to criticize",
+  ru: "критиковать",
+  uk: "критикувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He criticizes everything and everyone.",
+      ru: "Он критикует всё и всех.",
+      uk: "Він критикує все й усіх."
+    }
+  ]
+},
+{
+  id: 648,
+  word: "to take care of",
+  ru: "заботиться",
+  uk: "піклуватися",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She takes care of her grandmother.",
+      ru: "Она заботится о своей бабушке.",
+      uk: "Вона піклується про свою бабусю."
+    }
+  ]
+},
+{
+  id: 649,
+  word: "to perform",
+  ru: "совершать",
+  uk: "виконувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team performed excellent work.",
+      ru: "Команда проделала отличную работу.",
+      uk: "Команда виконала чудову роботу."
+    }
+  ]
+},
+{
+  id: 650,
+  word: "to steer",
+  ru: "рулить",
+  uk: "керувати",
+  level: "",
+  topics: [],
+  deSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  deAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He steers the project.",
+      ru: "Он направляет проект.",
+      uk: "Він керує проєктом."
+    }
+  ]
+},
+{
+  id: 651,
+  word: "to loosen",
+  ru: "ослаблять",
+  uk: "послаблювати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should loosen the screws a little.",
+      ru: "Тебе стоит немного ослабить винты.",
+      uk: "Тобі варто трохи послабити гвинти."
+    }
+  ]
+},
+{
+  id: 652,
+  word: "to maximize",
+  ru: "максимизировать",
+  uk: "максимізувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must maximize our efficiency this quarter.",
+      ru: "Нам нужно максимизировать эффективность в этом квартале.",
+      uk: "Нам потрібно максимізувати ефективність цього кварталу."
+    }
+  ]
+},
+{
+  id: 653,
+  word: "to minimize",
+  ru: "минимизировать",
+  uk: "мінімізувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We should minimize the risk as much as possible.",
+      ru: "Нам следует максимально минимизировать риск.",
+      uk: "Нам слід максимально мінімізувати ризик."
+    }
+  ]
+},
+{
+  id: 654,
+  word: "to misunderstand",
+  ru: "неправильно понимать",
+  uk: "неправильно розуміти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please don’t misunderstand what I’m saying.",
+      ru: "Пожалуйста, не пойми меня неправильно.",
+      uk: "Будь ласка, не зрозумій мене неправильно."
+    }
+  ]
+},
+{
+  id: 655,
+  word: "to inform",
+  ru: "сообщать",
+  uk: "повідомляти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She informed us about the change in schedule.",
+      ru: "Она сообщила нам об изменении расписания.",
+      uk: "Вона повідомила нам про зміну розкладу."
+    }
+  ]
+},
+{
+  id: 656,
+  word: "to prove",
+  ru: "доказывать",
+  uk: "доводити",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Scientists proved the theory with new data.",
+      ru: "Учёные доказали теорию новыми данными.",
+      uk: "Вчені довели теорію новими даними."
+    }
+  ]
+},
+{
+  id: 657,
+  word: "to ask again",
+  ru: "переспрашивать",
+  uk: "перепитувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "If you’re unsure, just ask again.",
+      ru: "Если ты не уверен, просто переспроси.",
+      uk: "Якщо ти не впевнений, просто перепитай."
+    }
+  ]
+},
+{
+  id: 658,
+  word: "to catch up",
+  ru: "наверстывать",
+  uk: "наздоганяти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I need to catch up on the missed lessons.",
+      ru: "Мне нужно наверстать пропущенные уроки.",
+      uk: "Мені треба надолужити пропущені уроки."
+    }
+  ]
+},
+{
+  id: 659,
+  word: "to ease",
+  ru: "ослабевать",
+  uk: "послаблюватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The pain eased after a few minutes.",
+      ru: "Боль ослабла через несколько минут.",
+      uk: "Біль послабшав за кілька хвилин."
+    }
+  ]
+},
+{
+  id: 660,
+  word: "to look up",
+  ru: "смотреть (в словаре)",
+  uk: "дивитися (в словнику)",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I always look up unfamiliar words.",
+      ru: "Я всегда смотрю незнакомые слова в словаре.",
+      uk: "Я завжди дивлюся незнайомі слова в словнику."
+    }
+  ]
+},
+{
+  id: 661,
+  word: "to identify oneself",
+  ru: "подтверждать личность",
+  uk: "підтверджувати особу",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You must identify yourself with an ID.",
+      ru: "Вы должны подтвердить личность удостоверением.",
+      uk: "Ви маєте підтвердити особу посвідченням."
+    }
+  ]
+},
+{
+  id: 662,
+  word: "to tend",
+  ru: "склоняться",
+  uk: "схилятися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He tends to work too much.",
+      ru: "Он склонен слишком много работать.",
+      uk: "Він схильний занадто багато працювати."
+    }
+  ]
+},
+{
+  id: 663,
+  word: "to shape",
+  ru: "формировать",
+  uk: "формувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Childhood experiences shape a person.",
+      ru: "Опыт детства формирует человека.",
+      uk: "Дитячий досвід формує людину."
+    }
+  ]
+},
+{
+  id: 664,
+  word: "to prioritize",
+  ru: "приоритизировать",
+  uk: "пріоритезувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to prioritize our tasks.",
+      ru: "Нам нужно расставить приоритеты в задачах.",
+      uk: "Нам потрібно пріоритезувати наші завдання."
+    }
+  ]
+},
+{
+  id: 665,
+  word: "to realize",
+  ru: "осознавать",
+  uk: "усвідомлювати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She suddenly realized how late it was.",
+      ru: "Она вдруг осознала, как поздно.",
+      uk: "Вона раптом усвідомила, як пізно."
+    }
+  ]
+},
+{
+  id: 666,
+  word: "to reflect",
+  ru: "рефлексировать",
+  uk: "рефлексувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should regularly reflect on your behavior.",
+      ru: "Стоит регулярно рефлексировать над своим поведением.",
+      uk: "Варто регулярно рефлексувати над своєю поведінкою."
+    }
+  ]
+},
+{
+  id: 667,
+  word: "to contextualize",
+  ru: "относить к контексту",
+  uk: "ставити в контекст",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You must contextualize the numbers properly.",
+      ru: "Цифры нужно рассматривать в контексте.",
+      uk: "Цифри потрібно розглядати в контексті."
+    }
+  ]
+},
+{
+  id: 668,
+  word: "to reproduce",
+  ru: "воспроизводить",
+  uk: "відтворювати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They failed to reproduce the experiment.",
+      ru: "Им не удалось воспроизвести эксперимент.",
+      uk: "Їм не вдалося відтворити експеримент."
+    }
+  ]
+},
+{
+  id: 669,
+  word: "to revise",
+  ru: "пересматривать",
+  uk: "переглядати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "They later revised the decision.",
+      ru: "Они позже пересмотрели решение.",
+      uk: "Вони пізніше переглянули рішення."
+    }
+  ]
+},
+{
+  id: 670,
+  word: "to be addressed to",
+  ru: "быть адресованным",
+  uk: "бути адресованим",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The invitation is addressed to all members.",
+      ru: "Приглашение адресовано всем членам.",
+      uk: "Запрошення адресоване всім учасникам."
+    }
+  ]
+},
+{
+  id: 671,
+  word: "to risk",
+  ru: "рисковать",
+  uk: "ризикувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I don’t want to risk that.",
+      ru: "Я не хочу этим рисковать.",
+      uk: "Я не хочу цим ризикувати."
+    }
+  ]
+},
+{
+  id: 672,
+  word: "to harm",
+  ru: "вредить",
+  uk: "шкодити",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Smoking harms your health.",
+      ru: "Курение вредит здоровью.",
+      uk: "Куріння шкодить здоров’ю."
+    }
+  ]
+},
+{
+  id: 673,
+  word: "to appreciate",
+  ru: "ценить",
+  uk: "цінувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I really appreciate your help.",
+      ru: "Я очень ценю твою помощь.",
+      uk: "Я дуже ціную твою допомогу."
+    }
+  ]
+},
+{
+  id: 674,
+  word: "to describe",
+  ru: "описывать",
+  uk: "описувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He described the accident in detail.",
+      ru: "Он подробно описал аварию.",
+      uk: "Він детально описав аварію."
+    }
+  ]
+},
+{
+  id: 675,
+  word: "to fluctuate",
+  ru: "колебаться",
+  uk: "хитатися / коливатися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Prices fluctuate a lot these days.",
+      ru: "Цены сильно колеблются в наши дни.",
+      uk: "Ціни сильно коливаються останнім часом."
+    }
+  ]
+},
+{
+  id: 676,
+  word: "to deal with",
+  ru: "заниматься",
+  uk: "займатися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The article deals with climate policy.",
+      ru: "Статья касается климатической политики.",
+      uk: "Стаття стосується кліматичної політики."
+    }
+  ]
+},
+{
+  id: 677,
+  word: "to be located",
+  ru: "находиться",
+  uk: "знаходитися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The toilets are located on the ground floor.",
+      ru: "Туалеты находятся на первом этаже.",
+      uk: "Туалети знаходяться на першому поверсі."
+    }
+  ]
+},
+{
+  id: 678,
+  word: "to try hard",
+  ru: "стараться",
+  uk: "намагатися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He tries hard to be on time.",
+      ru: "Он старается быть пунктуальным.",
+      uk: "Він намагається бути пунктуальним."
+    }
+  ]
+},
+{
+  id: 679,
+  word: "to develop",
+  ru: "развиваться",
+  uk: "розвиватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The city is developing quickly.",
+      ru: "Город быстро развивается.",
+      uk: "Місто швидко розвивається."
+    }
+  ]
+},
+{
+  id: 680,
+  word: "to occur",
+  ru: "происходить",
+  uk: "відбуватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "A serious accident occurred yesterday.",
+      ru: "Вчера произошла серьёзная авария.",
+      uk: "Учора сталася серйозна аварія."
+    }
+  ]
+},
+{
+  id: 681,
+  word: "to recover",
+  ru: "отдыхать / восстанавливаться",
+  uk: "відпочивати / відновлюватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I just want to recover during the vacation.",
+      ru: "Я хочу отдохнуть в отпуске.",
+      uk: "Я хочу відпочити у відпустці."
+    }
+  ]
+},
+{
+  id: 682,
+  word: "to afford",
+  ru: "позволить себе",
+  uk: "дозволити собі",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I can’t afford a new car.",
+      ru: "Я не могу позволить себе новую машину.",
+      uk: "Я не можу дозволити собі нову машину."
+    }
+  ]
+},
+{
+  id: 683,
+  word: "to be worth it",
+  ru: "окупаться / иметь смысл",
+  uk: "окупатися / мати сенс",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Learning a language is always worth it.",
+      ru: "Учить язык всегда имеет смысл.",
+      uk: "Вивчати мову завжди має сенс."
+    }
+  ]
+},
+{
+  id: 684,
+  word: "to behave",
+  ru: "вести себя",
+  uk: "поводитися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He always behaves politely.",
+      ru: "Он всегда ведёт себя вежливо.",
+      uk: "Він завжди поводиться ввічливо."
+    }
+  ]
+},
+{
+  id: 685,
+  word: "to commit",
+  ru: "обязываться",
+  uk: "зобов’язуватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company commits to high quality standards.",
+      ru: "Компания обязуется придерживаться высоких стандартов качества.",
+      uk: "Компанія зобов’язується дотримуватися високих стандартів якості."
+    }
+  ]
+},
+{
+  id: 686,
+  word: "to secure",
+  ru: "страховать / защищать",
+  uk: "страхувати / захищати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should secure your data regularly.",
+      ru: "Тебе нужно регулярно защищать свои данные.",
+      uk: "Тобі потрібно регулярно захищати свої дані."
+    }
+  ]
+},
+{
+  id: 687,
+  word: "to specialize",
+  ru: "специализироваться",
+  uk: "спеціалізуватися",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He specializes in IT law.",
+      ru: "Он специализируется на IT-праве.",
+      uk: "Він спеціалізується на ІТ-праві."
+    }
+  ]
+},
+{
+  id: 688,
+  word: "to increase",
+  ru: "повышать",
+  uk: "підвищувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to increase productivity.",
+      ru: "Нам нужно повысить продуктивность.",
+      uk: "Нам потрібно підвищити продуктивність."
+    }
+  ]
+},
+{
+  id: 689,
+  word: "to control",
+  ru: "управлять",
+  uk: "керувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The government controls economic policy.",
+      ru: "Правительство управляет экономической политикой.",
+      uk: "Уряд керує економічною політикою."
+    }
+  ]
+},
+{
+  id: 690,
+  word: "to vote",
+  ru: "голосовать",
+  uk: "голосувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Who voted for the proposal?",
+      ru: "Кто проголосовал за предложение?",
+      uk: "Хто проголосував за пропозицію?"
+    }
+  ]
+},
+{
+  id: 691,
+  word: "to encounter",
+  ru: "натыкаться",
+  uk: "натрапляти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The plan encountered strong criticism.",
+      ru: "План натолкнулся на сильную критику.",
+      uk: "План наштовхнувся на сильну критику."
+    }
+  ]
+},
+{
+  id: 692,
+  word: "to strengthen",
+  ru: "укреплять",
+  uk: "зміцнювати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Exercise strengthens the immune system.",
+      ru: "Упражнения укрепляют иммунную систему.",
+      uk: "Вправи зміцнюють імунну систему."
+    }
+  ]
+},
+{
+  id: 693,
+  word: "to structure",
+  ru: "структурировать",
+  uk: "структурувати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We need to structure the text better.",
+      ru: "Нужно лучше структурировать текст.",
+      uk: "Потрібно краще структурувати текст."
+    }
+  ]
+},
+{
+  id: 694,
+  word: "to participate",
+  ru: "принимать участие",
+  uk: "брати участь",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many guests participate in the event.",
+      ru: "Многие гости принимают участие в мероприятии.",
+      uk: "Багато гостей беруть участь у заході."
+    }
+  ]
+},
+{
+  id: 695,
+  word: "to revise",
+  ru: "перерабатывать",
+  uk: "переробляти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The text needs to be revised again.",
+      ru: "Текст нужно переработать ещё раз.",
+      uk: "Текст треба переробити ще раз."
+    }
+  ]
+},
+{
+  id: 696,
+  word: "to overview",
+  ru: "обозревать",
+  uk: "охоплювати поглядом",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "No one can fully overview all the consequences.",
+      ru: "Никто не может полностью обозреть все последствия.",
+      uk: "Ніхто не може повністю охопити всі наслідки."
+    }
+  ]
+},
+{
+  id: 697,
+  word: "to get through",
+  ru: "переживать (период)",
+  uk: "переживати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We must get through this difficult time.",
+      ru: "Нам нужно пережить это сложное время.",
+      uk: "Нам потрібно пережити цей складний період."
+    }
+  ]
+},
+{
+  id: 698,
+  word: "to take on",
+  ru: "принимать на себя",
+  uk: "брати на себе",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Who will take on the responsibility?",
+      ru: "Кто возьмёт на себя ответственность?",
+      uk: "Хто візьме на себе відповідальність?"
+    }
+  ]
+},
+{
+  id: 699,
+  word: "to check",
+  ru: "проверять",
+  uk: "перевіряти",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please check your information again.",
+      ru: "Пожалуйста, ещё раз проверьте данные.",
+      uk: "Будь ласка, ще раз перевірте дані."
+    }
+  ]
+},
+{
+  id: 700,
+  word: "to broadcast",
+  ru: "транслировать",
+  uk: "транслювати",
+  level: "",
+  topics: [],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The match is broadcast live on TV.",
+      ru: "Матч транслируется в прямом эфире.",
+      uk: "Матч транслюють наживо по телебаченню."
+    }
+  ]
+},
+{
+  id: 701,
+  word: "to monitor",
+  ru: "наблюдать",
+  uk: "наглядати",
+  level: "B2",
+  topics: ["control", "it"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company monitors the network for security threats.",
+      ru: "Компания отслеживает сеть на наличие угроз безопасности.",
+      uk: "Компанія відстежує мережу на наявність загроз безпеці."
+    }
+  ]
+},
+{
+  id: 702,
+  word: "to overcome",
+  ru: "преодолевать",
+  uk: "долати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She overcame her fear of flying.",
+      ru: "Она преодолела страх перед полётами.",
+      uk: "Вона подолала страх польотів."
+    }
+  ]
+},
+{
+  id: 703,
+  word: "to deal with",
+  ru: "справляться (с чем-то)",
+  uk: "справлятися (з чимось)",
+  level: "B1",
+  topics: ["social"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He can't deal with stress very well.",
+      ru: "Он плохо справляется со стрессом.",
+      uk: "Він погано справляється зі стресом."
+    }
+  ]
+},
+{
+  id: 704,
+  word: "to implement",
+  ru: "реализовывать",
+  uk: "втілювати",
+  level: "B2",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team is implementing a new strategy.",
+      ru: "Команда внедряет новую стратегию.",
+      uk: "Команда впроваджує нову стратегію."
+    }
+  ]
+},
+{
+  id: 705,
+  word: "to be controversial",
+  ru: "быть спорным",
+  uk: "бути спірним",
+  level: "C1",
+  topics: ["discussion"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The new law is highly controversial.",
+      ru: "Новый закон вызывает много споров.",
+      uk: "Новий закон викликає багато суперечок."
+    }
+  ]
+},
+{
+  id: 706,
+  word: "to prevent",
+  ru: "пресекать",
+  uk: "припиняти",
+  level: "C1",
+  topics: ["law"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The government wants to prevent illegal activities.",
+      ru: "Правительство хочет пресечь незаконную деятельность.",
+      uk: "Уряд хоче припинити незаконну діяльність."
+    }
+  ]
+},
+{
+  id: 707,
+  word: "to accommodate",
+  ru: "размещать",
+  uk: "розміщувати",
+  level: "B2",
+  topics: ["travel", "home"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The hotel can accommodate 200 guests.",
+      ru: "Отель может разместить 200 гостей.",
+      uk: "Готель може розмістити 200 гостей."
+    }
+  ]
+},
+{
+  id: 708,
+  word: "to suppress",
+  ru: "подавлять",
+  uk: "пригнічувати",
+  level: "C1",
+  topics: ["politics", "feelings"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You shouldn't suppress your feelings all the time.",
+      ru: "Не стоит всё время подавлять свои чувства.",
+      uk: "Не варто весь час пригнічувати свої почуття."
+    }
+  ]
+},
+{
+  id: 709,
+  word: "to go down",
+  ru: "заходить (о солнце)",
+  uk: "заходити (про сонце)",
+  level: "B2",
+  topics: ["nature", "abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The sun goes down behind the mountains.",
+      ru: "Солнце заходит за горы.",
+      uk: "Сонце заходить за гори."
+    }
+  ]
+},
+{
+  id: 710,
+  word: "to refrain from",
+  ru: "воздерживаться",
+  uk: "утримуватися",
+  level: "C1",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please refrain from making loud noises.",
+      ru: "Пожалуйста, воздержитесь от громких звуков.",
+      uk: "Будь ласка, утримайтеся від гучних звуків."
+    }
+  ]
+},
+{
+  id: 711,
+  word: "to prohibit",
+  ru: "запрещать",
+  uk: "забороняти",
+  level: "C1",
+  topics: ["law"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The school prohibits the use of mobile phones in class.",
+      ru: "Школа запрещает использование мобильных телефонов на уроках.",
+      uk: "Школа забороняє користування мобільними телефонами на уроках."
+    }
+  ]
+},
+{
+  id: 712,
+  word: "to support",
+  ru: "поддерживать",
+  uk: "підтримувати",
+  level: "B1",
+  topics: ["social"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Friends should support each other.",
+      ru: "Друзья должны поддерживать друг друга.",
+      uk: "Друзі мають підтримувати один одного."
+    }
+  ]
+},
+{
+  id: 713,
+  word: "to underline",
+  ru: "подчеркивать",
+  uk: "підкреслювати",
+  level: "B1",
+  topics: ["learning"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please underline the most important words.",
+      ru: "Пожалуйста, подчеркните самые важные слова.",
+      uk: "Будь ласка, підкресліть найважливіші слова."
+    }
+  ]
+},
+{
+  id: 714,
+  word: "to divide",
+  ru: "разделять на части",
+  uk: "поділяти",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We divided the text into three parts.",
+      ru: "Мы разделили текст на три части.",
+      uk: "Ми поділили текст на три частини."
+    }
+  ]
+},
+{
+  id: 715,
+  word: "to undergo",
+  ru: "подвергаться",
+  uk: "піддаватися",
+  level: "C1",
+  topics: ["health", "formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He will undergo an operation tomorrow.",
+      ru: "Завтра он пройдёт операцию.",
+      uk: "Завтра він пройде операцію."
+    }
+  ]
+},
+{
+  id: 716,
+  word: "to adopt",
+  ru: "принимать (закон)",
+  uk: "ухвалювати",
+  level: "B2",
+  topics: ["formal", "social"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The parliament adopted a new law.",
+      ru: "Парламент принял новый закон.",
+      uk: "Парламент ухвалив новий закон."
+    }
+  ]
+},
+{
+  id: 717,
+  word: "to process",
+  ru: "обрабатывать",
+  uk: "обробляти",
+  level: "B2",
+  topics: ["tech", "abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This software can process large amounts of data.",
+      ru: "Эта программа может обрабатывать большие объёмы данных.",
+      uk: "Ця програма може обробляти великі обсяги даних."
+    }
+  ]
+},
+{
+  id: 718,
+  word: "to hide",
+  ru: "скрывать",
+  uk: "приховувати",
+  level: "B2",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She tried to hide her disappointment.",
+      ru: "Она попыталась скрыть своё разочарование.",
+      uk: "Вона намагалася приховати своє розчарування."
+    }
+  ]
+},
+{
+  id: 719,
+  word: "to improve",
+  ru: "улучшать",
+  uk: "покращувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "His German has improved a lot.",
+      ru: "Его немецкий сильно улучшился.",
+      uk: "Його німецька значно покращилася."
+    }
+  ]
+},
+{
+  id: 720,
+  word: "to clarify",
+  ru: "прояснять",
+  uk: "пояснювати",
+  level: "B2",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This example helps to clarify the problem.",
+      ru: "Этот пример помогает прояснить проблему.",
+      uk: "Цей приклад допомагає прояснити проблему."
+    }
+  ]
+},
+{
+  id: 721,
+  word: "to arrange",
+  ru: "согласовывать",
+  uk: "узгоджувати",
+  level: "B1",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I would like to arrange an appointment for tomorrow.",
+      ru: "Я хотел бы договориться о встрече на завтра.",
+      uk: "Я хотів би домовитися про зустріч на завтра."
+    }
+  ]
+},
+{
+  id: 722,
+  word: "to have at one's disposal",
+  ru: "располагать",
+  uk: "мати в розпорядженні",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The team has modern equipment at its disposal.",
+      ru: "Команда располагает современным оборудованием.",
+      uk: "Команда має у своєму розпорядженні сучасне обладнання."
+    }
+  ]
+},
+{
+  id: 723,
+  word: "to prevent",
+  ru: "предотвращать",
+  uk: "запобігати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We couldn't prevent the accident.",
+      ru: "Мы не смогли предотвратить аварию.",
+      uk: "Ми не змогли запобігти аварії."
+    }
+  ]
+},
+{
+  id: 724,
+  word: "to link",
+  ru: "связывать",
+  uk: "пов’язувати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Our brain links new information with old knowledge.",
+      ru: "Наш мозг связывает новую информацию со старыми знаниями.",
+      uk: "Наш мозок пов’язує нову інформацію зі старими знаннями."
+    }
+  ]
+},
+{
+  id: 725,
+  word: "to extend",
+  ru: "продлевать",
+  uk: "подовжувати",
+  level: "B1",
+  topics: ["time"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We decided to extend the contract for one year.",
+      ru: "Мы решили продлить контракт на один год.",
+      uk: "Ми вирішили продовжити контракт на один рік."
+    }
+  ]
+},
+{
+  id: 726,
+  word: "to reschedule",
+  ru: "переносить",
+  uk: "переносити",
+  level: "B2",
+  topics: ["time", "objects"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Can we reschedule the meeting to next week?",
+      ru: "Мы можем перенести встречу на следующую неделю?",
+      uk: "Ми можемо перенести зустріч на наступний тиждень?"
+    }
+  ]
+},
+{
+  id: 727,
+  word: "to publish",
+  ru: "публиковать",
+  uk: "публікувати",
+  level: "B2",
+  topics: ["media"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The results were published online.",
+      ru: "Результаты были опубликованы онлайн.",
+      uk: "Результати опублікували онлайн."
+    }
+  ]
+},
+{
+  id: 728,
+  word: "to provide food for",
+  ru: "обеспечивать питанием",
+  uk: "забезпечувати харчуванням",
+  level: "B2",
+  topics: ["food"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The organization provides food for the guests for free.",
+      ru: "Организация бесплатно обеспечивает гостей питанием.",
+      uk: "Організація безкоштовно забезпечує гостей харчуванням."
+    }
+  ]
+},
+{
+  id: 729,
+  word: "to obligate",
+  ru: "обязывать",
+  uk: "зобов’язувати",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The contract obligates both sides to follow the rules.",
+      ru: "Контракт обязывает обе стороны соблюдать правила.",
+      uk: "Контракт зобов’язує обидві сторони дотримуватися правил."
+    }
+  ]
+},
+{
+  id: 730,
+  word: "to go on a trip",
+  ru: "уезжать в поездку",
+  uk: "виїжджати в подорож",
+  level: "B1",
+  topics: ["travel"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We will go on a trip to Italy this summer.",
+      ru: "Этим летом мы поедем в поездку в Италию.",
+      uk: "Цього літа ми поїдемо в подорож до Італії."
+    }
+  ]
+},
+{
+  id: 731,
+  word: "to obtain",
+  ru: "достать",
+  uk: "діставати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He quickly obtained an overview of the situation.",
+      ru: "Он быстро получил общее представление о ситуации.",
+      uk: "Він швидко отримав загальне уявлення про ситуацію."
+    }
+  ]
+},
+{
+  id: 732,
+  word: "to worsen",
+  ru: "ухудшать",
+  uk: "погіршувати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The weather suddenly worsened.",
+      ru: "Погода внезапно ухудшилась.",
+      uk: "Погода раптово погіршилася."
+    }
+  ]
+},
+{
+  id: 733,
+  word: "to merge",
+  ru: "сливаться",
+  uk: "зливатися",
+  level: "C1",
+  topics: ["science", "abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Two companies merged into one large group.",
+      ru: "Две компании слились в одну большую группу.",
+      uk: "Дві компанії злилися в одну велику групу."
+    }
+  ]
+},
+{
+  id: 734,
+  word: "to insure",
+  ru: "страховать",
+  uk: "страхувати",
+  level: "B2",
+  topics: ["insurance", "communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You should insure your car against theft.",
+      ru: "Тебе следует застраховать свою машину от кражи.",
+      uk: "Тобі слід застрахувати своє авто від крадіжки."
+    }
+  ]
+},
+{
+  id: 735,
+  word: "to promise",
+  ru: "обещать",
+  uk: "обіцяти",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I promise to be on time.",
+      ru: "Я обещаю быть вовремя.",
+      uk: "Я обіцяю бути вчасно."
+    }
+  ]
+},
+{
+  id: 736,
+  word: "to violate",
+  ru: "нарушать",
+  uk: "порушувати",
+  level: "B2",
+  topics: ["law"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This action clearly violates the rules.",
+      ru: "Это действие явно нарушает правила.",
+      uk: "Ця дія явно порушує правила."
+    }
+  ]
+},
+{
+  id: 737,
+  word: "to trust",
+  ru: "доверять",
+  uk: "довіряти",
+  level: "B1",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I trust you completely.",
+      ru: "Я полностью доверяю тебе.",
+      uk: "Я повністю довіряю тобі."
+    }
+  ]
+},
+{
+  id: 738,
+  word: "to refer to",
+  ru: "ссылаться",
+  uk: "посилатися",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "In his report, he refers to earlier studies.",
+      ru: "В своём отчёте он ссылается на более ранние исследования.",
+      uk: "У своєму звіті він посилається на попередні дослідження."
+    }
+  ]
+},
+{
+  id: 739,
+  word: "to realize",
+  ru: "осуществлять",
+  uk: "здійснювати",
+  level: "B2",
+  topics: ["life"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She wants to realize her dream of living abroad.",
+      ru: "Она хочет осуществить свою мечту жить за границей.",
+      uk: "Вона хоче здійснити свою мрію жити за кордоном."
+    }
+  ]
+},
+{
+  id: 740,
+  word: "to record",
+  ru: "фиксировать",
+  uk: "фіксувати",
+  level: "C1",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The city recorded strong economic growth last year.",
+      ru: "Город зафиксировал сильный экономический рост в прошлом году.",
+      uk: "Місто зафіксувало значне економічне зростання минулого року."
+    }
+  ]
+},
+{
+  id: 741,
+  word: "to give up",
+  ru: "отказываться (от чего-то)",
+  uk: "відмовлятися (від чогось)",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I gave up sweets for a month.",
+      ru: "Я отказался от сладкого на месяц.",
+      uk: "Я відмовився від солодкого на місяць."
+    }
+  ]
+},
+{
+  id: 742,
+  word: "to use",
+  ru: "использовать",
+  uk: "використовувати",
+  level: "A2",
+  topics: ["basic"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Which program do you use for work?",
+      ru: "Какую программу ты используешь для работы?",
+      uk: "Яку програму ти використовуєш для роботи?"
+    }
+  ]
+},
+{
+  id: 743,
+  word: "to confuse",
+  ru: "путать",
+  uk: "плутати",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I often confuse these two words.",
+      ru: "Я часто путаю эти два слова.",
+      uk: "Я часто плутаю ці два слова."
+    }
+  ]
+},
+{
+  id: 744,
+  word: "to refuse",
+  ru: "отказываться",
+  uk: "відмовлятися",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He refused to give a statement.",
+      ru: "Он отказался давать показания.",
+      uk: "Він відмовився давати свідчення."
+    }
+  ]
+},
+{
+  id: 745,
+  word: "to make progress",
+  ru: "продвигаться",
+  uk: "просуватися",
+  level: "B2",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We are making good progress with this project.",
+      ru: "Мы хорошо продвигаемся с этим проектом.",
+      uk: "Ми добре просуваємося з цим проєктом."
+    }
+  ]
+},
+{
+  id: 746,
+  word: "to prepare",
+  ru: "готовить",
+  uk: "готувати",
+  level: "A2",
+  topics: ["learning"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I am preparing for the exam.",
+      ru: "Я готовлюсь к экзамену.",
+      uk: "Я готуюся до іспиту."
+    }
+  ]
+},
+{
+  id: 747,
+  word: "to require",
+  ru: "предполагать (как условие)",
+  uk: "передбачати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The course requires basic computer skills.",
+      ru: "Курс предполагает базовые навыки работы с компьютером.",
+      uk: "Курс передбачає базові навички роботи з комп’ютером."
+    }
+  ]
+},
+{
+  id: 748,
+  word: "to proceed",
+  ru: "действовать",
+  uk: "діяти",
+  level: "B2",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How should we proceed in this situation?",
+      ru: "Как нам действовать в этой ситуации?",
+      uk: "Як нам діяти в цій ситуації?"
+    }
+  ]
+},
+{
+  id: 749,
+  word: "to be available",
+  ru: "иметься",
+  uk: "матися",
+  level: "C1",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "No results are available yet.",
+      ru: "Результатов пока нет в наличии.",
+      uk: "Результатів поки немає в наявності."
+    }
+  ]
+},
+{
+  id: 750,
+  word: "to plan",
+  ru: "наметить",
+  uk: "намічати",
+  level: "B2",
+  topics: ["life"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I plan to read more this year.",
+      ru: "Я планирую больше читать в этом году.",
+      uk: "Я планую більше читати цього року."
+    }
+  ]
+},
+{
+  id: 751,
+  word: "to provide for",
+  ru: "предусматривать",
+  uk: "передбачати",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The law provides for several exceptions.",
+      ru: "Закон предусматривает несколько исключений.",
+      uk: "Закон передбачає кілька винятків."
+    }
+  ]
+},
+{
+  id: 752,
+  word: "to introduce oneself",
+  ru: "представляться",
+  uk: "представлятися",
+  level: "A2",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I would like to introduce myself to the new team.",
+      ru: "Я бы хотел представиться новой команде.",
+      uk: "Я хотів би представитися новій команді."
+    }
+  ]
+},
+{
+  id: 753,
+  word: "to perceive",
+  ru: "воспринимать",
+  uk: "сприймати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "How do you perceive this change?",
+      ru: "Как ты воспринимаешь это изменение?",
+      uk: "Як ти сприймаєш цю зміну?"
+    }
+  ]
+},
+{
+  id: 754,
+  word: "to pass on",
+  ru: "передавать дальше",
+  uk: "передавати далі",
+  level: "B1",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please pass on this information to your team.",
+      ru: "Пожалуйста, передай эту информацию своей команде.",
+      uk: "Будь ласка, передай цю інформацію своїй команді."
+    }
+  ]
+},
+{
+  id: 755,
+  word: "to continue to do something",
+  ru: "продолжать делать",
+  uk: "продовжувати робити",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We will continue to do our work as usual.",
+      ru: "Мы будем и дальше делать свою работу как обычно.",
+      uk: "Ми й надалі будемо робити свою роботу, як зазвичай."
+    }
+  ]
+},
+{
+  id: 756,
+  word: "to forward",
+  ru: "пересылать",
+  uk: "пересилати",
+  level: "B1",
+  topics: ["it", "communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "I will forward you the email.",
+      ru: "Я перешлю тебе письмо.",
+      uk: "Я перешлю тобі лист."
+    }
+  ]
+},
+{
+  id: 757,
+  word: "to further develop",
+  ru: "дальше развивать",
+  uk: "далі розвивати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company wants to further develop its products.",
+      ru: "Компания хочет дальше развивать свои продукты.",
+      uk: "Компанія хоче далі розвивати свої продукти."
+    }
+  ]
+},
+{
+  id: 758,
+  word: "to contradict",
+  ru: "противоречить",
+  uk: "суперечити",
+  level: "B2",
+  topics: ["discussion"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This clearly contradicts our goals.",
+      ru: "Это явно противоречит нашим целям.",
+      uk: "Це явно суперечить нашим цілям."
+    }
+  ]
+},
+{
+  id: 759,
+  word: "to devote oneself to",
+  ru: "посвящать себя",
+  uk: "присвячувати себе",
+  level: "B2",
+  topics: ["life"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He devotes himself completely to his family.",
+      ru: "Он полностью посвящает себя своей семье.",
+      uk: "Він повністю присвячує себе своїй родині."
+    }
+  ]
+},
+{
+  id: 760,
+  word: "to restore",
+  ru: "восстанавливать",
+  uk: "відновлювати",
+  level: "B2",
+  topics: ["it", "health"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We were able to restore the data successfully.",
+      ru: "Нам удалось успешно восстановить данные.",
+      uk: "Нам вдалося успішно відновити дані."
+    }
+  ]
+},
+{
+  id: 761,
+  word: "to recur",
+  ru: "возвращаться",
+  uk: "повертатися",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The same problems keep recurring every year.",
+      ru: "Одни и те же проблемы продолжают возвращаться каждый год.",
+      uk: "Ті самі проблеми знову й знову повертаються щороку."
+    }
+  ]
+},
+{
+  id: 762,
+  word: "to take effect",
+  ru: "действовать",
+  uk: "діяти",
+  level: "B1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The medicine takes effect very quickly.",
+      ru: "Лекарство очень быстро действует.",
+      uk: "Ліки дуже швидко діють."
+    }
+  ]
+},
+{
+  id: 763,
+  word: "to be effective",
+  ru: "быть эффективным",
+  uk: "бути дієвим",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The new measure is very effective.",
+      ru: "Новая мера очень эффективна.",
+      uk: "Новий захід є дуже дієвим."
+    }
+  ]
+},
+{
+  id: 764,
+  word: "to have an impact",
+  ru: "сказываться",
+  uk: "позначаться",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The decision has a strong impact on many people.",
+      ru: "Решение сильно сказывается на многих людях.",
+      uk: "Рішення сильно позначається на багатьох людях."
+    }
+  ]
+},
+{
+  id: 765,
+  word: "to draw on",
+  ru: "прибегать к",
+  uk: "вдаваться до",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "In difficult times, we draw on our experience.",
+      ru: "В трудные времена мы прибегаем к нашему опыту.",
+      uk: "У складні часи ми вдаємося до нашого досвіду."
+    }
+  ]
+},
+{
+  id: 766,
+  word: "to be connected",
+  ru: "быть связанным",
+  uk: "бути пов'язаним",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The two problems are closely connected.",
+      ru: "Эти две проблемы тесно связаны.",
+      uk: "Ці дві проблеми тісно пов’язані."
+    }
+  ]
+},
+{
+  id: 767,
+  word: "to put together",
+  ru: "составлять",
+  uk: "складати разом",
+  level: "B1",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "She put together a short presentation.",
+      ru: "Она составила короткую презентацию.",
+      uk: "Вона склала коротку презентацію."
+    }
+  ]
+},
+{
+  id: 768,
+  word: "to allocate",
+  ru: "распределять",
+  uk: "розподіляти",
+  level: "C1",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The funds were allocated to different projects.",
+      ru: "Средства были распределены между разными проектами.",
+      uk: "Кошти були розподілені між різними проєктами."
+    }
+  ]
+},
+{
+  id: 769,
+  word: "to apply",
+  ru: "соответствовать",
+  uk: "відповідати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This statement applies to many people.",
+      ru: "Это утверждение верно для многих людей.",
+      uk: "Це твердження відповідає багатьом людям."
+    }
+  ]
+},
+{
+  id: 770,
+  word: "to turn to",
+  ru: "обращаться к",
+  uk: "звертатися до",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "After this project, he turned to new topics.",
+      ru: "После этого проекта он обратился к новым темам.",
+      uk: "Після цього проєкту він звернувся до нових тем."
+    }
+  ]
+},
+{
+  id: 771,
+  word: "to be inevitable",
+  ru: "быть неизбежным",
+  uk: "бути неминучим",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This is not a necessary or inevitable consequence.",
+      ru: "Это не обязательно неизбежное последствие.",
+      uk: "Це не обов’язково неминучий наслідок."
+    }
+  ]
+},
+{
+  id: 772,
+  word: "to distinguish",
+  ru: "отграничивать",
+  uk: "відмежовувати",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "It is difficult to distinguish these concepts clearly.",
+      ru: "Трудно чётко отграничить эти понятия.",
+      uk: "Важко чітко відмежувати ці поняття."
+    }
+  ]
+},
+{
+  id: 773,
+  word: "to clarify",
+  ru: "прояснять",
+  uk: "уточнювати",
+  level: "B2",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We still need to clarify the details.",
+      ru: "Нам ещё нужно прояснить детали.",
+      uk: "Нам ще потрібно уточнити деталі."
+    }
+  ]
+},
+{
+  id: 774,
+  word: "to reject",
+  ru: "отклонять",
+  uk: "відхиляти",
+  level: "B1",
+  topics: ["discussion"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He rejected the offer.",
+      ru: "Он отклонил предложение.",
+      uk: "Він відхилив пропозицію."
+    }
+  ]
+},
+{
+  id: 775,
+  word: "to mitigate",
+  ru: "смягчать",
+  uk: "пом'якшувати",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The measures are meant to mitigate the consequences.",
+      ru: "Меры призваны смягчить последствия.",
+      uk: "Заходи покликані пом’якшити наслідки."
+    }
+  ]
+},
+{
+  id: 776,
+  word: "to refrain from",
+  ru: "воздерживаться от",
+  uk: "відмовлятися від",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "For now, they decided to refrain from a strike.",
+      ru: "Пока они решили воздержаться от забастовки.",
+      uk: "Поки що вони вирішили відмовитися від страйку."
+    }
+  ]
+},
+{
+  id: 777,
+  word: "to coordinate",
+  ru: "согласовывать",
+  uk: "узгоджувати",
+  level: "B2",
+  topics: ["work", "politics"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We have to coordinate our plans better.",
+      ru: "Нам нужно лучше согласовать наши планы.",
+      uk: "Нам потрібно краще узгодити наші плани."
+    }
+  ]
+},
+{
+  id: 778,
+  word: "to process",
+  ru: "осуществлять",
+  uk: "здійснювати",
+  level: "C1",
+  topics: ["business"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Payments are processed via an online system.",
+      ru: "Платежи осуществляются через онлайн-систему.",
+      uk: "Платежі здійснюються через онлайн-систему."
+    }
+  ]
+},
+{
+  id: 779,
+  word: "to add up",
+  ru: "складывать",
+  uk: "додавати",
+  level: "B1",
+  topics: ["math"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You just need to add up the numbers.",
+      ru: "Тебе нужно просто сложить числа.",
+      uk: "Тобі потрібно просто додати числа."
+    }
+  ]
+},
+{
+  id: 780,
+  word: "to instill",
+  ru: "прививать",
+  uk: "прищеплювати",
+  level: "C1",
+  topics: ["education"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Parents try to instill good manners in their children.",
+      ru: "Родители стараются привить детям хорошие манеры.",
+      uk: "Батьки намагаються прищепити дітям гарні манери."
+    }
+  ]
+},
+{
+  id: 781,
+  word: "to accrue",
+  ru: "накапливаться",
+  uk: "накопичуватися",
+  level: "C1",
+  topics: ["formal"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "High costs accrue over time.",
+      ru: "Со временем накапливаются большие расходы.",
+      uk: "З часом накопичуються великі витрати."
+    }
+  ]
+},
+{
+  id: 782,
+  word: "to touch",
+  ru: "трогать",
+  uk: "доторкатися",
+  level: "B1",
+  topics: ["daily"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Please do not touch the painting.",
+      ru: "Пожалуйста, не трогайте картину.",
+      uk: "Будь ласка, не торкайтеся картини."
+    }
+  ]
+},
+{
+  id: 783,
+  word: "to be appropriate",
+  ru: "быть уместным",
+  uk: "бути доречним",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Her reaction was appropriate in this situation.",
+      ru: "Её реакция в этой ситуации была уместной.",
+      uk: "Її реакція в цій ситуації була доречною."
+    }
+  ]
+},
+{
+  id: 784,
+  word: "to raise",
+  ru: "поднимать",
+  uk: "піднімати",
+  level: "B2",
+  topics: ["economy"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The bank has raised interest rates.",
+      ru: "Банк повысил процентные ставки.",
+      uk: "Банк підвищив відсоткові ставки."
+    }
+  ]
+},
+{
+  id: 785,
+  word: "to remark",
+  ru: "замечать",
+  uk: "помічати",
+  level: "B2",
+  topics: ["communication"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "May I remark on that briefly?",
+      ru: "Можно я кратко замечу по этому поводу?",
+      uk: "Чи можу я коротко щось до цього зауважити?"
+    }
+  ]
+},
+{
+  id: 786,
+  word: "to cause",
+  ru: "причинять",
+  uk: "завдавати",
+  level: "B2",
+  topics: ["food", "abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The storm caused serious damage.",
+      ru: "Буря причинила серьёзный ущерб.",
+      uk: "Буря завдала серйозної шкоди."
+    }
+  ]
+},
+{
+  id: 787,
+  word: "to paint",
+  ru: "красить",
+  uk: "фарбувати",
+  level: "B2",
+  topics: ["home", "abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Tomorrow we will paint the walls in the living room.",
+      ru: "Завтра мы будем красить стены в гостиной.",
+      uk: "Завтра ми фарбуватимемо стіни у вітальні."
+    }
+  ]
+},
+{
+  id: 788,
+  word: "to target",
+  ru: "нацеливаться",
+  uk: "націлюватися",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company targets new markets.",
+      ru: "Компания нацеливается на новые рынки.",
+      uk: "Компанія націлюється на нові ринки."
+    }
+  ]
+},
+{
+  id: 789,
+  word: "to tap",
+  ru: "подключаться",
+  uk: "підключатися",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company is tapping new sources of funding.",
+      ru: "Компания подключается к новым источникам финансирования.",
+      uk: "Компанія підключається до нових джерел фінансування."
+    }
+  ]
+},
+{
+  id: 790,
+  word: "to work through",
+  ru: "перерабатывать",
+  uk: "переробляти",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The past needs to be worked through critically.",
+      ru: "Прошлое нужно критически проработать.",
+      uk: "Минуле потрібно критично опрацювати."
+    }
+  ]
+},
+{
+  id: 791,
+  word: "to breathe a sigh of relief",
+  ru: "вздохнуть с облегчением",
+  uk: "полегшено зітхнути",
+  level: "B2",
+  topics: ["feelings"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "After the good news, everyone breathed a sigh of relief.",
+      ru: "После хорошей новости все вздохнули с облегчением.",
+      uk: "Після доброї новини всі полегшено зітхнули."
+    }
+  ]
+},
+{
+  id: 792,
+  word: "to boost",
+  ru: "улучшать",
+  uk: "поліпшувати",
+  level: "B2",
+  topics: ["money", "work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "He boosts his income with side jobs.",
+      ru: "Он улучшает свой доход подработками.",
+      uk: "Він підробітками покращує свій дохід."
+    }
+  ]
+},
+{
+  id: 793,
+  word: "to cover costs",
+  ru: "возмещать",
+  uk: "відшкодовувати",
+  level: "C1",
+  topics: ["money"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The insurance covers the costs of the damage.",
+      ru: "Страховая компания возмещает стоимость ущерба.",
+      uk: "Страхова компанія відшкодовує вартість збитків."
+    }
+  ]
+},
+{
+  id: 794,
+  word: "to demonstrate",
+  ru: "показывать",
+  uk: "показувати",
+  level: "B2",
+  topics: ["discussion"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The study clearly demonstrates the risks.",
+      ru: "Исследование ясно показывает риски.",
+      uk: "Дослідження чітко показує ризики."
+    }
+  ]
+},
+{
+  id: 795,
+  word: "to expand",
+  ru: "расширять",
+  uk: "розширювати",
+  level: "B2",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "We want to expand our activities abroad.",
+      ru: "Мы хотим расширить свою деятельность за рубежом.",
+      uk: "Ми хочемо розширити свою діяльність за кордон."
+    }
+  ]
+},
+{
+  id: 796,
+  word: "to undermine",
+  ru: "обезвреживать",
+  uk: "нівелювати",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "This rule almost completely undermines the protection.",
+      ru: "Это правило почти полностью сводит защиту на нет.",
+      uk: "Це правило майже повністю нівелює захист."
+    }
+  ]
+},
+{
+  id: 797,
+  word: "to host",
+  ru: "организовывать",
+  uk: "організовувати",
+  level: "B2",
+  topics: ["work"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "The company is hosting a large conference.",
+      ru: "Компания организует большую конференцию.",
+      uk: "Компанія організовує велику конференцію."
+    }
+  ]
+},
+{
+  id: 798,
+  word: "to balance",
+  ru: "уравновешивать",
+  uk: "врівноважувати",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "You have to balance the different interests carefully.",
+      ru: "Нужно тщательно уравновесить разные интересы.",
+      uk: "Потрібно ретельно врівноважити різні інтереси."
+    }
+  ]
+},
+{
+  id: 799,
+  word: "to support",
+  ru: "поддерживать",
+  uk: "підтримувати",
+  level: "C1",
+  topics: ["discussion"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "Many experts support the reform.",
+      ru: "Многие эксперты поддерживают реформу.",
+      uk: "Багато експертів підтримують реформу."
+    }
+  ]
+},
+{
+  id: 800,
+  word: "to maintain",
+  ru: "сохранять",
+  uk: "зберігати",
+  level: "C1",
+  topics: ["abstract"],
+  enSynonyms: [],
+  ruSynonyms: [],
+  ukSynonyms: [],
+  enAntonyms: [],
+  ruAntonyms: [],
+  ukAntonyms: [],
+  collocations: [],
+  examples: [
+    {
+      L2: "For now, we will maintain the existing rules.",
+      ru: "Пока мы будем сохранять существующие правила.",
+      uk: "Поки що ми зберігатимемо чинні правила."
+    }
+  ]
+}
 ];
-
 window.decks.en_adverbs = [
   {
     "id": 1,
@@ -36169,7 +56870,6 @@ window.decks.en_adverbs = [
     ]
   }
 ];
-
 window.decks.en_pronouns = [
   {
     "id": 1,
@@ -37381,7 +58081,6 @@ window.decks.en_pronouns = [
     ]
   }
 ];
-
 window.decks.en_prepositions = [
   {
     "id": 1,
@@ -39780,7 +60479,6 @@ window.decks.en_prepositions = [
     ]
   }
 ];
-
 window.decks.en_conjunctions = [
   {
     "id": 1,
@@ -40542,7 +61240,6 @@ window.decks.en_conjunctions = [
     ]
   }
 ];
-
 window.decks.en_particles = [
   {
     "id": 1,
@@ -40895,7 +61592,6 @@ window.decks.en_particles = [
     ]
   }
 ];
-
 window.decks.en_numbers = [
   {
     "id": 1,
