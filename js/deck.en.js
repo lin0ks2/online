@@ -30275,9 +30275,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He was absent from work yesterday.",
-        "ru": "Вчера он отсутствовал на работе.",
-        "uk": "Учора він був відсутній на роботі."
+        "L2": "He is absent.",
+        "ru": "Он отсутствующий.",
+        "uk": "Він відсутній."
       }
     ]
   },
@@ -30299,9 +30299,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He leads an active lifestyle.",
-        "ru": "Он ведёт активный образ жизни.",
-        "uk": "Він веде активний спосіб життя."
+        "L2": "He is active.",
+        "ru": "Он активный.",
+        "uk": "Він активний."
       }
     ]
   },
@@ -30322,9 +30322,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "My grandfather is pretty old.",
-        "ru": "Мой дедушка уже очень старый.",
-        "uk": "Мій дідусь уже дуже старий."
+        "L2": "He is old.",
+        "ru": "Он старый.",
+        "uk": "Він старий."
       }
     ]
   },
@@ -30345,9 +30345,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His jacket looks old-fashioned.",
-        "ru": "Его пиджак выглядит старомодным.",
-        "uk": "Його піджак виглядає старомодним."
+        "L2": "He is old-fashioned.",
+        "ru": "Он старомодный.",
+        "uk": "Він застарілий."
       }
     ]
   },
@@ -30368,9 +30368,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It was a pleasant evening.",
-        "ru": "Это был приятный вечер.",
-        "uk": "Це був приємний вечір."
+        "L2": "He is pleasant.",
+        "ru": "Он приятный.",
+        "uk": "Він приємний."
       }
     ]
   },
@@ -30392,9 +30392,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Everyone important was present at the meeting.",
-        "ru": "Все важные люди были присутствующими на встрече.",
-        "uk": "Усі важливі люди були присутніми на зустрічі."
+        "L2": "He is present.",
+        "ru": "Он присутствующий.",
+        "uk": "Він присутній."
       }
     ]
   },
@@ -30416,9 +30416,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They are poor.",
-        "ru": "Они бедные.",
-        "uk": "Вони бідні."
+        "L2": "He is poor.",
+        "ru": "Он бедный.",
+        "uk": "Він бідний."
       }
     ]
   },
@@ -30439,9 +30439,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The service here is excellent.",
-        "ru": "Сервис здесь отличный.",
-        "uk": "Сервіс тут відмінний."
+        "L2": "He is excellent.",
+        "ru": "Он отличный.",
+        "uk": "Він відмінний."
       }
     ]
   },
@@ -30462,9 +30462,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty well-known.",
-        "ru": "Он очень известный.",
-        "uk": "Він дуже відомий."
+        "L2": "He is well-known.",
+        "ru": "Он известный.",
+        "uk": "Він відомий."
       }
     ]
   },
@@ -30486,9 +30486,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This singer is extremely popular.",
-        "ru": "Этот певец очень популярен.",
-        "uk": "Цей співак дуже популярний."
+        "L2": "He is popular.",
+        "ru": "Он популярный.",
+        "uk": "Він популярний."
       }
     ]
   },
@@ -30510,9 +30510,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This chair is rather comfortable.",
-        "ru": "Этот стул очень удобный.",
-        "uk": "Цей стілець дуже зручний."
+        "L2": "He is comfortable.",
+        "ru": "Он удобный.",
+        "uk": "Він зручний."
       }
     ]
   },
@@ -30534,9 +30534,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is ready for the exam.",
-        "ru": "Она готова к экзамену.",
-        "uk": "Вона готова до іспиту."
+        "L2": "He is ready.",
+        "ru": "Он готовый.",
+        "uk": "Він готовий."
       }
     ]
   },
@@ -30557,9 +30557,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The city is famous for its museums.",
-        "ru": "Город знаменит своими музеями.",
-        "uk": "Місто відоме своїми музеями."
+        "L2": "He is famous.",
+        "ru": "Он знаменитый.",
+        "uk": "Він відомий."
       }
     ]
   },
@@ -30580,9 +30580,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is always busy at work.",
-        "ru": "Он всегда занят на работе.",
-        "uk": "Він завжди зайнятий на роботі."
+        "L2": "He is busy.",
+        "ru": "Он занятый.",
+        "uk": "Він зайнятий."
       }
     ]
   },
@@ -30604,9 +30604,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The seat is already occupied.",
-        "ru": "Место уже занято.",
-        "uk": "Місце вже зайняте."
+        "L2": "He is occupied.",
+        "ru": "Он занятый.",
+        "uk": "Він зайнятий."
       }
     ]
   },
@@ -30628,9 +30628,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This hotel is extremely cheap.",
-        "ru": "Этот отель очень дешёвый.",
-        "uk": "Цей готель дуже дешевий."
+        "L2": "He is cheap.",
+        "ru": "Он дешёвый.",
+        "uk": "Він дешевий."
       }
     ]
   },
@@ -30652,9 +30652,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is rather bitter.",
-        "ru": "Суп получился очень горький.",
-        "uk": "Суп вийшов дуже гіркий."
+        "L2": "He is bitter.",
+        "ru": "Он горький.",
+        "uk": "Він гіркий."
       }
     ]
   },
@@ -30676,9 +30676,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His answer was stupid.",
-        "ru": "Его ответ был очень тупой.",
-        "uk": "Його відповідь була дуже дурнуватий."
+        "L2": "He is stupid.",
+        "ru": "Он тупой.",
+        "uk": "Він дурнуватий."
       }
     ]
   },
@@ -30699,9 +30699,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The road here is really wide.",
-        "ru": "Дорога здесь очень широкая.",
-        "uk": "Дорога тут дуже широка."
+        "L2": "He is wide.",
+        "ru": "Он широкий.",
+        "uk": "Він широкий."
       }
     ]
   },
@@ -30723,9 +30723,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She was angry about the delay.",
-        "ru": "Она злилась из‑за задержки.",
-        "uk": "Вона злилася через затримку."
+        "L2": "He is angry.",
+        "ru": "Он злой.",
+        "uk": "Він злий."
       }
     ]
   },
@@ -30747,9 +30747,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His desk is always chaotic.",
-        "ru": "Его стол всегда в хаотичном порядке.",
-        "uk": "Його стіл завжди в хаотичному стані."
+        "L2": "He is chaotic.",
+        "ru": "Он хаотичный.",
+        "uk": "Він хаотичний."
       }
     ]
   },
@@ -30771,9 +30771,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The teacher gave a clear explanation.",
-        "ru": "Учитель дал чёткое объяснение.",
-        "uk": "Учитель дав чітке пояснення."
+        "L2": "He is clear.",
+        "ru": "Он чёткий.",
+        "uk": "Він чіткий."
       }
     ]
   },
@@ -30794,9 +30794,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The book is rather thick.",
-        "ru": "Книга очень толстая.",
-        "uk": "Книга дуже товста."
+        "L2": "He is thick.",
+        "ru": "Он толстый.",
+        "uk": "Він товстий."
       }
     ]
   },
@@ -30817,9 +30817,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This is an urgent email.",
-        "ru": "Это срочное письмо.",
-        "uk": "Це терміновий лист."
+        "L2": "He is urgent.",
+        "ru": "Он срочный.",
+        "uk": "Він терміновий."
       }
     ]
   },
@@ -30840,9 +30840,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really stupid.",
-        "ru": "Он очень глупый.",
-        "uk": "Він дуже дурний."
+        "L2": "He is stupid.",
+        "ru": "Он глупый.",
+        "uk": "Він дурний."
       }
     ]
   },
@@ -30863,9 +30863,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is too dark.",
-        "ru": "Комната слишком тёмная.",
-        "uk": "Кімната занадто темна."
+        "L2": "He is dark.",
+        "ru": "Он тёмный.",
+        "uk": "Він темний."
       }
     ]
   },
@@ -30886,9 +30886,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His results are only average.",
-        "ru": "Его результаты лишь средние.",
-        "uk": "Його результати лише середні."
+        "L2": "He is average.",
+        "ru": "Он средний.",
+        "uk": "Він середній."
       }
     ]
   },
@@ -30910,9 +30910,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is extremely thirsty after the run.",
-        "ru": "После пробежки он очень хочет пить.",
-        "uk": "Після пробіжки він дуже хоче пити."
+        "L2": "He is thirsty.",
+        "ru": "Он жаждущий.",
+        "uk": "Він спраглий."
       }
     ]
   },
@@ -30933,9 +30933,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather thin.",
-        "ru": "Он очень тонкий.",
-        "uk": "Він дуже тонкий."
+        "L2": "He is thin.",
+        "ru": "Он тонкий.",
+        "uk": "Він тонкий."
       }
     ]
   },
@@ -30956,9 +30956,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is jealous of his brother.",
-        "ru": "Он ревнует своего брата.",
-        "uk": "Він заздрить своєму братові."
+        "L2": "He is jealous.",
+        "ru": "Он ревнивый.",
+        "uk": "Він ревнивий."
       }
     ]
   },
@@ -30980,9 +30980,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite simple.",
-        "ru": "Этот курс довольно простой.",
-        "uk": "Цей курс досить простий."
+        "L2": "He is simple.",
+        "ru": "Он простой.",
+        "uk": "Він простий."
       }
     ]
   },
@@ -31004,9 +31004,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is quite sensitive today.",
-        "ru": "Сегодня он очень чувствительный.",
-        "uk": "Сьогодні він дуже чутливий."
+        "L2": "He is sensitive.",
+        "ru": "Он чувствительный.",
+        "uk": "Він чутливий."
       }
     ]
   },
@@ -31027,9 +31027,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty tight.",
-        "ru": "Он очень узкий.",
-        "uk": "Він дуже вузький."
+        "L2": "He is tight.",
+        "ru": "Он узкий.",
+        "uk": "Він вузький."
       }
     ]
   },
@@ -31051,9 +31051,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is extremely serious today.",
-        "ru": "Сегодня он очень серьёзный.",
-        "uk": "Сьогодні він дуже серйозний."
+        "L2": "He is serious.",
+        "ru": "Он серьёзный.",
+        "uk": "Він серйозний."
       }
     ]
   },
@@ -31075,9 +31075,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Your answer is wrong.",
-        "ru": "Твой ответ неверный.",
-        "uk": "Твоя відповідь неправильна."
+        "L2": "He is wrong.",
+        "ru": "Он неправильный.",
+        "uk": "Він неправильний."
       }
     ]
   },
@@ -31121,9 +31121,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really elegant.",
-        "ru": "Он очень изящный.",
-        "uk": "Він дуже витончений."
+        "L2": "He is elegant.",
+        "ru": "Он изящный.",
+        "uk": "Він витончений."
       }
     ]
   },
@@ -31144,9 +31144,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This area is quite distant from the city.",
-        "ru": "Этот район довольно далёкий от города.",
-        "uk": "Цей район доволі далекий від міста."
+        "L2": "He is distant.",
+        "ru": "Он далёкий.",
+        "uk": "Він далекий."
       }
     ]
   },
@@ -31168,9 +31168,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The air is pretty humid today.",
-        "ru": "Сегодня воздух очень влажный.",
-        "uk": "Сьогодні повітря дуже вологе."
+        "L2": "He is humid.",
+        "ru": "Он влажный.",
+        "uk": "Він вологий."
       }
     ]
   },
@@ -31191,9 +31191,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is fit because he exercises every day.",
-        "ru": "Он в форме, потому что занимается каждый день.",
-        "uk": "Він у формі, бо займається щодня."
+        "L2": "He is fit.",
+        "ru": "Он в форме.",
+        "uk": "Він у гарній формі."
       }
     ]
   },
@@ -31214,9 +31214,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather flat.",
-        "ru": "Он очень плоский.",
-        "uk": "Він дуже плаский."
+        "L2": "He is flat.",
+        "ru": "Он плоский.",
+        "uk": "Він плаский."
       }
     ]
   },
@@ -31238,9 +31238,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is hard-working.",
-        "ru": "Она очень трудолюбивая.",
-        "uk": "Вона дуже працьовита."
+        "L2": "He is hard-working.",
+        "ru": "Он прилежный.",
+        "uk": "Він працьовитий."
       }
     ]
   },
@@ -31262,9 +31262,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is free this evening.",
-        "ru": "Сегодня вечером он свободен.",
-        "uk": "Сьогодні ввечері він вільний."
+        "L2": "He is free.",
+        "ru": "Он свободный.",
+        "uk": "Він вільний."
       }
     ]
   },
@@ -31286,9 +31286,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The work here is completely voluntary.",
-        "ru": "Работа здесь полностью добровольная.",
-        "uk": "Робота тут повністю добровільна."
+        "L2": "He is voluntary.",
+        "ru": "Он добровольный.",
+        "uk": "Він добровільний."
       }
     ]
   },
@@ -31310,9 +31310,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This city feels foreign to me.",
-        "ru": "Этот город кажется мне чужим.",
-        "uk": "Це місто здається мені чужим."
+        "L2": "He is foreign.",
+        "ru": "Он чужой.",
+        "uk": "Він чужий."
       }
     ]
   },
@@ -31333,9 +31333,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The staff here are extremely friendly.",
-        "ru": "Персонал здесь очень дружелюбный.",
-        "uk": "Персонал тут дуже привітний."
+        "L2": "He is friendly.",
+        "ru": "Он дружелюбный.",
+        "uk": "Він дружній."
       }
     ]
   },
@@ -31356,9 +31356,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is rather fresh.",
-        "ru": "Суп получился очень свежий.",
-        "uk": "Суп вийшов дуже свіжий."
+        "L2": "He is fresh.",
+        "ru": "Он свежий.",
+        "uk": "Він свіжий."
       }
     ]
   },
@@ -31379,9 +31379,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He always gets up early.",
-        "ru": "Он всегда встаёт рано.",
-        "uk": "Він завжди встає рано."
+        "L2": "He is early.",
+        "ru": "Он ранний.",
+        "uk": "Він ранній."
       }
     ]
   },
@@ -31403,9 +31403,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is capable of solving this problem.",
-        "ru": "Он способен решить эту проблему.",
-        "uk": "Він здатний розвʼязати цю проблему."
+        "L2": "He is capable.",
+        "ru": "Он способный.",
+        "uk": "Він здатний."
       }
     ]
   },
@@ -31427,9 +31427,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This road is dangerous at night.",
-        "ru": "Эта дорога опасна ночью.",
-        "uk": "Ця дорога небезпечна вночі."
+        "L2": "He is dangerous.",
+        "ru": "Он опасный.",
+        "uk": "Він небезпечний."
       }
     ]
   },
@@ -31451,9 +31451,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They live in a shared apartment.",
-        "ru": "Они живут в общей квартире.",
-        "uk": "Вони живуть у спільній квартирі."
+        "L2": "He is shared.",
+        "ru": "Он общий.",
+        "uk": "Він спільний."
       }
     ]
   },
@@ -31475,9 +31475,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "We need the exact number.",
-        "ru": "Нам нужно точное число.",
-        "uk": "Нам потрібне точне число."
+        "L2": "He is exact.",
+        "ru": "Он точный.",
+        "uk": "Він точний."
       }
     ]
   },
@@ -31498,9 +31498,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The shop is closed today.",
-        "ru": "Магазин сегодня закрыт.",
-        "uk": "Магазин сьогодні зачинений."
+        "L2": "He is closed.",
+        "ru": "Он закрытый.",
+        "uk": "Він закритий."
       }
     ]
   },
@@ -31521,9 +31521,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The food here is healthy.",
-        "ru": "Еда здесь очень полезная для здоровья.",
-        "uk": "Їжа тут дуже корисна для здоров'я."
+        "L2": "He is healthy.",
+        "ru": "Он здоровый.",
+        "uk": "Він здоровий."
       }
     ]
   },
@@ -31544,9 +31544,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He came home at the usual time.",
-        "ru": "Он пришёл домой в привычное время.",
-        "uk": "Він прийшов додому у звичний час."
+        "L2": "He is usual.",
+        "ru": "Он обычный.",
+        "uk": "Він звичайний."
       }
     ]
   },
@@ -31567,9 +31567,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The surface is smooth.",
-        "ru": "Поверхность гладкая.",
-        "uk": "Поверхня гладка."
+        "L2": "He is smooth.",
+        "ru": "Он гладкий.",
+        "uk": "Він гладкий."
       }
     ]
   },
@@ -31590,9 +31590,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty same.",
-        "ru": "Он очень одинаковый.",
-        "uk": "Він дуже однаковий."
+        "L2": "He is same.",
+        "ru": "Он одинаковый.",
+        "uk": "Він однаковий."
       }
     ]
   },
@@ -31614,9 +31614,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They are happy together.",
-        "ru": "Они счастливы вместе.",
-        "uk": "Вони щасливі разом."
+        "L2": "He is happy.",
+        "ru": "Он счастливый.",
+        "uk": "Він щасливий."
       }
     ]
   },
@@ -31638,9 +31638,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His comment was rather rude.",
-        "ru": "Его комментарий был очень грубым.",
-        "uk": "Його коментар був дуже грубим."
+        "L2": "He is rude.",
+        "ru": "Он грубый.",
+        "uk": "Він грубий."
       }
     ]
   },
@@ -31661,9 +31661,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The house is big.",
-        "ru": "Дом большой.",
-        "uk": "Будинок великий."
+        "L2": "He is big.",
+        "ru": "Он большой.",
+        "uk": "Він великий."
       }
     ]
   },
@@ -31684,9 +31684,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really good.",
-        "ru": "Он очень хороший.",
-        "uk": "Він дуже добрий."
+        "L2": "He is good.",
+        "ru": "Он хороший.",
+        "uk": "Він добрий."
       }
     ]
   },
@@ -31707,9 +31707,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The medicine is harmless for adults.",
-        "ru": "Это лекарство безвредно для взрослых.",
-        "uk": "Ці ліки нешкідливі для дорослих."
+        "L2": "He is harmless.",
+        "ru": "Он безвредный.",
+        "uk": "Він нешкідливий."
       }
     ]
   },
@@ -31731,9 +31731,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is pretty hard.",
-        "ru": "Суп получился очень твёрдый.",
-        "uk": "Суп вийшов дуже твердий."
+        "L2": "He is hard.",
+        "ru": "Он твёрдый.",
+        "uk": "Він твердий."
       }
     ]
   },
@@ -31755,9 +31755,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is extremely hot today.",
-        "ru": "Сегодня очень жарко.",
-        "uk": "Сьогодні дуже спекотно."
+        "L2": "He is hot.",
+        "ru": "Он горячий.",
+        "uk": "Він гарячий."
       }
     ]
   },
@@ -31779,9 +31779,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Life in this city is hectic.",
-        "ru": "Жизнь в этом городе суетливая.",
-        "uk": "Життя в цьому місті метушливе."
+        "L2": "He is hectic.",
+        "ru": "Он суетливый.",
+        "uk": "Він метушливий."
       }
     ]
   },
@@ -31803,9 +31803,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is bright.",
-        "ru": "Комната светлая.",
-        "uk": "Кімната світла."
+        "L2": "He is bright.",
+        "ru": "Он светлый.",
+        "uk": "Він світлий."
       }
     ]
   },
@@ -31826,9 +31826,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really high.",
-        "ru": "Он очень высокий.",
-        "uk": "Він дуже високий."
+        "L2": "He is high.",
+        "ru": "Он высокий.",
+        "uk": "Він високий."
       }
     ]
   },
@@ -31850,9 +31850,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They are hungry after a long day.",
-        "ru": "После долгого дня они голодные.",
-        "uk": "Після довгого дня вони голодні."
+        "L2": "He is hungry.",
+        "ru": "Он голодный.",
+        "uk": "Він голодний."
       }
     ]
   },
@@ -31873,9 +31873,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty ugly.",
-        "ru": "Он очень уродливый.",
-        "uk": "Він дуже потворний."
+        "L2": "He is ugly.",
+        "ru": "Он уродливый.",
+        "uk": "Він потворний."
       }
     ]
   },
@@ -31896,9 +31896,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This is a frequent question from customers.",
-        "ru": "Это частый вопрос от клиентов.",
-        "uk": "Це часте запитання від клієнтів."
+        "L2": "He is frequent.",
+        "ru": "Он частый.",
+        "uk": "Він частий."
       }
     ]
   },
@@ -31919,9 +31919,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is always polite to strangers.",
-        "ru": "Она всегда вежлива с незнакомцами.",
-        "uk": "Вона завжди ввічлива з незнайомцями."
+        "L2": "He is polite.",
+        "ru": "Он вежливый.",
+        "uk": "Він ввічливий."
       }
     ]
   },
@@ -31942,9 +31942,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is illegal to do that here.",
-        "ru": "Делать это здесь незаконно.",
-        "uk": "Робити це тут незаконно."
+        "L2": "He is illegal.",
+        "ru": "Он незаконный.",
+        "uk": "Він незаконний."
       }
     ]
   },
@@ -31966,9 +31966,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite inner.",
-        "ru": "Эта ситуация довольно внутренний.",
-        "uk": "Ця ситуація досить внутрішній."
+        "L2": "He is inner.",
+        "ru": "Он внутренний.",
+        "uk": "Він внутрішній."
       }
     ]
   },
@@ -31990,9 +31990,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He gave us some unofficial information.",
-        "ru": "Он дал нам неофициальную информацию.",
-        "uk": "Він дав нам неофіційну інформацію."
+        "L2": "He is unofficial.",
+        "ru": "Он неофициальный.",
+        "uk": "Він неофіційний."
       }
     ]
   },
@@ -32013,9 +32013,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty intelligent.",
-        "ru": "Он очень умный.",
-        "uk": "Він дуже розумний."
+        "L2": "He is intelligent.",
+        "ru": "Он умный.",
+        "uk": "Він розумний."
       }
     ]
   },
@@ -32037,9 +32037,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite interesting.",
-        "ru": "Этот курс довольно интересный.",
-        "uk": "Цей курс досить цікавий."
+        "L2": "He is interesting.",
+        "ru": "Он интересный.",
+        "uk": "Він цікавий."
       }
     ]
   },
@@ -32061,9 +32061,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She works for an international company.",
-        "ru": "Она работает в международной компании.",
-        "uk": "Вона працює в міжнародній компанії."
+        "L2": "He is international.",
+        "ru": "Он международный.",
+        "uk": "Він міжнародний."
       }
     ]
   },
@@ -32085,9 +32085,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is still young.",
-        "ru": "Она всё ещё очень молодая.",
-        "uk": "Вона все ще дуже молода."
+        "L2": "He is young.",
+        "ru": "Он молодой.",
+        "uk": "Він молодий."
       }
     ]
   },
@@ -32109,9 +32109,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is really cold today.",
-        "ru": "Сегодня очень холодно.",
-        "uk": "Сьогодні дуже холодно."
+        "L2": "He is cold.",
+        "ru": "Он холодный.",
+        "uk": "Він холодний."
       }
     ]
   },
@@ -32133,9 +32133,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The teacher gave a clear explanation.",
-        "ru": "Учитель дал чёткое объяснение.",
-        "uk": "Учитель дав чітке пояснення."
+        "L2": "He is clear.",
+        "ru": "Он ясный.",
+        "uk": "Він ясний."
       }
     ]
   },
@@ -32156,9 +32156,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty small.",
-        "ru": "Он очень маленький.",
-        "uk": "Він дуже малий."
+        "L2": "He is small.",
+        "ru": "Он маленький.",
+        "uk": "Він малий."
       }
     ]
   },
@@ -32202,9 +32202,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather strange.",
-        "ru": "Он очень смешной.",
-        "uk": "Він дуже дивний."
+        "L2": "He is strange.",
+        "ru": "Он смешной.",
+        "uk": "Він дивний."
       }
     ]
   },
@@ -32226,9 +32226,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite complicated.",
-        "ru": "Этот курс довольно сложный.",
-        "uk": "Цей курс досить складний."
+        "L2": "He is complicated.",
+        "ru": "Он сложный.",
+        "uk": "Він складний."
       }
     ]
   },
@@ -32249,9 +32249,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She has been ill for a week.",
-        "ru": "Она болеет уже неделю.",
-        "uk": "Вона хворіє вже тиждень."
+        "L2": "He is ill.",
+        "ru": "Он больной.",
+        "uk": "Він хворий."
       }
     ]
   },
@@ -32273,9 +32273,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He has a quite creative mind.",
-        "ru": "У него очень творческий склад ума.",
-        "uk": "Він має дуже креативне мислення."
+        "L2": "He is creative.",
+        "ru": "Он креативный.",
+        "uk": "Він креативний."
       }
     ]
   },
@@ -32297,9 +32297,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is pretty cool today.",
-        "ru": "Сегодня очень прохладно.",
-        "uk": "Сьогодні дуже прохолодно."
+        "L2": "He is cool.",
+        "ru": "Он прохладный.",
+        "uk": "Він прохолодний."
       }
     ]
   },
@@ -32320,9 +32320,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The bus is extremely slow today.",
-        "ru": "Сегодня автобус едет очень медленно.",
-        "uk": "Сьогодні автобус їде дуже повільно."
+        "L2": "He is slow.",
+        "ru": "Он медленный.",
+        "uk": "Він повільний."
       }
     ]
   },
@@ -32344,9 +32344,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite boring.",
-        "ru": "Этот курс довольно скучный.",
-        "uk": "Цей курс досить нудний."
+        "L2": "He is boring.",
+        "ru": "Он скучный.",
+        "uk": "Він нудний."
       }
     ]
   },
@@ -32367,9 +32367,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The music is loud.",
-        "ru": "Музыка громкая.",
-        "uk": "Музика гучна."
+        "L2": "He is loud.",
+        "ru": "Он громкий.",
+        "uk": "Він гучний."
       }
     ]
   },
@@ -32391,9 +32391,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is empty.",
-        "ru": "Комната пустая.",
-        "uk": "Кімната порожня."
+        "L2": "He is empty.",
+        "ru": "Он пустой.",
+        "uk": "Він порожній."
       }
     ]
   },
@@ -32414,9 +32414,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The contract is completely legal.",
-        "ru": "Контракт полностью законный.",
-        "uk": "Контракт повністю законний."
+        "L2": "He is legal.",
+        "ru": "Он законный.",
+        "uk": "Він законний."
       }
     ]
   },
@@ -32438,9 +32438,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite easy.",
-        "ru": "Этот курс довольно лёгкий.",
-        "uk": "Цей курс досить легкий."
+        "L2": "He is easy.",
+        "ru": "Он лёгкий.",
+        "uk": "Він легкий."
       }
     ]
   },
@@ -32462,9 +32462,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "We tried some local food.",
-        "ru": "Мы попробовали местную еду.",
-        "uk": "Ми спробували місцеву їжу."
+        "L2": "He is local.",
+        "ru": "Он местный.",
+        "uk": "Він місцевий."
       }
     ]
   },
@@ -32486,9 +32486,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The movie was really funny.",
-        "ru": "Фильм был действительно смешным.",
-        "uk": "Фільм був справді смішним."
+        "L2": "He is funny.",
+        "ru": "Он весёлый.",
+        "uk": "Він смішний."
       }
     ]
   },
@@ -32509,9 +32509,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The maximum speed here is 50 km/h.",
-        "ru": "Максимальная скорость здесь — 50 км/ч.",
-        "uk": "Максимальна швидкість тут — 50 км/год."
+        "L2": "He is maximum.",
+        "ru": "Он максимальный.",
+        "uk": "Він максимальний."
       }
     ]
   },
@@ -32532,9 +32532,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "There is no minimum age for this event.",
-        "ru": "Для этого мероприятия нет минимального возраста.",
-        "uk": "Для цієї події немає мінімального віку."
+        "L2": "He is minimum.",
+        "ru": "Он минимальный.",
+        "uk": "Він мінімальний."
       }
     ]
   },
@@ -32556,9 +32556,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This building is quite modern.",
-        "ru": "Это здание очень современное.",
-        "uk": "Ця будівля дуже сучасна."
+        "L2": "He is modern.",
+        "ru": "Он современный.",
+        "uk": "Він сучасний."
       }
     ]
   },
@@ -32579,9 +32579,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty brave.",
-        "ru": "Он очень смелый.",
-        "uk": "Він дуже сміливий."
+        "L2": "He is brave.",
+        "ru": "Он смелый.",
+        "uk": "Він сміливий."
       }
     ]
   },
@@ -32602,9 +32602,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite possible.",
-        "ru": "Эта ситуация довольно возможный.",
-        "uk": "Ця ситуація досить можливий."
+        "L2": "He is possible.",
+        "ru": "Он возможный.",
+        "uk": "Він можливий."
       }
     ]
   },
@@ -32625,9 +32625,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He feels tired after work.",
-        "ru": "После работы он чувствует себя уставшим.",
-        "uk": "Після роботи він почувається втомленим."
+        "L2": "He is tired.",
+        "ru": "Он уставший.",
+        "uk": "Він втомлений."
       }
     ]
   },
@@ -32649,9 +32649,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The school is near our house.",
-        "ru": "Школа находится недалеко от нашего дома.",
-        "uk": "Школа розташована недалеко від нашого дому."
+        "L2": "He is near.",
+        "ru": "Он близкий.",
+        "uk": "Він близький."
       }
     ]
   },
@@ -32672,9 +32672,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite national.",
-        "ru": "Эта ситуация довольно национальный.",
-        "uk": "Ця ситуація досить національний."
+        "L2": "He is national.",
+        "ru": "Он национальный.",
+        "uk": "Він національний."
       }
     ]
   },
@@ -32696,9 +32696,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is nervous before the interview.",
-        "ru": "Перед собеседованием она нервничает.",
-        "uk": "Перед співбесідою вона нервує."
+        "L2": "He is nervous.",
+        "ru": "Он нервный.",
+        "uk": "Він нервовий."
       }
     ]
   },
@@ -32719,9 +32719,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is a pretty nice person.",
-        "ru": "Она очень приятный человек.",
-        "uk": "Вона дуже приємна людина."
+        "L2": "He is nice.",
+        "ru": "Он милый.",
+        "uk": "Він приємний."
       }
     ]
   },
@@ -32742,9 +32742,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The house is new.",
-        "ru": "Дом новый.",
-        "uk": "Будинок новий."
+        "L2": "He is new.",
+        "ru": "Он новый.",
+        "uk": "Він новий."
       }
     ]
   },
@@ -32765,9 +32765,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather curious.",
-        "ru": "Он очень любопытный.",
-        "uk": "Він дуже допитливий."
+        "L2": "He is curious.",
+        "ru": "Он любопытный.",
+        "uk": "Він допитливий."
       }
     ]
   },
@@ -32789,9 +32789,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their salary is low.",
-        "ru": "У них низкая зарплата.",
-        "uk": "У них низька зарплата."
+        "L2": "He is low.",
+        "ru": "Он низкий.",
+        "uk": "Він низький."
       }
     ]
   },
@@ -32812,9 +32812,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really normal.",
-        "ru": "Он очень нормальный.",
-        "uk": "Він дуже нормальний."
+        "L2": "He is normal.",
+        "ru": "Он нормальный.",
+        "uk": "Він нормальний."
       }
     ]
   },
@@ -32835,9 +32835,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite necessary.",
-        "ru": "Эта ситуация довольно необходимый.",
-        "uk": "Ця ситуація досить необхідний."
+        "L2": "He is necessary.",
+        "ru": "Он необходимый.",
+        "uk": "Він необхідний."
       }
     ]
   },
@@ -32858,9 +32858,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite useless.",
-        "ru": "Эта ситуация довольно бесполезный.",
-        "uk": "Ця ситуація досить марний."
+        "L2": "He is useless.",
+        "ru": "Он бесполезный.",
+        "uk": "Він марний."
       }
     ]
   },
@@ -32881,9 +32881,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite useful.",
-        "ru": "Эта ситуация довольно полезный.",
-        "uk": "Ця ситуація досить корисний."
+        "L2": "He is useful.",
+        "ru": "Он полезный.",
+        "uk": "Він корисний."
       }
     ]
   },
@@ -32905,9 +32905,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The shop is open now.",
-        "ru": "Магазин сейчас открыт.",
-        "uk": "Магазин зараз відкритий."
+        "L2": "He is open.",
+        "ru": "Он открытый.",
+        "uk": "Він відкритий."
       }
     ]
   },
@@ -32929,9 +32929,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This is the official version of the story.",
-        "ru": "Это официальная версия истории.",
-        "uk": "Це офіційна версія історії."
+        "L2": "He is official.",
+        "ru": "Он официальный.",
+        "uk": "Він офіційний."
       }
     ]
   },
@@ -32953,9 +32953,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is tidy.",
-        "ru": "Комната аккуратная.",
-        "uk": "Кімната охайна."
+        "L2": "He is tidy.",
+        "ru": "Он аккуратный.",
+        "uk": "Він охайний."
       }
     ]
   },
@@ -32976,9 +32976,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is quite passive.",
-        "ru": "Комната очень пассивный.",
-        "uk": "Кімната дуже пасивний."
+        "L2": "He is passive.",
+        "ru": "Он пассивный.",
+        "uk": "Він пасивний."
       }
     ]
   },
@@ -32999,9 +32999,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite personal.",
-        "ru": "Эта ситуация довольно личный.",
-        "uk": "Ця ситуація досить особистий."
+        "L2": "He is personal.",
+        "ru": "Он личный.",
+        "uk": "Він особистий."
       }
     ]
   },
@@ -33022,9 +33022,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is extremely practical.",
-        "ru": "Комната очень практичный.",
-        "uk": "Кімната дуже практичний."
+        "L2": "He is practical.",
+        "ru": "Он практичный.",
+        "uk": "Він практичний."
       }
     ]
   },
@@ -33045,9 +33045,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The hotel is affordable.",
-        "ru": "Этот отель недорогой.",
-        "uk": "Цей готель недорогий."
+        "L2": "He is affordable.",
+        "ru": "Он доступный по цене.",
+        "uk": "Він недорогий."
       }
     ]
   },
@@ -33068,9 +33068,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite private.",
-        "ru": "Эта ситуация довольно частный.",
-        "uk": "Ця ситуація досить приватний."
+        "L2": "He is private.",
+        "ru": "Он частный.",
+        "uk": "Він приватний."
       }
     ]
   },
@@ -33092,9 +33092,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite precise.",
-        "ru": "Этот курс довольно прецизионный.",
-        "uk": "Цей курс досить прецизійний."
+        "L2": "He is precise.",
+        "ru": "Он прецизионный.",
+        "uk": "Він прецизійний."
       }
     ]
   },
@@ -33116,9 +33116,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is quite punctual at work.",
-        "ru": "Он очень пунктуален на работе.",
-        "uk": "Він дуже пунктуальний на роботі."
+        "L2": "He is punctual.",
+        "ru": "Он пунктуальный.",
+        "uk": "Він пунктуальний."
       }
     ]
   },
@@ -33139,9 +33139,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty rough.",
-        "ru": "Он очень шероховатый.",
-        "uk": "Він дуже шорсткий."
+        "L2": "He is rough.",
+        "ru": "Он шероховатый.",
+        "uk": "Він шорсткий."
       }
     ]
   },
@@ -33162,9 +33162,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They are rich.",
-        "ru": "Они богатые.",
-        "uk": "Вони багаті."
+        "L2": "He is rich.",
+        "ru": "Он богатый.",
+        "uk": "Він багатий."
       }
     ]
   },
@@ -33185,9 +33185,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite correct.",
-        "ru": "Этот курс довольно правильный.",
-        "uk": "Цей курс досить правильний."
+        "L2": "He is correct.",
+        "ru": "Он правильный.",
+        "uk": "Він правильний."
       }
     ]
   },
@@ -33208,9 +33208,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The table is robust.",
-        "ru": "Стол прочный.",
-        "uk": "Стіл міцний."
+        "L2": "He is robust.",
+        "ru": "Он прочный.",
+        "uk": "Він міцний."
       }
     ]
   },
@@ -33232,9 +33232,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The area is quiet.",
-        "ru": "Этот район спокойный.",
-        "uk": "Цей район спокійний."
+        "L2": "He is quiet.",
+        "ru": "Он спокойный.",
+        "uk": "Він спокійний."
       }
     ]
   },
@@ -33255,9 +33255,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is quite salty.",
-        "ru": "Суп получился очень солёный.",
-        "uk": "Суп вийшов дуже солоний."
+        "L2": "He is salty.",
+        "ru": "Он солёный.",
+        "uk": "Він солоний."
       }
     ]
   },
@@ -33278,9 +33278,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is full of people.",
-        "ru": "Комната полна людей.",
-        "uk": "Кімната повна людей."
+        "L2": "He is full.",
+        "ru": "Он сытый.",
+        "uk": "Він ситий."
       }
     ]
   },
@@ -33302,9 +33302,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is clean.",
-        "ru": "Комната чистая.",
-        "uk": "Кімната чиста."
+        "L2": "He is clean.",
+        "ru": "Он чистый.",
+        "uk": "Він чистий."
       }
     ]
   },
@@ -33326,9 +33326,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is rather spicy.",
-        "ru": "Суп получился очень острый.",
-        "uk": "Суп вийшов дуже гострий."
+        "L2": "He is spicy.",
+        "ru": "Он острый.",
+        "uk": "Він гострий."
       }
     ]
   },
@@ -33349,9 +33349,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The situation is bad.",
-        "ru": "Ситуация плохая.",
-        "uk": "Ситуація погана."
+        "L2": "He is bad.",
+        "ru": "Он плохой.",
+        "uk": "Він поганий."
       }
     ]
   },
@@ -33373,9 +33373,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The floor is dirty.",
-        "ru": "Пол грязный.",
-        "uk": "Підлога брудна."
+        "L2": "He is dirty.",
+        "ru": "Он грязный.",
+        "uk": "Він брудний."
       }
     ]
   },
@@ -33396,9 +33396,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This train is fast and comfortable.",
-        "ru": "Этот поезд быстрый и удобный.",
-        "uk": "Цей потяг швидкий і зручний."
+        "L2": "He is fast.",
+        "ru": "Он быстрый.",
+        "uk": "Він швидкий."
       }
     ]
   },
@@ -33419,9 +33419,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite guilty.",
-        "ru": "Эта ситуация довольно виновный.",
-        "uk": "Ця ситуація досить винний."
+        "L2": "He is guilty.",
+        "ru": "Он виновный.",
+        "uk": "Він винний."
       }
     ]
   },
@@ -33442,9 +33442,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite innocent.",
-        "ru": "Эта ситуация довольно невиновный.",
-        "uk": "Ця ситуація досить невинний."
+        "L2": "He is innocent.",
+        "ru": "Он невиновный.",
+        "uk": "Він невинний."
       }
     ]
   },
@@ -33466,9 +33466,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is still weak after the illness.",
-        "ru": "После болезни он всё ещё слабый.",
-        "uk": "Після хвороби він усе ще слабкий."
+        "L2": "He is weak.",
+        "ru": "Он слабый.",
+        "uk": "Він слабкий."
       }
     ]
   },
@@ -33489,9 +33489,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The bag is heavy.",
-        "ru": "Сумка тяжёлая.",
-        "uk": "Сумка важка."
+        "L2": "He is heavy.",
+        "ru": "Он тяжёлый.",
+        "uk": "Він важкий."
       }
     ]
   },
@@ -33513,9 +33513,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The course is quite difficult.",
-        "ru": "Этот курс довольно сложный.",
-        "uk": "Цей курс досить складний."
+        "L2": "He is difficult.",
+        "ru": "Он сложный.",
+        "uk": "Він складний."
       }
     ]
   },
@@ -33536,9 +33536,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The place is beautiful.",
-        "ru": "Это место красивое.",
-        "uk": "Це місце гарне."
+        "L2": "He is beautiful.",
+        "ru": "Он красивый.",
+        "uk": "Він гарний."
       }
     ]
   },
@@ -33559,9 +33559,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty shy.",
-        "ru": "Он очень застенчивый.",
-        "uk": "Він дуже сором’язливий."
+        "L2": "He is shy.",
+        "ru": "Он застенчивый.",
+        "uk": "Він сором’язливий."
       }
     ]
   },
@@ -33582,9 +33582,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite rare.",
-        "ru": "Эта ситуация довольно редкий.",
-        "uk": "Ця ситуація досить рідкісний."
+        "L2": "He is rare.",
+        "ru": "Он редкий.",
+        "uk": "Він рідкісний."
       }
     ]
   },
@@ -33605,9 +33605,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather strange.",
-        "ru": "Он очень странный.",
-        "uk": "Він дуже дивний."
+        "L2": "He is strange.",
+        "ru": "Он странный.",
+        "uk": "Він дивний."
       }
     ]
   },
@@ -33628,9 +33628,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "They live in separate rooms.",
-        "ru": "Они живут в отдельных комнатах.",
-        "uk": "Вони живуть в окремих кімнатах."
+        "L2": "He is separate.",
+        "ru": "Он отдельный.",
+        "uk": "Він окремий."
       }
     ]
   },
@@ -33651,9 +33651,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite safe.",
-        "ru": "Эта ситуация довольно надёжный.",
-        "uk": "Ця ситуація досить безпечний."
+        "L2": "He is safe.",
+        "ru": "Он надёжный.",
+        "uk": "Він безпечний."
       }
     ]
   },
@@ -33674,9 +33674,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The game is really exciting.",
-        "ru": "Эта игра действительно увлекательный.",
-        "uk": "Ця гра справді захоплюючий."
+        "L2": "He is exciting.",
+        "ru": "Он увлекательный.",
+        "uk": "Він захоплюючий."
       }
     ]
   },
@@ -33697,9 +33697,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She was late for the meeting.",
-        "ru": "Она опоздала на встречу.",
-        "uk": "Вона запізнилася на зустріч."
+        "L2": "He is late.",
+        "ru": "Он поздний.",
+        "uk": "Він пізній."
       }
     ]
   },
@@ -33721,9 +33721,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is strong enough to handle this.",
-        "ru": "Она достаточно сильная, чтобы справиться с этим.",
-        "uk": "Вона достатньо сильна, щоб упоратися з цим."
+        "L2": "He is strong.",
+        "ru": "Он сильный.",
+        "uk": "Він сильний."
       }
     ]
   },
@@ -33744,9 +33744,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His parents are proud of him.",
-        "ru": "Его родители им гордятся.",
-        "uk": "Його батьки ним пишаються."
+        "L2": "He is proud.",
+        "ru": "Он гордый.",
+        "uk": "Він гордий."
       }
     ]
   },
@@ -33767,9 +33767,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is sweet.",
-        "ru": "Суп получился очень сладкий.",
-        "uk": "Суп вийшов дуже солодкий."
+        "L2": "He is sweet.",
+        "ru": "Он сладкий.",
+        "uk": "Він солодкий."
       }
     ]
   },
@@ -33790,9 +33790,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is really brave.",
-        "ru": "Он очень храбрый.",
-        "uk": "Він дуже хоробрий."
+        "L2": "He is brave.",
+        "ru": "Он храбрый.",
+        "uk": "Він хоробрий."
       }
     ]
   },
@@ -33813,9 +33813,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This phone is expensive.",
-        "ru": "Этот телефон дорогой.",
-        "uk": "Цей телефон дорогий."
+        "L2": "He is expensive.",
+        "ru": "Он дорогой.",
+        "uk": "Він дорогий."
       }
     ]
   },
@@ -33836,9 +33836,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is pretty deep.",
-        "ru": "Он очень глубокий.",
-        "uk": "Він дуже глибокий."
+        "L2": "He is deep.",
+        "ru": "Он глубокий.",
+        "uk": "Він глибокий."
       }
     ]
   },
@@ -33859,9 +33859,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He feels sad today.",
-        "ru": "Сегодня ему грустно.",
-        "uk": "Сьогодні йому сумно."
+        "L2": "He is sad.",
+        "ru": "Он грустный.",
+        "uk": "Він сумний."
       }
     ]
   },
@@ -33882,9 +33882,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite typical.",
-        "ru": "Эта ситуация довольно типичный.",
-        "uk": "Ця ситуація досить типовий."
+        "L2": "He is typical.",
+        "ru": "Он типичный.",
+        "uk": "Він типовий."
       }
     ]
   },
@@ -33905,9 +33905,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The reason is unknown.",
-        "ru": "Причина неизвестна.",
-        "uk": "Причина невідома."
+        "L2": "He is unknown.",
+        "ru": "Он неизвестный.",
+        "uk": "Він невідомий."
       }
     ]
   },
@@ -33928,9 +33928,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The waiter was quite unfriendly.",
-        "ru": "Официант был довольно неприветливым.",
-        "uk": "Офіціант був доволі непривітним."
+        "L2": "He is unfriendly.",
+        "ru": "Он недружелюбный.",
+        "uk": "Він недружній."
       }
     ]
   },
@@ -33951,9 +33951,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite incapable.",
-        "ru": "Эта ситуация довольно неспособный.",
-        "uk": "Ця ситуація досить нездатний."
+        "L2": "He is incapable.",
+        "ru": "Он неспособный.",
+        "uk": "Він нездатний."
       }
     ]
   },
@@ -33974,9 +33974,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite approximate.",
-        "ru": "Эта ситуация довольно примерный.",
-        "uk": "Ця ситуація досить приблизний."
+        "L2": "He is approximate.",
+        "ru": "Он примерный.",
+        "uk": "Він приблизний."
       }
     ]
   },
@@ -33997,9 +33997,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The design is unusual.",
-        "ru": "Дизайн необычный.",
-        "uk": "Дизайн незвичайний."
+        "L2": "He is unusual.",
+        "ru": "Он необычный.",
+        "uk": "Він незвичайний."
       }
     ]
   },
@@ -34020,9 +34020,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He feels sad today.",
-        "ru": "Сегодня ему грустно.",
-        "uk": "Сьогодні йому сумно."
+        "L2": "He is unhappy.",
+        "ru": "Он несчастный.",
+        "uk": "Він нещасний."
       }
     ]
   },
@@ -34043,9 +34043,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His comment was rude.",
-        "ru": "Его комментарий был очень грубым.",
-        "uk": "Його коментар був дуже грубим."
+        "L2": "He is rude.",
+        "ru": "Он невежливый.",
+        "uk": "Він неввічливий."
       }
     ]
   },
@@ -34066,9 +34066,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite impossible.",
-        "ru": "Эта ситуация довольно невозможный.",
-        "uk": "Ця ситуація досить неможливий."
+        "L2": "He is impossible.",
+        "ru": "Он невозможный.",
+        "uk": "Він неможливий."
       }
     ]
   },
@@ -34089,9 +34089,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite unnecessary.",
-        "ru": "Эта ситуация довольно ненужный.",
-        "uk": "Ця ситуація досить непотрібний."
+        "L2": "He is unnecessary.",
+        "ru": "Он ненужный.",
+        "uk": "Він непотрібний."
       }
     ]
   },
@@ -34113,9 +34113,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is often unpunctual for classes.",
-        "ru": "Он часто приходит на занятия непунктуальным.",
-        "uk": "Він часто приходить на заняття непунктуальним."
+        "L2": "He is unpunctual.",
+        "ru": "Он непунктуальный.",
+        "uk": "Він непунктуальний."
       }
     ]
   },
@@ -34136,9 +34136,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite innocent.",
-        "ru": "Эта ситуация довольно невиновный.",
-        "uk": "Ця ситуація досить невинний."
+        "L2": "He is innocent.",
+        "ru": "Он невиновный.",
+        "uk": "Він невинний."
       }
     ]
   },
@@ -34159,9 +34159,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite unsafe.",
-        "ru": "Эта ситуация довольно ненадёжный.",
-        "uk": "Ця ситуація досить небезпечний."
+        "L2": "He is unsafe.",
+        "ru": "Он ненадёжный.",
+        "uk": "Він небезпечний."
       }
     ]
   },
@@ -34182,9 +34182,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite different.",
-        "ru": "Эта ситуация довольно различный.",
-        "uk": "Ця ситуація досить відмінний."
+        "L2": "He is different.",
+        "ru": "Он различный.",
+        "uk": "Він відмінний."
       }
     ]
   },
@@ -34205,9 +34205,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite incomplete.",
-        "ru": "Эта ситуация довольно неполный.",
-        "uk": "Ця ситуація досить неповний."
+        "L2": "He is incomplete.",
+        "ru": "Он неполный.",
+        "uk": "Він неповний."
       }
     ]
   },
@@ -34228,9 +34228,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite unimportant.",
-        "ru": "Эта ситуация довольно неважный.",
-        "uk": "Ця ситуація досить неважливий."
+        "L2": "He is unimportant.",
+        "ru": "Он неважный.",
+        "uk": "Він неважливий."
       }
     ]
   },
@@ -34251,9 +34251,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite unreal.",
-        "ru": "Эта ситуация довольно недействительный.",
-        "uk": "Ця ситуація досить несправжній."
+        "L2": "He is unreal.",
+        "ru": "Он недействительный.",
+        "uk": "Він несправжній."
       }
     ]
   },
@@ -34275,9 +34275,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The book is available online.",
-        "ru": "Эта книга доступна онлайн.",
-        "uk": "Ця книга доступна онлайн."
+        "L2": "He is available.",
+        "ru": "Он доступный.",
+        "uk": "Він доступний."
       }
     ]
   },
@@ -34298,9 +34298,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite obligated.",
-        "ru": "Эта ситуация довольно обязанный.",
-        "uk": "Ця ситуація досить зобов’язаний."
+        "L2": "He is obligated.",
+        "ru": "Он обязанный.",
+        "uk": "Він зобов’язаний."
       }
     ]
   },
@@ -34321,9 +34321,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This situation is quite different.",
-        "ru": "Эта ситуация довольно разный.",
-        "uk": "Ця ситуація досить різний."
+        "L2": "He is different.",
+        "ru": "Он разный.",
+        "uk": "Він різний."
       }
     ]
   },
@@ -34344,9 +34344,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is full of people.",
-        "ru": "Комната полна людей.",
-        "uk": "Кімната повна людей."
+        "L2": "He is full.",
+        "ru": "Он полный.",
+        "uk": "Він повний."
       }
     ]
   },
@@ -34367,9 +34367,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The report is complete now.",
-        "ru": "Отчёт теперь завершён.",
-        "uk": "Звіт тепер завершено."
+        "L2": "He is complete.",
+        "ru": "Он полный.",
+        "uk": "Він повний."
       }
     ]
   },
@@ -34390,9 +34390,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The story is true.",
-        "ru": "Эта история правдивая.",
-        "uk": "Ця історія правдива."
+        "L2": "He is true.",
+        "ru": "Он правдивый.",
+        "uk": "Він правдивий."
       }
     ]
   },
@@ -34414,9 +34414,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is extremely warm today.",
-        "ru": "Сегодня очень тепло.",
-        "uk": "Сьогодні дуже тепло."
+        "L2": "He is warm.",
+        "ru": "Он тёплый.",
+        "uk": "Він теплий."
       }
     ]
   },
@@ -34437,9 +34437,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is rather soft.",
-        "ru": "Он очень мягкий.",
-        "uk": "Він дуже м’який."
+        "L2": "He is soft.",
+        "ru": "Он мягкий.",
+        "uk": "Він м’який."
       }
     ]
   },
@@ -34460,9 +34460,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This is an important question.",
-        "ru": "Это важный вопрос.",
-        "uk": "Це важливе питання."
+        "L2": "He is important.",
+        "ru": "Он важный.",
+        "uk": "Він важливий."
       }
     ]
   },
@@ -34483,9 +34483,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This is a real problem.",
-        "ru": "Это реальная проблема.",
-        "uk": "Це реальна проблема."
+        "L2": "He is real.",
+        "ru": "Он действительный.",
+        "uk": "Він справжній."
       }
     ]
   },
@@ -34506,9 +34506,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She was angry about the delay.",
-        "ru": "Она злилась из‑за задержки.",
-        "uk": "Вона злилася через затримку."
+        "L2": "He is angry.",
+        "ru": "Он разъярённый.",
+        "uk": "Він розлючений."
       }
     ]
   },
@@ -34529,9 +34529,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The client is satisfied with the result.",
-        "ru": "Клиент доволен результатом.",
-        "uk": "Клієнт задоволений результатом."
+        "L2": "He is satisfied.",
+        "ru": "Он довольный.",
+        "uk": "Він задоволений."
       }
     ]
   },
@@ -34552,9 +34552,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "We need additional information.",
-        "ru": "Нам нужна дополнительная информация.",
-        "uk": "Нам потрібна додаткова інформація."
+        "L2": "He is additional.",
+        "ru": "Он дополнительный.",
+        "uk": "Він додатковий."
       }
     ]
   },
@@ -34575,9 +34575,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is a rather reliable colleague.",
-        "ru": "Он очень надёжный коллега.",
-        "uk": "Він дуже надійний колега."
+        "L2": "He is reliable.",
+        "ru": "Он надёжный.",
+        "uk": "Він надійний."
       }
     ]
   },
@@ -34598,9 +34598,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The two products are similar.",
-        "ru": "Эти два продукта очень похожи.",
-        "uk": "Ці два продукти дуже схожі."
+        "L2": "He is similar.",
+        "ru": "Он похожий.",
+        "uk": "Він подібний."
       }
     ]
   },
@@ -34621,9 +34621,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is fearful of flying.",
-        "ru": "Он боится летать.",
-        "uk": "Він боїться літати."
+        "L2": "He is fearful.",
+        "ru": "Он боязливый.",
+        "uk": "Він боязкий."
       }
     ]
   },
@@ -34644,9 +34644,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "We have to deal with external factors.",
-        "ru": "Нам нужно учитывать внешние факторы.",
-        "uk": "Нам потрібно враховувати зовнішні чинники."
+        "L2": "He is external.",
+        "ru": "Он внешний.",
+        "uk": "Він зовнішній."
       }
     ]
   },
@@ -34668,9 +34668,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He works in public service.",
-        "ru": "Он работает на государственной службе.",
-        "uk": "Він працює на державній службі."
+        "L2": "He is public.",
+        "ru": "Он публичный.",
+        "uk": "Він публічний."
       }
     ]
   },
@@ -34691,9 +34691,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He came home at the usual time.",
-        "ru": "Он пришёл домой в привычное время.",
-        "uk": "Він прийшов додому у звичний час."
+        "L2": "He is usual.",
+        "ru": "Он привычный.",
+        "uk": "Він звичний."
       }
     ]
   }
