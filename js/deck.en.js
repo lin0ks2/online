@@ -30322,7 +30322,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "My grandfather is very old.",
+        "L2": "My grandfather is pretty old.",
         "ru": "Мой дедушка уже очень старый.",
         "uk": "Мій дідусь уже дуже старий."
       }
@@ -30462,7 +30462,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very well-known.",
+        "L2": "He is pretty well-known.",
         "ru": "Он очень известный.",
         "uk": "Він дуже відомий."
       }
@@ -30486,7 +30486,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This singer is very popular.",
+        "L2": "This singer is extremely popular.",
         "ru": "Этот певец очень популярен.",
         "uk": "Цей співак дуже популярний."
       }
@@ -30510,7 +30510,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This chair is very comfortable.",
+        "L2": "This chair is rather comfortable.",
         "ru": "Этот стул очень удобный.",
         "uk": "Цей стілець дуже зручний."
       }
@@ -30628,7 +30628,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This hotel is very cheap.",
+        "L2": "This hotel is extremely cheap.",
         "ru": "Этот отель очень дешёвый.",
         "uk": "Цей готель дуже дешевий."
       }
@@ -30652,7 +30652,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very bitter.",
+        "L2": "The soup is rather bitter.",
         "ru": "Суп получился очень горький.",
         "uk": "Суп вийшов дуже гіркий."
       }
@@ -30676,7 +30676,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His answer was very stupid.",
+        "L2": "His answer was stupid.",
         "ru": "Его ответ был очень тупой.",
         "uk": "Його відповідь була дуже дурнуватий."
       }
@@ -30699,7 +30699,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The road here is very wide.",
+        "L2": "The road here is really wide.",
         "ru": "Дорога здесь очень широкая.",
         "uk": "Дорога тут дуже широка."
       }
@@ -30794,7 +30794,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The book is very thick.",
+        "L2": "The book is rather thick.",
         "ru": "Книга очень толстая.",
         "uk": "Книга дуже товста."
       }
@@ -30840,7 +30840,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very stupid.",
+        "L2": "He is really stupid.",
         "ru": "Он очень глупый.",
         "uk": "Він дуже дурний."
       }
@@ -30910,7 +30910,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very thirsty after the run.",
+        "L2": "He is extremely thirsty after the run.",
         "ru": "После пробежки он очень хочет пить.",
         "uk": "Після пробіжки він дуже хоче пити."
       }
@@ -30933,7 +30933,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very thin.",
+        "L2": "He is rather thin.",
         "ru": "Он очень тонкий.",
         "uk": "Він дуже тонкий."
       }
@@ -31004,7 +31004,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very sensitive today.",
+        "L2": "He is quite sensitive today.",
         "ru": "Сегодня он очень чувствительный.",
         "uk": "Сьогодні він дуже чутливий."
       }
@@ -31027,7 +31027,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very tight.",
+        "L2": "He is pretty tight.",
         "ru": "Он очень узкий.",
         "uk": "Він дуже вузький."
       }
@@ -31051,7 +31051,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very serious today.",
+        "L2": "He is extremely serious today.",
         "ru": "Сегодня он очень серьёзный.",
         "uk": "Сьогодні він дуже серйозний."
       }
@@ -31098,7 +31098,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very lazy.",
+        "L2": "The room is lazy.",
         "ru": "Комната очень ленивый.",
         "uk": "Кімната дуже ледачий."
       }
@@ -31121,7 +31121,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very elegant.",
+        "L2": "He is really elegant.",
         "ru": "Он очень изящный.",
         "uk": "Він дуже витончений."
       }
@@ -31144,9 +31144,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very distant.",
-        "ru": "Это место очень далёкий.",
-        "uk": "Це місце дуже далекий."
+        "L2": "This area is quite distant from the city.",
+        "ru": "Этот район довольно далёкий от города.",
+        "uk": "Цей район доволі далекий від міста."
       }
     ]
   },
@@ -31168,7 +31168,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The air is very humid today.",
+        "L2": "The air is pretty humid today.",
         "ru": "Сегодня воздух очень влажный.",
         "uk": "Сьогодні повітря дуже вологе."
       }
@@ -31214,7 +31214,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very flat.",
+        "L2": "He is rather flat.",
         "ru": "Он очень плоский.",
         "uk": "Він дуже плаский."
       }
@@ -31238,7 +31238,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is very hard-working.",
+        "L2": "She is hard-working.",
         "ru": "Она очень трудолюбивая.",
         "uk": "Вона дуже працьовита."
       }
@@ -31310,7 +31310,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very foreign.",
+        "L2": "This place is pretty foreign.",
         "ru": "Это место очень чужой.",
         "uk": "Це місце дуже чужий."
       }
@@ -31333,7 +31333,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The staff here are very friendly.",
+        "L2": "The staff here are extremely friendly.",
         "ru": "Персонал здесь очень дружелюбный.",
         "uk": "Персонал тут дуже привітний."
       }
@@ -31356,7 +31356,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very fresh.",
+        "L2": "The soup is rather fresh.",
         "ru": "Суп получился очень свежий.",
         "uk": "Суп вийшов дуже свіжий."
       }
@@ -31498,7 +31498,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very closed.",
+        "L2": "This place is rather closed.",
         "ru": "Это место очень закрытый.",
         "uk": "Це місце дуже закритий."
       }
@@ -31521,7 +31521,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The food here is very healthy.",
+        "L2": "The food here is healthy.",
         "ru": "Еда здесь очень полезная для здоровья.",
         "uk": "Їжа тут дуже корисна для здоров'я."
       }
@@ -31567,7 +31567,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very smooth.",
+        "L2": "The room is quite smooth.",
         "ru": "Комната очень гладкий.",
         "uk": "Кімната дуже гладкий."
       }
@@ -31590,7 +31590,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very same.",
+        "L2": "He is pretty same.",
         "ru": "Он очень одинаковый.",
         "uk": "Він дуже однаковий."
       }
@@ -31638,7 +31638,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His comment was very rude.",
+        "L2": "His comment was rather rude.",
         "ru": "Его комментарий был очень грубым.",
         "uk": "Його коментар був дуже грубим."
       }
@@ -31661,7 +31661,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very big.",
+        "L2": "The room is big.",
         "ru": "Комната очень большой.",
         "uk": "Кімната дуже великий."
       }
@@ -31684,7 +31684,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very good.",
+        "L2": "He is really good.",
         "ru": "Он очень хороший.",
         "uk": "Він дуже добрий."
       }
@@ -31731,7 +31731,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very hard.",
+        "L2": "The soup is pretty hard.",
         "ru": "Суп получился очень твёрдый.",
         "uk": "Суп вийшов дуже твердий."
       }
@@ -31755,7 +31755,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is very hot today.",
+        "L2": "It is extremely hot today.",
         "ru": "Сегодня очень жарко.",
         "uk": "Сьогодні дуже спекотно."
       }
@@ -31779,7 +31779,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very hectic.",
+        "L2": "This place is rather hectic.",
         "ru": "Это место очень суетливый.",
         "uk": "Це місце дуже метушливий."
       }
@@ -31803,7 +31803,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very bright.",
+        "L2": "This place is bright.",
         "ru": "Это место очень светлый.",
         "uk": "Це місце дуже світлий."
       }
@@ -31826,7 +31826,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very high.",
+        "L2": "He is really high.",
         "ru": "Он очень высокий.",
         "uk": "Він дуже високий."
       }
@@ -31873,7 +31873,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very ugly.",
+        "L2": "He is pretty ugly.",
         "ru": "Он очень уродливый.",
         "uk": "Він дуже потворний."
       }
@@ -32013,7 +32013,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very intelligent.",
+        "L2": "He is pretty intelligent.",
         "ru": "Он очень умный.",
         "uk": "Він дуже розумний."
       }
@@ -32085,7 +32085,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is still very young.",
+        "L2": "She is still young.",
         "ru": "Она всё ещё очень молодая.",
         "uk": "Вона все ще дуже молода."
       }
@@ -32109,7 +32109,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is very cold today.",
+        "L2": "It is really cold today.",
         "ru": "Сегодня очень холодно.",
         "uk": "Сьогодні дуже холодно."
       }
@@ -32156,7 +32156,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very small.",
+        "L2": "He is pretty small.",
         "ru": "Он очень маленький.",
         "uk": "Він дуже малий."
       }
@@ -32179,7 +32179,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very clever.",
+        "L2": "The room is extremely clever.",
         "ru": "Комната очень умный.",
         "uk": "Кімната дуже кмітливий."
       }
@@ -32202,7 +32202,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very strange.",
+        "L2": "He is rather strange.",
         "ru": "Он очень смешной.",
         "uk": "Він дуже дивний."
       }
@@ -32273,7 +32273,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He has a very creative mind.",
+        "L2": "He has a quite creative mind.",
         "ru": "У него очень творческий склад ума.",
         "uk": "Він має дуже креативне мислення."
       }
@@ -32297,7 +32297,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is very cool today.",
+        "L2": "It is pretty cool today.",
         "ru": "Сегодня очень прохладно.",
         "uk": "Сьогодні дуже прохолодно."
       }
@@ -32320,7 +32320,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The bus is very slow today.",
+        "L2": "The bus is extremely slow today.",
         "ru": "Сегодня автобус едет очень медленно.",
         "uk": "Сьогодні автобус їде дуже повільно."
       }
@@ -32367,7 +32367,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very loud.",
+        "L2": "The room is loud.",
         "ru": "Комната очень громкий.",
         "uk": "Кімната дуже гучний."
       }
@@ -32391,7 +32391,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very empty.",
+        "L2": "This place is really empty.",
         "ru": "Это место очень пустой.",
         "uk": "Це місце дуже порожній."
       }
@@ -32556,7 +32556,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This building is very modern.",
+        "L2": "This building is quite modern.",
         "ru": "Это здание очень современное.",
         "uk": "Ця будівля дуже сучасна."
       }
@@ -32579,7 +32579,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very brave.",
+        "L2": "He is pretty brave.",
         "ru": "Он очень смелый.",
         "uk": "Він дуже сміливий."
       }
@@ -32719,7 +32719,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "She is a very nice person.",
+        "L2": "She is a pretty nice person.",
         "ru": "Она очень приятный человек.",
         "uk": "Вона дуже приємна людина."
       }
@@ -32742,7 +32742,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very new.",
+        "L2": "The room is extremely new.",
         "ru": "Комната очень новый.",
         "uk": "Кімната дуже новий."
       }
@@ -32765,7 +32765,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very curious.",
+        "L2": "He is rather curious.",
         "ru": "Он очень любопытный.",
         "uk": "Він дуже допитливий."
       }
@@ -32812,7 +32812,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very normal.",
+        "L2": "He is really normal.",
         "ru": "Он очень нормальный.",
         "uk": "Він дуже нормальний."
       }
@@ -32905,7 +32905,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very open.",
+        "L2": "This place is rather open.",
         "ru": "Это место очень открытый.",
         "uk": "Це місце дуже відкритий."
       }
@@ -32953,7 +32953,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very tidy.",
+        "L2": "This place is really tidy.",
         "ru": "Это место очень аккуратный.",
         "uk": "Це місце дуже охайний."
       }
@@ -32976,7 +32976,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very passive.",
+        "L2": "The room is quite passive.",
         "ru": "Комната очень пассивный.",
         "uk": "Кімната дуже пасивний."
       }
@@ -33022,7 +33022,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very practical.",
+        "L2": "The room is extremely practical.",
         "ru": "Комната очень практичный.",
         "uk": "Кімната дуже практичний."
       }
@@ -33116,7 +33116,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very punctual at work.",
+        "L2": "He is quite punctual at work.",
         "ru": "Он очень пунктуален на работе.",
         "uk": "Він дуже пунктуальний на роботі."
       }
@@ -33139,7 +33139,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very rough.",
+        "L2": "He is pretty rough.",
         "ru": "Он очень шероховатый.",
         "uk": "Він дуже шорсткий."
       }
@@ -33208,7 +33208,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very robust.",
+        "L2": "The room is robust.",
         "ru": "Комната очень прочный.",
         "uk": "Кімната дуже міцний."
       }
@@ -33232,7 +33232,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very quiet.",
+        "L2": "This place is really quiet.",
         "ru": "Это место очень спокойный.",
         "uk": "Це місце дуже спокійний."
       }
@@ -33255,7 +33255,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very salty.",
+        "L2": "The soup is quite salty.",
         "ru": "Суп получился очень солёный.",
         "uk": "Суп вийшов дуже солоний."
       }
@@ -33302,7 +33302,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very clean.",
+        "L2": "This place is extremely clean.",
         "ru": "Это место очень чистый.",
         "uk": "Це місце дуже чистий."
       }
@@ -33326,7 +33326,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very spicy.",
+        "L2": "The soup is rather spicy.",
         "ru": "Суп получился очень острый.",
         "uk": "Суп вийшов дуже гострий."
       }
@@ -33349,7 +33349,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very bad.",
+        "L2": "The room is bad.",
         "ru": "Комната очень плохой.",
         "uk": "Кімната дуже поганий."
       }
@@ -33373,7 +33373,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is very dirty.",
+        "L2": "This place is really dirty.",
         "ru": "Это место очень грязный.",
         "uk": "Це місце дуже брудний."
       }
@@ -33489,7 +33489,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very heavy.",
+        "L2": "The room is heavy.",
         "ru": "Комната очень тяжёлый.",
         "uk": "Кімната дуже важкий."
       }
@@ -33536,7 +33536,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very beautiful.",
+        "L2": "The room is quite beautiful.",
         "ru": "Комната очень красивый.",
         "uk": "Кімната дуже гарний."
       }
@@ -33559,7 +33559,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very shy.",
+        "L2": "He is pretty shy.",
         "ru": "Он очень застенчивый.",
         "uk": "Він дуже сором’язливий."
       }
@@ -33605,7 +33605,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very strange.",
+        "L2": "He is rather strange.",
         "ru": "Он очень странный.",
         "uk": "Він дуже дивний."
       }
@@ -33628,7 +33628,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very separate.",
+        "L2": "The room is separate.",
         "ru": "Комната очень отдельный.",
         "uk": "Кімната дуже окремий."
       }
@@ -33767,7 +33767,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The soup is very sweet.",
+        "L2": "The soup is sweet.",
         "ru": "Суп получился очень сладкий.",
         "uk": "Суп вийшов дуже солодкий."
       }
@@ -33790,7 +33790,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very brave.",
+        "L2": "He is really brave.",
         "ru": "Он очень храбрый.",
         "uk": "Він дуже хоробрий."
       }
@@ -33836,7 +33836,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very deep.",
+        "L2": "He is pretty deep.",
         "ru": "Он очень глубокий.",
         "uk": "Він дуже глибокий."
       }
@@ -33905,7 +33905,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very unknown.",
+        "L2": "The room is unknown.",
         "ru": "Комната очень неизвестный.",
         "uk": "Кімната дуже невідомий."
       }
@@ -33997,7 +33997,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is very unusual.",
+        "L2": "The room is extremely unusual.",
         "ru": "Комната очень необычный.",
         "uk": "Кімната дуже незвичайний."
       }
@@ -34043,7 +34043,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "His comment was very rude.",
+        "L2": "His comment was rude.",
         "ru": "Его комментарий был очень грубым.",
         "uk": "Його коментар був дуже грубим."
       }
@@ -34414,7 +34414,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "It is very warm today.",
+        "L2": "It is extremely warm today.",
         "ru": "Сегодня очень тепло.",
         "uk": "Сьогодні дуже тепло."
       }
@@ -34437,7 +34437,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is very soft.",
+        "L2": "He is rather soft.",
         "ru": "Он очень мягкий.",
         "uk": "Він дуже м’який."
       }
@@ -34575,7 +34575,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "He is a very reliable colleague.",
+        "L2": "He is a rather reliable colleague.",
         "ru": "Он очень надёжный коллега.",
         "uk": "Він дуже надійний колега."
       }
@@ -34598,7 +34598,7 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The two products are very similar.",
+        "L2": "The two products are similar.",
         "ru": "Эти два продукта очень похожи.",
         "uk": "Ці два продукти дуже схожі."
       }
