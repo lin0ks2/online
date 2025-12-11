@@ -30416,9 +30416,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their financial situation is poor.",
-        "ru": "Их финансовое положение бедный.",
-        "uk": "Їхнє фінансове становище бідний."
+        "L2": "They are poor.",
+        "ru": "Они бедные.",
+        "uk": "Вони бідні."
       }
     ]
   },
@@ -31098,9 +31098,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is lazy.",
-        "ru": "Комната очень ленивый.",
-        "uk": "Кімната дуже ледачий."
+        "L2": "He is lazy.",
+        "ru": "Он ленивый.",
+        "uk": "Він ледачий."
       }
     ]
   },
@@ -31310,9 +31310,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is pretty foreign.",
-        "ru": "Это место очень чужой.",
-        "uk": "Це місце дуже чужий."
+        "L2": "This city feels foreign to me.",
+        "ru": "Этот город кажется мне чужим.",
+        "uk": "Це місто здається мені чужим."
       }
     ]
   },
@@ -31498,9 +31498,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is rather closed.",
-        "ru": "Это место очень закрытый.",
-        "uk": "Це місце дуже закритий."
+        "L2": "The shop is closed today.",
+        "ru": "Магазин сегодня закрыт.",
+        "uk": "Магазин сьогодні зачинений."
       }
     ]
   },
@@ -31567,9 +31567,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is quite smooth.",
-        "ru": "Комната очень гладкий.",
-        "uk": "Кімната дуже гладкий."
+        "L2": "The surface is smooth.",
+        "ru": "Поверхность гладкая.",
+        "uk": "Поверхня гладка."
       }
     ]
   },
@@ -31661,9 +31661,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is big.",
-        "ru": "Комната очень большой.",
-        "uk": "Кімната дуже великий."
+        "L2": "The house is big.",
+        "ru": "Дом большой.",
+        "uk": "Будинок великий."
       }
     ]
   },
@@ -31779,9 +31779,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is rather hectic.",
-        "ru": "Это место очень суетливый.",
-        "uk": "Це місце дуже метушливий."
+        "L2": "Life in this city is hectic.",
+        "ru": "Жизнь в этом городе суетливая.",
+        "uk": "Життя в цьому місті метушливе."
       }
     ]
   },
@@ -31803,9 +31803,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is bright.",
-        "ru": "Это место очень светлый.",
-        "uk": "Це місце дуже світлий."
+        "L2": "The room is bright.",
+        "ru": "Комната светлая.",
+        "uk": "Кімната світла."
       }
     ]
   },
@@ -32179,9 +32179,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is extremely clever.",
-        "ru": "Комната очень умный.",
-        "uk": "Кімната дуже кмітливий."
+        "L2": "He is clever.",
+        "ru": "Он умный.",
+        "uk": "Він кмітливий."
       }
     ]
   },
@@ -32367,9 +32367,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is loud.",
-        "ru": "Комната очень громкий.",
-        "uk": "Кімната дуже гучний."
+        "L2": "The music is loud.",
+        "ru": "Музыка громкая.",
+        "uk": "Музика гучна."
       }
     ]
   },
@@ -32391,9 +32391,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is really empty.",
-        "ru": "Это место очень пустой.",
-        "uk": "Це місце дуже порожній."
+        "L2": "The room is empty.",
+        "ru": "Комната пустая.",
+        "uk": "Кімната порожня."
       }
     ]
   },
@@ -32742,9 +32742,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is extremely new.",
-        "ru": "Комната очень новый.",
-        "uk": "Кімната дуже новий."
+        "L2": "The house is new.",
+        "ru": "Дом новый.",
+        "uk": "Будинок новий."
       }
     ]
   },
@@ -32789,9 +32789,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their financial situation is low.",
-        "ru": "Их финансовое положение низкий.",
-        "uk": "Їхнє фінансове становище низький."
+        "L2": "Their salary is low.",
+        "ru": "У них низкая зарплата.",
+        "uk": "У них низька зарплата."
       }
     ]
   },
@@ -32905,9 +32905,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is rather open.",
-        "ru": "Это место очень открытый.",
-        "uk": "Це місце дуже відкритий."
+        "L2": "The shop is open now.",
+        "ru": "Магазин сейчас открыт.",
+        "uk": "Магазин зараз відкритий."
       }
     ]
   },
@@ -32953,9 +32953,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is really tidy.",
-        "ru": "Это место очень аккуратный.",
-        "uk": "Це місце дуже охайний."
+        "L2": "The room is tidy.",
+        "ru": "Комната аккуратная.",
+        "uk": "Кімната охайна."
       }
     ]
   },
@@ -33045,9 +33045,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their financial situation is affordable.",
-        "ru": "Их финансовое положение доступный по цене.",
-        "uk": "Їхнє фінансове становище недорогий."
+        "L2": "The hotel is affordable.",
+        "ru": "Этот отель недорогой.",
+        "uk": "Цей готель недорогий."
       }
     ]
   },
@@ -33162,9 +33162,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their financial situation is rich.",
-        "ru": "Их финансовое положение богатый.",
-        "uk": "Їхнє фінансове становище багатий."
+        "L2": "They are rich.",
+        "ru": "Они богатые.",
+        "uk": "Вони багаті."
       }
     ]
   },
@@ -33208,9 +33208,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is robust.",
-        "ru": "Комната очень прочный.",
-        "uk": "Кімната дуже міцний."
+        "L2": "The table is robust.",
+        "ru": "Стол прочный.",
+        "uk": "Стіл міцний."
       }
     ]
   },
@@ -33232,9 +33232,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is really quiet.",
-        "ru": "Это место очень спокойный.",
-        "uk": "Це місце дуже спокійний."
+        "L2": "The area is quiet.",
+        "ru": "Этот район спокойный.",
+        "uk": "Цей район спокійний."
       }
     ]
   },
@@ -33302,9 +33302,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is extremely clean.",
-        "ru": "Это место очень чистый.",
-        "uk": "Це місце дуже чистий."
+        "L2": "The room is clean.",
+        "ru": "Комната чистая.",
+        "uk": "Кімната чиста."
       }
     ]
   },
@@ -33349,9 +33349,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is bad.",
-        "ru": "Комната очень плохой.",
-        "uk": "Кімната дуже поганий."
+        "L2": "The situation is bad.",
+        "ru": "Ситуация плохая.",
+        "uk": "Ситуація погана."
       }
     ]
   },
@@ -33373,9 +33373,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "This place is really dirty.",
-        "ru": "Это место очень грязный.",
-        "uk": "Це місце дуже брудний."
+        "L2": "The floor is dirty.",
+        "ru": "Пол грязный.",
+        "uk": "Підлога брудна."
       }
     ]
   },
@@ -33489,9 +33489,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is heavy.",
-        "ru": "Комната очень тяжёлый.",
-        "uk": "Кімната дуже важкий."
+        "L2": "The bag is heavy.",
+        "ru": "Сумка тяжёлая.",
+        "uk": "Сумка важка."
       }
     ]
   },
@@ -33536,9 +33536,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is quite beautiful.",
-        "ru": "Комната очень красивый.",
-        "uk": "Кімната дуже гарний."
+        "L2": "The place is beautiful.",
+        "ru": "Это место красивое.",
+        "uk": "Це місце гарне."
       }
     ]
   },
@@ -33628,9 +33628,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is separate.",
-        "ru": "Комната очень отдельный.",
-        "uk": "Кімната дуже окремий."
+        "L2": "They live in separate rooms.",
+        "ru": "Они живут в отдельных комнатах.",
+        "uk": "Вони живуть в окремих кімнатах."
       }
     ]
   },
@@ -33813,9 +33813,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "Their financial situation is expensive.",
-        "ru": "Их финансовое положение дорогой.",
-        "uk": "Їхнє фінансове становище дорогий."
+        "L2": "This phone is expensive.",
+        "ru": "Этот телефон дорогой.",
+        "uk": "Цей телефон дорогий."
       }
     ]
   },
@@ -33905,9 +33905,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is unknown.",
-        "ru": "Комната очень неизвестный.",
-        "uk": "Кімната дуже невідомий."
+        "L2": "The reason is unknown.",
+        "ru": "Причина неизвестна.",
+        "uk": "Причина невідома."
       }
     ]
   },
@@ -33997,9 +33997,9 @@ window.decks.en_adjectives = [
     "ukAntonyms": [],
     "examples": [
       {
-        "L2": "The room is extremely unusual.",
-        "ru": "Комната очень необычный.",
-        "uk": "Кімната дуже незвичайний."
+        "L2": "The design is unusual.",
+        "ru": "Дизайн необычный.",
+        "uk": "Дизайн незвичайний."
       }
     ]
   },
