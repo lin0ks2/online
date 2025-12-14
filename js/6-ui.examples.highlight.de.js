@@ -261,12 +261,7 @@ return parts[parts.length - 1];
   // Полностью нерегулярные Präsens-формы (частые глаголы)
   var IRREG_PRESENT_MAP = {
     'können': ['kann','kannst','können','könnt'],
-    'wissen': ['weiß','weißt','wissen','wisst'],
-
-    // Hilfsverben / самые частые (нужны для корректной подсветки: bin / wird / hat и т.п.)
-    'sein':   ['bin','bist','ist','sind','seid'],
-    'haben':  ['habe','hast','hat','haben','habt'],
-    'werden': ['werde','wirst','wird','werden','werdet']
+    'wissen': ['weiß','weißt','wissen','wisst']
   };
 
   // Инсепарабельные приставки (НЕ отделяются, но наследуют сильные формы корня)
@@ -286,10 +281,6 @@ return parts[parts.length - 1];
     'geben': ['gegeben'],
     'nehmen': ['genommen'],
     'dringen': ['gedrungen'],
-    'ziehen': ['gezogen'],
-    'verweisen': ['verwiesen'],
-    // частные случаи, которые сложно вывести общим правилом
-    'anerziehen': ['anerzogen'],
     // "ergeben" как Partizip II = "ergeben" (без ge-)
     'ergeben': ['ergeben']
   };
@@ -338,12 +329,7 @@ return parts[parts.length - 1];
     'gehen': ['ging'],
     'nehmen': ['nahm'],
     'geben': ['gab'],
-    'dringen': ['drang'],
-
-    // конкретные леммы, которые часто встречаются в примерах
-    'verweisen': ['verwies'],
-    'sein': ['war','waren','wart'],
-    'werden': ['wurde','wurden','wurdest','wurdet']
+    'dringen': ['drang']
   };
 function extraVerbForms(lemma) {
     var out = [];
