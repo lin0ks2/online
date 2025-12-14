@@ -28118,7 +28118,7 @@ window.decks.de_verbs = [
     ],
     examples: [
       {
-        L2: "Что ты делаешь сегодня вечером?",
+        L2: "Was machst du heute Abend?",
         ru: "Что ты делаешь сегодня вечером?",
         uk: "Що ти робиш сьогодні ввечері?"
       }
@@ -29267,7 +29267,7 @@ window.decks.de_verbs = [
   {
     id: 38,
     word: "gelten",
-    ru: "считаться",
+    ru: "действовать",
     uk: "діяти",
     level: "B1",
     topics: ["abstract"],
