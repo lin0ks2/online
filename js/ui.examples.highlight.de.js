@@ -30,13 +30,11 @@
     var rawLower = rawNorm.toLocaleLowerCase('de-DE');
 
     // 1) Нормализуем "лемму" безопасно (учёт "(sich)")
-    var deckType = detectDeckType(deckKey);
-    // Для мелких частей речи (предлоги/наречия/частицы/союзы и т.п.)
-    // важно подсвечивать всю фразу целиком, а не только последнее слово.
-    var base = (deckType === 'other') ? lemma : pickLemma(lemma, wordObj);
+    var base = pickLemma(lemma, wordObj, deckType);
     if (!base) return null;
 
     base = normalizeNfc(base);
+    var deckType = detectDeckType(deckKey);
 
     // 2) Если отделяемый глагол — пробуем найти split-форму (verb ... prefix)
     //    ВАЖНО: ваш контракт подсвечивает один фрагмент, поэтому подсвечиваем VERB-часть.
@@ -78,14 +76,26 @@
   function detectDeckType(deckKey) {
     if (!deckKey) return 'other';
     var k = String(deckKey).toLowerCase();
+
+    // базовые крупные части речи
     if (k.indexOf('verb') !== -1) return 'verb';
-    if (k.indexOf('noun') !== -1) return 'noun';
+    if (k.indexOf('noun') !== -1 || k.indexOf('substant') !== -1) return 'noun';
     if (k.indexOf('adj') !== -1 || k.indexOf('adjekt') !== -1) return 'adj';
+
+    // "мелкие" части речи / служебные деки
+    if (k.indexOf('preposition') !== -1 || k.indexOf('präposition') !== -1 || k.indexOf('praep') !== -1 || k.indexOf('prep') !== -1) return 'prep';
+    if (k.indexOf('adverb') !== -1) return 'adv';
+    if (k.indexOf('particle') !== -1 || k.indexOf('partikel') !== -1) return 'part';
+    if (k.indexOf('conjunction') !== -1 || k.indexOf('konj') !== -1) return 'conj';
+    if (k.indexOf('interjection') !== -1 || k.indexOf('interj') !== -1) return 'interj';
+    if (k.indexOf('pronoun') !== -1 || k.indexOf('pron') !== -1) return 'pron';
+    if (k.indexOf('numeral') !== -1 || k.indexOf('number') !== -1 || k.indexOf('zahl') !== -1) return 'num';
+
     return 'other';
   }
 
   // Из wordObj.word вида "bewerben (sich)" берём "bewerben"
-  function pickLemma(lemma, wordObj) {
+  function pickLemma(lemma, wordObj, deckType) {
     var base = (lemma && String(lemma).trim()) || '';
 
     if (!base && wordObj && wordObj.word) {
@@ -106,6 +116,13 @@
 
     // Убираем "(sich)" и лишние пробелы
     base = base.replace(/\s*\(sich\)\s*/ig, ' ').trim();
+
+    // Для "не-склоняемых" и служебных дек (предлоги, наречия, частицы, союзы и т.п.)
+    // НЕ режем составные леммы до последнего слова — иначе теряются выражения вроде "im Hinblick auf".
+    if (deckType === 'prep' || deckType === 'adv' || deckType === 'part' || deckType === 'conj' || deckType === 'interj') {
+      // нормализуем пробелы, но сохраняем все слова выражения
+      return base.replace(/\s+/g, ' ').trim();
+    }
 
     // Если остались артикли/служебные слова в начале — это не ломает,
     // но для деки глаголов/прилагательных берём последнее "слово"
@@ -130,29 +147,8 @@ return parts[parts.length - 1];
   }
 
   // Ищем form как цельное слово внутри rawLower (оба — уже lowercased)
-  function indexOfPhrase(rawLower, phraseLower) {
-    // Ищем подстроку целиком, но границы проверяем только по краям фразы.
-    var from = 0;
-    while (from <= rawLower.length - phraseLower.length) {
-      var idx = rawLower.indexOf(phraseLower, from);
-      if (idx === -1) return -1;
-
-      var before = idx - 1;
-      var after = idx + phraseLower.length;
-
-      var beforeOk = (before < 0) || !isLetter(rawLower.charAt(before));
-      var afterOk  = (after >= rawLower.length) || !isLetter(rawLower.charAt(after));
-
-      if (beforeOk && afterOk) return idx;
-
-      from = idx + 1;
-    }
-    return -1;
-  }
-
   function indexOfWord(rawLower, formLower) {
-    if (formLower.indexOf(' ') !== -1) return indexOfPhrase(rawLower, formLower);
-var from = 0;
+    var from = 0;
     while (from <= rawLower.length - formLower.length) {
       var idx = rawLower.indexOf(formLower, from);
       if (idx === -1) return -1;
