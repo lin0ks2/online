@@ -36,6 +36,19 @@
     base = normalizeNfc(base);
     var deckType = detectDeckType(deckKey);
 
+    // 2) Несклоняемые/служебные части речи: подсвечиваем только точное вхождение "как есть"
+    //    (предлоги, наречия, частицы, союзы, местоимения, числительные и т.п.)
+    if (deckType === 'simple') {
+      var simpleTarget = pickSimpleTarget(wordObj, base);
+      if (!simpleTarget) return null;
+
+      var simpleHit = findExactPhrase(rawLower, simpleTarget.toLocaleLowerCase('de-DE'));
+      if (simpleHit) return simpleHit;
+
+      return null;
+    }
+
+
     // 2) Если отделяемый глагол — пробуем найти split-форму (verb ... prefix)
     //    ВАЖНО: ваш контракт подсвечивает один фрагмент, поэтому подсвечиваем VERB-часть.
     if (deckType === 'verb') {
@@ -76,9 +89,21 @@
   function detectDeckType(deckKey) {
     if (!deckKey) return 'other';
     var k = String(deckKey).toLowerCase();
+
+    // Изменяемые части речи (для них есть "мозги")
     if (k.indexOf('verb') !== -1) return 'verb';
     if (k.indexOf('noun') !== -1) return 'noun';
     if (k.indexOf('adj') !== -1 || k.indexOf('adjekt') !== -1) return 'adj';
+
+    // Несклоняемые/малосклоняемые (подсвечиваем ТОЛЬКО точные вхождения)
+    // deck.de.js: de_adverbs, de_prepositions, de_conjunctions, de_particles, de_pronouns, de_numbers
+    if (k.indexOf('adverb') !== -1) return 'simple';
+    if (k.indexOf('preposition') !== -1) return 'simple';
+    if (k.indexOf('conjunction') !== -1) return 'simple';
+    if (k.indexOf('particle') !== -1) return 'simple';
+    if (k.indexOf('pronoun') !== -1) return 'simple';
+    if (k.indexOf('number') !== -1) return 'simple';
+
     return 'other';
   }
 
@@ -123,6 +148,47 @@ return parts[parts.length - 1];
   }
 
   // "Своё" понятие буквы для немецкого (чтобы обходиться без \b и проблем с ß)
+  // Для простых частей речи (предлоги/наречия/частицы/союзы/местоимения/числительные)
+  // берём полное слово/фразу из словаря и подсвечиваем только точное вхождение.
+  function pickSimpleTarget(wordObj, fallback) {
+    var w = '';
+    if (wordObj && wordObj.word) w = String(wordObj.word).trim();
+    if (!w && fallback) w = String(fallback).trim();
+    if (!w) return '';
+
+    // убираем служебные пометки вида "(sich)" и нормализуем пробелы
+    w = w.replace(/\s*\([^)]*\)\s*/g, ' ');
+    w = w.replace(/\s+/g, ' ').trim();
+    return w;
+  }
+
+  // Точное совпадение фразы как "целого слова" по краям (без морфологии/эвристики)
+  // phraseLower уже должен быть lowercased.
+  function findExactPhrase(rawLower, phraseLower) {
+    if (!phraseLower) return null;
+
+    var from = 0;
+    while (from <= rawLower.length - phraseLower.length) {
+      var idx = rawLower.indexOf(phraseLower, from);
+      if (idx === -1) return null;
+
+      var before = idx - 1;
+      var after = idx + phraseLower.length;
+
+      var beforeOk = (before < 0) || !isLetter(rawLower.charAt(before));
+      var afterOk  = (after >= rawLower.length) || !isLetter(rawLower.charAt(after));
+
+      if (beforeOk && afterOk) {
+        return { index: idx, length: phraseLower.length };
+      }
+
+      from = idx + 1;
+    }
+
+    return null;
+  }
+
+
   function isLetter(ch) {
     return /[A-Za-zÄÖÜäöüß]/.test(ch);
   }
