@@ -1,80 +1,218 @@
-// ui.examples.highlight.de.js
-// Version: rebuilt-v9
-// Purpose: Highlight target German words in example sentences.
-// Notes:
-// - Verbs: handle separable prefixes, inflected forms, participles.
-// - Reflexive verbs: match verb + sich variations.
-// - Prepositions & fixed expressions: exact-match highlighting to avoid false positives.
+/* ==========================================================
+ * Проект: MOYAMOVA
+ * Файл: ui.examples.highlight.de.js
+ * Назначение: Языко-специфичная подсветка слов в примерах (немецкий)
+ * Подключается после ui.examples.hints.js и дополняет базовую логику.
+ * ========================================================== */
 
-export const highlightRulesDE = {
-  meta: {
-    version: "v9-rebuilt",
-    date: "2025-12-22"
-  },
+(function (root) {
+  'use strict';
 
-  // =======================
-  // Helpers
-  // =======================
-  boundaries: {
-    word: "(?<![\\p{L}])(%s)(?![\\p{L}])"
-  },
+  var A = root.App = root.App || {};
+  A.ExampleHighlight = A.ExampleHighlight || {};
 
-  // =======================
-  // Verbs
-  // =======================
-  verbs: {
-    // Generic verb forms
-    base: (v) => [
-      v,
-      v + "e",
-      v + "st",
-      v + "t",
-      v + "en",
-      "ge" + v + "t",
-      "ge" + v + "en"
-    ],
+  /**
+   * Специальные правила подсветки для немецкого.
+   *
+   * @param {string} raw    - исходное предложение (DE)
+   * @param {Object} word   - объект слова из тренажёра
+   * @param {string} deckKey - ключ деки (de_verbs, de_nouns, ...)
+   * @param {string} lemma  - базовая форма (последнее слово из word.word)
+   * @returns {{index:number,length:number}|null}
+   */
+  A.ExampleHighlight.de = function (raw, word, deckKey, lemma) {
+    if (!raw || !word || !lemma) return null;
 
-    // Separable verbs: e.g. anfangen -> fängt ... an
-    separable: (base, prefix) => [
-      `${prefix}.*?${base}`,
-      `${base}.*?${prefix}`
-    ],
+    var deckType = detectDeckType(deckKey);
 
-    // Reflexive verbs
-    reflexive: (v) => [
-      `${v}\\s+(mich|dich|sich|uns|euch)`,
-      `(mich|dich|sich|uns|euch)\\s+${v}`
-    ]
-  },
+    // 1.5) Предлоги и составные предлоги — ТОЛЬКО точное совпадение
+    if (isPrepositionDeck(wordObj, deckKey)) {
+      var baseLower = base.toLocaleLowerCase('de-DE');
 
-  // =======================
-  // Prepositions & fixed phrases
-  // =======================
-  prepositionsExact: [
-    "in",
-    "von",
-    "mitten in",
-    "kraft von"
-  ],
+      // сначала составные
+      for (var c = 0; c < COMPOUND_PREPOSITIONS.length; c++) {
+        var cp = COMPOUND_PREPOSITIONS[c];
+        if (cp === baseLower) {
+          var hit = findExactPhrase(rawLower, cp);
+          if (hit) return hit;
+        }
+      }
 
-  // =======================
-  // Build regex for exact prepositions
-  // =======================
-  buildPrepositionRegex(phrase) {
-    const escaped = phrase.replace(/[-/\\^$*+?.()|[\\]{}]/g, "\\$&");
-    return new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, "giu");
-  },
-
-  // =======================
-  // Main API
-  // =======================
-  getRegex(word, type = "auto") {
-    if (type === "preposition") {
-      return this.buildPrepositionRegex(word);
+      // затем одиночные
+      if (PREPOSITIONS.indexOf(baseLower) !== -1) {
+        var idxPrep = indexOfWord(rawLower, baseLower);
+        if (idxPrep !== -1) {
+          return { index: idxPrep, length: baseLower.length };
+        }
+      }
     }
 
-    const forms = this.verbs.base(word);
-    const pattern = forms.join("|");
-    return new RegExp(`(?<!\\p{L})(${pattern})(?!\\p{L})`, "giu");
+    var forms = buildGermanForms(lemma, word, deckType);
+    if (!forms || !forms.length) return null;
+
+    for (var i = 0; i < forms.length; i++) {
+      var form = forms[i];
+      if (!form) continue;
+
+      var re = new RegExp('\\b' + escapeRegExp(form) + '\\b', 'i');
+      var m = raw.match(re);
+      if (m) {
+        return { index: m.index, length: m[0].length };
+      }
+    }
+
+    return null;
+  };
+
+  function detectDeckType(deckKey) {
+    if (!deckKey) return 'other';
+    var k = String(deckKey).toLowerCase();
+    if (k.indexOf('verb') !== -1) return 'verb';
+    if (k.indexOf('noun') !== -1) return 'noun';
+    return 'other';
   }
-};
+
+  // -------------------------- ПРЕДЛОГИ ---------------------------
+
+  // Явный список предлогов (расширяем по мере необходимости)
+  var PREPOSITIONS = [
+    'in','auf','an','mit','von','für','über','unter','nach','vor',
+    'bei','ohne','gegen','zwischen','durch','um'
+  ];
+
+  // Составные предлоги — приоритетнее одиночных
+  var COMPOUND_PREPOSITIONS = [
+    'mitten in',
+    'kraft von',
+    'in der',
+    'in den',
+    'von der',
+    'von den'
+  ];
+
+  function isPrepositionDeck(wordObj, deckKey) {
+    // если дека не verb/noun/adj — считаем служебной
+    var t = detectDeckType(deckKey);
+    return t === 'other' && wordObj && wordObj.word;
+  }
+
+  function findExactPhrase(rawLower, phrase) {
+    var p = phrase.toLocaleLowerCase('de-DE');
+    var idx = rawLower.indexOf(p);
+    if (idx === -1) return null;
+
+    // границы по пробелам
+    var before = idx - 1;
+    var after  = idx + p.length;
+
+    var beforeOk = before < 0 || rawLower.charAt(before) === ' ';
+    var afterOk  = after >= rawLower.length || rawLower.charAt(after) === ' ';
+
+    if (beforeOk && afterOk) {
+      return { index: idx, length: p.length };
+    }
+    return null;
+  }
+
+
+  // Очень грубое определение стема глагола
+  function guessVerbStem(lemma) {
+    var s = String(lemma || '');
+    if (!s) return s;
+
+    // глаголы на -ieren: studieren -> studier-
+    if (s.length > 6 && s.slice(-6) === 'ieren') {
+      return s.slice(0, -3); // studier
+    }
+
+    if (s.length > 4 && s.slice(-2) === 'en') return s.slice(0, -2);
+    if (s.length > 3 && s.slice(-1) === 'n')  return s.slice(0, -1);
+    return s;
+  }
+
+  function buildGermanForms(lemma, word, deckType) {
+    var forms = [];
+    var base = String(lemma || '').trim();
+    if (!base) return forms;
+
+    // 1) Ручные формы для совсем неправильных глаголов / существительных
+    if (word && Array.isArray(word.deForms)) {
+      word.deForms.forEach(function (f) {
+        var v = String(f || '').trim();
+        if (v) forms.push(v);
+      });
+    }
+
+    // 2) Автоматические формы
+    if (deckType === 'verb') {
+      var stem = guessVerbStem(base);
+
+      // настоящее время (очень грубо)
+      forms.push(
+        stem + 'e',   // ich
+        stem + 'st',  // du
+        stem + 't',   // er/sie/es
+        stem + 'en',  // wir
+        stem + 't',   // ihr
+        stem + 'en'   // sie/Sie
+      );
+
+      // претерит слабых глаголов
+      forms.push(
+        stem + 'te',
+        stem + 'test',
+        stem + 'te',
+        stem + 'ten',
+        stem + 'tet',
+        stem + 'ten'
+      );
+
+      // Partizip II (упрощённо, без учёта сильных глаголов)
+      if (base.slice(-6) !== 'ieren') {
+        forms.push('ge' + stem + 't');
+      }
+    } else if (deckType === 'noun') {
+      var n = base;
+
+      // очень грубые множественные/падежные окончания
+      forms.push(
+        n + 'e',
+        n + 'en',
+        n + 'er',
+        n + 'n',
+        n + 's'
+      );
+    } else {
+      // Если тип деки неизвестен, пробуем немного универсальных окончаний
+      var u = base;
+      forms.push(
+        u + 'e',
+        u + 'en',
+        u + 'n',
+        u + 's'
+      );
+    }
+
+    // 3) Всегда добавляем базовую форму
+    forms.push(base);
+
+    // Убираем дубликаты (без учёта регистра)
+    var seen = Object.create(null);
+    var out = [];
+    for (var i = 0; i < forms.length; i++) {
+      var f = String(forms[i] || '').trim();
+      if (!f) continue;
+      var key = f.toLowerCase();
+      if (seen[key]) continue;
+      seen[key] = true;
+      out.push(f);
+    }
+
+    return out;
+  }
+
+  function escapeRegExp(str) {
+    return String(str || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+})(window);
