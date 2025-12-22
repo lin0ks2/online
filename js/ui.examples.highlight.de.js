@@ -24,29 +24,6 @@
     if (!raw || !word || !lemma) return null;
 
     var deckType = detectDeckType(deckKey);
-
-    // 1.5) Предлоги и составные предлоги — ТОЛЬКО точное совпадение
-    if (isPrepositionDeck(wordObj, deckKey)) {
-      var baseLower = base.toLocaleLowerCase('de-DE');
-
-      // сначала составные
-      for (var c = 0; c < COMPOUND_PREPOSITIONS.length; c++) {
-        var cp = COMPOUND_PREPOSITIONS[c];
-        if (cp === baseLower) {
-          var hit = findExactPhrase(rawLower, cp);
-          if (hit) return hit;
-        }
-      }
-
-      // затем одиночные
-      if (PREPOSITIONS.indexOf(baseLower) !== -1) {
-        var idxPrep = indexOfWord(rawLower, baseLower);
-        if (idxPrep !== -1) {
-          return { index: idxPrep, length: baseLower.length };
-        }
-      }
-    }
-
     var forms = buildGermanForms(lemma, word, deckType);
     if (!forms || !forms.length) return null;
 
@@ -67,53 +44,41 @@
   function detectDeckType(deckKey) {
     if (!deckKey) return 'other';
     var k = String(deckKey).toLowerCase();
-    if (k.indexOf('verb') !== -1) return 'verb';
-    if (k.indexOf('noun') !== -1) return 'noun';
+
+    // Порядок важен: сначала более специфичные группы.
+    if (k.indexOf('verb') !== -1 || k.indexOf('verben') !== -1) return 'verb';
+    if (k.indexOf('noun') !== -1 || k.indexOf('moun') !== -1 || k.indexOf('nomen') !== -1 || k.indexOf('substantiv') !== -1) return 'noun';
+    if (k.indexOf('adj') !== -1 || k.indexOf('adjektiv') !== -1 || k.indexOf('adjective') !== -1) return 'adj';
+
+    // Предлоги / Präpositionen
+    if (k.indexOf('prep') !== -1 || k.indexOf('preposition') !== -1 || k.indexOf('praep') !== -1 || k.indexOf('präpo') !== -1 || k.indexOf('praeposition') !== -1 || k.indexOf('präposition') !== -1 || k.indexOf('предлог') !== -1) {
+      return 'prep';
+    }
+
+  // =========================================================================
+  // БАЗОВЫЕ ПРАВИЛА ПО ЧАСТЯМ РЕЧИ (base rules)
+  //   VERB  - спряжения/времена/Partizip II, сильные/нерегулярные, separable.
+  //   NOUN  - Plural/Genitiv/умлаут.
+  //   ADJ   - Komparativ/Superlativ/склонения.
+  //   PREP  - точное совпадение (включая многословные выражения).
+  // =========================================================================
+
+  // =========================================================================
+  // ИСКЛЮЧЕНИЯ (exceptions) — добавляются точечно, строго аддитивно.
+  // Структура: EXCEPTIONS_BY_DECK[deckType] = [{ lemma:'...', forms:[...]}]
+  // =========================================================================
+  var EXCEPTIONS_BY_DECK = {
+    verb: [],
+    noun: [],
+    adj: [],
+    prep: [],
+    other: []
+  };
+
+
+
     return 'other';
   }
-
-  // -------------------------- ПРЕДЛОГИ ---------------------------
-
-  // Явный список предлогов (расширяем по мере необходимости)
-  var PREPOSITIONS = [
-    'in','auf','an','mit','von','für','über','unter','nach','vor',
-    'bei','ohne','gegen','zwischen','durch','um'
-  ];
-
-  // Составные предлоги — приоритетнее одиночных
-  var COMPOUND_PREPOSITIONS = [
-    'mitten in',
-    'kraft von',
-    'in der',
-    'in den',
-    'von der',
-    'von den'
-  ];
-
-  function isPrepositionDeck(wordObj, deckKey) {
-    // если дека не verb/noun/adj — считаем служебной
-    var t = detectDeckType(deckKey);
-    return t === 'other' && wordObj && wordObj.word;
-  }
-
-  function findExactPhrase(rawLower, phrase) {
-    var p = phrase.toLocaleLowerCase('de-DE');
-    var idx = rawLower.indexOf(p);
-    if (idx === -1) return null;
-
-    // границы по пробелам
-    var before = idx - 1;
-    var after  = idx + p.length;
-
-    var beforeOk = before < 0 || rawLower.charAt(before) === ' ';
-    var afterOk  = after >= rawLower.length || rawLower.charAt(after) === ' ';
-
-    if (beforeOk && afterOk) {
-      return { index: idx, length: p.length };
-    }
-    return null;
-  }
-
 
   // Очень грубое определение стема глагола
   function guessVerbStem(lemma) {
@@ -214,5 +179,25 @@
   function escapeRegExp(str) {
     return String(str || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
+
+  // Нормализация леммы с учётом части речи.
+  // Важно: для PREP мы не используем аргумент lemma (он часто уже "обрезан" до последнего слова),
+  // а берём исходное wordObj.word целиком.
+  function normalizeLemma(lemma, wordObj, deckType) {
+    var raw = '';
+    if (deckType === 'prep' && wordObj && wordObj.word) {
+      raw = String(wordObj.word);
+    } else {
+      raw = (lemma != null) ? String(lemma) : '';
+    }
+
+    raw = raw.trim();
+
+    // убрать служебные скобки вроде "(sich)"
+    raw = raw.replace(/\s*\([^\)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+
+    return raw;
+  }
+
 
 })(window);
