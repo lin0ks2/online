@@ -39,11 +39,7 @@
   const LS_PRO      = 'mm.proUnlocked';
 
   App.isPro = function(){
-    try {
-      return window.localStorage.getItem(LS_PRO) === '1';
-    } catch (e) {
-      return false;
-    }
+      return true;
   };
 
   App.unlockPro = function(){
