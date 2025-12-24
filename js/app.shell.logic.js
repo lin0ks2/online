@@ -2,8 +2,6 @@
  * Проект: MOYAMOVA
  * Файл: app.shell.logic.js
  * Назначение: Логика оболочки приложения и переходов между экранами
- * Версия: 1.0
- * Обновлено: 2025-11-17
  * ========================================================== */
 
 (function () {
@@ -46,17 +44,6 @@
   if (burger) burger.addEventListener('click', toggleMenu);
   if (overlay) overlay.addEventListener('click', closeMenu);
 
-  // Делегирование кликов в offcanvas
-  if (ocPanel) {
-    ocPanel.addEventListener('click', function(e){
-      const btn = e.target && e.target.closest ? e.target.closest('[data-action]') : null;
-      if (!btn) return;
-      const action = btn.getAttribute('data-action');
-      if (!action) return;
-      if (actionsMap[action]) actionsMap[action]();
-    });
-  }
-
   // ==========================================================
   // ЭТАП 1: всегда Donate, PRO-активация отключена
   // ==========================================================
@@ -68,8 +55,6 @@
         '.actions-row-bottom .action-btn[data-action="donate"]'
       );
       if (btn) {
-        // Всегда Donate (Web/PWA). Точку "pro" сохраняем как action,
-        // но UI её больше не показывает.
         btn.dataset.action = 'donate';
         btn.textContent = '💰';
         btn.setAttribute('aria-label', 'Поддержать проект');
@@ -89,7 +74,6 @@
         var v = (window.App && App.APP_VER) || null;
         if (v) el.textContent = v;
       }
-      // после загрузки App обновляем состояние кнопки PRO/донат
       applyProButtonState();
     }
     if (!(window.App && App.APP_VER)) {
@@ -104,7 +88,6 @@
   // ==========================================================
   const actionsMap = {
     guide() {
-      // Экран "Инструкция" реализован в js/view.guide.js (объект Guide)
       try {
         if (window.Guide && typeof window.Guide.open === 'function') {
           window.Guide.open();
@@ -149,12 +132,47 @@
       try { closeMenu(); } catch (_) {}
     },
 
-    contact() {
-      location.href = 'mailto:peiko.oleh@gmail.com';
+    // ✅ ИСПРАВЛЕНИЕ: добавлен обработчик юридических страниц
+    legal() {
+      try {
+        // js/legal.js подключён как module и выставляет window.Legal
+        if (window.Legal && typeof window.Legal.open === 'function') {
+          window.Legal.open('terms'); // стартуем с "Условия"
+        } else {
+          console.warn('Legal module not ready (window.Legal отсутствует)');
+          alert('Юридические страницы ещё не готовы. Обновите страницу.');
+        }
+      } catch (e) {
+        console.warn('legal open error', e);
+      }
       try { closeMenu(); } catch (_) {}
     },
 
-    // Прочие действия могут быть добавлены в других версиях оболочки
+    contact() {
+      location.href = 'mailto:peiko.oleh@gmail.com';
+      try { closeMenu(); } catch (_) {}
+    }
   };
+
+  // Делегирование кликов внутри панели (меню + быстрые кнопки)
+  if (ocPanel) {
+    ocPanel.addEventListener('click', function(e){
+      const btn = e.target && e.target.closest ? e.target.closest('[data-action]') : null;
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      if (!action) return;
+      if (actionsMap[action]) actionsMap[action]();
+    });
+  }
+
+  // На всякий случай: быстрые кнопки снизу тоже напрямую (если структура изменится)
+  document
+    .querySelectorAll('.actions-row-bottom .action-btn')
+    .forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const act = btn.dataset.action;
+        (actionsMap[act] || function () {})();
+      });
+    });
 
 })();
