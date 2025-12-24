@@ -12,12 +12,8 @@
     const h = document.querySelector('.header');
     const f = document.querySelector('.app-footer');
     const rs = document.documentElement.style;
-
-    const hh = h ? Math.round(h.getBoundingClientRect().height) : 0;
-    const fh = f ? Math.round(f.getBoundingClientRect().height) : 0;
-
-    rs.setProperty('--header-h', hh + 'px');
-    rs.setProperty('--footer-h', fh + 'px');
+    if (h) rs.setProperty('--header-h-actual', h.getBoundingClientRect().height + 'px');
+    if (f) rs.setProperty('--footer-h-actual', f.getBoundingClientRect().height + 'px');
   }
   window.addEventListener('load', updateHFVars);
   window.addEventListener('resize', updateHFVars);
