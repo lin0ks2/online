@@ -199,7 +199,7 @@
       // Учить артикли → (пока) просто показываем карточку для визуальной проверки
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
-        articlesBtn.addEventListener('click', ()=>{
+                articlesBtn.addEventListener('click', ()=>{
           // сохраняем выбранную деку, как и обычный ОК
           try {
             A.settings = A.settings || {};
@@ -207,26 +207,31 @@
             if (typeof A.saveSettings === 'function') {
               A.saveSettings(A.settings);
             }
-          } catch(_){ }
+          } catch(_){}
 
-          // Визуальный каркас: подменяем содержимое #app карточкой артиклей.
-          // Логику 1:1 и полноценный запуск с home.js подключим следующим шагом.
+          // Переходим на главный экран и там монтируем карточку артиклей.
+          // Важно: не ломаем базовую разметку — используем home.js Router.
           try {
-            const host = document.getElementById('app');
-            if (!host) return;
-            host.innerHTML = '';
+            if (A.Router && typeof A.Router.routeTo === 'function') {
+              A.Router.routeTo('home');
+            }
+          } catch(_){}
 
-            if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') {
-              A.ArticlesCard.mount(host);
-            }
-            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.start === 'function') {
-              A.ArticlesTrainer.start('de_nouns', 'normal');
-            }
-          } catch(_){ }
+          // Ждём, пока home.js отрисует .home-trainer, затем монтируем плагин.
+          setTimeout(()=>{
+            try {
+              if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') {
+                // монтируемся в стандартную карточку тренера
+                A.ArticlesCard.mount(document.querySelector('.home-trainer'));
+              }
+              if (A.ArticlesTrainer && typeof A.ArticlesTrainer.start === 'function') {
+                A.ArticlesTrainer.start('de_nouns', 'normal');
+              }
+            } catch(_){}
+          }, 0);
         });
       }
-
-      // первичная синхронизация кнопки
+// первичная синхронизация кнопки
       updateArticlesButton();
 
       renderFlagsUI();
