@@ -93,20 +93,32 @@
     return n;
   }
 
-  // MVP-алгоритм (простая модель):
-  // +1 звезда за правильный, -1 за неправильный.
-  // Позже можно заменить на более "умную" модель.
+  // Начисление звёзд должно совпадать с базовым тренером (home/app.trainer.js):
+  // normal: +1 / -1
+  // hard:   +0.5 / -0.5
+  function difficulty() {
+    try {
+      var domLvl = (document && document.documentElement && document.documentElement.dataset && document.documentElement.dataset.level) || null;
+      var lvl = (A.settings && (A.settings.level || A.settings.mode)) || domLvl || 'normal';
+      return String(lvl).toLowerCase() === 'hard' ? 'hard' : 'normal';
+    } catch (_) {
+      return 'normal';
+    }
+  }
+
+  function deltaOnAnswer(isCorrect) {
+    var hard = difficulty() === 'hard';
+    if (isCorrect) return hard ? +0.5 : +1.0;
+    return hard ? -0.5 : -1.0;
+  }
   function onAnswer(deckKey, wordId, isCorrect, meta) {
     var e = getEntry(deckKey, wordId);
     var max = starsMax();
 
-    if (isCorrect) {
-      e.c = (e.c || 0) + 1;
-      e.s = clamp((e.s || 0) + 1, 0, max);
-    } else {
-      e.w = (e.w || 0) + 1;
-      e.s = clamp((e.s || 0) - 1, 0, max);
-    }
+    if (isCorrect) e.c = (e.c || 0) + 1;
+    else e.w = (e.w || 0) + 1;
+
+    e.s = clamp((e.s || 0) + deltaOnAnswer(!!isCorrect), 0, max);
     e.ts = safeNow();
     save();
   }

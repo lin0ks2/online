@@ -136,7 +136,8 @@
 
             <div class="dicts-actions">
               <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
-              <button type="button" class="btn-ghost" id="dicts-articles" style="display:none">${T.articles}</button>
+              <!-- ВАЖНО: тот же стиль, что и у OK -->
+              <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
             </div>
           </section>
         </div>`;
@@ -180,8 +181,9 @@
 
       // ОК → уходим на главную
       const ok = document.getElementById('dicts-apply');
-      if (ok){
-        ok.addEventListener('click', ()=>{
+	      if (ok){
+	        // назначаем обработчик через .onclick, чтобы не накапливать слушатели
+	        ok.onclick = ()=>{
   try {
     A.settings = A.settings || {};
     A.settings.lastDeckKey = selectedKey;
@@ -193,13 +195,14 @@
     document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: selectedKey } }));
   } catch(_) {}
   goHome();
-});
+	};
       }
 
       // Учить артикли → (пока) просто показываем карточку для визуальной проверки
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
-                articlesBtn.addEventListener('click', ()=>{
+	                // назначаем обработчик через .onclick, чтобы не накапливать слушатели
+	                articlesBtn.onclick = ()=>{
           // сохраняем выбранную деку, как и обычный ОК
           try {
             A.settings = A.settings || {};
@@ -211,8 +214,11 @@
 
           // Переходим на главный экран и там монтируем карточку артиклей.
           // Важно: не ломаем базовую разметку — используем home.js Router.
+          // Надёжный переход на home: пробуем оба роутера
           try {
-            if (A.Router && typeof A.Router.routeTo === 'function') {
+            if (window.Router && typeof window.Router.routeTo === 'function') {
+              window.Router.routeTo('home');
+            } else if (A.Router && typeof A.Router.routeTo === 'function') {
               A.Router.routeTo('home');
             }
           } catch(_){}
@@ -229,7 +235,7 @@
               }
             } catch(_){}
           }, 0);
-        });
+	        };
       }
 // первичная синхронизация кнопки
       updateArticlesButton();

@@ -30,6 +30,12 @@
   var currentWord = null;
   var lastWordId = '';
 
+  // Поведение ответов должно совпадать 1:1 с базовым тренером:
+  // - штраф за неправильный ответ только один раз на слово
+  // - после правильного ответа ввод блокируется и идём дальше
+  var solved = false;
+  var penalized = false;
+
   function norm(s) {
     return String(s || '').trim().toLowerCase();
   }
@@ -115,6 +121,9 @@
     mode = String(m || 'default');
     active = true;
 
+    solved = false;
+    penalized = false;
+
     // статистика сессии
     try { if (A.ArticlesStats && A.ArticlesStats.startSession) A.ArticlesStats.startSession(); } catch (e) {}
 
@@ -129,6 +138,8 @@
     mode = 'default';
     currentWord = null;
     lastWordId = '';
+    solved = false;
+    penalized = false;
     try { if (A.ArticlesStats && A.ArticlesStats.endSession) A.ArticlesStats.endSession(); } catch (e) {}
     notifyUpdate();
   }
@@ -137,6 +148,8 @@
     if (!active) return;
     currentWord = pickNextWord();
     lastWordId = currentWord ? String(currentWord.id) : '';
+    solved = false;
+    penalized = false;
     notifyUpdate();
   }
 
@@ -147,19 +160,35 @@
     var picked = norm(article);
     var ok = picked === correct;
 
-    try {
-      if (A.ArticlesProgress && typeof A.ArticlesProgress.onAnswer === 'function') {
-        A.ArticlesProgress.onAnswer(deckKey, currentWord.id, ok);
+    // IMPORTANT: начисление/штраф только 1 раз на слово (как в home.js)
+    var applied = false;
+    if (ok) {
+      if (!solved) {
+        solved = true;
+        applied = true;
       }
-    } catch (e) {}
-
-    try {
-      if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
-        A.ArticlesStats.onAnswer(ok);
+    } else {
+      if (!penalized) {
+        penalized = true;
+        applied = true;
       }
-    } catch (e) {}
+    }
 
-    return { ok: ok, correct: correct };
+    if (applied) {
+      try {
+        if (A.ArticlesProgress && typeof A.ArticlesProgress.onAnswer === 'function') {
+          A.ArticlesProgress.onAnswer(deckKey, currentWord.id, ok, { mode: mode });
+        }
+      } catch (e) {}
+
+      try {
+        if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
+          A.ArticlesStats.onAnswer(ok);
+        }
+      } catch (e) {}
+    }
+
+    return { ok: ok, correct: correct, applied: applied };
   }
 
   A.ArticlesTrainer = {

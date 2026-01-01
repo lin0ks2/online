@@ -22,12 +22,20 @@
 
   var A = (window.App = window.App || {});
 
-  var SHOW_TRANSLATION = true;
+  // IMPORTANT: перевод отключён полностью по ТЗ (вторая строка убирается).
 
   var mounted = false;
   var rootEl = null;
   var snapshotHTML = '';
   var unsubs = [];
+
+  // Поведение ответов должно совпадать с базовым тренером (home.js):
+  // - неправильный ответ: подсветка + disable только нажатой кнопки
+  // - штраф/статистика применяются 1 раз на слово (логика в ArticlesTrainer)
+  // - правильный ответ: блокируем все кнопки + is-correct + is-dim
+  // - переход к следующему слову с тем же таймингом
+  var uiState = { wordId: '', solved: false };
+  var ADV_DELAY = 750;
 
   function qs(sel, root) {
     return (root || document).querySelector(sel);
@@ -63,6 +71,21 @@
     btn.classList.add('is-disabled');
   }
 
+  function paintStars(deckKey, wordId) {
+    try {
+      if (!rootEl) return;
+      var starsBox = qs('.trainer-stars', rootEl);
+      if (!starsBox || !A.ArticlesProgress || !wordId) return;
+      var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
+      var have = (A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(deckKey, wordId)) || 0;
+      var html = '';
+      for (var i = 0; i < max; i++) {
+        html += '<span class="star' + (i < have ? ' full' : '') + '" aria-hidden="true">★</span>';
+      }
+      starsBox.innerHTML = html;
+    } catch (e) {}
+  }
+
   function render(vm) {
     if (!mounted || !rootEl || !vm) return;
 
@@ -92,23 +115,9 @@
       setAudioDisabled(wordEl);
     }
 
-    // вторичная строка перевода
+    // Перевод убран полностью по ТЗ
     var trEl = qs('.trainer-translation', rootEl);
-    if (SHOW_TRANSLATION) {
-      if (!trEl) {
-        trEl = document.createElement('p');
-        trEl.className = 'trainer-translation';
-        // вставляем сразу после .trainer-word
-        if (wordEl && wordEl.parentNode) {
-          wordEl.parentNode.insertBefore(trEl, wordEl.nextSibling);
-        } else {
-          rootEl.insertBefore(trEl, rootEl.firstChild);
-        }
-      }
-      trEl.textContent = String(vm.translation || '').trim();
-    } else {
-      if (trEl && trEl.parentNode) trEl.parentNode.removeChild(trEl);
-    }
+    if (trEl && trEl.parentNode) trEl.parentNode.removeChild(trEl);
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
@@ -128,25 +137,22 @@
 
     // ответы
     if (answersEl) {
+      // сброс UI-состояния при смене слова
+      if (String(uiState.wordId) !== String(vm.wordId || '')) {
+        uiState.wordId = String(vm.wordId || '');
+        uiState.solved = false;
+      }
+
       answersEl.innerHTML = '';
       var opts = vm.options || ['der', 'die', 'das'];
       for (var j = 0; j < opts.length; j++) {
-        (function (article) {
-          var b = document.createElement('button');
-          b.className = 'answer-btn';
-          b.textContent = String(article);
-          b.onclick = function () {
-            try {
-              var res = A.ArticlesTrainer && A.ArticlesTrainer.answer ? A.ArticlesTrainer.answer(article) : { ok: false, correct: '' };
-              b.classList.add(res.ok ? 'is-correct' : 'is-wrong');
-              // MVP: короткая пауза и следующий
-              setTimeout(function () {
-                try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
-              }, 350);
-            } catch (e) {}
-          };
-          answersEl.appendChild(b);
-        })(opts[j]);
+        var article = String(opts[j]);
+        var b = document.createElement('button');
+        b.className = 'answer-btn';
+        b.textContent = article;
+        b.setAttribute('data-article', article);
+        // КЛИКИ обрабатываются единым делегированным слушателем (см. mount)
+        answersEl.appendChild(b);
       }
     }
   }
@@ -159,6 +165,44 @@
     snapshotHTML = rootEl.innerHTML;
     mounted = true;
     rootEl.classList.add('is-articles');
+
+    // Делегированный обработчик ответов (один раз на mount)
+    var onRootClick = function (e) {
+      try {
+        var btn = e && e.target && e.target.closest ? e.target.closest('.answers-grid .answer-btn') : null;
+        if (!btn) return;
+        if (btn.disabled) return;
+        if (uiState.solved) return;
+
+        var picked = btn.getAttribute('data-article') || btn.textContent || '';
+        var vm = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
+        var res = (A.ArticlesTrainer && A.ArticlesTrainer.answer) ? A.ArticlesTrainer.answer(picked) : { ok:false, correct:'', applied:false };
+
+        if (res.ok) {
+          uiState.solved = true;
+          btn.classList.add('is-correct');
+          var all = rootEl.querySelectorAll('.answers-grid .answer-btn');
+          all.forEach(function (b) {
+            b.disabled = true;
+            if (b !== btn) b.classList.add('is-dim');
+          });
+          if (vm) paintStars(vm.deckKey, vm.wordId);
+          setTimeout(function () {
+            try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
+          }, ADV_DELAY);
+          return;
+        }
+
+        // wrong
+        btn.classList.add('is-wrong');
+        btn.disabled = true;
+        if (res.applied && vm) paintStars(vm.deckKey, vm.wordId);
+      } catch (e) {}
+    };
+    rootEl.addEventListener('click', onRootClick, { passive: true });
+    unsubs.push(function () {
+      try { if (rootEl) rootEl.removeEventListener('click', onRootClick); } catch (e) {}
+    });
 
     // подписка на обновления от тренера
     var bus = ensureBusOn();
@@ -196,7 +240,6 @@
   A.ArticlesCard = {
     mount: mount,
     unmount: unmount,
-    render: render,
-    setShowTranslation: function (v) { SHOW_TRANSLATION = !!v; }
+    render: render
   };
 })();
