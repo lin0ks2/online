@@ -25,7 +25,8 @@
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
       close:   uk ? 'Закрити' : 'Закрыть',
-      ok:      'Ок'
+      ok:      'Ок',
+      articles: uk ? 'Вчити артиклі' : 'Учить артикли'
     };
   }
 
@@ -135,6 +136,7 @@
 
             <div class="dicts-actions">
               <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
+              <button type="button" class="btn-ghost" id="dicts-articles" style="display:none">${T.articles}</button>
             </div>
           </section>
         </div>`;
@@ -157,7 +159,23 @@
           selectedKey = key;
           app.querySelectorAll('.dict-row').forEach(r=> r.classList.remove('is-selected'));
           row.classList.add('is-selected');
+
+          // показать/скрыть кнопку "Учить артикли" (только если подключён плагин)
+          updateArticlesButton();
         }, { passive:true });
+      }
+
+      // Видимость кнопки "Учить артикли" зависит от выбранной деки и наличия плагина
+      function updateArticlesButton(){
+        try{
+          const b = document.getElementById('dicts-articles');
+          if (!b) return;
+          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
+          const show = hasPlugin && (selectedKey === 'de_nouns');
+          b.style.display = show ? '' : 'none';
+        }catch(_){
+          // no-op
+        }
       }
 
       // ОК → уходим на главную
@@ -177,6 +195,39 @@
   goHome();
 });
       }
+
+      // Учить артикли → (пока) просто показываем карточку для визуальной проверки
+      const articlesBtn = document.getElementById('dicts-articles');
+      if (articlesBtn){
+        articlesBtn.addEventListener('click', ()=>{
+          // сохраняем выбранную деку, как и обычный ОК
+          try {
+            A.settings = A.settings || {};
+            A.settings.lastDeckKey = selectedKey;
+            if (typeof A.saveSettings === 'function') {
+              A.saveSettings(A.settings);
+            }
+          } catch(_){ }
+
+          // Визуальный каркас: подменяем содержимое #app карточкой артиклей.
+          // Логику 1:1 и полноценный запуск с home.js подключим следующим шагом.
+          try {
+            const host = document.getElementById('app');
+            if (!host) return;
+            host.innerHTML = '';
+
+            if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') {
+              A.ArticlesCard.mount(host);
+            }
+            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.start === 'function') {
+              A.ArticlesTrainer.start('de_nouns', 'normal');
+            }
+          } catch(_){ }
+        });
+      }
+
+      // первичная синхронизация кнопки
+      updateArticlesButton();
 
       renderFlagsUI();
     }
