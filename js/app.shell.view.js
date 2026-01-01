@@ -12,6 +12,19 @@
   var root = document.getElementById('moya-shell-root') || document.body;
   if (!root) return;
 
+  // Env gate for TWA. TWA should be launched with start_url like: /?twa=1
+  // In TWA we must not show any external payment/donation entry points.
+  var isTwa = false;
+  try {
+    isTwa = String(location.search || '').indexOf('twa=1') !== -1;
+  } catch (_) {
+    isTwa = false;
+  }
+
+  var donateBtnHtml = isTwa
+    ? ''
+    : '<button class="action-btn" data-action="donate"  aria-label="Поддержать проект">💰</button>';
+
   root.innerHTML =
     '<header class="header">' +
       '<div class="brand">' +
@@ -95,7 +108,7 @@
 
         '<div class="actions-row-bottom" role="group" aria-label="Быстрые действия">' +
           '<button class="action-btn" data-action="guide"   aria-label="Инструкция" data-i18n-aria="ariaGuide">📘</button>' +
-          '<button class="action-btn" data-action="donate"  aria-label="Поддержать проект">💰</button>' +
+          donateBtnHtml +
           '<button class="action-btn" data-action="contact" aria-label="Связаться">✉️</button>' +
           '<button class="action-btn" data-action="share"   aria-label="Поделиться">🔗</button>' +
           '<button class="action-btn" data-action="legal"   aria-label="Юридическая информация">⚖️</button>' +

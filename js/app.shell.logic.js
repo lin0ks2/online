@@ -9,6 +9,28 @@
 (function () {
   'use strict';
 
+
+  // TWA mode flag (set via start_url like /?twa=1)
+  const IS_TWA = /(?:\?|&)twa=1(?:&|$)/.test(window.location.search);
+
+  /**
+   * Best-effort opener for external links across Browser / PWA / TWA.
+   *
+   * Rationale:
+   * - Some Android WebView/TWA environments dispatch deep links (and invite links)
+   *   more reliably when we attempt to open a new browsing context first.
+   * - If popups are blocked or the context cannot be created, we fall back to a
+   *   direct navigation.
+   */
+  function openExternalUrl(url) {
+    try {
+      const w = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!w) window.location.href = url;
+    } catch (e) {
+      window.location.href = url;
+    }
+  }
+
   // Высоты header/footer для offcanvas
   function updateHFVars() {
     const h = document.querySelector('.header');
@@ -244,23 +266,12 @@
 
     
     pro() {
-      if (!window.ProUpgrade) {
-        const s = document.createElement('script');
-        s.src = './js/pro.js';
-        s.onload = () => {
-          if (window.ProUpgrade && typeof window.ProUpgrade.open === 'function') {
-            window.ProUpgrade.open();
-          }
-        };
-        document.head.appendChild(s);
-      } else {
-        if (typeof window.ProUpgrade.open === 'function') {
-          window.ProUpgrade.open();
-        }
-      }
+      // PRO временно отключён. Точка сохранена для будущего Google Play Billing.
+      return;
     },
 
-donate() {
+    donate() {
+      if (IS_TWA) return;
       if (!window.Donate) {
         const s = document.createElement('script');
         s.src = './js/donate.js';
@@ -300,7 +311,10 @@ donate() {
     },
 
     contact() {
-      location.href = 'mailto:peiko.oleh@gmail.com';
+      // Viber community invite (preferred over email for fast feedback)
+      openExternalUrl(
+        'https://invite.viber.com/?g2=AQAitGq4muZQCVW44K1Z4aR%2FP9VDM2%2Bso14cyg3Ec1e7mt%2BTaLbs5S1UdHZCU%2Fy5'
+      );
     }
   };
 
