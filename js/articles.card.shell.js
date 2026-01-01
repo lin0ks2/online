@@ -34,7 +34,7 @@
   // - штраф/статистика применяются 1 раз на слово (логика в ArticlesTrainer)
   // - правильный ответ: блокируем все кнопки + is-correct + is-dim
   // - переход к следующему слову с тем же таймингом
-  var uiState = { wordId: '', solved: false };
+  var uiState = { wordId: '', solved: false, layout: null };
   var ADV_DELAY = 750;
 
   function qs(sel, root) {
@@ -141,16 +141,44 @@
       if (String(uiState.wordId) !== String(vm.wordId || '')) {
         uiState.wordId = String(vm.wordId || '');
         uiState.solved = false;
+        uiState.layout = null;
       }
 
       answersEl.innerHTML = '';
-      var opts = vm.options || ['der', 'die', 'das'];
-      for (var j = 0; j < opts.length; j++) {
-        var article = String(opts[j]);
+      var base = vm.options || ['der','die','das'];
+
+      // 4 кнопки: 3 артикля + 1 пустая. Расклад фиксируем на слово, чтобы не "прыгал" при перерендерах.
+      if (!uiState.layout) {
+        // случайно выбираем позицию пустой кнопки и перемешиваем артикли
+        var articles = base.slice(0, 3);
+        for (var si = articles.length - 1; si > 0; si--) {
+          var sj = Math.floor(Math.random() * (si + 1));
+          var tmp = articles[si]; articles[si] = articles[sj]; articles[sj] = tmp;
+        }
+        var emptyIndex = Math.floor(Math.random() * 4);
+        var layout = new Array(4);
+        var ai = 0;
+        for (var bi = 0; bi < 4; bi++) {
+          if (bi === emptyIndex) layout[bi] = '';
+          else layout[bi] = String(articles[ai++] || '');
+        }
+        uiState.layout = layout;
+      }
+
+      for (var j = 0; j < 4; j++) {
+        var article = String(uiState.layout[j] || '');
         var b = document.createElement('button');
         b.className = 'answer-btn';
         b.textContent = article;
         b.setAttribute('data-article', article);
+
+        // пустая кнопка: оставляем пустой текст, делаем disabled
+        if (!article) {
+          b.disabled = true;
+          b.classList.add('is-empty');
+          b.setAttribute('aria-disabled', 'true');
+        }
+
         // КЛИКИ обрабатываются единым делегированным слушателем (см. mount)
         answersEl.appendChild(b);
       }
@@ -158,8 +186,21 @@
   }
 
   function mount(root) {
-    if (mounted) return;
-    rootEl = root || qs('.home-trainer');
+    // В SPA разметка .home-trainer может пересоздаваться при навигации.
+    // Если мы уже смонтированы в старый DOM-узел — нужно перемонтироваться.
+    var nextRoot = root || qs('.home-trainer');
+    if (mounted) {
+      try {
+        if (!rootEl || (rootEl && rootEl.isConnected === false) || (nextRoot && rootEl !== nextRoot)) {
+          unmount();
+        } else {
+          return;
+        }
+      } catch (_e) {
+        // на всякий случай — не блокируем монтирование
+      }
+    }
+    rootEl = nextRoot;
     if (!rootEl) return;
 
     snapshotHTML = rootEl.innerHTML;
@@ -175,6 +216,7 @@
         if (uiState.solved) return;
 
         var picked = btn.getAttribute('data-article') || btn.textContent || '';
+        if (!String(picked || '').trim()) return;
         var vm = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
         var res = (A.ArticlesTrainer && A.ArticlesTrainer.answer) ? A.ArticlesTrainer.answer(picked) : { ok:false, correct:'', applied:false };
 

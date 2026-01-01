@@ -72,20 +72,51 @@
   }
 
   function pickNextWord() {
-    var deck = getDeck();
-    if (!deck.length) return null;
-    // MVP: случайный выбор без сложной логики батчей.
-    // Позже заменим на 1:1 поведение базового тренера.
-    var tries = 16;
+    // 1:1 с базовым тренером: берём deck slice (учитывает активный набор/батч)
+    // и выбираем индекс через sampleNextIndexWeighted(), если доступно.
+    var slice = [];
+    try {
+      if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') {
+        slice = A.Trainer.getDeckSlice(deckKey) || [];
+      }
+    } catch (e) {}
+
+    // fallback: полный deck
+    if (!slice || !slice.length) {
+      slice = getDeck();
+    }
+    if (!slice || !slice.length) return null;
+
+    function pickIndex(arr) {
+      try {
+        if (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function') {
+          return A.Trainer.sampleNextIndexWeighted(arr);
+        }
+      } catch (e) {}
+      return Math.floor(Math.random() * arr.length);
+    }
+
+    var tries = 24;
     while (tries-- > 0) {
-      var w = deck[Math.floor(Math.random() * deck.length)];
+      var idx = pickIndex(slice);
+      var w = slice[idx];
       if (!w) continue;
       if (String(w.id) === String(lastWordId)) continue;
       var a = parseArticle(w.word || w.term || w.de);
       if (!ALLOWED[a]) continue;
       return w;
     }
-    return deck[0] || null;
+
+    // последний шанс: линейный проход
+    for (var i = 0; i < slice.length; i++) {
+      var ww = slice[i];
+      if (!ww) continue;
+      var aa = parseArticle(ww.word || ww.term || ww.de);
+      if (!ALLOWED[aa]) continue;
+      if (String(ww.id) === String(lastWordId)) continue;
+      return ww;
+    }
+    return slice[0] || null;
   }
 
   function buildViewModel() {
@@ -129,6 +160,7 @@
 
     currentWord = pickNextWord();
     lastWordId = currentWord ? String(currentWord.id) : '';
+    try { A.__currentWord = currentWord; } catch(e) {}
     notifyUpdate();
   }
 
@@ -140,6 +172,7 @@
     lastWordId = '';
     solved = false;
     penalized = false;
+    try { A.__currentWord = null; } catch(e) {}
     try { if (A.ArticlesStats && A.ArticlesStats.endSession) A.ArticlesStats.endSession(); } catch (e) {}
     notifyUpdate();
   }
@@ -148,6 +181,7 @@
     if (!active) return;
     currentWord = pickNextWord();
     lastWordId = currentWord ? String(currentWord.id) : '';
+    try { A.__currentWord = currentWord; } catch(e) {}
     solved = false;
     penalized = false;
     notifyUpdate();
@@ -198,6 +232,7 @@
     next: next,
     answer: answer,
     getViewModel: buildViewModel,
+    getCurrentWord: function(){ return currentWord; },
     // helpers (можно использовать из UI)
     _stripArticle: stripArticle,
     _parseArticle: parseArticle
