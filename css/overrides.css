@@ -161,6 +161,15 @@ body.no-scroll {
   text-align: center;
 }
 
+/* Перевод в тренере артиклей: между словом и подсказкой, на втором плане */
+.home-trainer.is-articles .trainer-translation {
+  margin: -2px auto 6px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+  opacity: 0.72;
+}
+
 /* Базовый вид кнопки озвучки */
 .trainer-audio-btn {
   display: inline-flex;
