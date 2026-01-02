@@ -212,6 +212,15 @@
     mounted = true;
     rootEl.classList.add('is-articles');
 
+    // В тренере артиклей НЕ показываем статистику "Всего слов / Выучено" под кнопкой "Не знаю".
+    try {
+      var ds = qs('#dictStats', rootEl);
+      if (ds) {
+        ds.textContent = '';
+        ds.style.display = 'none';
+      }
+    } catch (_e0) {}
+
     // Делегированный обработчик ответов (один раз на mount)
     var onRootClick = function (e) {
       try {

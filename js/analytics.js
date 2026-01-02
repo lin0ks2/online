@@ -65,8 +65,7 @@
     uiLang: null,
     deckKey: null,
     appMode: null,
-    heartbeatTimer: null,
-    trainerKind: null
+    heartbeatTimer: null
   };
 
   // Интервал отправки "пульса" в миллисекундах
@@ -98,8 +97,6 @@
         learn_lang: trainingState.learnLang || null,
         ui_lang: trainingState.uiLang || null,
         deck_key: trainingState.deckKey || null,
-        trainer_kind: trainingState.trainerKind || null,
-      trainer_kind: trainingState.trainerKind || null,
         app_mode: trainingState.appMode || null,
         elapsed_sec: elapsedSec
       });
@@ -178,7 +175,6 @@
     trainingState.learnLang = opts.learnLang || trainingState.learnLang || null;
     trainingState.uiLang = opts.uiLang || trainingState.uiLang || null;
     trainingState.deckKey = opts.deckKey || null;
-    trainingState.trainerKind = opts.trainerKind || trainingState.trainerKind || 'words';
     trainingState.appMode = detectAppMode();
 
     // сразу прокинем user properties
@@ -192,8 +188,6 @@
       learn_lang: trainingState.learnLang || null,
       ui_lang: trainingState.uiLang || null,
       deck_key: trainingState.deckKey || null,
-        trainer_kind: trainingState.trainerKind || null,
-      trainer_kind: trainingState.trainerKind || null,
       app_mode: trainingState.appMode || null
     });
 
@@ -224,8 +218,6 @@
       learn_lang: trainingState.learnLang || null,
       ui_lang: trainingState.uiLang || null,
       deck_key: trainingState.deckKey || null,
-        trainer_kind: trainingState.trainerKind || null,
-      trainer_kind: trainingState.trainerKind || null,
       app_mode: trainingState.appMode || null,
       duration_sec: durationSec,
       reason: opts.reason || null
@@ -234,19 +226,17 @@
     // локальная статистика времени тренировки (3-й экран)
     try {
       if (window.App && window.App.Stats && typeof window.App.Stats.bump === 'function') {
+        // Разделяем активность: слова vs артикли (на базе trainerKind).
+        var kind = 'words';
+        try {
+          var tk = window.App && window.App.settings && window.App.settings.trainerKind;
+          if (String(tk || '').toLowerCase() === 'articles') kind = 'articles';
+        } catch (_e) {}
         window.App.Stats.bump({
           lang: trainingState.learnLang || null,
-          seconds: durationSec
+          seconds: durationSec,
+          kind: kind
         });
-
-        // раздельное время тренировки: слова / артикли
-        if (typeof window.App.Stats.bumpTrainingTime === 'function') {
-          window.App.Stats.bumpTrainingTime({
-            lang: trainingState.learnLang || null,
-            trainerKind: trainingState.trainerKind || 'words',
-            seconds: durationSec
-          });
-        }
       }
     } catch (_) {}
 
@@ -254,7 +244,6 @@
     trainingState.startedAt = null;
     trainingState.lastHeartbeatAt = null;
     trainingState.deckKey = null;
-    trainingState.trainerKind = null;
     // learnLang/uiLang/appMode оставляем в state — они актуальны для user props
   }
 

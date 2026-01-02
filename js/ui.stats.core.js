@@ -22,15 +22,6 @@
     if (!App.state.activity) {
       App.state.activity = {};
     }
-
-  function ensureTrainingTimeStore(){
-    App.state = App.state || {};
-    if (!App.state.trainingTime) {
-      App.state.trainingTime = {};
-    }
-    return App.state.trainingTime;
-  }
-
     return App.state.activity;
   }
 
@@ -64,6 +55,8 @@
    *   learned   — сколько слов ДОУЧЕНО (дошли до max stars)
    *   reviewed  — сколько карточек просмотрено/отвечено
    *   seconds   — сколько секунд добавить к счётчику времени
+   *   kind     — 'words' | 'articles' (необязательно). Если задан, дополнительно
+   *              пишем раздельные счётчики wordsSeconds / articlesSeconds.
    */
   Stats.bump = function(options) {
     options = options || {};
@@ -85,54 +78,26 @@
     var learned  = Number(options.learned  || 0);
     var reviewed = Number(options.reviewed || 0);
     var seconds  = Number(options.seconds  || 0);
+    var kind     = String(options.kind || '').toLowerCase();
 
     if (learned)  row.learned  += learned;
     if (reviewed) row.reviewed += reviewed;
-    if (seconds)  row.seconds  += seconds;
+
+    if (seconds) {
+      row.seconds += seconds;
+      // Раздельная активность (слова/артикли) — без ломки старого формата.
+      if (kind === 'articles') {
+        row.articlesSeconds = Number(row.articlesSeconds || 0) + seconds;
+      } else if (kind === 'words') {
+        row.wordsSeconds = Number(row.wordsSeconds || 0) + seconds;
+      }
+    }
 
     // При желании можно тут дернуть принудительное сохранение стейта
     try {
       if (typeof App._saveStateNow === 'function') App._saveStateNow();
       else if (typeof App.saveState === 'function') App.saveState();
     } catch(_) {}
-  };
-
-  /**
-   * Раздельное время тренировки: слова / артикли.
-   * options:
-   *   lang        — код языка (de/en/...), если не передан — попробуем определить
-   *   trainerKind — 'words' | 'articles'
-   *   seconds     — сколько секунд добавить
-   */
-  Stats.bumpTrainingTime = function(options){
-    options = options || {};
-    var store = ensureTrainingTimeStore();
-
-    var lang = options.lang || detectCurrentLang() || '_unknown';
-    var kind = String(options.trainerKind || 'words').toLowerCase();
-    if (kind !== 'articles') kind = 'words';
-
-    if (!store[lang]) store[lang] = { wordsSec: 0, articlesSec: 0 };
-    var row = store[lang];
-
-    var seconds = Number(options.seconds || 0);
-    if (seconds <= 0) return;
-
-    if (kind === 'articles') row.articlesSec += seconds;
-    else row.wordsSec += seconds;
-
-    try {
-      if (typeof App._saveStateNow === 'function') App._saveStateNow();
-      else if (typeof App.saveState === 'function') App.saveState();
-    } catch(_){ }
-  };
-
-  Stats.getTrainingTime = function(lang){
-    var store = (App.state && App.state.trainingTime) || {};
-    if (!lang) lang = detectCurrentLang() || '_unknown';
-    var row = store[lang];
-    if (!row) return { wordsSec: 0, articlesSec: 0 };
-    return { wordsSec: Number(row.wordsSec||0), articlesSec: Number(row.articlesSec||0) };
   };
 
   /**

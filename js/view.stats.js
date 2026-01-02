@@ -24,13 +24,7 @@
       title: (i && i.statsTitle) || (uk ? 'Статистика' : 'Статистика'),
       coreTitle: uk ? 'Основні частини мови' : 'Основные части речи',
       otherTitle: uk ? 'Інші частини мови' : 'Другие части речи',
-      timeSplitTitle: uk ? 'Час у тренуваннях' : 'Время в тренировках',
-      timeSplitWords: uk ? 'Слова' : 'Слова',
-      timeSplitArticles: uk ? 'Артиклі' : 'Артикли',
-      timeSplitDetails: uk ? 'Деталі' : 'Детали',
-      timeSplitTotal: uk ? 'Разом' : 'Итого',
-      timeSplitArticlesLearned: uk ? 'Вивчено артиклів' : 'Выучено артиклей',
-      timeSplitArticlesTime: uk ? 'Час на артиклі' : 'Время на артикли',
+      splitTitle: uk ? 'Час: слова vs артиклі' : 'Время: слова vs артикли',
       activityTitle: uk ? 'Активність' : 'Активность',
       activityNoData: uk
         ? 'Ще немає даних про активність — продовжуйте тренуватися, і тут з’являться кола за днями.'
@@ -108,6 +102,132 @@
     };
   }
 
+  /* ---------------------- раздельное время (слова/артикли) ---------------------- */
+
+  function sumSplitSecondsByLang(langCode) {
+    try {
+      var store = (A.state && A.state.activity) || {};
+      var langMap = store[langCode];
+      if (!langMap) return { words: 0, articles: 0, total: 0 };
+
+      var words = 0;
+      var articles = 0;
+      var total = 0;
+
+      Object.keys(langMap).forEach(function (dateKey) {
+        var row = langMap[dateKey] || {};
+        total += Number(row.seconds || 0);
+        words += Number(row.wordsSeconds || 0);
+        articles += Number(row.articlesSeconds || 0);
+      });
+
+      // Фолбэк для старых данных: если wordsSeconds нет, но total есть — считаем остаток.
+      if (words <= 0 && total > 0 && articles > 0) {
+        words = Math.max(0, total - articles);
+      }
+
+      return { words: words, articles: articles, total: total };
+    } catch (_) {
+      return { words: 0, articles: 0, total: 0 };
+    }
+  }
+
+  function countLearnedArticlesByLang(langCode) {
+    try {
+      if (!A.ArticlesProgress || typeof A.ArticlesProgress.export !== 'function') return 0;
+      if (!A.Decks || typeof A.Decks.langOfKey !== 'function') return 0;
+
+      var data = A.ArticlesProgress.export();
+      var byDeck = (data && data.byDeck) || {};
+      var max = 5;
+      try { max = Number(A.ArticlesProgress.starsMax ? A.ArticlesProgress.starsMax() : 5) || 5; } catch (_) {}
+
+      var cnt = 0;
+      Object.keys(byDeck).forEach(function (deckKey) {
+        var lk = null;
+        try { lk = A.Decks.langOfKey(deckKey) || null; } catch (_) { lk = null; }
+        if (!lk || lk !== langCode) return;
+
+        var map = byDeck[deckKey] || {};
+        Object.keys(map).forEach(function (wordId) {
+          var e = map[wordId] || {};
+          var s = Number(e.s || 0);
+          if (s >= max) cnt += 1;
+        });
+      });
+      return cnt;
+    } catch (_) {
+      return 0;
+    }
+  }
+
+  function formatMinutes(seconds) {
+    seconds = Number(seconds || 0);
+    if (!seconds || seconds <= 0) return '0 мин';
+    var min = Math.round(seconds / 60);
+    return min + ' мин';
+  }
+
+  function renderTimeSplitSet(langCode, texts) {
+    var split = sumSplitSecondsByLang(langCode);
+    var total = split.words + split.articles;
+    if (!total) total = 1;
+
+    var pArticles = Math.round((split.articles / total) * 100);
+    var pWords = 100 - pArticles;
+
+    // Используем тот же "кольцевой" визуал 1:1 (layers + legend), только 2 сегмента.
+    var buckets = [
+      { key: 'words', label: (getUiLang() === 'uk' ? 'Слова' : 'Слова'), seconds: split.words, percent: pWords, color: 'var(--stats-color-verbs, #0ea5e9)' },
+      { key: 'articles', label: (getUiLang() === 'uk' ? 'Артиклі' : 'Артикли'), seconds: split.articles, percent: pArticles, color: 'var(--stats-color-nouns, #6366f1)' }
+    ];
+
+    var layersHtml = buckets.map(function (b, idx) {
+      var angle = degreesFromPercent(b.percent);
+      var scale = buckets.length === 1 ? 1 : 1 - idx * 0.18;
+      return (
+        '<div class="stats-ring-layer" style="--ring-angle:' + angle + 'deg;--ring-scale:' + scale + ';--ring-color:' + b.color + ';">' +
+          '<div class="stats-ring-layer__ring"></div>' +
+        '</div>'
+      );
+    }).join('');
+
+    var legendHtml = buckets.map(function (b) {
+      return (
+        '<div class="stats-ring-legend__item" style="--ring-color:' + b.color + ';">' +
+          '<span class="stats-ring-legend__dot"></span>' +
+          '<span class="stats-ring-legend__label">' + b.label + '</span>' +
+          '<span class="stats-ring-legend__value">' + formatMinutes(b.seconds) + '</span>' +
+        '</div>'
+      );
+    }).join('');
+
+    var learnedArticles = countLearnedArticlesByLang(langCode);
+    var uk = getUiLang() === 'uk';
+    var extraHtml =
+      '<div class="stats-ring-extra" style="margin-top:10px;">' +
+        '<div class="stats-ring-extra__row">' +
+          '<span class="stats-ring-extra__label">' + (uk ? 'Вивчено артиклів:' : 'Выучено артиклей:') + '</span>' +
+          '<span class="stats-ring-extra__value">' + learnedArticles + '</span>' +
+        '</div>' +
+        '<div class="stats-ring-extra__row">' +
+          '<span class="stats-ring-extra__label">' + (uk ? 'Час на артиклі:' : 'Время на артикли:') + '</span>' +
+          '<span class="stats-ring-extra__value">' + formatMinutes(split.articles) + '</span>' +
+        '</div>' +
+      '</div>';
+
+    return (
+      '<div class="stats-ring-set stats-ring-set--split">' +
+        '<div class="stats-ring-set__title">' + texts.splitTitle + '</div>' +
+        '<div class="stats-ring-set__circle">' +
+          '<div class="stats-ring-set__circle-inner">' + layersHtml + '</div>' +
+        '</div>' +
+        '<div class="stats-ring-legend">' + legendHtml + '</div>' +
+        extraHtml +
+      '</div>'
+    );
+  }
+
   function posFromDeckKey(deckKey) {
     const parts = String(deckKey || '').split('_');
     return parts[1] || 'other';
@@ -121,26 +241,6 @@
   function degreesFromPercent(p) {
     return Math.round((p / 100) * 360);
   }
-
-  function formatTimeHhMm(totalSec, uiLang) {
-    totalSec = Math.max(0, Math.round(Number(totalSec || 0)));
-    var totalMin = Math.round(totalSec / 60);
-    var h = Math.floor(totalMin / 60);
-    var m = totalMin % 60;
-    var uk = uiLang === 'uk';
-    var hLabel = uk ? 'год' : 'ч';
-    var mLabel = uk ? 'хв' : 'мин';
-    if (h <= 0 && m <= 0) return '0 ' + mLabel;
-    var s = '';
-    if (h > 0) s += h + ' ' + hLabel;
-    if (m > 0) {
-      if (s) s += ' ';
-      s += m + ' ' + mLabel;
-    }
-    return s;
-  }
-
-
 
   /* основные/прочие части речи и их "цвета" */
   const CORE_POS = ['verbs', 'nouns', 'adjectives'];
@@ -164,9 +264,7 @@
     conjunctions: 'var(--stats-color-conj, #8b5cf6)',
     particles: 'var(--stats-color-part, #14b8a6)',
     numbers: 'var(--stats-color-num, #f59e0b)',
-    other: 'var(--stats-color-other, #9ca3af)',
-    words_time: 'var(--stats-color-nouns, #6366f1)',
-    articles_time: 'var(--stats-color-verbs, #0ea5e9)'
+    other: 'var(--stats-color-other, #9ca3af)'
   };
 
   /* ------------ ключевой момент: откуда берём "выучено" --------- */
@@ -367,7 +465,7 @@
     const legendHtml = buckets
       .map(function (bucket) {
         const color = POS_COLORS[bucket.pos] || POS_COLORS.other;
-        const label = bucket.label || resolvePosLabel(bucket, texts);
+        const label = resolvePosLabel(bucket, texts);
         const val = bucket.learned + ' / ' + bucket.total; // без процентов
         return (
           '<div class="stats-ring-legend__item" style="--ring-color:' +
@@ -686,133 +784,7 @@
     );
   }
 
-  
-  function computeTimeSplit(langCode) {
-    var res = { wordsSec: 0, articlesSec: 0, totalSec: 0 };
-
-    // 1) если есть новый раздельный счётчик — используем его
-    try {
-      if (A.Stats && typeof A.Stats.getTrainingTime === 'function') {
-        var t = A.Stats.getTrainingTime(langCode) || null;
-        if (t) {
-          res.wordsSec = Number(t.wordsSec || 0);
-          res.articlesSec = Number(t.articlesSec || 0);
-        }
-      }
-    } catch (_) {}
-
-    // 2) fallback: слова — суммой по активности (секунды)
-    if (!res.wordsSec) {
-      try {
-        var arr = getDailyActivitySeries(langCode) || [];
-        var sum = 0;
-        arr.forEach(function (d) { sum += Number(d.seconds || 0); });
-        res.wordsSec = sum;
-      } catch (_) {}
-    }
-
-    // 3) articles — из ArticlesStats (секунды)
-    if (!res.articlesSec) {
-      try {
-        if (A.ArticlesStats && typeof A.ArticlesStats.export === 'function') {
-          var st = A.ArticlesStats.export() || {};
-          res.articlesSec = Math.round(Number(st.totalMs || 0) / 1000);
-        }
-      } catch (_) {}
-    }
-
-    res.totalSec = Math.max(0, Math.round(res.wordsSec + res.articlesSec));
-    return res;
-  }
-
-  function computeLearnedArticles(langCode) {
-    // считаем "выученные артикли" как количество существительных,
-    // у которых звёзды в ArticlesProgress достигли starsMax.
-    var count = 0;
-    try {
-      if (!A.ArticlesProgress || typeof A.ArticlesProgress.getStars !== 'function') return 0;
-      var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
-
-      if (!A.Decks || typeof A.Decks.builtinKeys !== 'function' || typeof A.Decks.resolveDeckByKey !== 'function') return 0;
-      var keys = A.Decks.builtinKeys() || [];
-      keys.forEach(function (k) {
-        try {
-          if (A.Decks.langOfKey && A.Decks.langOfKey(k) !== langCode) return;
-        } catch(_) {}
-        // только nouns
-        if (String(k).indexOf('_nouns') === -1) return;
-
-        var words = A.Decks.resolveDeckByKey(k) || [];
-        words.forEach(function (w) {
-          var s = Number(A.ArticlesProgress.getStars(k, w.id) || 0);
-          if (s >= max) count += 1;
-        });
-      });
-    } catch (_) {}
-    return count;
-  }
-
-  function renderTimeSplitPage(langCode, texts) {
-    var uiLang = getUiLang();
-    var split = computeTimeSplit(langCode);
-    var learnedArticles = computeLearnedArticles(langCode);
-
-    var total = split.totalSec || 0;
-    if (total <= 0) {
-      // если нет данных — покажем аккуратный placeholder
-      return (
-        '<section class="stats-section">' +
-          '<h2 class="stats-subtitle">' + texts.timeSplitTitle + '</h2>' +
-          '<p class="stats-placeholder">' +
-            (uiLang === 'uk'
-              ? 'Поки немає даних про час у тренуваннях для цього розділу.'
-              : 'Пока нет данных по времени тренировок для этого раздела.') +
-          '</p>' +
-        '</section>'
-      );
-    }
-
-    // используем тот же круговой компонент (stats-ring-set)
-    var buckets = [
-      { pos: 'words_time', learned: split.wordsSec, total: total, label: texts.timeSplitWords },
-      { pos: 'articles_time', learned: split.articlesSec, total: total, label: texts.timeSplitArticles }
-    ];
-
-    // Заголовок ринг-сета берём из timeSplitTitle, поэтому используем groupKind='other'
-    // и подменяем caption через texts.otherTitle временно не нужно — сделаем обертку.
-    var ringHtml = renderRingSet(buckets, Object.assign({}, texts, { otherTitle: texts.timeSplitTitle }), 'other');
-
-    var wordsStr = formatTimeHhMm(split.wordsSec, uiLang);
-    var artStr   = formatTimeHhMm(split.articlesSec, uiLang);
-    var totalStr = formatTimeHhMm(total, uiLang);
-
-    var details =
-      '<div class="stats-activity-history">' +
-        '<div class="stats-activity-history__title">' + texts.timeSplitDetails + '</div>' +
-        '<div class="stats-activity-history__list">' +
-          '<div class="stats-activity-history__item">' +
-            '<div class="stats-activity-history__line">' + texts.timeSplitWords + ': ' + wordsStr + '</div>' +
-            '<div class="stats-activity-history__line">' + texts.timeSplitArticles + ': ' + artStr + '</div>' +
-            '<div class="stats-activity-history__line">' + texts.timeSplitTotal + ': ' + totalStr + '</div>' +
-          '</div>' +
-          '<div class="stats-activity-history__item">' +
-            '<div class="stats-activity-history__line">' + texts.timeSplitArticlesLearned + ': ' + learnedArticles + '</div>' +
-            '<div class="stats-activity-history__line">' + texts.timeSplitArticlesTime + ': ' + artStr + '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
-
-    return (
-      '<section class="stats-section">' +
-        '<div class="stats-ring-sets stats-ring-sets--single">' +
-          ringHtml +
-        '</div>' +
-        details +
-      '</section>'
-    );
-  }
-
-/* ---------------------- карточки по языкам ---------------------- */
+  /* ---------------------- карточки по языкам ---------------------- */
 
   function renderLangCards(langStats, texts, activeLangCode) {
     if (!langStats.length) {
@@ -838,6 +810,7 @@
         const split = splitPosBuckets(langStat);
         const coreSetHtml = renderRingSet(split.core, texts, 'core');
         const otherSetHtml = renderRingSet(split.other, texts, 'other');
+        const splitTimeHtml = renderTimeSplitSet(langCode, texts);
         const activityHtml = renderActivitySection(langCode, texts);
 
         return (
@@ -868,8 +841,10 @@
                 otherSetHtml +
               '</div>' +
             '</div>' +
-            '<div class="stats-page stats-page--time" data-page="2">' +
-              timeSplitHtml +
+            '<div class="stats-page stats-page--split" data-page="2">' +
+              '<div class="stats-ring-sets stats-ring-sets--single">' +
+                splitTimeHtml +
+              '</div>' +
             '</div>' +
             '<div class="stats-page stats-page--analytics" data-page="3">' +
               activityHtml +
@@ -1033,7 +1008,7 @@
       var current = 0;
 
       function goTo(idx) {
-        // Страница с аналитикой (2) доступна только в PRO-версии
+        // Страница с аналитикой (3) доступна только в PRO-версии
         if (idx === 3 && (!A.isPro || !A.isPro())) {
           try {
             var lang = getUiLang();
