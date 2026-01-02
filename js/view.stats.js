@@ -205,14 +205,16 @@
     var learnedArticles = countLearnedArticlesByLang(langCode);
     var uk = getUiLang() === 'uk';
     var extraHtml =
-      '<div class="stats-ring-extra" style="margin-top:10px;">' +
-        '<div class="stats-ring-extra__row">' +
-          '<span class="stats-ring-extra__label">' + (uk ? 'Вивчено артиклів:' : 'Выучено артиклей:') + '</span>' +
-          '<span class="stats-ring-extra__value">' + learnedArticles + '</span>' +
+      '<div class="stats-ring-legend" style="margin-top:10px;">' +
+        '<div class="stats-ring-legend__item" style="--ring-color:transparent;">' +
+          '<span class="stats-ring-legend__dot" style="opacity:0;"></span>' +
+          '<span class="stats-ring-legend__label">' + (uk ? 'Вивчено артиклів:' : 'Выучено артиклей:') + '</span>' +
+          '<span class="stats-ring-legend__value">' + learnedArticles + '</span>' +
         '</div>' +
-        '<div class="stats-ring-extra__row">' +
-          '<span class="stats-ring-extra__label">' + (uk ? 'Час на артиклі:' : 'Время на артикли:') + '</span>' +
-          '<span class="stats-ring-extra__value">' + formatMinutes(split.articles) + '</span>' +
+        '<div class="stats-ring-legend__item" style="--ring-color:transparent;">' +
+          '<span class="stats-ring-legend__dot" style="opacity:0;"></span>' +
+          '<span class="stats-ring-legend__label">' + (uk ? 'Час на артиклі:' : 'Время на артикли:') + '</span>' +
+          '<span class="stats-ring-legend__value">' + formatMinutes(split.articles) + '</span>' +
         '</div>' +
       '</div>';
 
@@ -810,8 +812,45 @@
         const split = splitPosBuckets(langStat);
         const coreSetHtml = renderRingSet(split.core, texts, 'core');
         const otherSetHtml = renderRingSet(split.other, texts, 'other');
-        const splitTimeHtml = renderTimeSplitSet(langCode, texts);
+        const isGerman = langCode === 'de';
+        const splitTimeHtml = isGerman ? renderTimeSplitSet(langCode, texts) : '';
         const activityHtml = renderActivitySection(langCode, texts);
+
+        // Страница "Время: слова vs артикли" показывается только для немецкого языка (de).
+        // Пейджер и PRO-гейт должны работать независимо от количества страниц.
+        const activityPage = isGerman ? 3 : 2;
+
+        const pagesHtml =
+          '<div class="stats-pages">' +
+            '<div class="stats-page stats-page--core is-active" data-page="0">' +
+              '<div class="stats-ring-sets stats-ring-sets--single">' +
+                coreSetHtml +
+              '</div>' +
+            '</div>' +
+            '<div class="stats-page stats-page--other" data-page="1">' +
+              '<div class="stats-ring-sets stats-ring-sets--single">' +
+                otherSetHtml +
+              '</div>' +
+            '</div>' +
+            (isGerman
+              ? ('<div class="stats-page stats-page--split" data-page="2">' +
+                   '<div class="stats-ring-sets stats-ring-sets--single">' +
+                     splitTimeHtml +
+                   '</div>' +
+                 '</div>')
+              : '') +
+            '<div class="stats-page stats-page--analytics" data-page="' + activityPage + '">' +
+              activityHtml +
+            '</div>' +
+          '</div>';
+
+        const dotsHtml =
+          '<div class="stats-pages-dots">' +
+            '<button class="stats-page-dot is-active" type="button" data-page="0"></button>' +
+            '<button class="stats-page-dot" type="button" data-page="1"></button>' +
+            (isGerman ? '<button class="stats-page-dot" type="button" data-page="2"></button>' : '') +
+            '<button class="stats-page-dot" type="button" data-page="' + activityPage + '"></button>' +
+          '</div>';
 
         return (
           '<article class="stats-lang-card' +
@@ -830,32 +869,8 @@
           '</div>' +
           '</header>' +
           '<div class="stats-lang-card__body">' +
-          '<div class="stats-pages">' +
-            '<div class="stats-page stats-page--core is-active" data-page="0">' +
-              '<div class="stats-ring-sets stats-ring-sets--single">' +
-                coreSetHtml +
-              '</div>' +
-            '</div>' +
-            '<div class="stats-page stats-page--other" data-page="1">' +
-              '<div class="stats-ring-sets stats-ring-sets--single">' +
-                otherSetHtml +
-              '</div>' +
-            '</div>' +
-            '<div class="stats-page stats-page--split" data-page="2">' +
-              '<div class="stats-ring-sets stats-ring-sets--single">' +
-                splitTimeHtml +
-              '</div>' +
-            '</div>' +
-            '<div class="stats-page stats-page--analytics" data-page="3">' +
-              activityHtml +
-            '</div>' +
-          '</div>' +
-          '<div class="stats-pages-dots">' +
-            '<button class="stats-page-dot is-active" type="button" data-page="0"></button>' +
-            '<button class="stats-page-dot" type="button" data-page="1"></button>' +
-            '<button class="stats-page-dot" type="button" data-page="2"></button>' +
-            '<button class="stats-page-dot" type="button" data-page="3"></button>' +
-          '</div>' +
+          pagesHtml +
+          dotsHtml +
           '</div>' +
           '</article>'
         );
@@ -1007,43 +1022,51 @@
 
       var current = 0;
 
-      function goTo(idx) {
-        // Страница с аналитикой (3) доступна только в PRO-версии
-        if (idx === 3 && (!A.isPro || !A.isPro())) {
+      function goTo(pageNum) {
+        // Доступные страницы определяются по dot'ам (data-page).
+        var pagesList = Array.prototype.slice.call(pages || []);
+        var dotsList  = Array.prototype.slice.call(dots  || []);
+        var nums = dotsList.map(function (d) {
+          return parseInt(d.getAttribute('data-page') || '0', 10) || 0;
+        }).sort(function (a,b){return a-b;});
+        var minPage = nums.length ? nums[0] : 0;
+        var maxPage = nums.length ? nums[nums.length-1] : (pagesList.length ? pagesList.length-1 : 0);
+
+        if (pageNum < minPage) pageNum = minPage;
+        if (pageNum > maxPage) pageNum = maxPage;
+        current = pageNum;
+
+        // PRO-gate: аналитика доступна только в PRO (независимо от индекса)
+        var targetPage = null;
+        pagesList.forEach(function (pageEl) {
+          var pIdx = parseInt(pageEl.getAttribute('data-page') || '0', 10) || 0;
+          if (pIdx === current) targetPage = pageEl;
+        });
+
+        if (targetPage && targetPage.classList.contains('stats-page--analytics') && (!A.isPro || !A.isPro())) {
           try {
             var lang = getUiLang();
-            var body = (lang === 'uk')
+            var bodyText = (lang === 'uk')
               ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
               : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
 
             var stubHtml =
               '<div class="stats-pro-gate" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
-                '<p style="margin-bottom:10px;">' + body + '</p>' +
+                '<p style="margin-bottom:10px;">' + bodyText + '</p>' +
               '</div>';
 
-            var targetPage = null;
-            pages.forEach(function (pageEl) {
-              var pIdx = parseInt(pageEl.getAttribute('data-page') || '0', 10) || 0;
-              if (pIdx === 3) targetPage = pageEl;
-            });
-
-            if (targetPage) {
-              targetPage.innerHTML = stubHtml;
-            }
+            targetPage.innerHTML = stubHtml;
           } catch (_) {}
-          // продолжаем выполнение, чтобы переключить активную страницу и точку
         }
 
-        if (idx < 0) idx = 0;
-        if (idx > pages.length - 1) idx = pages.length - 1;
-        current = idx;
-
-        pages.forEach(function (page, i) {
-          page.classList.toggle('is-active', i === current);
+        // Активные классы
+        pagesList.forEach(function (pageEl) {
+          var pIdx = parseInt(pageEl.getAttribute('data-page') || '0', 10) || 0;
+          pageEl.classList.toggle('is-active', pIdx === current);
         });
-
-        dots.forEach(function (dot, i) {
-          dot.classList.toggle('is-active', i === current);
+        dotsList.forEach(function (dotEl) {
+          var dIdx = parseInt(dotEl.getAttribute('data-page') || '0', 10) || 0;
+          dotEl.classList.toggle('is-active', dIdx === current);
         });
       }
 

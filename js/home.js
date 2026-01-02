@@ -61,6 +61,8 @@
     }
   }
 
+  // Обновляет строку статистики под карточкой (1:1 с обычным тренером по месту/формату),
+  // но источник цифр зависит от режима: words vs articles.
 function setUiLang(code){
     const lang = (code === 'uk') ? 'uk' : 'ru';
     A.settings = A.settings || {};
@@ -251,6 +253,32 @@ function setUiLang(code){
   // starKey (единственное определение)
   const starKey = (typeof A.starKey === 'function') ? A.starKey : (id, key) => `${key}:${id}`;
 
+  function setDictStatsText(statsEl, deckKey){
+    try{
+      if (!statsEl) return;
+      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
+      const uk = getUiLang() === 'uk';
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+      if (isArticles) {
+        const learnedA = countLearnedArticles(full, deckKey);
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
+      } else {
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+      }
+    }catch(_){}
+  }
+
+
 // Выбор активного словаря
 function activeDeckKey() {
   var A = window.App || {};
@@ -426,11 +454,22 @@ function activeDeckKey() {
 
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+
     for (let i = 0; i < totalSets; i++) {
       const from = i * SET_SIZE;
       const to   = Math.min(deck.length, (i + 1) * SET_SIZE);
       const sub  = deck.slice(from, to);
-      const done = sub.length > 0 && sub.every(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax);
+      const done = sub.length > 0 && sub.every(w => {
+        if (isArticles) {
+          try {
+            const maxA = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : starsMax;
+            const haveA = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (A.ArticlesProgress.getStars(key, w.id) || 0) : 0;
+            return Number(haveA || 0) >= Number(maxA || 5);
+          } catch(_) { return false; }
+        }
+        return (((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax);
+      });
 
       const btn = document.createElement('button');
       btn.className = 'set-pill' + (i === activeIdx ? ' is-active' : '') + (done ? ' is-done' : '');
@@ -851,21 +890,11 @@ function activeDeckKey() {
 
     const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(key) || []) : [];
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
     const learned = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax).length;
     if (stats) {
-      const uk = getUiLang() === 'uk';
-      // В режиме тренера артиклей скрываем общую статистику по словам.
-      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-      if (isArticles) {
-        const learnedA = countLearnedArticles(full, key);
-        stats.style.display = '';
-        stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
-      } else {
-        stats.style.display = '';
-        stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
-                               : `Всего слов: ${full.length} / Выучено: ${learned}`;
-      }
+      setDictStatsText(stats, key);
     }
     if (modeEl && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
       A.Trainer.updateModeIndicator();
@@ -1081,6 +1110,17 @@ function activeDeckKey() {
 
     bindLangToggle();
     bindLevelToggle();
+
+    // синхронизация UI при обновлении тренера артиклей: обновляем сеты и строки статистики 1:1
+    try {
+      if (window.UIBus && typeof window.UIBus.on === 'function' && !A.__articlesHomeSyncBound) {
+        A.__articlesHomeSyncBound = true;
+        window.UIBus.on('articles:update', function(){
+          try { renderSets(); } catch(_) {}
+          try { renderTrainer(); } catch(_) {}
+        });
+      }
+    } catch(_) {}
     bindFooterNav();
 
     // ждём словари, потом грузим главную (важно для корректного дефолтного ключа и слайса)
