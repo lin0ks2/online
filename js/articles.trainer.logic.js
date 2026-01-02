@@ -152,6 +152,23 @@
     mode = String(m || 'default');
     active = true;
 
+    // Учёт времени активности приложения (общая статистика):
+    // обычный тренер стартует сессию через Router.routeTo('home').
+    // Здесь страхуемся, чтобы при запуске тренера артиклей время тоже считалось.
+    try {
+      if (A.Analytics && typeof A.Analytics.trainingStart === 'function') {
+        var learnLang = null;
+        try {
+          if (A.Decks && typeof A.Decks.langOfKey === 'function') {
+            learnLang = A.Decks.langOfKey(deckKey) || null;
+          }
+        } catch (_) {}
+        var uiLang = '';
+        try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e) {}
+        A.Analytics.trainingStart({ learnLang: learnLang, uiLang: uiLang, deckKey: deckKey });
+      }
+    } catch (_e2) {}
+
     solved = false;
     penalized = false;
 

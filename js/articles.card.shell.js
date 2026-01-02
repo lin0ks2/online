@@ -110,6 +110,7 @@
     var heartBtn = qs('#favBtn', rootEl);
     var wordEl = qs('.trainer-word', rootEl);
     var subtitleEl = qs('.trainer-subtitle', rootEl);
+    var translationEl = qs('.trainer-translation', rootEl);
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
@@ -123,7 +124,7 @@
       subtitleEl.textContent = (String(uiLang).toLowerCase() === 'uk') ? (vm.promptUk || 'Оберіть артикль') : (vm.promptRu || 'Выберите артикль');
     }
 
-    // слово + перевод
+    // слово
     if (wordEl) {
       // важно: слово без артикуля
       wordEl.textContent = String(vm.wordDisplay || '').trim();
@@ -131,9 +132,22 @@
       setAudioDisabled(wordEl);
     }
 
-    // Перевод убран полностью по ТЗ
-    var trEl = qs('.trainer-translation', rootEl);
-    if (trEl && trEl.parentNode) trEl.parentNode.removeChild(trEl);
+    // Перевод: показываем между словом и подсказкой "Выберите артикль"
+    // Важно: на "втором плане" (чуть меньше и приглушённый) — через CSS.
+    var trText = String(vm.translation || '').trim();
+    if (!translationEl) {
+      translationEl = document.createElement('p');
+      translationEl.className = 'trainer-translation';
+      // вставляем сразу после слова
+      if (wordEl && wordEl.parentNode) {
+        if (wordEl.nextSibling) wordEl.parentNode.insertBefore(translationEl, wordEl.nextSibling);
+        else wordEl.parentNode.appendChild(translationEl);
+      }
+    }
+    if (translationEl) {
+      translationEl.textContent = trText;
+      translationEl.style.display = trText ? '' : 'none';
+    }
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
