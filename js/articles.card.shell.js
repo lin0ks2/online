@@ -77,12 +77,28 @@
       var starsBox = qs('.trainer-stars', rootEl);
       if (!starsBox || !A.ArticlesProgress || !wordId) return;
       var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
-      var have = (A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(deckKey, wordId)) || 0;
-      var html = '';
-      for (var i = 0; i < max; i++) {
-        html += '<span class="star' + (i < have ? ' full' : '') + '" aria-hidden="true">★</span>';
+      var have = Number((A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(deckKey, wordId)) || 0) || 0;
+
+      // 1:1 с базовым тренером: поддержка "половинок" в hard-mode.
+      // Используем те же классы full/half.
+      var kids = starsBox.querySelectorAll('.star');
+      if (!kids || kids.length !== max) {
+        var html = '';
+        for (var i = 0; i < max; i++) html += '<span class="star" aria-hidden="true">★</span>';
+        starsBox.innerHTML = html;
       }
-      starsBox.innerHTML = html;
+      var stars = starsBox.querySelectorAll('.star');
+      stars.forEach(function (el) { el.classList.remove('full', 'half'); });
+
+      var EPS = 1e-6;
+      var filled = Math.floor(have + EPS);
+      for (var fi = 0; fi < Math.min(filled, max); fi++) {
+        stars[fi].classList.add('full');
+      }
+      var frac = have - filled;
+      if (frac + EPS >= 0.5 && filled < max) {
+        stars[filled].classList.add('half');
+      }
     } catch (e) {}
   }
 
@@ -122,17 +138,7 @@
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
     if (starsBox && A.ArticlesProgress && vm.wordId) {
-      try {
-        var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
-        var have = (A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(vm.deckKey, vm.wordId)) || 0;
-        // используем drawStarsTwoPhase из home.js нельзя (не публичная функция),
-        // поэтому в каркасе — простая отрисовка.
-        var html = '';
-        for (var i = 0; i < max; i++) {
-          html += '<span class="star' + (i < have ? ' full' : '') + '" aria-hidden="true">★</span>';
-        }
-        starsBox.innerHTML = html;
-      } catch (e) {}
+      paintStars(vm.deckKey, vm.wordId);
     }
 
     // ответы
@@ -147,37 +153,22 @@
       answersEl.innerHTML = '';
       var base = vm.options || ['der','die','das'];
 
-      // 4 кнопки: 3 артикля + 1 пустая. Расклад фиксируем на слово, чтобы не "прыгал" при перерендерах.
+      // 3 кнопки всегда в одну линию. Позиции артиклей должны быть рандомными.
       if (!uiState.layout) {
-        // случайно выбираем позицию пустой кнопки и перемешиваем артикли
         var articles = base.slice(0, 3);
         for (var si = articles.length - 1; si > 0; si--) {
           var sj = Math.floor(Math.random() * (si + 1));
           var tmp = articles[si]; articles[si] = articles[sj]; articles[sj] = tmp;
         }
-        var emptyIndex = Math.floor(Math.random() * 4);
-        var layout = new Array(4);
-        var ai = 0;
-        for (var bi = 0; bi < 4; bi++) {
-          if (bi === emptyIndex) layout[bi] = '';
-          else layout[bi] = String(articles[ai++] || '');
-        }
-        uiState.layout = layout;
+        uiState.layout = articles;
       }
 
-      for (var j = 0; j < 4; j++) {
+      for (var j = 0; j < 3; j++) {
         var article = String(uiState.layout[j] || '');
         var b = document.createElement('button');
         b.className = 'answer-btn';
         b.textContent = article;
         b.setAttribute('data-article', article);
-
-        // пустая кнопка: оставляем пустой текст, делаем disabled
-        if (!article) {
-          b.disabled = true;
-          b.classList.add('is-empty');
-          b.setAttribute('aria-disabled', 'true');
-        }
 
         // КЛИКИ обрабатываются единым делегированным слушателем (см. mount)
         answersEl.appendChild(b);
@@ -210,6 +201,27 @@
     // Делегированный обработчик ответов (один раз на mount)
     var onRootClick = function (e) {
       try {
+        // "Не знаю" — поведение 1:1 с базовым тренером: блокируем ввод,
+        // подсвечиваем правильный, затем переходим дальше по тому же таймеру.
+        var idk = e && e.target && e.target.closest ? e.target.closest('.idk-btn') : null;
+        if (idk) {
+          if (uiState.solved) return;
+          uiState.solved = true;
+          var vm0 = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
+          var correct0 = vm0 ? String(vm0.correct || '').trim() : '';
+          var all0 = rootEl.querySelectorAll('.answers-grid .answer-btn');
+          all0.forEach(function (b) {
+            b.disabled = true;
+            var a = String(b.getAttribute('data-article') || b.textContent || '').trim();
+            if (correct0 && a === correct0) b.classList.add('is-correct');
+            else b.classList.add('is-dim');
+          });
+          setTimeout(function () {
+            try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
+          }, ADV_DELAY);
+          return;
+        }
+
         var btn = e && e.target && e.target.closest ? e.target.closest('.answers-grid .answer-btn') : null;
         if (!btn) return;
         if (btn.disabled) return;

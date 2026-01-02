@@ -625,6 +625,9 @@ function activeDeckKey() {
 
       // Force a render for the current viewModel (in addition to bus updates).
       try { if (A.ArticlesCard && typeof A.ArticlesCard.render === 'function' && A.ArticlesTrainer && typeof A.ArticlesTrainer.getViewModel === 'function') A.ArticlesCard.render(A.ArticlesTrainer.getViewModel()); } catch (_){ }
+
+      // Mode indicator must be visible on first render (same as default trainer).
+      try { if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') A.Trainer.updateModeIndicator(); } catch (_){ }
       return;
     }
 
