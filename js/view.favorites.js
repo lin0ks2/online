@@ -19,7 +19,7 @@
     const uk = getUiLang()==='uk';
     return {
       title   : uk ? 'Обране' : 'Избранное',
-      ok      : 'OK',
+      ok      : uk ? 'Вчити слова' : 'Учить слова',
       preview : uk ? 'Перегляд' : 'Предпросмотр',
       empty   : uk ? 'На данний момент вибраних слів немає.' : 'В данный момент избранных слов нет.',
       cnt     : uk ? 'К-сть' : 'Кол-во',
@@ -289,6 +289,8 @@
     }
 
     function launchTraining(key){
+      // Switch to the default word trainer
+      try { A.settings = A.settings || {}; A.settings.trainerKind = 'words'; } catch(_){ }
       // 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
         A.UI.startTrainingWithKey(key);

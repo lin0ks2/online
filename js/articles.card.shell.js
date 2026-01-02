@@ -103,7 +103,7 @@
     // заголовок вопроса
     if (subtitleEl) {
       var uiLang = '';
-      try { uiLang = (A.settings && A.settings.uiLang) || ''; } catch (e) {}
+      try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
       subtitleEl.textContent = (String(uiLang).toLowerCase() === 'uk') ? (vm.promptUk || 'Оберіть артикль') : (vm.promptRu || 'Выберите артикль');
     }
 

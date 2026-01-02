@@ -105,7 +105,12 @@
         if (A.Router && typeof A.Router.routeTo === 'function') {
           A.Router.routeTo(A.Router.current || 'home');
         } else {
-          mountMarkup(); renderSets(); renderTrainer();
+          mountMarkup(); renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        }
         }
       } catch(_){}
     });
@@ -412,7 +417,12 @@ function activeDeckKey() {
       btn.textContent = i + 1;
       btn.onclick = () => {
         try { if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') A.Trainer.setBatchIndex(i, key); } catch (_){}
-        renderSets(); renderTrainer();
+        renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        }
         try { A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender(); } catch(_){}
       };
       grid.appendChild(btn);
@@ -593,6 +603,35 @@ function activeDeckKey() {
     const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
     if (!slice.length) return;
 
+    // Trainer variant switching (words vs articles).
+    // We must NOT fall back to the default trainer when the user interacts with
+    // sets, language toggle, or other UI elements while the articles trainer is active.
+    // Switching is allowed only via the dedicated buttons on selection screens.
+    const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
+      && String(key) === 'de_nouns'
+      && (A.ArticlesTrainer && A.ArticlesCard);
+
+    if (wantArticles) {
+      // Ensure the articles card is mounted into the standard home trainer container.
+      try { if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') A.ArticlesCard.mount(document.querySelector('.home-trainer')); } catch (_){ }
+
+      // Start if needed (mode mirrors the default trainer's difficulty).
+      try {
+        const mode = (typeof getMode === 'function') ? getMode() : 'normal';
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && !A.ArticlesTrainer.isActive()) {
+          A.ArticlesTrainer.start('de_nouns', mode);
+        }
+      } catch (_){ }
+
+      // Force a render for the current viewModel (in addition to bus updates).
+      try { if (A.ArticlesCard && typeof A.ArticlesCard.render === 'function' && A.ArticlesTrainer && typeof A.ArticlesTrainer.getViewModel === 'function') A.ArticlesCard.render(A.ArticlesTrainer.getViewModel()); } catch (_){ }
+      return;
+    }
+
+    // If we are NOT in articles mode, make sure the articles plugin is stopped/unmounted.
+    try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
+    try { if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') A.ArticlesCard.unmount(); } catch (_){ }
+
     const idx = (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function')
       ? A.Trainer.sampleNextIndexWeighted(slice)
       : Math.floor(Math.random() * slice.length);
@@ -713,7 +752,12 @@ function activeDeckKey() {
             btn.disabled = true;
           });
           afterAnswer(true);
-          setTimeout(() => { renderSets(); renderTrainer(); }, ADV_DELAY);
+          setTimeout(() => { renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        } }, ADV_DELAY);
           return;
         }
 
@@ -762,7 +806,12 @@ function activeDeckKey() {
           }
         } catch (_) {}
 
-        setTimeout(() => { renderSets(); renderTrainer(); }, ADV_DELAY);
+        setTimeout(() => { renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        } }, ADV_DELAY);
       };
     }
 

@@ -66,7 +66,7 @@
     // Поэтому здесь делаем максимально безопасно: ru -> uk -> ''
     if (!w) return '';
     var ui = '';
-    try { ui = (A.settings && A.settings.uiLang) || ''; } catch (e) {}
+    try { ui = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
     if (String(ui).toLowerCase() === 'uk') return String(w.uk || w.ua || w.ru || '').trim();
     return String(w.ru || w.uk || '').trim();
   }

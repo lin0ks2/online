@@ -25,7 +25,8 @@
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
       close:   uk ? 'Закрити' : 'Закрыть',
-      ok:      'Ок',
+      // This button starts the default word trainer
+      ok:      uk ? 'Вчити слова' : 'Учить слова',
       articles: uk ? 'Вчити артиклі' : 'Учить артикли'
     };
   }
@@ -184,6 +185,8 @@
 	      if (ok){
 	        // назначаем обработчик через .onclick, чтобы не накапливать слушатели
 	        ok.onclick = ()=>{
+  // Switch to the default word trainer
+  try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
   try {
     A.settings = A.settings || {};
     A.settings.lastDeckKey = selectedKey;
@@ -203,39 +206,17 @@
       if (articlesBtn){
 	                // назначаем обработчик через .onclick, чтобы не накапливать слушатели
 	                articlesBtn.onclick = ()=>{
-          // сохраняем выбранную деку, как и обычный ОК
+          // Switch to the articles trainer (only valid for de_nouns)
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){ }
+          // save selected deck like default OK
           try {
             A.settings = A.settings || {};
             A.settings.lastDeckKey = selectedKey;
-            if (typeof A.saveSettings === 'function') {
-              A.saveSettings(A.settings);
-            }
-          } catch(_){}
-
-          // Переходим на главный экран и там монтируем карточку артиклей.
-          // Важно: не ломаем базовую разметку — используем home.js Router.
-          // Надёжный переход на home: пробуем оба роутера
-          try {
-            if (window.Router && typeof window.Router.routeTo === 'function') {
-              window.Router.routeTo('home');
-            } else if (A.Router && typeof A.Router.routeTo === 'function') {
-              A.Router.routeTo('home');
-            }
-          } catch(_){}
-
-          // Ждём, пока home.js отрисует .home-trainer, затем монтируем плагин.
-          setTimeout(()=>{
-            try {
-              if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') {
-                // монтируемся в стандартную карточку тренера
-                A.ArticlesCard.mount(document.querySelector('.home-trainer'));
-              }
-              if (A.ArticlesTrainer && typeof A.ArticlesTrainer.start === 'function') {
-                A.ArticlesTrainer.start('de_nouns', 'normal');
-              }
-            } catch(_){}
-          }, 0);
-	        };
+            if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
+          } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
+          goHome();
+        };
       }
 // первичная синхронизация кнопки
       updateArticlesButton();

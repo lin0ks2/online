@@ -17,8 +17,8 @@
   function t(){
     const uk = getUiLang()==='uk';
     return uk
-      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok:'Ок' }
-      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok:'Ок' };
+      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok:'Вчити слова' }
+      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok:'Учить слова' };
   }
 
   const FLAG = { en:'🇬🇧', de:'🇩🇪', fr:'🇫🇷', es:'🇪🇸', it:'🇮🇹', ru:'🇷🇺', uk:'🇺🇦', pl:'🇵🇱', sr:'🇷🇸' };
@@ -190,6 +190,8 @@
             return;
           }
           saveSelected(key);
+          // Switch to the default word trainer (not articles)
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
           try { A.Trainer && A.Trainer.setDeckKey && A.Trainer.setDeckKey(key); } catch(_){}
           // уходим на главную
           try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){}
