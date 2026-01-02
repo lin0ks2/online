@@ -41,7 +41,27 @@
     return (v === 'uk') ? 'uk' : 'ru';
   }
 
-  function setUiLang(code){
+  
+  // Подсчет "выученности" в режиме артиклей: считаем отдельно, не смешивая со словами.
+  function countLearnedArticles(words, deckKey){
+    try{
+      if (!words || !words.length) return 0;
+      const P = A.ArticlesProgress;
+      if (!P || typeof P.getStars !== 'function') return 0;
+      const max = (typeof P.starsMax === 'function') ? P.starsMax() : 5;
+      let learned = 0;
+      for (let i=0;i<words.length;i++){
+        const w = words[i];
+        const have = Number(P.getStars(deckKey, w.id) || 0) || 0;
+        if (have >= max) learned++;
+      }
+      return learned;
+    }catch(_){
+      return 0;
+    }
+  }
+
+function setUiLang(code){
     const lang = (code === 'uk') ? 'uk' : 'ru';
     A.settings = A.settings || {};
     A.settings.lang = lang;
@@ -440,8 +460,11 @@ function activeDeckKey() {
       // В режиме тренера артиклей статистику по словам в сете скрываем.
       const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
       if (isArticles) {
-        statsEl.textContent = '';
-        statsEl.style.display = 'none';
+        const learnedA = countLearnedArticles(words, key);
+        statsEl.style.display = '';
+        statsEl.textContent = uk
+          ? `Слів у наборі: ${words.length} / Вивчено: ${learnedA}`
+          : `Слов в наборе: ${words.length} / Выучено: ${learnedA}`;
       } else {
         statsEl.style.display = '';
         statsEl.textContent = uk
@@ -834,8 +857,10 @@ function activeDeckKey() {
       // В режиме тренера артиклей скрываем общую статистику по словам.
       const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
       if (isArticles) {
-        stats.textContent = '';
-        stats.style.display = 'none';
+        const learnedA = countLearnedArticles(full, key);
+        stats.style.display = '';
+        stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
       } else {
         stats.style.display = '';
         stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
