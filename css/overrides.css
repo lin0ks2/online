@@ -378,3 +378,18 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   -webkit-overflow-scrolling: touch;
 }
 
+/* ==========================================================
+ * Articles Trainer: 3 кнопки всегда в одну линию
+ * ========================================================== */
+.home-trainer.is-articles .answers-grid{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.home-trainer.is-articles .answers-grid .answer-btn{
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
