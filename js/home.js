@@ -259,12 +259,10 @@ function setUiLang(code){
       const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
       const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
 
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
       const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
       const uk = getUiLang() === 'uk';
-      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
       if (isArticles) {
         const learnedA = countLearnedArticles(full, deckKey);
         statsEl.style.display = '';
