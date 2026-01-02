@@ -88,7 +88,18 @@
     return null;
   }
 
-  function tUI() {
+  
+  function isArticlesActive(){
+    try {
+      if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function') return !!A.ArticlesTrainer.isActive();
+    } catch(_){ }
+    try {
+      return (A.settings && String(A.settings.trainerKind||'')==='articles');
+    } catch(_){ }
+    return false;
+  }
+
+function tUI() {
     const uk = getUiLang() === 'uk';
     return uk
       ? { hints: 'Підказки', choose: 'Оберіть переклад', idk: 'Не знаю', fav: 'У вибране' }
@@ -436,10 +447,16 @@ function activeDeckKey() {
     const learned = words.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax2).length;
 
     if (statsEl) {
-      const uk = getUiLang() === 'uk';
-      statsEl.textContent = uk
-        ? `Слів у наборі: ${words.length} / Вивчено: ${learned}`
-        : `Слов в наборе: ${words.length} / Выучено: ${learned}`;
+      if (isArticlesActive()) {
+        statsEl.textContent = '';
+        statsEl.style.display = 'none';
+      } else {
+        statsEl.style.display = '';
+        const uk = getUiLang() === 'uk';
+        statsEl.textContent = uk
+          ? `Слів у наборі: ${words.length} / Вивчено: ${learned}`
+          : `Слов в наборе: ${words.length} / Выучено: ${learned}`;
+      }
     }
   }
 
@@ -822,9 +839,15 @@ function activeDeckKey() {
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
     const learned = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax).length;
     if (stats) {
-      const uk = getUiLang() === 'uk';
-      stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
-                             : `Всего слов: ${full.length} / Выучено: ${learned}`;
+      if (isArticlesActive()) {
+        stats.textContent = '';
+        stats.style.display = 'none';
+      } else {
+        stats.style.display = '';
+        const uk = getUiLang() === 'uk';
+        stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
+                               : `Всего слов: ${full.length} / Выучено: ${learned}`;
+      }
     }
     if (modeEl && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
       A.Trainer.updateModeIndicator();
@@ -887,7 +910,8 @@ function activeDeckKey() {
             A.Analytics.trainingStart({
               learnLang: learnLang,
               uiLang: uiLang,
-              deckKey: deckKey
+              deckKey: deckKey,
+              trainerKind: (A.settings && A.settings.trainerKind) ? A.settings.trainerKind : 'words'
             });
           }
         } catch(_){}

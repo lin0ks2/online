@@ -165,7 +165,7 @@
         } catch (_) {}
         var uiLang = '';
         try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e) {}
-        A.Analytics.trainingStart({ learnLang: learnLang, uiLang: uiLang, deckKey: deckKey });
+        A.Analytics.trainingStart({ learnLang: learnLang, uiLang: uiLang, deckKey: deckKey, trainerKind: 'articles' });
       }
     } catch (_e2) {}
 
