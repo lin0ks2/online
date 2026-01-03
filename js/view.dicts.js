@@ -206,15 +206,21 @@
       if (articlesBtn){
 	                // назначаем обработчик через .onclick, чтобы не накапливать слушатели
 	                articlesBtn.onclick = ()=>{
-          // Switch to the articles trainer (only valid for de_nouns)
+          // Switch to the articles trainer (German nouns only)
+          const keyToUse = 'de_nouns';
           try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){ }
-          // save selected deck like default OK
           try {
             A.settings = A.settings || {};
-            A.settings.lastDeckKey = selectedKey;
-            if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
-          } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
+            // Force the deck key to de_nouns to guarantee ArticlesTrainer activation
+            A.settings.lastDeckKey = keyToUse;
+            if (typeof A.saveSettings === 'function') {
+              A.saveSettings(A.settings);
+            }
+          } catch(_){}
+          try {
+            // Keep the same event name as the default OK button
+            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: keyToUse } }));
+          } catch(_) {}
           goHome();
         };
       }
