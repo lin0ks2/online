@@ -593,6 +593,46 @@ function activeDeckKey() {
     const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
     if (!slice.length) return;
 
+
+    // Articles trainer (German nouns) — activated only via A.settings.trainerKind === 'articles'
+    const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
+      && String(key) === 'de_nouns'
+      && (A.ArticlesTrainer && A.ArticlesCard);
+
+    if (wantArticles) {
+      try {
+        // Mount into the same container as the base trainer (no extra layout wrappers)
+        A.ArticlesCard.mount(document.querySelector('.home-trainer'));
+      } catch (_) {}
+
+      try {
+        const m = getMode();
+        // Start once per entry (avoid listener duplication)
+        if (!A.ArticlesTrainer.isActive || !A.ArticlesTrainer.isActive()) {
+          A.ArticlesTrainer.start('de_nouns', m);
+        } else {
+          // If mode changed while staying on Home, restart to apply mode.
+          const vm = (A.ArticlesTrainer.getViewModel && A.ArticlesTrainer.getViewModel()) || null;
+          if (vm && vm.mode && String(vm.mode) !== String(m)) {
+            try { A.ArticlesTrainer.stop(); } catch (_) {}
+            A.ArticlesTrainer.start('de_nouns', m);
+          }
+        }
+      } catch (_) {}
+
+      try {
+        // Force paint immediately (bus updates will continue to refresh)
+        if (A.ArticlesCard.render && A.ArticlesTrainer.getViewModel) {
+          A.ArticlesCard.render(A.ArticlesTrainer.getViewModel());
+        }
+      } catch (_) {}
+
+      return;
+    }
+
+    // Leaving articles mode → restore base trainer UI
+    try { if (A.ArticlesTrainer && A.ArticlesTrainer.isActive && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_) {}
+    try { if (A.ArticlesCard && A.ArticlesCard.unmount) A.ArticlesCard.unmount(); } catch (_) {}
     const idx = (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function')
       ? A.Trainer.sampleNextIndexWeighted(slice)
       : Math.floor(Math.random() * slice.length);
