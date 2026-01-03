@@ -29,6 +29,8 @@
   var mode = 'default';
   var currentWord = null;
   var lastWordId = '';
+  var _state = { lastSeen: {} }; // local per-mode state (recency, anti-repeat)
+
 
   function norm(s) {
     return String(s || '').trim().toLowerCase();
@@ -65,22 +67,159 @@
     return String(w.ru || w.uk || '').trim();
   }
 
+  
   function pickNextWord() {
+    var deckKey = _deckKey || 'de_nouns';
     var deck = getDeck();
-    if (!deck.length) return null;
-    // MVP: случайный выбор без сложной логики батчей.
-    // Позже заменим на 1:1 поведение базового тренера.
-    var tries = 16;
-    while (tries-- > 0) {
-      var w = deck[Math.floor(Math.random() * deck.length)];
-      if (!w) continue;
-      if (String(w.id) === String(lastWordId)) continue;
-      var a = parseArticle(w.word || w.term || w.de);
-      if (!ALLOWED[a]) continue;
-      return w;
+    if (!deck || !deck.length) return null;
+
+    // --- Articles version of getDeckSlice() from обычного тренера ---
+    var setSize = (A.Trainer && typeof A.Trainer.getSetSize === 'function') ? (A.Trainer.getSetSize() || 40) : 40;
+    var totalSets = Math.max(1, Math.ceil(deck.length / setSize));
+
+    // текущий сет (используем тот же индекс, что и в обычном тренере)
+    var idx = 0;
+    try { idx = (A.Trainer && typeof A.Trainer.getBatchIndex === 'function') ? (Number(A.Trainer.getBatchIndex(deckKey)) || 0) : 0; } catch(e){ idx = 0; }
+    if (idx < 0) idx = 0;
+    if (idx >= totalSets) idx = totalSets - 1;
+
+    function isLearnedArticle(w){
+      try {
+        var sMax = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? (A.ArticlesProgress.starsMax() || 5) : 5;
+        var s = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (Number(A.ArticlesProgress.getStars(deckKey, w.id)) || 0) : 0;
+        s = Math.max(0, Math.min(sMax, s));
+        return s >= sMax;
+      } catch(e){ return false; }
     }
-    return deck[0] || null;
+
+    function isWholeDeckLearned(){
+      try {
+        var sMax = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? (A.ArticlesProgress.starsMax() || 5) : 5;
+        for (var i=0;i<deck.length;i++){
+          var w = deck[i];
+          if (!w) continue;
+          var s = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (Number(A.ArticlesProgress.getStars(deckKey, w.id)) || 0) : 0;
+          if (Math.max(0, Math.min(sMax, s)) < sMax) return false;
+        }
+        return true;
+      } catch(e){ return false; }
+    }
+
+    function sliceFor(iSet){
+      var start = iSet * setSize;
+      var end = Math.min(deck.length, start + setSize);
+      return deck.slice(start, end);
+    }
+
+    // если сет полностью выучен по артиклям — автопереход по кругу (1:1 с обычным тренером)
+    function isCurrentSetComplete(iSet){
+      try {
+        var sl = sliceFor(iSet);
+        if (!sl.length) return false;
+        for (var i=0;i<sl.length;i++){
+          if (!isLearnedArticle(sl[i])) return false;
+        }
+        return true;
+      } catch(e){ return false; }
+    }
+
+    if (isCurrentSetComplete(idx)) {
+      var nextIdx = (idx + 1) % totalSets;
+      try { if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') A.Trainer.setBatchIndex(nextIdx, deckKey); } catch(e){}
+      idx = nextIdx;
+    }
+
+    var slice = sliceFor(idx);
+    var eligible = [];
+    for (var i=0;i<slice.length;i++){
+      var w = slice[i];
+      if (!w) continue;
+      var a = parseArticle(w.word || w.term || w.de || '');
+      if (ALLOWED[a] && !isLearnedArticle(w)) eligible.push(w);
+    }
+    if (!eligible.length) {
+      if (isWholeDeckLearned()) eligible = slice.slice();
+      else {
+        // пробуем следующий сет
+        var nidx = (idx + 1) % totalSets;
+        try { if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') A.Trainer.setBatchIndex(nidx, deckKey); } catch(e){}
+        var ns = sliceFor(nidx);
+        eligible = ns.filter(function(w){ return w && !isLearnedArticle(w); });
+        if (!eligible.length) eligible = ns.slice();
+      }
+    }
+
+    // --- Weighted sampling 1:1 по идее, но на ArticlesProgress + lastSeenArticles ---
+    _state = _state || {};
+    _state.lastSeen = _state.lastSeen || {};
+    var now = Date.now();
+
+    // настройка частоты появления выученных (берём существующую из обычного тренера)
+    var learnedRepeat = 0;
+    try {
+      learnedRepeat = Number((A.settings && (A.settings.learnedRepeat || A.settings.learned_repeat)) || 0);
+      if (!Number.isFinite(learnedRepeat)) learnedRepeat = 0;
+    } catch(e){ learnedRepeat = 0; }
+
+    function weightFor(w){
+      try {
+        var sMax = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? (A.ArticlesProgress.starsMax() || 5) : 5;
+        var s = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (Number(A.ArticlesProgress.getStars(deckKey, w.id)) || 0) : 0;
+        s = Math.max(0, Math.min(sMax, s));
+
+        var base = 1;
+
+        // выученные — почти исключаем, но допускаем согласно learnedRepeat (как в обычном тренере)
+        if (s >= sMax) {
+          if (learnedRepeat <= 0) return 0.0001;
+          base *= Math.max(0.0001, learnedRepeat);
+        }
+
+        // чем меньше звёзд — тем чаще (квадратично)
+        var miss = (sMax - s);
+        base *= (1 + miss * miss);
+
+        // давность показа
+        var last = Number(_state.lastSeen[String(w.id)] || 0) || 0;
+        var age = now - last;
+        if (last > 0) {
+          if (age < 8 * 1000) base *= 0.05;
+          else if (age < 20 * 1000) base *= 0.15;
+          else if (age < 60 * 1000) base *= 0.35;
+          else base *= 1.0;
+        }
+
+        // защита от повтора подряд
+        if (lastWordId && String(w.id) === String(lastWordId)) base *= 0.01;
+
+        return Math.max(0.0001, base);
+      } catch(e){
+        return 1;
+      }
+    }
+
+    var total = 0;
+    var weights = [];
+    for (var k=0;k<eligible.length;k++){
+      var w = eligible[k];
+      var ww = weightFor(w);
+      weights[k] = ww;
+      total += ww;
+    }
+    if (total <= 0) {
+      // fallback
+      var pick = eligible[Math.floor(Math.random() * eligible.length)];
+      return pick || null;
+    }
+
+    var r = Math.random() * total;
+    for (var k2=0;k2<eligible.length;k2++){
+      r -= weights[k2];
+      if (r <= 0) return eligible[k2];
+    }
+    return eligible[Math.floor(Math.random() * eligible.length)] || null;
   }
+
 
   function buildViewModel() {
     var w = currentWord;
@@ -153,60 +292,19 @@
       }
     } catch (e) {}
 
-    
-      // Auto-advance sets (articles): если текущий сет полностью выучен — переключаемся на следующий
-      try {
-        if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function' &&
-            typeof A.Trainer.getBatchIndex === 'function' && typeof A.Trainer.setBatchIndex === 'function' &&
-            A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') {
-
-          var slice = A.Trainer.getDeckSlice(deckKey) || [];
-          if (slice && slice.length) {
-            var maxA = (typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : 5;
-
-            // фильтруем только слова с артиклями
-            var cand = [];
-            for (var si = 0; si < slice.length; si++) {
-              var ww = slice[si];
-              var rr = (ww && (ww.word || ww.term || ww.de || '')) || '';
-              var aa = parseArticle(rr);
-              if (aa === 'der' || aa === 'die' || aa === 'das') cand.push(ww);
-            }
-
-            var allLearned = (cand.length > 0);
-            for (var ci = 0; ci < cand.length; ci++) {
-              var wid = cand[ci] && cand[ci].id;
-              if (!wid) continue;
-              var st = Number(A.ArticlesProgress.getStars(deckKey, wid) || 0);
-              if (st < Number(maxA || 5)) { allLearned = false; break; }
-            }
-
-            if (allLearned) {
-              var deck = getDeck();
-              var setSize = 40;
-              try { setSize = (A.Trainer && typeof A.Trainer.setSize === 'function') ? A.Trainer.setSize() : setSize; } catch(_){}
-              if (!setSize || setSize < 1) setSize = 40;
-
-              var totalSets = Math.max(1, Math.ceil((deck || []).length / setSize));
-              var cur = Number(A.Trainer.getBatchIndex(deckKey) || 0);
-              var next = cur + 1;
-              if (next >= totalSets) next = 0;
-
-              A.Trainer.setBatchIndex(next, deckKey);
-
-              // Сразу выбрать новое слово из нового сета
-              currentWord = pickNextWord();
-              solved = false;
-              penalized = false;
-            }
-          }
-        }
-      } catch (e) {}
-try {
+    try {
       if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
         A.ArticlesStats.onAnswer(ok);
       }
     } catch (e) {}
+    try {
+      // recency + anti-repeat state (по аналогии с обычным тренером)
+      _state = _state || {};
+      _state.lastSeen = _state.lastSeen || {};
+      _state.lastSeen[String(currentWord.id)] = Date.now();
+      lastWordId = String(currentWord.id);
+    } catch(_) {}
+
 
     return { ok: ok, correct: correct };
   }
@@ -218,6 +316,7 @@ try {
     next: next,
     answer: answer,
     getViewModel: buildViewModel,
+    getCorrectArticle: function(){ try { var raw = currentWord && (currentWord.word || currentWord.term || currentWord.de) || ''; return parseArticle(raw); } catch(_){ return ''; } },
     // helpers (можно использовать из UI)
     _stripArticle: stripArticle,
     _parseArticle: parseArticle

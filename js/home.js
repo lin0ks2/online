@@ -600,6 +600,22 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     if (wantArticles) {
+      // Hard guard: articles mode only valid for German nouns deck. Otherwise reset to words to avoid mixed UI.
+      try {
+        const curKey = String(key || '');
+        const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(curKey) || '') : '';
+        if (curKey !== 'de_nouns' || String(lang).toLowerCase() !== 'de') {
+          try { if (A.ArticlesTrainer && A.ArticlesTrainer.stop) A.ArticlesTrainer.stop(); } catch(_) {}
+          try { if (A.ArticlesCard && A.ArticlesCard.unmount) A.ArticlesCard.unmount(); } catch(_) {}
+          try {
+            A.settings = A.settings || {};
+            A.settings.trainerKind = 'words';
+            if (A.saveSettings) A.saveSettings(A.settings);
+          } catch(_) {}
+          // fall through to base trainer
+        }
+      } catch(_) {}
+
       try {
         // Mount into the same container as the base trainer (no extra layout wrappers)
         A.ArticlesCard.mount(document.querySelector('.home-trainer'));
@@ -836,6 +852,20 @@ function activeDeckKey() {
   const Router = {
     current: 'home',
     routeTo(action) {
+      // --- Articles trainer lifecycle guard: leaving home => stop/unmount to prevent mixed UI
+      try {
+        const prev = String(Router.current || '');
+        const next = String(action || '');
+        if (prev === 'home' && next && next !== 'home') {
+          if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) {
+            try { A.ArticlesTrainer.stop(); } catch(_) {}
+          }
+          if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') {
+            try { A.ArticlesCard.unmount(); } catch(_) {}
+          }
+        }
+      } catch(_) {}
+
       const prev = this.current || 'home';
       this.current = action;
       const app = document.getElementById('app');

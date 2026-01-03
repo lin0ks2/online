@@ -130,76 +130,84 @@
     if (answersEl) {
       answersEl.innerHTML = '';
       var opts = vm.options || ['der', 'die', 'das'];
-      for (var j = 0; j < opts.length; j++) {
-        (function (article) {
-          var b = document.createElement('button');
-          b.className = 'answer-btn';
-          b.textContent = String(article);
-          b.onclick = function () {
-            try {
-              var res = A.ArticlesTrainer && A.ArticlesTrainer.answer ? A.ArticlesTrainer.answer(article) : { ok: false, correct: '' };
-              b.classList.add(res.ok ? 'is-correct' : 'is-wrong');
-              // MVP: короткая пауза и следующий
-              setTimeout(function () {
-                try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
-              }, 350);
-            } catch (e) {}
-          };
-          answersEl.appendChild(b);
-        })(opts[j]);
+
+      var solved = false;
+      var ADV_DELAY = 750;
+
+      function lockAll(correctArticle) {
+        try {
+          var btns = answersEl.querySelectorAll('.answer-btn');
+          btns.forEach(function(btn){
+            btn.disabled = true;
+            var a = btn.getAttribute('data-article');
+            if (a && String(a) === String(correctArticle)) btn.classList.add('is-correct');
+            else btn.classList.add('is-dim');
+          });
+        } catch(e) {}
+        // блокируем "не знаю" так же, как в обычном тренере
+        try {
+          var idkBtn = qs('.idk-btn', rootEl);
+          if (idkBtn) idkBtn.disabled = true;
+        } catch(e) {}
       }
-    }
-  
 
-    // Articles: dictStats под кнопкой "Не знаю" (по всему словарю/деке)
-    try {
-      var statsEl = document.getElementById('dictStats');
-      if (statsEl && vm && vm.deckKey) {
-        var dk = String(vm.deckKey || '');
-        var full = [];
-        try {
-          if (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') {
-            full = A.Decks.resolveDeckByKey(dk) || [];
-          }
-        } catch (_e) { full = []; }
+      opts.forEach(function(article){
+        var b = document.createElement('button');
+        b.className = 'answer-btn';
+        b.textContent = String(article);
+        b.setAttribute('data-article', String(article));
+        b.onclick = function(){
+          if (solved) return;
+          try {
+            solved = true;
+            var res = (A.ArticlesTrainer && typeof A.ArticlesTrainer.answer === 'function')
+              ? A.ArticlesTrainer.answer(article)
+              : { ok:false, correct:'' };
 
-        // Только слова с артиклями der/die/das
-        var withArt = [];
-        try {
-          for (var i = 0; i < full.length; i++) {
-            var w = full[i];
-            var raw = (w && (w.word || w.term || w.de || w.text)) || '';
-            var a = (A.ArticlesTrainer && typeof A.ArticlesTrainer._parseArticle === 'function')
-              ? A.ArticlesTrainer._parseArticle(String(raw))
-              : '';
-            a = String(a || '').toLowerCase();
-            if (a === 'der' || a === 'die' || a === 'das') withArt.push(w);
-          }
-        } catch (_e2) {}
-
-        var learnedA = 0;
-        try {
-          if (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') {
-            var max = (typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : 5;
-            for (var j = 0; j < withArt.length; j++) {
-              var id = withArt[j] && withArt[j].id;
-              if (!id) continue;
-              if ((Number(A.ArticlesProgress.getStars(dk, id)) || 0) >= Number(max || 5)) learnedA++;
+            if (res && res.ok) {
+              b.classList.add('is-correct');
+              lockAll(res.correct || article);
+              // переход как в обычном тренере
+              setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
+              setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
+              return;
             }
-          }
-        } catch (_e3) {}
 
-        var ui = '';
-        try { ui = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e4) {}
-        ui = String(ui || '').toLowerCase();
+            b.classList.add('is-wrong');
+            b.disabled = true;
+            lockAll((res && res.correct) ? res.correct : '');
+            setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
+            setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
+          } catch (e) {}
+        };
+        answersEl.appendChild(b);
+      });
 
-        var label = (ui === 'uk') ? 'Всього слів з артиклями' : 'Всего слов с артиклями';
-        var learnedLabel = (ui === 'uk') ? 'Вивчено' : 'Выучено';
-        statsEl.textContent = label + ': ' + withArt.length + ' / ' + learnedLabel + ': ' + learnedA;
-      }
-    } catch (_e5) {}
-
-}
+      // "Не знаю" — 1:1 с обычным тренером
+      try {
+        var idkBtn2 = qs('.idk-btn', rootEl);
+        if (idkBtn2) {
+          idkBtn2.disabled = false;
+          idkBtn2.onclick = function(){
+            if (solved) return;
+            solved = true;
+            var correct = '';
+            try { correct = (A.ArticlesTrainer && A.ArticlesTrainer.getCorrectArticle) ? A.ArticlesTrainer.getCorrectArticle() : ''; } catch(e) {}
+            if (correct) {
+              var cb = answersEl.querySelector('.answer-btn[data-article="' + String(correct) + '"]');
+              if (cb) cb.classList.add('is-correct');
+            }
+            lockAll(correct);
+            // аналитика: пинг при "не знаю"
+            try { if (A.Analytics && typeof A.Analytics.trainingPing === 'function') A.Analytics.trainingPing({ kind:'articles', event:'idk' }); } catch(_){}
+            setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
+            setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
+          };
+        }
+      } catch(e) {}
+    }
+    }
+  }
 
   function mount(root) {
     if (mounted) return;
