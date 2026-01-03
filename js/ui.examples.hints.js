@@ -160,44 +160,31 @@
 
  // Синонимы по L2 и L1 (ru/uk)
  function getSynonyms(word) {
- if (!word) return { de: [], l1: [] };
+  if (!word) return { de: [], l1: [] };
 
- const uiLang = getUiLang();
+  const ui = getUiLang();
+  const l2 = word.deSynonyms || word.enSynonyms || word.synonyms || word.l2Synonyms || [];
+  const l1 = (ui === 'uk' ? (word.ukSynonyms || []) : (word.ruSynonyms || [])) || [];
 
- // Deck keys look like: "de.nouns", "en.adjectives".
- // The app historically stored L2 hints under "deSynonyms/deAntonyms".
- // For English decks we use "enSynonyms/enAntonyms"; therefore we select by prefix.
- const deckKey = (window.App && typeof window.App._deckKey === 'function') ? window.App._deckKey() : 'de';
- const l2 = String(deckKey || 'de').split('.')[0] || 'de';
- const l2Key = l2 + 'Synonyms';
-
- const l2Arr = Array.isArray(word[l2Key]) ? word[l2Key]
- : (Array.isArray(word.deSynonyms) ? word.deSynonyms : []); // fallback
- const ru = Array.isArray(word.ruSynonyms) ? word.ruSynonyms : [];
- const uk = Array.isArray(word.ukSynonyms) ? word.ukSynonyms : [];
-
- const l1 = (uiLang === 'uk') ? uk : ru;
- // Keep "de" field name for backward-compatible consumers; it means "L2" here.
- return { de: l2Arr, l1: l1 };
- }
+  return {
+    de: Array.isArray(l2) ? l2 : [l2].filter(Boolean),
+    l1: Array.isArray(l1) ? l1 : [l1].filter(Boolean),
+  };
+}
 
  // Антонимы по L2 и L1 (ru/uk)
  function getAntonyms(word) {
- if (!word) return { de: [], l1: [] };
+  if (!word) return { de: [], l1: [] };
 
- const uiLang = getUiLang();
- const deckKey = (window.App && typeof window.App._deckKey === 'function') ? window.App._deckKey() : 'de';
- const l2 = String(deckKey || 'de').split('.')[0] || 'de';
- const l2Key = l2 + 'Antonyms';
+  const ui = getUiLang();
+  const l2 = word.deAntonyms || word.enAntonyms || word.antonyms || word.l2Antonyms || [];
+  const l1 = (ui === 'uk' ? (word.ukAntonyms || []) : (word.ruAntonyms || [])) || [];
 
- const l2Arr = Array.isArray(word[l2Key]) ? word[l2Key]
- : (Array.isArray(word.deAntonyms) ? word.deAntonyms : []); // fallback
- const ru = Array.isArray(word.ruAntonyms) ? word.ruAntonyms : [];
- const uk = Array.isArray(word.ukAntonyms) ? word.ukAntonyms : [];
-
- const l1 = (uiLang === 'uk') ? uk : ru;
- return { de: l2Arr, l1: l1 };
- }
+  return {
+    de: Array.isArray(l2) ? l2 : [l2].filter(Boolean),
+    l1: Array.isArray(l1) ? l1 : [l1].filter(Boolean),
+  };
+}
 
  /* ----------------------------- Заголовок и вкладки ----------------------------- */
 
@@ -555,11 +542,15 @@
  }
 
  // неправильный ответ → считаем попытки, на 2-й показываем перевод
-  if (isWrong) {
-    wrongAttempts += 1;
-    setTimeout(showTranslation, 0);
-    return;
-  }
+ if (isWrong) {
+ wrongAttempts += 1;
+ if (wrongAttempts >= 2) {
+ setTimeout(showTranslation, 0);
+ }
+ }
+
+ return;
+ }
 
  // 2.2) Клик по "Не знаю" → как раньше, сразу показываем перевод
  if (isIdk) {
