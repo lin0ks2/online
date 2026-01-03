@@ -163,12 +163,22 @@
  if (!word) return { de: [], l1: [] };
 
  const uiLang = getUiLang();
- const de = Array.isArray(word.deSynonyms) ? word.deSynonyms : [];
+
+ // Deck keys look like: "de.nouns", "en.adjectives".
+ // The app historically stored L2 hints under "deSynonyms/deAntonyms".
+ // For English decks we use "enSynonyms/enAntonyms"; therefore we select by prefix.
+ const deckKey = (window.App && typeof window.App._deckKey === 'function') ? window.App._deckKey() : 'de';
+ const l2 = String(deckKey || 'de').split('.')[0] || 'de';
+ const l2Key = l2 + 'Synonyms';
+
+ const l2Arr = Array.isArray(word[l2Key]) ? word[l2Key]
+ : (Array.isArray(word.deSynonyms) ? word.deSynonyms : []); // fallback
  const ru = Array.isArray(word.ruSynonyms) ? word.ruSynonyms : [];
  const uk = Array.isArray(word.ukSynonyms) ? word.ukSynonyms : [];
 
  const l1 = (uiLang === 'uk') ? uk : ru;
- return { de: de, l1: l1 };
+ // Keep "de" field name for backward-compatible consumers; it means "L2" here.
+ return { de: l2Arr, l1: l1 };
  }
 
  // Антонимы по L2 и L1 (ru/uk)
@@ -176,12 +186,17 @@
  if (!word) return { de: [], l1: [] };
 
  const uiLang = getUiLang();
- const de = Array.isArray(word.deAntonyms) ? word.deAntonyms : [];
+ const deckKey = (window.App && typeof window.App._deckKey === 'function') ? window.App._deckKey() : 'de';
+ const l2 = String(deckKey || 'de').split('.')[0] || 'de';
+ const l2Key = l2 + 'Antonyms';
+
+ const l2Arr = Array.isArray(word[l2Key]) ? word[l2Key]
+ : (Array.isArray(word.deAntonyms) ? word.deAntonyms : []); // fallback
  const ru = Array.isArray(word.ruAntonyms) ? word.ruAntonyms : [];
  const uk = Array.isArray(word.ukAntonyms) ? word.ukAntonyms : [];
 
  const l1 = (uiLang === 'uk') ? uk : ru;
- return { de: de, l1: l1 };
+ return { de: l2Arr, l1: l1 };
  }
 
  /* ----------------------------- Заголовок и вкладки ----------------------------- */
