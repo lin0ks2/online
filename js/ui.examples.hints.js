@@ -302,8 +302,8 @@
  const de = (syn.de || []).filter(Boolean);
  const l1 = (syn.l1 || []).filter(Boolean);
 
- // ВРЕМЕННО: если нет немецких синонимов — считаем, что синонимов нет вообще
- if (!de.length) {
+// Если нет синонимов ни на L2, ни на L1 — показываем заглушку
+ if (!de.length && !l1.length) {
  body.innerHTML =
  '<div class="hint-example">' +
  '<p class="hint-tr is-visible">' +
@@ -337,8 +337,8 @@
  const de = (ant.de || []).filter(Boolean);
  const l1 = (ant.l1 || []).filter(Boolean);
 
- // ВРЕМЕННО: если нет немецких антонимов — считаем, что антонимов нет вообще
- if (!de.length) {
+// Если нет антонимов ни на L2, ни на L1 — показываем заглушку
+ if (!de.length && !l1.length) {
  body.innerHTML =
  '<div class="hint-example">' +
  '<p class="hint-tr is-visible">' +
