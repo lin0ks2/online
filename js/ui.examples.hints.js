@@ -302,8 +302,8 @@
  const de = (syn.de || []).filter(Boolean);
  const l1 = (syn.l1 || []).filter(Boolean);
 
-// Если нет синонимов ни на L2, ни на L1 — показываем заглушку
- if (!de.length && !l1.length) {
+ // ВРЕМЕННО: если нет немецких синонимов — считаем, что синонимов нет вообще
+ if (!de.length) {
  body.innerHTML =
  '<div class="hint-example">' +
  '<p class="hint-tr is-visible">' +
@@ -337,8 +337,8 @@
  const de = (ant.de || []).filter(Boolean);
  const l1 = (ant.l1 || []).filter(Boolean);
 
-// Если нет антонимов ни на L2, ни на L1 — показываем заглушку
- if (!de.length && !l1.length) {
+ // ВРЕМЕННО: если нет немецких антонимов — считаем, что антонимов нет вообще
+ if (!de.length) {
  body.innerHTML =
  '<div class="hint-example">' +
  '<p class="hint-tr is-visible">' +
@@ -555,15 +555,11 @@
  }
 
  // неправильный ответ → считаем попытки, на 2-й показываем перевод
- if (isWrong) {
- wrongAttempts += 1;
- if (wrongAttempts >= 2) {
- setTimeout(showTranslation, 0);
- }
- }
-
- return;
- }
+  if (isWrong) {
+    wrongAttempts += 1;
+    setTimeout(showTranslation, 0);
+    return;
+  }
 
  // 2.2) Клик по "Не знаю" → как раньше, сразу показываем перевод
  if (isIdk) {
