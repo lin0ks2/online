@@ -157,6 +157,14 @@
       setByDeck = setByDeck || {};
       setByDeck[key] = idx;
       saveSetState();
+
+      // sync active set with base Trainer so UI set pills and header stats stay consistent
+      try {
+        if (A.Trainer && typeof A.Trainer.setBatchIndex === "function") {
+          A.Trainer.setBatchIndex(idx, key);
+        }
+      } catch (e) {}
+
       return idx;
     } catch (_) {
       return 0;
