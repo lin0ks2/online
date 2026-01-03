@@ -192,3 +192,4 @@ window.decks.es_particles = [
   { id: 7, word: "quizá", uk: "можливо", ru: "возможно" },
   { id: 8, word: "también", uk: "також", ru: "тоже" }
 ];
+
