@@ -102,13 +102,17 @@
     } catch (e) {}
   }
 
-  function updateArticlesStatsLine(vm) {
+  // Строка статистики должна быть 1:1 как в обычном тренере:
+  // используем тот же нижний элемент #dictStats (место/стиль уже заданы в home).
+  // Здесь меняем только входные данные: X/Y считаются по прогрессу артиклей.
+  function updateBottomDictStats(vm) {
     try {
-      if (!rootEl || !vm) return;
-      var el = qs('.trainer-articles-stats', rootEl);
-      if (!el) return;
+      if (!vm) return;
+      var statsEl = document.getElementById('dictStats');
+      if (!statsEl) return;
+
       var dk = vm.deckKey;
-      var st = null;
+      var st;
       try {
         st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
           ? A.ArticlesTrainer.getDeckStats(dk)
@@ -116,16 +120,27 @@
       } catch (_) {
         st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
       }
-      var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
       var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
       var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
-      el.textContent = label + ': ' + x + ' / ' + y;
-      el.style.display = '';
+
+      var uiLang = '';
+      try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_) {}
+      var uk = String(uiLang).toLowerCase() === 'uk';
+
+      // Формулировки и формат — те же, что у обычного тренера.
+      statsEl.textContent = uk
+        ? ('Всього слів: ' + x + ' / Вивчено: ' + y)
+        : ('Всего слов: ' + x + ' / Выучено: ' + y);
+      statsEl.style.display = '';
     } catch (_e) {}
   }
 
   function render(vm) {
     if (!mounted || !rootEl || !vm) return;
+
+    // запоминаем последнее состояние, чтобы корректно переотрисовать строку статистики
+    // при переключении языка интерфейса.
+    uiState.lastVm = vm;
 
     // На каркасе мы используем ту же разметку .home-trainer из home.js.
     var starsBox = qs('.trainer-stars', rootEl);
@@ -133,7 +148,7 @@
     var wordEl = qs('.trainer-word', rootEl);
     var subtitleEl = qs('.trainer-subtitle', rootEl);
     var translationEl = qs('.trainer-translation', rootEl);
-    var dictStatsEl = qs('#dictStats', rootEl);
+    // Строка статистики внизу карточки (как в обычном тренере) — не часть rootEl.
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
@@ -172,26 +187,8 @@
       translationEl.style.display = trText ? '' : 'none';
     }
 
-    // Строка статистики (ТЗ): "Количество слов с артиклями / выучено".
-    // Размещаем в том же месте и с тем же стилем, что и в обычном тренере: p#dictStats (.dict-stats).
-    try {
-      if (dictStatsEl) {
-        var dk = vm.deckKey;
-        var st = null;
-        try {
-          st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
-            ? A.ArticlesTrainer.getDeckStats(dk)
-            : { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
-        } catch (_) {
-          st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
-        }
-        var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
-        var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
-        var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
-        dictStatsEl.textContent = label + ': ' + x + ' / ' + y;
-        dictStatsEl.style.display = '';
-      }
-    } catch (e) {}
+    // Статистика: обновляем нижнюю строку #dictStats тем же стилем, что у word-trainer.
+    updateBottomDictStats(vm);
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
@@ -288,7 +285,7 @@
           try {
             if (vm0) {
               paintStars(vm0.deckKey, vm0.wordId);
-              updateArticlesStatsLine(vm0);
+              updateBottomDictStats(vm0);
             }
           } catch (_e2) {}
 
@@ -318,7 +315,7 @@
           });
           if (vm) {
             paintStars(vm.deckKey, vm.wordId);
-            updateArticlesStatsLine(vm);
+            updateBottomDictStats(vm);
           }
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
@@ -331,7 +328,7 @@
         btn.disabled = true;
         if (res.applied && vm) {
           paintStars(vm.deckKey, vm.wordId);
-          updateArticlesStatsLine(vm);
+          updateBottomDictStats(vm);
         }
       } catch (e) {}
     };
@@ -348,6 +345,20 @@
       });
       if (typeof off === 'function') unsubs.push(off);
     }
+
+    // реакция на переключение языка интерфейса (тогл): обновляем нижнюю строку статистики
+    // теми же формулировками, что и у базового тренера.
+    var onLang = function () {
+      try { if (uiState && uiState.lastVm) updateBottomDictStats(uiState.lastVm); } catch (_e) {}
+    };
+    try {
+      document.addEventListener('lexitron:ui-lang-changed', onLang);
+      window.addEventListener('lexitron:ui-lang-changed', onLang);
+      unsubs.push(function(){
+        try { document.removeEventListener('lexitron:ui-lang-changed', onLang); } catch(_){ }
+        try { window.removeEventListener('lexitron:ui-lang-changed', onLang); } catch(_){ }
+      });
+    } catch (_e3) {}
 
     // первичная отрисовка, если тренер уже активен
     try {
