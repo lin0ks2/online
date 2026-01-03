@@ -30,12 +30,6 @@
   var currentWord = null;
   var lastWordId = '';
 
-  // Поведение ответов должно совпадать 1:1 с базовым тренером:
-  // - штраф за неправильный ответ только один раз на слово
-  // - после правильного ответа ввод блокируется и идём дальше
-  var solved = false;
-  var penalized = false;
-
   function norm(s) {
     return String(s || '').trim().toLowerCase();
   }
@@ -66,57 +60,26 @@
     // Поэтому здесь делаем максимально безопасно: ru -> uk -> ''
     if (!w) return '';
     var ui = '';
-    try { ui = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
+    try { ui = (A.settings && A.settings.uiLang) || ''; } catch (e) {}
     if (String(ui).toLowerCase() === 'uk') return String(w.uk || w.ua || w.ru || '').trim();
     return String(w.ru || w.uk || '').trim();
   }
 
   function pickNextWord() {
-    // 1:1 с базовым тренером: берём deck slice (учитывает активный набор/батч)
-    // и выбираем индекс через sampleNextIndexWeighted(), если доступно.
-    var slice = [];
-    try {
-      if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') {
-        slice = A.Trainer.getDeckSlice(deckKey) || [];
-      }
-    } catch (e) {}
-
-    // fallback: полный deck
-    if (!slice || !slice.length) {
-      slice = getDeck();
-    }
-    if (!slice || !slice.length) return null;
-
-    function pickIndex(arr) {
-      try {
-        if (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function') {
-          return A.Trainer.sampleNextIndexWeighted(arr);
-        }
-      } catch (e) {}
-      return Math.floor(Math.random() * arr.length);
-    }
-
-    var tries = 24;
+    var deck = getDeck();
+    if (!deck.length) return null;
+    // MVP: случайный выбор без сложной логики батчей.
+    // Позже заменим на 1:1 поведение базового тренера.
+    var tries = 16;
     while (tries-- > 0) {
-      var idx = pickIndex(slice);
-      var w = slice[idx];
+      var w = deck[Math.floor(Math.random() * deck.length)];
       if (!w) continue;
       if (String(w.id) === String(lastWordId)) continue;
       var a = parseArticle(w.word || w.term || w.de);
       if (!ALLOWED[a]) continue;
       return w;
     }
-
-    // последний шанс: линейный проход
-    for (var i = 0; i < slice.length; i++) {
-      var ww = slice[i];
-      if (!ww) continue;
-      var aa = parseArticle(ww.word || ww.term || ww.de);
-      if (!ALLOWED[aa]) continue;
-      if (String(ww.id) === String(lastWordId)) continue;
-      return ww;
-    }
-    return slice[0] || null;
+    return deck[0] || null;
   }
 
   function buildViewModel() {
@@ -152,32 +115,11 @@
     mode = String(m || 'default');
     active = true;
 
-    // Учёт времени активности приложения (общая статистика):
-    // обычный тренер стартует сессию через Router.routeTo('home').
-    // Здесь страхуемся, чтобы при запуске тренера артиклей время тоже считалось.
-    try {
-      if (A.Analytics && typeof A.Analytics.trainingStart === 'function') {
-        var learnLang = null;
-        try {
-          if (A.Decks && typeof A.Decks.langOfKey === 'function') {
-            learnLang = A.Decks.langOfKey(deckKey) || null;
-          }
-        } catch (_) {}
-        var uiLang = '';
-        try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e) {}
-        A.Analytics.trainingStart({ learnLang: learnLang, uiLang: uiLang, deckKey: deckKey, trainerKind: 'articles' });
-      }
-    } catch (_e2) {}
-
-    solved = false;
-    penalized = false;
-
     // статистика сессии
     try { if (A.ArticlesStats && A.ArticlesStats.startSession) A.ArticlesStats.startSession(); } catch (e) {}
 
     currentWord = pickNextWord();
     lastWordId = currentWord ? String(currentWord.id) : '';
-    try { A.__currentWord = currentWord; } catch(e) {}
     notifyUpdate();
   }
 
@@ -187,9 +129,6 @@
     mode = 'default';
     currentWord = null;
     lastWordId = '';
-    solved = false;
-    penalized = false;
-    try { A.__currentWord = null; } catch(e) {}
     try { if (A.ArticlesStats && A.ArticlesStats.endSession) A.ArticlesStats.endSession(); } catch (e) {}
     notifyUpdate();
   }
@@ -198,9 +137,6 @@
     if (!active) return;
     currentWord = pickNextWord();
     lastWordId = currentWord ? String(currentWord.id) : '';
-    try { A.__currentWord = currentWord; } catch(e) {}
-    solved = false;
-    penalized = false;
     notifyUpdate();
   }
 
@@ -211,35 +147,68 @@
     var picked = norm(article);
     var ok = picked === correct;
 
-    // IMPORTANT: начисление/штраф только 1 раз на слово (как в home.js)
-    var applied = false;
-    if (ok) {
-      if (!solved) {
-        solved = true;
-        applied = true;
+    try {
+      if (A.ArticlesProgress && typeof A.ArticlesProgress.onAnswer === 'function') {
+        A.ArticlesProgress.onAnswer(deckKey, currentWord.id, ok);
       }
-    } else {
-      if (!penalized) {
-        penalized = true;
-        applied = true;
-      }
-    }
+    } catch (e) {}
 
-    if (applied) {
+    
+      // Auto-advance sets (articles): если текущий сет полностью выучен — переключаемся на следующий
       try {
-        if (A.ArticlesProgress && typeof A.ArticlesProgress.onAnswer === 'function') {
-          A.ArticlesProgress.onAnswer(deckKey, currentWord.id, ok, { mode: mode });
+        if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function' &&
+            typeof A.Trainer.getBatchIndex === 'function' && typeof A.Trainer.setBatchIndex === 'function' &&
+            A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') {
+
+          var slice = A.Trainer.getDeckSlice(deckKey) || [];
+          if (slice && slice.length) {
+            var maxA = (typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : 5;
+
+            // фильтруем только слова с артиклями
+            var cand = [];
+            for (var si = 0; si < slice.length; si++) {
+              var ww = slice[si];
+              var rr = (ww && (ww.word || ww.term || ww.de || '')) || '';
+              var aa = parseArticle(rr);
+              if (aa === 'der' || aa === 'die' || aa === 'das') cand.push(ww);
+            }
+
+            var allLearned = (cand.length > 0);
+            for (var ci = 0; ci < cand.length; ci++) {
+              var wid = cand[ci] && cand[ci].id;
+              if (!wid) continue;
+              var st = Number(A.ArticlesProgress.getStars(deckKey, wid) || 0);
+              if (st < Number(maxA || 5)) { allLearned = false; break; }
+            }
+
+            if (allLearned) {
+              var deck = getDeck();
+              var setSize = 40;
+              try { setSize = (A.Trainer && typeof A.Trainer.setSize === 'function') ? A.Trainer.setSize() : setSize; } catch(_){}
+              if (!setSize || setSize < 1) setSize = 40;
+
+              var totalSets = Math.max(1, Math.ceil((deck || []).length / setSize));
+              var cur = Number(A.Trainer.getBatchIndex(deckKey) || 0);
+              var next = cur + 1;
+              if (next >= totalSets) next = 0;
+
+              A.Trainer.setBatchIndex(next, deckKey);
+
+              // Сразу выбрать новое слово из нового сета
+              currentWord = pickNextWord();
+              solved = false;
+              penalized = false;
+            }
+          }
         }
       } catch (e) {}
+try {
+      if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
+        A.ArticlesStats.onAnswer(ok);
+      }
+    } catch (e) {}
 
-      try {
-        if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
-          A.ArticlesStats.onAnswer(ok);
-        }
-      } catch (e) {}
-    }
-
-    return { ok: ok, correct: correct, applied: applied };
+    return { ok: ok, correct: correct };
   }
 
   A.ArticlesTrainer = {
@@ -249,7 +218,6 @@
     next: next,
     answer: answer,
     getViewModel: buildViewModel,
-    getCurrentWord: function(){ return currentWord; },
     // helpers (можно использовать из UI)
     _stripArticle: stripArticle,
     _parseArticle: parseArticle
