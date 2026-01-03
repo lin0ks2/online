@@ -25,7 +25,8 @@
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
       close:   uk ? 'Закрити' : 'Закрыть',
-      ok:      'Ок',
+      // This button starts the default word trainer
+      ok:      uk ? 'Вчити слова' : 'Учить слова',
       articles: uk ? 'Вчити артиклі' : 'Учить артикли'
     };
   }
@@ -136,7 +137,8 @@
 
             <div class="dicts-actions">
               <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
-              <button type="button" class="btn-ghost" id="dicts-articles" style="display:none">${T.articles}</button>
+              <!-- ВАЖНО: тот же стиль, что и у OK -->
+              <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
             </div>
           </section>
         </div>`;
@@ -170,10 +172,8 @@
         try{
           const b = document.getElementById('dicts-articles');
           if (!b) return;
-          // Показываем кнопку только для немецких существительных.
-          // Никаких проверок на trainerKind и “наличие плагина” в момент рендера — это ломает UX.
-          const lang = String(selectedLang || '').toLowerCase();
-          const show = (lang === 'de') && (selectedKey === 'de_nouns');
+          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
+          const show = hasPlugin && (selectedKey === 'de_nouns');
           b.style.display = show ? '' : 'none';
         }catch(_){
           // no-op
@@ -182,8 +182,11 @@
 
       // ОК → уходим на главную
       const ok = document.getElementById('dicts-apply');
-      if (ok){
-        ok.addEventListener('click', ()=>{
+	      if (ok){
+	        // назначаем обработчик через .onclick, чтобы не накапливать слушатели
+	        ok.onclick = ()=>{
+  // Switch to the default word trainer
+  try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
   try {
     A.settings = A.settings || {};
     A.settings.lastDeckKey = selectedKey;
@@ -195,35 +198,27 @@
     document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: selectedKey } }));
   } catch(_) {}
   goHome();
-});
+	};
       }
 
       // Учить артикли → (пока) просто показываем карточку для визуальной проверки
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
-        articlesBtn.addEventListener('click', ()=>{
-          // Включаем режим артиклей только по клику (без побочных эффектов в рендере).
+	                // назначаем обработчик через .onclick, чтобы не накапливать слушатели
+	                articlesBtn.onclick = ()=>{
+          // Switch to the articles trainer (only valid for de_nouns)
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){ }
+          // save selected deck like default OK
           try {
             A.settings = A.settings || {};
-            A.settings.trainerKind = 'articles';
-            A.settings.lastDeckKey = 'de_nouns';
-            A.settings.preferredReturnKey = 'de_nouns';
-            if (typeof A.saveSettings === 'function') {
-              A.saveSettings(A.settings);
-            }
-          } catch(_){}
-
-          // Переходим на главный экран; запуск и монтирование делает home.js
-          try {
-            if (window.Router && typeof window.Router.routeTo === 'function') {
-              window.Router.routeTo('home');
-            } else if (A.Router && typeof A.Router.routeTo === 'function') {
-              A.Router.routeTo('home');
-            }
-          } catch(_){}
-        });
+            A.settings.lastDeckKey = selectedKey;
+            if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
+          } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
+          goHome();
+        };
       }
-      // первичная синхронизация кнопки
+// первичная синхронизация кнопки
       updateArticlesButton();
 
       renderFlagsUI();

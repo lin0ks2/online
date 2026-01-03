@@ -41,7 +41,29 @@
     return (v === 'uk') ? 'uk' : 'ru';
   }
 
-  function setUiLang(code){
+  
+  // Подсчет "выученности" в режиме артиклей: считаем отдельно, не смешивая со словами.
+  function countLearnedArticles(words, deckKey){
+    try{
+      if (!words || !words.length) return 0;
+      const P = A.ArticlesProgress;
+      if (!P || typeof P.getStars !== 'function') return 0;
+      const max = (typeof P.starsMax === 'function') ? P.starsMax() : 5;
+      let learned = 0;
+      for (let i=0;i<words.length;i++){
+        const w = words[i];
+        const have = Number(P.getStars(deckKey, w.id) || 0) || 0;
+        if (have >= max) learned++;
+      }
+      return learned;
+    }catch(_){
+      return 0;
+    }
+  }
+
+  // Обновляет строку статистики под карточкой (1:1 с обычным тренером по месту/формату),
+  // но источник цифр зависит от режима: words vs articles.
+function setUiLang(code){
     const lang = (code === 'uk') ? 'uk' : 'ru';
     A.settings = A.settings || {};
     A.settings.lang = lang;
@@ -105,7 +127,12 @@
         if (A.Router && typeof A.Router.routeTo === 'function') {
           A.Router.routeTo(A.Router.current || 'home');
         } else {
-          mountMarkup(); renderSets(); renderTrainer();
+          mountMarkup(); renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        }
         }
       } catch(_){}
     });
@@ -225,6 +252,30 @@
 
   // starKey (единственное определение)
   const starKey = (typeof A.starKey === 'function') ? A.starKey : (id, key) => `${key}:${id}`;
+
+  function setDictStatsText(statsEl, deckKey){
+    try{
+      if (!statsEl) return;
+      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+
+      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
+      const uk = getUiLang() === 'uk';
+      if (isArticles) {
+        const learnedA = countLearnedArticles(full, deckKey);
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
+      } else {
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+      }
+    }catch(_){}
+  }
+
 
 // Выбор активного словаря
 function activeDeckKey() {
@@ -401,18 +452,34 @@ function activeDeckKey() {
 
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+
     for (let i = 0; i < totalSets; i++) {
       const from = i * SET_SIZE;
       const to   = Math.min(deck.length, (i + 1) * SET_SIZE);
       const sub  = deck.slice(from, to);
-      const done = sub.length > 0 && sub.every(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax);
+      const done = sub.length > 0 && sub.every(w => {
+        if (isArticles) {
+          try {
+            const maxA = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : starsMax;
+            const haveA = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (A.ArticlesProgress.getStars(key, w.id) || 0) : 0;
+            return Number(haveA || 0) >= Number(maxA || 5);
+          } catch(_) { return false; }
+        }
+        return (((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax);
+      });
 
       const btn = document.createElement('button');
       btn.className = 'set-pill' + (i === activeIdx ? ' is-active' : '') + (done ? ' is-done' : '');
       btn.textContent = i + 1;
       btn.onclick = () => {
         try { if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') A.Trainer.setBatchIndex(i, key); } catch (_){}
-        renderSets(); renderTrainer();
+        renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        }
         try { A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender(); } catch(_){}
       };
       grid.appendChild(btn);
@@ -427,9 +494,20 @@ function activeDeckKey() {
 
     if (statsEl) {
       const uk = getUiLang() === 'uk';
-      statsEl.textContent = uk
-        ? `Слів у наборі: ${words.length} / Вивчено: ${learned}`
-        : `Слов в наборе: ${words.length} / Выучено: ${learned}`;
+      // В режиме тренера артиклей статистику по словам в сете скрываем.
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+      if (isArticles) {
+        const learnedA = countLearnedArticles(words, key);
+        statsEl.style.display = '';
+        statsEl.textContent = uk
+          ? `Слів у наборі: ${words.length} / Вивчено: ${learnedA}`
+          : `Слов в наборе: ${words.length} / Выучено: ${learnedA}`;
+      } else {
+        statsEl.style.display = '';
+        statsEl.textContent = uk
+          ? `Слів у наборі: ${words.length} / Вивчено: ${learned}`
+          : `Слов в наборе: ${words.length} / Выучено: ${learned}`;
+      }
     }
   }
 
@@ -593,62 +671,38 @@ function activeDeckKey() {
     const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
     if (!slice.length) return;
 
-
-    // Articles trainer (German nouns) — activated only via A.settings.trainerKind === 'articles'
+    // Trainer variant switching (words vs articles).
+    // We must NOT fall back to the default trainer when the user interacts with
+    // sets, language toggle, or other UI elements while the articles trainer is active.
+    // Switching is allowed only via the dedicated buttons on selection screens.
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
       && String(key) === 'de_nouns'
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     if (wantArticles) {
-      // Hard guard: articles mode only valid for German nouns deck. Otherwise reset to words to avoid mixed UI.
+      // Ensure the articles card is mounted into the standard home trainer container.
+      try { if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') A.ArticlesCard.mount(document.querySelector('.home-trainer')); } catch (_){ }
+
+      // Start if needed (mode mirrors the default trainer's difficulty).
       try {
-        const curKey = String(key || '');
-        const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(curKey) || '') : '';
-        if (curKey !== 'de_nouns' || String(lang).toLowerCase() !== 'de') {
-          try { if (A.ArticlesTrainer && A.ArticlesTrainer.stop) A.ArticlesTrainer.stop(); } catch(_) {}
-          try { if (A.ArticlesCard && A.ArticlesCard.unmount) A.ArticlesCard.unmount(); } catch(_) {}
-          try {
-            A.settings = A.settings || {};
-            A.settings.trainerKind = 'words';
-            if (A.saveSettings) A.saveSettings(A.settings);
-          } catch(_) {}
-          // fall through to base trainer
+        const mode = (typeof getMode === 'function') ? getMode() : 'normal';
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && !A.ArticlesTrainer.isActive()) {
+          A.ArticlesTrainer.start('de_nouns', mode);
         }
-      } catch(_) {}
+      } catch (_){ }
 
-      try {
-        // Mount into the same container as the base trainer (no extra layout wrappers)
-        A.ArticlesCard.mount(document.querySelector('.home-trainer'));
-      } catch (_) {}
+      // Force a render for the current viewModel (in addition to bus updates).
+      try { if (A.ArticlesCard && typeof A.ArticlesCard.render === 'function' && A.ArticlesTrainer && typeof A.ArticlesTrainer.getViewModel === 'function') A.ArticlesCard.render(A.ArticlesTrainer.getViewModel()); } catch (_){ }
 
-      try {
-        const m = getMode();
-        // Start once per entry (avoid listener duplication)
-        if (!A.ArticlesTrainer.isActive || !A.ArticlesTrainer.isActive()) {
-          A.ArticlesTrainer.start('de_nouns', m);
-        } else {
-          // If mode changed while staying on Home, restart to apply mode.
-          const vm = (A.ArticlesTrainer.getViewModel && A.ArticlesTrainer.getViewModel()) || null;
-          if (vm && vm.mode && String(vm.mode) !== String(m)) {
-            try { A.ArticlesTrainer.stop(); } catch (_) {}
-            A.ArticlesTrainer.start('de_nouns', m);
-          }
-        }
-      } catch (_) {}
-
-      try {
-        // Force paint immediately (bus updates will continue to refresh)
-        if (A.ArticlesCard.render && A.ArticlesTrainer.getViewModel) {
-          A.ArticlesCard.render(A.ArticlesTrainer.getViewModel());
-        }
-      } catch (_) {}
-
+      // Mode indicator must be visible on first render (same as default trainer).
+      try { if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') A.Trainer.updateModeIndicator(); } catch (_){ }
       return;
     }
 
-    // Leaving articles mode → restore base trainer UI
-    try { if (A.ArticlesTrainer && A.ArticlesTrainer.isActive && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_) {}
-    try { if (A.ArticlesCard && A.ArticlesCard.unmount) A.ArticlesCard.unmount(); } catch (_) {}
+    // If we are NOT in articles mode, make sure the articles plugin is stopped/unmounted.
+    try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
+    try { if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') A.ArticlesCard.unmount(); } catch (_){ }
+
     const idx = (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function')
       ? A.Trainer.sampleNextIndexWeighted(slice)
       : Math.floor(Math.random() * slice.length);
@@ -769,7 +823,12 @@ function activeDeckKey() {
             btn.disabled = true;
           });
           afterAnswer(true);
-          setTimeout(() => { renderSets(); renderTrainer(); }, ADV_DELAY);
+          setTimeout(() => { renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        } }, ADV_DELAY);
           return;
         }
 
@@ -818,17 +877,22 @@ function activeDeckKey() {
           }
         } catch (_) {}
 
-        setTimeout(() => { renderSets(); renderTrainer(); }, ADV_DELAY);
+        setTimeout(() => { renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        } }, ADV_DELAY);
       };
     }
 
     const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(key) || []) : [];
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
     const learned = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax).length;
     if (stats) {
-      const uk = getUiLang() === 'uk';
-      stats.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learned}`
-                             : `Всего слов: ${full.length} / Выучено: ${learned}`;
+      setDictStatsText(stats, key);
     }
     if (modeEl && A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
       A.Trainer.updateModeIndicator();
@@ -852,20 +916,6 @@ function activeDeckKey() {
   const Router = {
     current: 'home',
     routeTo(action) {
-      // --- Articles trainer lifecycle guard: leaving home => stop/unmount to prevent mixed UI
-      try {
-        const prev = String(Router.current || '');
-        const next = String(action || '');
-        if (prev === 'home' && next && next !== 'home') {
-          if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) {
-            try { A.ArticlesTrainer.stop(); } catch(_) {}
-          }
-          if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') {
-            try { A.ArticlesCard.unmount(); } catch(_) {}
-          }
-        }
-      } catch(_) {}
-
       const prev = this.current || 'home';
       this.current = action;
       const app = document.getElementById('app');
@@ -1058,6 +1108,17 @@ function activeDeckKey() {
 
     bindLangToggle();
     bindLevelToggle();
+
+    // синхронизация UI при обновлении тренера артиклей: обновляем сеты и строки статистики 1:1
+    try {
+      if (window.UIBus && typeof window.UIBus.on === 'function' && !A.__articlesHomeSyncBound) {
+        A.__articlesHomeSyncBound = true;
+        window.UIBus.on('articles:update', function(){
+          try { renderSets(); } catch(_) {}
+          try { renderTrainer(); } catch(_) {}
+        });
+      }
+    } catch(_) {}
     bindFooterNav();
 
     // ждём словари, потом грузим главную (важно для корректного дефолтного ключа и слайса)

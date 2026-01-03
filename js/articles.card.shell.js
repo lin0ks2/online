@@ -22,12 +22,20 @@
 
   var A = (window.App = window.App || {});
 
-  var SHOW_TRANSLATION = true;
+  // IMPORTANT: перевод отключён полностью по ТЗ (вторая строка убирается).
 
   var mounted = false;
   var rootEl = null;
   var snapshotHTML = '';
   var unsubs = [];
+
+  // Поведение ответов должно совпадать с базовым тренером (home.js):
+  // - неправильный ответ: подсветка + disable только нажатой кнопки
+  // - штраф/статистика применяются 1 раз на слово (логика в ArticlesTrainer)
+  // - правильный ответ: блокируем все кнопки + is-correct + is-dim
+  // - переход к следующему слову с тем же таймингом
+  var uiState = { wordId: '', solved: false, layout: null };
+  var ADV_DELAY = 750;
 
   function qs(sel, root) {
     return (root || document).querySelector(sel);
@@ -63,6 +71,37 @@
     btn.classList.add('is-disabled');
   }
 
+  function paintStars(deckKey, wordId) {
+    try {
+      if (!rootEl) return;
+      var starsBox = qs('.trainer-stars', rootEl);
+      if (!starsBox || !A.ArticlesProgress || !wordId) return;
+      var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
+      var have = Number((A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(deckKey, wordId)) || 0) || 0;
+
+      // 1:1 с базовым тренером: поддержка "половинок" в hard-mode.
+      // Используем те же классы full/half.
+      var kids = starsBox.querySelectorAll('.star');
+      if (!kids || kids.length !== max) {
+        var html = '';
+        for (var i = 0; i < max; i++) html += '<span class="star" aria-hidden="true">★</span>';
+        starsBox.innerHTML = html;
+      }
+      var stars = starsBox.querySelectorAll('.star');
+      stars.forEach(function (el) { el.classList.remove('full', 'half'); });
+
+      var EPS = 1e-6;
+      var filled = Math.floor(have + EPS);
+      for (var fi = 0; fi < Math.min(filled, max); fi++) {
+        stars[fi].classList.add('full');
+      }
+      var frac = have - filled;
+      if (frac + EPS >= 0.5 && filled < max) {
+        stars[filled].classList.add('half');
+      }
+    } catch (e) {}
+  }
+
   function render(vm) {
     if (!mounted || !rootEl || !vm) return;
 
@@ -71,6 +110,7 @@
     var heartBtn = qs('#favBtn', rootEl);
     var wordEl = qs('.trainer-word', rootEl);
     var subtitleEl = qs('.trainer-subtitle', rootEl);
+    var translationEl = qs('.trainer-translation', rootEl);
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
@@ -80,11 +120,11 @@
     // заголовок вопроса
     if (subtitleEl) {
       var uiLang = '';
-      try { uiLang = (A.settings && A.settings.uiLang) || ''; } catch (e) {}
+      try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
       subtitleEl.textContent = (String(uiLang).toLowerCase() === 'uk') ? (vm.promptUk || 'Оберіть артикль') : (vm.promptRu || 'Выберите артикль');
     }
 
-    // слово + перевод
+    // слово
     if (wordEl) {
       // важно: слово без артикуля
       wordEl.textContent = String(vm.wordDisplay || '').trim();
@@ -92,131 +132,144 @@
       setAudioDisabled(wordEl);
     }
 
-    // вторичная строка перевода
-    var trEl = qs('.trainer-translation', rootEl);
-    if (SHOW_TRANSLATION) {
-      if (!trEl) {
-        trEl = document.createElement('p');
-        trEl.className = 'trainer-translation';
-        // вставляем сразу после .trainer-word
-        if (wordEl && wordEl.parentNode) {
-          wordEl.parentNode.insertBefore(trEl, wordEl.nextSibling);
-        } else {
-          rootEl.insertBefore(trEl, rootEl.firstChild);
-        }
+    // Перевод: показываем между словом и подсказкой "Выберите артикль"
+    // Важно: на "втором плане" (чуть меньше и приглушённый) — через CSS.
+    var trText = String(vm.translation || '').trim();
+    if (!translationEl) {
+      translationEl = document.createElement('p');
+      translationEl.className = 'trainer-translation';
+      // вставляем сразу после слова
+      if (wordEl && wordEl.parentNode) {
+        if (wordEl.nextSibling) wordEl.parentNode.insertBefore(translationEl, wordEl.nextSibling);
+        else wordEl.parentNode.appendChild(translationEl);
       }
-      trEl.textContent = String(vm.translation || '').trim();
-    } else {
-      if (trEl && trEl.parentNode) trEl.parentNode.removeChild(trEl);
+    }
+    if (translationEl) {
+      translationEl.textContent = trText;
+      translationEl.style.display = trText ? '' : 'none';
     }
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
     if (starsBox && A.ArticlesProgress && vm.wordId) {
-      try {
-        var max = (A.ArticlesProgress.starsMax && A.ArticlesProgress.starsMax()) || 5;
-        var have = (A.ArticlesProgress.getStars && A.ArticlesProgress.getStars(vm.deckKey, vm.wordId)) || 0;
-        // используем drawStarsTwoPhase из home.js нельзя (не публичная функция),
-        // поэтому в каркасе — простая отрисовка.
-        var html = '';
-        for (var i = 0; i < max; i++) {
-          html += '<span class="star' + (i < have ? ' full' : '') + '" aria-hidden="true">★</span>';
-        }
-        starsBox.innerHTML = html;
-      } catch (e) {}
+      paintStars(vm.deckKey, vm.wordId);
     }
 
     // ответы
     if (answersEl) {
-      answersEl.innerHTML = '';
-      var opts = vm.options || ['der', 'die', 'das'];
-
-      var solved = false;
-      var ADV_DELAY = 750;
-
-      function lockAll(correctArticle) {
-        try {
-          var btns = answersEl.querySelectorAll('.answer-btn');
-          btns.forEach(function(btn){
-            btn.disabled = true;
-            var a = btn.getAttribute('data-article');
-            if (a && String(a) === String(correctArticle)) btn.classList.add('is-correct');
-            else btn.classList.add('is-dim');
-          });
-        } catch(e) {}
-        // блокируем "не знаю" так же, как в обычном тренере
-        try {
-          var idkBtn = qs('.idk-btn', rootEl);
-          if (idkBtn) idkBtn.disabled = true;
-        } catch(e) {}
+      // сброс UI-состояния при смене слова
+      if (String(uiState.wordId) !== String(vm.wordId || '')) {
+        uiState.wordId = String(vm.wordId || '');
+        uiState.solved = false;
+        uiState.layout = null;
       }
 
-      opts.forEach(function(article){
+      answersEl.innerHTML = '';
+      var base = vm.options || ['der','die','das'];
+
+      // 3 кнопки всегда в одну линию. Позиции артиклей должны быть рандомными.
+      if (!uiState.layout) {
+        var articles = base.slice(0, 3);
+        for (var si = articles.length - 1; si > 0; si--) {
+          var sj = Math.floor(Math.random() * (si + 1));
+          var tmp = articles[si]; articles[si] = articles[sj]; articles[sj] = tmp;
+        }
+        uiState.layout = articles;
+      }
+
+      for (var j = 0; j < 3; j++) {
+        var article = String(uiState.layout[j] || '');
         var b = document.createElement('button');
         b.className = 'answer-btn';
-        b.textContent = String(article);
-        b.setAttribute('data-article', String(article));
-        b.onclick = function(){
-          if (solved) return;
-          try {
-            solved = true;
-            var res = (A.ArticlesTrainer && typeof A.ArticlesTrainer.answer === 'function')
-              ? A.ArticlesTrainer.answer(article)
-              : { ok:false, correct:'' };
+        b.textContent = article;
+        b.setAttribute('data-article', article);
 
-            if (res && res.ok) {
-              b.classList.add('is-correct');
-              lockAll(res.correct || article);
-              // переход как в обычном тренере
-              setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
-              setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
-              return;
-            }
-
-            b.classList.add('is-wrong');
-            b.disabled = true;
-            lockAll((res && res.correct) ? res.correct : '');
-            setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
-            setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
-          } catch (e) {}
-        };
+        // КЛИКИ обрабатываются единым делегированным слушателем (см. mount)
         answersEl.appendChild(b);
-      });
-
-      // "Не знаю" — 1:1 с обычным тренером
-      try {
-        var idkBtn2 = qs('.idk-btn', rootEl);
-        if (idkBtn2) {
-          idkBtn2.disabled = false;
-          idkBtn2.onclick = function(){
-            if (solved) return;
-            solved = true;
-            var correct = '';
-            try { correct = (A.ArticlesTrainer && A.ArticlesTrainer.getCorrectArticle) ? A.ArticlesTrainer.getCorrectArticle() : ''; } catch(e) {}
-            if (correct) {
-              var cb = answersEl.querySelector('.answer-btn[data-article="' + String(correct) + '"]');
-              if (cb) cb.classList.add('is-correct');
-            }
-            lockAll(correct);
-            // аналитика: пинг при "не знаю"
-            try { if (A.Analytics && typeof A.Analytics.trainingPing === 'function') A.Analytics.trainingPing({ kind:'articles', event:'idk' }); } catch(_){}
-            setTimeout(function(){ try { if (window.UIBus) UIBus.emit('articles:update'); } catch(_){} }, 0);
-            setTimeout(function(){ try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(e) {} }, ADV_DELAY);
-          };
-        }
-      } catch(e) {}
-    }
+      }
     }
   }
 
   function mount(root) {
-    if (mounted) return;
-    rootEl = root || qs('.home-trainer');
+    // В SPA разметка .home-trainer может пересоздаваться при навигации.
+    // Если мы уже смонтированы в старый DOM-узел — нужно перемонтироваться.
+    var nextRoot = root || qs('.home-trainer');
+    if (mounted) {
+      try {
+        if (!rootEl || (rootEl && rootEl.isConnected === false) || (nextRoot && rootEl !== nextRoot)) {
+          unmount();
+        } else {
+          return;
+        }
+      } catch (_e) {
+        // на всякий случай — не блокируем монтирование
+      }
+    }
+    rootEl = nextRoot;
     if (!rootEl) return;
 
     snapshotHTML = rootEl.innerHTML;
     mounted = true;
     rootEl.classList.add('is-articles');
+    // Делегированный обработчик ответов (один раз на mount)
+    var onRootClick = function (e) {
+      try {
+        // "Не знаю" — поведение 1:1 с базовым тренером: блокируем ввод,
+        // подсвечиваем правильный, затем переходим дальше по тому же таймеру.
+        var idk = e && e.target && e.target.closest ? e.target.closest('.idk-btn') : null;
+        if (idk) {
+          if (uiState.solved) return;
+          uiState.solved = true;
+          var vm0 = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
+          var correct0 = vm0 ? String(vm0.correct || '').trim() : '';
+          var all0 = rootEl.querySelectorAll('.answers-grid .answer-btn');
+          all0.forEach(function (b) {
+            b.disabled = true;
+            var a = String(b.getAttribute('data-article') || b.textContent || '').trim();
+            if (correct0 && a === correct0) b.classList.add('is-correct');
+            else b.classList.add('is-dim');
+          });
+          setTimeout(function () {
+            try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
+          }, ADV_DELAY);
+          return;
+        }
+
+        var btn = e && e.target && e.target.closest ? e.target.closest('.answers-grid .answer-btn') : null;
+        if (!btn) return;
+        if (btn.disabled) return;
+        if (uiState.solved) return;
+
+        var picked = btn.getAttribute('data-article') || btn.textContent || '';
+        if (!String(picked || '').trim()) return;
+        var vm = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
+        var res = (A.ArticlesTrainer && A.ArticlesTrainer.answer) ? A.ArticlesTrainer.answer(picked) : { ok:false, correct:'', applied:false };
+
+        if (res.ok) {
+          uiState.solved = true;
+          btn.classList.add('is-correct');
+          var all = rootEl.querySelectorAll('.answers-grid .answer-btn');
+          all.forEach(function (b) {
+            b.disabled = true;
+            if (b !== btn) b.classList.add('is-dim');
+          });
+          if (vm) paintStars(vm.deckKey, vm.wordId);
+          setTimeout(function () {
+            try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
+          }, ADV_DELAY);
+          return;
+        }
+
+        // wrong
+        btn.classList.add('is-wrong');
+        btn.disabled = true;
+        if (res.applied && vm) paintStars(vm.deckKey, vm.wordId);
+      } catch (e) {}
+    };
+    rootEl.addEventListener('click', onRootClick, { passive: true });
+    unsubs.push(function () {
+      try { if (rootEl) rootEl.removeEventListener('click', onRootClick); } catch (e) {}
+    });
 
     // подписка на обновления от тренера
     var bus = ensureBusOn();
@@ -254,7 +307,6 @@
   A.ArticlesCard = {
     mount: mount,
     unmount: unmount,
-    render: render,
-    setShowTranslation: function (v) { SHOW_TRANSLATION = !!v; }
+    render: render
   };
 })();
