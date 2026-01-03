@@ -86,6 +86,20 @@
     return deck[id];
   }
 
+  // Внутренний доступ (для веса/recency). Возвращает «живую» запись.
+  // Не используем снаружи для мутаций.
+  function _getRawEntry(deckKey, wordId) {
+    return getEntry(deckKey, wordId);
+  }
+
+  function isLearned(deckKey, wordId) {
+    try {
+      return getStars(deckKey, wordId) >= starsMax();
+    } catch (_) {
+      return false;
+    }
+  }
+
   function clamp(n, a, b) {
     n = Number(n) || 0;
     if (n < a) return a;
@@ -166,7 +180,9 @@
     starsMax: starsMax,
     getStars: getStars,
     getLevel: getLevel,
+    isLearned: isLearned,
     onAnswer: onAnswer,
+    _getRawEntry: _getRawEntry,
     resetDeck: resetDeck,
     export: exportData,
     import: importData

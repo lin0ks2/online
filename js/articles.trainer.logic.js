@@ -36,6 +36,84 @@
   var solved = false;
   var penalized = false;
 
+  // Сеты для артиклей — отдельные от базового тренера.
+  // Не добавляем новые настройки: используем тот же setSizeDefault.
+  var SET_LS_KEY = 'k_articles_setByDeck_v1';
+  var setByDeck = loadSetState();
+  var currentSetIndex = 0;
+  var totalSets = 1;
+
+  function safeNow() {
+    return Date.now ? Date.now() : (new Date()).getTime();
+  }
+
+  function loadSetState() {
+    try {
+      var raw = window.localStorage.getItem(SET_LS_KEY);
+      if (!raw) return {};
+      var obj = JSON.parse(raw);
+      return obj && typeof obj === 'object' ? obj : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveSetState() {
+    try {
+      window.localStorage.setItem(SET_LS_KEY, JSON.stringify(setByDeck || {}));
+    } catch (e) {}
+  }
+
+  function getSetSize() {
+    try {
+      return (A.Config && A.Config.setSizeDefault) || 50;
+    } catch (_) {
+      return 50;
+    }
+  }
+
+  function getArticlesStarsMax() {
+    try {
+      if (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') {
+        var m = Number(A.ArticlesProgress.starsMax());
+        if (m > 0) return m;
+      }
+    } catch (_) {}
+    return 5;
+  }
+
+  function isLearned(deckKey, wordId) {
+    try {
+      if (!A.ArticlesProgress || typeof A.ArticlesProgress.getStars !== 'function') return false;
+      var s = Number(A.ArticlesProgress.getStars(deckKey, wordId) || 0) || 0;
+      return s >= getArticlesStarsMax();
+    } catch (_) {
+      return false;
+    }
+  }
+
+  // Аналог Trainer.getLearnedEpsilon(), но без зависимости от App.Trainer.
+  function getLearnedEpsilon() {
+    try {
+      var pref =
+        A.settings && A.settings.learnedRepeat != null
+          ? A.settings.learnedRepeat
+          : (typeof TRAINER_DEFAULT_LEARNED_REPEAT !== 'undefined'
+              ? TRAINER_DEFAULT_LEARNED_REPEAT
+              : 'never');
+      if (typeof pref === 'number') return Math.max(0, Math.min(0.2, pref));
+      switch (String(pref || 'never').toLowerCase()) {
+        case 'normal': return 0.05;
+        case 'rare':   return 0.01;
+        case 'ultra':  return 0.001;
+        case 'never':
+        default:       return 0;
+      }
+    } catch (_) {
+      return 0;
+    }
+  }
+
   function norm(s) {
     return String(s || '').trim().toLowerCase();
   }
@@ -60,6 +138,121 @@
     return [];
   }
 
+  function getBatchIndex(k) {
+    try {
+      var key = String(k || '').trim() || 'unknown';
+      var idx = (setByDeck && setByDeck[key] != null) ? (setByDeck[key] | 0) : 0;
+      if (idx < 0) idx = 0;
+      return idx;
+    } catch (_) {
+      return 0;
+    }
+  }
+
+  function setBatchIndex(i, k) {
+    try {
+      var key = String(k || '').trim() || 'unknown';
+      var idx = i | 0;
+      if (idx < 0) idx = 0;
+      setByDeck = setByDeck || {};
+      setByDeck[key] = idx;
+      saveSetState();
+      return idx;
+    } catch (_) {
+      return 0;
+    }
+  }
+
+  function hasValidArticle(w) {
+    if (!w) return false;
+    var raw = w.word || w.term || w.de;
+    var a = parseArticle(raw);
+    return !!ALLOWED[a];
+  }
+
+  function countWithArticles(arr) {
+    var n = 0;
+    for (var i = 0; i < (arr ? arr.length : 0); i++) {
+      if (hasValidArticle(arr[i])) n++;
+    }
+    return n;
+  }
+
+  function countLearnedWithArticles(arr, dk) {
+    var n = 0;
+    for (var i = 0; i < (arr ? arr.length : 0); i++) {
+      var w = arr[i];
+      if (!hasValidArticle(w)) continue;
+      if (isLearned(dk, w.id)) n++;
+    }
+    return n;
+  }
+
+  function isCurrentSetComplete(dk, slice) {
+    var withA = countWithArticles(slice);
+    if (withA <= 0) return false;
+    return countLearnedWithArticles(slice, dk) >= withA;
+  }
+
+  function isWholeDeckLearned(dk, deck) {
+    var withA = countWithArticles(deck);
+    if (withA <= 0) return false;
+    return countLearnedWithArticles(deck, dk) >= withA;
+  }
+
+  function getArticlesSlice(dk) {
+    var deck = getDeck();
+    if (!deck || !deck.length) return [];
+    var setSize = getSetSize();
+    totalSets = Math.max(1, Math.ceil(deck.length / setSize));
+    currentSetIndex = getBatchIndex(dk);
+    if (currentSetIndex >= totalSets) currentSetIndex = totalSets - 1;
+
+    // Автопереход, если текущий сет полностью выучен по артиклям.
+    var start = currentSetIndex * setSize;
+    var end = Math.min(deck.length, start + setSize);
+    var slice = deck.slice(start, end);
+    if (isCurrentSetComplete(dk, slice)) {
+      currentSetIndex = (currentSetIndex + 1) % totalSets;
+      setBatchIndex(currentSetIndex, dk);
+      start = currentSetIndex * setSize;
+      end = Math.min(deck.length, start + setSize);
+      slice = deck.slice(start, end);
+    }
+
+    // Фильтрация по артиклям.
+    var withArticles = slice.filter(hasValidArticle);
+
+    // Исключение выученных (с мягким повтором через learnedRepeat).
+    var eps = getLearnedEpsilon();
+    var eligible = [];
+    for (var i = 0; i < withArticles.length; i++) {
+      var w = withArticles[i];
+      var learned = isLearned(dk, w.id);
+      if (!learned) eligible.push(w);
+      else if (eps > 0 && Math.random() < eps) eligible.push(w);
+    }
+    if (eligible.length) return eligible;
+
+    // Если всё выучено в сете — пробуем следующий сет. Если весь deck выучен — возвращаем текущий сет.
+    if (isWholeDeckLearned(dk, deck)) return withArticles;
+
+    var nextIdx = (currentSetIndex + 1) % totalSets;
+    setBatchIndex(nextIdx, dk);
+    currentSetIndex = nextIdx;
+    start = currentSetIndex * setSize;
+    end = Math.min(deck.length, start + setSize);
+    var nSlice = deck.slice(start, end);
+    var nWithA = nSlice.filter(hasValidArticle);
+    var nEligible = [];
+    for (var j = 0; j < nWithA.length; j++) {
+      var ww = nWithA[j];
+      if (!isLearned(dk, ww.id)) nEligible.push(ww);
+      else if (eps > 0 && Math.random() < eps) nEligible.push(ww);
+    }
+    return nEligible.length ? nEligible : nWithA;
+  }
+
   function tTranslation(w) {
     // В каркасе просто используем ту же логику, что и базовый тренер,
     // если она доступна через home.js helper tWord (он не публичный).
@@ -71,39 +264,70 @@
     return String(w.ru || w.uk || '').trim();
   }
 
-  function pickNextWord() {
-    // 1:1 с базовым тренером: берём deck slice (учитывает активный набор/батч)
-    // и выбираем индекс через sampleNextIndexWeighted(), если доступно.
-    var slice = [];
+  function weightForWord(dk, w) {
     try {
-      if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') {
-        slice = A.Trainer.getDeckSlice(deckKey) || [];
-      }
-    } catch (e) {}
+      if (!w) return 0;
+      var id = w.id;
+      var max = getArticlesStarsMax();
+      var s = 0;
+      try { s = Number(A.ArticlesProgress && A.ArticlesProgress.getStars ? A.ArticlesProgress.getStars(dk, id) : 0) || 0; } catch (_) { s = 0; }
 
-    // fallback: полный deck
-    if (!slice || !slice.length) {
-      slice = getDeck();
-    }
-    if (!slice || !slice.length) return null;
+      // базовый вес: чем меньше звёзд, тем выше приоритет
+      var base = (max - Math.min(max, Math.max(0, s))) + 1;
 
-    function pickIndex(arr) {
+      // recency penalty по ts (last updated) из ArticlesProgress
+      var ts = 0;
       try {
-        if (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function') {
-          return A.Trainer.sampleNextIndexWeighted(arr);
-        }
-      } catch (e) {}
-      return Math.floor(Math.random() * arr.length);
+        var data = (A.ArticlesProgress && A.ArticlesProgress._getRawEntry) ? A.ArticlesProgress._getRawEntry(dk, id) : null;
+        ts = data && data.ts ? Number(data.ts) : 0;
+      } catch (_) { ts = 0; }
+
+      if (ts > 0) {
+        var age = safeNow() - ts;
+        if (age < 60 * 1000) base *= 0.10;
+        else if (age < 5 * 60 * 1000) base *= 0.30;
+        else if (age < 30 * 60 * 1000) base *= 0.60;
+      }
+
+      return Math.max(0, base);
+    } catch (_) {
+      return 1;
     }
+  }
+
+  function sampleWeighted(dk, arr) {
+    if (!arr || !arr.length) return 0;
+    var weights = new Array(arr.length);
+    var total = 0;
+    for (var i = 0; i < arr.length; i++) {
+      var w = weightForWord(dk, arr[i]);
+      weights[i] = w;
+      total += w;
+    }
+    if (!(total > 0)) return Math.floor(Math.random() * arr.length);
+    var r = Math.random() * total;
+    for (var j = 0; j < arr.length; j++) {
+      r -= weights[j];
+      if (r <= 0) return j;
+    }
+    return Math.floor(Math.random() * arr.length);
+  }
+
+  function pickNextWord() {
+    // Движок как у базового тренера, но:
+    // - прогресс/learned берём из ArticlesProgress
+    // - learnedRepeat применяем из App.settings.learnedRepeat
+    // - recency хранится отдельно (ArticlesProgress.ts)
+    var slice = getArticlesSlice(deckKey);
+    if (!slice || !slice.length) return null;
 
     var tries = 24;
     while (tries-- > 0) {
-      var idx = pickIndex(slice);
+      var idx = sampleWeighted(deckKey, slice);
       var w = slice[idx];
       if (!w) continue;
       if (String(w.id) === String(lastWordId)) continue;
-      var a = parseArticle(w.word || w.term || w.de);
-      if (!ALLOWED[a]) continue;
+      if (!hasValidArticle(w)) continue;
       return w;
     }
 
@@ -111,9 +335,8 @@
     for (var i = 0; i < slice.length; i++) {
       var ww = slice[i];
       if (!ww) continue;
-      var aa = parseArticle(ww.word || ww.term || ww.de);
-      if (!ALLOWED[aa]) continue;
       if (String(ww.id) === String(lastWordId)) continue;
+      if (!hasValidArticle(ww)) continue;
       return ww;
     }
     return slice[0] || null;
@@ -123,6 +346,8 @@
     var w = currentWord;
     var raw = w ? (w.word || w.term || w.de || '') : '';
     var correct = parseArticle(raw);
+    var deckStats = getDeckStats(deckKey);
+    var statsLabelRu = 'Количество слов с артиклями / выучено';
     return {
       active: active,
       deckKey: deckKey,
@@ -130,12 +355,49 @@
       wordId: w ? w.id : '',
       wordDisplay: stripArticle(raw),
       translation: tTranslation(w),
+      statsLabelRu: statsLabelRu,
+      statsWithArticles: deckStats.withArticles,
+      statsLearned: deckStats.learned,
       promptKey: 'choose_article',
       promptRu: 'Выберите артикль',
       promptUk: 'Оберіть артикль',
       options: ['der', 'die', 'das'],
       correct: correct
     };
+  }
+
+  function getDeckStats(dk) {
+    var deck = getDeck();
+    var withA = 0;
+    var learned = 0;
+    for (var i = 0; i < (deck ? deck.length : 0); i++) {
+      var w = deck[i];
+      if (!hasValidArticle(w)) continue;
+      withA++;
+      if (isLearned(dk, w.id)) learned++;
+    }
+    return { withArticles: withA, learned: learned };
+  }
+
+  function getSetStats(dk) {
+    var deck = getDeck();
+    if (!deck || !deck.length) return { withArticles: 0, learned: 0, setIndex: 0, totalSets: 1 };
+    var setSize = getSetSize();
+    totalSets = Math.max(1, Math.ceil(deck.length / setSize));
+    currentSetIndex = getBatchIndex(dk);
+    if (currentSetIndex >= totalSets) currentSetIndex = totalSets - 1;
+    var start = currentSetIndex * setSize;
+    var end = Math.min(deck.length, start + setSize);
+    var slice = deck.slice(start, end);
+    var withA = 0;
+    var learned = 0;
+    for (var i = 0; i < slice.length; i++) {
+      var w = slice[i];
+      if (!hasValidArticle(w)) continue;
+      withA++;
+      if (isLearned(dk, w.id)) learned++;
+    }
+    return { withArticles: withA, learned: learned, setIndex: currentSetIndex, totalSets: totalSets };
   }
 
   function notifyUpdate() {
@@ -242,14 +504,23 @@
     return { ok: ok, correct: correct, applied: applied };
   }
 
+  function answerIdk() {
+    // "Не знаю" == неправильный ответ, но применяем штраф/статистику
+    // ровно 1 раз (общая логика в answer()).
+    return answer('__idk__');
+  }
+
   A.ArticlesTrainer = {
     isActive: function () { return !!active; },
     start: start,
     stop: stop,
     next: next,
     answer: answer,
+    answerIdk: answerIdk,
     getViewModel: buildViewModel,
     getCurrentWord: function(){ return currentWord; },
+    getDeckStats: getDeckStats,
+    getSetStats: getSetStats,
     // helpers (можно использовать из UI)
     _stripArticle: stripArticle,
     _parseArticle: parseArticle

@@ -102,6 +102,28 @@
     } catch (e) {}
   }
 
+  function updateArticlesStatsLine(vm) {
+    try {
+      if (!rootEl || !vm) return;
+      var el = qs('.trainer-articles-stats', rootEl);
+      if (!el) return;
+      var dk = vm.deckKey;
+      var st = null;
+      try {
+        st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
+          ? A.ArticlesTrainer.getDeckStats(dk)
+          : { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
+      } catch (_) {
+        st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
+      }
+      var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
+      var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
+      var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
+      el.textContent = label + ': ' + x + ' / ' + y;
+      el.style.display = '';
+    } catch (_e) {}
+  }
+
   function render(vm) {
     if (!mounted || !rootEl || !vm) return;
 
@@ -111,6 +133,7 @@
     var wordEl = qs('.trainer-word', rootEl);
     var subtitleEl = qs('.trainer-subtitle', rootEl);
     var translationEl = qs('.trainer-translation', rootEl);
+    var statsEl = qs('.trainer-articles-stats', rootEl);
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
@@ -148,6 +171,38 @@
       translationEl.textContent = trText;
       translationEl.style.display = trText ? '' : 'none';
     }
+
+    // Строка статистики (ТЗ): "Количество слов с артиклями / выучено".
+    // Держим в карточке, обновляем при каждом render().
+    try {
+      if (!statsEl) {
+        statsEl = document.createElement('p');
+        statsEl.className = 'trainer-articles-stats';
+        // вставляем сразу после перевода (или после слова, если перевода нет)
+        if (translationEl && translationEl.parentNode) {
+          if (translationEl.nextSibling) translationEl.parentNode.insertBefore(statsEl, translationEl.nextSibling);
+          else translationEl.parentNode.appendChild(statsEl);
+        } else if (wordEl && wordEl.parentNode) {
+          if (wordEl.nextSibling) wordEl.parentNode.insertBefore(statsEl, wordEl.nextSibling);
+          else wordEl.parentNode.appendChild(statsEl);
+        }
+      }
+
+      var dk = vm.deckKey;
+      var st = null;
+      try {
+        st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
+          ? A.ArticlesTrainer.getDeckStats(dk)
+          : { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
+      } catch (_) {
+        st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
+      }
+      var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
+      var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
+      var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
+      statsEl.textContent = label + ': ' + x + ' / ' + y;
+      statsEl.style.display = '';
+    } catch (e) {}
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
     // (В каркасе не трогаем, чтобы не ломать базовый компонент.)
@@ -222,6 +277,16 @@
           uiState.solved = true;
           var vm0 = (A.ArticlesTrainer && A.ArticlesTrainer.getViewModel) ? A.ArticlesTrainer.getViewModel() : null;
           var correct0 = vm0 ? String(vm0.correct || '').trim() : '';
+
+          // "Не знаю" должно учитываться как неправильный ответ (прогресс/статистика).
+          try {
+            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.answerIdk === 'function') {
+              A.ArticlesTrainer.answerIdk();
+            } else if (A.ArticlesTrainer && typeof A.ArticlesTrainer.answer === 'function') {
+              A.ArticlesTrainer.answer('__idk__');
+            }
+          } catch (_e) {}
+
           var all0 = rootEl.querySelectorAll('.answers-grid .answer-btn');
           all0.forEach(function (b) {
             b.disabled = true;
@@ -229,6 +294,15 @@
             if (correct0 && a === correct0) b.classList.add('is-correct');
             else b.classList.add('is-dim');
           });
+
+          // Обновляем звёзды и строку статистики, не дожидаясь следующего слова.
+          try {
+            if (vm0) {
+              paintStars(vm0.deckKey, vm0.wordId);
+              updateArticlesStatsLine(vm0);
+            }
+          } catch (_e2) {}
+
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
           }, ADV_DELAY);
@@ -253,7 +327,10 @@
             b.disabled = true;
             if (b !== btn) b.classList.add('is-dim');
           });
-          if (vm) paintStars(vm.deckKey, vm.wordId);
+          if (vm) {
+            paintStars(vm.deckKey, vm.wordId);
+            updateArticlesStatsLine(vm);
+          }
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
           }, ADV_DELAY);
@@ -263,7 +340,10 @@
         // wrong
         btn.classList.add('is-wrong');
         btn.disabled = true;
-        if (res.applied && vm) paintStars(vm.deckKey, vm.wordId);
+        if (res.applied && vm) {
+          paintStars(vm.deckKey, vm.wordId);
+          updateArticlesStatsLine(vm);
+        }
       } catch (e) {}
     };
     rootEl.addEventListener('click', onRootClick, { passive: true });
