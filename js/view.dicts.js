@@ -170,13 +170,10 @@
         try{
           const b = document.getElementById('dicts-articles');
           if (!b) return;
-          const lang = loadActiveLang ? loadActiveLang() : (A.settings && A.settings.dictsLang) || 'de';
-          const show = (lang === 'de') && (selectedKey === 'de_nouns');
+          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
+          const show = hasPlugin && (selectedKey === 'de_nouns');
           b.style.display = show ? '' : 'none';
         }catch(_){
-          // no-op
-        }
-      }catch(_){
           // no-op
         }
       }
@@ -203,23 +200,37 @@
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
                 articlesBtn.addEventListener('click', ()=>{
-          // Articles mode is enabled only on German nouns.
-          // We do NOT depend on current mode; we switch mode only by this button.
-          try{
+          // сохраняем выбранную деку, как и обычный ОК
+          try {
             A.settings = A.settings || {};
-            A.settings.trainerKind = 'articles';
-            A.settings.lastDeckKey = 'de_nouns';
-            A.settings.preferredReturnKey = 'de_nouns';
-            if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
-          }catch(_){}
+            A.settings.lastDeckKey = selectedKey;
+            if (typeof A.saveSettings === 'function') {
+              A.saveSettings(A.settings);
+            }
+          } catch(_){}
 
-          try{
+          // Переходим на главный экран и там монтируем карточку артиклей.
+          // Важно: не ломаем базовую разметку — используем home.js Router.
+          try {
             if (A.Router && typeof A.Router.routeTo === 'function') {
               A.Router.routeTo('home');
             }
-          }catch(_){}
+          } catch(_){}
+
+          // Ждём, пока home.js отрисует .home-trainer, затем монтируем плагин.
+          setTimeout(()=>{
+            try {
+              if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') {
+                // монтируемся в стандартную карточку тренера
+                A.ArticlesCard.mount(document.querySelector('.home-trainer'));
+              }
+              if (A.ArticlesTrainer && typeof A.ArticlesTrainer.start === 'function') {
+                A.ArticlesTrainer.start('de_nouns', 'normal');
+              }
+            } catch(_){}
+          }, 0);
         });
-}
+      }
 // первичная синхронизация кнопки
       updateArticlesButton();
 
