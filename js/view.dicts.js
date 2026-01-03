@@ -170,8 +170,10 @@
         try{
           const b = document.getElementById('dicts-articles');
           if (!b) return;
-          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
-          const show = hasPlugin && (activeLang === 'de') && (selectedKey === 'de_nouns');
+          // Показываем кнопку только для немецких существительных.
+          // Никаких проверок на trainerKind и “наличие плагина” в момент рендера — это ломает UX.
+          const lang = String(selectedLang || '').toLowerCase();
+          const show = (lang === 'de') && (selectedKey === 'de_nouns');
           b.style.display = show ? '' : 'none';
         }catch(_){
           // no-op
@@ -199,29 +201,29 @@
       // Учить артикли → (пока) просто показываем карточку для визуальной проверки
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
-                articlesBtn.addEventListener('click', ()=>{
-          // Запуск тренера артиклей (DE → Существительные) через home.js
-// Важно: никаких mount/start здесь — только установка режима и переход на home.
-try {
-  A.settings = A.settings || {};
-  A.settings.trainerKind = 'articles';
-  A.settings.lastDeckKey = 'de_nouns';
-  A.settings.preferredReturnKey = 'de_nouns';
-  if (typeof A.saveSettings === 'function') {
-    A.saveSettings(A.settings);
-  }
-} catch(_){}
+        articlesBtn.addEventListener('click', ()=>{
+          // Включаем режим артиклей только по клику (без побочных эффектов в рендере).
+          try {
+            A.settings = A.settings || {};
+            A.settings.trainerKind = 'articles';
+            A.settings.lastDeckKey = 'de_nouns';
+            A.settings.preferredReturnKey = 'de_nouns';
+            if (typeof A.saveSettings === 'function') {
+              A.saveSettings(A.settings);
+            }
+          } catch(_){}
 
-try {
-  if (A.Router && typeof A.Router.routeTo === 'function') {
-    A.Router.routeTo('home');
-  } else if (Router && typeof Router.routeTo === 'function') {
-    Router.routeTo('home');
-  }
-} catch(_){}
+          // Переходим на главный экран; запуск и монтирование делает home.js
+          try {
+            if (window.Router && typeof window.Router.routeTo === 'function') {
+              window.Router.routeTo('home');
+            } else if (A.Router && typeof A.Router.routeTo === 'function') {
+              A.Router.routeTo('home');
+            }
+          } catch(_){}
         });
       }
-// первичная синхронизация кнопки
+      // первичная синхронизация кнопки
       updateArticlesButton();
 
       renderFlagsUI();
