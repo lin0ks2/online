@@ -25,8 +25,7 @@
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
       close:   uk ? 'Закрити' : 'Закрыть',
-      // This button starts the default word trainer
-      ok:      uk ? 'Вчити слова' : 'Учить слова',
+      ok:      'Ок',
       articles: uk ? 'Вчити артиклі' : 'Учить артикли'
     };
   }
@@ -137,8 +136,7 @@
 
             <div class="dicts-actions">
               <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
-              <!-- ВАЖНО: тот же стиль, что и у OK -->
-              <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
+              <button type="button" class="btn-ghost" id="dicts-articles" style="display:none">${T.articles}</button>
             </div>
           </section>
         </div>`;
@@ -172,21 +170,21 @@
         try{
           const b = document.getElementById('dicts-articles');
           if (!b) return;
-          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
-          const show = hasPlugin && (selectedKey === 'de_nouns');
+          const lang = loadActiveLang ? loadActiveLang() : (A.settings && A.settings.dictsLang) || 'de';
+          const show = (lang === 'de') && (selectedKey === 'de_nouns');
           b.style.display = show ? '' : 'none';
         }catch(_){
+          // no-op
+        }
+      }catch(_){
           // no-op
         }
       }
 
       // ОК → уходим на главную
       const ok = document.getElementById('dicts-apply');
-	      if (ok){
-	        // назначаем обработчик через .onclick, чтобы не накапливать слушатели
-	        ok.onclick = ()=>{
-  // Switch to the default word trainer
-  try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
+      if (ok){
+        ok.addEventListener('click', ()=>{
   try {
     A.settings = A.settings || {};
     A.settings.lastDeckKey = selectedKey;
@@ -198,32 +196,30 @@
     document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: selectedKey } }));
   } catch(_) {}
   goHome();
-	};
+});
       }
 
       // Учить артикли → (пока) просто показываем карточку для визуальной проверки
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
-	                // назначаем обработчик через .onclick, чтобы не накапливать слушатели
-	                articlesBtn.onclick = ()=>{
-          // Switch to the articles trainer (German nouns only)
-          const keyToUse = 'de_nouns';
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){ }
-          try {
+                articlesBtn.addEventListener('click', ()=>{
+          // Articles mode is enabled only on German nouns.
+          // We do NOT depend on current mode; we switch mode only by this button.
+          try{
             A.settings = A.settings || {};
-            // Force the deck key to de_nouns to guarantee ArticlesTrainer activation
-            A.settings.lastDeckKey = keyToUse;
-            if (typeof A.saveSettings === 'function') {
-              A.saveSettings(A.settings);
+            A.settings.trainerKind = 'articles';
+            A.settings.lastDeckKey = 'de_nouns';
+            A.settings.preferredReturnKey = 'de_nouns';
+            if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
+          }catch(_){}
+
+          try{
+            if (A.Router && typeof A.Router.routeTo === 'function') {
+              A.Router.routeTo('home');
             }
-          } catch(_){}
-          try {
-            // Keep the same event name as the default OK button
-            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: keyToUse } }));
-          } catch(_) {}
-          goHome();
-        };
-      }
+          }catch(_){}
+        });
+}
 // первичная синхронизация кнопки
       updateArticlesButton();
 
