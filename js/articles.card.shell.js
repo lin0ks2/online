@@ -133,7 +133,7 @@
     var wordEl = qs('.trainer-word', rootEl);
     var subtitleEl = qs('.trainer-subtitle', rootEl);
     var translationEl = qs('.trainer-translation', rootEl);
-    var statsEl = qs('.trainer-articles-stats', rootEl);
+    var dictStatsEl = qs('#dictStats', rootEl);
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
@@ -173,35 +173,24 @@
     }
 
     // Строка статистики (ТЗ): "Количество слов с артиклями / выучено".
-    // Держим в карточке, обновляем при каждом render().
+    // Размещаем в том же месте и с тем же стилем, что и в обычном тренере: p#dictStats (.dict-stats).
     try {
-      if (!statsEl) {
-        statsEl = document.createElement('p');
-        statsEl.className = 'trainer-articles-stats';
-        // вставляем сразу после перевода (или после слова, если перевода нет)
-        if (translationEl && translationEl.parentNode) {
-          if (translationEl.nextSibling) translationEl.parentNode.insertBefore(statsEl, translationEl.nextSibling);
-          else translationEl.parentNode.appendChild(statsEl);
-        } else if (wordEl && wordEl.parentNode) {
-          if (wordEl.nextSibling) wordEl.parentNode.insertBefore(statsEl, wordEl.nextSibling);
-          else wordEl.parentNode.appendChild(statsEl);
+      if (dictStatsEl) {
+        var dk = vm.deckKey;
+        var st = null;
+        try {
+          st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
+            ? A.ArticlesTrainer.getDeckStats(dk)
+            : { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
+        } catch (_) {
+          st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
         }
+        var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
+        var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
+        var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
+        dictStatsEl.textContent = label + ': ' + x + ' / ' + y;
+        dictStatsEl.style.display = '';
       }
-
-      var dk = vm.deckKey;
-      var st = null;
-      try {
-        st = (A.ArticlesTrainer && typeof A.ArticlesTrainer.getDeckStats === 'function')
-          ? A.ArticlesTrainer.getDeckStats(dk)
-          : { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
-      } catch (_) {
-        st = { withArticles: vm.statsWithArticles, learned: vm.statsLearned };
-      }
-      var label = String(vm.statsLabelRu || 'Количество слов с артиклями / выучено');
-      var x = (st && st.withArticles != null) ? st.withArticles : (vm.statsWithArticles || 0);
-      var y = (st && st.learned != null) ? st.learned : (vm.statsLearned || 0);
-      statsEl.textContent = label + ': ' + x + ' / ' + y;
-      statsEl.style.display = '';
     } catch (e) {}
 
     // звёзды: пока просто оставляем от базового рендера, позже подключим ArticlesProgress.
