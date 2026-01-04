@@ -402,9 +402,18 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   white-space: nowrap;
 }
 
-.trainer-word .trainer-audio-btn {
-  padding: 10px;
-  margin: -10px;
+/* Не трогаем layout кнопки */
+.trainer-word .trainer-audio-btn{
   position: relative;
   z-index: 5;
+}
+
+/* Расширяем область тапа невидимым слоем */
+.trainer-word .trainer-audio-btn::before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
 }
