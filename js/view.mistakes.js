@@ -42,7 +42,18 @@
     const app = document.getElementById('app');
     if (!app) return;
     const T = t();
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    // Detect articles-mode on Mistakes screen as a fallback:
+    // if last selected mistakes key targets de_nouns, we force articles mode so the UI shows "Учить артикли".
+    let isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    try {
+      const lk = A.settings && A.settings.lastMistakesKey;
+      if (!isArticles && lk && /^mistakes:[^:]+:de_nouns$/i.test(String(lk))) {
+        isArticles = true;
+        A.settings = A.settings || {};
+        A.settings.trainerKind = 'articles';
+        if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
+      }
+    } catch(_e) {}
     const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
 
     const all = gatherMistakeDecks();
