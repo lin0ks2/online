@@ -20,6 +20,10 @@
   // включён ли звук (по умолчанию: НЕТ, чтобы не пугать)
   var audioEnabled = loadAudioEnabled();
 
+  function isArticlesMode() {
+    try { return A.settings && A.settings.trainerKind === 'articles'; } catch (e) { return false; }
+  }
+
   // запоминаем, какое слово было озвучено автоматически, чтобы не дублировать
   var lastAutoSpokenWord = '';
 
@@ -73,7 +77,7 @@
   }
 
   function speakText(text) {
-    if (!isProOk()) return; // озвучка доступна только в PRO (если включено), иначе не блокируем
+    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
     if (!audioEnabled) return;          // звук выключен пользователем
     if (!hasTTS()) return;
     if (!text) return;
@@ -95,37 +99,17 @@
     if (w) speakText(w);
   }
 
-  function isArticlesMode() {
-    try {
-      return !!(A && A.settings && A.settings.trainerKind === 'articles');
-    } catch (e) {
-      return false;
-    }
-
-  function isProOk() {
-    // Если в сборке нет PRO-логики, не блокируем озвучку.
-    try {
-      return !A.isPro || A.isPro();
-    } catch (e) {
-      return true;
-    }
-  }
-  }
-
   /* ========================================================== */
 
   function updateButtonIcon(btn) {
     if (!btn) return;
 
-    if (!hasTTS()) {
+    if (!hasTTS() || !A.isPro || !A.isPro()) {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка недоступна');
       btn.disabled = true;
       return;
     }
-
-    // PRO-гейтинг (если включён в сборке) применяется только к воспроизведению, но не блокирует кнопку.
-    btn.disabled = false;
 
     if (audioEnabled) {
       btn.textContent = '🔊';
@@ -153,50 +137,60 @@
       // одиночный клик — озвучка (если звук включён)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
+        if (!A.isPro || !A.isPro()) return;
         if (!audioEnabled) return;
-        if (!isProOk()) return;
         speakCurrentWord();
       });
 
       // двойной клик — вкл/выкл звук
       btn.addEventListener('dblclick', function (e) {
         e.preventDefault();
+        if (!A.isPro || !A.isPro()) return;
         audioEnabled = !audioEnabled;
         saveAudioEnabled();
         updateButtonIcon(btn);
+
+    // В режиме артиклей: озвучка по клику на слово (если включено)
+    if (isArticlesMode() && wordEl && !wordEl.__ttsWordClickBound) {
+      wordEl.__ttsWordClickBound = true;
+      wordEl.addEventListener('click', function (e) {
+        // не мешаем клику по самой кнопке
+        if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
+        if (!A.isPro || !A.isPro()) return;
+        if (!audioEnabled) return;
+        speakCurrentWord();
+      });
+    }
       });
 
       wordEl.appendChild(btn);
     }
 
-    // клик по самому слову — озвучить (если включено). Для артиклей это основной сценарий,
-    // чтобы не ломать механику тренировки автозвучкой.
-    if (!wordEl.__ttsWordClickBound) {
-      wordEl.__ttsWordClickBound = true;
-      wordEl.addEventListener('click', function (e) {
-        try {
-          // не перехватываем клик по самой кнопке
-          if (e && e.target && e.target.closest && e.target.closest('.trainer-audio-btn')) return;
-          if (!audioEnabled) return;
-        if (!isProOk()) return;
-          speakCurrentWord();
-        } catch (_e) {}
-      }, { passive: true });
-    }
-
     updateButtonIcon(btn);
 
-    // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
-    // В режиме артиклей автоозвучку отключаем, чтобы не ломать механику обучения.
-    if (!isArticlesMode()) {
-      var word = getCurrentWord();
-      if (word && audioEnabled && word !== lastAutoSpokenWord) {
-        lastAutoSpokenWord = word;
-        setTimeout(function () {
-          speakText(word);
-        }, 120);
-      }
+    // В режиме артиклей: озвучка по клику на слово (если включено)
+    if (isArticlesMode() && wordEl && !wordEl.__ttsWordClickBound) {
+      wordEl.__ttsWordClickBound = true;
+      wordEl.addEventListener('click', function (e) {
+        // не мешаем клику по самой кнопке
+        if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
+        if (!A.isPro || !A.isPro()) return;
+        if (!audioEnabled) return;
+        speakCurrentWord();
+      });
     }
+
+    if (!isArticlesMode()) {
+    // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
+    var word = getCurrentWord();
+    if (word && audioEnabled && word !== lastAutoSpokenWord) {
+      lastAutoSpokenWord = word;
+      setTimeout(function () {
+        speakText(word);
+      }, 120);
+    }
+    }
+
   }
 
   /* ========================================================== */
@@ -282,19 +276,19 @@
 
     // хук для ручного обновления, если понадобится
     (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
-    A.AudioTTS.speakCurrent = speakCurrentWord;
-    // Для артиклей: озвучивать после правильного ответа (если звук включён)
-    A.AudioTTS.onCorrect = function () {
-      try {
-        if (!isArticlesMode()) return;
-        speakCurrentWord();
-      } catch (e) {}
-    };
     A.AudioTTS.setEnabled = function (flag) {
       audioEnabled = !!flag;
       saveAudioEnabled();
       var btn = document.querySelector('.trainer-audio-btn');
       if (btn) updateButtonIcon(btn);
+    };
+
+    // Для тренера артиклей: озвучить текущее слово после верного ответа
+    A.AudioTTS.onCorrect = function () {
+      if (!isArticlesMode()) return;
+      if (!A.isPro || !A.isPro()) return;
+      if (!audioEnabled) return;
+      speakCurrentWord();
     };
   }
 
