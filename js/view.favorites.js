@@ -11,6 +11,10 @@
   const A = (window.App = window.App || {});
 
   /* ---------------- i18n ---------------- */
+  function isArticlesMode(){
+    try { return !!(A.settings && A.settings.trainerKind === 'articles'); } catch(_){ return false; }
+  }
+
   function getUiLang(){
     const s = (A.settings && (A.settings.lang || A.settings.uiLang)) || 'ru';
     return (String(s).toLowerCase()==='uk') ? 'uk' : 'ru';
@@ -19,7 +23,7 @@
     const uk = getUiLang()==='uk';
     return {
       title   : uk ? 'Обране' : 'Избранное',
-      ok      : uk ? 'Вчити слова' : 'Учить слова',
+      ok      : isArticlesMode() ? (uk ? 'Вивчати артиклі' : 'Учить артикли') : (uk ? 'Вчити слова' : 'Учить слова'),
       preview : uk ? 'Перегляд' : 'Предпросмотр',
       empty   : uk ? 'На данний момент вибраних слів немає.' : 'В данный момент избранных слов нет.',
       cnt     : uk ? 'К-сть' : 'Кол-во',
@@ -188,18 +192,24 @@
           // 1) Получаем id избранных слов в этой базе
           let ids = [];
           try {
-            if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.list === 'function'){
-              ids = A.ArticlesFavorites.list(TL, baseKey) || [];
-            } else if (A.Favorites && typeof A.Favorites.getIds === 'function'){
+            if (isArticles) {
+              // Надёжно: берём ids прямо из виртуальной деки (bridge уже выбрал правильный источник)
+              const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(favKey) || []) : [];
+              ids = deck.map(w => w && w.id).filter(v => v != null);
+            } else if (A.Favorites && typeof A.Favorites.getIds === 'function') {
               ids = A.Favorites.getIds(TL, baseKey) || [];
+            } else {
+              // fallback: через виртуальную деку
+              const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(favKey) || []) : [];
+              ids = deck.map(w => w && w.id).filter(v => v != null);
             }
           } catch(_){}
 
-          // 2) Снимаем «избранное» для каждого слова этой базы
+          // 2) Снимаем «избранное» для каждого слова этой базы для каждого слова этой базы
           try {
             if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.toggle === 'function'){
               for (const id of ids){
-                A.ArticlesFavorites.toggle(TL, baseKey, id);
+                try { A.ArticlesFavorites.toggle(TL, baseKey, id); } catch(e) { try { A.ArticlesFavorites.toggle(baseKey, id); } catch(_){} }
               }
             } else if (A.Favorites && typeof A.Favorites.toggle === 'function'){
               for (const id of ids){
@@ -261,6 +271,8 @@
           if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
         } catch(_){}
 
+        // Важно: в режиме articles не форсим words
+        try { A.settings = A.settings || {}; if (isArticlesMode()) A.settings.trainerKind = 'articles'; } catch(_){}
         launchTraining(key);
       };
     }
@@ -294,7 +306,7 @@
 
     function launchTraining(key){
       // Switch to the default word trainer
-      try { A.settings = A.settings || {}; A.settings.trainerKind = 'words'; } catch(_){ }
+      try { A.settings = A.settings || {}; /* keep current mode; default to words */ if (!A.settings.trainerKind) A.settings.trainerKind = 'words'; } catch(_){ }
       // 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
         A.UI.startTrainingWithKey(key);
