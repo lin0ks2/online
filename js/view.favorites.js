@@ -17,10 +17,9 @@
   }
   function t(){
     const uk = getUiLang()==='uk';
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
     return {
       title   : uk ? 'Обране' : 'Избранное',
-      ok      : isArticles ? (uk ? 'Вивчати артиклі' : 'Учить артикли') : (uk ? 'Вчити слова' : 'Учить слова'),
+      ok      : uk ? 'Вчити слова' : 'Учить слова',
       preview : uk ? 'Перегляд' : 'Предпросмотр',
       empty   : uk ? 'На данний момент вибраних слів немає.' : 'В данный момент избранных слов нет.',
       cnt     : uk ? 'К-сть' : 'Кол-во',
@@ -185,25 +184,30 @@
           const favKey  = tr.dataset.key;        // "favorites:<TL>:<baseKey>"
           const TL      = currentTrainLang();
           const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-          const FavApi = isArticles ? (A.ArticlesFavorites || null) : (A.Favorites || null);
 
           // 1) Получаем id избранных слов в этой базе
           let ids = [];
           try {
-            if (FavApi && typeof FavApi.getIds === 'function'){
-              ids = FavApi.getIds(TL, baseKey) || [];
+            if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.list === 'function'){
+              ids = A.ArticlesFavorites.list(TL, baseKey) || [];
+            } else if (A.Favorites && typeof A.Favorites.getIds === 'function'){
+              ids = A.Favorites.getIds(TL, baseKey) || [];
             }
           } catch(_){}
 
-          // 2) Снимаем «избранное» для этой базы
+          // 2) Снимаем «избранное» для каждого слова этой базы
           try {
-            if (FavApi && typeof FavApi.clearForDeck === 'function'){
-              FavApi.clearForDeck(TL, baseKey);
-            } else if (FavApi && typeof FavApi.toggle === 'function'){
+            if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.toggle === 'function'){
               for (const id of ids){
-                if (FavApi.has && FavApi.has(baseKey, id)){
-                  FavApi.toggle(baseKey, id);
-                }
+                A.ArticlesFavorites.toggle(TL, baseKey, id);
+              }
+            } else if (A.Favorites && typeof A.Favorites.toggle === 'function'){
+              for (const id of ids){
+                A.Favorites.toggle(baseKey, id);
+              }
+            } else if (typeof App.toggleFavorite === 'function'){
+              for (const id of ids){
+                App.toggleFavorite(baseKey, id);
               }
             }
           } catch(_){}
@@ -289,11 +293,8 @@
     }
 
     function launchTraining(key){
-      // Keep trainer kind consistent with the current mode (words vs articles)
-      try {
-        A.settings = A.settings || {};
-        A.settings.trainerKind = (A.settings.trainerKind === 'articles') ? 'articles' : 'words';
-      } catch(_){ }
+      // Switch to the default word trainer
+      try { A.settings = A.settings || {}; A.settings.trainerKind = 'words'; } catch(_){ }
       // 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
         A.UI.startTrainingWithKey(key);

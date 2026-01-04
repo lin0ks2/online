@@ -61,7 +61,19 @@
     } catch (e) {}
   }
 
-  function ensure(deckKey) {
+  
+  function normalizeDeckKey(deckKey){
+    deckKey = String(deckKey || '');
+    if (!deckKey) return deckKey;
+    if (deckKey.indexOf('favorites:') === 0 || deckKey.indexOf('mistakes:') === 0){
+      var parts = deckKey.split(':');
+      return parts[parts.length - 1] || deckKey;
+    }
+    return deckKey;
+  }
+
+function ensure(deckKey) {
+    deckKey = normalizeDeckKey(deckKey);
     var k = String(deckKey || '').trim();
     if (!k) k = 'unknown';
     if (!state.byDeck[k]) state.byDeck[k] = {};
@@ -80,6 +92,7 @@
   }
 
   function getEntry(deckKey, wordId) {
+    deckKey = normalizeDeckKey(deckKey);
     var deck = ensure(deckKey);
     var id = String(wordId);
     if (!deck[id]) deck[id] = { s: 0, c: 0, w: 0, ts: 0 };
