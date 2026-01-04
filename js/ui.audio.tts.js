@@ -95,6 +95,14 @@
     if (w) speakText(w);
   }
 
+  function isArticlesMode() {
+    try {
+      return !!(A && A.settings && A.settings.trainerKind === 'articles');
+    } catch (e) {
+      return false;
+    }
+  }
+
   /* ========================================================== */
 
   function updateButtonIcon(btn) {
@@ -150,15 +158,33 @@
       wordEl.appendChild(btn);
     }
 
+    // клик по самому слову — озвучить (если включено). Для артиклей это основной сценарий,
+    // чтобы не ломать механику тренировки автозвучкой.
+    if (!wordEl.__ttsWordClickBound) {
+      wordEl.__ttsWordClickBound = true;
+      wordEl.addEventListener('click', function (e) {
+        try {
+          // не перехватываем клик по самой кнопке
+          if (e && e.target && e.target.closest && e.target.closest('.trainer-audio-btn')) return;
+          if (!A.isPro || !A.isPro()) return;
+          if (!audioEnabled) return;
+          speakCurrentWord();
+        } catch (_e) {}
+      }, { passive: true });
+    }
+
     updateButtonIcon(btn);
 
     // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
-    var word = getCurrentWord();
-    if (word && audioEnabled && word !== lastAutoSpokenWord) {
-      lastAutoSpokenWord = word;
-      setTimeout(function () {
-        speakText(word);
-      }, 120);
+    // В режиме артиклей автоозвучку отключаем, чтобы не ломать механику обучения.
+    if (!isArticlesMode()) {
+      var word = getCurrentWord();
+      if (word && audioEnabled && word !== lastAutoSpokenWord) {
+        lastAutoSpokenWord = word;
+        setTimeout(function () {
+          speakText(word);
+        }, 120);
+      }
     }
   }
 
@@ -245,6 +271,14 @@
 
     // хук для ручного обновления, если понадобится
     (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
+    A.AudioTTS.speakCurrent = speakCurrentWord;
+    // Для артиклей: озвучивать после правильного ответа (если звук включён)
+    A.AudioTTS.onCorrect = function () {
+      try {
+        if (!isArticlesMode()) return;
+        speakCurrentWord();
+      } catch (e) {}
+    };
     A.AudioTTS.setEnabled = function (flag) {
       audioEnabled = !!flag;
       saveAudioEnabled();

@@ -9,7 +9,7 @@
  *   - слово отображается тем же стилем/размером, но БЕЗ артикуля
  *   - перевод (второй строкой) пока показываем, позже можно отключить
  *   - 3 кнопки: der / die / das
- *   - озвучка: работает 1:1 как в обычном тренере (ui.audio.tts.js)
+ *   - озвучка: не используется (кнопка disabled + перечёркнута)
  *   - сердце: видно, но disabled
  *
  * Статус: каркас (MVP)
@@ -44,6 +44,24 @@
   function ensureBusOn() {
     if (!window.UIBus || typeof window.UIBus.on !== 'function') return null;
     return window.UIBus;
+  }
+
+  function setAudioDisabled(wordEl) {
+    // ui.audio.tts.js вставляет кнопку внутрь .trainer-word
+    // Мы оставляем её видимой, но делаем "disabled" + визуально перечёркнутой.
+    if (!wordEl) return;
+    var btn = wordEl.querySelector('.trainer-audio-btn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'trainer-audio-btn';
+      wordEl.appendChild(btn);
+    }
+    btn.disabled = true;
+    btn.textContent = '🔇';
+    btn.setAttribute('aria-label', 'Озвучка недоступна');
+    btn.classList.add('is-disabled');
+    btn.classList.add('is-crossed');
   }
 
   function setHeartDisabled(btn) {
@@ -135,6 +153,7 @@
 
     // хром
     setHeartDisabled(heartBtn);
+    setAudioDisabled(wordEl);
 
     // заголовок вопроса
     if (subtitleEl) {
@@ -147,8 +166,8 @@
     if (wordEl) {
       // важно: слово без артикуля
       wordEl.textContent = String(vm.wordDisplay || '').trim();
-      // Кнопка TTS (ui.audio.tts.js) живёт внутри .trainer-word и будет
-      // переинициализирована MutationObserver-ом после смены текста.
+      // audio btn будет добавлен заново/сверху в setAudioDisabled()
+      setAudioDisabled(wordEl);
     }
 
     // Перевод: показываем между словом и подсказкой "Выберите артикль"
@@ -298,6 +317,8 @@
             paintStars(vm.deckKey, vm.wordId);
             updateBottomDictStats(vm);
           }
+          // Озвучка для артиклей: только после верного ответа (или по клику по слову)
+          try { if (A.AudioTTS && typeof A.AudioTTS.onCorrect === 'function') A.AudioTTS.onCorrect(); } catch (_e3) {}
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
           }, ADV_DELAY);
