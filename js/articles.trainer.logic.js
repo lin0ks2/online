@@ -526,6 +526,14 @@
           A.ArticlesStats.onAnswer(ok);
         }
       } catch (e) {}
+
+      // Мои ошибки (артикли): добавляем только при неправильном ответе.
+      // ВАЖНО: при тренировке словаря ошибок (deckKey = mistakes:...) push должен стать no-op.
+      try {
+        if (!ok && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
+          A.ArticlesMistakes.push(deckKey, currentWord.id);
+        }
+      } catch (e) {}
     }
 
     return { ok: ok, correct: correct, applied: applied };

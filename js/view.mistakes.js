@@ -10,6 +10,10 @@
   'use strict';
   const A = (window.App = window.App || {});
 
+  function isArticlesMode(){
+    try { return !!(A.settings && A.settings.trainerKind === 'articles'); } catch(_){ return false; }
+  }
+
   function getUiLang(){
     const s = (A.settings && (A.settings.lang || A.settings.uiLang)) || 'ru';
     return (String(s).toLowerCase()==='uk') ? 'uk' : 'ru';
@@ -17,14 +21,15 @@
   function t(){
     const uk = getUiLang()==='uk';
     return uk
-      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok:'Вчити слова' }
-      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok:'Учить слова' };
+      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok: (isArticlesMode() ? 'Вивчати артиклі' : 'Вчити слова') }
+      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok: (isArticlesMode() ? 'Учить артикли' : 'Учить слова') };
   }
 
   const FLAG = { en:'🇬🇧', de:'🇩🇪', fr:'🇫🇷', es:'🇪🇸', it:'🇮🇹', ru:'🇷🇺', uk:'🇺🇦', pl:'🇵🇱', sr:'🇷🇸' };
 
   function gatherMistakeDecks(){
-    const rows = (A.Mistakes && A.Mistakes.listSummary ? A.Mistakes.listSummary() : []);
+    const M = isArticlesMode() ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
+    const rows = (M && M.listSummary ? M.listSummary() : []);
     // преобразуем в «словарные» записи с ключом mistakes:<lang>:<baseKey>
     return rows.map(r=>{
       const mKey = r.mistakesKey;
@@ -160,9 +165,10 @@
             const tr = del.closest('tr');
             if (!tr) return;
             const mKey = tr.dataset.key;
-            const p = A.Mistakes && A.Mistakes.parseKey && A.Mistakes.parseKey(mKey);
+            const M = isArticlesMode() ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
+            const p = M && M.parseKey ? M.parseKey(mKey) : null;
             if (p){
-              try{ A.Mistakes.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
+              try{ if (M.removeDeck) M.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
               // пересчитать и перерисовать заново
               render();
             }
@@ -190,12 +196,30 @@
             return;
           }
           saveSelected(key);
-          // Switch to the default word trainer (not articles)
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
-          try { A.Trainer && A.Trainer.setDeckKey && A.Trainer.setDeckKey(key); } catch(_){}
-          // уходим на главную
-          try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){}
+          try { A.settings = A.settings || {}; if (isArticlesMode()) A.settings.trainerKind = 'articles'; } catch(_){}
+          launchTraining(key);
         };
+      }
+
+      function launchTraining(key){
+        // 1) общий стартер, если есть
+        if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
+          A.UI.startTrainingWithKey(key);
+          return;
+        }
+        if (A.Home && typeof A.Home.startTrainingWithKey === 'function'){
+          A.Home.startTrainingWithKey(key);
+          return;
+        }
+        // 2) фоллбэк: проставить ключ тренеру и уйти на home
+        try { if (A.Trainer && typeof A.Trainer.setDeckKey === 'function') A.Trainer.setDeckKey(key); } catch(_){ }
+        try {
+          if (A.Router && typeof A.Router.routeTo === 'function'){
+            A.Router.routeTo('home');
+          } else if (A.UI && typeof A.UI.goHome === 'function'){
+            A.UI.goHome();
+          }
+        } catch(_){ }
       }
     }
 

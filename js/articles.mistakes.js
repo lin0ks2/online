@@ -1,7 +1,7 @@
 /* ==========================================================
  * Проект: MOYAMOVA
  * Файл: articles.mistakes.js
- * Назначение: "Мои ошибки" для тренера артиклей (изолированное хранилище)
+ * Назначение: Ошибки для тренера артиклей (изолированное хранилище)
  * Версия: 1.0
  * Обновлено: 2026-01-04
  * ========================================================== */
@@ -10,7 +10,7 @@
   'use strict';
   const A = (window.App = window.App || {});
 
-  // Язык тренировки (ru/uk) — как в app.mistakes.js
+  // Язык тренировки (ru/uk)
   function getTrainLang(){
     try{
       const s = (A.settings && (A.settings.lang || A.settings.uiLang)) || 'ru';
@@ -18,10 +18,12 @@
     }catch(_){ return 'ru'; }
   }
 
-  // Базовая структура: A.articlesMistakes.buckets = { trainLang: { baseDeckKey: { ids:Set, meta:Map } } }
   function ensure(){
     A.articlesMistakes = A.articlesMistakes || {};
     A.articlesMistakes.buckets = A.articlesMistakes.buckets || {};
+    // state mirror
+    A.state = A.state || {};
+    // We keep plain object structure under state.articlesMistakes
   }
 
   function isMistakesDeckKey(deckKey){
@@ -41,11 +43,13 @@
     return { trainLang, baseDeckKey };
   }
 
+  // Get or create a bucket for trainLang + baseDeckKey
   function _bucket(trainLang, baseDeckKey){
     ensure();
     const lang = trainLang || getTrainLang();
-    A.articlesMistakes.buckets[lang] = A.articlesMistakes.buckets[lang] || {};
-    const byLang = A.articlesMistakes.buckets[lang];
+    const buckets = A.articlesMistakes.buckets;
+    buckets[lang] = buckets[lang] || {};
+    const byLang = buckets[lang];
     byLang[baseDeckKey] = byLang[baseDeckKey] || { ids: new Set(), meta: new Map() };
     return byLang[baseDeckKey];
   }
@@ -53,52 +57,46 @@
   function exportState(){
     try{
       ensure();
-      var out = {};
-      var buckets = A.articlesMistakes && A.articlesMistakes.buckets ? A.articlesMistakes.buckets : {};
+      const out = {};
+      const buckets = (A.articlesMistakes && A.articlesMistakes.buckets) ? A.articlesMistakes.buckets : {};
 
       Object.keys(buckets).forEach(function(lang){
-        var byLang = buckets[lang] || {};
-        var outByLang = {};
+        const byLang = buckets[lang] || {};
+        const outByLang = {};
         Object.keys(byLang).forEach(function(baseKey){
-          var b = byLang[baseKey];
+          const b = byLang[baseKey];
           if (!b || !b.ids || !b.ids.size) return;
-          var idsArr = Array.from(b.ids || []);
-          var metaPlain = {};
+          const idsArr = Array.from(b.ids || []);
+          const metaPlain = {};
           if (b.meta && typeof b.meta.forEach === 'function'){
             b.meta.forEach(function(meta, id){
               if (!meta) meta = {};
-              metaPlain[String(id)] = {
-                count: meta.count|0,
-                last:  meta.last|0
-              };
+              metaPlain[String(id)] = { count: meta.count|0, last: meta.last|0 };
             });
           }
           outByLang[baseKey] = { ids: idsArr, meta: metaPlain };
         });
         if (Object.keys(outByLang).length) out[lang] = outByLang;
       });
-
       return out;
     }catch(_){ return {}; }
   }
 
   function syncToState(){
     try{
-      var plain = exportState();
+      ensure();
+      const plain = exportState();
       A.state = A.state || {};
-      if (plain && Object.keys(plain).length) A.state.articlesMistakes = plain;
-      else A.state.articlesMistakes = null;
-
+      A.state.articlesMistakes = (plain && Object.keys(plain).length) ? plain : null;
       if (typeof A.saveState === 'function') A.saveState();
-    }catch(_){}
+    }catch(_){ }
   }
 
   function push(baseDeckKey, wordId, opts){
     try{
       const trainLang = (opts && opts.trainLang) || getTrainLang();
       if (!baseDeckKey || wordId == null) return;
-
-      // ❗ Во время тренировки "словарей ошибок" артиклей — НЕ копим ошибки
+      // Do NOT collect mistakes while training mistakes deck
       if (isMistakesDeckKey(baseDeckKey)) return;
 
       const b = _bucket(trainLang, baseDeckKey);
@@ -108,32 +106,33 @@
       cur.count = (cur.count|0) + 1;
       cur.last  = Date.now();
       b.meta.set(id, cur);
-
       syncToState();
-    }catch(_){}
+    }catch(_){ }
   }
 
   function removeDeck(trainLang, baseDeckKey){
     try{
       ensure();
       const lang = trainLang || getTrainLang();
-      if (A.articlesMistakes.buckets[lang] && A.articlesMistakes.buckets[lang][baseDeckKey]){
-        delete A.articlesMistakes.buckets[lang][baseDeckKey];
+      const buckets = A.articlesMistakes.buckets;
+      if (buckets[lang] && buckets[lang][baseDeckKey]){
+        delete buckets[lang][baseDeckKey];
         syncToState();
       }
-    }catch(_){}
+    }catch(_){ }
   }
 
   function listSummary(){
     ensure();
     const out = [];
-    for (const lang of Object.keys(A.articlesMistakes.buckets)){
-      const byLang = A.articlesMistakes.buckets[lang] || {};
+    const buckets = A.articlesMistakes.buckets || {};
+    for (const lang of Object.keys(buckets)){
+      const byLang = buckets[lang] || {};
       for (const baseKey of Object.keys(byLang)){
         const b = byLang[baseKey];
         out.push({
           trainLang: lang,
-          baseKey,
+          baseKey: baseKey,
           mistakesKey: makeKey(lang, baseKey),
           count: (b.ids ? b.ids.size : 0)
         });
@@ -160,44 +159,38 @@
   function importState(data){
     try{
       if (!data || typeof data !== 'object') return;
-
       ensure();
-      A.articlesMistakes.buckets = A.articlesMistakes.buckets || {};
-      var buckets = A.articlesMistakes.buckets;
+      const buckets = (A.articlesMistakes.buckets = A.articlesMistakes.buckets || {});
 
       Object.keys(data).forEach(function(lang){
-        var byLangData = data[lang];
+        const byLangData = data[lang];
         if (!byLangData || typeof byLangData !== 'object') return;
-        var byLang = buckets[lang] = buckets[lang] || {};
+        const byLang = (buckets[lang] = buckets[lang] || {});
 
         Object.keys(byLangData).forEach(function(baseKey){
-          var item = byLangData[baseKey];
+          const item = byLangData[baseKey];
           if (!item || !Array.isArray(item.ids)) return;
-
-          var bucket = { ids: new Set(), meta: new Map() };
+          const bucket = { ids: new Set(), meta: new Map() };
           item.ids.forEach(function(id){ bucket.ids.add(String(id)); });
-
           if (item.meta && typeof item.meta === 'object'){
             Object.keys(item.meta).forEach(function(id){
-              var m = item.meta[id] || {};
+              const m = item.meta[id] || {};
               bucket.meta.set(String(id), { count: (m.count|0), last: (m.last|0) });
             });
           }
-
           byLang[baseKey] = bucket;
         });
       });
-
       syncToState();
-    }catch(_){}
+    }catch(_){ }
   }
 
-  // Восстановление из App.state при старте
+  // Restore from App.state on load (backward compatible)
   try{
     if (A.state && A.state.articlesMistakes){
       importState(A.state.articlesMistakes);
     }
-  }catch(_){}
+  }catch(_){ }
 
   A.ArticlesMistakes = Object.assign({}, A.ArticlesMistakes || {}, {
     makeKey: makeKey,
@@ -206,11 +199,10 @@
     push: push,
     getIds: getIds,
     removeDeck: removeDeck,
+    clearForDeck: removeDeck,
     resolveDeckForMistakesKey: resolveDeckForMistakesKey,
     isMistakesDeckKey: isMistakesDeckKey,
     export: exportState,
     import: importState
   });
 })();
-
-/* ========================= Конец файла: articles.mistakes.js ========================= */

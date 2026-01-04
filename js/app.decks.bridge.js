@@ -40,15 +40,18 @@
     const full = _resolve ? (_resolve(base) || []) : [];
 
     if (p.kind === 'mistakes'){
+      // Articles mode uses isolated mistakes storage.
+      const M = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
+
       // Если есть Mistakes API — используем его
-      if (A.Mistakes && A.Mistakes.resolveDeckForMistakesKey){
-        try { return A.Mistakes.resolveDeckForMistakesKey(key) || []; } catch(_){}
+      if (M && M.resolveDeckForMistakesKey){
+        try { return M.resolveDeckForMistakesKey(key) || []; } catch(_){ }
       }
       // Фолбэк: если есть getIds — фильтруем по id
       try {
-        const ids = new Set((A.Mistakes && A.Mistakes.getIds ? A.Mistakes.getIds(p.trainLang, base) : []).map(String));
+        const ids = new Set((M && M.getIds ? (M.getIds(p.trainLang, base) || []) : []).map(String));
         if (ids.size) return full.filter(w => ids.has(String(w.id)));
-      } catch(_){}
+      } catch(_){ }
       return [];
     }
 
