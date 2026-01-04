@@ -179,63 +179,51 @@
           return;
         }
 
-        // 🗑️ удаление набора избранного ТОЛЬКО для этой базы
-        const del = e.target.closest('.dicts-delete');
-        if (del){
-          e.stopPropagation();
-          const tr = del.closest('tr'); if (!tr) return;
-          const baseKey = tr.dataset.base;       // напр. "de_verbs"
-          const favKey  = tr.dataset.key;        // "favorites:<TL>:<baseKey>"
-          const TL      = currentTrainLang();
-          const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+        
+// 🗑️ удаление набора избранного (одной базовой деки)
+const del = e.target.closest('.dicts-delete');
+if (del){
+  e.stopPropagation();
+  const tr = del.closest('tr'); if (!tr) return;
 
-          // 1) Получаем id избранных слов в этой базе
-          let ids = [];
-          try {
-            if (isArticles) {
-              // Надёжно: берём ids прямо из виртуальной деки (bridge уже выбрал правильный источник)
-              const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(favKey) || []) : [];
-              ids = deck.map(w => w && w.id).filter(v => v != null);
-            } else if (A.Favorites && typeof A.Favorites.getIds === 'function') {
-              ids = A.Favorites.getIds(TL, baseKey) || [];
-            } else {
-              // fallback: через виртуальную деку
-              const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(favKey) || []) : [];
-              ids = deck.map(w => w && w.id).filter(v => v != null);
-            }
-          } catch(_){}
+  const baseKey = tr.dataset.base;   // напр. "de_nouns"
+  const favKey  = tr.dataset.key;    // "favorites:<TL>:<baseKey>"
+  const TL      = currentTrainLang();
+  const isArticles = isArticlesMode();
 
-          // 2) Снимаем «избранное» для каждого слова этой базы для каждого слова этой базы
-          try {
-            if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.toggle === 'function'){
-              for (const id of ids){
-                try { A.ArticlesFavorites.toggle(TL, baseKey, id); } catch(e) { try { A.ArticlesFavorites.toggle(baseKey, id); } catch(_){} }
-              }
-            } else if (A.Favorites && typeof A.Favorites.toggle === 'function'){
-              for (const id of ids){
-                A.Favorites.toggle(baseKey, id);
-              }
-            } else if (typeof App.toggleFavorite === 'function'){
-              for (const id of ids){
-                App.toggleFavorite(baseKey, id);
-              }
-            }
-          } catch(_){}
+  // 1) Получаем id избранных слов в этой базе
+  let ids = [];
+  try {
+    // Самый надёжный путь: взять ids из виртуальной деки (bridge уже выберет правильный storage)
+    if (A.Decks && typeof A.Decks.resolveDeckByKey === 'function'){
+      const deck = A.Decks.resolveDeckByKey(favKey) || [];
+      ids = deck.map(w => w && w.id).filter(v => v != null);
+    }
+    // Fallback для words: если есть быстрый getter
+    if (!ids.length && !isArticles && A.Favorites && typeof A.Favorites.getIds === 'function'){
+      ids = A.Favorites.getIds(TL, baseKey) || [];
+    }
+  } catch(_){ ids = []; }
 
-          // 3) Сбросим сохранённый выбор, если удалили текущий
-          try {
-            if ((A.settings && A.settings.lastFavoritesKey) === favKey){
-              A.settings.lastFavoritesKey = null;
-              if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
-            }
-          } catch(_){}
+  // 2) Снимаем «избранное» для каждого слова этой базы
+  try {
+    if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.toggle === 'function'){
+      for (const id of ids){
+        A.ArticlesFavorites.toggle(TL, baseKey, id);
+      }
+    } else if (!isArticles && A.Favorites && typeof A.Favorites.toggle === 'function'){
+      for (const id of ids){
+        A.Favorites.toggle(baseKey, id);
+      }
+    }
+  } catch(_){}
 
-          // 4) Перерисуем экран (автоселект сам восстановится)
-          render();
-          return;
-        }
+  // 3) Перерисуем экран
+  render();
+  return;
+}
 
-        // выбор строки
+// выбор строки
         const tr = e.target.closest('tr');
         if (tr){
           selectRow(tr);
