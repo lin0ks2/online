@@ -73,7 +73,7 @@
   }
 
   function speakText(text) {
-    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
+    if (!isProOk()) return; // озвучка доступна только в PRO (если включено), иначе не блокируем
     if (!audioEnabled) return;          // звук выключен пользователем
     if (!hasTTS()) return;
     if (!text) return;
@@ -101,6 +101,15 @@
     } catch (e) {
       return false;
     }
+
+  function isProOk() {
+    // Если в сборке нет PRO-логики, не блокируем озвучку.
+    try {
+      return !A.isPro || A.isPro();
+    } catch (e) {
+      return true;
+    }
+  }
   }
 
   /* ========================================================== */
@@ -108,12 +117,15 @@
   function updateButtonIcon(btn) {
     if (!btn) return;
 
-    if (!hasTTS() || !A.isPro || !A.isPro()) {
+    if (!hasTTS()) {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка недоступна');
       btn.disabled = true;
       return;
     }
+
+    // PRO-гейтинг (если включён в сборке) применяется только к воспроизведению, но не блокирует кнопку.
+    btn.disabled = false;
 
     if (audioEnabled) {
       btn.textContent = '🔊';
@@ -141,15 +153,14 @@
       // одиночный клик — озвучка (если звук включён)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        if (!A.isPro || !A.isPro()) return;
         if (!audioEnabled) return;
+        if (!isProOk()) return;
         speakCurrentWord();
       });
 
       // двойной клик — вкл/выкл звук
       btn.addEventListener('dblclick', function (e) {
         e.preventDefault();
-        if (!A.isPro || !A.isPro()) return;
         audioEnabled = !audioEnabled;
         saveAudioEnabled();
         updateButtonIcon(btn);
@@ -166,8 +177,8 @@
         try {
           // не перехватываем клик по самой кнопке
           if (e && e.target && e.target.closest && e.target.closest('.trainer-audio-btn')) return;
-          if (!A.isPro || !A.isPro()) return;
           if (!audioEnabled) return;
+        if (!isProOk()) return;
           speakCurrentWord();
         } catch (_e) {}
       }, { passive: true });
