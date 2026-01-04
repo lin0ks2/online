@@ -53,6 +53,13 @@
     btn.classList.add('is-disabled');
   }
 
+  function setHeartEnabled(btn){
+    if (!btn) return;
+    btn.disabled = false;
+    btn.removeAttribute('aria-disabled');
+    btn.classList.remove('is-disabled');
+  }
+
   function paintStars(deckKey, wordId) {
     try {
       if (!rootEl) return;
@@ -134,17 +141,44 @@
     var answersEl = qs('.answers-grid', rootEl);
 
     // хром
-    // Сердечко: в избранном не должно выглядеть «нажатым», и не должно быть активным
+    // Сердечко: работает в обычной тренировке артиклей,
+// но должно быть выключено внутри тренировки избранного (favorites:...).
     if (heartBtn) {
+      var uiLangFav = '';
+      try { uiLangFav = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
+      uiLangFav = (String(uiLangFav).toLowerCase() === 'uk') ? 'uk' : 'ru';
+      var baseDeckKeyFav = getBaseDeckKey(vm.deckKey);
+      var wordIdFav = vm && vm.word ? vm.word.id : null;
+
       if (isFavoritesDeckKey(vm.deckKey)) {
+        // Внутри тренировки избранного: не кликается и не выглядит активным
         heartBtn.textContent = '♡';
         heartBtn.classList.remove('is-fav');
         heartBtn.setAttribute('aria-pressed','false');
+        heartBtn.onclick = null;
+        setHeartDisabled(heartBtn);
+      } else {
+        // В обычной тренировке артиклей: полноценный toggle в избранное артиклей
+        setHeartEnabled(heartBtn);
+        try {
+          var isFav = !!(A.ArticlesFavorites && A.ArticlesFavorites.has && wordIdFav && A.ArticlesFavorites.has(uiLangFav, baseDeckKeyFav, wordIdFav));
+          heartBtn.textContent = isFav ? '♥' : '♡';
+          heartBtn.classList.toggle('is-fav', isFav);
+          heartBtn.setAttribute('aria-pressed', isFav ? 'true' : 'false');
+        } catch (e) {}
+        heartBtn.onclick = function(){
+          try {
+            if (!A.ArticlesFavorites || !A.ArticlesFavorites.toggle || !wordIdFav) return;
+            var nowFav = A.ArticlesFavorites.toggle(uiLangFav, baseDeckKeyFav, wordIdFav);
+            heartBtn.textContent = nowFav ? '♥' : '♡';
+            heartBtn.classList.toggle('is-fav', !!nowFav);
+            heartBtn.setAttribute('aria-pressed', nowFav ? 'true' : 'false');
+          } catch (e) {}
+        };
       }
-      setHeartDisabled(heartBtn);
     }
 
-    // заголовок вопроса
+// заголовок вопроса
     if (subtitleEl) {
       var uiLang = '';
       try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
@@ -380,7 +414,16 @@
     render: render
   };
 })();
-  function isFavoritesDeckKey(key){
+  function getBaseDeckKey(key){
+    key = String(key||'');
+    if (key.indexOf('favorites:')===0 || key.indexOf('mistakes:')===0){
+      var parts = key.split(':');
+      return parts[parts.length-1] || key;
+    }
+    return key;
+  }
+
+function isFavoritesDeckKey(key){
     key = String(key||'');
     return (key.indexOf('favorites:')===0) || (key==='favorites') || (key==='fav');
   }
