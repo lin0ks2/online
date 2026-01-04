@@ -35,6 +35,7 @@
   // - после правильного ответа ввод блокируется и идём дальше
   var solved = false;
   var penalized = false;
+  var suppressMistakeOnce = false; // для симметрии: 'Не знаю' не добавляет в ошибки
 
   // Сеты для артиклей — отдельные от базового тренера.
   // Не добавляем новые настройки: используем тот же setSizeDefault.
@@ -531,9 +532,10 @@
       // ВАЖНО: при тренировке словаря ошибок (deckKey = mistakes:...) push должен стать no-op.
       try {
         if (!ok && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
-          A.ArticlesMistakes.push(deckKey, currentWord.id);
+          if (!suppressMistakeOnce) A.ArticlesMistakes.push(deckKey, currentWord.id);
         }
       } catch (e) {}
+      suppressMistakeOnce = false;
     }
 
     return { ok: ok, correct: correct, applied: applied };
@@ -542,6 +544,7 @@
   function answerIdk() {
     // "Не знаю" == неправильный ответ, но применяем штраф/статистику
     // ровно 1 раз (общая логика в answer()).
+    suppressMistakeOnce = true;
     return answer('__idk__');
   }
 
