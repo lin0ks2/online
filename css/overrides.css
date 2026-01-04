@@ -407,13 +407,3 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   position: relative;
   z-index: 5;
 }
-
-/* Расширяем область тапа невидимым слоем */
-.trainer-word .trainer-audio-btn::before{
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-}
