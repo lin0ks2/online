@@ -675,8 +675,9 @@ function activeDeckKey() {
     // We must NOT fall back to the default trainer when the user interacts with
     // sets, language toggle, or other UI elements while the articles trainer is active.
     // Switching is allowed only via the dedicated buttons on selection screens.
+    const baseKeyForArticles = extractBaseFromVirtual(key) || key;
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
-      && String(key) === 'de_nouns'
+      && String(baseKeyForArticles) === 'de_nouns'
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     if (wantArticles) {
@@ -687,7 +688,7 @@ function activeDeckKey() {
       try {
         const mode = (typeof getMode === 'function') ? getMode() : 'normal';
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && !A.ArticlesTrainer.isActive()) {
-          A.ArticlesTrainer.start('de_nouns', mode);
+          A.ArticlesTrainer.start(key, mode);
         }
       } catch (_){ }
 

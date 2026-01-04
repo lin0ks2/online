@@ -48,9 +48,24 @@
 
   function setHeartDisabled(btn) {
     if (!btn) return;
-    btn.disabled = true;
-    btn.setAttribute('aria-disabled', 'true');
-    btn.classList.add('is-disabled');
+    // Articles favorites use their own isolated storage; the heart button is active
+    // (with guards when training from Favorites).
+    btn.disabled = false;
+    btn.removeAttribute('aria-disabled');
+    btn.classList.remove('is-disabled');
+  }
+
+  function baseOfDeckKey(key){
+    try{
+      var s = String(key||'');
+      if (/^favorites:/i.test(s)) return s.split(':').slice(2).join(':') || '';
+      if (/^mistakes:/i.test(s)) return s.split(':').slice(2).join(':') || '';
+      return s;
+    }catch(_){ return String(key||''); }
+  }
+
+  function toast(msg){
+    try { (A.toast && A.toast.show) ? A.toast.show(msg) : alert(msg); } catch(_){ }
   }
 
   function paintStars(deckKey, wordId) {
@@ -133,8 +148,45 @@
     // Строка статистики внизу карточки (как в обычном тренере) — не часть rootEl.
     var answersEl = qs('.answers-grid', rootEl);
 
-    // хром
+    // Heart / favorites (isolated for articles)
     setHeartDisabled(heartBtn);
+    try {
+      if (heartBtn && A.ArticlesFavorites && vm.wordId){
+        var uiLang2 = '';
+        try { uiLang2 = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e) {}
+        var uk2 = String(uiLang2).toLowerCase() === 'uk';
+
+        var baseKey = baseOfDeckKey(vm.deckKey || '');
+        var favNow = !!A.ArticlesFavorites.has(baseKey, vm.wordId);
+        heartBtn.textContent = favNow ? '♥' : '♡';
+        heartBtn.classList.toggle('is-fav', favNow);
+        heartBtn.setAttribute('aria-pressed', String(favNow));
+        var title = uk2 ? 'У вибране' : 'В избранное';
+        heartBtn.title = title; heartBtn.ariaLabel = title;
+
+        heartBtn.onclick = function(){
+          // Guard: блок добавления в избранное при тренировке "избранного"
+          try {
+            var dk = String(vm.deckKey || '');
+            var isFavDeck = /^favorites:/i.test(dk);
+            if (isFavDeck){
+              var msg = uk2 ? 'Під час тренування обраного додавання заборонено' : 'Во время тренировки избранного добавление запрещено';
+              try { (A.toast && A.toast.show) ? A.toast.show(msg) : alert(msg); } catch(__e){}
+              heartBtn.classList.add('shake'); setTimeout(function(){ heartBtn.classList.remove('shake'); }, 300);
+              return;
+            }
+          } catch(__e){}
+
+          try {
+            A.ArticlesFavorites.toggle(baseKey, vm.wordId);
+            var nowFav = !!A.ArticlesFavorites.has(baseKey, vm.wordId);
+            heartBtn.textContent = nowFav ? '♥' : '♡';
+            heartBtn.classList.toggle('is-fav', nowFav);
+            heartBtn.setAttribute('aria-pressed', String(nowFav));
+          } catch(__e){}
+        };
+      }
+    } catch(_){ }
 
     // заголовок вопроса
     if (subtitleEl) {
