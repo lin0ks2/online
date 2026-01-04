@@ -149,18 +149,6 @@
         audioEnabled = !audioEnabled;
         saveAudioEnabled();
         updateButtonIcon(btn);
-
-    // В режиме артиклей: озвучка по клику на слово (если включено)
-    if (isArticlesMode() && wordEl && !wordEl.__ttsWordClickBound) {
-      wordEl.__ttsWordClickBound = true;
-      wordEl.addEventListener('click', function (e) {
-        // не мешаем клику по самой кнопке
-        if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
-        if (!A.isPro || !A.isPro()) return;
-        if (!audioEnabled) return;
-        speakCurrentWord();
-      });
-    }
       });
 
       wordEl.appendChild(btn);
@@ -168,29 +156,29 @@
 
     updateButtonIcon(btn);
 
-    // В режиме артиклей: озвучка по клику на слово (если включено)
-    if (isArticlesMode() && wordEl && !wordEl.__ttsWordClickBound) {
+    // В режиме артиклей: озвучка по клику на слово (если включено).
+    // НЕ мешаем кнопке, чтобы включение/отключение работало как раньше.
+    if (isArticlesMode() && !wordEl.__ttsWordClickBound) {
       wordEl.__ttsWordClickBound = true;
       wordEl.addEventListener('click', function (e) {
-        // не мешаем клику по самой кнопке
-        if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
+        try {
+          if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
+        } catch (_e) {}
         if (!A.isPro || !A.isPro()) return;
         if (!audioEnabled) return;
         speakCurrentWord();
       });
     }
 
+    // Автоозвучка — только в обычном тренере (НЕ в режиме артиклей),
+    // чтобы не ломать механику обучения.
     if (!isArticlesMode()) {
-    // автоозвучка нового слова (не повторяем одно и то же дважды подряд)
-    var word = getCurrentWord();
-    if (word && audioEnabled && word !== lastAutoSpokenWord) {
-      lastAutoSpokenWord = word;
-      setTimeout(function () {
-        speakText(word);
-      }, 120);
+      var word = getCurrentWord();
+      if (word && audioEnabled && word !== lastAutoSpokenWord) {
+        lastAutoSpokenWord = word;
+        setTimeout(function () { speakText(word); }, 120);
+      }
     }
-    }
-
   }
 
   /* ========================================================== */

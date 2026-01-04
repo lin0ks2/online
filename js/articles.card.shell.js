@@ -297,6 +297,8 @@
           if (vm) {
             paintStars(vm.deckKey, vm.wordId);
             updateBottomDictStats(vm);
+            try { if (A.AudioTTS && typeof A.AudioTTS.onCorrect === 'function') A.AudioTTS.onCorrect(); } catch(_e3) {}
+
           }
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
