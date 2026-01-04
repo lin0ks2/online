@@ -687,8 +687,18 @@ function activeDeckKey() {
       // Start if needed (mode mirrors the default trainer's difficulty).
       try {
         const mode = (typeof getMode === 'function') ? getMode() : 'normal';
-        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && !A.ArticlesTrainer.isActive()) {
-          A.ArticlesTrainer.start(key, mode);
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function') {
+          let needStart = !A.ArticlesTrainer.isActive();
+          if (!needStart && typeof A.ArticlesTrainer.getViewModel === 'function') {
+            try {
+              const vm = A.ArticlesTrainer.getViewModel();
+              const curKey = vm ? String(vm.deckKey || '') : '';
+              if (curKey !== String(key || '')) needStart = true;
+            } catch (_e) {}
+          }
+          // IMPORTANT: when navigating from Favorites/Mistakes, the articles trainer can already be active.
+          // In that case we must re-start it with the new virtual key to keep stats and guards consistent.
+          if (needStart) A.ArticlesTrainer.start(key, mode);
         }
       } catch (_){ }
 
