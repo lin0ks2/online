@@ -402,3 +402,9 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   white-space: nowrap;
 }
 
+.trainer-word .trainer-audio-btn {
+  padding: 10px;
+  margin: -10px;
+  position: relative;
+  z-index: 5;
+}
