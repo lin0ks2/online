@@ -494,6 +494,7 @@
   }
 
   function answer(article) {
+    const isIdk = (article === '__idk__');
     if (!active || !currentWord) return { ok: false, correct: '' };
     var raw = currentWord.word || currentWord.term || currentWord.de || '';
     var correct = parseArticle(raw);
@@ -530,7 +531,7 @@
       // Мои ошибки (артикли): добавляем только при неправильном ответе.
       // ВАЖНО: при тренировке словаря ошибок (deckKey = mistakes:...) push должен стать no-op.
       try {
-        if (!ok && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
+        if (!ok && !isIdk && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
           A.ArticlesMistakes.push(deckKey, currentWord.id);
         }
       } catch (e) {}
