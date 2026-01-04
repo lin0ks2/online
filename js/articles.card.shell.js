@@ -46,18 +46,26 @@
     return window.UIBus;
   }
 
-  function setHeartDisabled(btn) {
+  function setHeartEnabled(btn) {
     if (!btn) return;
-    btn.disabled = true;
-    btn.setAttribute('aria-disabled', 'true');
-    btn.classList.add('is-disabled');
-  }
-
-  function setHeartEnabled(btn){
-    if (!btn) return;
+    // Articles favorites use their own isolated storage; the heart button is active
+    // (with guards when training from Favorites).
     btn.disabled = false;
     btn.removeAttribute('aria-disabled');
     btn.classList.remove('is-disabled');
+  }
+
+  function baseOfDeckKey(key){
+    try{
+      var s = String(key||'');
+      if (/^favorites:/i.test(s)) return s.split(':').slice(2).join(':') || '';
+      if (/^mistakes:/i.test(s)) return s.split(':').slice(2).join(':') || '';
+      return s;
+    }catch(_){ return String(key||''); }
+  }
+
+  function toast(msg){
+    try { (A.toast && A.toast.show) ? A.toast.show(msg) : alert(msg); } catch(_){ }
   }
 
   function paintStars(deckKey, wordId) {
@@ -140,45 +148,51 @@
     // Строка статистики внизу карточки (как в обычном тренере) — не часть rootEl.
     var answersEl = qs('.answers-grid', rootEl);
 
-    // хром
-    // Сердечко: работает в обычной тренировке артиклей,
-// но должно быть выключено внутри тренировки избранного (favorites:...).
-    if (heartBtn) {
-      var uiLangFav = '';
-      try { uiLangFav = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
-      uiLangFav = (String(uiLangFav).toLowerCase() === 'uk') ? 'uk' : 'ru';
-      var baseDeckKeyFav = getBaseDeckKey(vm.deckKey);
-      var wordIdFav = vm && vm.word ? vm.word.id : null;
+    // Heart / favorites (isolated for articles)
+    try {
+      if (heartBtn && A.ArticlesFavorites && vm.wordId){
+        var uiLang2 = '';
+        try { uiLang2 = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (_e) {}
+        var uk2 = String(uiLang2).toLowerCase() === 'uk';
 
-      if (isFavoritesDeckKey(vm.deckKey)) {
-        // Внутри тренировки избранного: не кликается и не выглядит активным
-        heartBtn.textContent = '♡';
-        heartBtn.classList.remove('is-fav');
-        heartBtn.setAttribute('aria-pressed','false');
-        heartBtn.onclick = null;
-        setHeartDisabled(heartBtn);
-      } else {
-        // В обычной тренировке артиклей: полноценный toggle в избранное артиклей
-        setHeartEnabled(heartBtn);
-        try {
-          var isFav = !!(A.ArticlesFavorites && A.ArticlesFavorites.has && wordIdFav && A.ArticlesFavorites.has(uiLangFav, baseDeckKeyFav, wordIdFav));
-          heartBtn.textContent = isFav ? '♥' : '♡';
-          heartBtn.classList.toggle('is-fav', isFav);
-          heartBtn.setAttribute('aria-pressed', isFav ? 'true' : 'false');
-        } catch (e) {}
-        heartBtn.onclick = function(){
-          try {
-            if (!A.ArticlesFavorites || !A.ArticlesFavorites.toggle || !wordIdFav) return;
-            var nowFav = A.ArticlesFavorites.toggle(uiLangFav, baseDeckKeyFav, wordIdFav);
-            heartBtn.textContent = nowFav ? '♥' : '♡';
-            heartBtn.classList.toggle('is-fav', !!nowFav);
-            heartBtn.setAttribute('aria-pressed', nowFav ? 'true' : 'false');
-          } catch (e) {}
-        };
-      }
-    }
+        var dk0 = String(vm.deckKey || '');
+        var isFavDeck = /^favorites:/i.test(dk0);
 
-// заголовок вопроса
+        var baseKey = baseOfDeckKey(dk0);
+        var favNow = (!isFavDeck) && !!A.ArticlesFavorites.has(baseKey, vm.wordId);
+
+        var title = uk2 ? 'У вибране' : 'В избранное';
+        try { heartBtn.title = title; heartBtn.ariaLabel = title; } catch(__e){}
+
+        if (isFavDeck){
+          // Внутри тренировки избранного: сердце не должно работать и не должно выглядеть "нажатым"
+          heartBtn.textContent = '♡';
+          heartBtn.classList.remove('is-fav');
+          heartBtn.setAttribute('aria-pressed', 'false');
+          heartBtn.disabled = true;
+          heartBtn.setAttribute('aria-disabled', 'true');
+          heartBtn.classList.add('is-disabled');
+          heartBtn.onclick = null;
+        } else {
+          // Обычная тренировка артиклей: сердце активно (изолированное избранное)
+          setHeartEnabled(heartBtn);
+          heartBtn.textContent = favNow ? '♥' : '♡';
+          heartBtn.classList.toggle('is-fav', favNow);
+          heartBtn.setAttribute('aria-pressed', String(favNow));
+
+          heartBtn.onclick = function(){
+            try {
+              A.ArticlesFavorites.toggle(baseKey, vm.wordId);
+              var nowFav = !!A.ArticlesFavorites.has(baseKey, vm.wordId);
+              heartBtn.textContent = nowFav ? '♥' : '♡';
+              heartBtn.classList.toggle('is-fav', nowFav);
+              heartBtn.setAttribute('aria-pressed', String(nowFav));
+            } catch(__e){}
+          };
+        }
+      }    } catch(_){ }
+
+    // заголовок вопроса
     if (subtitleEl) {
       var uiLang = '';
       try { uiLang = (A.settings && (A.settings.lang || A.settings.uiLang)) || ''; } catch (e) {}
@@ -414,18 +428,3 @@
     render: render
   };
 })();
-  function getBaseDeckKey(key){
-    key = String(key||'');
-    if (key.indexOf('favorites:')===0 || key.indexOf('mistakes:')===0){
-      var parts = key.split(':');
-      return parts[parts.length-1] || key;
-    }
-    return key;
-  }
-
-function isFavoritesDeckKey(key){
-    key = String(key||'');
-    return (key.indexOf('favorites:')===0) || (key==='favorites') || (key==='fav');
-  }
-
-
