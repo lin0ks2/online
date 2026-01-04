@@ -401,3 +401,10 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   min-width: 0;
   white-space: nowrap;
 }
+
+.home-trainer .trainer-audio-btn {
+  width: 44px;
+  height: 44px;
+  right: 4px;   /* компенсация, чтобы иконка осталась на месте */
+  bottom: 4px;
+}
