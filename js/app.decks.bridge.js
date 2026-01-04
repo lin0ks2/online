@@ -40,17 +40,13 @@
     const full = _resolve ? (_resolve(base) || []) : [];
 
     if (p.kind === 'mistakes'){
-      // В режиме артиклей используем изолированное хранилище ArticlesMistakes,
-      // в режиме слов — стандартное App.Mistakes.
-      const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
-
-      // Если есть API резолва — используем его
-      if (Mist && Mist.resolveDeckForMistakesKey){
-        try { return Mist.resolveDeckForMistakesKey(key) || []; } catch(_){}
+      // Если есть Mistakes API — используем его
+      if (A.Mistakes && A.Mistakes.resolveDeckForMistakesKey){
+        try { return A.Mistakes.resolveDeckForMistakesKey(key) || []; } catch(_){}
       }
       // Фолбэк: если есть getIds — фильтруем по id
       try {
-        const ids = new Set((Mist && Mist.getIds ? (Mist.getIds(p.trainLang, base) || []) : []).map(String));
+        const ids = new Set((A.Mistakes && A.Mistakes.getIds ? A.Mistakes.getIds(p.trainLang, base) : []).map(String));
         if (ids.size) return full.filter(w => ids.has(String(w.id)));
       } catch(_){}
       return [];

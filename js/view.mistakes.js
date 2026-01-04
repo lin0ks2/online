@@ -17,16 +17,14 @@
   function t(){
     const uk = getUiLang()==='uk';
     return uk
-      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', okWords:'Вчити слова', okArticles:'Вивчати артиклі' }
-      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', okWords:'Учить слова', okArticles:'Учить артикли' };
+      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok:'Вчити слова' }
+      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok:'Учить слова' };
   }
 
   const FLAG = { en:'🇬🇧', de:'🇩🇪', fr:'🇫🇷', es:'🇪🇸', it:'🇮🇹', ru:'🇷🇺', uk:'🇺🇦', pl:'🇵🇱', sr:'🇷🇸' };
 
   function gatherMistakeDecks(){
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-    const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
-    const rows = (Mist && Mist.listSummary ? Mist.listSummary() : []);
+    const rows = (A.Mistakes && A.Mistakes.listSummary ? A.Mistakes.listSummary() : []);
     // преобразуем в «словарные» записи с ключом mistakes:<lang>:<baseKey>
     return rows.map(r=>{
       const mKey = r.mistakesKey;
@@ -42,19 +40,6 @@
     const app = document.getElementById('app');
     if (!app) return;
     const T = t();
-    // Detect articles-mode on Mistakes screen as a fallback:
-    // if last selected mistakes key targets de_nouns, we force articles mode so the UI shows "Учить артикли".
-    let isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-    try {
-      const lk = A.settings && A.settings.lastMistakesKey;
-      if (!isArticles && lk && /^mistakes:[^:]+:de_nouns$/i.test(String(lk))) {
-        isArticles = true;
-        A.settings = A.settings || {};
-        A.settings.trainerKind = 'articles';
-        if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
-      }
-    } catch(_e) {}
-    const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
 
     const all = gatherMistakeDecks();
     if (!all.length){
@@ -151,7 +136,7 @@
               
             </table>
             <div class="dicts-actions">
-              <button type="button" class="btn-primary" id="mistakes-apply">${isArticles ? T.okArticles : T.okWords}</button>
+              <button type="button" class="btn-primary" id="mistakes-apply">${T.ok}</button>
             </div>
           </section>
         </div>`;
@@ -175,9 +160,9 @@
             const tr = del.closest('tr');
             if (!tr) return;
             const mKey = tr.dataset.key;
-            const p = Mist && Mist.parseKey && Mist.parseKey(mKey);
+            const p = A.Mistakes && A.Mistakes.parseKey && A.Mistakes.parseKey(mKey);
             if (p){
-              try{ Mist && Mist.removeDeck && Mist.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
+              try{ A.Mistakes.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
               // пересчитать и перерисовать заново
               render();
             }
@@ -205,13 +190,8 @@
             return;
           }
           saveSelected(key);
-          // В режиме артиклей — запускаем ArticlesTrainer, в режиме слов — стандартный Trainer.
-          try {
-            A.settings = A.settings || {};
-            if (isArticles) A.settings.trainerKind = "articles";
-            else A.settings.trainerKind = "words";
-            if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
-          } catch(_){ }
+          // Switch to the default word trainer (not articles)
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
           try { A.Trainer && A.Trainer.setDeckKey && A.Trainer.setDeckKey(key); } catch(_){}
           // уходим на главную
           try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){}

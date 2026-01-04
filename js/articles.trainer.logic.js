@@ -528,16 +528,6 @@
       } catch (e) {}
     }
 
-      try {
-        // "Мои ошибки" для артиклей: копим только в обычной тренировке.
-        // В тренировке словаря ошибок (deckKey начинается с mistakes:) — НЕ добавляем.
-        if (!ok && !/^mistakes:/i.test(String(deckKey||'')) && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
-          var baseKey = baseKeyForProgress(deckKey);
-          if (baseKey) A.ArticlesMistakes.push(baseKey, currentWord.id);
-        }
-      } catch (_e3) {}
-    }
-
     return { ok: ok, correct: correct, applied: applied };
   }
 

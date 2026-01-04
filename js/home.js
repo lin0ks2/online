@@ -244,8 +244,7 @@ function setUiLang(code){
         return parts.slice(2).join(':') || null;
       }
       if (/^mistakes:/i.test(key)) {
-        const parts = String(key).split(':'); // ["mistakes", "<tl>", "<baseKey>"]
-        return parts.slice(2).join(':') || null;
+        return String(key).split(':').slice(1).join(':') || null;
       }
       return null;
     } catch(_) { return null; }
