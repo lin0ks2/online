@@ -207,9 +207,14 @@ if (del){
 
   // 2) Снимаем «избранное» для каждого слова этой базы
   try {
-    if (isArticles && A.ArticlesFavorites && typeof A.ArticlesFavorites.toggle === 'function'){
-      for (const id of ids){
-        A.ArticlesFavorites.toggle(TL, baseKey, id);
+    if (isArticles && A.ArticlesFavorites){
+      // API ArticlesFavorites: toggle(baseDeckKey, id) + clearForDeck(trainLang, baseDeckKey)
+      if (typeof A.ArticlesFavorites.clearForDeck === 'function'){
+        A.ArticlesFavorites.clearForDeck(TL, baseKey);
+      } else if (typeof A.ArticlesFavorites.toggle === 'function'){
+        for (const id of ids){
+          A.ArticlesFavorites.toggle(baseKey, id);
+        }
       }
     } else if (!isArticles && A.Favorites && typeof A.Favorites.toggle === 'function'){
       for (const id of ids){
