@@ -17,14 +17,16 @@
   function t(){
     const uk = getUiLang()==='uk';
     return uk
-      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', ok:'Вчити слова' }
-      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', ok:'Учить слова' };
+      ? { title:'Мої помилки', lang:'Мова словника', name:'Назва', words:'Слів', preview:'Перегляд', empty:'На данний момент помилок немає', okWords:'Вчити слова', okArticles:'Вивчати артиклі' }
+      : { title:'Мои ошибки',  lang:'Язык словаря',  name:'Название', words:'Слов', preview:'Предпросмотр', empty:'В данный момент ошибок нет', okWords:'Учить слова', okArticles:'Учить артикли' };
   }
 
   const FLAG = { en:'🇬🇧', de:'🇩🇪', fr:'🇫🇷', es:'🇪🇸', it:'🇮🇹', ru:'🇷🇺', uk:'🇺🇦', pl:'🇵🇱', sr:'🇷🇸' };
 
   function gatherMistakeDecks(){
-    const rows = (A.Mistakes && A.Mistakes.listSummary ? A.Mistakes.listSummary() : []);
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
+    const rows = (Mist && Mist.listSummary ? Mist.listSummary() : []);
     // преобразуем в «словарные» записи с ключом mistakes:<lang>:<baseKey>
     return rows.map(r=>{
       const mKey = r.mistakesKey;
@@ -40,6 +42,8 @@
     const app = document.getElementById('app');
     if (!app) return;
     const T = t();
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
 
     const all = gatherMistakeDecks();
     if (!all.length){
@@ -136,7 +140,7 @@
               
             </table>
             <div class="dicts-actions">
-              <button type="button" class="btn-primary" id="mistakes-apply">${T.ok}</button>
+              <button type="button" class="btn-primary" id="mistakes-apply">${isArticles ? T.okArticles : T.okWords}</button>
             </div>
           </section>
         </div>`;
@@ -160,9 +164,9 @@
             const tr = del.closest('tr');
             if (!tr) return;
             const mKey = tr.dataset.key;
-            const p = A.Mistakes && A.Mistakes.parseKey && A.Mistakes.parseKey(mKey);
+            const p = Mist && Mist.parseKey && Mist.parseKey(mKey);
             if (p){
-              try{ A.Mistakes.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
+              try{ Mist && Mist.removeDeck && Mist.removeDeck(p.trainLang, p.baseDeckKey); }catch(_){}
               // пересчитать и перерисовать заново
               render();
             }
@@ -190,8 +194,13 @@
             return;
           }
           saveSelected(key);
-          // Switch to the default word trainer (not articles)
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
+          // В режиме артиклей — запускаем ArticlesTrainer, в режиме слов — стандартный Trainer.
+          try {
+            A.settings = A.settings || {};
+            if (isArticles) A.settings.trainerKind = "articles";
+            else A.settings.trainerKind = "words";
+            if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
+          } catch(_){ }
           try { A.Trainer && A.Trainer.setDeckKey && A.Trainer.setDeckKey(key); } catch(_){}
           // уходим на главную
           try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){}
