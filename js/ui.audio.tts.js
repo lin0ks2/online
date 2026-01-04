@@ -156,31 +156,18 @@
 
     updateButtonIcon(btn);
 
-    // В режиме артиклей: озвучка по клику на слово (если включено).
-    // НЕ мешаем кнопке, чтобы включение/отключение работало как раньше.
-    if (isArticlesMode() && !wordEl.__ttsWordClickBound) {
-      wordEl.__ttsWordClickBound = true;
-      wordEl.addEventListener('click', function (e) {
-        try {
-          if (e && e.target && e.target.classList && e.target.classList.contains('trainer-audio-btn')) return;
-        } catch (_e) {}
-        if (!A.isPro || !A.isPro()) return;
-        if (!audioEnabled) return;
-        speakCurrentWord();
-      });
-    }
-
-    // Автоозвучка — только в обычном тренере (НЕ в режиме артиклей),
-    // чтобы не ломать механику обучения.
+    // Автоозвучка нового слова — только для обычного тренера (words).
+    // В articles-режиме автоозвучку отключаем, чтобы не ломать механику обучения.
     if (!isArticlesMode()) {
       var word = getCurrentWord();
       if (word && audioEnabled && word !== lastAutoSpokenWord) {
         lastAutoSpokenWord = word;
-        setTimeout(function () { speakText(word); }, 120);
+        setTimeout(function () {
+          speakText(word);
+        }, 120);
       }
     }
   }
-
   /* ========================================================== */
 
   // Следим за изменением .trainer-word и обновляем кнопку/озвучку
