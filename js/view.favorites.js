@@ -349,6 +349,6 @@
   }
 
   // Публичный mount
-  A.ViewFavorites = { mount: render };
+  A.ViewFavorites = { mount: function(){ try{ if (A.stopAllTrainers) A.stopAllTrainers('view:favorites'); }catch(_){} return render(); } };
 })();
 /* ========================= Конец файла: view.favorites.js ========================= */

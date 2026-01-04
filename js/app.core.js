@@ -197,6 +197,49 @@ try{
   window.addEventListener('storage', function(){ App.applyI18nTitles(); });
   document.addEventListener('lexitron:ui-lang-changed', function(){ App.applyI18nTitles(); });
 
+  /* ------------------------------------------------------------
+   * Hard stop for trainers (used to avoid mixed/edge states)
+   *
+   * Everything related to Articles must copy the behaviour of the
+   * regular trainer, but remain isolated. To prevent "mixed screens"
+   * and other boundary conditions, we expose a single, safe kill-switch
+   * that can be called from views/modals/lang-toggle.
+   * ---------------------------------------------------------- */
+  App.stopAllTrainers = function(reason){
+    try {
+      // Articles trainer
+      if (window.ArticlesTrainer && typeof window.ArticlesTrainer.stop === 'function') {
+        window.ArticlesTrainer.stop();
+      }
+    } catch(_){ }
+
+    try {
+      if (window.ArticlesCard && typeof window.ArticlesCard.unmount === 'function') {
+        window.ArticlesCard.unmount();
+      }
+    } catch(_){ }
+
+    try {
+      // Word trainer (if it exposes stop)
+      if (App && App.Trainer && typeof App.Trainer.stop === 'function') {
+        App.Trainer.stop();
+      }
+    } catch(_){ }
+
+    try {
+      App.state = App.state || {};
+      App.state.activeTrainerMode = null;
+      App.state._trainerStopReason = reason || null;
+    } catch(_){ }
+  };
+
+  // Language change implies UI re-render; never keep trainers alive.
+  try {
+    document.addEventListener('lexitron:ui-lang-changed', function(){
+      try { App.stopAllTrainers('ui_lang_changed'); } catch(_){ }
+    });
+  } catch(_){ }
+
 App.clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
   App.shuffle = (a)=>{const arr=a.slice();for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;};
   App.escapeHtml = (s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

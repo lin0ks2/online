@@ -292,7 +292,7 @@
   }
 
   /* ---------------------- export ---------------------- */
-  A.ViewDicts = { mount: renderDictList };
+  A.ViewDicts = { mount: function(){ try{ if (A.stopAllTrainers) A.stopAllTrainers('view:dicts'); }catch(_){} return renderDictList(); } };
 
 })();
 /* ========================= Конец файла: view.dicts.js ========================= */

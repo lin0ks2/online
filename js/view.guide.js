@@ -420,6 +420,7 @@
   // OPEN / CLOSE
   // -------------------------
   function open() {
+    try { if (root.App && root.App.stopAllTrainers) root.App.stopAllTrainers('guide:open'); } catch(_){ }
     ensureSheet();
 
     // если открыт бургер — закрываем его (как у donate/legal)

@@ -245,6 +245,6 @@
     wrap.querySelector('.mmodal__close').onclick = close;
   }
 
-  A.ViewMistakes = { mount: render };
+  A.ViewMistakes = { mount: function(){ try{ if (A.stopAllTrainers) A.stopAllTrainers('view:mistakes'); }catch(_){} return render(); } };
 })();
 /* ========================= Конец файла: view.mistakes.js ========================= */

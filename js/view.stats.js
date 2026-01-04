@@ -1110,7 +1110,7 @@
   }
 
   A.ViewStats = {
-    mount: mount
+    mount: function(){ try{ if (A.stopAllTrainers) A.stopAllTrainers('view:stats'); }catch(_){} return mount(); }
   };
 })();
 /* ========================= Конец файла: view.stats.js ========================= */
