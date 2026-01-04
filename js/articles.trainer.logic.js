@@ -138,6 +138,19 @@
     return [];
   }
 
+  // Progress for articles is tracked per base deck (e.g. de_nouns),
+  // regardless of whether the training is launched from a virtual deck
+  // like favorites:ru:de_nouns or mistakes:uk:de_nouns.
+  function baseKeyForProgress(k){
+    try{
+      var s = String(k||'');
+      if (/^favorites:/i.test(s) || /^mistakes:/i.test(s)) {
+        return s.split(':').slice(2).join(':') || '';
+      }
+      return s;
+    }catch(_){ return String(k||''); }
+  }
+
   function getBatchIndex(k) {
     try {
       var key = String(k || '').trim() || 'unknown';
@@ -188,10 +201,11 @@
 
   function countLearnedWithArticles(arr, dk) {
     var n = 0;
+    var progKey = baseKeyForProgress(dk);
     for (var i = 0; i < (arr ? arr.length : 0); i++) {
       var w = arr[i];
       if (!hasValidArticle(w)) continue;
-      if (isLearned(dk, w.id)) n++;
+      if (isLearned(progKey, w.id)) n++;
     }
     return n;
   }
@@ -231,12 +245,15 @@
     // Фильтрация по артиклям.
     var withArticles = slice.filter(hasValidArticle);
 
+    // Прогресс артиклей ведём по базовой деке.
+    var progKey = baseKeyForProgress(dk);
+
     // Исключение выученных (с мягким повтором через learnedRepeat).
     var eps = getLearnedEpsilon();
     var eligible = [];
     for (var i = 0; i < withArticles.length; i++) {
       var w = withArticles[i];
-      var learned = isLearned(dk, w.id);
+      var learned = isLearned(progKey, w.id);
       if (!learned) eligible.push(w);
       else if (eps > 0 && Math.random() < eps) eligible.push(w);
     }
@@ -255,7 +272,7 @@
     var nEligible = [];
     for (var j = 0; j < nWithA.length; j++) {
       var ww = nWithA[j];
-      if (!isLearned(dk, ww.id)) nEligible.push(ww);
+      if (!isLearned(progKey, ww.id)) nEligible.push(ww);
       else if (eps > 0 && Math.random() < eps) nEligible.push(ww);
     }
     return nEligible.length ? nEligible : nWithA;
@@ -378,11 +395,12 @@
     var deck = getDeck();
     var withA = 0;
     var learned = 0;
+    var progKey = baseKeyForProgress(dk);
     for (var i = 0; i < (deck ? deck.length : 0); i++) {
       var w = deck[i];
       if (!hasValidArticle(w)) continue;
       withA++;
-      if (isLearned(dk, w.id)) learned++;
+      if (isLearned(progKey, w.id)) learned++;
     }
     return { withArticles: withA, learned: learned };
   }
@@ -390,6 +408,7 @@
   function getSetStats(dk) {
     var deck = getDeck();
     if (!deck || !deck.length) return { withArticles: 0, learned: 0, setIndex: 0, totalSets: 1 };
+    var progKey = baseKeyForProgress(dk);
     var setSize = getSetSize();
     totalSets = Math.max(1, Math.ceil(deck.length / setSize));
     currentSetIndex = getBatchIndex(dk);
@@ -403,7 +422,7 @@
       var w = slice[i];
       if (!hasValidArticle(w)) continue;
       withA++;
-      if (isLearned(dk, w.id)) learned++;
+      if (isLearned(progKey, w.id)) learned++;
     }
     return { withArticles: withA, learned: learned, setIndex: currentSetIndex, totalSets: totalSets };
   }
@@ -506,27 +525,7 @@
         if (A.ArticlesStats && typeof A.ArticlesStats.onAnswer === 'function') {
           A.ArticlesStats.onAnswer(ok);
         }
-      }
-
-// Ошибки для артиклей (изолированно): копим только если НЕ тренируем словарь ошибок
-try {
-  const isMistTrain = (typeof deckKey === 'string' && deckKey.startsWith('mistakes:'));
-  if (!ok && applied && !isMistTrain && A.ArticlesMistakes && typeof A.ArticlesMistakes.push === 'function') {
-    const tl = (A.settings && (A.settings.uiLang === 'uk' || A.settings.uiLang === 'ru')) ? A.settings.uiLang : ((A.settings && (A.settings.lang === 'uk' || A.settings.lang === 'ru')) ? A.settings.lang : 'ru');
-    const base = (function(k){
-      try{
-        if (!k) return k;
-        if (/^mistakes:/i.test(k) || /^favorites:/i.test(k)) {
-          const parts = String(k).split(':');
-          return parts[2] || k;
-        }
-        return k;
-      }catch(_){ return k; }
-    })(deckKey);
-    A.ArticlesMistakes.push(base, currentWord.id, { trainLang: tl });
-  }
-} catch(_){}
- catch (e) {}
+      } catch (e) {}
     }
 
     return { ok: ok, correct: correct, applied: applied };

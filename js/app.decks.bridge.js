@@ -34,38 +34,35 @@
     if (!p) return [];
     const base = p.baseDeckKey;
 
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+
     // Базовый словарь целиком
     const full = _resolve ? (_resolve(base) || []) : [];
 
     if (p.kind === 'mistakes'){
-      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-      const M = isArticles ? (A.ArticlesMistakes || null) : (M || null);
-
       // Если есть Mistakes API — используем его
-      if (M && M.resolveDeckForMistakesKey){
-        try { return M.resolveDeckForMistakesKey(key) || []; } catch(_){}
+      if (A.Mistakes && A.Mistakes.resolveDeckForMistakesKey){
+        try { return A.Mistakes.resolveDeckForMistakesKey(key) || []; } catch(_){}
       }
       // Фолбэк: если есть getIds — фильтруем по id
       try {
-        const ids = new Set((M && M.getIds ? M.getIds(p.trainLang, base) : []).map(String));
+        const ids = new Set((A.Mistakes && A.Mistakes.getIds ? A.Mistakes.getIds(p.trainLang, base) : []).map(String));
         if (ids.size) return full.filter(w => ids.has(String(w.id)));
       } catch(_){}
       return [];
     }
 
     if (p.kind === 'favorites'){
-      // Если есть Favorites API — используем его
-      if (A.Favorites && A.Favorites.resolveDeckForFavoritesKey){
-        try { return A.Favorites.resolveDeckForFavoritesKey(key) || []; } catch(_){}
+      // Articles mode uses isolated favorites storage.
+      const Fav = isArticles ? (A.ArticlesFavorites || null) : (A.Favorites || null);
+      if (Fav && Fav.resolveDeckForFavoritesKey){
+        try { return Fav.resolveDeckForFavoritesKey(key) || []; } catch(_){ }
       }
-      // Фолбэк: фильтруем через Favorites.has(...)
+      // Fallback: filter the base deck by ids.
       try {
-        const has = A.Favorites && typeof A.Favorites.has === 'function' ? A.Favorites.has.bind(A.Favorites) : null;
-        if (!has) return [];
-        const out = [];
-        for (const w of full){ if (has(base, w.id)) out.push(w); }
-        return out;
-      } catch(_){}
+        const ids = new Set((Fav && Fav.getIds ? (Fav.getIds(p.trainLang, base) || []) : []).map(String));
+        if (ids.size) return full.filter(w => ids.has(String(w.id)));
+      } catch(_){ }
       return [];
     }
 
