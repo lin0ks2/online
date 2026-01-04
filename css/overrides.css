@@ -401,9 +401,3 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   min-width: 0;
   white-space: nowrap;
 }
-
-/* Не трогаем layout кнопки */
-.trainer-word .trainer-audio-btn{
-  position: relative;
-  z-index: 5;
-}
