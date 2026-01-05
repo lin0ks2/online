@@ -544,6 +544,15 @@
       } catch (e) {}
     }
 
+    // аналитика: фиксируем факт ответа (для воронок/отвалов)
+    try {
+      if (A.Analytics && typeof A.Analytics.trainingAnswer === 'function') {
+        A.Analytics.trainingAnswer({ result: ok ? 'correct' : 'wrong', applied: applied });
+      } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+        A.Analytics.trainingPing({ reason: ok ? 'answer_correct' : 'answer_wrong' });
+      }
+    } catch (_aE) {}
+
     return { ok: ok, correct: correct, applied: applied };
   }
 
@@ -557,6 +566,15 @@
 
     var raw = currentWord.word || currentWord.term || currentWord.de || '';
     var correct = parseArticle(raw);
+    // аналитика: "не знаю" — без штрафа/начисления
+    try {
+      if (A.Analytics && typeof A.Analytics.trainingAnswer === 'function') {
+        A.Analytics.trainingAnswer({ result: 'dont_know', applied: false });
+      } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+        A.Analytics.trainingPing({ reason: 'answer_idk' });
+      }
+    } catch (_aI) {}
+
     return { ok: false, correct: correct, applied: false, idk: true };
   }
 A.ArticlesTrainer = {

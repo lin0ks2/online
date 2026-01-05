@@ -284,6 +284,18 @@
             row.classList.add('is-selected');
           }
 
+          // аналитика: выбор словаря
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_select_deck', {
+                deck_key: String(key || ''),
+                scope: scope || null,
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(key) || null) : null
+              });
+            }
+          } catch(_){ }
+
           updateArticlesButton();
         }, { passive:true });
       });
@@ -297,6 +309,18 @@
             const p = (d.getAttribute('data-page')|0) ? 1 : 0;
             if (p === activePage) return;
             activePage = p;
+
+            // аналитика: переключение страницы (DE / LearnPunkt)
+            try {
+              if (A.Analytics && typeof A.Analytics.track === 'function') {
+                A.Analytics.track('dict_pager_change', {
+                  lang: 'de',
+                  page: activePage,
+                  ui_lang: getUiLang(),
+                  deck_key: String((activePage === 1 ? selectedLP : selectedMain) || selectedKey || '')
+                });
+              }
+            } catch(_){ }
             try { A.settings = A.settings || {}; A.settings.dictsDePage = activePage; if (typeof A.saveSettings === 'function') A.saveSettings(A.settings); } catch(_){}
             pages.forEach(pg=>pg.classList.toggle('is-active', (pg.getAttribute('data-page')|0) === activePage));
             dots.forEach(dd=>dd.classList.toggle('is-active', (dd.getAttribute('data-page')|0) === activePage));
@@ -322,6 +346,18 @@
       const ok = document.getElementById('dicts-apply');
       if (ok){
         ok.onclick = ()=>{
+          // аналитика: запуск тренера слов из экрана словарей
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_apply', {
+                kind: 'words',
+                deck_key: String(selectedKey || ''),
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
+              });
+            }
+          } catch(_){ }
+
           try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){}
           try {
             A.settings = A.settings || {};
@@ -338,6 +374,18 @@
       const articlesBtn = document.getElementById('dicts-articles');
       if (articlesBtn){
         articlesBtn.onclick = ()=>{
+          // аналитика: запуск тренера артиклей из экрана словарей
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_apply', {
+                kind: 'articles',
+                deck_key: String(selectedKey || ''),
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
+              });
+            }
+          } catch(_){ }
+
           try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){}
           try {
             A.settings = A.settings || {};
@@ -382,6 +430,16 @@
 
   /* ---------------------- modal preview ---------------------- */
   function openPreview(key){
+    // аналитика: предпросмотр словаря
+    try {
+      if (A.Analytics && typeof A.Analytics.track === 'function') {
+        A.Analytics.track('dict_preview', {
+          deck_key: String(key || ''),
+          ui_lang: getUiLang(),
+          learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(key) || null) : null
+        });
+      }
+    } catch(_){ }
     const T = t();
     const deck = A.Decks.resolveDeckByKey(key) || [];
     const name = A.Decks.resolveNameByKey(key);

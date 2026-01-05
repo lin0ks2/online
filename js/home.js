@@ -822,9 +822,11 @@ function activeDeckKey() {
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, true); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
 
-          // аналитика: пинг при правильном ответе
+          // аналитика: ответ в тренере
           try {
-            if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+            if (A.Analytics && typeof A.Analytics.trainingAnswer === 'function') {
+              A.Analytics.trainingAnswer({ result: 'correct', applied: true });
+            } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
               A.Analytics.trainingPing({ reason: 'answer_correct' });
             }
           } catch (_) {}
@@ -852,9 +854,11 @@ function activeDeckKey() {
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, false); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
 
-          // аналитика: пинг при неправильном ответе
+          // аналитика: ответ в тренере (штраф/зачёт только 1 раз)
           try {
-            if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+            if (A.Analytics && typeof A.Analytics.trainingAnswer === 'function') {
+              A.Analytics.trainingAnswer({ result: 'wrong', applied: true });
+            } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
               A.Analytics.trainingPing({ reason: 'answer_wrong' });
             }
           } catch (_) {}
@@ -882,9 +886,11 @@ function activeDeckKey() {
         if (correctBtn) correctBtn.classList.add('is-correct');
         lockAll(word.id);
 
-        // аналитика: пинг при "не знаю"
+        // аналитика: "не знаю" (как клик, но без штрафа/начисления)
         try {
-          if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
+          if (A.Analytics && typeof A.Analytics.trainingAnswer === 'function') {
+            A.Analytics.trainingAnswer({ result: 'dont_know', applied: false });
+          } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
             A.Analytics.trainingPing({ reason: 'answer_idk' });
           }
         } catch (_) {}
@@ -932,6 +938,19 @@ function activeDeckKey() {
       this.current = action;
       const app = document.getElementById('app');
       if (!app) return;
+
+      // аналитика: виртуальные экраны (вся навигация идёт через Router)
+      try {
+        if (A.Analytics && typeof A.Analytics.screen === 'function') {
+          A.Analytics.screen(String(action || 'home'), {
+            prev_screen: String(prev || 'home'),
+            ui_lang: getCurrentUiLang(),
+            learn_lang: getCurrentLearnLang(),
+            mode: (typeof getMode === 'function') ? getMode() : null,
+            trainer_kind: (A.settings && A.settings.trainerKind) ? String(A.settings.trainerKind) : null
+          });
+        }
+      } catch(_){ }
 
       // аналитика: если уходим с главного экрана — завершаем тренировку
       if (prev === 'home' && action !== 'home') {

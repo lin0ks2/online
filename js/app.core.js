@@ -399,7 +399,26 @@ App.toggleFavorite = function(dictKey, wordId){
     const st = App.state || (App.state = {});
     st.favorites_v2 = st.favorites_v2 || {};
     st.favorites_v2[dictKey] = st.favorites_v2[dictKey] || {};
-    st.favorites_v2[dictKey][wordId] = !st.favorites_v2[dictKey][wordId];
+    const before = !!st.favorites_v2[dictKey][wordId];
+    st.favorites_v2[dictKey][wordId] = !before;
+    const after = !!st.favorites_v2[dictKey][wordId];
+    // аналитика: добавление/удаление избранного
+    try {
+      if (App.Analytics && typeof App.Analytics.track === 'function') {
+        const common = {
+          deck_key: String(dictKey || ''),
+          word_id: String(wordId),
+          state: after ? 'on' : 'off',
+          ui_lang: (App.settings && (App.settings.lang || App.settings.uiLang)) || null,
+          learn_lang: (App.Decks && typeof App.Decks.langOfKey === 'function') ? (App.Decks.langOfKey(dictKey) || null) : null
+        };
+
+        // Backward-compatible event (existing dashboards)
+        App.Analytics.track('favorite_toggle', common);
+        // Normalized events
+        App.Analytics.track(after ? 'favorites_add' : 'favorites_remove', common);
+      }
+    } catch(_){ }
     App.saveState && App.saveState();
   }catch(e){}
 };
