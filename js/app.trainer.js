@@ -40,13 +40,12 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
       const lvl = difficulty(); // 'hard' или 'normal'
       let base = lvl === 'hard' ? '🦅' : '🐣';
 
-      // Дополнительные бейджи режимов для тренера артиклей:
+      // Дополнительные бейджи режимов для тренеров (слова/артикли):
       // - Favorites: ⭐
       // - Mistakes: ⚠️
-      // Показ только в articles-контуре, чтобы не менять поведение базового тренера.
+      // Показ основан на deckKey (prefix favorites:/mistakes:).
       try {
-        const isArticles = !!(App.settings && App.settings.trainerKind === 'articles');
-        if (isArticles && App.Trainer && typeof App.Trainer.getDeckKey === 'function') {
+        if (App.Trainer && typeof App.Trainer.getDeckKey === 'function') {
           const dk = String(App.Trainer.getDeckKey() || '');
           if (/^favorites:/i.test(dk)) base = base + ' ⭐';
           else if (/^mistakes:/i.test(dk)) base = base + ' ⚠️';
