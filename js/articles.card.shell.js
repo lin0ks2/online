@@ -157,15 +157,19 @@
 
         var dk0 = String(vm.deckKey || '');
         var isFavDeck = /^favorites:/i.test(dk0);
+        var isMistDeck = /^mistakes:/i.test(dk0);
 
         var baseKey = baseOfDeckKey(dk0);
-        var favNow = (!isFavDeck) && !!A.ArticlesFavorites.has(baseKey, vm.wordId);
+        var favNow = (!isFavDeck && !isMistDeck) && !!A.ArticlesFavorites.has(baseKey, vm.wordId);
 
         var title = uk2 ? 'У вибране' : 'В избранное';
         try { heartBtn.title = title; heartBtn.ariaLabel = title; } catch(__e){}
 
-        if (isFavDeck){
-          // Внутри тренировки избранного: сердце не должно работать и не должно выглядеть "нажатым"
+        if (isFavDeck || isMistDeck){
+          // Внутри тренировки избранного или ошибок: сердце не должно работать и не должно выглядеть "нажатым"
+          var disabledMsg = uk2 ? 'Недоступно в этой тренировке' : 'Недоступно в этой тренировке';
+          // Текст одинаковый для RU/UK по вашему паттерну заглушек; при желании разделим позже.
+          try { heartBtn.title = disabledMsg; heartBtn.ariaLabel = disabledMsg; } catch(__e){}
           heartBtn.textContent = '♡';
           heartBtn.classList.remove('is-fav');
           heartBtn.setAttribute('aria-pressed', 'false');
