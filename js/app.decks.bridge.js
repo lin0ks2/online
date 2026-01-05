@@ -20,9 +20,11 @@
   // -------- Виртуальные ключи
   function parseVirtualKey(key){
     const s = String(key||'');
-    let m = s.match(/^(mistakes):(ru|uk):([a-z]{2}_[a-z]+)$/i);
+    // baseDeckKey может содержать суффиксы (например: de_nouns_lernpunkt),
+    // поэтому разрешаем дополнительные сегменты после части речи.
+    let m = s.match(/^(mistakes):(ru|uk):([a-z]{2}_[a-z]+[\w.-]*)$/i);
     if (m) return { kind:'mistakes', trainLang:m[2], baseDeckKey:m[3] };
-    m = s.match(/^(favorites):(ru|uk):([a-z]{2}_[a-z]+)$/i);
+    m = s.match(/^(favorites):(ru|uk):([a-z]{2}_[a-z]+[\w.-]*)$/i);
     if (m) return { kind:'favorites', trainLang:m[2], baseDeckKey:m[3] };
     return null;
   }

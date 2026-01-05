@@ -64,8 +64,15 @@
     } catch (e) {}
   }
 
-  function getSetSize() {
+  function getSetSize(dk) {
     try {
+      // Lernpunkt uses smaller sets.
+      var s = String(dk || '').toLowerCase();
+      // Virtual keys (favorites:/mistakes:) keep the base deck key after the 2nd colon.
+      if (/^(favorites|mistakes):/i.test(s)) {
+        s = s.split(':').slice(2).join(':');
+      }
+      if (s.endsWith('_lernpunkt')) return 10;
       return (A.Config && A.Config.setSizeDefault) || 50;
     } catch (_) {
       return 50;
@@ -225,7 +232,7 @@
   function getArticlesSlice(dk) {
     var deck = getDeck();
     if (!deck || !deck.length) return [];
-    var setSize = getSetSize();
+    var setSize = getSetSize(dk);
     totalSets = Math.max(1, Math.ceil(deck.length / setSize));
     currentSetIndex = getBatchIndex(dk);
     if (currentSetIndex >= totalSets) currentSetIndex = totalSets - 1;
@@ -409,7 +416,7 @@
     var deck = getDeck();
     if (!deck || !deck.length) return { withArticles: 0, learned: 0, setIndex: 0, totalSets: 1 };
     var progKey = baseKeyForProgress(dk);
-    var setSize = getSetSize();
+    var setSize = getSetSize(dk);
     totalSets = Math.max(1, Math.ceil(deck.length / setSize));
     currentSetIndex = getBatchIndex(dk);
     if (currentSetIndex >= totalSets) currentSetIndex = totalSets - 1;
