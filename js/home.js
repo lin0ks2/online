@@ -678,7 +678,7 @@ function activeDeckKey() {
     // Switching is allowed only via the dedicated buttons on selection screens.
     const baseKeyForArticles = extractBaseFromVirtual(key) || key;
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
-      && String(baseKeyForArticles) === 'de_nouns'
+      && String(baseKeyForArticles || '').toLowerCase().startsWith('de_nouns')
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     if (wantArticles) {
