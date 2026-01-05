@@ -41,15 +41,14 @@
 
     if (p.kind === 'mistakes'){
       // Articles mode uses isolated mistakes storage.
-      const M = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
-
-      // Если есть Mistakes API — используем его
-      if (M && M.resolveDeckForMistakesKey){
-        try { return M.resolveDeckForMistakesKey(key) || []; } catch(_){ }
+      const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
+      // If there is an API to resolve the virtual deck directly — use it.
+      if (Mist && Mist.resolveDeckForMistakesKey){
+        try { return Mist.resolveDeckForMistakesKey(key) || []; } catch(_){ }
       }
-      // Фолбэк: если есть getIds — фильтруем по id
+      // Fallback: filter the base deck by ids.
       try {
-        const ids = new Set((M && M.getIds ? (M.getIds(p.trainLang, base) || []) : []).map(String));
+        const ids = new Set((Mist && Mist.getIds ? (Mist.getIds(p.trainLang, base) || []) : []).map(String));
         if (ids.size) return full.filter(w => ids.has(String(w.id)));
       } catch(_){ }
       return [];
