@@ -231,8 +231,10 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     return Math.floor(Math.random() * deck.length);
   }
 
-  function getSetSize() {
+  function getSetSize(deckKey) {
     try {
+      var k = String(deckKey || '').toLowerCase();
+      if (k.endsWith('_lernpunkt')) return 10;
       return (App.Config && App.Config.setSizeDefault) || 50;
     } catch (_) {
       return 50;
@@ -244,7 +246,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   function getBatchIndex(deckKey, totalOpt) {
     ensureState();
     const key = currentDeckKey(deckKey);
-    const setSize = getSetSize();
+    const setSize = getSetSize(key);
     let total = totalOpt;
     if (!Number.isFinite(total)) {
       const deck = resolveDeckByKey(key);
@@ -259,7 +261,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   function setBatchIndex(i, deckKey) {
     ensureState();
     const key = currentDeckKey(deckKey);
-    const setSize = getSetSize();
+    const setSize = getSetSize(key);
     const deck = resolveDeckByKey(key);
     const total = Math.max(1, Math.ceil(deck.length / setSize));
     let idx = i | 0;
@@ -274,7 +276,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     ensureState();
     const key = currentDeckKey(deckKey);
     const deck = resolveDeckByKey(key);
-    const setSize = getSetSize();
+    const setSize = getSetSize(key);
     const total = Math.max(1, Math.ceil(deck.length / setSize));
     const active = getBatchIndex(key, total);
     const completed = new Array(total).fill(false);
@@ -299,7 +301,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   function _currentSetBounds(deckKey) {
     const key = currentDeckKey(deckKey);
     const deck = resolveDeckByKey(key);
-    const setSize = getSetSize();
+    const setSize = getSetSize(key);
     const total = Math.max(1, Math.ceil(deck.length / setSize));
     const idx = getBatchIndex(key, total);
     const start = idx * setSize;
@@ -355,7 +357,7 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   function getDeckSlice(deckKey) {
     const key = currentDeckKey(deckKey);
     const deck = resolveDeckByKey(key);
-    const setSize = getSetSize();
+    const setSize = getSetSize(key);
     const total = Math.max(1, Math.ceil(deck.length / setSize));
 
     if (isCurrentSetComplete(key)) advanceSetCircular(key);
