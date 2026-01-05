@@ -409,37 +409,3 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   bottom: 4px;
 }
 
-
-/* --- Dictionaries: internal pages (LearnPunkt) dots centering --- */
-/* ----------------------------------------------------------
- * 5. Dicts pager dots (DE dictionaries pages)
- * Центровка точек переключения страниц на экране немецких словарей
- * ---------------------------------------------------------- */
-/* На всякий случай: если контейнер вставлен как последний блок, не даём ему слипаться с кнопками */
-.dicts-card .dicts-page-dots + .dicts-actions{
-  margin-top: 8px;
-}
-
-/* ----------------------------------------------------------
- * 5. Dicts pager dots (DE dictionaries pages)
- * Надёжная центровка: работает и в block-layout, и внутри flex
- * ---------------------------------------------------------- */
-.dicts-card .dicts-page-dots{
-  width: 100%;
-  flex: 0 0 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0 2px;
-}
-
-/* Если где-то display:flex будет переопределён, text-align всё равно центрирует inline-block кнопки */
-.dicts-card .dicts-page-dots .stats-page-dot{
-  display: inline-block;
-}
-
-.dicts-card .dicts-page-dots + .dicts-actions{
-  margin-top: 8px;
-}
