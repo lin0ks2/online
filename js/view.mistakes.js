@@ -255,6 +255,22 @@
           try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
           try {
             A.settings = A.settings || {};
+            // Auto-grouping: base vs LearnPunkt для words mistakes
+            try{
+              if (!isArticlesMode()){
+                const s = String(key||'');
+                const m = s.match(/^(mistakes):(ru|uk):(.+)$/i);
+                if (m){
+                  const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
+                  const tail = String(m[3]||'');
+                  if (!/^(base|lernpunkt)$/i.test(tail)){
+                    const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
+                    key = `mistakes:${tl}:${grp}`;
+                  }
+                }
+              }
+            }catch(_){}
+
             A.settings.lastDeckKey = key;
             if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
           } catch(_){ }

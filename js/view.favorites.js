@@ -300,6 +300,22 @@ if (del){
     function launchTraining(key){
       // Switch to the default word trainer
       try { A.settings = A.settings || {}; /* keep current mode; default to words */ if (!A.settings.trainerKind) A.settings.trainerKind = 'words'; } catch(_){ }
+      // Auto-grouping: base vs LearnPunkt для words favorites
+      try{
+        if (!isArticlesMode()){
+          const s = String(key||'');
+          const m = s.match(/^(favorites):(ru|uk):(.+)$/i);
+          if (m){
+            const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
+            const tail = String(m[3]||'');
+            if (!/^(base|lernpunkt)$/i.test(tail)){
+              const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
+              key = `favorites:${tl}:${grp}`;
+            }
+          }
+        }
+      }catch(_){}
+
       // 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
         A.UI.startTrainingWithKey(key);

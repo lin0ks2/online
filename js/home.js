@@ -222,6 +222,22 @@ function setUiLang(code){
     }
   }
 
+  function firstAvailableBaseDeckKeyByGroup(group){
+    try{
+      const g = String(group||'base').toLowerCase();
+      const decks = (window.decks && typeof window.decks === 'object') ? window.decks : {};
+      const keys = Object.keys(decks).filter(k =>
+        Array.isArray(decks[k]) &&
+        decks[k].length > 0 &&
+        !/^favorites:|^mistakes:/i.test(k)
+      ).filter(k => g==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k));
+      return keys[0] || firstAvailableBaseDeckKey();
+    }catch(_){
+      return firstAvailableBaseDeckKey();
+    }
+  }
+
+
   function pickDefaultKeyLikeRef() {
     try {
       if (A.Decks && typeof A.Decks.pickDefaultKey === 'function') {
@@ -240,12 +256,18 @@ function setUiLang(code){
     try {
       if (!key) return null;
       if (/^favorites:/i.test(key)) {
-        const parts = String(key).split(':'); // ["favorites", "<tl>", "<baseKey>"]
-        return parts.slice(2).join(':') || null;
+        const parts = String(key).split(':'); // ["favorites", "<tl>", "<tail>"]
+        const tail = parts.slice(2).join(':') || null;
+        if (!tail) return null;
+        if (/^(base|lernpunkt)$/i.test(tail)) return firstAvailableBaseDeckKeyByGroup(tail);
+        return tail;
       }
       if (/^mistakes:/i.test(key)) {
-        const parts = String(key).split(':'); // ["mistakes", "<tl>", "<baseKey>"]
-        return parts.slice(2).join(':') || null;
+        const parts = String(key).split(':'); // ["mistakes", "<tl>", "<tail>"]
+        const tail = parts.slice(2).join(':') || null;
+        if (!tail) return null;
+        if (/^(base|lernpunkt)$/i.test(tail)) return firstAvailableBaseDeckKeyByGroup(tail);
+        return tail;
       }
       return null;
     } catch(_) { return null; }
