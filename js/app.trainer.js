@@ -38,7 +38,22 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
       const el = document.getElementById('trainerModeIndicator');
       if (!el) return;
       const lvl = difficulty(); // 'hard' или 'normal'
-      el.textContent = lvl === 'hard' ? '🦅' : '🐣';
+      let base = lvl === 'hard' ? '🦅' : '🐣';
+
+      // Дополнительные бейджи режимов для тренера артиклей:
+      // - Favorites: ⭐
+      // - Mistakes: ⚠️
+      // Показ только в articles-контуре, чтобы не менять поведение базового тренера.
+      try {
+        const isArticles = !!(App.settings && App.settings.trainerKind === 'articles');
+        if (isArticles && App.Trainer && typeof App.Trainer.getDeckKey === 'function') {
+          const dk = String(App.Trainer.getDeckKey() || '');
+          if (/^favorites:/i.test(dk)) base = base + ' ⭐';
+          else if (/^mistakes:/i.test(dk)) base = base + ' ⚠️';
+        }
+      } catch (_e) {}
+
+      el.textContent = base;
     } catch (_) {}
   }
 

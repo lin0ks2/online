@@ -166,17 +166,32 @@
         try { heartBtn.title = title; heartBtn.ariaLabel = title; } catch(__e){}
 
         if (isFavDeck || isMistDeck){
-          // Внутри тренировки избранного или ошибок: сердце не должно работать и не должно выглядеть "нажатым"
-          var disabledMsg = uk2 ? 'Недоступно в этой тренировке' : 'Недоступно в этой тренировке';
-          // Текст одинаковый для RU/UK по вашему паттерну заглушек; при желании разделим позже.
+          // Внутри тренировки избранного или ошибок: сердце не должно менять состояние.
+          // Но по UX должно быть объяснение (тост) 1:1 как в обычном тренере.
+          var isFavTrain = isFavDeck;
+          var msgRu = isFavTrain
+            ? 'Во время тренировки избранного добавление запрещено'
+            : 'Во время тренировки ошибок добавление запрещено';
+          var msgUk = isFavTrain
+            ? 'Під час тренування обраного додавання заборонено'
+            : 'Під час тренування помилок додавання заборонено';
+          var disabledMsg = uk2 ? msgUk : msgRu;
+
           try { heartBtn.title = disabledMsg; heartBtn.ariaLabel = disabledMsg; } catch(__e){}
           heartBtn.textContent = '♡';
           heartBtn.classList.remove('is-fav');
           heartBtn.setAttribute('aria-pressed', 'false');
-          heartBtn.disabled = true;
+          // Не используем disabled=true, чтобы клик проходил и показывался тост.
+          heartBtn.disabled = false;
           heartBtn.setAttribute('aria-disabled', 'true');
           heartBtn.classList.add('is-disabled');
-          heartBtn.onclick = null;
+          heartBtn.onclick = function(){
+            try {
+              toast(disabledMsg);
+              heartBtn.classList.add('shake');
+              setTimeout(function(){ heartBtn.classList.remove('shake'); }, 300);
+            } catch(_e){}
+          };
         } else {
           // Обычная тренировка артиклей: сердце активно (изолированное избранное)
           setHeartEnabled(heartBtn);
