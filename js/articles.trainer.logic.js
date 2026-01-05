@@ -541,12 +541,18 @@
   }
 
   function answerIdk() {
-    // "Не знаю" == неправильный ответ, но применяем штраф/статистику
-    // ровно 1 раз (общая логика в answer()).
-    return answer('__idk__');
-  }
+    // "Не знаю" — как в обычном тренере слов:
+    // показываем правильный артикль, но НЕ начисляем штраф/статистику
+    // и НЕ добавляем в "Мои ошибки".
+    if (!active || !currentWord) return { ok: false, correct: '', applied: false, idk: true };
 
-  A.ArticlesTrainer = {
+    try { solved = true; } catch(_){}
+
+    var raw = currentWord.word || currentWord.term || currentWord.de || '';
+    var correct = parseArticle(raw);
+    return { ok: false, correct: correct, applied: false, idk: true };
+  }
+A.ArticlesTrainer = {
     isActive: function () { return !!active; },
     start: start,
     stop: stop,
