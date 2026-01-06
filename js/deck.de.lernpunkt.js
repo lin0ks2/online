@@ -50,7 +50,7 @@ window.decks.de_nouns_lernpunkt = [
   },
   {
     id: 3,
-    word: "der Kleber",
+    word: "der Leim",
     ru: "клей",
     uk: "клей",
     level: "A1",
