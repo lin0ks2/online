@@ -236,7 +236,9 @@ window.decks.de_particles_lernpunkt = [
 window.decks.de_adverbs_lernpunkt = [
   { id: 1, word: "heute", ru: "сегодня", uk: "сьогодні", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["gestern","morgen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Heute lerne ich.", ru: "Сегодня я учусь.", uk: "Сьогодні я навчаюсь." }] },
   { id: 2, word: "morgen", ru: "завтра", uk: "завтра", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["gestern"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Morgen arbeite ich.", ru: "Завтра я работаю.", uk: "Завтра я працюю." }] },
-  { id: 3, word: "gestern", ru: "вчера", uk: "вчора", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["heute"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Gestern war ich zu Hause.", ru: "Вчера я был дома.", uk: "Вчора я був удома." }] }
+  { id: 3, word: "gestern", ru: "вчера", uk: "вчора", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["heute"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Gestern war ich zu Hause.", ru: "Вчера я был дома.", uk: "Вчора я був удома." }] },
+  { id: 4, word: "übermorgen", ru: "послезавтра", uk: "післязавтра", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["vorgestern"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Übermorgen habe ich frei.", ru: "Послезавтра я свободен.", uk: "Післязавтра я вільний." }] },
+  { id: 5, word: "vorgestern", ru: "позавчера", uk: "позавчора", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["übermorgen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Vorgestern war es kalt.", ru: "Позавчера было холодно.", uk: "Позавчора було холодно." }] }
 ];
 
 window.decks.de_numbers_lernpunkt = [];
