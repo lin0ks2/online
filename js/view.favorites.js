@@ -15,6 +15,20 @@
     try { return !!(A.settings && A.settings.trainerKind === 'articles'); } catch(_){ return false; }
   }
 
+  function currentArticlesGroup(){
+    // Hard filter for articles favorites/mistakes: base vs LearnPunkt
+    // Group is inferred from the last selected deck key (works for both baseKey and virtual keys).
+    try{
+      let k = (A.settings && (A.settings.lastDeckKey || A.settings.lastDeck || A.settings.lastArticlesDeckKey)) || '';
+      k = String(k || '');
+      const m = k.match(/^(favorites|mistakes):(ru|uk):(.+)$/i);
+      if (m) k = String(m[3] || '');
+      return /_lernpunkt$/i.test(k) ? 'lernpunkt' : 'base';
+    }catch(_){
+      return 'base';
+    }
+  }
+
   function getUiLang(){
     const s = (A.settings && (A.settings.lang || A.settings.uiLang)) || 'ru';
     return (String(s).toLowerCase()==='uk') ? 'uk' : 'ru';
@@ -47,8 +61,14 @@
     const out = [];
     try{
       const decks = (window.decks && typeof window.decks==='object') ? window.decks : {};
-      const baseKeys = Object.keys(decks)
+      let baseKeys = Object.keys(decks)
         .filter(k => Array.isArray(decks[k]) && !/^favorites:|^mistakes:/i.test(k));
+
+      // Articles mode: do NOT mix base and LearnPunkt decks in lists (prevents "leak" illusion)
+      if (isArticlesMode()){
+        const grp = currentArticlesGroup();
+        baseKeys = baseKeys.filter(k => grp==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k));
+      }
 
       for (const baseKey of baseKeys){
         const favKey = `favorites:${TL}:${baseKey}`;
