@@ -136,7 +136,6 @@ function setUiLang(code){
       : { hints: 'Подсказки', choose: 'Выберите перевод', idk: 'Не знаю', fav: 'В избранное' };
   }
 
-  
   // ----------------------------- Filters helpers -----------------------------
   // Batch index helpers (use trainer API directly; keep names stable for home.js).
   function getActiveBatchIndex(){
@@ -300,6 +299,7 @@ function setUiLang(code){
   }
 
 
+
   function bindLangToggle() {
     const t = document.getElementById('langToggle');
     if (!t) return;
@@ -307,7 +307,21 @@ function setUiLang(code){
     t.addEventListener('change', () => {
       setUiLang(t.checked ? 'uk' : 'ru');
       try {
-        if (A.Router && typeof A.Router.routeTo === '
+        if (A.Router && typeof A.Router.routeTo === 'function') {
+          A.Router.routeTo(A.Router.current || 'home');
+        } else {
+          mountMarkup(); renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        }
+        }
+        try { if (typeof updateFiltersSummary === 'function') updateFiltersSummary(); } catch(_){}
+      } catch(_){}
+    });
+  }
+
   function bindFiltersUI(){
     const btn = document.getElementById('filtersBtn');
     const overlay = document.getElementById('filtersOverlay');
@@ -350,19 +364,6 @@ function setUiLang(code){
     } catch(_){}
   }
 
-function') {
-          A.Router.routeTo(A.Router.current || 'home');
-        } else {
-          mountMarkup(); renderSets();
-        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
-        } else {
-          renderTrainer();
-        }
-        }
-      } catch(_){}
-    });
-  }
 
   /* ---------------------------- Сложность (глобально) ---------------------------- */
   function getMode() {
@@ -502,20 +503,82 @@ function') {
   // starKey (единственное определение)
   const starKey = (typeof A.starKey === 'function') ? A.starKey : (id, key) => `${key}:${id}`;
 
-function setDictStatsText(statsEl, deckKey){
-  try{
-    if (!statsEl) return;
-    const full = getTrainableDeckForKey(deckKey) || [];
-    const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+  function setDictStatsText(statsEl, deckKey){
+    try{
+      if (!statsEl) return;
+      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
-    const uk = getUiLang() === 'uk';
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
 
-    if (isArticles) {
-          // deck is already filtered by active filters (levels) and by articles-only mode when enabled
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-    let deckForSets = deck;
+      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
+      const uk = getUiLang() === 'uk';
+      if (isArticles) {
+        const learnedA = countLearnedArticles(full, deckKey);
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
+      } else {
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+      }
+    }catch(_){}
+  }
 
-const SZ   = getSetSizeForKey(key);
+
+// Выбор активного словаря
+function activeDeckKey() {
+  var A = window.App || {};
+
+  try {
+    // 1) последний реально использованный словарь — главный источник истины
+    var last = (A.settings && A.settings.lastDeckKey) || null;
+    if (isValidDeckKey(last)) return last;
+
+    // 2) "предпочитаемый возврат" при выходе из избранного/ошибок
+    //    используется только когда lastDeckKey ещё не задан
+    var prefer = (A.settings && A.settings.preferredReturnKey) || null;
+    if (isValidDeckKey(prefer)) return prefer;
+
+    // 3) стартовый ключ из мастера (StartupManager) — только для первого запуска
+    if (window.StartupManager && typeof StartupManager.readSettings === 'function') {
+      var s = StartupManager.readSettings();
+      if (s && s.deckKey && isValidDeckKey(s.deckKey)) {
+        return s.deckKey;
+      }
+    }
+
+    // 4) референсный дефолт (как в старой логике)
+    var ref = (typeof pickDefaultKeyLikeRef === 'function')
+      ? pickDefaultKeyLikeRef()
+      : null;
+    if (isValidDeckKey(ref)) return ref;
+
+    // 5) самый крайний фолбэк
+    return ACTIVE_KEY_FALLBACK;
+  } catch (_) {
+    return ACTIVE_KEY_FALLBACK;
+  }
+}
+  // Идшники слов текущего сета
+  function getActiveBatchIndex() {
+    try { return (A.Trainer && typeof A.Trainer.getBatchIndex === 'function') ? A.Trainer.getBatchIndex(activeDeckKey()) : 0; }
+    catch (_) { return 0; }
+  }
+  function getCurrentSliceWordIds(key){
+    try {
+      if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') {
+        const slice = A.Trainer.getDeckSlice(key) || [];
+        const ids = slice.map(w => w && w.id).filter(Boolean);
+        if (ids.length) return ids;
+      }
+    } catch(_){}
+    const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function')
+      ? (A.Decks.resolveDeckByKey(key) || [])
+      : [];
+    const idx  = getActiveBatchIndex();
+    const SZ   = getSetSizeForKey(key);
     const from = idx * SZ;
     const to   = Math.min(deck.length, (idx + 1) * SZ);
     return deck.slice(from, to).map(w => w && w.id).filter(Boolean);
@@ -620,74 +683,33 @@ const SZ   = getSetSizeForKey(key);
           <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
         </section>
-
-        <!-- ЗОНА 4: Фильтры -->
-        <section class="home-filters">
-          <button class="filters-btn" id="filtersBtn" type="button">
-            <span class="ico" aria-hidden="true">⏷</span>
-            <span class="lbl" id="filtersBtnLabel">${window.I18N_t ? window.I18N_t('filtersBtn') : 'Фильтры'}</span>
-          </button>
-          <span class="filters-summary" id="filtersSummary"></span>
-        </section>
-
-        <div class="filters-overlay filters-hidden" id="filtersOverlay"></div>
-        <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true">
-          <div class="filters-head">
-            <div class="filters-title" id="filtersTitle">${window.I18N_t ? window.I18N_t('filtersTitle') : 'Фильтры'}</div>
-            <button class="filters-close" id="filtersClose" type="button">${window.I18N_t ? window.I18N_t('ariaClose') : 'Закрыть'}</button>
-          </div>
-
-          <div class="filters-section">
-            <h4>${window.I18N_t ? window.I18N_t('filtersLevels') : 'Уровни'}</h4>
-            <div class="filters-list" id="filtersLevelsList"></div>
-          </div>
-
-          <div class="filters-section" style="opacity:.45">
-            <h4>${window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы'}</h4>
-            <div style="font-size:13px;opacity:.9">${window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра'}</div>
-          </div>
-
-          <div class="filters-actions">
-            <button class="btn" id="filtersReset" type="button">${window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить'}</button>
-            <button class="btn" id="filtersApply" type="button">${window.I18N_t ? window.I18N_t('filtersApply') : 'Применить'}</button>
-          </div>
-        </div>
-
       </div>`;
-
-    try { bindFiltersUI(); } catch(_){ }
-    try { updateFiltersSummary(); } catch(_){ }
   }
 
   /* ------------------------------- Сеты ------------------------------- */
   function renderSets() {
     const key  = activeDeckKey();
-    const deck = getTrainableDeckForKey(key) || [];
+    const deck = getTrainableDeckForKey(key);
 
     const grid    = document.getElementById('setsBar');
     const statsEl = document.getElementById('setStats');
     if (!grid) return;
 
-
-
-        // deck is already filtered by active filters (levels) and by articles-only mode when enabled
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-    let deckForSets = deck;
-
-const SZ = getSetSizeForKey(key);
-    const totalSets = Math.ceil(deckForSets.length / SZ);
-    const activeIdx = (isArticles && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
-      ? (A.ArticlesTrainer.getSetIndex(key) || 0)
-      : getActiveBatchIndex();
+    const SZ = getSetSizeForKey(key);
+    const totalSets = Math.max(1, Math.ceil(deck.length / SZ));
+    const activeIdx = (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
+      ? Number(A.ArticlesTrainer.getSetIndex(key) || 0)
+      : Number(getActiveBatchIndex() || 0);
     grid.innerHTML = '';
 
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
 
     for (let i = 0; i < totalSets; i++) {
       const from = i * SZ;
-      const to   = Math.min(deckForSets.length, (i + 1) * SZ);
-      const sub  = deckForSets.slice(from, to);
+      const to   = Math.min(deck.length, (i + 1) * SZ);
+      const sub  = deck.slice(from, to);
       const done = sub.length > 0 && sub.every(w => {
         if (isArticles) {
           try {
@@ -704,12 +726,12 @@ const SZ = getSetSizeForKey(key);
       btn.textContent = i + 1;
       btn.onclick = () => {
         try {
-          if (isArticles && A.ArticlesTrainer && typeof A.ArticlesTrainer.setSetIndex === 'function') {
+          if (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.setSetIndex === 'function') {
             A.ArticlesTrainer.setSetIndex(i, key);
           } else if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') {
             A.Trainer.setBatchIndex(i, key);
           }
-        } catch (_){ }
+        } catch (_){}
         renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
           try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
@@ -721,9 +743,11 @@ const SZ = getSetSizeForKey(key);
       grid.appendChild(btn);
     }
 
-    const i = activeIdx;
-    const from = i * SZ, to = Math.min(deckForSets.length, (i + 1) * SZ);
-    const words = deckForSets.slice(from, to);
+    const i = (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
+      ? Number(A.ArticlesTrainer.getSetIndex(key) || 0)
+      : Number(getActiveBatchIndex() || 0);
+    const from = i * SZ, to = Math.min(deck.length, (i + 1) * SZ);
+    const words = deck.slice(from, to);
 
     const starsMax2 = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
     const learned = words.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax2).length;
@@ -794,9 +818,7 @@ const SZ = getSetSizeForKey(key);
     // (при коллизии добавляем уточнение по исходному термину).
     const SIZE = 4;
 
-    const deck = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function')
-      ? (A.Decks.resolveDeckByKey(key) || [])
-      : [];
+    const deck = getTrainableDeckForKey(key);
 
     // Пул отвлекающих: сначала ошибки (если есть), затем вся колода
     let pool = [];
@@ -913,37 +935,19 @@ const SZ = getSetSizeForKey(key);
   /* ------------------------------- Тренер ------------------------------- */
   function renderTrainer() {
     const key   = activeDeckKey();
+    const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
+    if (!slice.length) return;
 
     // Trainer variant switching (words vs articles).
-    // IMPORTANT: for articles mode we must not rely on App.Trainer.getDeckSlice()
-    // because the base trainer slice can be empty (e.g. virtual keys or deck not loaded yet),
-    // which would prevent the articles UI from rendering.
+    // We must NOT fall back to the default trainer when the user interacts with
+    // sets, language toggle, or other UI elements while the articles trainer is active.
+    // Switching is allowed only via the dedicated buttons on selection screens.
     const baseKeyForArticles = extractBaseFromVirtual(key) || key;
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
       && String(baseKeyForArticles || '').toLowerCase().startsWith('de_nouns')
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     if (wantArticles) {
-      // If после фильтрации нет слов с артиклями (или вообще нет слов по уровню) — показываем empty-state.
-      try {
-        const trainable = getTrainableDeckForKey(key) || [];
-        if (!trainable.length) {
-          try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch(_){ }
-          const box = document.querySelector('.home-trainer');
-          if (box) {
-            box.innerHTML = '<div style="padding:18px 14px; text-align:center; opacity:.9">' +
-              (window.I18N_t ? window.I18N_t('filtersEmpty') : 'По выбранным фильтрам нет слов.') +
-              '<div style="margin-top:12px">' +
-              '<button class="filters-btn" type="button" id="filtersOpenInlineA">' + (window.I18N_t ? window.I18N_t('filtersOpen') : 'Открыть фильтры') + '</button>' +
-              '</div>' +
-              '</div>';
-            const b = document.getElementById('filtersOpenInlineA');
-            if (b) b.onclick = () => { openFiltersSheet(); };
-          }
-          return;
-        }
-      } catch(_){ }
-
       // Ensure the articles card is mounted into the standard home trainer container.
       try { if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') A.ArticlesCard.mount(document.querySelector('.home-trainer')); } catch (_){ }
 
@@ -972,25 +976,6 @@ const SZ = getSetSizeForKey(key);
       try { if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') A.Trainer.updateModeIndicator(); } catch (_){ }
       return;
     }
-
-    const slice = getTrainableSliceForKey(key) || [];
-    if (!slice.length) {
-      try {
-        const box = document.querySelector('.home-trainer');
-        if (box) {
-          box.innerHTML = '<div style="padding:18px 14px; text-align:center; opacity:.9">' +
-            (window.I18N_t ? window.I18N_t('filtersEmpty') : 'По выбранным фильтрам нет слов.') +
-            '<div style="margin-top:12px">' +
-            '<button class="filters-btn" type="button" id="filtersOpenInline">' + (window.I18N_t ? window.I18N_t('filtersOpen') : 'Открыть фильтры') + '</button>' +
-            '</div>' +
-            '</div>';
-          const b = document.getElementById('filtersOpenInline');
-          if (b) b.onclick = () => { openFiltersSheet(); };
-        }
-      } catch(_){ }
-      return;
-    }
-
 
     // If we are NOT in articles mode, make sure the articles plugin is stopped/unmounted.
     try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
@@ -1404,17 +1389,20 @@ const SZ = getSetSizeForKey(key);
 
         deckKeyStorage = normalizeProgressKey(deckKeyRaw);
 
-        // Пытаемся взять slice для текущего сета (с учетом фильтров уровней). Если не удалось — fallback.
-        try {
-          slice = getTrainableSliceForKey(deckKeyRaw) || [];
-        } catch(_){ slice = []; }
-        if (!slice || !slice.length) {
-          const full = getTrainableDeckForKey(deckKeyStorage) || [];
+        // Пытаемся взять slice у тренера (он лучше знает setSize и batchIndex). Если не удалось — делаем fallback.
+        if (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') {
+          slice = A.Trainer.getDeckSlice(deckKeyRaw) || A.Trainer.getDeckSlice(deckKeyStorage) || [];
+        } else {
+          const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function')
+            ? (A.Decks.resolveDeckByKey(deckKeyStorage) || [])
+            : [];
           const idx = (A.Trainer && typeof A.Trainer.getBatchIndex === 'function')
             ? (A.Trainer.getBatchIndex(deckKeyStorage) || 0)
             : 0;
-          const SZ = getSetSizeForKey(deckKeyStorage);
-          slice = full.slice(idx * SZ, Math.min(full.length, (idx + 1) * SZ));
+          const setSize = getSetSizeLocal(deckKeyStorage);
+          const from = idx * setSize;
+          const to   = Math.min(full.length, (idx + 1) * setSize);
+          slice = full.slice(from, to);
         }
 
         const st = (A.state && A.state.stars) ? A.state.stars : {};
@@ -1475,6 +1463,7 @@ if (hasProgress) {
 
     bindLangToggle();
     bindLevelToggle();
+    try { bindFiltersUI(); } catch(_){ }
 
     // синхронизация UI при обновлении тренера артиклей: обновляем сеты и строки статистики 1:1
     try {
