@@ -335,8 +335,6 @@ function setDictStatsText(statsEl, deckKey){
       : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
   }catch(_){}
 }
-    }catch(_){}
-  }
 
 
 // Выбор активного словаря
