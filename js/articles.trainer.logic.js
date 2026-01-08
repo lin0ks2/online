@@ -149,7 +149,7 @@
 // This is critical for Lernpunkt noun decks where some entries may not have articles:
 // we must keep set sizing, rendering and statistics consistent with the real trainable count.
 function getDeckWithArticles() {
-  var deck = getDeckWithArticles();
+  var deck = getDeck();
   if (!deck || !deck.length) return [];
   try { return deck.filter(hasValidArticle); } catch (e) { return []; }
 }
@@ -600,5 +600,16 @@ A.ArticlesTrainer = {
     _parseArticle: parseArticle,
     _hasValidArticle: hasValidArticle,
     _filterWithArticles: function(arr){ try{ return (arr||[]).filter(hasValidArticle); }catch(e){ return []; } }
+    ,getSetIndex: function(k){ try{ return getBatchIndex(k||deckKey); }catch(_){ return 0; } }
+    ,setSetIndex: function(i,k){
+        try{ setBatchIndex(i, k||deckKey); }catch(_){}
+        try{ lastWordId=''; currentWord=null; solved=false; penalized=false; }catch(_){}
+        try{ next(); }catch(_){}
+      }
+    ,getTrainableDeck: function(k){
+        try{ if (k!=null) deckKey=String(k||'').trim(); }catch(_){}
+        try{ return getDeckWithArticles(); }catch(_){ return []; }
+      }
+
   };
 })();

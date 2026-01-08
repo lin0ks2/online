@@ -301,7 +301,6 @@ function setDictStatsText(statsEl, deckKey){
     const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
     const uk = getUiLang() === 'uk';
 
     if (isArticles) {
@@ -507,19 +506,38 @@ function activeDeckKey() {
     const statsEl = document.getElementById('setStats');
     if (!grid) return;
 
+
+
+    // In articles trainer we must exclude words without (der/die/das) from ALL calculations:
+    // sets count, set slices, and completion checks.
+    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    let deckForSets = deck;
+    if (isArticles) {
+      try {
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer._filterWithArticles === 'function') {
+          deckForSets = A.ArticlesTrainer._filterWithArticles(deck) || [];
+        } else {
+          deckForSets = (deck || []).filter(w => {
+            const raw = String((w && (w.word || w.term || w.de)) || '').trim().toLowerCase();
+            return raw.startsWith('der ') || raw.startsWith('die ') || raw.startsWith('das ');
+          });
+        }
+      } catch (_e) { deckForSets = []; }
+    }
     const SZ = getSetSizeForKey(key);
-    const totalSets = Math.ceil(deck.length / SZ);
-    const activeIdx = getActiveBatchIndex();
+    const totalSets = Math.ceil(deckForSets.length / SZ);
+    const activeIdx = (isArticles && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
+      ? (A.ArticlesTrainer.getSetIndex(key) || 0)
+      : getActiveBatchIndex();
     grid.innerHTML = '';
 
     const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
 
     for (let i = 0; i < totalSets; i++) {
       const from = i * SZ;
-      const to   = Math.min(deck.length, (i + 1) * SZ);
-      const sub  = deck.slice(from, to);
+      const to   = Math.min(deckForSets.length, (i + 1) * SZ);
+      const sub  = deckForSets.slice(from, to);
       const done = sub.length > 0 && sub.every(w => {
         if (isArticles) {
           try {
@@ -535,7 +553,13 @@ function activeDeckKey() {
       btn.className = 'set-pill' + (i === activeIdx ? ' is-active' : '') + (done ? ' is-done' : '');
       btn.textContent = i + 1;
       btn.onclick = () => {
-        try { if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') A.Trainer.setBatchIndex(i, key); } catch (_){}
+        try {
+          if (isArticles && A.ArticlesTrainer && typeof A.ArticlesTrainer.setSetIndex === 'function') {
+            A.ArticlesTrainer.setSetIndex(i, key);
+          } else if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') {
+            A.Trainer.setBatchIndex(i, key);
+          }
+        } catch (_){ }
         renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
           try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
@@ -547,9 +571,9 @@ function activeDeckKey() {
       grid.appendChild(btn);
     }
 
-    const i = getActiveBatchIndex();
-    const from = i * SZ, to = Math.min(deck.length, (i + 1) * SZ);
-    const words = deck.slice(from, to);
+    const i = activeIdx;
+    const from = i * SZ, to = Math.min(deckForSets.length, (i + 1) * SZ);
+    const words = deckForSets.slice(from, to);
 
     const starsMax2 = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
     const learned = words.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax2).length;
@@ -739,13 +763,11 @@ function activeDeckKey() {
   /* ------------------------------- Тренер ------------------------------- */
   function renderTrainer() {
     const key   = activeDeckKey();
-    const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
-    if (!slice.length) return;
 
     // Trainer variant switching (words vs articles).
-    // We must NOT fall back to the default trainer when the user interacts with
-    // sets, language toggle, or other UI elements while the articles trainer is active.
-    // Switching is allowed only via the dedicated buttons on selection screens.
+    // IMPORTANT: for articles mode we must not rely on App.Trainer.getDeckSlice()
+    // because the base trainer slice can be empty (e.g. virtual keys or deck not loaded yet),
+    // which would prevent the articles UI from rendering.
     const baseKeyForArticles = extractBaseFromVirtual(key) || key;
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
       && String(baseKeyForArticles || '').toLowerCase().startsWith('de_nouns')
@@ -780,6 +802,10 @@ function activeDeckKey() {
       try { if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') A.Trainer.updateModeIndicator(); } catch (_){ }
       return;
     }
+
+    const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
+    if (!slice.length) return;
+
 
     // If we are NOT in articles mode, make sure the articles plugin is stopped/unmounted.
     try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
