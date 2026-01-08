@@ -1,0 +1,129 @@
+/* ==========================================================
+ * MOYAMOVA — UI Filters (bottom sheet)
+ * ========================================================== */
+
+.home-filters {
+  margin-top: 12px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font: inherit;
+}
+
+.filters-btn .ico {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.filters-summary {
+  font-size: 13px;
+  opacity: 0.8;
+  text-align: right;
+  flex: 1;
+}
+
+.filters-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+}
+
+.filters-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background: rgba(10, 16, 30, 0.98);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -12px 30px rgba(0,0,0,0.35);
+  padding: 14px 14px 18px;
+}
+
+.filters-hidden { display: none !important; }
+
+.filters-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filters-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filters-close {
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  border-radius: 12px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.filters-section {
+  margin-top: 12px;
+}
+
+.filters-section h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.filters-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.filters-item {
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.03);
+}
+
+.filters-item input {
+  transform: scale(1.1);
+}
+
+.filters-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.filters-actions .btn {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 14px;
+  padding: 12px 12px;
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+}
