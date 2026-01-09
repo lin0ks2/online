@@ -1,60 +1,328 @@
+/* ==========================================================
+ * MOYAMOVA — UI Filters (PWA/TWA)
+ * Visual v2: compact bar + bottom sheet + chip levels
+ * ========================================================== */
 
-/* v25.1 — safe visual refinements over v25 */
-/* Scope: filters bottom-sheet only. No JS changes. */
+/* ---------- Theme tokens (fallback-safe) ---------- */
+:root {
+  --mm-filters-backdrop: var(--backdrop, rgba(0,0,0,0.56));
+  --mm-filters-surface: var(--surface, rgba(10, 16, 30, 0.98));
+  --mm-filters-surface-2: var(--surface-2, rgba(255,255,255,0.04));
+  --mm-filters-text: var(--text, rgba(255,255,255,0.92));
+  --mm-filters-border: var(--border, rgba(255,255,255,0.14));
+  --mm-filters-accent: var(--accent, rgba(55, 168, 255, 1));
+  --mm-filters-shadow: var(--shadow, 0 -14px 34px rgba(0,0,0,0.42));
+  /* Bottom offset for fixed footer/tabbar (set from JS when opening filters). */
+  --mm-filters-bottom-offset: 76px;
+}
 
-/* -------- Layout: center pills, gentle spacing -------- */
-.filters-levels {
+html[data-theme="light"],
+body[data-theme="light"],
+body.theme-light {
+  /* Light theme: make the sheet look like a real iOS bottom sheet (white surface + soft shadow). */
+  --mm-filters-backdrop: var(--backdrop, rgba(10, 16, 30, 0.22));
+  --mm-filters-surface: var(--surface, rgba(255,255,255,0.98));
+  --mm-filters-surface-2: var(--surface-2, rgba(10,16,30,0.035));
+  --mm-filters-text: var(--text, rgba(10,16,30,0.92));
+  --mm-filters-border: var(--border, rgba(10,16,30,0.10));
+  --mm-filters-shadow: var(--shadow, 0 -18px 44px rgba(0,0,0,0.16));
+}
+
+/* ---------- Bar (between trainer card and footer) ---------- */
+.home-filters {
+  margin: 10px 12px 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid var(--mm-filters-border);
+  border-radius: 14px;
+  background: var(--mm-filters-surface-2);
+}
+
+.filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--mm-filters-border);
+  border-radius: 12px;
+  padding: 6px 9px;
+  background: var(--mm-filters-surface-2);
+  color: inherit;
+  font: inherit;
+  font-size: 13px; /* вровень с summary */
+  line-height: 1;
+}
+
+.filters-btn:active {
+  transform: translateY(1px);
+}
+
+.filters-btn .ico {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.filters-summary {
+  font-size: 13px;
+  opacity: 0.82;
+  text-align: right;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Overlay + Sheet ---------- */
+.filters-hidden { display: none !important; }
+
+.filters-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--mm-filters-backdrop);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  touch-action: none;
+}
+
+.filters-sheet {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  /* Keep the sheet above the fixed bottom tabbar/footer. */
+  bottom: calc(12px + var(--mm-filters-bottom-offset, 0px));
+  z-index: 1001;
+  background: var(--mm-filters-surface);
+  color: var(--mm-filters-text);
+  border: 1px solid var(--mm-filters-border);
+  border-radius: 18px;
+  box-shadow: var(--mm-filters-shadow);
+  padding: 10px 14px 14px;
+  /* Auto height by content; cap to viewport when content is large. */
+  max-height: min(78vh, calc(100vh - 120px - var(--mm-filters-bottom-offset, 0px)));
+  overflow-y: auto; /* scroll inside sheet */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+
+/* handle */
+.filters-sheet::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--mm-filters-border);
+  margin: 2px auto 10px;
+}
+
+.filters-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--mm-filters-surface);
+  padding-top: 2px;
+  border-bottom: 1px solid var(--mm-filters-border);
+}
+
+.filters-head-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.filters-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.filters-reset,
+.filters-close {
+  border: 1px solid var(--mm-filters-border);
+  background: var(--mm-filters-surface-2);
+  color: inherit;
+  border-radius: 999px;
+  height: 30px;
+  padding: 0 10px;
+  font: inherit;
+  font-size: 12.5px;
+  line-height: 1;
+}
+
+.filters-close {
+  width: 30px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.filters-reset{
+  opacity:0.9;
+}
+
+/* ---------- Sections ---------- */
+.filters-section {
+  margin-top: 12px;
+}
+
+.filters-section h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  opacity: 0.88;
+  font-weight: 800;
+}
+
+/* chips list (centered pills) */
+.filters-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px; /* softer than v26 */
+  gap: 8px;
 }
 
-/* -------- Pills: slightly smaller, not squashed -------- */
-.filters-pill {
-  height: 32px;              /* was larger in v25 */
-  padding: 0 12px;           /* compact but readable */
-  font-size: 14px;           /* keep legibility */
-  line-height: 1;            /* rely on height for vertical centering */
+
+/* label as chip */
+.filters-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+}
+
+.filters-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.filters-item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 56px;
+  height: 32px;
+  text-align: center;
+  padding: 0 12px;
   border-radius: 999px;
-}
-
-/* -------- Header buttons: reduce visual weight -------- */
-.filters-reset,
-.filters-close {
-  height: 30px;
-  padding: 0 10px;
+  border: 1px solid var(--mm-filters-border);
+  background: var(--mm-filters-surface-2);
   font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1;
 }
 
-/* Make reset a softer secondary control */
-.filters-reset {
-  background: var(--surface-2);
-  border-color: var(--border);
-  color: var(--text);
+
+.filters-item input:checked + span {
+  border-color: var(--mm-filters-accent);
+  background: color-mix(in srgb, var(--mm-filters-accent) 18%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--mm-filters-accent) 12%, transparent) inset;
 }
 
-/* -------- Light theme refinements (iOS-like) -------- */
-html[data-theme="light"] .filters-sheet {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+/* Body scroll lock for filters sheet */
+body.mm-modal-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Pills — inactive */
-html[data-theme="light"] .filters-pill {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.12);
-  color: #0b0f14;
+.filters-item:active span {
+  transform: translateY(1px);
 }
 
-/* Pills — active: accent border + very light tint */
-html[data-theme="light"] .filters-pill.is-active {
-  border-color: var(--accent);
-  background: rgba(26,166,183,0.06); /* 5–6% tint */
+/* ---------- Actions ---------- */
+.filters-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0 2px;
+  background: var(--mm-filters-surface);
 }
 
-/* Header divider softer in light */
-html[data-theme="light"] .filters-sheet__header {
-  border-bottom-color: rgba(0,0,0,0.08);
+.filters-actions .btn {
+  flex: 1;
+  border: 1px solid var(--mm-filters-border);
+  border-radius: 14px;
+  padding: 9px 12px;
+  background: var(--mm-filters-surface-2);
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.filters-actions .btn:active {
+  transform: translateY(1px);
+}
+
+/* Slightly emphasize Apply */
+.filters-actions #filtersApply {
+  border-color: color-mix(in srgb, var(--mm-filters-accent) 32%, var(--mm-filters-border));
+  background: color-mix(in srgb, var(--mm-filters-accent) 10%, var(--mm-filters-surface-2));
+}
+
+/* Light theme: avoid "dirty grey" chips — keep them crisp white with a subtle border. */
+html[data-theme="light"] .filters-item span,
+body[data-theme="light"] .filters-item span,
+body.theme-light .filters-item span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 56px;
+  height: 32px;
+  text-align: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--mm-filters-border);
+  background: var(--mm-filters-surface-2);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+
+/* ---------- Light theme: crisp controls (sheet only) ---------- */
+html[data-theme="light"] .filters-reset,
+body[data-theme="light"] .filters-reset,
+body.theme-light .filters-reset,
+html[data-theme="light"] .filters-close,
+body[data-theme="light"] .filters-close,
+body.theme-light .filters-close {
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(10,16,30,0.14);
+}
+
+html[data-theme="light"] .filters-item span,
+body[data-theme="light"] .filters-item span,
+body.theme-light .filters-item span {
+  background: rgba(255,255,255,0.96);
+  border-color: rgba(10,16,30,0.12);
+  color: rgba(10,16,30,0.92);
+}
+
+html[data-theme="light"] .filters-item input:checked + span,
+body[data-theme="light"] .filters-item input:checked + span,
+body.theme-light .filters-item input:checked + span {
+  border-color: var(--mm-filters-accent);
+  background: color-mix(in srgb, var(--mm-filters-accent) 6%, rgba(255,255,255,1));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--mm-filters-accent) 10%, transparent) inset;
 }
