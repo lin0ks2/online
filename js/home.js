@@ -275,6 +275,44 @@ function setUiLang(code){
     const list = document.getElementById('filtersLevelsList');
     if (!overlay || !sheet || !list) return;
 
+    // Keep the sheet above the fixed bottom navigation (tabbar/footer).
+    // We do it here (on open) to support dynamic layouts and both themes.
+    try {
+      const h = (function(){
+        const candidates = [
+          '#bottomNav', '#bottomBar', '#tabbar', '#tabs',
+          '.bottom-nav', '.bottomBar', '.tabbar', '.tabs',
+          '.app-footer', '.footer-nav', '.footerBar',
+          'footer'
+        ];
+        let best = 0;
+        for (const sel of candidates){
+          const el = document.querySelector(sel);
+          if (!el) continue;
+          const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+          const hh = r ? Math.round(r.height) : (el.offsetHeight || 0);
+          if (hh <= 0) continue;
+
+          // Heuristic: we only want fixed/sticky bottom bars.
+          let pos = '';
+          try { pos = String(getComputedStyle(el).position || '').toLowerCase(); } catch(_){ pos = ''; }
+          if (pos && pos !== 'fixed' && pos !== 'sticky') continue;
+
+          // Another heuristic: it must be close to the viewport bottom.
+          try {
+            if (r && r.bottom < (window.innerHeight - 8)) continue;
+          } catch(_){ }
+
+          best = Math.max(best, hh);
+        }
+        return best;
+      })();
+      // If not found, keep the CSS default.
+      if (h && Number.isFinite(h) && h > 0) {
+        document.documentElement.style.setProperty('--mm-filters-bottom-offset', `${h}px`);
+      }
+    } catch(_){ }
+
     const key = activeDeckKey();
     const studyLang = getStudyLangForKey(key) || 'xx';
     const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
