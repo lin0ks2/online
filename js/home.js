@@ -60,20 +60,6 @@
     return (v === 'uk') ? 'uk' : 'ru';
   }
 
-  // Показываем фильтры только в установленном режиме (PWA/TWA).
-  // В браузере места меньше, и UX становится хрупким.
-  function isPwaOrTwaRunmode(){
-    try {
-      const rm = String(document.documentElement.getAttribute('data-runmode') || document.documentElement.dataset.runmode || '').toLowerCase();
-      if (rm === 'pwa') return true;
-    } catch(_){ }
-    try {
-      // Android TWA: start_url adds ?twa=1
-      if (/(?:\?|&)twa=1(?:&|$)/.test(String(window.location.search || ''))) return true;
-    } catch(_){ }
-    return false;
-  }
-
   
   // Подсчет "выученности" в режиме артиклей: считаем отдельно, не смешивая со словами.
   function countLearnedArticles(words, deckKey){
@@ -337,45 +323,59 @@ function setUiLang(code){
   }
 
   function bindFiltersUI(){
-    const btn = document.getElementById('filtersBtn');
-    const overlay = document.getElementById('filtersOverlay');
-    const closeBtn = document.getElementById('filtersClose');
-    const resetBtn = document.getElementById('filtersReset');
-    const applyBtn = document.getElementById('filtersApply');
+    // Делегирование кликов: разметка фильтров монтируется/перемонтируется, поэтому прямые onclick теряются.
+    if (A.__filtersDelegationBound) return;
+    A.__filtersDelegationBound = true;
 
-    if (btn) btn.onclick = () => { openFiltersSheet(); };
-    if (overlay) overlay.onclick = () => { closeFiltersSheet(); };
-    if (closeBtn) closeBtn.onclick = () => { closeFiltersSheet(); };
+    document.addEventListener('click', function(e){
+      try {
+        const t = e.target;
+        if (!t) return;
 
-    if (resetBtn) resetBtn.onclick = () => {
-      const key = activeDeckKey();
-      const studyLang = getStudyLangForKey(key) || 'xx';
-      try { if (A.Filters && typeof A.Filters.reset === 'function') A.Filters.reset(studyLang); } catch(_){}
-      try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
-      closeFiltersSheet();
-    };
-
-    if (applyBtn) applyBtn.onclick = () => {
-      applyFiltersFromSheet();
-      closeFiltersSheet();
-    };
+        if (t.closest && t.closest('#filtersBtn')) {
+          openFiltersSheet();
+          return;
+        }
+        if (t.closest && (t.closest('#filtersOverlay') || t.closest('#filtersClose'))) {
+          closeFiltersSheet();
+          return;
+        }
+        if (t.closest && t.closest('#filtersReset')) {
+          const key = activeDeckKey();
+          const studyLang = getStudyLangForKey(key) || 'xx';
+          try { if (A.Filters && typeof A.Filters.reset === 'function') A.Filters.reset(studyLang); } catch(_){}
+          try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
+          closeFiltersSheet();
+          return;
+        }
+        if (t.closest && t.closest('#filtersApply')) {
+          applyFiltersFromSheet();
+          closeFiltersSheet();
+          return;
+        }
+      } catch(_){}
+    }, true);
 
     // React to external changes (e.g., programmatic reset)
-    try {
-      window.addEventListener('lexitron:filters:changed', () => {
-        updateFiltersSummary();
-        renderSets();
-        renderTrainer();
-        try { setDictStatsText(document.getElementById('dictStats'), activeDeckKey()); } catch(_){}
-      });
-    } catch(_){}
+    if (!A.__filtersEventsBound) {
+      A.__filtersEventsBound = true;
 
-    // Update summary when UI language changes (labels are rerendered by mount, but summary not always)
-    try {
-      window.addEventListener('lexitron:ui-lang-changed', () => {
-        updateFiltersSummary();
-      });
-    } catch(_){}
+      try {
+        window.addEventListener('lexitron:filters:changed', () => {
+          updateFiltersSummary();
+          renderSets();
+          renderTrainer();
+          try { setDictStatsText(document.getElementById('dictStats'), activeDeckKey()); } catch(_){}
+        });
+      } catch(_){}
+
+      // Update summary when UI language changes
+      try {
+        window.addEventListener('lexitron:ui-lang-changed', () => {
+          updateFiltersSummary();
+        });
+      } catch(_){}
+    }
   }
 
 
@@ -665,8 +665,6 @@ function activeDeckKey() {
     const title = resolveDeckTitle(key);
     const T = tUI();
 
-    const showFilters = isPwaOrTwaRunmode();
-
     app.innerHTML = `
       <div class="home">
         <!-- ЗОНА 1: Сеты -->
@@ -699,45 +697,7 @@ function activeDeckKey() {
           <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
         </section>
-
-        ${showFilters ? `
-        <!-- ЗОНА 4: Фильтры (только PWA/TWA) -->
-        <section class="home-filters" aria-label="filters">
-          <button class="filters-btn" id="filtersBtn" type="button">
-            <span class="ico" aria-hidden="true">▾</span>
-            <span class="lbl">${(window.I18N_t ? window.I18N_t('filtersBtn') : 'Фильтры')}</span>
-          </button>
-          <div class="filters-summary" id="filtersSummary"></div>
-        </section>
-
-        <div class="filters-overlay filters-hidden" id="filtersOverlay" aria-hidden="true"></div>
-
-        <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true" aria-label="filtersSheet">
-          <div class="filters-head">
-            <div class="filters-title">${(window.I18N_t ? window.I18N_t('filtersTitle') : 'Фильтры')}</div>
-            <button class="filters-close" id="filtersClose" type="button">✕</button>
-          </div>
-
-          <div class="filters-section">
-            <h4>${(window.I18N_t ? window.I18N_t('filtersLevels') : 'Уровни')}</h4>
-            <div class="filters-list" id="filtersLevelsList"></div>
-          </div>
-
-          <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
-            <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
-            <div class="filters-list" id="filtersTopicsList"></div>
-          </div>
-
-          <div class="filters-actions">
-            <button class="btn" id="filtersReset" type="button">${(window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить')}</button>
-            <button class="btn" id="filtersApply" type="button">${(window.I18N_t ? window.I18N_t('filtersApply') : 'Применить')}</button>
-          </div>
-        </div>
-        ` : ''}
       </div>`;
-
-    // Инициализация summary после отрисовки (если фильтры показаны)
-    try { if (showFilters) updateFiltersSummary(); } catch(_){ }
   }
 
   /* ------------------------------- Сеты ------------------------------- */
