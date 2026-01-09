@@ -2027,7 +2027,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist null.", ru: "Это число ноль.", uk: "Це число нуль." },
+    examples: [
+      { L2: "Die Zahl ist null.", ru: "Это число ноль.", uk: "Це число нуль." }
+    ]
+  },
   {
     id: 2,
     word: "eins",
@@ -2041,7 +2044,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist eins.", ru: "Это число один.", uk: "Це число один." },
+    examples: [
+      { L2: "Die Zahl ist eins.", ru: "Это число один.", uk: "Це число один." }
+    ]
+  },
   {
     id: 3,
     word: "zwei",
@@ -2055,7 +2061,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist zwei.", ru: "Это число два.", uk: "Це число два." },
+    examples: [
+      { L2: "Die Zahl ist zwei.", ru: "Это число два.", uk: "Це число два." }
+    ]
+  },
   {
     id: 4,
     word: "drei",
@@ -2069,7 +2078,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist drei.", ru: "Это число три.", uk: "Це число три." },
+    examples: [
+      { L2: "Die Zahl ist drei.", ru: "Это число три.", uk: "Це число три." }
+    ]
+  },
   {
     id: 5,
     word: "vier",
@@ -2083,7 +2095,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist vier.", ru: "Это число четыре.", uk: "Це число чотири." },
+    examples: [
+      { L2: "Die Zahl ist vier.", ru: "Это число четыре.", uk: "Це число чотири." }
+    ]
+  },
   {
     id: 6,
     word: "fünf",
@@ -2097,7 +2112,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist fünf.", ru: "Это число пять.", uk: "Це число п’ять." },
+    examples: [
+      { L2: "Die Zahl ist fünf.", ru: "Это число пять.", uk: "Це число п’ять." }
+    ]
+  },
   {
     id: 7,
     word: "sechs",
@@ -2111,7 +2129,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist sechs.", ru: "Это число шесть.", uk: "Це число шість." },
+    examples: [
+      { L2: "Die Zahl ist sechs.", ru: "Это число шесть.", uk: "Це число шість." }
+    ]
+  },
   {
     id: 8,
     word: "sieben",
@@ -2125,7 +2146,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist sieben.", ru: "Это число семь.", uk: "Це число сім." },
+    examples: [
+      { L2: "Die Zahl ist sieben.", ru: "Это число семь.", uk: "Це число сім." }
+    ]
+  },
   {
     id: 9,
     word: "acht",
@@ -2139,7 +2163,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist acht.", ru: "Это число восемь.", uk: "Це число вісім." },
+    examples: [
+      { L2: "Die Zahl ist acht.", ru: "Это число восемь.", uk: "Це число вісім." }
+    ]
+  },
   {
     id: 10,
     word: "neun",
@@ -2153,7 +2180,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist neun.", ru: "Это число девять.", uk: "Це число дев’ять." },
+    examples: [
+      { L2: "Die Zahl ist neun.", ru: "Это число девять.", uk: "Це число дев’ять." }
+    ]
+  },
   {
     id: 11,
     word: "zehn",
@@ -2167,7 +2197,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist zehn.", ru: "Это число десять.", uk: "Це число десять." },
+    examples: [
+      { L2: "Die Zahl ist zehn.", ru: "Это число десять.", uk: "Це число десять." }
+    ]
+  },
   {
     id: 12,
     word: "elf",
@@ -2181,7 +2214,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist elf.", ru: "Это число одиннадцать.", uk: "Це число одинадцять." },
+    examples: [
+      { L2: "Die Zahl ist elf.", ru: "Это число одиннадцать.", uk: "Це число одинадцять." }
+    ]
+  },
   {
     id: 13,
     word: "zwölf",
@@ -2195,7 +2231,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist zwölf.", ru: "Это число двенадцать.", uk: "Це число дванадцять." },
+    examples: [
+      { L2: "Die Zahl ist zwölf.", ru: "Это число двенадцать.", uk: "Це число дванадцять." }
+    ]
+  },
   {
     id: 14,
     word: "dreizehn",
@@ -2209,7 +2248,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist dreizehn.", ru: "Это число тринадцать.", uk: "Це число тринадцять." },
+    examples: [
+      { L2: "Die Zahl ist dreizehn.", ru: "Это число тринадцать.", uk: "Це число тринадцять." }
+    ]
+  },
   {
     id: 15,
     word: "vierzehn",
@@ -2223,7 +2265,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist vierzehn.", ru: "Это число четырнадцать.", uk: "Це число чотирнадцять." },
+    examples: [
+      { L2: "Die Zahl ist vierzehn.", ru: "Это число четырнадцать.", uk: "Це число чотирнадцять." }
+    ]
+  },
   {
     id: 16,
     word: "fünfzehn",
@@ -2237,7 +2282,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist fünfzehn.", ru: "Это число пятнадцать.", uk: "Це число п’ятнадцять." },
+    examples: [
+      { L2: "Die Zahl ist fünfzehn.", ru: "Это число пятнадцать.", uk: "Це число п’ятнадцять." }
+    ]
+  },
   {
     id: 17,
     word: "sechzehn",
@@ -2251,7 +2299,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist sechzehn.", ru: "Это число шестнадцать.", uk: "Це число шістнадцять." },
+    examples: [
+      { L2: "Die Zahl ist sechzehn.", ru: "Это число шестнадцать.", uk: "Це число шістнадцять." }
+    ]
+  },
   {
     id: 18,
     word: "siebzehn",
@@ -2265,7 +2316,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist siebzehn.", ru: "Это число семнадцать.", uk: "Це число сімнадцять." },
+    examples: [
+      { L2: "Die Zahl ist siebzehn.", ru: "Это число семнадцать.", uk: "Це число сімнадцять." }
+    ]
+  },
   {
     id: 19,
     word: "achtzehn",
@@ -2279,7 +2333,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist achtzehn.", ru: "Это число восемнадцать.", uk: "Це число вісімнадцять." },
+    examples: [
+      { L2: "Die Zahl ist achtzehn.", ru: "Это число восемнадцать.", uk: "Це число вісімнадцять." }
+    ]
+  },
   {
     id: 20,
     word: "neunzehn",
@@ -2293,7 +2350,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist neunzehn.", ru: "Это число девятнадцать.", uk: "Це число дев’ятнадцять." },
+    examples: [
+      { L2: "Die Zahl ist neunzehn.", ru: "Это число девятнадцать.", uk: "Це число дев’ятнадцять." }
+    ]
+  },
   {
     id: 21,
     word: "zwanzig",
@@ -2307,7 +2367,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Zahl ist zwanzig.", ru: "Это число двадцать.", uk: "Це число двадцять." }
+    examples: [
+      { L2: "Die Zahl ist zwanzig.", ru: "Это число двадцать.", uk: "Це число двадцять." }
+    ]
+  }
 ];
 window.decks.de_conjunctions_lernpunkt = [];
 window.decks.de_particles_lernpunkt = [
