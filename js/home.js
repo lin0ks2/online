@@ -231,6 +231,44 @@ function setUiLang(code){
     }
   }
 
+  /* ---------------------------- Filters: scroll lock ---------------------------- */
+  let __filtersScrollY = 0;
+  let __filtersTouchMoveBound = false;
+
+  function lockBodyScrollForFilters(sheetEl){
+    try {
+      __filtersScrollY = window.scrollY || window.pageYOffset || 0;
+      document.body.classList.add('mm-modal-open');
+      document.body.style.top = `-${__filtersScrollY}px`;
+    } catch(_){ }
+
+    // Prevent iOS "rubber-band" from scrolling the page behind the sheet.
+    if (!__filtersTouchMoveBound) {
+      __filtersTouchMoveBound = true;
+      document.addEventListener('touchmove', function(e){
+        try {
+          if (!document.body.classList.contains('mm-modal-open')) return;
+          const t = e.target;
+          if (sheetEl && t && (t === sheetEl || (sheetEl.contains && sheetEl.contains(t)))) {
+            // Allow scrolling inside sheet.
+            return;
+          }
+          e.preventDefault();
+        } catch(_){ }
+      }, { passive: false, capture: true });
+    }
+  }
+
+  function unlockBodyScrollForFilters(){
+    try {
+      document.body.classList.remove('mm-modal-open');
+      const top = document.body.style.top;
+      document.body.style.top = '';
+      const y = top ? Math.abs(parseInt(top, 10)) : __filtersScrollY;
+      window.scrollTo(0, y);
+    } catch(_){ }
+  }
+
   function openFiltersSheet(){
     const overlay = document.getElementById('filtersOverlay');
     const sheet = document.getElementById('filtersSheet');
@@ -264,6 +302,16 @@ function setUiLang(code){
 
     overlay.classList.remove('filters-hidden');
     sheet.classList.remove('filters-hidden');
+
+    try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
+    try { sheet.setAttribute('aria-hidden', 'false'); } catch(_){ }
+    try { lockBodyScrollForFilters(sheet); } catch(_){ }
+
+    // Focus close for accessibility (best-effort)
+    try {
+      const closeBtn = document.getElementById('filtersClose');
+      if (closeBtn && closeBtn.focus) closeBtn.focus();
+    } catch(_){ }
   }
 
   function closeFiltersSheet(){
@@ -271,6 +319,10 @@ function setUiLang(code){
     const sheet = document.getElementById('filtersSheet');
     if (overlay) overlay.classList.add('filters-hidden');
     if (sheet) sheet.classList.add('filters-hidden');
+
+    try { if (overlay) overlay.setAttribute('aria-hidden', 'true'); } catch(_){ }
+    try { if (sheet) sheet.setAttribute('aria-hidden', 'true'); } catch(_){ }
+    try { unlockBodyScrollForFilters(); } catch(_){ }
   }
 
   function applyFiltersFromSheet(){
