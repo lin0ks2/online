@@ -13,6 +13,7 @@
   A.Filters = A.Filters || {};
 
   const STORAGE_PREFIX = 'mm.filters.levels.'; // + <studyLang>
+  const STORAGE_PREFIX_TOPICS = 'mm.filters.topics.'; // + <studyLang> (future)
   const _cache = {
     levelsByStudyLang: Object.create(null),
   };
@@ -101,7 +102,12 @@
   }
 
   function reset(studyLang) {
+    // Reset both levels and topics (topics UI will be enabled later)
     setState(studyLang, { enabled: false, selected: [] });
+    try {
+      const lang = String(studyLang || 'xx').toLowerCase();
+      localStorage.removeItem(STORAGE_PREFIX_TOPICS + lang);
+    } catch (_){ }
   }
 
   function setLevels(studyLang, selectedLevels) {
@@ -202,19 +208,10 @@
   A.Filters.getState = getState;
   A.Filters.setLevels = setLevels;
   A.Filters.reset = reset;
+  A.Filters.resetAll = reset;
   A.Filters.collectLevels = collectLevels;
   A.Filters.collectLevelsForStudyLang = collectLevelsForStudyLang;
   A.Filters.getTrainableDeck = getTrainableDeck;
   A.Filters.summaryText = summaryText;
 
-
-
-  // v2.2: Reset both levels and topics (topics reserved for future UI)
-  A.Filters.resetAll = function(studyLang){
-    try { A.Filters.reset(studyLang); } catch(_){}
-    try {
-      const k = 'mm.filters.topics.' + (studyLang || 'xx');
-      localStorage.removeItem(k);
-    } catch(_){}
-  };
 })();
