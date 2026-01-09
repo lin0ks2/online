@@ -12,7 +12,8 @@
   const A = (window.App = window.App || {});
   A.Filters = A.Filters || {};
 
-  const STORAGE_PREFIX = 'mm.filters.levels.'; // + <studyLang>
+    const STORAGE_PREFIX_LEVELS = 'mm.filters.levels.'; // + <studyLang>
+  const STORAGE_PREFIX_TOPICS = 'mm.filters.topics.'; // + <studyLang>
   const _cache = {
     levelsByStudyLang: Object.create(null),
   };
@@ -76,41 +77,68 @@
     return null;
   }
 
-  function storageKey(studyLang) {
-    return STORAGE_PREFIX + String(studyLang || 'xx').toLowerCase();
+    function storageKeyLevels(studyLang) {
+    return STORAGE_PREFIX_LEVELS + String(studyLang || 'xx').toLowerCase();
+  }
+  function storageKeyTopics(studyLang) {
+    return STORAGE_PREFIX_TOPICS + String(studyLang || 'xx').toLowerCase();
   }
 
-  function getState(studyLang) {
+    function getState(studyLang) {
     const lang = String(studyLang || 'xx').toLowerCase();
-    const k = storageKey(lang);
-    let raw = null;
-    try { raw = localStorage.getItem(k); } catch (_) {}
-    const data = safeJsonParse(raw, null) || {};
-    const enabled = !!data.enabled;
-    const selected = uniq((data.selected || []).map(normalizeLevel)).filter(Boolean);
-    return { enabled, selected, studyLang: lang };
+    // Levels: support legacy payload in mm.filters.levels.<lang>
+    let rawL = null;
+    try { rawL = localStorage.getItem(storageKeyLevels(lang)); } catch (_) {}
+    const dataL = safeJsonParse(rawL, null) || {};
+    const enabledL = !!dataL.enabled;
+    const selectedL = uniq((dataL.selected || []).map(normalizeLevel)).filter(Boolean);
+
+    // Topics: reserved for future Stage 2 (kept for forward-compat)
+    let rawT = null;
+    try { rawT = localStorage.getItem(storageKeyTopics(lang)); } catch (_) {}
+    const dataT = safeJsonParse(rawT, null) || {};
+    const enabledT = !!dataT.enabled;
+    const selectedT = uniq((dataT.selected || []).map(v => String(v || '').trim()).filter(Boolean));
+
+    return {
+      studyLang: lang,
+      levels: { enabled: enabledL, selected: selectedL },
+      topics: { enabled: enabledT, selected: selectedT },
+    };
   }
 
-  function setState(studyLang, state) {
+    function setStateLevels(studyLang, state) {
     const lang = String(studyLang || 'xx').toLowerCase();
-    const k = storageKey(lang);
+    const k = storageKeyLevels(lang);
     const enabled = !!(state && state.enabled);
     const selected = uniq(((state && state.selected) || []).map(normalizeLevel)).filter(Boolean);
     const payload = JSON.stringify({ enabled, selected });
     try { localStorage.setItem(k, payload); } catch (_) {}
   }
 
-  function reset(studyLang) {
-    setState(studyLang, { enabled: false, selected: [] });
+  function setStateTopics(studyLang, state) {
+    const lang = String(studyLang || 'xx').toLowerCase();
+    const k = storageKeyTopics(lang);
+    const enabled = !!(state && state.enabled);
+    const selected = uniq(((state && state.selected) || []).map(v => String(v || '').trim()).filter(Boolean));
+    const payload = JSON.stringify({ enabled, selected });
+    try { localStorage.setItem(k, payload); } catch (_) {}
+  }
+  }
+
+    function reset(studyLang) {
+    setStateLevels(studyLang, { enabled: false, selected: [] });
+    // Stage 2: topics
+    setStateTopics(studyLang, { enabled: false, selected: [] });
   }
 
   function setLevels(studyLang, selectedLevels) {
     const sel = uniq((selectedLevels || []).map(normalizeLevel)).filter(Boolean);
     if (!sel.length) {
-      setState(studyLang, { enabled: false, selected: [] });
+      setStateLevels(studyLang, { enabled: false, selected: [] });
       return;
     }
-    setState(studyLang, { enabled: true, selected: sel });
+    setStateLevels(studyLang, { enabled: true, selected: sel });
   }
 
   function collectLevels(words) {
@@ -146,8 +174,9 @@
     return res;
   }
 
-  function applyLevels(words, state) {
-    const st = state || { enabled: false, selected: [] };
+    function applyLevels(words, state) {
+    const levels = (state && state.levels) ? state.levels : (state || { enabled:false, selected:[] });
+    const st = levels || { enabled: false, selected: [] };
     if (!st.enabled || !st.selected || !st.selected.length) {
       // Без фильтра: возвращаем всё, включая слова без level
       return (words || []).slice();
@@ -175,7 +204,7 @@
   function getTrainableDeck(deckKey, opts) {
     const mode = (opts && opts.mode) || 'words'; // 'words' | 'articles'
     const studyLang = getStudyLangFromDeckKey(deckKey) || (A.settings && A.settings.dictsLangFilter) || null;
-    const st = getState(studyLang || 'xx');
+        const st = getState(studyLang || 'xx');
 
     let raw = [];
     try {
@@ -191,16 +220,24 @@
   }
 
   function summaryText(uiLang, studyLang) {
-    const st = getState(studyLang || 'xx');
-    if (!st.enabled || !st.selected.length) return '';
-    return st.selected.join(', ');
+            const st = getState(studyLang || 'xx');
+    const lv = (st && st.levels) ? st.levels : st;
+    if (!lv || !lv.enabled || !lv.selected || !lv.selected.length) return '';
+    return lv.selected.join(', ');
+
   }
 
   // Public API
   A.Filters.normalizeLevel = normalizeLevel;
   A.Filters.getStudyLangFromDeckKey = getStudyLangFromDeckKey;
   A.Filters.getState = getState;
-  A.Filters.setLevels = setLevels;
+    A.Filters.setLevels = setLevels;
+  // Stage 2 (topics) API placeholders
+  A.Filters.setTopics = function(studyLang, selectedTopics){
+    const sel = uniq((selectedTopics || []).map(v => String(v || '').trim()).filter(Boolean));
+    if (!sel.length) { setStateTopics(studyLang, { enabled:false, selected:[] }); return; }
+    setStateTopics(studyLang, { enabled:true, selected: sel });
+  };
   A.Filters.reset = reset;
   A.Filters.collectLevels = collectLevels;
   A.Filters.collectLevelsForStudyLang = collectLevelsForStudyLang;

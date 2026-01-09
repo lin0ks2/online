@@ -337,29 +337,60 @@ function setUiLang(code){
   }
 
   function bindFiltersUI(){
-    // Делегирование кликов: DOM фильтров может монтироваться/перемонтироваться,
-    // поэтому прямые onclick легко теряются.
+    // Делегирование кликов + live-apply (без кнопки "Применить").
+    // DOM фильтров может монтироваться/перемонтироваться, поэтому прямые onclick легко теряются.
     if (A.__filtersDelegationBound) return;
     A.__filtersDelegationBound = true;
+
+    // debounce apply to avoid heavy rerenders on quick multi-tap (esp. iOS)
+    let _applyTmr = 0;
+    function scheduleApply(){
+      clearTimeout(_applyTmr);
+      _applyTmr = setTimeout(() => {
+        try { applyFiltersFromSheet(); } catch(_){}
+      }, 70);
+    }
 
     document.addEventListener('click', function(e){
       try {
         const t = e.target;
         if (!t) return;
 
+        // Open
         if (t.closest && t.closest('#filtersBtn')) { openFiltersSheet(); return; }
+
+        // Close (overlay or X)
         if (t.closest && (t.closest('#filtersOverlay') || t.closest('#filtersClose'))) { closeFiltersSheet(); return; }
+
+        // Reset (levels + future topics). Keep sheet open.
         if (t.closest && t.closest('#filtersReset')) {
           const key = activeDeckKey();
           const studyLang = getStudyLangForKey(key) || 'xx';
           try { if (A.Filters && typeof A.Filters.reset === 'function') A.Filters.reset(studyLang); } catch(_){}
+
+          // instant UI: uncheck visible chips
+          try {
+            const list = document.getElementById('filtersLevelsList');
+            if (list) Array.from(list.querySelectorAll('input[type="checkbox"][data-level]')).forEach(cb => { cb.checked = false; });
+          } catch(_){}
+
           try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
-          closeFiltersSheet();
           return;
         }
-        if (t.closest && t.closest('#filtersApply')) { applyFiltersFromSheet(); closeFiltersSheet(); return; }
+
         if (t.closest && t.closest('#filtersOpenFromEmpty')) { openFiltersSheet(); return; }
       } catch(_){}
+    }, true);
+
+    // Live apply on chip toggles
+    document.addEventListener('change', function(e){
+      try{
+        const t = e.target;
+        if (!t) return;
+        if (t.matches && t.matches('#filtersLevelsList input[type="checkbox"][data-level]')) {
+          scheduleApply();
+        }
+      }catch(_){}
     }, true);
 
     try {
@@ -708,6 +739,7 @@ function activeDeckKey() {
         <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true" aria-label="filtersSheet">
           <div class="filters-head">
             <div class="filters-title">${(window.I18N_t ? window.I18N_t('filtersTitle') : 'Фильтры')}</div>
+            <button class="filters-reset" id="filtersReset" type="button" data-i18n="filtersReset">${(window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить')}</button>
             <button class="filters-close" id="filtersClose" type="button">✕</button>
           </div>
 
@@ -719,11 +751,6 @@ function activeDeckKey() {
           <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
             <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
             <div class="filters-list" id="filtersTopicsList"></div>
-          </div>
-
-          <div class="filters-actions">
-            <button class="btn" id="filtersReset" type="button">${(window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить')}</button>
-            <button class="btn" id="filtersApply" type="button">${(window.I18N_t ? window.I18N_t('filtersApply') : 'Применить')}</button>
           </div>
         </div>
         ` : ''}
