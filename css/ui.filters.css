@@ -1,48 +1,63 @@
 /* ==========================================================
- * MOYAMOVA — UI Filters (bottom sheet)
+ * MOYAMOVA — UI Filters (PWA/TWA)
+ * Visual v2: compact bar + bottom sheet + chip levels
  * ========================================================== */
 
+/* ---------- Bar (between trainer card and footer) ---------- */
 .home-filters {
-  margin-top: 12px;
-  padding: 10px 12px;
+  margin: 10px 12px 8px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
 }
 
 .filters-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 12px;
-  /* компактнее, вровень с \"Без фильтра\" /*
-  font-size: 13px;
-  padding: 8px 10px;
+  padding: 6px 9px;
   background: rgba(255,255,255,0.04);
   color: inherit;
   font: inherit;
+  font-size: 13px; /* вровень с summary */
+  line-height: 1;
+}
+
+.filters-btn:active {
+  transform: translateY(1px);
 }
 
 .filters-btn .ico {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   opacity: 0.9;
 }
 
 .filters-summary {
   font-size: 13px;
-  opacity: 0.8;
+  opacity: 0.82;
   text-align: right;
   flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+/* ---------- Overlay + Sheet ---------- */
+.filters-hidden { display: none !important; }
 
 .filters-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.56);
   z-index: 1000;
 }
 
@@ -55,11 +70,23 @@
   background: rgba(10, 16, 30, 0.98);
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  box-shadow: 0 -12px 30px rgba(0,0,0,0.35);
-  padding: 14px 14px 18px;
+  box-shadow: 0 -14px 34px rgba(0,0,0,0.42);
+  padding: 10px 14px 14px;
+  max-height: 65vh;
+  overflow: auto; /* body скролл внутри */
+  -webkit-overflow-scrolling: touch;
 }
 
-.filters-hidden { display: none !important; }
+/* handle */
+.filters-sheet::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  margin: 2px auto 10px;
+}
 
 .filters-head {
   display: flex;
@@ -71,61 +98,108 @@
 
 .filters-title {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
 
 .filters-close {
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.04);
   color: inherit;
   border-radius: 12px;
-  padding: 8px 10px;
+  padding: 6px 9px;
   font: inherit;
+  font-size: 13px;
+  line-height: 1;
 }
 
+/* ---------- Sections ---------- */
 .filters-section {
   margin-top: 12px;
 }
 
 .filters-section h4 {
   margin: 0 0 8px;
-  font-size: 14px;
-  opacity: 0.9;
+  font-size: 13px;
+  opacity: 0.88;
+  font-weight: 800;
 }
 
+/* chips grid */
 .filters-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+  gap: 10px;
 }
 
+/* label as chip */
 .filters-item {
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 12px;
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.03);
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
 }
 
 .filters-item input {
-  transform: scale(1.1);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
+.filters-item span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.03);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.filters-item input:checked + span {
+  border-color: rgba(55, 168, 255, 0.55);
+  background: rgba(55, 168, 255, 0.18);
+  box-shadow: 0 0 0 1px rgba(55, 168, 255, 0.10) inset;
+}
+
+.filters-item:active span {
+  transform: translateY(1px);
+}
+
+/* ---------- Actions ---------- */
 .filters-actions {
   margin-top: 14px;
   display: flex;
   gap: 10px;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0 2px;
+  background: rgba(10, 16, 30, 0.98);
 }
 
 .filters-actions .btn {
   flex: 1;
-  border: 1px solid rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 14px;
-  padding: 12px 12px;
+  padding: 10px 12px;
   background: rgba(255,255,255,0.04);
   color: inherit;
   font: inherit;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.filters-actions .btn:active {
+  transform: translateY(1px);
+}
+
+/* Slightly emphasize Apply */
+.filters-actions #filtersApply {
+  border-color: rgba(55, 168, 255, 0.30);
+  background: rgba(55, 168, 255, 0.10);
 }
