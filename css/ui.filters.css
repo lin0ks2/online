@@ -3,6 +3,28 @@
  * Visual v2: compact bar + bottom sheet + chip levels
  * ========================================================== */
 
+/* ---------- Theme tokens (fallback-safe) ---------- */
+:root {
+  --mm-filters-backdrop: var(--backdrop, rgba(0,0,0,0.56));
+  --mm-filters-surface: var(--surface, rgba(10, 16, 30, 0.98));
+  --mm-filters-surface-2: var(--surface-2, rgba(255,255,255,0.04));
+  --mm-filters-text: var(--text, rgba(255,255,255,0.92));
+  --mm-filters-border: var(--border, rgba(255,255,255,0.14));
+  --mm-filters-accent: var(--accent, rgba(55, 168, 255, 1));
+  --mm-filters-shadow: var(--shadow, 0 -14px 34px rgba(0,0,0,0.42));
+}
+
+html[data-theme="light"],
+body[data-theme="light"],
+body.theme-light {
+  --mm-filters-backdrop: var(--backdrop, rgba(10, 16, 30, 0.28));
+  --mm-filters-surface: var(--surface, rgba(255,255,255,0.98));
+  --mm-filters-surface-2: var(--surface-2, rgba(10,16,30,0.05));
+  --mm-filters-text: var(--text, rgba(10,16,30,0.92));
+  --mm-filters-border: var(--border, rgba(10,16,30,0.14));
+  --mm-filters-shadow: var(--shadow, 0 -14px 34px rgba(0,0,0,0.18));
+}
+
 /* ---------- Bar (between trainer card and footer) ---------- */
 .home-filters {
   margin: 10px 12px 8px;
@@ -11,19 +33,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--mm-filters-border);
   border-radius: 14px;
-  background: rgba(255,255,255,0.03);
+  background: var(--mm-filters-surface-2);
 }
 
 .filters-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid var(--mm-filters-border);
   border-radius: 12px;
   padding: 6px 9px;
-  background: rgba(255,255,255,0.04);
+  background: var(--mm-filters-surface-2);
   color: inherit;
   font: inherit;
   font-size: 13px; /* вровень с summary */
@@ -57,24 +79,31 @@
 .filters-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.56);
+  background: var(--mm-filters-backdrop);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 1000;
+  touch-action: none;
 }
 
 .filters-sheet {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
   z-index: 1001;
-  background: rgba(10, 16, 30, 0.98);
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  box-shadow: 0 -14px 34px rgba(0,0,0,0.42);
+  background: var(--mm-filters-surface);
+  color: var(--mm-filters-text);
+  border: 1px solid var(--mm-filters-border);
+  border-radius: 18px;
+  box-shadow: var(--mm-filters-shadow);
   padding: 10px 14px 14px;
-  max-height: 65vh;
-  overflow: auto; /* body скролл внутри */
+  max-height: min(78vh, calc(100vh - 120px));
+  overflow-y: auto; /* scroll inside sheet */
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
 }
 
 /* handle */
@@ -84,7 +113,7 @@
   width: 44px;
   height: 4px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.18);
+  background: var(--mm-filters-border);
   margin: 2px auto 10px;
 }
 
@@ -94,6 +123,12 @@
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--mm-filters-surface);
+  padding-top: 2px;
+  border-bottom: 1px solid var(--mm-filters-border);
 }
 
 .filters-head-actions{
@@ -103,21 +138,29 @@
 }
 
 .filters-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .filters-reset,
 .filters-close {
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--mm-filters-border);
+  background: var(--mm-filters-surface-2);
   color: inherit;
-  border-radius: 12px;
-  padding: 6px 9px;
+  border-radius: 999px;
+  height: 36px;
+  padding: 0 12px;
   font: inherit;
   font-size: 13px;
   line-height: 1;
+}
+
+.filters-close {
+  width: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
 }
 
 .filters-reset{
@@ -164,17 +207,24 @@
   text-align: center;
   padding: 6px 8px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--mm-filters-border);
+  background: var(--mm-filters-surface-2);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .filters-item input:checked + span {
-  border-color: rgba(55, 168, 255, 0.55);
+  border-color: var(--mm-filters-accent);
   background: rgba(55, 168, 255, 0.18);
   box-shadow: 0 0 0 1px rgba(55, 168, 255, 0.10) inset;
+}
+
+/* Body scroll lock for filters sheet */
+body.mm-modal-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
 }
 
 .filters-item:active span {
