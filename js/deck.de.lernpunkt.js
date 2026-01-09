@@ -3847,4 +3847,13 @@ window.decks.de_particles_lernpunkt = [
     ukAntonyms: [],
     examples: [{ L2: "Willkommen!", ru: "Добро пожаловать!", uk: "Ласкаво просимо!" }]
   }
-];
+
+  ,{ id: 2, word: "auch", ru: "тоже", uk: "також", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Auch komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 3, word: "nur", ru: "только", uk: "лише", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Nur komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 4, word: "noch", ru: "еще", uk: "ще", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Noch komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 5, word: "sehr", ru: "очень", uk: "дуже", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Sehr komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 6, word: "bitte", ru: "пожалуйста", uk: "будь ласка", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Bitte komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 7, word: "danke", ru: "спасибо", uk: "дякую", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Danke komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 8, word: "ja", ru: "да", uk: "так", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ja komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 9, word: "nein", ru: "нет", uk: "ні", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Nein komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }
+  ,{ id: 10, word: "doch", ru: "всё-таки / да", uk: "усе ж таки / так", level: "A1", topics: ["particles"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Doch komme ich.", ru: "Ну, я прихожу.", uk: "Ну, я приходжу." }] }];
