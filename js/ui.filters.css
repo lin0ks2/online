@@ -18,6 +18,20 @@
   --mm-filters-bottom-offset: var(--footer-h-actual, 76px);
 }
 
+/* Ensure filters tokens follow Light theme even when theme is applied via body classes */
+html[data-theme="light"],
+:root[data-theme="light"],
+body[data-theme="light"],
+body.theme-light {
+  --mm-filters-backdrop: var(--overlay-bg, rgba(0,0,0,0.35));
+  --mm-filters-surface: var(--surface-1, var(--bg, #ffffff));
+  --mm-filters-surface-2: var(--surface-2, #f7fafd);
+  --mm-filters-text: var(--text, #333);
+  --mm-filters-border: var(--divider, var(--border, rgba(0,0,0,0.12)));
+  --mm-filters-accent: var(--brand, var(--link, #1fb6ff));
+  --mm-filters-shadow: var(--shadow-2, 0 -14px 34px rgba(var(--shadow-color, 17,24,39), 0.18));
+}
+
 /* ---------- Bar (between trainer card and footer) ---------- */
 .home-filters {
   margin: 10px 12px 8px;
@@ -209,7 +223,7 @@
   padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
-  background: var(--mm-filters-surface-2);
+  background: transparent;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -282,7 +296,7 @@ body.theme-light .filters-item span {
   padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
-  background: var(--mm-filters-surface-2);
+  background: transparent;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -297,15 +311,15 @@ body.theme-light .filters-reset,
 html[data-theme="light"] .filters-close,
 body[data-theme="light"] .filters-close,
 body.theme-light .filters-close {
-  background: rgba(255,255,255,0.92);
-  border-color: rgba(10,16,30,0.14);
+  background: var(--mm-filters-surface-2);
+  border-color: var(--mm-filters-text);
 }
 
 html[data-theme="light"] .filters-item span,
 body[data-theme="light"] .filters-item span,
 body.theme-light .filters-item span {
-  background: rgba(255,255,255,0.96);
-  border-color: rgba(10,16,30,0.12);
+  background: transparent;
+  border-color: var(--mm-filters-text);
   color: var(--mm-filters-text);
 }
 
