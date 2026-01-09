@@ -6,27 +6,30 @@
 
 /* ---------- Theme tokens (fallback-safe) ---------- */
 :root {
-  --mm-filters-backdrop: var(--backdrop, rgba(0,0,0,0.56));
-  --mm-filters-surface: var(--surface, rgba(10, 16, 30, 0.98));
-  --mm-filters-surface-2: var(--surface-2, rgba(255,255,255,0.04));
-  --mm-filters-text: var(--text, rgba(255,255,255,0.92));
-  --mm-filters-border: var(--border, rgba(255,255,255,0.14));
-  --mm-filters-accent: var(--accent, rgba(55, 168, 255, 1));
-  --mm-filters-shadow: var(--shadow, 0 -14px 34px rgba(0,0,0,0.42));
+  /* Filters (sheet) uses global theme tokens */
+  --mm-filters-backdrop: var(--overlay-bg, rgba(0,0,0,0.55));
+  --mm-filters-surface: var(--surface-2, var(--bg, #111821));
+  --mm-filters-surface-2: var(--surface-3, var(--surface-2, #141d27));
+  --mm-filters-text: var(--text, #dce2e8);
+  --mm-filters-border: var(--divider, var(--border, rgba(255,255,255,0.14)));
+  --mm-filters-accent: var(--brand, var(--link, #1fb6ff));
+  --mm-filters-shadow: var(--shadow-2, 0 -18px 44px rgba(var(--shadow-color, 0,0,0), 0.25));
   /* Bottom offset for fixed footer/tabbar (set from JS when opening filters). */
-  --mm-filters-bottom-offset: 76px;
+  --mm-filters-bottom-offset: var(--footer-h-actual, 76px);
 }
 
+/* Ensure filters tokens follow Light theme even when theme is applied via body classes */
 html[data-theme="light"],
+:root[data-theme="light"],
 body[data-theme="light"],
 body.theme-light {
-  /* Light theme: make the sheet look like a real iOS bottom sheet (white surface + soft shadow). */
-  --mm-filters-backdrop: var(--backdrop, rgba(10, 16, 30, 0.22));
-  --mm-filters-surface: var(--surface, rgba(255,255,255,0.98));
-  --mm-filters-surface-2: var(--surface-2, rgba(10,16,30,0.035));
-  --mm-filters-text: var(--text, rgba(10,16,30,0.92));
-  --mm-filters-border: var(--border, rgba(10,16,30,0.10));
-  --mm-filters-shadow: var(--shadow, 0 -18px 44px rgba(0,0,0,0.16));
+  --mm-filters-backdrop: var(--overlay-bg, rgba(0,0,0,0.35));
+  --mm-filters-surface: var(--surface-1, var(--bg, #ffffff));
+  --mm-filters-surface-2: var(--surface-2, #f7fafd);
+  --mm-filters-text: var(--text, #333);
+  --mm-filters-border: var(--divider, var(--border, rgba(0,0,0,0.12)));
+  --mm-filters-accent: var(--brand, var(--link, #1fb6ff));
+  --mm-filters-shadow: var(--shadow-2, 0 -14px 34px rgba(var(--shadow-color, 17,24,39), 0.18));
 }
 
 /* ---------- Bar (between trainer card and footer) ---------- */
@@ -38,7 +41,7 @@ body.theme-light {
   justify-content: space-between;
   gap: 10px;
   border: 1px solid var(--mm-filters-border);
-  border-radius: 14px;
+  border-radius: var(--radius-lg, 14px);
   background: var(--mm-filters-surface-2);
 }
 
@@ -47,7 +50,7 @@ body.theme-light {
   align-items: center;
   gap: 8px;
   border: 1px solid var(--mm-filters-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md, 12px);
   padding: 6px 9px;
   background: var(--mm-filters-surface-2);
   color: inherit;
@@ -100,7 +103,7 @@ body.theme-light {
   background: var(--mm-filters-surface);
   color: var(--mm-filters-text);
   border: 1px solid var(--mm-filters-border);
-  border-radius: 18px;
+  border-radius: var(--radius-xl, 18px);
   box-shadow: var(--mm-filters-shadow);
   padding: 10px 14px 14px;
   /* Auto height by content; cap to viewport when content is large. */
@@ -134,7 +137,7 @@ body.theme-light {
   z-index: 2;
   background: var(--mm-filters-surface);
   padding-top: 2px;
-  border-bottom: 1px solid var(--mm-filters-border);
+  border-bottom: none;
 }
 
 .filters-head-actions{
@@ -220,7 +223,7 @@ body.theme-light {
   padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
-  background: var(--mm-filters-surface-2);
+  background: transparent;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -259,7 +262,7 @@ body.mm-modal-open {
 .filters-actions .btn {
   flex: 1;
   border: 1px solid var(--mm-filters-border);
-  border-radius: 14px;
+  border-radius: var(--radius-lg, 14px);
   padding: 9px 12px;
   background: var(--mm-filters-surface-2);
   color: inherit;
@@ -293,7 +296,7 @@ body.theme-light .filters-item span {
   padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
-  background: var(--mm-filters-surface-2);
+  background: transparent;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -308,16 +311,16 @@ body.theme-light .filters-reset,
 html[data-theme="light"] .filters-close,
 body[data-theme="light"] .filters-close,
 body.theme-light .filters-close {
-  background: rgba(255,255,255,0.92);
-  border-color: rgba(10,16,30,0.14);
+  background: var(--mm-filters-surface-2);
+  border-color: var(--mm-filters-text);
 }
 
 html[data-theme="light"] .filters-item span,
 body[data-theme="light"] .filters-item span,
 body.theme-light .filters-item span {
-  background: rgba(255,255,255,0.96);
-  border-color: rgba(10,16,30,0.12);
-  color: rgba(10,16,30,0.92);
+  background: transparent;
+  border-color: var(--mm-filters-text);
+  color: var(--mm-filters-text);
 }
 
 html[data-theme="light"] .filters-item input:checked + span,
