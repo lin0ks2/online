@@ -2,6 +2,10 @@
  * Проект: MOYAMOVA
  * Файл: deck.de.lernpunkt.js
  * Назначение: Дополнительный словарь Lernpunkt (DE)
+ * Примечания:
+ *  - ключи вида de_<pos>_lernpunkt, чтобы не конфликтовать с основным словарём (de_<pos>)
+ *  - все слова уровня A1
+ *  - темы и примеры назначены автоматически
  * ========================================================== */
 
 window.decks = window.decks || {};
@@ -10,20 +14,22 @@ window.decks = window.decks || {};
 // NOUNS (существительные)
 // =======================
 window.decks.de_nouns_lernpunkt = [
-{
+  {
     id: 1,
     word: "das Heft",
     ru: "тетрадь",
     uk: "зошит",
     level: "A1",
-    topics: ["school","education"],
+    topics: ["school", "education"],
     deSynonyms: ["das Schulheft"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich habe mein Heft zu Hause vergessen.", ru: "Я забыл тетрадь дома.", uk: "Я забув зошит удома." }]
+    examples: [
+      { L2: "Ich habe mein Heft zu Hause vergessen.", ru: "Я забыл тетрадь дома.", uk: "Я забув зошит удома." }
+    ]
   },
   {
     id: 2,
@@ -31,14 +37,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "дверь",
     uk: "двері",
     level: "A1",
-    topics: ["home","objects"],
+    topics: ["home", "objects"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Tür ist offen.", ru: "Дверь открыта.", uk: "Двері відчинені." }]
+    examples: [
+      { L2: "Die Tür ist offen.", ru: "Дверь открыта.", uk: "Двері відчинені." }
+    ]
   },
   {
     id: 3,
@@ -46,14 +54,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "клей",
     uk: "клей",
     level: "A1",
-    topics: ["school","objects","craft"],
-    deSynonyms: ["der Klebstoff"],
+    topics: ["school", "objects", "craft"],
+    deSynonyms: ["der Leim"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Der Leim hält das Papier gut zusammen.", ru: "Клей хорошо склеивает бумагу.", uk: "Клей добре склеює папір." }]
+    examples: [
+      { L2: "Ich brauche Kleber für das Projekt.", ru: "Мне нужен клей для проекта.", uk: "Мені потрібен клей для проєкту." }
+    ]
   },
   {
     id: 4,
@@ -61,14 +71,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "окно",
     uk: "вікно",
     level: "A1",
-    topics: ["home","objects"],
+    topics: ["home", "objects"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Mach bitte das Fenster auf.", ru: "Открой, пожалуйста, окно.", uk: "Відкрий, будь ласка, вікно." }]
+    examples: [
+      { L2: "Mach bitte das Fenster auf.", ru: "Открой, пожалуйста, окно.", uk: "Відкрий, будь ласка, вікно." }
+    ]
   },
   {
     id: 5,
@@ -76,14 +88,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "телевизор",
     uk: "телевізор",
     level: "A1",
-    topics: ["home","media"],
+    topics: ["home", "media"],
     deSynonyms: ["der TV"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Der Fernseher ist kaputt.", ru: "Телевизор сломан.", uk: "Телевізор зламався." }]
+    examples: [
+      { L2: "Der Fernseher ist kaputt.", ru: "Телевизор сломан.", uk: "Телевізор зламався." }
+    ]
   },
   {
     id: 6,
@@ -91,14 +105,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "лист (бумаги)",
     uk: "аркуш",
     level: "A1",
-    topics: ["school","paper"],
-    deSynonyms: [],
+    topics: ["school", "paper"],
+    deSynonyms: ["das Papierblatt"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Gib mir bitte ein Blatt Papier.", ru: "Дай мне лист бумаги.", uk: "Дай мені аркуш паперу." }]
+    examples: [
+      { L2: "Gib mir bitte ein Blatt Papier.", ru: "Дай мне, пожалуйста, лист бумаги.", uk: "Дай мені, будь ласка, аркуш паперу." }
+    ]
   },
   {
     id: 7,
@@ -106,14 +122,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "доска (в классе)",
     uk: "дошка (у класі)",
     level: "A1",
-    topics: ["school","classroom"],
-    deSynonyms: [],
+    topics: ["school", "classroom"],
+    deSynonyms: ["die Schultafel"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Der Lehrer schreibt an die Tafel.", ru: "Учитель пишет на доске.", uk: "Учитель пише на дошці." }]
+    examples: [
+      { L2: "Der Lehrer schreibt an die Tafel.", ru: "Учитель пишет на доске.", uk: "Учитель пише на дошці." }
+    ]
   },
   {
     id: 8,
@@ -121,14 +139,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "телефон",
     uk: "телефон",
     level: "A1",
-    topics: ["communication","daily"],
+    topics: ["communication", "daily"],
     deSynonyms: ["das Handy"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Wo ist mein Telefon?", ru: "Где мой телефон?", uk: "Де мій телефон?" }]
+    examples: [
+      { L2: "Wo ist mein Telefon?", ru: "Где мой телефон?", uk: "Де мій телефон?" }
+    ]
   },
   {
     id: 9,
@@ -136,14 +156,16 @@ window.decks.de_nouns_lernpunkt = [
     ru: "папка",
     uk: "тека",
     level: "A1",
-    topics: ["office","school"],
-    deSynonyms: [],
+    topics: ["school", "office"],
+    deSynonyms: ["die Mappe"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Der Ordner liegt auf dem Tisch.", ru: "Папка лежит на столе.", uk: "Тека лежить на столі." }]
+    examples: [
+      { L2: "Der Ordner liegt auf dem Tisch.", ru: "Папка лежит на столе.", uk: "Тека лежить на столі." }
+    ]
   },
   {
     id: 10,
@@ -151,100 +173,39 @@ window.decks.de_nouns_lernpunkt = [
     ru: "лампа",
     uk: "лампа",
     level: "A1",
-    topics: ["home","objects"],
+    topics: ["home", "objects"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Mach die Lampe an.", ru: "Включи лампу.", uk: "Увімкни лампу." }]
+    examples: [
+      { L2: "Mach die Lampe an.", ru: "Включи лампу.", uk: "Увімкни лампу." }
+    ]
   },
-  { id: 11, word: "der Computer", ru: "компьютер", uk: "комп’ютер", level: "A1", topics: ["technology","office"], deSynonyms: ["der Rechner"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Computer ist neu.", ru: "Компьютер новый.", uk: "Комп’ютер новий." }] },
-  { id: 12, word: "der Montag", ru: "понедельник", uk: "понеділок", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Am Montag arbeite ich.", ru: "В понедельник я работаю.", uk: "У понеділок я працюю." }] },
-  { id: 13, word: "der Dienstag", ru: "вторник", uk: "вівторок", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Dienstag ist stressig.", ru: "Вторник напряжённый.", uk: "Вівторок напружений." }] },
-  { id: 14, word: "der Mittwoch", ru: "среда", uk: "середа", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Heute ist Mittwoch.", ru: "Сегодня среда.", uk: "Сьогодні середа." }] },
-  { id: 15, word: "der Donnerstag", ru: "четверг", uk: "четвер", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Am Donnerstag lerne ich Deutsch.", ru: "В четверг я учу немецкий.", uk: "У четвер я вчу німецьку." }] },
-  { id: 16, word: "der Freitag", ru: "пятница", uk: "п’ятниця", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Freitag ist mein Lieblingstag.", ru: "Пятница — мой любимый день.", uk: "П’ятниця — мій улюблений день." }] },
-  { id: 17, word: "der Samstag", ru: "суббота", uk: "субота", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Am Samstag habe ich frei.", ru: "В субботу я свободен.", uk: "У суботу я вільний." }] },
-  { id: 18, word: "der Sonntag", ru: "воскресенье", uk: "неділя", level: "A1", topics: ["time","week"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Sonntag ist ruhig.", ru: "Воскресенье спокойное.", uk: "Неділя спокійна." }] },
-  { id: 19, word: "das Datum", ru: "дата", uk: "дата", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Welches Datum ist heute?", ru: "Какое сегодня число?", uk: "Яка сьогодні дата?" }] },
-  { id: 20, word: "der Monat", ru: "месяц", uk: "місяць", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Monat ist kurz.", ru: "Месяц короткий.", uk: "Місяць короткий." }] },
-  { id: 21, word: "das Jahr", ru: "год", uk: "рік", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das Jahr beginnt.", ru: "Год начинается.", uk: "Рік починається." }] },
-  { id: 22, word: "die Stunde", ru: "час", uk: "година", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Eine Stunde ist kurz.", ru: "Час короткий.", uk: "Година коротка." }] },
-  { id: 23, word: "der Morgen", ru: "утро", uk: "ранок", level: "A1", topics: ["time","day"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["die Nacht"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Guten Morgen!", ru: "Доброе утро!", uk: "Добрий ранок!" }] },
-  { id: 24, word: "der Tag", ru: "день", uk: "день", level: "A1", topics: ["time","day"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["die Nacht"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Tag ist lang.", ru: "День длинный.", uk: "День довгий." }] },
-  { id: 25, word: "der Abend", ru: "вечер", uk: "вечір", level: "A1", topics: ["time","day"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["der Morgen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Guten Abend!", ru: "Добрый вечер!", uk: "Добрий вечір!" }] },
-  { id: 26, word: "die Nacht", ru: "ночь", uk: "ніч", level: "A1", topics: ["time","day"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["der Tag"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Gute Nacht!", ru: "Спокойной ночи!", uk: "На добраніч!" }] },
-  { id: 27, word: "die Sonne", ru: "солнце", uk: "сонце", level: "A1", topics: ["nature"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Die Sonne scheint.", ru: "Солнце светит.", uk: "Сонце світить." }] },
-  { id: 28, word: "der Mond", ru: "луна", uk: "місяць", level: "A1", topics: ["nature"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Mond ist hell.", ru: "Луна яркая.", uk: "Місяць яскравий." }] },
-  { id: 29, word: "der Sonnenaufgang", ru: "восход", uk: "схід сонця", level: "A1", topics: ["nature","time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["der Sonnenuntergang"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Sonnenaufgang ist schön.", ru: "Восход красивый.", uk: "Схід сонця гарний." }] },
-  { id: 30, word: "der Sonnenuntergang", ru: "закат", uk: "захід сонця", level: "A1", topics: ["nature","time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["der Sonnenaufgang"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Sonnenuntergang ist rot.", ru: "Закат красный.", uk: "Захід сонця червоний." }] },
-{ id: 34, word: "der Stift", ru: "ручка", uk: "ручка", level: "A1", topics: ["school","objects"], deSynonyms: ["der Kugelschreiber"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Stift liegt auf dem Tisch.", ru: "Ручка лежит на столе.", uk: "Ручка лежить на столі." }] },
-  { id: 35, word: "der Bleistift", ru: "карандаш", uk: "олівець", level: "A1", topics: ["school","objects"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich schreibe mit dem Bleistift.", ru: "Я пишу карандашом.", uk: "Я пишу олівцем." }] },
-  { id: 36, word: "der Spitzer", ru: "точилка", uk: "точилка", level: "A1", topics: ["school","objects"], deSynonyms: ["der Anspitzer"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Spitzer ist in meiner Tasche.", ru: "Точилка в моей сумке.", uk: "Точилка в моїй сумці." }] },
-  { id: 37, word: "der Gummi", ru: "ластик", uk: "гумка", level: "A1", topics: ["school","objects"], deSynonyms: ["der Radiergummi"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich brauche einen Gummi.", ru: "Мне нужен ластик.", uk: "Мені потрібна гумка." }] },
-  { id: 38, word: "die Schere", ru: "ножницы", uk: "ножиці", level: "A1", topics: ["school","objects"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Die Schere liegt hier.", ru: "Ножницы лежат здесь.", uk: "Ножиці лежать тут." }] },
-  { id: 39, word: "die Klammer", ru: "скрепка", uk: "скріпка", level: "A1", topics: ["office","school","objects"], deSynonyms: ["die Büroklammer"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Eine Klammer hält die Blätter zusammen.", ru: "Скрепка держит листы вместе.", uk: "Скріпка тримає аркуші разом." }] },
-  { id: 40, word: "das Klebeband", ru: "клейкая лента, скотч", uk: "клейка стрічка, скотч", level: "A1", topics: ["school","objects","craft"], deSynonyms: ["der Klebestreifen"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich benutze Klebeband.", ru: "Я использую скотч.", uk: "Я використовую скотч." }] },
-  { id: 41, word: "der Locher", ru: "дырокол", uk: "дирокол", level: "A1", topics: ["office","school","objects"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Locher ist auf dem Tisch.", ru: "Дырокол на столе.", uk: "Дирокол на столі." }] },
-  { id: 42, word: "der Papierkorb", ru: "мусорная корзина", uk: "кошик для сміття", level: "A1", topics: ["office","home","objects"], deSynonyms: ["der Mülleimer"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das Papier ist im Papierkorb.", ru: "Бумага в мусорной корзине.", uk: "Папір у кошику для сміття." }] },
-  { id: 43, word: "der Tisch", ru: "стол", uk: "стіл", level: "A1", topics: ["home","objects","classroom"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Tisch ist groß.", ru: "Стол большой.", uk: "Стіл великий." }] },
-  { id: 44, word: "der Stuhl", ru: "стул", uk: "стілець", level: "A1", topics: ["home","objects","classroom"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Stuhl ist bequem.", ru: "Стул удобный.", uk: "Стілець зручний." }] },
-  { id: 45, word: "das Handy", ru: "мобильный телефон", uk: "мобільний телефон", level: "A1", topics: ["communication","technology"], deSynonyms: ["das Mobiltelefon"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Mein Handy ist aus.", ru: "Мой телефон разрядился.", uk: "Мій телефон розрядився." }] },
-
-  { id: 46, word: "der Schüler", ru: "ученик", uk: "учень", level: "A1", topics: ["education","school"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Schüler hat eine Frage.", ru: "У ученика есть вопрос.", uk: "У учня є питання." }] },
-  { id: 47, word: "der Lehrer", ru: "учитель", uk: "вчитель", level: "A1", topics: ["education","school"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Lehrer erklärt die Aufgabe.", ru: "Учитель объясняет задание.", uk: "Вчитель пояснює завдання." }] },
-  { id: 48, word: "die Schule", ru: "школа", uk: "школа", level: "A1", topics: ["education","school"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Die Schule ist in der Nähe.", ru: "Школа рядом.", uk: "Школа поруч." }] },
-  { id: 49, word: "der Unterricht", ru: "урок", uk: "урок", level: "A1", topics: ["education","school"], deSynonyms: ["die Stunde"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Der Unterricht beginnt um acht.", ru: "Урок начинается в восемь.", uk: "Урок починається о восьмій." }] },
-  { id: 50, word: "die Hausaufgabe", ru: "домашнее задание", uk: "домашнє завдання", level: "A1", topics: ["education","school"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich mache die Hausaufgabe.", ru: "Я делаю домашнее задание.", uk: "Я роблю домашнє завдання." }] },
-  { id: 51, word: "die Antwort", ru: "ответ", uk: "відповідь", level: "A1", topics: ["education","communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Die Antwort ist richtig.", ru: "Ответ правильный.", uk: "Відповідь правильна." }] },
-  { id: 52, word: "die Frage", ru: "вопрос", uk: "питання", level: "A1", topics: ["education","communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich habe eine Frage.", ru: "У меня есть вопрос.", uk: "У мене є питання." }] },
-
-  { id: 53, word: "die Schweiz", ru: "Швейцария", uk: "Швейцарія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lebe in der Schweiz.", ru: "Я живу в Швейцарии.", uk: "Я живу у Швейцарії." }] },
-  { id: 54, word: "Deutschland", ru: "Германия", uk: "Німеччина", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Deutschland ist in Europa.", ru: "Германия в Европе.", uk: "Німеччина в Європі." }] },
-  { id: 55, word: "Österreich", ru: "Австрия", uk: "Австрія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Österreich ist ein Nachbarland.", ru: "Австрия — соседняя страна.", uk: "Австрія — сусідня країна." }] },
-  { id: 56, word: "Frankreich", ru: "Франция", uk: "Франція", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Frankreich ist groß.", ru: "Франция большая.", uk: "Франція велика." }] },
-  { id: 57, word: "Italien", ru: "Италия", uk: "Італія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Italien ist schön.", ru: "Италия красивая.", uk: "Італія гарна." }] },
-  { id: 58, word: "Liechtenstein", ru: "Лихтенштейн", uk: "Ліхтенштейн", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Liechtenstein ist klein.", ru: "Лихтенштейн маленький.", uk: "Ліхтенштейн маленький." }] },
-  { id: 59, word: "England", ru: "Англия", uk: "Англія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "England ist im Vereinigten Königreich.", ru: "Англия в Великобритании.", uk: "Англія у Великій Британії." }] },
-  { id: 60, word: "die USA", ru: "США", uk: "США", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich komme aus den USA.", ru: "Я из США.", uk: "Я зі США." }] },
-  { id: 61, word: "Kanada", ru: "Канада", uk: "Канада", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Kanada ist kalt.", ru: "В Канаде холодно.", uk: "У Канаді холодно." }] },
-  { id: 62, word: "Australien", ru: "Австралия", uk: "Австралія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Australien ist weit weg.", ru: "Австралия далеко.", uk: "Австралія далеко." }] },
-  { id: 63, word: "die Türkei", ru: "Турция", uk: "Туреччина", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Die Türkei ist schön.", ru: "Турция красивая.", uk: "Туреччина гарна." }] },
-  { id: 64, word: "Syrien", ru: "Сирия", uk: "Сирія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Syrien ist ein Land.", ru: "Сирия — это страна.", uk: "Сирія — це країна." }] },
-  { id: 65, word: "Ägypten", ru: "Египет", uk: "Єгипет", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ägypten ist in Afrika.", ru: "Египет в Африке.", uk: "Єгипет в Африці." }] },
-  { id: 66, word: "Äthiopien", ru: "Эфиопия", uk: "Ефіопія", level: "A1", topics: ["countries"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Äthiopien ist in Afrika.", ru: "Эфиопия в Африке.", uk: "Ефіопія в Африці." }] },
-
-  { id: 67, word: "Deutsch", ru: "немецкий язык", uk: "німецька мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich spreche Deutsch.", ru: "Я говорю по-немецки.", uk: "Я говорю німецькою." }] },
-  { id: 68, word: "Englisch", ru: "английский язык", uk: "англійська мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lerne Englisch.", ru: "Я учу английский.", uk: "Я вчу англійську." }] },
-  { id: 69, word: "Französisch", ru: "французский язык", uk: "французька мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich verstehe Französisch.", ru: "Я понимаю французский.", uk: "Я розумію французьку." }] },
-  { id: 70, word: "Italienisch", ru: "итальянский язык", uk: "італійська мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich spreche ein bisschen Italienisch.", ru: "Я немного говорю по-итальянски.", uk: "Я трохи говорю італійською." }] },
-  { id: 71, word: "Türkisch", ru: "турецкий язык", uk: "турецька мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Türkisch ist eine Sprache.", ru: "Турецкий — это язык.", uk: "Турецька — це мова." }] },
-  { id: 72, word: "Arabisch", ru: "арабский язык", uk: "арабська мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich höre Arabisch.", ru: "Я слышу арабскую речь.", uk: "Я чую арабську мову." }] },
-  { id: 73, word: "Amharisch", ru: "амхарский язык", uk: "амхарська мова", level: "A1", topics: ["languages"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Amharisch ist in Äthiopien.", ru: "Амхарский — в Эфиопии.", uk: "Амхарська — в Ефіопії." }] }
   {
-    id: 74,
+    id: 11,
     word: "der Name",
     ru: "имя",
     uk: "ім’я",
     level: "A1",
-    topics: ["personal", "address"],
+    topics: ["personal","forms"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Mein Name ist Anna.", ru: "Меня зовут Анна.", uk: "Мене звати Анна." }]
+    examples: [{ L2: "Wie ist dein Name?", ru: "Как тебя зовут?", uk: "Як тебе звати?" }]
   },
   {
-    id: 75,
+    id: 12,
     word: "der Vorname",
     ru: "имя (собственное)",
     uk: "ім’я",
     level: "A1",
-    topics: ["personal", "address"],
+    topics: ["personal","forms"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
@@ -254,202 +215,37 @@ window.decks.de_nouns_lernpunkt = [
     examples: [{ L2: "Mein Vorname ist Oleg.", ru: "Моё имя Олег.", uk: "Моє ім’я Олег." }]
   },
   {
-    id: 76,
+    id: 13,
     word: "der Nachname",
     ru: "фамилия",
     uk: "прізвище",
     level: "A1",
-    topics: ["personal", "address"],
+    topics: ["personal","forms"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Mein Nachname ist Müller.", ru: "Моя фамилия Мюллер.", uk: "Моє прізвище Мюллер." }]
+    examples: [{ L2: "Mein Nachname ist Peiko.", ru: "Моя фамилия Пейко.", uk: "Моє прізвище Пейко." }]
   },
   {
-    id: 77,
-    word: "der Planet",
-    ru: "планета",
-    uk: "планета",
-    level: "A1",
-    topics: ["nature"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Die Erde ist ein Planet.", ru: "Земля — планета.", uk: "Земля — планета." }]
-  },
-  {
-    id: 78,
-    word: "die Stadt",
-    ru: "город",
-    uk: "місто",
-    level: "A1",
-    topics: ["place", "address"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Die Stadt ist groß.", ru: "Город большой.", uk: "Місто велике." }]
-  },
-  {
-    id: 79,
-    word: "der Stadtteil",
-    ru: "район",
-    uk: "район",
-    level: "A1",
-    topics: ["place", "address"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Ich wohne in einem Stadtteil von Bern.", ru: "Я живу в районе Берна.", uk: "Я живу в районі Берна." }]
-  },
-  {
-    id: 80,
-    word: "die Postleitzahl",
-    ru: "почтовый индекс",
-    uk: "поштовий індекс",
-    level: "A1",
-    topics: ["address"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Was ist deine Postleitzahl?", ru: "Какой твой почтовый индекс?", uk: "Який твій поштовий індекс?" }]
-  },
-  {
-    id: 81,
-    word: "der Umschlag",
-    ru: "конверт",
-    uk: "конверт",
-    level: "A1",
-    topics: ["post", "objects"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Der Umschlag ist weiß.", ru: "Конверт белый.", uk: "Конверт білий." }]
-  },
-  {
-    id: 82,
-    word: "der Herr",
-    ru: "господин",
-    uk: "пан",
-    level: "A1",
-    topics: ["people", "formal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Guten Tag, Herr Meier.", ru: "Добрый день, господин Майер.", uk: "Добрий день, пан Майєр." }]
-  },
-  {
-    id: 83,
-    word: "die Frau",
-    ru: "госпожа",
-    uk: "пані",
-    level: "A1",
-    topics: ["people", "formal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Guten Tag, Frau Keller.", ru: "Добрый день, госпожа Келлер.", uk: "Добрий день, пані Келлер." }]
-  },
-  {
-    id: 84,
-    word: "der Mann",
-    ru: "мужчина",
-    uk: "человек (муж.)",
-    level: "A1",
-    topics: ["people"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Der Mann ist nett.", ru: "Мужчина дружелюбный.", uk: "Чоловік привітний." }]
-  },
-  {
-    id: 85,
-    word: "die Frau (Person)",
-    ru: "женщина",
-    uk: "жінка",
-    level: "A1",
-    topics: ["people"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Die Frau ist hier.", ru: "Женщина здесь.", uk: "Жінка тут." }]
-  },
-  {
-    id: 86,
-    word: "der Junge",
-    ru: "мальчик",
-    uk: "хлопчик",
-    level: "A1",
-    topics: ["people"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Der Junge spielt.", ru: "Мальчик играет.", uk: "Хлопчик грає." }]
-  },
-  {
-    id: 87,
-    word: "das Mädchen",
-    ru: "девочка",
-    uk: "дівчинка",
-    level: "A1",
-    topics: ["people"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Das Mädchen lernt.", ru: "Девочка учится.", uk: "Дівчинка вчиться." }]
-  },
-  {
-    id: 88,
+    id: 14,
     word: "die Adresse",
     ru: "адрес",
     uk: "адреса",
     level: "A1",
-    topics: ["address"],
+    topics: ["address","forms"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Meine Adresse ist hier.", ru: "Мой адрес здесь.", uk: "Моя адреса тут." }]
+    examples: [{ L2: "Das ist meine Adresse.", ru: "Это мой адрес.", uk: "Це моя адреса." }]
   },
   {
-    id: 89,
+    id: 15,
     word: "die Straße",
     ru: "улица",
     uk: "вулиця",
@@ -464,7 +260,7 @@ window.decks.de_nouns_lernpunkt = [
     examples: [{ L2: "Die Straße heißt Bahnhofstraße.", ru: "Улица называется Банхофштрассе.", uk: "Вулиця називається Банхофштрассе." }]
   },
   {
-    id: 90,
+    id: 16,
     word: "die Hausnummer",
     ru: "номер дома",
     uk: "номер будинку",
@@ -476,10 +272,70 @@ window.decks.de_nouns_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Hausnummer ist 10.", ru: "Номер дома — 10.", uk: "Номер будинку — 10." }]
+    examples: [{ L2: "Meine Hausnummer ist 12.", ru: "Мой номер дома 12.", uk: "Мій номер будинку 12." }]
   },
   {
-    id: 91,
+    id: 17,
+    word: "die Stadt",
+    ru: "город",
+    uk: "місто",
+    level: "A1",
+    topics: ["place"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Zürich ist eine Stadt.", ru: "Цюрих — это город.", uk: "Цюрих — це місто." }]
+  },
+  {
+    id: 18,
+    word: "der Stadtteil",
+    ru: "район",
+    uk: "район",
+    level: "A1",
+    topics: ["address","place"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich wohne in diesem Stadtteil.", ru: "Я живу в этом районе.", uk: "Я живу в цьому районі." }]
+  },
+  {
+    id: 19,
+    word: "die Postleitzahl",
+    ru: "почтовый индекс",
+    uk: "поштовий індекс",
+    level: "A1",
+    topics: ["address","forms"],
+    deSynonyms: ["die PLZ"],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wie ist deine Postleitzahl?", ru: "Какой у тебя почтовый индекс?", uk: "Який у тебе поштовий індекс?" }]
+  },
+  {
+    id: 20,
+    word: "der Umschlag",
+    ru: "конверт",
+    uk: "конверт",
+    level: "A1",
+    topics: ["post","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Umschlag ist weiß.", ru: "Конверт белый.", uk: "Конверт білий." }]
+  },
+  {
+    id: 21,
     word: "der Brief",
     ru: "письмо",
     uk: "лист",
@@ -491,15 +347,15 @@ window.decks.de_nouns_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Der Brief ist für dich.", ru: "Письмо для тебя.", uk: "Лист для тебе." }]
+    examples: [{ L2: "Ich schreibe einen Brief.", ru: "Я пишу письмо.", uk: "Я пишу лист." }]
   },
   {
-    id: 92,
+    id: 22,
     word: "die Visitenkarte",
     ru: "визитка",
     uk: "візитівка",
     level: "A1",
-    topics: ["work", "communication"],
+    topics: ["work","office"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
@@ -509,22 +365,607 @@ window.decks.de_nouns_lernpunkt = [
     examples: [{ L2: "Hier ist meine Visitenkarte.", ru: "Вот моя визитка.", uk: "Ось моя візитівка." }]
   },
   {
-    id: 93,
+    id: 23,
     word: "das Formular",
     ru: "формуляр",
     uk: "формуляр",
     level: "A1",
-    topics: ["work", "documents"],
+    topics: ["forms","office"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Bitte füll das Formular aus.", ru: "Пожалуйста, заполни формуляр.", uk: "Будь ласка, заповни формуляр." }]
+    examples: [{ L2: "Bitte fülle das Formular aus.", ru: "Пожалуйста, заполни формуляр.", uk: "Будь ласка, заповни формуляр." }]
   },
   {
-    id: 94,
+    id: 24,
+    word: "der Planet",
+    ru: "планета",
+    uk: "планета",
+    level: "A1",
+    topics: ["nature","space"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Erde ist ein Planet.", ru: "Земля — планета.", uk: "Земля — планета." }]
+  },
+  {
+    id: 25,
+    word: "der Schlüssel",
+    ru: "ключ",
+    uk: "ключ",
+    level: "A1",
+    topics: ["home","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wo ist der Schlüssel?", ru: "Где ключ?", uk: "Де ключ?" }]
+  },
+  {
+    id: 26,
+    word: "die Klinik",
+    ru: "клиника",
+    uk: "клініка",
+    level: "A1",
+    topics: ["health","place"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Klinik ist groß.", ru: "Клиника большая.", uk: "Клініка велика." }]
+  },
+  {
+    id: 27,
+    word: "der Park",
+    ru: "парк",
+    uk: "парк",
+    level: "A1",
+    topics: ["place","city"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wir gehen in den Park.", ru: "Мы идём в парк.", uk: "Ми йдемо в парк." }]
+  },
+  {
+    id: 28,
+    word: "das Gespräch",
+    ru: "разговор",
+    uk: "розмова",
+    level: "A1",
+    topics: ["communication"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das Gespräch ist kurz.", ru: "Разговор короткий.", uk: "Розмова коротка." }]
+  },
+  {
+    id: 29,
+    word: "der Fehler",
+    ru: "ошибка",
+    uk: "помилка",
+    level: "A1",
+    topics: ["learning"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist ein Fehler.", ru: "Это ошибка.", uk: "Це помилка." }]
+  },
+  {
+    id: 30,
+    word: "der Stift",
+    ru: "ручка",
+    uk: "ручка",
+    level: "A1",
+    topics: ["school","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Stift liegt auf dem Tisch.", ru: "Ручка лежит на столе.", uk: "Ручка лежить на столі." }]
+  },
+  {
+    id: 31,
+    word: "der Bleistift",
+    ru: "карандаш",
+    uk: "олівець",
+    level: "A1",
+    topics: ["school","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich schreibe mit dem Bleistift.", ru: "Я пишу карандашом.", uk: "Я пишу олівцем." }]
+  },
+  {
+    id: 32,
+    word: "der Spitzer",
+    ru: "точилка",
+    uk: "точилка",
+    level: "A1",
+    topics: ["school","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Spitzer ist klein.", ru: "Точилка маленькая.", uk: "Точилка маленька." }]
+  },
+  {
+    id: 33,
+    word: "der Gummi",
+    ru: "ластик",
+    uk: "гумка",
+    level: "A1",
+    topics: ["school","objects"],
+    deSynonyms: ["der Radiergummi"],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich brauche einen Gummi.", ru: "Мне нужен ластик.", uk: "Мені потрібна гумка." }]
+  },
+  {
+    id: 34,
+    word: "die Schere",
+    ru: "ножницы",
+    uk: "ножиці",
+    level: "A1",
+    topics: ["school","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Schere ist scharf.", ru: "Ножницы острые.", uk: "Ножиці гострі." }]
+  },
+  {
+    id: 35,
+    word: "die Klammer",
+    ru: "скрепка",
+    uk: "скріпка",
+    level: "A1",
+    topics: ["office","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Klammer ist aus Metall.", ru: "Скрепка из металла.", uk: "Скріпка з металу." }]
+  },
+  {
+    id: 36,
+    word: "das Klebeband",
+    ru: "скотч",
+    uk: "скотч",
+    level: "A1",
+    topics: ["office","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich klebe das Papier mit Klebeband.", ru: "Я клею бумагу скотчем.", uk: "Я клею папір скотчем." }]
+  },
+  {
+    id: 37,
+    word: "der Locher",
+    ru: "дырокол",
+    uk: "діркопробивач",
+    level: "A1",
+    topics: ["office","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Locher macht zwei Löcher.", ru: "Дырокол делает две дырки.", uk: "Діркопробивач робить два отвори." }]
+  },
+  {
+    id: 38,
+    word: "der Papierkorb",
+    ru: "мусорная корзина",
+    uk: "смітник",
+    level: "A1",
+    topics: ["office","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Papierkorb ist voll.", ru: "Корзина полная.", uk: "Смітник повний." }]
+  },
+  {
+    id: 39,
+    word: "der Tisch",
+    ru: "стол",
+    uk: "стіл",
+    level: "A1",
+    topics: ["home","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Tisch ist groß.", ru: "Стол большой.", uk: "Стіл великий." }]
+  },
+  {
+    id: 40,
+    word: "der Stuhl",
+    ru: "стул",
+    uk: "стілець",
+    level: "A1",
+    topics: ["home","objects"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Stuhl ist bequem.", ru: "Стул удобный.", uk: "Стілець зручний." }]
+  },
+  {
+    id: 41,
+    word: "das Handy",
+    ru: "телефон",
+    uk: "телефон",
+    level: "A1",
+    topics: ["technology","daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Mein Handy ist neu.", ru: "Мой телефон новый.", uk: "Мій телефон новий." }]
+  },
+  {
+    id: 42,
+    word: "der Schüler",
+    ru: "ученик",
+    uk: "учень",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Schüler lernt Deutsch.", ru: "Ученик учит немецкий.", uk: "Учень вчить німецьку." }]
+  },
+  {
+    id: 43,
+    word: "der Lehrer",
+    ru: "учитель",
+    uk: "вчитель",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Lehrer erklärt die Aufgabe.", ru: "Учитель объясняет задание.", uk: "Вчитель пояснює завдання." }]
+  },
+  {
+    id: 44,
+    word: "die Schule",
+    ru: "школа",
+    uk: "школа",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Schule ist nah.", ru: "Школа рядом.", uk: "Школа поруч." }]
+  },
+  {
+    id: 45,
+    word: "der Unterricht",
+    ru: "урок",
+    uk: "урок",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Der Unterricht beginnt um acht.", ru: "Урок начинается в восемь.", uk: "Урок починається о восьмій." }]
+  },
+  {
+    id: 46,
+    word: "die Hausaufgabe",
+    ru: "домашнее задание",
+    uk: "домашнє завдання",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich mache die Hausaufgabe.", ru: "Я делаю домашнее задание.", uk: "Я роблю домашнє завдання." }]
+  },
+  {
+    id: 47,
+    word: "die Antwort",
+    ru: "ответ",
+    uk: "відповідь",
+    level: "A1",
+    topics: ["education","communication"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Antwort ist richtig.", ru: "Ответ правильный.", uk: "Відповідь правильна." }]
+  },
+  {
+    id: 48,
+    word: "die Frage",
+    ru: "вопрос",
+    uk: "запитання",
+    level: "A1",
+    topics: ["education","communication"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich habe eine Frage.", ru: "У меня есть вопрос.", uk: "У мене є запитання." }]
+  },
+  {
+    id: 49,
+    word: "die Schweiz",
+    ru: "Швейцария",
+    uk: "Швейцарія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich lebe in der Schweiz.", ru: "Я живу в Швейцарии.", uk: "Я живу у Швейцарії." }]
+  },
+  {
+    id: 50,
+    word: "Deutschland",
+    ru: "Германия",
+    uk: "Німеччина",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Deutschland ist in Europa.", ru: "Германия в Европе.", uk: "Німеччина в Європі." }]
+  },
+  {
+    id: 51,
+    word: "Österreich",
+    ru: "Австрия",
+    uk: "Австрія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Österreich ist neben der Schweiz.", ru: "Австрия рядом со Швейцарией.", uk: "Австрія поруч зі Швейцарією." }]
+  },
+  {
+    id: 52,
+    word: "Frankreich",
+    ru: "Франция",
+    uk: "Франція",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Frankreich ist groß.", ru: "Франция большая.", uk: "Франція велика." }]
+  },
+  {
+    id: 53,
+    word: "Italien",
+    ru: "Италия",
+    uk: "Італія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Italien ist warm.", ru: "В Италии тепло.", uk: "В Італії тепло." }]
+  },
+  {
+    id: 54,
+    word: "Liechtenstein",
+    ru: "Лихтенштейн",
+    uk: "Ліхтенштейн",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Liechtenstein ist klein.", ru: "Лихтенштейн маленький.", uk: "Ліхтенштейн маленький." }]
+  },
+  {
+    id: 55,
+    word: "England",
+    ru: "Англия",
+    uk: "Англія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "England ist in Großbritannien.", ru: "Англия в Великобритании.", uk: "Англія у Великій Британії." }]
+  },
+  {
+    id: 56,
+    word: "die USA",
+    ru: "США",
+    uk: "США",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die USA sind weit weg.", ru: "США далеко.", uk: "США далеко." }]
+  },
+  {
+    id: 57,
+    word: "Kanada",
+    ru: "Канада",
+    uk: "Канада",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Kanada ist kalt.", ru: "Канада холодная.", uk: "Канада холодна." }]
+  },
+  {
+    id: 58,
+    word: "Australien",
+    ru: "Австралия",
+    uk: "Австралія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Australien ist weit weg.", ru: "Австралия далеко.", uk: "Австралія далеко." }]
+  },
+  {
+    id: 59,
+    word: "die Türkei",
+    ru: "Турция",
+    uk: "Туреччина",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Türkei ist schön.", ru: "Турция красивая.", uk: "Туреччина гарна." }]
+  },
+  {
+    id: 60,
+    word: "Syrien",
+    ru: "Сирия",
+    uk: "Сирія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Syrien ist ein Land.", ru: "Сирия — страна.", uk: "Сирія — країна." }]
+  },
+  {
+    id: 61,
+    word: "Ägypten",
+    ru: "Египет",
+    uk: "Єгипет",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ägypten hat Pyramiden.", ru: "В Египте есть пирамиды.", uk: "В Єгипті є піраміди." }]
+  },
+  {
+    id: 62,
+    word: "Äthiopien",
+    ru: "Эфиопия",
+    uk: "Ефіопія",
+    level: "A1",
+    topics: ["countries"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Äthiopien ist in Afrika.", ru: "Эфиопия в Африке.", uk: "Ефіопія в Африці." }]
+  },
+  {
+    id: 63,
     word: "Polen",
     ru: "Польша",
     uk: "Польща",
@@ -539,113 +980,123 @@ window.decks.de_nouns_lernpunkt = [
     examples: [{ L2: "Polen ist in Europa.", ru: "Польша в Европе.", uk: "Польща в Європі." }]
   },
   {
-    id: 95,
-    word: "der Schlüssel",
-    ru: "ключ",
-    uk: "ключ",
+    id: 64,
+    word: "Deutsch",
+    ru: "немецкий язык",
+    uk: "німецька мова",
     level: "A1",
-    topics: ["home", "objects"],
+    topics: ["languages"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Wo ist der Schlüssel?", ru: "Где ключ?", uk: "Де ключ?" }]
+    examples: [{ L2: "Ich spreche Deutsch.", ru: "Я говорю по-немецки.", uk: "Я говорю німецькою." }]
   },
   {
-    id: 96,
-    word: "der Fehler",
-    ru: "ошибка",
-    uk: "помилка",
+    id: 65,
+    word: "Englisch",
+    ru: "английский язык",
+    uk: "англійська мова",
     level: "A1",
-    topics: ["work", "study"],
+    topics: ["languages"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist ein Fehler.", ru: "Это ошибка.", uk: "Це помилка." }]
+    examples: [{ L2: "Englisch ist wichtig.", ru: "Английский важен.", uk: "Англійська важлива." }]
   },
   {
-    id: 97,
-    word: "die Klinik",
-    ru: "клиника",
-    uk: "клініка",
+    id: 66,
+    word: "Französisch",
+    ru: "французский язык",
+    uk: "французька мова",
     level: "A1",
-    topics: ["health", "place"],
+    topics: ["languages"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Die Klinik ist nah.", ru: "Клиника рядом.", uk: "Клініка поруч." }]
+    examples: [{ L2: "Ich lerne Französisch.", ru: "Я учу французский.", uk: "Я вчу французьку." }]
   },
   {
-    id: 98,
-    word: "der Park",
-    ru: "парк",
-    uk: "парк",
+    id: 67,
+    word: "Italienisch",
+    ru: "итальянский язык",
+    uk: "італійська мова",
     level: "A1",
-    topics: ["place"],
+    topics: ["languages"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Wir gehen in den Park.", ru: "Мы идём в парк.", uk: "Ми йдемо в парк." }]
+    examples: [{ L2: "Italienisch klingt schön.", ru: "Итальянский звучит красиво.", uk: "Італійська звучить гарно." }]
   },
   {
-    id: 99,
-    word: "das Gespräch",
-    ru: "разговор",
-    uk: "розмова",
+    id: 68,
+    word: "Türkisch",
+    ru: "турецкий язык",
+    uk: "турецька мова",
     level: "A1",
-    topics: ["communication"],
+    topics: ["languages"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das Gespräch ist kurz.", ru: "Разговор короткий.", uk: "Розмова коротка." }]
+    examples: [{ L2: "Türkisch ist schwer.", ru: "Турецкий сложный.", uk: "Турецька складна." }]
+  },
+  {
+    id: 69,
+    word: "Arabisch",
+    ru: "арабский язык",
+    uk: "арабська мова",
+    level: "A1",
+    topics: ["languages"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Arabisch ist eine Sprache.", ru: "Арабский — это язык.", uk: "Арабська — це мова." }]
+  },
+  {
+    id: 70,
+    word: "Amharisch",
+    ru: "амхарский язык",
+    uk: "амхарська мова",
+    level: "A1",
+    topics: ["languages"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Amharisch spricht man in Äthiopien.", ru: "На амхарском говорят в Эфиопии.", uk: "Амхарською говорять в Ефіопії." }]
   }
 ];
 
 // =======================
-// VERBS (глаголы)
+// Остальные деки (пока пустые, структура готова)
 // =======================
 window.decks.de_verbs_lernpunkt = [
-{ id: 1, word: "lesen", ru: "читать", uk: "читати", level: "A1", topics: ["education","daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lese ein Buch.", ru: "Я читаю книгу.", uk: "Я читаю книгу." }] },
-  { id: 2, word: "schreiben", ru: "писать", uk: "писати", level: "A1", topics: ["education","daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich schreibe einen Text.", ru: "Я пишу текст.", uk: "Я пишу текст." }] },
-  { id: 3, word: "wissen", ru: "знать", uk: "знати", level: "A1", topics: ["thinking"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["nicht wissen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich weiß es.", ru: "Я это знаю.", uk: "Я це знаю." }] },
-  { id: 4, word: "sein", ru: "быть", uk: "бути", level: "A1", topics: ["basic"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich bin hier.", ru: "Я здесь.", uk: "Я тут." }] },
-  { id: 5, word: "haben", ru: "иметь", uk: "мати", level: "A1", topics: ["basic"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich habe Zeit.", ru: "У меня есть время.", uk: "Я маю час." }] },
-  { id: 6, word: "hören", ru: "слушать, слышать", uk: "слухати, чути", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich höre Musik.", ru: "Я слушаю музыку.", uk: "Я слухаю музику." }] },
-  { id: 7, word: "verstehen", ru: "понимать", uk: "розуміти", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["nicht verstehen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich verstehe dich.", ru: "Я понимаю тебя.", uk: "Я тебе розумію." }] },
-  { id: 8, word: "sprechen", ru: "говорить", uk: "говорити", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich spreche Deutsch.", ru: "Я говорю по-немецки.", uk: "Я говорю німецькою." }] },
-  { id: 9, word: "wiederholen", ru: "повторять", uk: "повторювати", level: "A1", topics: ["education"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Bitte wiederhole das Wort.", ru: "Пожалуйста, повтори слово.", uk: "Будь ласка, повтори слово." }] },
-  { id: 10, word: "sich freuen", ru: "радоваться", uk: "радіти", level: "A1", topics: ["feelings"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["sich ärgern"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich freue mich.", ru: "Я радуюсь.", uk: "Я радію." }] },
-{ id: 11, word: "geben", ru: "давать", uk: "давати", level: "A1", topics: ["daily","communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich gebe dir den Stift.", ru: "Я даю тебе ручку.", uk: "Я даю тобі ручку." }] },
-  { id: 12, word: "nehmen", ru: "брать", uk: "брати", level: "A1", topics: ["daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich nehme das Heft.", ru: "Я беру тетрадь.", uk: "Я беру зошит." }] },
-  { id: 13, word: "wählen", ru: "выбирать", uk: "вибирати", level: "A1", topics: ["daily"], deSynonyms: ["auswählen"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich wähle einen Stuhl.", ru: "Я выбираю стул.", uk: "Я вибираю стілець." }] },
-  { id: 14, word: "ersetzen", ru: "заменять", uk: "замінювати", level: "A1", topics: ["daily"], deSynonyms: ["tauschen"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich ersetze das Blatt.", ru: "Я заменяю лист.", uk: "Я замінюю аркуш." }] },
-  { id: 15, word: "ausfüllen", ru: "заполнять", uk: "заповнювати", level: "A1", topics: ["office","education"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Bitte fülle das Formular aus.", ru: "Пожалуйста, заполни форму.", uk: "Будь ласка, заповни форму." }] },
-  { id: 16, word: "unterschreiben", ru: "подписывать", uk: "підписувати", level: "A1", topics: ["office","daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich unterschreibe das Papier.", ru: "Я подписываю бумагу.", uk: "Я підписую папір." }] },
-  { id: 17, word: "ankommen", ru: "приезжать", uk: "приїжджати", level: "A1", topics: ["movement","travel"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wir kommen um acht an.", ru: "Мы приезжаем в восемь.", uk: "Ми приїжджаємо о восьмій." }] },
-  { id: 18, word: "kommen", ru: "приходить", uk: "приходити", level: "A1", topics: ["movement"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Komm bitte hierher.", ru: "Приходи, пожалуйста, сюда.", uk: "Прийди, будь ласка, сюди." }] },
-  { id: 19, word: "leben", ru: "жить", uk: "жити", level: "A1", topics: ["daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lebe in der Schweiz.", ru: "Я живу в Швейцарии.", uk: "Я живу у Швейцарії." }] },
-  { id: 20, word: "lernen", ru: "учить, учиться", uk: "вчити, вчитися", level: "A1", topics: ["education"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lerne Deutsch.", ru: "Я учу немецкий.", uk: "Я вчу німецьку." }] }
   {
-    id: 21,
+    id: 1,
     word: "wohnen",
     ru: "проживать",
     uk: "проживати",
     level: "A1",
-    topics: ["home", "address"],
+    topics: ["home","address"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
@@ -655,88 +1106,58 @@ window.decks.de_verbs_lernpunkt = [
     examples: [{ L2: "Ich wohne in Zürich.", ru: "Я живу в Цюрихе.", uk: "Я живу в Цюриху." }]
   },
   {
-    id: 22,
-    word: "senden",
+    id: 2,
+    word: "schicken",
     ru: "отправлять",
     uk: "надсилати",
     level: "A1",
-    topics: ["post", "communication"],
-    deSynonyms: [],
+    topics: ["post","communication"],
+    deSynonyms: ["senden"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich sende einen Brief.", ru: "Я отправляю письмо.", uk: "Я надсилаю лист." }]
+    examples: [{ L2: "Ich schicke einen Brief.", ru: "Я отправляю письмо.", uk: "Я надсилаю лист." }]
   },
   {
-    id: 23,
+    id: 3,
     word: "bekommen",
     ru: "получать",
     uk: "отримувати",
     level: "A1",
-    topics: ["post", "communication"],
+    topics: ["daily"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich bekomme eine Nachricht.", ru: "Я получаю сообщение.", uk: "Я отримую повідомлення." }]
+    examples: [{ L2: "Ich bekomme eine Antwort.", ru: "Я получаю ответ.", uk: "Я отримую відповідь." }]
   },
   {
-    id: 24,
+    id: 4,
     word: "sich vorstellen",
     ru: "представляться",
     uk: "представлятися",
     level: "A1",
-    topics: ["communication", "personal"],
+    topics: ["communication"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich stelle mich vor: Ich heiße Tom.", ru: "Я представлюсь: меня зовут Том.", uk: "Я представлюся: мене звати Том." }]
+    examples: [{ L2: "Ich stelle mich vor.", ru: "Я представлюсь.", uk: "Я представлюся." }]
   },
   {
-    id: 25,
-    word: "ordnen",
-    ru: "упорядочивать",
-    uk: "впорядковувати",
-    level: "A1",
-    topics: ["daily", "work"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Ich ordne die Papiere.", ru: "Я упорядочиваю бумаги.", uk: "Я впорядковую папери." }]
-  },
-  {
-    id: 26,
-    word: "markieren",
-    ru: "маркировать",
-    uk: "маркувати",
-    level: "A1",
-    topics: ["work", "study"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Markiere die richtige Antwort.", ru: "Отметь правильный ответ.", uk: "Познач правильну відповідь." }]
-  },
-  {
-    id: 27,
+    id: 5,
     word: "hinzufügen",
     ru: "добавлять",
     uk: "додавати",
     level: "A1",
-    topics: ["work", "daily"],
-    deSynonyms: [],
+    topics: ["office","learning"],
+    deSynonyms: ["addieren"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
@@ -745,42 +1166,42 @@ window.decks.de_verbs_lernpunkt = [
     examples: [{ L2: "Ich füge ein Wort hinzu.", ru: "Я добавляю слово.", uk: "Я додаю слово." }]
   },
   {
-    id: 28,
+    id: 6,
     word: "ergänzen",
-    ru: "дополнить",
-    uk: "доповнити",
+    ru: "дополнять",
+    uk: "доповнювати",
     level: "A1",
-    topics: ["work", "daily"],
+    topics: ["office","learning"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich ergänze die Liste.", ru: "Я дополняю список.", uk: "Я доповнюю список." }]
+    examples: [{ L2: "Bitte ergänze den Satz.", ru: "Пожалуйста, дополни предложение.", uk: "Будь ласка, доповни речення." }]
   },
   {
-    id: 29,
+    id: 7,
     word: "ändern",
-    ru: "поменять",
+    ru: "менять",
     uk: "змінювати",
     level: "A1",
-    topics: ["work", "daily"],
-    deSynonyms: [],
+    topics: ["office","daily"],
+    deSynonyms: ["wechseln"],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Kannst du das ändern?", ru: "Можешь это поменять?", uk: "Можеш це змінити?" }]
+    examples: [{ L2: "Ich ändere den Plan.", ru: "Я меняю план.", uk: "Я змінюю план." }]
   },
   {
-    id: 30,
+    id: 8,
     word: "kleben",
     ru: "клеить",
     uk: "клеїти",
     level: "A1",
-    topics: ["craft", "school"],
+    topics: ["school","craft"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
@@ -790,37 +1211,292 @@ window.decks.de_verbs_lernpunkt = [
     examples: [{ L2: "Ich klebe das Papier.", ru: "Я клею бумагу.", uk: "Я клею папір." }]
   },
   {
-    id: 31,
+    id: 9,
     word: "öffnen",
     ru: "открывать",
     uk: "відкривати",
     level: "A1",
-    topics: ["daily", "home"],
+    topics: ["daily"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
-    deAntonyms: ["schließen"],
+    deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
     examples: [{ L2: "Ich öffne die Tür.", ru: "Я открываю дверь.", uk: "Я відчиняю двері." }]
   },
   {
-    id: 32,
+    id: 10,
     word: "schließen",
     ru: "закрывать",
     uk: "закривати",
     level: "A1",
-    topics: ["daily", "home"],
+    topics: ["daily"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
-    deAntonyms: ["öffnen"],
+    deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
     examples: [{ L2: "Ich schließe das Fenster.", ru: "Я закрываю окно.", uk: "Я зачиняю вікно." }]
   },
   {
-    id: 33,
+    id: 11,
+    word: "markieren",
+    ru: "маркировать",
+    uk: "позначати",
+    level: "A1",
+    topics: ["office","learning"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Markiere das Wort.", ru: "Отметь слово.", uk: "Познач слово." }]
+  },
+  {
+    id: 12,
+    word: "ordnen",
+    ru: "упорядочивать",
+    uk: "впорядковувати",
+    level: "A1",
+    topics: ["office","learning"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich ordne die Karten.", ru: "Я упорядочиваю карточки.", uk: "Я впорядковую картки." }]
+  },
+  {
+    id: 13,
+    word: "buchstabieren",
+    ru: "произносить по буквам",
+    uk: "вимовляти по літерах",
+    level: "A1",
+    topics: ["communication","learning"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Kannst du das bitte buchstabieren?", ru: "Можешь произнести это по буквам?", uk: "Можеш вимовити це по літерах?" }]
+  },
+  {
+    id: 14,
+    word: "bedauern",
+    ru: "сожалеть",
+    uk: "шкодувати",
+    level: "A1",
+    topics: ["feelings","communication"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich bedauere das.", ru: "Мне жаль.", uk: "Мені шкода." }]
+  },
+  {
+    id: 15,
+    word: "wählen",
+    ru: "выбирать",
+    uk: "вибирати",
+    level: "A1",
+    topics: ["daily","office"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich wähle ein Wort.", ru: "Я выбираю слово.", uk: "Я вибираю слово." }]
+  },
+  {
+    id: 16,
+    word: "ersetzen",
+    ru: "заменять",
+    uk: "замінювати",
+    level: "A1",
+    topics: ["office"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich ersetze das Wort.", ru: "Я заменяю слово.", uk: "Я замінюю слово." }]
+  },
+  {
+    id: 17,
+    word: "ausfüllen",
+    ru: "заполнять",
+    uk: "заповнювати",
+    level: "A1",
+    topics: ["forms","office"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich fülle das Formular aus.", ru: "Я заполняю формуляр.", uk: "Я заповнюю формуляр." }]
+  },
+  {
+    id: 18,
+    word: "unterschreiben",
+    ru: "подписывать",
+    uk: "підписувати",
+    level: "A1",
+    topics: ["forms","office"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Bitte unterschreibe hier.", ru: "Пожалуйста, подпиши здесь.", uk: "Будь ласка, підпиши тут." }]
+  },
+  {
+    id: 19,
+    word: "hören",
+    ru: "слышать",
+    uk: "чути",
+    level: "A1",
+    topics: ["senses"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich höre dich gut.", ru: "Я хорошо тебя слышу.", uk: "Я добре тебе чую." }]
+  },
+  {
+    id: 20,
+    word: "ankommen",
+    ru: "приезжать",
+    uk: "приїжджати",
+    level: "A1",
+    topics: ["movement"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich komme morgen an.", ru: "Я приезжаю завтра.", uk: "Я приїжджаю завтра." }]
+  },
+  {
+    id: 21,
+    word: "kommen",
+    ru: "приходить",
+    uk: "приходити",
+    level: "A1",
+    topics: ["movement"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich komme jetzt.", ru: "Я прихожу сейчас.", uk: "Я приходжу зараз." }]
+  },
+  {
+    id: 22,
+    word: "leben",
+    ru: "жить",
+    uk: "жити",
+    level: "A1",
+    topics: ["daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich lebe in der Schweiz.", ru: "Я живу в Швейцарии.", uk: "Я живу у Швейцарії." }]
+  },
+  {
+    id: 23,
+    word: "lernen",
+    ru: "учить / учиться",
+    uk: "вчити / вчитися",
+    level: "A1",
+    topics: ["education"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich lerne Deutsch.", ru: "Я учу немецкий.", uk: "Я вчу німецьку." }]
+  },
+  {
+    id: 24,
+    word: "schreiben",
+    ru: "писать",
+    uk: "писати",
+    level: "A1",
+    topics: ["education","daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich schreibe eine Nachricht.", ru: "Я пишу сообщение.", uk: "Я пишу повідомлення." }]
+  },
+  {
+    id: 25,
+    word: "geben",
+    ru: "давать",
+    uk: "давати",
+    level: "A1",
+    topics: ["daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich gebe dir den Stift.", ru: "Я даю тебе ручку.", uk: "Я даю тобі ручку." }]
+  },
+  {
+    id: 26,
+    word: "nehmen",
+    ru: "брать",
+    uk: "брати",
+    level: "A1",
+    topics: ["daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich nehme den Schlüssel.", ru: "Я беру ключ.", uk: "Я беру ключ." }]
+  },
+  {
+    id: 27,
+    word: "spielen",
+    ru: "играть",
+    uk: "грати",
+    level: "A1",
+    topics: ["hobby","daily"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wir spielen Fußball.", ru: "Мы играем в футбол.", uk: "Ми граємо у футбол." }]
+  },
+  {
+    id: 28,
     word: "begrüßen",
     ru: "приветствовать",
     uk: "вітати",
@@ -832,10 +1508,10 @@ window.decks.de_verbs_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich begrüße dich.", ru: "Я приветствую тебя.", uk: "Я вітаю тебе." }]
+    examples: [{ L2: "Ich begrüße den Lehrer.", ru: "Я приветствую учителя.", uk: "Я вітаю вчителя." }]
   },
   {
-    id: 34,
+    id: 29,
     word: "sich verabschieden",
     ru: "прощаться",
     uk: "прощатися",
@@ -848,69 +1524,101 @@ window.decks.de_verbs_lernpunkt = [
     ruAntonyms: [],
     ukAntonyms: [],
     examples: [{ L2: "Wir verabschieden uns.", ru: "Мы прощаемся.", uk: "Ми прощаємось." }]
-  },
-  {
-    id: 35,
-    word: "buchstabieren",
-    ru: "произносить по буквам",
-    uk: "вимовляти по літерах",
-    level: "A1",
-    topics: ["communication"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Kannst du deinen Namen buchstabieren?", ru: "Можешь произнести своё имя по буквам?", uk: "Можеш вимовити своє ім’я по літерах?" }]
-  },
-  {
-    id: 36,
-    word: "bedauern",
-    ru: "сожалеть",
-    uk: "шкодувати",
-    level: "A1",
-    topics: ["feelings", "formal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Ich bedaure das.", ru: "Мне жаль.", uk: "Мені шкода." }]
-  },
-  {
-    id: 37,
-    word: "spielen",
-    ru: "играть",
-    uk: "грати",
-    level: "A1",
-    topics: ["daily", "hobby"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Die Kinder spielen im Park.", ru: "Дети играют в парке.", uk: "Діти грають у парку." }]
   }
 ];
-
-// =======================
-// ADJECTIVES / ADVERBS
-// =======================
 window.decks.de_adjectives_lernpunkt = [
-{ id: 1, word: "gut", ru: "хорошо", uk: "добре", level: "A1", topics: ["quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["schlecht"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist gut.", ru: "Это хорошо.", uk: "Це добре." }] },
-  { id: 2, word: "schlecht", ru: "плохо", uk: "погано", level: "A1", topics: ["quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["gut"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist schlecht.", ru: "Это плохо.", uk: "Це погано." }] },
-  { id: 3, word: "früh", ru: "рано", uk: "рано", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["spät"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich bin früh da.", ru: "Я пришёл рано.", uk: "Я прийшов рано." }] },
-  { id: 4, word: "spät", ru: "поздно", uk: "пізно", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["früh"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Es ist spät.", ru: "Поздно.", uk: "Пізно." }] },
-{ id: 5, word: "richtig", ru: "правильно", uk: "правильно", level: "A1", topics: ["education","quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["falsch"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist richtig.", ru: "Это правильно.", uk: "Це правильно." }] },
-  { id: 6, word: "falsch", ru: "неправильно", uk: "неправильно", level: "A1", topics: ["education","quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["richtig"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist falsch.", ru: "Это неправильно.", uk: "Це неправильно." }] },
-  { id: 7, word: "super", ru: "отлично", uk: "чудово", level: "A1", topics: ["communication","quality"], deSynonyms: ["sehr gut"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Super!", ru: "Отлично!", uk: "Чудово!" }] },
-  { id: 8, word: "leicht", ru: "легко", uk: "легко", level: "A1", topics: ["quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["schwer"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist leicht.", ru: "Это легко.", uk: "Це легко." }] },
-  { id: 9, word: "schwer", ru: "сложно", uk: "складно", level: "A1", topics: ["quality"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["leicht"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Das ist schwer.", ru: "Это сложно.", uk: "Це складно." }] }
   {
-    id: 10,
+    id: 1,
+    word: "richtig",
+    ru: "правильно",
+    uk: "правильно",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: ["falsch"],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist richtig.", ru: "Это правильно.", uk: "Це правильно." }]
+  },
+  {
+    id: 2,
+    word: "falsch",
+    ru: "неправильно",
+    uk: "неправильно",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: ["richtig"],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist falsch.", ru: "Это неправильно.", uk: "Це неправильно." }]
+  },
+  {
+    id: 3,
+    word: "super",
+    ru: "отлично",
+    uk: "чудово",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist super!", ru: "Это отлично!", uk: "Це чудово!" }]
+  },
+  {
+    id: 4,
+    word: "leicht",
+    ru: "легко",
+    uk: "легко",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: ["schwer"],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist leicht.", ru: "Это легко.", uk: "Це легко." }]
+  },
+  {
+    id: 5,
+    word: "schwer",
+    ru: "сложно",
+    uk: "складно",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: ["leicht"],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist schwer.", ru: "Это сложно.", uk: "Це складно." }]
+  },
+  {
+    id: 6,
+    word: "interessant",
+    ru: "интересно",
+    uk: "цікаво",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist interessant.", ru: "Это интересно.", uk: "Це цікаво." }]
+  },
+  {
+    id: 7,
     word: "fertig",
     ru: "готовый",
     uk: "готовий",
@@ -925,7 +1633,7 @@ window.decks.de_adjectives_lernpunkt = [
     examples: [{ L2: "Ich bin fertig.", ru: "Я готов.", uk: "Я готовий." }]
   },
   {
-    id: 11,
+    id: 8,
     word: "herzlich",
     ru: "сердечно",
     uk: "щиро",
@@ -937,101 +1645,92 @@ window.decks.de_adjectives_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Herzlich willkommen!", ru: "Сердечно добро пожаловать!", uk: "Щиро ласкаво просимо!" }]
-  },
-  {
-    id: 12,
-    word: "interessant",
-    ru: "интересно",
-    uk: "цікаво",
-    level: "A1",
-    topics: ["daily"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Das ist interessant.", ru: "Это интересно.", uk: "Це цікаво." }]
+    examples: [{ L2: "Herzlichen Dank!", ru: "Большое спасибо!", uk: "Щиро дякую!" }]
   }
 ];
-
-// =======================
-// PRONOUNS / PARTICLES / QUESTIONS
-// =======================
+window.decks.de_adverbs_lernpunkt = [
+  {
+    id: 1,
+    word: "schon",
+    ru: "уже",
+    uk: "вже",
+    level: "A1",
+    topics: ["time"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: ["noch nicht"],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich bin schon da.", ru: "Я уже здесь.", uk: "Я вже тут." }]
+  },
+  {
+    id: 2,
+    word: "genau",
+    ru: "точно",
+    uk: "точно",
+    level: "A1",
+    topics: ["quality"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Genau!", ru: "Точно!", uk: "Точно!" }]
+  },
+  {
+    id: 3,
+    word: "fast",
+    ru: "почти",
+    uk: "майже",
+    level: "A1",
+    topics: ["quantity"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Fast fertig.", ru: "Почти готово.", uk: "Майже готово." }]
+  },
+  {
+    id: 4,
+    word: "jetzt",
+    ru: "сейчас",
+    uk: "зараз",
+    level: "A1",
+    topics: ["time"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ich komme jetzt.", ru: "Я прихожу сейчас.", uk: "Я приходжу зараз." }]
+  },
+  {
+    id: 5,
+    word: "später",
+    ru: "потом",
+    uk: "потім",
+    level: "A1",
+    topics: ["time"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Später lernen wir.", ru: "Потом мы учимся.", uk: "Потім ми навчаємось." }]
+  }
+];
 window.decks.de_pronouns_lernpunkt = [
-{ id: 1, word: "ich", ru: "я", uk: "я", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich lerne Deutsch.", ru: "Я учу немецкий.", uk: "Я вчу німецьку." }] },
-  { id: 2, word: "du", ru: "ты", uk: "ти", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Du bist hier.", ru: "Ты здесь.", uk: "Ти тут." }] },
-  { id: 3, word: "er", ru: "он", uk: "він", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Er arbeitet.", ru: "Он работает.", uk: "Він працює." }] },
-  { id: 4, word: "sie", ru: "она / они", uk: "вона / вони", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Sie ist da.", ru: "Она здесь.", uk: "Вона тут." }] },
-  { id: 5, word: "wir", ru: "мы", uk: "ми", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wir lernen.", ru: "Мы учимся.", uk: "Ми навчаємось." }] },
-  { id: 6, word: "ihr", ru: "вы (мн.)", uk: "ви", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ihr seid hier.", ru: "Вы здесь.", uk: "Ви тут." }] },
-  { id: 7, word: "Sie", ru: "Вы (вежл.)", uk: "Ви (ввічл.)", level: "A1", topics: ["grammar"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wie heißen Sie?", ru: "Как Вас зовут?", uk: "Як Вас звати?" }] }
   {
-    id: 8,
-    word: "mein",
-    ru: "мой",
-    uk: "мій",
-    level: "A1",
-    topics: ["grammar", "personal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Das ist mein Buch.", ru: "Это моя книга.", uk: "Це моя книга." }]
-  },
-  {
-    id: 9,
-    word: "dein",
-    ru: "твой",
-    uk: "твій",
-    level: "A1",
-    topics: ["grammar", "personal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Ist das dein Handy?", ru: "Это твой телефон?", uk: "Це твій телефон?" }]
-  },
-  {
-    id: 10,
-    word: "unser",
-    ru: "наш",
-    uk: "наш",
-    level: "A1",
-    topics: ["grammar", "personal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Das ist unser Haus.", ru: "Это наш дом.", uk: "Це наш дім." }]
-  },
-  {
-    id: 11,
-    word: "euer",
-    ru: "ваш",
-    uk: "ваш",
-    level: "A1",
-    topics: ["grammar", "personal"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: [],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Das ist euer Auto.", ru: "Это ваша машина.", uk: "Це ваша машина." }]
-  },
-  {
-    id: 12,
-    word: "dies",
-    ru: "это (этот/эта/это)",
-    uk: "це (цей/ця/це)",
+    id: 1,
+    word: "ich",
+    ru: "я",
+    uk: "я",
     level: "A1",
     topics: ["grammar"],
     deSynonyms: [],
@@ -1040,13 +1739,58 @@ window.decks.de_pronouns_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Dies ist meine Adresse.", ru: "Это мой адрес.", uk: "Це моя адреса." }]
+    examples: [{ L2: "Ich bin hier.", ru: "Я здесь.", uk: "Я тут." }]
   },
   {
-    id: 13,
+    id: 2,
+    word: "du",
+    ru: "ты",
+    uk: "ти",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Du bist hier.", ru: "Ты здесь.", uk: "Ти тут." }]
+  },
+  {
+    id: 3,
+    word: "er",
+    ru: "он",
+    uk: "він",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Er kommt jetzt.", ru: "Он приходит сейчас.", uk: "Він приходить зараз." }]
+  },
+  {
+    id: 4,
+    word: "sie",
+    ru: "она",
+    uk: "вона",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Sie wohnt hier.", ru: "Она живёт здесь.", uk: "Вона живе тут." }]
+  },
+  {
+    id: 5,
     word: "es",
-    ru: "оно / это",
-    uk: "воно / це",
+    ru: "оно",
+    uk: "воно",
     level: "A1",
     topics: ["grammar"],
     deSynonyms: [],
@@ -1058,7 +1802,52 @@ window.decks.de_pronouns_lernpunkt = [
     examples: [{ L2: "Es ist gut.", ru: "Это хорошо.", uk: "Це добре." }]
   },
   {
-    id: 14,
+    id: 6,
+    word: "wir",
+    ru: "мы",
+    uk: "ми",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wir lernen.", ru: "Мы учимся.", uk: "Ми навчаємось." }]
+  },
+  {
+    id: 7,
+    word: "ihr",
+    ru: "вы (мн.)",
+    uk: "ви",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Ihr seid hier.", ru: "Вы здесь.", uk: "Ви тут." }]
+  },
+  {
+    id: 8,
+    word: "Sie",
+    ru: "Вы (вежл.)",
+    uk: "Ви (ввічл.)",
+    level: "A1",
+    topics: ["grammar","polite"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wie heißen Sie?", ru: "Как Вас зовут?", uk: "Як Вас звати?" }]
+  },
+  {
+    id: 9,
     word: "das",
     ru: "это",
     uk: "це",
@@ -1070,37 +1859,85 @@ window.decks.de_pronouns_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist mein Name.", ru: "Это моё имя.", uk: "Це моє ім’я." }]
+    examples: [{ L2: "Das ist meine Adresse.", ru: "Это мой адрес.", uk: "Це моя адреса." }]
   },
   {
-    id: 15,
-    word: "Ihr",
-    ru: "Ваш (вежл.)",
-    uk: "Ваш (ввічл.)",
+    id: 10,
+    word: "mein",
+    ru: "мой (притяж.)",
+    uk: "мій",
     level: "A1",
-    topics: ["grammar", "formal"],
+    topics: ["grammar"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ist das Ihr Name?", ru: "Это Ваше имя?", uk: "Це Ваше ім’я?" }]
-  }
-];
-
-window.decks.de_particles_lernpunkt = [
-{ id: 1, word: "hallo", ru: "привет", uk: "привіт", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Hallo!", ru: "Привет!", uk: "Привіт!" }] },
-  { id: 2, word: "tschüss", ru: "пока", uk: "бувай", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Tschüss!", ru: "Пока!", uk: "Бувай!" }] },
-  { id: 3, word: "auf Wiedersehen", ru: "до свидания", uk: "до побачення", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Auf Wiedersehen!", ru: "До свидания!", uk: "До побачення!" }] },
-  { id: 4, word: "bitte", ru: "пожалуйста", uk: "будь ласка", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Bitte schön.", ru: "Пожалуйста.", uk: "Будь ласка." }] },
-  { id: 5, word: "danke", ru: "спасибо", uk: "дякую", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Danke!", ru: "Спасибо!", uk: "Дякую!" }] },
-  { id: 6, word: "wer", ru: "кто", uk: "хто", level: "A1", topics: ["questions"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wer ist das?", ru: "Кто это?", uk: "Хто це?" }] },
-  { id: 7, word: "was", ru: "что", uk: "що", level: "A1", topics: ["questions"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Was ist das?", ru: "Что это?", uk: "Що це?" }] },
-  { id: 8, word: "wann", ru: "когда", uk: "коли", level: "A1", topics: ["questions","time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wann kommst du?", ru: "Когда ты придёшь?", uk: "Коли ти прийдеш?" }] },
-  { id: 9, word: "wo", ru: "где", uk: "де", level: "A1", topics: ["questions","place"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Wo bist du?", ru: "Где ты?", uk: "Де ти?" }] }
+    examples: [{ L2: "Das ist mein Name.", ru: "Это моё имя.", uk: "Це моє ім’я." }]
+  },
   {
-    id: 10,
+    id: 11,
+    word: "dein",
+    ru: "твой (притяж.)",
+    uk: "твій",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist dein Stift.", ru: "Это твоя ручка.", uk: "Це твоя ручка." }]
+  },
+  {
+    id: 12,
+    word: "sein",
+    ru: "его (притяж.)",
+    uk: "його",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist sein Schlüssel.", ru: "Это его ключ.", uk: "Це його ключ." }]
+  },
+  {
+    id: 13,
+    word: "unser",
+    ru: "наш (притяж.)",
+    uk: "наш",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist unser Haus.", ru: "Это наш дом.", uk: "Це наш дім." }]
+  },
+  {
+    id: 14,
+    word: "euer",
+    ru: "ваш (притяж.)",
+    uk: "ваш",
+    level: "A1",
+    topics: ["grammar"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Das ist euer Tisch.", ru: "Это ваш стол.", uk: "Це ваш стіл." }]
+  },
+  {
+    id: 15,
     word: "wie",
     ru: "как",
     uk: "як",
@@ -1115,66 +1952,85 @@ window.decks.de_particles_lernpunkt = [
     examples: [{ L2: "Wie heißt du?", ru: "Как тебя зовут?", uk: "Як тебе звати?" }]
   },
   {
-    id: 11,
-    word: "willkommen",
-    ru: "добро пожаловать",
-    uk: "ласкаво просимо",
+    id: 16,
+    word: "wer",
+    ru: "кто",
+    uk: "хто",
     level: "A1",
-    topics: ["communication"],
+    topics: ["questions"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Willkommen!", ru: "Добро пожаловать!", uk: "Ласкаво просимо!" }]
-  }
-];
-
-window.decks.de_adverbs_lernpunkt = [
-{ id: 1, word: "heute", ru: "сегодня", uk: "сьогодні", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["gestern","morgen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Heute lerne ich.", ru: "Сегодня я учусь.", uk: "Сьогодні я навчаюсь." }] },
-  { id: 2, word: "morgen", ru: "завтра", uk: "завтра", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["gestern"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Morgen arbeite ich.", ru: "Завтра я работаю.", uk: "Завтра я працюю." }] },
-  { id: 3, word: "gestern", ru: "вчера", uk: "вчора", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["heute"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Gestern war ich zu Hause.", ru: "Вчера я был дома.", uk: "Вчора я був удома." }] },
-  { id: 4, word: "übermorgen", ru: "послезавтра", uk: "післязавтра", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["vorgestern"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Übermorgen habe ich frei.", ru: "Послезавтра я свободен.", uk: "Післязавтра я вільний." }] },
-  { id: 5, word: "vorgestern", ru: "позавчера", uk: "позавчора", level: "A1", topics: ["time"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["übermorgen"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Vorgestern war es kalt.", ru: "Позавчера было холодно.", uk: "Позавчора було холодно." }] },
-{ id: 6, word: "schon", ru: "уже", uk: "вже", level: "A1", topics: ["time","daily"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: ["noch nicht"], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich bin schon hier.", ru: "Я уже здесь.", uk: "Я вже тут." }] },
-  { id: 7, word: "genau", ru: "точно", uk: "точно", level: "A1", topics: ["communication"], deSynonyms: [], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ja, genau!", ru: "Да, точно!", uk: "Так, точно!" }] },
-  { id: 8, word: "fast", ru: "почти", uk: "майже", level: "A1", topics: ["daily"], deSynonyms: ["beinahe"], ruSynonyms: [], ukSynonyms: [], deAntonyms: [], ruAntonyms: [], ukAntonyms: [], examples: [{ L2: "Ich bin fast fertig.", ru: "Я почти готов.", uk: "Я майже готовий." }] }
-  {
-    id: 9,
-    word: "später",
-    ru: "потом",
-    uk: "потім",
-    level: "A1",
-    topics: ["time"],
-    deSynonyms: [],
-    ruSynonyms: [],
-    ukSynonyms: [],
-    deAntonyms: ["jetzt"],
-    ruAntonyms: [],
-    ukAntonyms: [],
-    examples: [{ L2: "Später rufe ich an.", ru: "Потом я позвоню.", uk: "Потім я подзвоню." }]
+    examples: [{ L2: "Wer ist das?", ru: "Кто это?", uk: "Хто це?" }]
   },
   {
-    id: 10,
-    word: "jetzt",
-    ru: "сейчас",
-    uk: "зараз",
+    id: 17,
+    word: "was",
+    ru: "что",
+    uk: "що",
     level: "A1",
-    topics: ["time"],
+    topics: ["questions"],
     deSynonyms: [],
     ruSynonyms: [],
     ukSynonyms: [],
-    deAntonyms: ["später"],
+    deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Ich bin jetzt zu Hause.", ru: "Я сейчас дома.", uk: "Я зараз удома." }]
+    examples: [{ L2: "Was ist das?", ru: "Что это?", uk: "Що це?" }]
+  },
+  {
+    id: 18,
+    word: "wann",
+    ru: "когда",
+    uk: "коли",
+    level: "A1",
+    topics: ["questions","time"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wann kommst du?", ru: "Когда ты придёшь?", uk: "Коли ти прийдеш?" }]
+  },
+  {
+    id: 19,
+    word: "wo",
+    ru: "где",
+    uk: "де",
+    level: "A1",
+    topics: ["questions","place"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Wo wohnst du?", ru: "Где ты живёшь?", uk: "Де ти живеш?" }]
   }
 ];
-
+window.decks.de_prepositions_lernpunkt = [];
 window.decks.de_numbers_lernpunkt = [
   {
     id: 1,
+    word: "null",
+    ru: "ноль",
+    uk: "нуль",
+    level: "A1",
+    topics: ["numbers"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Die Zahl ist null.", ru: "Это число ноль.", uk: "Це число нуль." }]
+  },
+  {
+    id: 2,
     word: "eins",
     ru: "один",
     uk: "один",
@@ -1186,10 +2042,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist eins.", ru: "Это один.", uk: "Це один." }]
+    examples: [{ L2: "Die Zahl ist eins.", ru: "Это число один.", uk: "Це число один." }]
   },
   {
-    id: 2,
+    id: 3,
     word: "zwei",
     ru: "два",
     uk: "два",
@@ -1201,10 +2057,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist zwei.", ru: "Это два.", uk: "Це два." }]
+    examples: [{ L2: "Die Zahl ist zwei.", ru: "Это число два.", uk: "Це число два." }]
   },
   {
-    id: 3,
+    id: 4,
     word: "drei",
     ru: "три",
     uk: "три",
@@ -1216,10 +2072,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist drei.", ru: "Это три.", uk: "Це три." }]
+    examples: [{ L2: "Die Zahl ist drei.", ru: "Это число три.", uk: "Це число три." }]
   },
   {
-    id: 4,
+    id: 5,
     word: "vier",
     ru: "четыре",
     uk: "чотири",
@@ -1231,10 +2087,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist vier.", ru: "Это четыре.", uk: "Це чотири." }]
+    examples: [{ L2: "Die Zahl ist vier.", ru: "Это число четыре.", uk: "Це число чотири." }]
   },
   {
-    id: 5,
+    id: 6,
     word: "fünf",
     ru: "пять",
     uk: "п’ять",
@@ -1246,10 +2102,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist fünf.", ru: "Это пять.", uk: "Це п’ять." }]
+    examples: [{ L2: "Die Zahl ist fünf.", ru: "Это число пять.", uk: "Це число п’ять." }]
   },
   {
-    id: 6,
+    id: 7,
     word: "sechs",
     ru: "шесть",
     uk: "шість",
@@ -1261,10 +2117,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist sechs.", ru: "Это шесть.", uk: "Це шість." }]
+    examples: [{ L2: "Die Zahl ist sechs.", ru: "Это число шесть.", uk: "Це число шість." }]
   },
   {
-    id: 7,
+    id: 8,
     word: "sieben",
     ru: "семь",
     uk: "сім",
@@ -1276,10 +2132,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist sieben.", ru: "Это семь.", uk: "Це сім." }]
+    examples: [{ L2: "Die Zahl ist sieben.", ru: "Это число семь.", uk: "Це число сім." }]
   },
   {
-    id: 8,
+    id: 9,
     word: "acht",
     ru: "восемь",
     uk: "вісім",
@@ -1291,10 +2147,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist acht.", ru: "Это восемь.", uk: "Це вісім." }]
+    examples: [{ L2: "Die Zahl ist acht.", ru: "Это число восемь.", uk: "Це число вісім." }]
   },
   {
-    id: 9,
+    id: 10,
     word: "neun",
     ru: "девять",
     uk: "дев’ять",
@@ -1306,10 +2162,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist neun.", ru: "Это девять.", uk: "Це дев’ять." }]
+    examples: [{ L2: "Die Zahl ist neun.", ru: "Это число девять.", uk: "Це число дев’ять." }]
   },
   {
-    id: 10,
+    id: 11,
     word: "zehn",
     ru: "десять",
     uk: "десять",
@@ -1321,10 +2177,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist zehn.", ru: "Это десять.", uk: "Це десять." }]
+    examples: [{ L2: "Die Zahl ist zehn.", ru: "Это число десять.", uk: "Це число десять." }]
   },
   {
-    id: 11,
+    id: 12,
     word: "elf",
     ru: "одиннадцать",
     uk: "одинадцять",
@@ -1336,10 +2192,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist elf.", ru: "Это одиннадцать.", uk: "Це одинадцять." }]
+    examples: [{ L2: "Die Zahl ist elf.", ru: "Это число одиннадцать.", uk: "Це число одинадцять." }]
   },
   {
-    id: 12,
+    id: 13,
     word: "zwölf",
     ru: "двенадцать",
     uk: "дванадцять",
@@ -1351,10 +2207,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist zwölf.", ru: "Это двенадцать.", uk: "Це дванадцять." }]
+    examples: [{ L2: "Die Zahl ist zwölf.", ru: "Это число двенадцать.", uk: "Це число дванадцять." }]
   },
   {
-    id: 13,
+    id: 14,
     word: "dreizehn",
     ru: "тринадцать",
     uk: "тринадцять",
@@ -1366,10 +2222,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist dreizehn.", ru: "Это тринадцать.", uk: "Це тринадцять." }]
+    examples: [{ L2: "Die Zahl ist dreizehn.", ru: "Это число тринадцать.", uk: "Це число тринадцять." }]
   },
   {
-    id: 14,
+    id: 15,
     word: "vierzehn",
     ru: "четырнадцать",
     uk: "чотирнадцять",
@@ -1381,10 +2237,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist vierzehn.", ru: "Это четырнадцать.", uk: "Це чотирнадцять." }]
+    examples: [{ L2: "Die Zahl ist vierzehn.", ru: "Это число четырнадцать.", uk: "Це число чотирнадцять." }]
   },
   {
-    id: 15,
+    id: 16,
     word: "fünfzehn",
     ru: "пятнадцать",
     uk: "п’ятнадцять",
@@ -1396,10 +2252,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist fünfzehn.", ru: "Это пятнадцать.", uk: "Це п’ятнадцять." }]
+    examples: [{ L2: "Die Zahl ist fünfzehn.", ru: "Это число пятнадцать.", uk: "Це число п’ятнадцять." }]
   },
   {
-    id: 16,
+    id: 17,
     word: "sechzehn",
     ru: "шестнадцать",
     uk: "шістнадцять",
@@ -1411,10 +2267,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist sechzehn.", ru: "Это шестнадцать.", uk: "Це шістнадцять." }]
+    examples: [{ L2: "Die Zahl ist sechzehn.", ru: "Это число шестнадцать.", uk: "Це число шістнадцять." }]
   },
   {
-    id: 17,
+    id: 18,
     word: "siebzehn",
     ru: "семнадцать",
     uk: "сімнадцять",
@@ -1426,10 +2282,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist siebzehn.", ru: "Это семнадцать.", uk: "Це сімнадцять." }]
+    examples: [{ L2: "Die Zahl ist siebzehn.", ru: "Это число семнадцать.", uk: "Це число сімнадцять." }]
   },
   {
-    id: 18,
+    id: 19,
     word: "achtzehn",
     ru: "восемнадцать",
     uk: "вісімнадцять",
@@ -1441,10 +2297,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist achtzehn.", ru: "Это восемнадцать.", uk: "Це вісімнадцять." }]
+    examples: [{ L2: "Die Zahl ist achtzehn.", ru: "Это число восемнадцать.", uk: "Це число вісімнадцять." }]
   },
   {
-    id: 19,
+    id: 20,
     word: "neunzehn",
     ru: "девятнадцать",
     uk: "дев’ятнадцять",
@@ -1456,10 +2312,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist neunzehn.", ru: "Это девятнадцать.", uk: "Це дев’ятнадцять." }]
+    examples: [{ L2: "Die Zahl ist neunzehn.", ru: "Это число девятнадцать.", uk: "Це число дев’ятнадцять." }]
   },
   {
-    id: 20,
+    id: 21,
     word: "zwanzig",
     ru: "двадцать",
     uk: "двадцять",
@@ -1471,10 +2327,10 @@ window.decks.de_numbers_lernpunkt = [
     deAntonyms: [],
     ruAntonyms: [],
     ukAntonyms: [],
-    examples: [{ L2: "Das ist zwanzig.", ru: "Это двадцать.", uk: "Це двадцять." }]
+    examples: [{ L2: "Die Zahl ist zwanzig.", ru: "Это число двадцать.", uk: "Це число двадцять." }]
   },
   {
-    id: 21,
+    id: 22,
     word: "1",
     ru: "1",
     uk: "1",
@@ -1489,7 +2345,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 1.", ru: "Это 1.", uk: "Це 1." }]
   },
   {
-    id: 22,
+    id: 23,
     word: "2",
     ru: "2",
     uk: "2",
@@ -1504,7 +2360,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 2.", ru: "Это 2.", uk: "Це 2." }]
   },
   {
-    id: 23,
+    id: 24,
     word: "3",
     ru: "3",
     uk: "3",
@@ -1519,7 +2375,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 3.", ru: "Это 3.", uk: "Це 3." }]
   },
   {
-    id: 24,
+    id: 25,
     word: "4",
     ru: "4",
     uk: "4",
@@ -1534,7 +2390,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 4.", ru: "Это 4.", uk: "Це 4." }]
   },
   {
-    id: 25,
+    id: 26,
     word: "5",
     ru: "5",
     uk: "5",
@@ -1549,7 +2405,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 5.", ru: "Это 5.", uk: "Це 5." }]
   },
   {
-    id: 26,
+    id: 27,
     word: "6",
     ru: "6",
     uk: "6",
@@ -1564,7 +2420,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 6.", ru: "Это 6.", uk: "Це 6." }]
   },
   {
-    id: 27,
+    id: 28,
     word: "7",
     ru: "7",
     uk: "7",
@@ -1579,7 +2435,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 7.", ru: "Это 7.", uk: "Це 7." }]
   },
   {
-    id: 28,
+    id: 29,
     word: "8",
     ru: "8",
     uk: "8",
@@ -1594,7 +2450,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 8.", ru: "Это 8.", uk: "Це 8." }]
   },
   {
-    id: 29,
+    id: 30,
     word: "9",
     ru: "9",
     uk: "9",
@@ -1609,7 +2465,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 9.", ru: "Это 9.", uk: "Це 9." }]
   },
   {
-    id: 30,
+    id: 31,
     word: "10",
     ru: "10",
     uk: "10",
@@ -1624,7 +2480,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 10.", ru: "Это 10.", uk: "Це 10." }]
   },
   {
-    id: 31,
+    id: 32,
     word: "11",
     ru: "11",
     uk: "11",
@@ -1639,7 +2495,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 11.", ru: "Это 11.", uk: "Це 11." }]
   },
   {
-    id: 32,
+    id: 33,
     word: "12",
     ru: "12",
     uk: "12",
@@ -1654,7 +2510,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 12.", ru: "Это 12.", uk: "Це 12." }]
   },
   {
-    id: 33,
+    id: 34,
     word: "13",
     ru: "13",
     uk: "13",
@@ -1669,7 +2525,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 13.", ru: "Это 13.", uk: "Це 13." }]
   },
   {
-    id: 34,
+    id: 35,
     word: "14",
     ru: "14",
     uk: "14",
@@ -1684,7 +2540,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 14.", ru: "Это 14.", uk: "Це 14." }]
   },
   {
-    id: 35,
+    id: 36,
     word: "15",
     ru: "15",
     uk: "15",
@@ -1699,7 +2555,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 15.", ru: "Это 15.", uk: "Це 15." }]
   },
   {
-    id: 36,
+    id: 37,
     word: "16",
     ru: "16",
     uk: "16",
@@ -1714,7 +2570,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 16.", ru: "Это 16.", uk: "Це 16." }]
   },
   {
-    id: 37,
+    id: 38,
     word: "17",
     ru: "17",
     uk: "17",
@@ -1729,7 +2585,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 17.", ru: "Это 17.", uk: "Це 17." }]
   },
   {
-    id: 38,
+    id: 39,
     word: "18",
     ru: "18",
     uk: "18",
@@ -1744,7 +2600,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 18.", ru: "Это 18.", uk: "Це 18." }]
   },
   {
-    id: 39,
+    id: 40,
     word: "19",
     ru: "19",
     uk: "19",
@@ -1759,7 +2615,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 19.", ru: "Это 19.", uk: "Це 19." }]
   },
   {
-    id: 40,
+    id: 41,
     word: "20",
     ru: "20",
     uk: "20",
@@ -1774,7 +2630,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 20.", ru: "Это 20.", uk: "Це 20." }]
   },
   {
-    id: 41,
+    id: 42,
     word: "21",
     ru: "21",
     uk: "21",
@@ -1789,7 +2645,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 21.", ru: "Это 21.", uk: "Це 21." }]
   },
   {
-    id: 42,
+    id: 43,
     word: "22",
     ru: "22",
     uk: "22",
@@ -1804,7 +2660,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 22.", ru: "Это 22.", uk: "Це 22." }]
   },
   {
-    id: 43,
+    id: 44,
     word: "23",
     ru: "23",
     uk: "23",
@@ -1819,7 +2675,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 23.", ru: "Это 23.", uk: "Це 23." }]
   },
   {
-    id: 44,
+    id: 45,
     word: "24",
     ru: "24",
     uk: "24",
@@ -1834,7 +2690,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 24.", ru: "Это 24.", uk: "Це 24." }]
   },
   {
-    id: 45,
+    id: 46,
     word: "25",
     ru: "25",
     uk: "25",
@@ -1849,7 +2705,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 25.", ru: "Это 25.", uk: "Це 25." }]
   },
   {
-    id: 46,
+    id: 47,
     word: "26",
     ru: "26",
     uk: "26",
@@ -1864,7 +2720,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 26.", ru: "Это 26.", uk: "Це 26." }]
   },
   {
-    id: 47,
+    id: 48,
     word: "27",
     ru: "27",
     uk: "27",
@@ -1879,7 +2735,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 27.", ru: "Это 27.", uk: "Це 27." }]
   },
   {
-    id: 48,
+    id: 49,
     word: "28",
     ru: "28",
     uk: "28",
@@ -1894,7 +2750,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 28.", ru: "Это 28.", uk: "Це 28." }]
   },
   {
-    id: 49,
+    id: 50,
     word: "29",
     ru: "29",
     uk: "29",
@@ -1909,7 +2765,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 29.", ru: "Это 29.", uk: "Це 29." }]
   },
   {
-    id: 50,
+    id: 51,
     word: "30",
     ru: "30",
     uk: "30",
@@ -1924,7 +2780,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 30.", ru: "Это 30.", uk: "Це 30." }]
   },
   {
-    id: 51,
+    id: 52,
     word: "31",
     ru: "31",
     uk: "31",
@@ -1939,7 +2795,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 31.", ru: "Это 31.", uk: "Це 31." }]
   },
   {
-    id: 52,
+    id: 53,
     word: "32",
     ru: "32",
     uk: "32",
@@ -1954,7 +2810,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 32.", ru: "Это 32.", uk: "Це 32." }]
   },
   {
-    id: 53,
+    id: 54,
     word: "33",
     ru: "33",
     uk: "33",
@@ -1969,7 +2825,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 33.", ru: "Это 33.", uk: "Це 33." }]
   },
   {
-    id: 54,
+    id: 55,
     word: "34",
     ru: "34",
     uk: "34",
@@ -1984,7 +2840,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 34.", ru: "Это 34.", uk: "Це 34." }]
   },
   {
-    id: 55,
+    id: 56,
     word: "35",
     ru: "35",
     uk: "35",
@@ -1999,7 +2855,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 35.", ru: "Это 35.", uk: "Це 35." }]
   },
   {
-    id: 56,
+    id: 57,
     word: "36",
     ru: "36",
     uk: "36",
@@ -2014,7 +2870,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 36.", ru: "Это 36.", uk: "Це 36." }]
   },
   {
-    id: 57,
+    id: 58,
     word: "37",
     ru: "37",
     uk: "37",
@@ -2029,7 +2885,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 37.", ru: "Это 37.", uk: "Це 37." }]
   },
   {
-    id: 58,
+    id: 59,
     word: "38",
     ru: "38",
     uk: "38",
@@ -2044,7 +2900,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 38.", ru: "Это 38.", uk: "Це 38." }]
   },
   {
-    id: 59,
+    id: 60,
     word: "39",
     ru: "39",
     uk: "39",
@@ -2059,7 +2915,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 39.", ru: "Это 39.", uk: "Це 39." }]
   },
   {
-    id: 60,
+    id: 61,
     word: "40",
     ru: "40",
     uk: "40",
@@ -2074,7 +2930,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 40.", ru: "Это 40.", uk: "Це 40." }]
   },
   {
-    id: 61,
+    id: 62,
     word: "41",
     ru: "41",
     uk: "41",
@@ -2089,7 +2945,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 41.", ru: "Это 41.", uk: "Це 41." }]
   },
   {
-    id: 62,
+    id: 63,
     word: "42",
     ru: "42",
     uk: "42",
@@ -2104,7 +2960,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 42.", ru: "Это 42.", uk: "Це 42." }]
   },
   {
-    id: 63,
+    id: 64,
     word: "43",
     ru: "43",
     uk: "43",
@@ -2119,7 +2975,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 43.", ru: "Это 43.", uk: "Це 43." }]
   },
   {
-    id: 64,
+    id: 65,
     word: "44",
     ru: "44",
     uk: "44",
@@ -2134,7 +2990,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 44.", ru: "Это 44.", uk: "Це 44." }]
   },
   {
-    id: 65,
+    id: 66,
     word: "45",
     ru: "45",
     uk: "45",
@@ -2149,7 +3005,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 45.", ru: "Это 45.", uk: "Це 45." }]
   },
   {
-    id: 66,
+    id: 67,
     word: "46",
     ru: "46",
     uk: "46",
@@ -2164,7 +3020,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 46.", ru: "Это 46.", uk: "Це 46." }]
   },
   {
-    id: 67,
+    id: 68,
     word: "47",
     ru: "47",
     uk: "47",
@@ -2179,7 +3035,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 47.", ru: "Это 47.", uk: "Це 47." }]
   },
   {
-    id: 68,
+    id: 69,
     word: "48",
     ru: "48",
     uk: "48",
@@ -2194,7 +3050,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 48.", ru: "Это 48.", uk: "Це 48." }]
   },
   {
-    id: 69,
+    id: 70,
     word: "49",
     ru: "49",
     uk: "49",
@@ -2209,7 +3065,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 49.", ru: "Это 49.", uk: "Це 49." }]
   },
   {
-    id: 70,
+    id: 71,
     word: "50",
     ru: "50",
     uk: "50",
@@ -2224,7 +3080,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 50.", ru: "Это 50.", uk: "Це 50." }]
   },
   {
-    id: 71,
+    id: 72,
     word: "51",
     ru: "51",
     uk: "51",
@@ -2239,7 +3095,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 51.", ru: "Это 51.", uk: "Це 51." }]
   },
   {
-    id: 72,
+    id: 73,
     word: "52",
     ru: "52",
     uk: "52",
@@ -2254,7 +3110,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 52.", ru: "Это 52.", uk: "Це 52." }]
   },
   {
-    id: 73,
+    id: 74,
     word: "53",
     ru: "53",
     uk: "53",
@@ -2269,7 +3125,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 53.", ru: "Это 53.", uk: "Це 53." }]
   },
   {
-    id: 74,
+    id: 75,
     word: "54",
     ru: "54",
     uk: "54",
@@ -2284,7 +3140,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 54.", ru: "Это 54.", uk: "Це 54." }]
   },
   {
-    id: 75,
+    id: 76,
     word: "55",
     ru: "55",
     uk: "55",
@@ -2299,7 +3155,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 55.", ru: "Это 55.", uk: "Це 55." }]
   },
   {
-    id: 76,
+    id: 77,
     word: "56",
     ru: "56",
     uk: "56",
@@ -2314,7 +3170,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 56.", ru: "Это 56.", uk: "Це 56." }]
   },
   {
-    id: 77,
+    id: 78,
     word: "57",
     ru: "57",
     uk: "57",
@@ -2329,7 +3185,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 57.", ru: "Это 57.", uk: "Це 57." }]
   },
   {
-    id: 78,
+    id: 79,
     word: "58",
     ru: "58",
     uk: "58",
@@ -2344,7 +3200,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 58.", ru: "Это 58.", uk: "Це 58." }]
   },
   {
-    id: 79,
+    id: 80,
     word: "59",
     ru: "59",
     uk: "59",
@@ -2359,7 +3215,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 59.", ru: "Это 59.", uk: "Це 59." }]
   },
   {
-    id: 80,
+    id: 81,
     word: "60",
     ru: "60",
     uk: "60",
@@ -2374,7 +3230,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 60.", ru: "Это 60.", uk: "Це 60." }]
   },
   {
-    id: 81,
+    id: 82,
     word: "61",
     ru: "61",
     uk: "61",
@@ -2389,7 +3245,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 61.", ru: "Это 61.", uk: "Це 61." }]
   },
   {
-    id: 82,
+    id: 83,
     word: "62",
     ru: "62",
     uk: "62",
@@ -2404,7 +3260,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 62.", ru: "Это 62.", uk: "Це 62." }]
   },
   {
-    id: 83,
+    id: 84,
     word: "63",
     ru: "63",
     uk: "63",
@@ -2419,7 +3275,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 63.", ru: "Это 63.", uk: "Це 63." }]
   },
   {
-    id: 84,
+    id: 85,
     word: "64",
     ru: "64",
     uk: "64",
@@ -2434,7 +3290,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 64.", ru: "Это 64.", uk: "Це 64." }]
   },
   {
-    id: 85,
+    id: 86,
     word: "65",
     ru: "65",
     uk: "65",
@@ -2449,7 +3305,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 65.", ru: "Это 65.", uk: "Це 65." }]
   },
   {
-    id: 86,
+    id: 87,
     word: "66",
     ru: "66",
     uk: "66",
@@ -2464,7 +3320,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 66.", ru: "Это 66.", uk: "Це 66." }]
   },
   {
-    id: 87,
+    id: 88,
     word: "67",
     ru: "67",
     uk: "67",
@@ -2479,7 +3335,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 67.", ru: "Это 67.", uk: "Це 67." }]
   },
   {
-    id: 88,
+    id: 89,
     word: "68",
     ru: "68",
     uk: "68",
@@ -2494,7 +3350,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 68.", ru: "Это 68.", uk: "Це 68." }]
   },
   {
-    id: 89,
+    id: 90,
     word: "69",
     ru: "69",
     uk: "69",
@@ -2509,7 +3365,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 69.", ru: "Это 69.", uk: "Це 69." }]
   },
   {
-    id: 90,
+    id: 91,
     word: "70",
     ru: "70",
     uk: "70",
@@ -2524,7 +3380,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 70.", ru: "Это 70.", uk: "Це 70." }]
   },
   {
-    id: 91,
+    id: 92,
     word: "71",
     ru: "71",
     uk: "71",
@@ -2539,7 +3395,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 71.", ru: "Это 71.", uk: "Це 71." }]
   },
   {
-    id: 92,
+    id: 93,
     word: "72",
     ru: "72",
     uk: "72",
@@ -2554,7 +3410,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 72.", ru: "Это 72.", uk: "Це 72." }]
   },
   {
-    id: 93,
+    id: 94,
     word: "73",
     ru: "73",
     uk: "73",
@@ -2569,7 +3425,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 73.", ru: "Это 73.", uk: "Це 73." }]
   },
   {
-    id: 94,
+    id: 95,
     word: "74",
     ru: "74",
     uk: "74",
@@ -2584,7 +3440,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 74.", ru: "Это 74.", uk: "Це 74." }]
   },
   {
-    id: 95,
+    id: 96,
     word: "75",
     ru: "75",
     uk: "75",
@@ -2599,7 +3455,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 75.", ru: "Это 75.", uk: "Це 75." }]
   },
   {
-    id: 96,
+    id: 97,
     word: "76",
     ru: "76",
     uk: "76",
@@ -2614,7 +3470,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 76.", ru: "Это 76.", uk: "Це 76." }]
   },
   {
-    id: 97,
+    id: 98,
     word: "77",
     ru: "77",
     uk: "77",
@@ -2629,7 +3485,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 77.", ru: "Это 77.", uk: "Це 77." }]
   },
   {
-    id: 98,
+    id: 99,
     word: "78",
     ru: "78",
     uk: "78",
@@ -2644,7 +3500,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 78.", ru: "Это 78.", uk: "Це 78." }]
   },
   {
-    id: 99,
+    id: 100,
     word: "79",
     ru: "79",
     uk: "79",
@@ -2659,7 +3515,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 79.", ru: "Это 79.", uk: "Це 79." }]
   },
   {
-    id: 100,
+    id: 101,
     word: "80",
     ru: "80",
     uk: "80",
@@ -2674,7 +3530,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 80.", ru: "Это 80.", uk: "Це 80." }]
   },
   {
-    id: 101,
+    id: 102,
     word: "81",
     ru: "81",
     uk: "81",
@@ -2689,7 +3545,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 81.", ru: "Это 81.", uk: "Це 81." }]
   },
   {
-    id: 102,
+    id: 103,
     word: "82",
     ru: "82",
     uk: "82",
@@ -2704,7 +3560,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 82.", ru: "Это 82.", uk: "Це 82." }]
   },
   {
-    id: 103,
+    id: 104,
     word: "83",
     ru: "83",
     uk: "83",
@@ -2719,7 +3575,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 83.", ru: "Это 83.", uk: "Це 83." }]
   },
   {
-    id: 104,
+    id: 105,
     word: "84",
     ru: "84",
     uk: "84",
@@ -2734,7 +3590,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 84.", ru: "Это 84.", uk: "Це 84." }]
   },
   {
-    id: 105,
+    id: 106,
     word: "85",
     ru: "85",
     uk: "85",
@@ -2749,7 +3605,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 85.", ru: "Это 85.", uk: "Це 85." }]
   },
   {
-    id: 106,
+    id: 107,
     word: "86",
     ru: "86",
     uk: "86",
@@ -2764,7 +3620,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 86.", ru: "Это 86.", uk: "Це 86." }]
   },
   {
-    id: 107,
+    id: 108,
     word: "87",
     ru: "87",
     uk: "87",
@@ -2779,7 +3635,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 87.", ru: "Это 87.", uk: "Це 87." }]
   },
   {
-    id: 108,
+    id: 109,
     word: "88",
     ru: "88",
     uk: "88",
@@ -2794,7 +3650,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 88.", ru: "Это 88.", uk: "Це 88." }]
   },
   {
-    id: 109,
+    id: 110,
     word: "89",
     ru: "89",
     uk: "89",
@@ -2809,7 +3665,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 89.", ru: "Это 89.", uk: "Це 89." }]
   },
   {
-    id: 110,
+    id: 111,
     word: "90",
     ru: "90",
     uk: "90",
@@ -2824,7 +3680,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 90.", ru: "Это 90.", uk: "Це 90." }]
   },
   {
-    id: 111,
+    id: 112,
     word: "91",
     ru: "91",
     uk: "91",
@@ -2839,7 +3695,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 91.", ru: "Это 91.", uk: "Це 91." }]
   },
   {
-    id: 112,
+    id: 113,
     word: "92",
     ru: "92",
     uk: "92",
@@ -2854,7 +3710,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 92.", ru: "Это 92.", uk: "Це 92." }]
   },
   {
-    id: 113,
+    id: 114,
     word: "93",
     ru: "93",
     uk: "93",
@@ -2869,7 +3725,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 93.", ru: "Это 93.", uk: "Це 93." }]
   },
   {
-    id: 114,
+    id: 115,
     word: "94",
     ru: "94",
     uk: "94",
@@ -2884,7 +3740,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 94.", ru: "Это 94.", uk: "Це 94." }]
   },
   {
-    id: 115,
+    id: 116,
     word: "95",
     ru: "95",
     uk: "95",
@@ -2899,7 +3755,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 95.", ru: "Это 95.", uk: "Це 95." }]
   },
   {
-    id: 116,
+    id: 117,
     word: "96",
     ru: "96",
     uk: "96",
@@ -2914,7 +3770,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 96.", ru: "Это 96.", uk: "Це 96." }]
   },
   {
-    id: 117,
+    id: 118,
     word: "97",
     ru: "97",
     uk: "97",
@@ -2929,7 +3785,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 97.", ru: "Это 97.", uk: "Це 97." }]
   },
   {
-    id: 118,
+    id: 119,
     word: "98",
     ru: "98",
     uk: "98",
@@ -2944,7 +3800,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 98.", ru: "Это 98.", uk: "Це 98." }]
   },
   {
-    id: 119,
+    id: 120,
     word: "99",
     ru: "99",
     uk: "99",
@@ -2959,7 +3815,7 @@ window.decks.de_numbers_lernpunkt = [
     examples: [{ L2: "Das ist 99.", ru: "Это 99.", uk: "Це 99." }]
   },
   {
-    id: 120,
+    id: 121,
     word: "100",
     ru: "100",
     uk: "100",
@@ -2975,3 +3831,20 @@ window.decks.de_numbers_lernpunkt = [
   }
 ];
 window.decks.de_conjunctions_lernpunkt = [];
+window.decks.de_particles_lernpunkt = [
+  {
+    id: 1,
+    word: "Willkommen!",
+    ru: "добро пожаловать",
+    uk: "ласкаво просимо",
+    level: "A1",
+    topics: ["communication"],
+    deSynonyms: [],
+    ruSynonyms: [],
+    ukSynonyms: [],
+    deAntonyms: [],
+    ruAntonyms: [],
+    ukAntonyms: [],
+    examples: [{ L2: "Willkommen!", ru: "Добро пожаловать!", uk: "Ласкаво просимо!" }]
+  }
+];
