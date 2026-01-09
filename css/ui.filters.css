@@ -96,12 +96,19 @@
   margin-bottom: 10px;
 }
 
+.filters-head-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
 .filters-title {
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
+.filters-reset,
 .filters-close {
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.04);
@@ -111,6 +118,10 @@
   font: inherit;
   font-size: 13px;
   line-height: 1;
+}
+
+.filters-reset{
+  opacity:0.9;
 }
 
 /* ---------- Sections ---------- */
@@ -128,7 +139,7 @@
 /* chips grid */
 .filters-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
   gap: 10px;
 }
 
@@ -151,11 +162,11 @@
   display: block;
   width: 100%;
   text-align: center;
-  padding: 8px 10px;
+  padding: 6px 8px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.03);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
@@ -203,23 +214,3 @@
   border-color: rgba(55, 168, 255, 0.30);
   background: rgba(55, 168, 255, 0.10);
 }
-
-
-/* v2.2 — compact chips + live apply (no Apply button) */
-
-#filtersSheet .filters-list { gap: 8px; }
-#filtersSheet .filters-item { padding: 6px 10px; min-height: 30px; }
-#filtersSheet .filters-item span { font-size: 13px; letter-spacing: 0.1px; }
-#filtersSheet .filters-actions { display: none !important; }
-#filtersSheet .filters-reset {
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.04);
-  color: inherit;
-  border-radius: 12px;
-  padding: 8px 10px;
-  font: inherit;
-  font-size: 13px;
-  opacity: 0.92;
-}
-#filtersSheet .filters-head { gap: 10px; }
-#filtersSheet .filters-title { flex: 1 1 auto; }
