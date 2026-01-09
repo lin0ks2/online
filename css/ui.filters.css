@@ -203,3 +203,35 @@
   border-color: rgba(55, 168, 255, 0.30);
   background: rgba(55, 168, 255, 0.10);
 }
+
+
+/* ==========================================================
+ * Visual v2.2 — smaller chips + header reset + no Apply footer
+ * ========================================================== */
+
+/* Smaller chips */
+.filters-list {
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 8px;
+}
+.filters-item span {
+  padding: 6px 8px;
+  font-size: 12px;
+  letter-spacing: 0.15px;
+}
+
+/* Reset button in header (left of Close) */
+.filters-reset {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  border-radius: 12px;
+  padding: 6px 9px;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.92;
+}
+
+/* Footer actions are not used in live-apply UX */
+.filters-actions { display: none !important; }
