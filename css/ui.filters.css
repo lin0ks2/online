@@ -17,7 +17,9 @@
   gap: 8px;
   border: 1px solid rgba(255,255,255,0.16);
   border-radius: 12px;
-  padding: 10px 12px;
+  /* компактнее, вровень с \"Без фильтра\" /*
+  font-size: 13px;
+  padding: 8px 10px;
   background: rgba(255,255,255,0.04);
   color: inherit;
   font: inherit;
