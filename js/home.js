@@ -60,6 +60,20 @@
     return (v === 'uk') ? 'uk' : 'ru';
   }
 
+  // Показываем фильтры только в установленном режиме (PWA/TWA).
+  // В браузере места меньше, и UX становится хрупким.
+  function isPwaOrTwaRunmode(){
+    try {
+      const rm = String(document.documentElement.getAttribute('data-runmode') || document.documentElement.dataset.runmode || '').toLowerCase();
+      if (rm === 'pwa') return true;
+    } catch(_){ }
+    try {
+      // Android TWA: start_url adds ?twa=1
+      if (/(?:\?|&)twa=1(?:&|$)/.test(String(window.location.search || ''))) return true;
+    } catch(_){ }
+    return false;
+  }
+
   
   // Подсчет "выученности" в режиме артиклей: считаем отдельно, не смешивая со словами.
   function countLearnedArticles(words, deckKey){
@@ -651,6 +665,8 @@ function activeDeckKey() {
     const title = resolveDeckTitle(key);
     const T = tUI();
 
+    const showFilters = isPwaOrTwaRunmode();
+
     app.innerHTML = `
       <div class="home">
         <!-- ЗОНА 1: Сеты -->
@@ -681,42 +697,47 @@ function activeDeckKey() {
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
           <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
-
-          <div class="home-filters" id="filtersBar">
-            <button class="filters-btn" id="filtersBtn" type="button">
-              <span class="filters-btn-ico" aria-hidden="true">⏷</span>
-              <span class="filters-btn-label" data-i18n="filtersBtn">${(T.filtersBtn||'Фильтры')}</span>
-            </button>
-            <div class="filters-summary" id="filtersSummary"></div>
-          </div>
-
           <p class="dict-stats" id="dictStats"></p>
         </section>
 
-      <div class="filters-overlay filters-hidden" id="filtersOverlay"></div>
-      <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true" aria-label="${(T.filtersTitle||'Фильтры')}">
-        <div class="filters-head">
-          <div class="filters-title" data-i18n="filtersTitle">${(T.filtersTitle||'Фильтры')}</div>
-          <button class="filters-close" id="filtersClose" type="button" aria-label="Close">✕</button>
-        </div>
+        ${showFilters ? `
+        <!-- ЗОНА 4: Фильтры (только PWA/TWA) -->
+        <section class="home-filters" aria-label="filters">
+          <button class="filters-btn" id="filtersBtn" type="button">
+            <span class="ico" aria-hidden="true">▾</span>
+            <span class="lbl">${(window.I18N_t ? window.I18N_t('filtersBtn') : 'Фильтры')}</span>
+          </button>
+          <div class="filters-summary" id="filtersSummary"></div>
+        </section>
 
-        <div class="filters-section">
-          <div class="filters-title" data-i18n="filtersLevels">${(T.filtersLevels||'Уровни')}</div>
-          <div class="filters-list" id="filtersLevelsList"></div>
-        </div>
+        <div class="filters-overlay filters-hidden" id="filtersOverlay" aria-hidden="true"></div>
 
-        <div class="filters-section filters-disabled" aria-disabled="true">
-          <div class="filters-title" data-i18n="filtersTopics">${(T.filtersTopics||'Темы')}</div>
-          <div class="filters-list" id="filtersTopicsList"></div>
-        </div>
+        <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true" aria-label="filtersSheet">
+          <div class="filters-head">
+            <div class="filters-title">${(window.I18N_t ? window.I18N_t('filtersTitle') : 'Фильтры')}</div>
+            <button class="filters-close" id="filtersClose" type="button">✕</button>
+          </div>
 
-        <div class="filters-actions">
-          <button class="btn-ghost" id="filtersReset" type="button" data-i18n="filtersReset">${(T.filtersReset||'Сбросить')}</button>
-          <button class="btn-primary" id="filtersApply" type="button" data-i18n="filtersApply">${(T.filtersApply||'Применить')}</button>
-        </div>
-      </div>
+          <div class="filters-section">
+            <h4>${(window.I18N_t ? window.I18N_t('filtersLevels') : 'Уровни')}</h4>
+            <div class="filters-list" id="filtersLevelsList"></div>
+          </div>
 
+          <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
+            <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
+            <div class="filters-list" id="filtersTopicsList"></div>
+          </div>
+
+          <div class="filters-actions">
+            <button class="btn" id="filtersReset" type="button">${(window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить')}</button>
+            <button class="btn" id="filtersApply" type="button">${(window.I18N_t ? window.I18N_t('filtersApply') : 'Применить')}</button>
+          </div>
+        </div>
+        ` : ''}
       </div>`;
+
+    // Инициализация summary после отрисовки (если фильтры показаны)
+    try { if (showFilters) updateFiltersSummary(); } catch(_){ }
   }
 
   /* ------------------------------- Сеты ------------------------------- */
