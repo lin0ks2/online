@@ -681,8 +681,41 @@ function activeDeckKey() {
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
           <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
+
+          <div class="home-filters" id="filtersBar">
+            <button class="filters-btn" id="filtersBtn" type="button">
+              <span class="filters-btn-ico" aria-hidden="true">⏷</span>
+              <span class="filters-btn-label" data-i18n="filtersBtn">${(T.filtersBtn||'Фильтры')}</span>
+            </button>
+            <div class="filters-summary" id="filtersSummary"></div>
+          </div>
+
           <p class="dict-stats" id="dictStats"></p>
         </section>
+
+      <div class="filters-overlay filters-hidden" id="filtersOverlay"></div>
+      <div class="filters-sheet filters-hidden" id="filtersSheet" role="dialog" aria-modal="true" aria-label="${(T.filtersTitle||'Фильтры')}">
+        <div class="filters-head">
+          <div class="filters-title" data-i18n="filtersTitle">${(T.filtersTitle||'Фильтры')}</div>
+          <button class="filters-close" id="filtersClose" type="button" aria-label="Close">✕</button>
+        </div>
+
+        <div class="filters-section">
+          <div class="filters-title" data-i18n="filtersLevels">${(T.filtersLevels||'Уровни')}</div>
+          <div class="filters-list" id="filtersLevelsList"></div>
+        </div>
+
+        <div class="filters-section filters-disabled" aria-disabled="true">
+          <div class="filters-title" data-i18n="filtersTopics">${(T.filtersTopics||'Темы')}</div>
+          <div class="filters-list" id="filtersTopicsList"></div>
+        </div>
+
+        <div class="filters-actions">
+          <button class="btn-ghost" id="filtersReset" type="button" data-i18n="filtersReset">${(T.filtersReset||'Сбросить')}</button>
+          <button class="btn-primary" id="filtersApply" type="button" data-i18n="filtersApply">${(T.filtersApply||'Применить')}</button>
+        </div>
+      </div>
+
       </div>`;
   }
 
