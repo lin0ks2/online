@@ -1,6 +1,7 @@
 /* ==========================================================
  * MOYAMOVA — UI Filters (PWA/TWA)
  * Visual v2: compact bar + bottom sheet + chip levels
+ * Patch v25.3: smaller pills + header buttons (sheet only)
  * ========================================================== */
 
 /* ---------- Theme tokens (fallback-safe) ---------- */
@@ -154,10 +155,10 @@ body.theme-light {
   background: var(--mm-filters-surface-2);
   color: inherit;
   border-radius: 999px;
-  height: 30px;
-  padding: 0 10px;
+  height: 26px;
+  padding: 0 8px;
   font: inherit;
-  font-size: 12.5px;
+  font-size: 12px;
   line-height: 1;
 }
 
@@ -189,7 +190,7 @@ body.theme-light {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 
@@ -213,14 +214,14 @@ body.theme-light {
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 56px;
-  height: 32px;
+  min-width: 50px;
+  height: 28px;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
   background: var(--mm-filters-surface-2);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
   line-height: 1;
@@ -286,14 +287,14 @@ body.theme-light .filters-item span {
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 56px;
-  height: 32px;
+  min-width: 50px;
+  height: 28px;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--mm-filters-border);
   background: var(--mm-filters-surface-2);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.2px;
   line-height: 1;
