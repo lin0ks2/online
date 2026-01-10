@@ -289,6 +289,24 @@ function getDeckWithArticles() {
 
       var eligible = eligibleFromSlice(slice);
       if (eligible.length) {
+        // Если сет маленький/неполный и после фильтрации кандидатов осталось мало,
+        // подмешиваем слова из следующих сетов (по кругу), чтобы тренировка не "пустела".
+        var target = Math.min(setSize, 6); // 6 достаточно для непрерывного UX
+        if (eligible.length < target && totalSets > 1) {
+          var pool = eligible.slice();
+          for (var step2 = 1; step2 < totalSets && pool.length < target; step2++) {
+            var idx2 = (idx + step2) % totalSets;
+            var start2 = idx2 * setSize;
+            var end2 = Math.min(deck.length, start2 + setSize);
+            var slice2 = deck.slice(start2, end2);
+            if (!slice2.length) continue;
+            if (isCurrentSetComplete(dk, slice2)) continue;
+            var el2 = eligibleFromSlice(slice2);
+            for (var k = 0; k < el2.length && pool.length < target; k++) pool.push(el2[k]);
+          }
+          eligible = pool;
+        }
+
         if (idx !== currentSetIndex) setBatchIndex(idx, dk);
         currentSetIndex = idx;
         return eligible;
@@ -371,7 +389,25 @@ function getDeckWithArticles() {
     // - learnedRepeat применяем из App.settings.learnedRepeat
     // - recency хранится отдельно (ArticlesProgress.ts)
     var slice = getArticlesSlice(deckKey);
-    if (!slice || !slice.length) return null;
+    if (!slice || !slice.length) {
+      // Абсолютный фоллбек: даже если по какой-то причине slice пуст,
+      // пытаемся взять слова из всей колоды с валидными артиклями.
+      var deckAll = getDeckWithArticles();
+      if (!deckAll || !deckAll.length) return null;
+
+      var eps0 = getLearnedEpsilon();
+      var progKey0 = baseKeyForProgress(deckKey);
+
+      var pool0 = [];
+      for (var i0 = 0; i0 < deckAll.length; i0++) {
+        var w0 = deckAll[i0];
+        var learned0 = isLearned(progKey0, w0.id);
+        if (!learned0) pool0.push(w0);
+        else if (eps0 > 0 && Math.random() < eps0) pool0.push(w0);
+      }
+      // Если даже так пусто (например, eps=0 и все выучено) — начинаем заново с первой записи.
+      slice = pool0.length ? pool0 : [deckAll[0]];
+    }
 
     var tries = 24;
     while (tries-- > 0) {
