@@ -1092,8 +1092,6 @@ function activeDeckKey() {
   /* ------------------------------- Тренер ------------------------------- */
   function renderTrainer() {
     const key   = activeDeckKey();
-    const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
-    if (!slice.length) return;
 
     // Trainer variant switching (words vs articles).
     // We must NOT fall back to the default trainer when the user interacts with
@@ -1137,6 +1135,9 @@ function activeDeckKey() {
     // If we are NOT in articles mode, make sure the articles plugin is stopped/unmounted.
     try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
     try { if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') A.ArticlesCard.unmount(); } catch (_){ }
+
+    const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
+    if (!slice.length) return;
 
     const idx = (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function')
       ? A.Trainer.sampleNextIndexWeighted(slice)
