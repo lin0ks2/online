@@ -242,58 +242,68 @@ function getDeckWithArticles() {
   function getArticlesSlice(dk) {
     var deck = getDeckWithArticles();
     if (!deck || !deck.length) return [];
+
     var setSize = getSetSize(dk);
     totalSets = Math.max(1, Math.ceil(deck.length / setSize));
+
     currentSetIndex = getBatchIndex(dk);
     if (currentSetIndex >= totalSets) currentSetIndex = totalSets - 1;
-
-    // Автопереход, если текущий сет полностью выучен по артиклям.
-    var start = currentSetIndex * setSize;
-    var end = Math.min(deck.length, start + setSize);
-    var slice = deck.slice(start, end);
-    if (isCurrentSetComplete(dk, slice)) {
-      currentSetIndex = (currentSetIndex + 1) % totalSets;
-      setBatchIndex(currentSetIndex, dk);
-      start = currentSetIndex * setSize;
-      end = Math.min(deck.length, start + setSize);
-      slice = deck.slice(start, end);
-    }
-
-    // Фильтрация по артиклям.
-    var withArticles = slice.filter(hasValidArticle);
 
     // Прогресс артиклей ведём по базовой деке.
     var progKey = baseKeyForProgress(dk);
 
     // Исключение выученных (с мягким повтором через learnedRepeat).
     var eps = getLearnedEpsilon();
-    var eligible = [];
-    for (var i = 0; i < withArticles.length; i++) {
-      var w = withArticles[i];
-      var learned = isLearned(progKey, w.id);
-      if (!learned) eligible.push(w);
-      else if (eps > 0 && Math.random() < eps) eligible.push(w);
-    }
-    if (eligible.length) return eligible;
 
-    // Если всё выучено в сете — пробуем следующий сет. Если весь deck выучен — возвращаем текущий сет.
-    if (isWholeDeckLearned(dk, deck)) return withArticles;
-
-    var nextIdx = (currentSetIndex + 1) % totalSets;
-    setBatchIndex(nextIdx, dk);
-    currentSetIndex = nextIdx;
-    start = currentSetIndex * setSize;
-    end = Math.min(deck.length, start + setSize);
-    var nSlice = deck.slice(start, end);
-    var nWithA = nSlice.filter(hasValidArticle);
-    var nEligible = [];
-    for (var j = 0; j < nWithA.length; j++) {
-      var ww = nWithA[j];
-      if (!isLearned(progKey, ww.id)) nEligible.push(ww);
-      else if (eps > 0 && Math.random() < eps) nEligible.push(ww);
+    function eligibleFromSlice(slice) {
+      var eligible = [];
+      for (var i = 0; i < slice.length; i++) {
+        var w = slice[i];
+        var learned = isLearned(progKey, w.id);
+        if (!learned) eligible.push(w);
+        else if (eps > 0 && Math.random() < eps) eligible.push(w);
+      }
+      return eligible;
     }
-    return nEligible.length ? nEligible : nWithA;
+
+    // Если все слова (с валидными артиклями) выучены — начинаем заново с первого сета.
+    if (isWholeDeckLearned(dk, deck)) {
+      currentSetIndex = 0;
+      setBatchIndex(0, dk);
+      var fs = deck.slice(0, Math.min(deck.length, setSize));
+      var fse = eligibleFromSlice(fs);
+      return fse.length ? fse : fs;
+    }
+
+    // Ищем по кругу первый сет, где есть хоть что-то для тренировки.
+    // Это гарантирует, что приложение никогда не "залипнет" на последнем слове последнего сета.
+    for (var step = 0; step < totalSets; step++) {
+      var idx = (currentSetIndex + step) % totalSets;
+      var start = idx * setSize;
+      var end = Math.min(deck.length, start + setSize);
+      var slice = deck.slice(start, end);
+      if (!slice.length) continue;
+
+      // Если текущий сет полностью выучен — пропускаем его (автопереход).
+      if (isCurrentSetComplete(dk, slice)) continue;
+
+      var eligible = eligibleFromSlice(slice);
+      if (eligible.length) {
+        if (idx !== currentSetIndex) setBatchIndex(idx, dk);
+        currentSetIndex = idx;
+        return eligible;
+      }
+    }
+
+    // Фоллбек: если по какой-то причине не нашли eligible, начинаем с первого сета.
+    // (Например, при пограничных состояниях прогресса/миграциях.)
+    currentSetIndex = 0;
+    setBatchIndex(0, dk);
+    var slice0 = deck.slice(0, Math.min(deck.length, setSize));
+    var eligible0 = eligibleFromSlice(slice0);
+    return eligible0.length ? eligible0 : slice0;
   }
+
 
   function tTranslation(w) {
     // В каркасе просто используем ту же логику, что и базовый тренер,
