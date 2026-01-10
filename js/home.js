@@ -1139,10 +1139,61 @@ function activeDeckKey() {
     const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
     if (!slice.length) return;
 
+    // UX: for tiny / non-full sets (e.g. last Lernpunkt batch with 1 word),
+    // the default trainer will keep drilling the same word until it is fully learned.
+    // That is correct logically, but feels "stuck". To keep training fluid and symmetric
+    // with the articles trainer, we extend the selection pool with spillover words from
+    // the next batches *without* changing the UI counters, which are still based on `slice`.
+    function buildSpilloverPool(deckKey, baseSlice) {
+      const MIN_POOL = 6;
+      const A = window.App || {};
+      const T = A.Trainer || {};
+      const D = A.Decks || {};
+
+      const setSize = (T && typeof T.getSetSize === 'function') ? (T.getSetSize(deckKey) || 0) : 0;
+      const target = Math.max(1, Math.min(setSize || MIN_POOL, MIN_POOL));
+      if (!baseSlice || baseSlice.length >= target) return baseSlice || [];
+
+      const meta = (T && typeof T.getBatchesMeta === 'function') ? (T.getBatchesMeta(deckKey) || null) : null;
+      const total = meta && typeof meta.total === 'number' ? meta.total : 1;
+      const active = meta && typeof meta.active === 'number' ? meta.active : 0;
+      const deck = (D && typeof D.resolveDeckByKey === 'function') ? (D.resolveDeckByKey(deckKey) || []) : [];
+      if (!deck.length || !setSize || total <= 1) return baseSlice;
+
+      const seen = new Set();
+      const pool = [];
+      for (let i = 0; i < baseSlice.length; i++) {
+        const w = baseSlice[i];
+        if (!w) continue;
+        const id = String(w.id);
+        if (seen.has(id)) continue;
+        seen.add(id);
+        pool.push(w);
+      }
+
+      // Add next batches in a circular manner until we reach the target size.
+      for (let step = 1; step < total && pool.length < target; step++) {
+        const bi = (active + step) % total;
+        const start = bi * setSize;
+        const end = Math.min(deck.length, start + setSize);
+        for (let j = start; j < end && pool.length < target; j++) {
+          const w = deck[j];
+          if (!w) continue;
+          const id = String(w.id);
+          if (seen.has(id)) continue;
+          seen.add(id);
+          pool.push(w);
+        }
+      }
+      return pool.length ? pool : baseSlice;
+    }
+
+    const pool = buildSpilloverPool(key, slice);
+
     const idx = (A.Trainer && typeof A.Trainer.sampleNextIndexWeighted === 'function')
-      ? A.Trainer.sampleNextIndexWeighted(slice)
-      : Math.floor(Math.random() * slice.length);
-    const word = slice[idx];
+      ? A.Trainer.sampleNextIndexWeighted(pool)
+      : Math.floor(Math.random() * pool.length);
+    const word = pool[idx];
 
     A.__currentWord = word;
 
