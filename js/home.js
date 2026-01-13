@@ -615,15 +615,43 @@ try {
         const t = e.target;
         if (!t) return;
 
-        // If filters sheet is open, any click outside the sheet closes it.
-        // This prevents the backdrop from "stealing" clicks on the footer/navigation.
+        function isFooterTarget(node){
+          try {
+            if (!node || !node.closest) return false;
+            return !!(
+              node.closest('#bottomNav') ||
+              node.closest('#bottomBar') ||
+              node.closest('#tabbar') ||
+              node.closest('#tabs') ||
+              node.closest('.bottom-nav') ||
+              node.closest('.bottomBar') ||
+              node.closest('.tabbar') ||
+              node.closest('.tabs') ||
+              node.closest('.app-footer') ||
+              node.closest('.footer-nav') ||
+              node.closest('.footerBar') ||
+              node.closest('footer')
+            );
+          } catch(_){
+            return false;
+          }
+        }
+
+        // If filters sheet is open, clicks outside the sheet close it.
+        // Important UX: when user taps the footer while filters are open, we close the
+        // sheet/backdrop but still allow the footer click to proceed.
         try {
           const ov = document.getElementById('filtersOverlay');
           const sh = document.getElementById('filtersSheet');
           const isOpen = !!(ov && !ov.classList.contains('filters-hidden'));
           if (isOpen) {
             const insideSheet = !!(t.closest && sh && t.closest('#filtersSheet'));
-            if (!insideSheet) { closeFiltersSheet(); return; }
+            if (!insideSheet) {
+              closeFiltersSheet();
+              // Allow footer navigation to receive this click.
+              if (isFooterTarget(t)) { /* fallthrough */ }
+              else { return; }
+            }
           }
         } catch(_){}
 
