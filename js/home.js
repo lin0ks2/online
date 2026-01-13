@@ -617,6 +617,14 @@ try {
 
         if (t.closest && t.closest('#filtersBtn')) { openFiltersSheet(); return; }
         if (t.closest && (t.closest('#filtersOverlay') || t.closest('#filtersClose'))) { closeFiltersSheet(); return; }
+        // Explicit "Apply" button: apply filters and close the sheet.
+        // Without this, the fixed overlay/sheet keeps capturing taps and the bottom navigation becomes non-interactive.
+        if (t.closest && t.closest('#filtersApply')) {
+          try { applyFiltersFromSheet(); } catch(_){}
+          try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
+          try { closeFiltersSheet(); } catch(_){}
+          return;
+        }
         if (t.closest && t.closest('#filtersReset')) {
           const key = activeDeckKey();
           const studyLang = getStudyLangForKey(key) || 'xx';
