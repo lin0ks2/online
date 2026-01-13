@@ -258,16 +258,22 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 /* футер на нуле — твоё идеальное текущее поведение в браузерах */}
 /* 2) PWA (display-mode: standalone) — прижимаем кнопки НА САМЫЙ НИЗ, без дублей safe-area */
 @media all and (display-mode:standalone){
-  .app-footer{
-    bottom:0;  /* футер ровно у нижней кромки окна */
-    height:calc(var(--footer-h) + var(--safe-bottom)); /* добавляем safe-area в высоту, чтобы кнопки могли опуститься вниз */
-    padding-bottom:0;            /* не держим контент выше — кнопки уходят в safe-area */
-    border-bottom:0;             /* нижняя линия футера в PWA не нужна (часто визуально мешает у самого края) */
-    align-items:end;             /* grid: прижимаем элементы к низу и убираем растягивание */
+  /* iOS PWA/TWA: layout viewport может быть уже "обрезан" по safe-area снизу.
+     В этом случае bottom:0 ставит футер выше home-indicator, а увеличение height
+     только поднимает верх футера (даёт "наезд" на контент).
+     Решение: сдвигаем футер вниз на safe-bottom и возвращаем высоту с safe-area,
+     а у контента убираем лишний safe-bottom в padding, чтобы не было двойного зазора. */
+
+  .app-content{
+    padding-bottom:calc(var(--footer-h) + 10px); /* без safe-bottom: футер физически уезжает в inset */
   }
-  .app-footer .nav-btn{
-    height:var(--footer-h);      /* фиксируем высоту кнопок, чтобы они опустились вниз, а не растянулись */
-    align-self:end;
+
+  .app-footer{
+    bottom:calc(-1 * var(--safe-bottom));              /* опускаем в область home-indicator */
+    height:calc(var(--footer-h) + var(--safe-bottom)); /* футер реально занимает inset */
+    padding-bottom:0;                                  /* не добавляем внутренний inset, чтобы кнопки могли уйти ниже */
+    align-items:end;                                   /* элементы футера прижимаем к низу */
+    border-bottom:0;                                   /* как и раньше для PWA */
   }
 }
 /* ========================================================================== */
