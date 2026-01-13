@@ -537,7 +537,14 @@ try {
       }
     } catch(_){}
 
-    // Notify user and refresh UI
+    
+    // IMPORTANT: when we rollback filters due to insufficient options, we must also
+    // release the modal scroll lock and hide overlay/sheet; otherwise the fixed
+    // overlay (or mm-modal-open scroll lock on iOS) can keep intercepting taps,
+    // making the bottom navigation appear "dead".
+    try { closeFiltersSheet(); } catch(_){}
+    try { document.body.classList.remove('mm-modal-open'); document.body.style.top=''; } catch(_){}
+// Notify user and refresh UI
     try { if (A.Msg && typeof A.Msg.toast === 'function') A.Msg.toast(v.msg || 'Недостаточно данных для тренировки. Выберите другие фильтры.', 3400); } catch(_){}
     try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
     return;
@@ -623,18 +630,7 @@ try {
           const isOpen = !!(ov && !ov.classList.contains('filters-hidden'));
           if (isOpen) {
             const insideSheet = !!(t.closest && sh && t.closest('#filtersSheet'));
-            if (!insideSheet) {
-              const x = e.clientX, y = e.clientY;
-              closeFiltersSheet();
-              // Forward the same tap to the element now underneath (e.g., footer nav).
-              setTimeout(function(){
-                try {
-                  const el = document.elementFromPoint(x, y);
-                  if (el && el.click) el.click();
-                } catch(_){}
-              }, 0);
-              return;
-            }
+            if (!insideSheet) { closeFiltersSheet(); return; }
           }
         } catch(_){}
 
