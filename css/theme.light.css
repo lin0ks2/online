@@ -265,7 +265,12 @@ body.menu-open .oc-panel{ transform:translateX(0);}
     height:var(--footer-h);     /* только высота панели с кнопками */
     padding-bottom:0;           /* кнопки над home-indicator */
     border-bottom:0;            /* нижняя линия в PWA обычно мешает у края */
+  }  /* лёгкий "nudge" вниз: визуально ближе к нативным таб-барам (OLX/Google/EarFun),
+     но без ухода в саму системную зону жестов */
+  .app-footer .nav-btn{
+    transform:translateY(calc(var(--safe-bottom) * 0.45));
   }
+
   /* дорисовываем фон футера в safe-area (под home-indicator) */
   .app-footer::after{
     content:"";
