@@ -194,102 +194,119 @@ function setUiLang(code){
     try {
       return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
     } catch(_){}
-    
-// ------------------------ Guards: filters vs trainer options ------------------------
-// We must prevent cases where applying filters during training leaves too few options:
-// - Word trainer requires 4 unique answer buttons
-// - Articles trainer requires presence of der/die/das in the filtered pool
-const __lastValidFilterStateByStudyLang = Object.create(null);
+    return [];
+  }
 
-function __normLabel(s){
-  return String(s || '').trim().replace(/\s+/g,' ').toLowerCase();
-}
+  // ------------------------ Guards: filters vs trainer options ------------------------
+  // Prevent cases where applying filters during training leaves too few options:
+  // - Word trainer requires 4 answer buttons (1 correct + 3 distractors)
+  // - Articles trainer requires presence of der/die/das in the filtered pool
+  const __lastValidFilterStateByStudyLang = Object.create(null);
 
-function __getAnswerLabelForOption(w){
-  // Must match the labels used in buildOptions() (tWord -> ru/uk translation shown to user)
-  try { return String(tWord(w) || '').trim(); } catch(_){ return ''; }
-}
+  function __normLabel(s){
+    return String(s || '').trim().replace(/\s+/g,' ').toLowerCase();
+  }
 
-function __parseArticleFromWord(w){
-  var raw = '';
-  try { raw = (w && (w.word || w.term || w.de || '')) || ''; } catch(_){ raw = ''; }
-  raw = String(raw || '').trim().toLowerCase();
-  var first = raw.split(/\s+/)[0] || '';
-  if (first === 'der' || first === 'die' || first === 'das') return first;
-  return '';
-}
+  function __getAnswerLabelForOption(w){
+    // Same source as buttons: tWord(w) -> ru/uk translation shown to user
+    try { return String(tWord(w) || '').trim(); } catch(_){ return ''; }
+  }
 
-function __validateTrainingFeasibilityForKey(deckKey){
-  const key = deckKey;
-  const isArticles = isArticlesModeForKey(key);
-  const deck = getTrainableDeckForKey(key) || [];
-  const ui = (typeof getUiLang === 'function') ? getUiLang() : 'ru';
+  function __parseArticleFromWord(w){
+    let raw = '';
+    try { raw = (w && (w.word || w.term || w.de || '')) || ''; } catch(_){ raw = ''; }
+    raw = String(raw || '').trim().toLowerCase();
+    const first = raw.split(/\s+/)[0] || '';
+    if (first === 'der' || first === 'die' || first === 'das') return first;
+    return '';
+  }
 
-  if (isArticles) {
-    const s = new Set();
-    for (const w of deck){
-      const a = __parseArticleFromWord(w);
-      if (a) s.add(a);
-      if (s.size >= 3) break;
+  function __eligibleWordCountForOptions(deck){
+    // We can disambiguate duplicate labels (adding (term) / (#n)), so we only need
+    // enough distinct WORDS with non-empty base label.
+    try{
+      const seen = new Set();
+      let n = 0;
+      for (const w of (deck || [])){
+        if (!w || w.id == null) continue;
+        const id = String(w.id);
+        if (seen.has(id)) continue;
+        const base = __getAnswerLabelForOption(w);
+        if (!base) continue;
+        seen.add(id);
+        n++;
+        if (n >= 4) break;
+      }
+      return n;
+    }catch(_){
+      return 0;
     }
-    if (s.size >= 3) return { ok:true };
+  }
+
+  function __validateTrainingFeasibilityForKey(deckKey){
+    const key = deckKey;
+    const isArticles = isArticlesModeForKey(key);
+    const deck = getTrainableDeckForKey(key) || [];
+    const ui = (typeof getUiLang === 'function') ? getUiLang() : 'ru';
+
+    if (isArticles) {
+      const s = new Set();
+      for (const w of deck){
+        const a = __parseArticleFromWord(w);
+        if (a) s.add(a);
+        if (s.size >= 3) break;
+      }
+      if (s.size >= 3) return { ok:true };
+
+      const msg = (ui === 'uk')
+        ? 'Недостатньо слів з різними артиклями для тренування (потрібно der/die/das). Оберіть інші фільтри.'
+        : 'Недостаточно слов с разными артиклями для тренировки (нужно der/die/das). Выберите другие фильтры.';
+      return { ok:false, reason:'articles', msg };
+    }
+
+    const eligible = __eligibleWordCountForOptions(deck);
+    if (eligible >= 4) return { ok:true };
+
     const msg = (ui === 'uk')
-      ? 'Недостатньо слів з різними артиклями для тренування (потрібно der/die/das). Оберіть інші фільтри.'
-      : 'Недостаточно слов с разными артиклями для тренировки (нужно der/die/das). Выберите другие фильтры.';
-    return { ok:false, reason:'articles', msg };
+      ? `Недостатньо слів для тренування: потрібно мінімум 4 варіанти відповіді (зараз ${eligible}). Оберіть інші фільтри.`
+      : `Недостаточно слов для тренировки: нужно минимум 4 варианта ответа (сейчас ${eligible}). Выберите другие фильтры.`;
+    return { ok:false, reason:'words', msg, count: eligible };
   }
 
-  // Words trainer: need 4 UNIQUE labels as seen on buttons
-  const labels = new Set();
-  for (const w of deck){
-    const lab = __getAnswerLabelForOption(w);
-    if (!lab) continue;
-    labels.add(__normLabel(lab));
-    if (labels.size >= 4) break;
+  function __rememberLastValidFilterState(studyLang){
+    try {
+      if (A.Filters && typeof A.Filters.getState === 'function') {
+        const st = A.Filters.getState(studyLang || 'xx');
+        __lastValidFilterStateByStudyLang[String(studyLang||'xx').toLowerCase()] = {
+          enabled: !!(st && st.enabled),
+          selected: (st && st.selected) ? st.selected.slice() : []
+        };
+      }
+    } catch(_){}
   }
-  if (labels.size >= 4) return { ok:true };
 
-  const msg = (ui === 'uk')
-    ? `Недостатньо варіантів для тренування: потрібно мінімум 4 різні відповіді (зараз ${labels.size}). Оберіть інші фільтри.`
-    : `Недостаточно вариантов для тренировки: нужно минимум 4 разных ответа (сейчас ${labels.size}). Выберите другие фильтры.`;
-  return { ok:false, reason:'words', msg, count: labels.size };
-}
+  function __restoreFilterState(studyLang, st){
+    try {
+      if (!A.Filters || typeof A.Filters.setLevels !== 'function') return;
+      const sel = (st && st.selected) ? st.selected.slice() : [];
+      A.Filters.setLevels(studyLang, sel);
+    } catch(_){}
+  }
 
-function __rememberLastValidFilterState(studyLang){
-  try {
-    if (A.Filters && typeof A.Filters.getState === 'function') {
-      const st = A.Filters.getState(studyLang || 'xx');
-      __lastValidFilterStateByStudyLang[String(studyLang||'xx').toLowerCase()] = {
-        enabled: !!(st && st.enabled),
-        selected: (st && st.selected) ? st.selected.slice() : []
-      };
+  function __syncFiltersSheetCheckboxes(studyLang){
+    const list = document.getElementById('filtersLevelsList');
+    if (!list) return;
+    let st = null;
+    try { st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang || 'xx') : null; } catch(_){ st = null; }
+    const selected = new Set((st && st.selected) ? st.selected : []);
+    const cbs = Array.from(list.querySelectorAll('input[type="checkbox"][data-level]'));
+    for (const cb of cbs){
+      const lv = String(cb.getAttribute('data-level') || '').trim();
+      if (!lv) continue;
+      cb.checked = selected.has(lv);
     }
-  } catch(_){}
-}
-
-function __restoreFilterState(studyLang, st){
-  try {
-    if (!A.Filters || typeof A.Filters.setLevels !== 'function') return;
-    const sel = (st && st.selected) ? st.selected.slice() : [];
-    A.Filters.setLevels(studyLang, sel);
-  } catch(_){}
-}
-
-function __syncFiltersSheetCheckboxes(studyLang){
-  const list = document.getElementById('filtersLevelsList');
-  if (!list) return;
-  let st = null;
-  try { st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang || 'xx') : null; } catch(_){ st = null; }
-  const selected = new Set((st && st.selected) ? st.selected : []);
-  const cbs = Array.from(list.querySelectorAll('input[type="checkbox"][data-level]'));
-  for (const cb of cbs){
-    const lv = String(cb.getAttribute('data-level') || '').trim();
-    if (!lv) continue;
-    cb.checked = selected.has(lv);
   }
-}
-return [];
-  }
+
 
   function getTrainableSliceForKey(deckKey){
     const deck = getTrainableDeckForKey(deckKey);
