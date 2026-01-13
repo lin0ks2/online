@@ -258,24 +258,31 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 /* футер на нуле — твоё идеальное текущее поведение в браузерах */}
 /* 2) PWA (display-mode: standalone) — прижимаем кнопки НА САМЫЙ НИЗ, без дублей safe-area */
 @media all and (display-mode:standalone){
-  /* iOS PWA/TWA: layout viewport может быть уже "обрезан" по safe-area снизу.
-     В этом случае bottom:0 ставит футер выше home-indicator, а увеличение height
-     только поднимает верх футера (даёт "наезд" на контент).
-     Решение: сдвигаем футер вниз на safe-bottom и возвращаем высоту с safe-area,
-     а у контента убираем лишний safe-bottom в padding, чтобы не было двойного зазора. */
-
-  .app-content{
-    padding-bottom:calc(var(--footer-h) + 10px); /* без safe-bottom: футер физически уезжает в inset */
-  }
-
+  /* iOS PWA/TWA: кнопки НЕ уводим в safe-area (как в нативных приложениях).
+     Safe-area снизу — только под фон. */
   .app-footer{
-    bottom:calc(-1 * var(--safe-bottom));              /* опускаем в область home-indicator */
-    height:calc(var(--footer-h) + var(--safe-bottom)); /* футер реально занимает inset */
-    padding-bottom:0;                                  /* не добавляем внутренний inset, чтобы кнопки могли уйти ниже */
-    align-items:end;                                   /* элементы футера прижимаем к низу */
-    border-bottom:0;                                   /* как и раньше для PWA */
+    bottom:0;
+    height:var(--footer-h);     /* только высота панели с кнопками */
+    padding-bottom:0;           /* кнопки над home-indicator */
+    border-bottom:0;            /* нижняя линия в PWA обычно мешает у края */
+  }
+  /* дорисовываем фон футера в safe-area (под home-indicator) */
+  .app-footer::after{
+    content:"";
+    position:absolute;
+    left:0; right:0;
+    bottom:calc(-1 * var(--safe-bottom));
+    height:var(--safe-bottom);
+    background:var(--footer-bg);
+    pointer-events:none;
+  }
+  /* контент в PWA/TWA не должен дополнительно учитывать safe-bottom,
+     иначе появляется «пустота» над футером */
+  .content{
+    padding-bottom:calc(var(--footer-h) + 10px);
   }
 }
+
 /* ========================================================================== */
 /*  ДОП. НАСТРОЙКИ ДЛЯ iOS (SAFE-AREAS)                                       */
 /*  ВАЖНО: разбиваем на две ветки, чтобы НЕ дублировать safe-area в PWA.      */
