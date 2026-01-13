@@ -338,6 +338,8 @@ function setUiLang(code){
       list.appendChild(row);
     }
 
+    try { __refreshFiltersDraftValidation(); } catch(_){ }
+
     overlay.classList.remove('filters-hidden');
     sheet.classList.remove('filters-hidden');
 
@@ -347,8 +349,8 @@ function setUiLang(code){
 
     // Focus close for accessibility (best-effort)
     try {
-      const closeBtn = document.getElementById('filtersClose');
-      if (closeBtn && closeBtn.focus) closeBtn.focus();
+      const applyBtn = document.getElementById('filtersApply');
+      if (applyBtn && applyBtn.focus) applyBtn.focus();
     } catch(_){ }
   }
 
@@ -363,16 +365,116 @@ function setUiLang(code){
     try { unlockBodyScrollForFilters(); } catch(_){ }
   }
 
-  function applyFiltersFromSheet(){
-    const key = activeDeckKey();
-    const studyLang = getStudyLangForKey(key) || 'xx';
+  function __readCheckedLevelsFromSheet(){
     const list = document.getElementById('filtersLevelsList');
-    if (!list) return;
-
-    const checked = Array.from(list.querySelectorAll('input[type="checkbox"][data-level]'))
+    if (!list) return [];
+    return Array.from(list.querySelectorAll('input[type="checkbox"][data-level]'))
       .filter(cb => cb && cb.checked)
       .map(cb => String(cb.getAttribute('data-level') || '').trim())
       .filter(Boolean);
+  }
+
+  function __setFiltersHint(text){
+    const el = document.getElementById('filtersHint');
+    if (!el) return;
+    el.textContent = text || '';
+  }
+
+  function __setApplyEnabled(enabled){
+    const btn = document.getElementById('filtersApply');
+    if (!btn) return;
+    btn.disabled = !enabled;
+    btn.setAttribute('aria-disabled', (!enabled).toString());
+  }
+
+  function __isArticlesTrainerActive(){
+    try {
+      return !!(A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive());
+    } catch(_){
+      return false;
+    }
+  }
+
+  function __validateDraftFiltersForKey(key, studyLang, draftLevels){
+    // Validate without committing: temporarily apply, compute trainable deck, then restore.
+    let prev = [];
+    try {
+      const st = (A.Filters && typeof A.Filters.getState === 'function') ? A.Filters.getState(studyLang) : null;
+      prev = (st && Array.isArray(st.selected)) ? st.selected.slice() : [];
+    } catch(_){ prev = []; }
+
+    try { if (A.Filters && typeof A.Filters.setLevels === 'function') A.Filters.setLevels(studyLang, draftLevels); } catch(_){}
+
+    let deck = [];
+    try { deck = getTrainableDeckForKey(key) || []; } catch(_){ deck = []; }
+
+    const isArticles = __isArticlesTrainerActive();
+    let ok = true, msg = '';
+    if (isArticles){
+      const set = new Set();
+      for (const w of deck){
+        const raw = String((w && (w.de || w.word || w.L2 || '')) || '').trim().toLowerCase();
+        const m = raw.match(/^(der|die|das)\b/);
+        if (m) set.add(m[1]);
+      }
+      ok = (set.size >= 3);
+      if (!ok){
+        msg = (getUiLang() === 'uk')
+          ? 'Недостатньо слів з різними артиклями (потрібні der/die/das). Додайте рівні або змініть фільтр.'
+          : 'Недостаточно слов с разными артиклями (нужны der/die/das). Добавьте уровни или измените фильтр.';
+      }
+      __setFiltersHint(ok ? '' : msg);
+      __setApplyEnabled(ok);
+    } else {
+      let count = 0;
+      for (const w of deck){
+        let ans = '';
+        try { ans = String(tWord(w) || '').trim(); } catch(_){ ans = ''; }
+        if (ans) count++;
+      }
+      ok = (count >= 4);
+      if (!ok){
+        msg = (getUiLang() === 'uk')
+          ? `Замало слів для тренування (потрібно мін. 4, зараз ${count}). Додайте рівні.`
+          : `Слишком мало слов для тренировки (нужно минимум 4, сейчас ${count}). Добавьте уровни.`;
+      }
+      __setFiltersHint(ok ? '' : msg);
+      __setApplyEnabled(ok);
+    }
+
+    // Restore previous (best-effort)
+    try { if (A.Filters && typeof A.Filters.setLevels === 'function') A.Filters.setLevels(studyLang, prev); } catch(_){}
+
+    return { ok, msg };
+  }
+
+  function __refreshFiltersDraftValidation(){
+    const key = activeDeckKey();
+    const studyLang = getStudyLangForKey(key) || 'xx';
+    const draft = __readCheckedLevelsFromSheet();
+
+    // If nothing selected, it's valid (means "no filter").
+    if (!draft.length){
+      __setFiltersHint('');
+      __setApplyEnabled(true);
+      return { ok: true, msg: '' };
+    }
+
+    return __validateDraftFiltersForKey(key, studyLang, draft);
+  }
+
+  function applyFiltersFromSheet(){
+    const key = activeDeckKey();
+    const studyLang = getStudyLangForKey(key) || 'xx';
+
+    const checked = __readCheckedLevelsFromSheet();
+
+    // Validate draft first; do not rollback, just block apply
+    const v = __refreshFiltersDraftValidation();
+    if (!v.ok){
+      try { if (A.Msg && A.Msg.toast) A.Msg.toast(v.msg, 2800); } catch(_){}
+      return;
+    }
 
     try {
       if (A.Filters && typeof A.Filters.setLevels === 'function') {
@@ -380,28 +482,10 @@ function setUiLang(code){
       }
     } catch(_){}
 
-    // Re-normalize set index to avoid empty sets
-    try {
-      const deck = getTrainableDeckForKey(key);
-      const SZ = getSetSizeForKey(key);
-      const totalSets = Math.max(1, Math.ceil(deck.length / SZ));
-      const isArticles = isArticlesModeForKey(key);
-      if (isArticles && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function' && typeof A.ArticlesTrainer.setSetIndex === 'function'){
-        let idx = Number(A.ArticlesTrainer.getSetIndex(key) || 0);
-        if (!Number.isFinite(idx) || idx < 0) idx = 0;
-        if (idx >= totalSets) idx = totalSets - 1;
-        A.ArticlesTrainer.setSetIndex(idx, key);
-      } else {
-        let idx = Number(getActiveBatchIndex() || 0);
-        if (!Number.isFinite(idx) || idx < 0) idx = 0;
-        if (idx >= totalSets) idx = totalSets - 1;
-        setActiveBatchIndex(idx);
-      }
-    } catch(_){}
-
+    // Re-render & close
     try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
+    try { closeFiltersSheet(); } catch(_){}
   }
-
 
 
   function bindLangToggle() {
@@ -432,11 +516,15 @@ function setUiLang(code){
     if (A.__filtersDelegationBound) return;
     A.__filtersDelegationBound = true;
 
-    // Live-apply: apply immediately when user toggles a chip.
-    // We debounce a bit to avoid heavy re-renders on rapid taps.
-    let __applyT = null;
-    function scheduleLiveApply(){
-      try { if (__applyT) clearTimeout(__applyT); } catch(_){}
+    // Draft validation: do not apply filters while the sheet is open.
+    // We only validate the draft selection and enable/disable the Apply button.
+    let __draftT = null;
+    function scheduleDraftValidation(){
+      try { if (__draftT) clearTimeout(__draftT); } catch(_){ }
+      __draftT = setTimeout(function(){
+        try { __refreshFiltersDraftValidation(); } catch(_){ }
+      }, 60);
+    }
       __applyT = setTimeout(function(){
         try { applyFiltersFromSheet(); } catch(_){}
         try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
@@ -449,14 +537,18 @@ function setUiLang(code){
         if (!t) return;
 
         if (t.closest && t.closest('#filtersBtn')) { openFiltersSheet(); return; }
-        if (t.closest && (t.closest('#filtersOverlay') || t.closest('#filtersClose'))) { closeFiltersSheet(); return; }
+        if (t.closest && t.closest('#filtersOverlay')) { closeFiltersSheet(); return; }
+        if (t.closest && t.closest('#filtersApply')) { try { applyFiltersFromSheet(); } catch(_){} return; }
         if (t.closest && t.closest('#filtersReset')) {
-          const key = activeDeckKey();
-          const studyLang = getStudyLangForKey(key) || 'xx';
-          try { if (A.Filters && typeof A.Filters.resetAll === 'function') A.Filters.resetAll(studyLang); else if (A.Filters && typeof A.Filters.reset === 'function') A.Filters.reset(studyLang); } catch(_){}
-          try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
-          // Keep sheet open; user can immediately pick new chips
-          try { openFiltersSheet(); } catch(_){}
+          // Reset draft only (do not apply until user taps Apply)
+          try {
+            const list = document.getElementById('filtersLevelsList');
+            if (list) {
+              list.querySelectorAll('input[type="checkbox"][data-level]').forEach(cb => { cb.checked = false; });
+            }
+          } catch(_){ }
+          try { __setFiltersHint(''); } catch(_){ }
+          try { __setApplyEnabled(true); } catch(_){ }
           return;
         }
         if (t.closest && t.closest('#filtersOpenFromEmpty')) { openFiltersSheet(); return; }
@@ -467,7 +559,7 @@ function setUiLang(code){
         const t = e.target;
         if (!t) return;
         if (t.matches && t.matches('#filtersLevelsList input[type="checkbox"][data-level]')) {
-          scheduleLiveApply();
+          scheduleDraftValidation();
         }
       } catch(_){}
     }, true);
@@ -821,13 +913,14 @@ function activeDeckKey() {
             <div class="filters-title">${(window.I18N_t ? window.I18N_t('filtersTitle') : 'Фильтры')}</div>
             <div class="filters-head-actions">
               <button class="filters-reset" id="filtersReset" type="button">${(window.I18N_t ? window.I18N_t('filtersReset') : 'Сбросить')}</button>
-              <button class="filters-close" id="filtersClose" type="button">✕</button>
+              <button class="filters-apply" id="filtersApply" type="button">${(window.I18N_t ? window.I18N_t('filtersApply') : 'Применить')}</button>
             </div>
           </div>
 
           <div class="filters-section">
             <h4>${(window.I18N_t ? window.I18N_t('filtersLevels') : 'Уровни')}</h4>
             <div class="filters-list" id="filtersLevelsList"></div>
+            <div class="filters-hint" id="filtersHint" aria-live="polite"></div>
           </div>
 
           <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
