@@ -153,6 +153,7 @@ body.theme-light {
 }
 
 .filters-reset,
+.filters-apply,
 .filters-close {
   border: 1px solid var(--mm-filters-border);
   background: var(--mm-filters-surface-2);
@@ -329,4 +330,17 @@ body.theme-light .filters-item input:checked + span {
   border-color: var(--mm-filters-accent);
   background: color-mix(in srgb, var(--mm-filters-accent) 6%, rgba(255,255,255,1));
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--mm-filters-accent) 10%, transparent) inset;
+}
+
+
+/* Patch: draft filters + Apply button */
+.filters-apply[disabled]{
+  opacity: .55;
+}
+
+.filters-hint{
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.25;
+  opacity: .85;
 }
