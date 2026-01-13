@@ -85,16 +85,12 @@ body.theme-light {
 
 .filters-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: var(--mm-filters-bottom-offset, 0px);
+  inset: 0;
   background: var(--mm-filters-backdrop);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 1000;
   touch-action: none;
-  pointer-events: none;
 }
 
 .filters-sheet {
@@ -117,7 +113,6 @@ body.theme-light {
   overscroll-behavior: contain;
   touch-action: pan-y;
   padding-bottom: max(14px, env(safe-area-inset-bottom));
-  pointer-events: auto;
 }
 
 /* handle */
