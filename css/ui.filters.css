@@ -85,7 +85,14 @@ body.theme-light {
 
 .filters-overlay {
   position: fixed;
-  inset: 0;
+  /* Do not cover the fixed bottom navigation.
+     The offset is computed dynamically in JS (openFiltersSheet) and stored
+     in --mm-filters-bottom-offset.
+  */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--mm-filters-bottom-offset, 0px);
   background: var(--mm-filters-backdrop);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
