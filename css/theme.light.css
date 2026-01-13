@@ -845,7 +845,7 @@ body.modal-open { overflow: hidden;}
   height:calc(var(--vh,1vh)*100 - var(--header-h-actual) - var(--footer-h-actual));
   /* запас снизу, чтобы карточки не упирались в фиксированный футер */
   padding-top:8px;
-  padding-bottom:calc(var(--footer-h-actual, 40px) + 0px);}
+  padding-bottom:calc(var(--footer-h-actual, 20px) + 5px);}
 /* Внутренний лэйаут домашней страницы */
 .home{
   display:flex;
