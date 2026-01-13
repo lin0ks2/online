@@ -615,16 +615,21 @@ try {
         const t = e.target;
         if (!t) return;
 
+        // If filters sheet is open, any click outside the sheet closes it.
+        // This prevents the backdrop from "stealing" clicks on the footer/navigation.
+        try {
+          const ov = document.getElementById('filtersOverlay');
+          const sh = document.getElementById('filtersSheet');
+          const isOpen = !!(ov && !ov.classList.contains('filters-hidden'));
+          if (isOpen) {
+            const insideSheet = !!(t.closest && sh && t.closest('#filtersSheet'));
+            if (!insideSheet) { closeFiltersSheet(); return; }
+          }
+        } catch(_){}
+
+
         if (t.closest && t.closest('#filtersBtn')) { openFiltersSheet(); return; }
         if (t.closest && (t.closest('#filtersOverlay') || t.closest('#filtersClose'))) { closeFiltersSheet(); return; }
-        // Explicit "Apply" button: apply filters and close the sheet.
-        // Without this, the fixed overlay/sheet keeps capturing taps and the bottom navigation becomes non-interactive.
-        if (t.closest && t.closest('#filtersApply')) {
-          try { applyFiltersFromSheet(); } catch(_){}
-          try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
-          try { closeFiltersSheet(); } catch(_){}
-          return;
-        }
         if (t.closest && t.closest('#filtersReset')) {
           const key = activeDeckKey();
           const studyLang = getStudyLangForKey(key) || 'xx';
