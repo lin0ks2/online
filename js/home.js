@@ -1299,6 +1299,12 @@ if (wantArticles) {
       const last = __lastValidFilterStateByStudyLang[String(studyLang||'xx').toLowerCase()] || null;
       if (last) __restoreFilterState(studyLang, last);
       else if (A.Filters && typeof A.Filters.reset === 'function') A.Filters.reset(studyLang);
+
+      // Ensure filters modal/scroll-lock cannot remain stuck after rollback (prevents footer taps from being swallowed)
+      try { if (typeof closeFiltersSheet === 'function') closeFiltersSheet(); } catch(_){}
+      try { document.body.classList.remove('mm-modal-open'); document.body.style.top = ''; } catch(_){}
+      try { if (document && document.documentElement) document.documentElement.style.removeProperty('--mm-filters-bottom-offset'); } catch(_){}
+
       try { if (A.Msg && typeof A.Msg.toast === 'function') A.Msg.toast(v.msg, 3400); } catch(_){}
       try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
       return;
