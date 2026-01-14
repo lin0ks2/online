@@ -258,20 +258,32 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 /* футер на нуле — твоё идеальное текущее поведение в браузерах */}
 /* 2) PWA (display-mode: standalone) — прижимаем кнопки НА САМЫЙ НИЗ, без дублей safe-area */
 @media all and (display-mode:standalone){
-  /* iOS PWA/TWA: кнопки НЕ уводим в safe-area (как в нативных приложениях).
-     Safe-area снизу — только под фон. */
-  .app-footer{
-    bottom:0;
-    height:var(--footer-h);     /* только высота панели с кнопками */
-    padding-bottom:0;           /* кнопки над home-indicator */
-    border-bottom:0;            /* нижняя линия в PWA обычно мешает у края */
-  }  /* лёгкий "nudge" вниз: визуально ближе к нативным таб-барам (OLX/Google/EarFun),
-     но без ухода в саму системную зону жестов */
-  .app-footer .nav-btn{
-    transform:translateY(calc(var(--safe-bottom) * 0.45));
+  /* ======================= MOYAMOVA PWA/TWA FOOTER PATCH =======================
+     Цель: как в нативных iOS-приложениях (OLX/Google/EarFun)
+     - Кнопки остаются ВЫШЕ home-indicator (НЕ в safe-area)
+     - Safe-area снизу закрываем ТОЛЬКО фоном футера
+     - В PWA/TWA делаем футер чуть тоньше (−14px) и слегка опускаем иконки
+     ========================================================================== */
+
+  :root{
+    --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
   }
 
-  /* дорисовываем фон футера в safe-area (под home-indicator) */
+  .app-footer{
+    bottom:0;
+    height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
+    padding-bottom:0;             /* кнопки над home-indicator */
+    border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
+    position:relative;            /* якорь для ::after */
+    overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
+  }
+
+  /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
+  .app-footer .nav-btn{
+    transform:translateY(calc(var(--safe-bottom) * 0.4));
+  }
+
+  /* Дорисовываем фон футера в safe-area (под home-indicator) */
   .app-footer::after{
     content:"";
     position:absolute;
@@ -281,12 +293,16 @@ body.menu-open .oc-panel{ transform:translateX(0);}
     background:var(--footer-bg);
     pointer-events:none;
   }
-  /* контент в PWA/TWA не должен дополнительно учитывать safe-bottom,
+
+  /* Контент в PWA/TWA не должен дополнительно учитывать safe-bottom,
      иначе появляется «пустота» над футером */
   .content{
-    padding-bottom:calc(var(--footer-h) + 10px);
+    padding-bottom:calc(var(--footer-h-pwa) + 10px);
   }
+
+  /* ===================== END MOYAMOVA PWA/TWA FOOTER PATCH ==================== */
 }
+
 
 /* ========================================================================== */
 /*  ДОП. НАСТРОЙКИ ДЛЯ iOS (SAFE-AREAS)                                       */
@@ -845,7 +861,7 @@ body.modal-open { overflow: hidden;}
   height:calc(var(--vh,1vh)*100 - var(--header-h-actual) - var(--footer-h-actual));
   /* запас снизу, чтобы карточки не упирались в фиксированный футер */
   padding-top:8px;
-  padding-bottom:calc(var(--footer-h-actual, 0px) + 0px);}
+  padding-bottom:calc(var(--footer-h-actual, 60px) + 10px);}
 /* Внутренний лэйаут домашней страницы */
 .home{
   display:flex;
