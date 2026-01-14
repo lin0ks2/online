@@ -463,6 +463,12 @@ function setUiLang(code){
         if (resetBtn) resetBtn.disabled = true;
       } catch(_){}
 
+      try { overlay.classList.remove('filters-hidden'); } catch(_){}
+      try { sheet.classList.remove('filters-hidden'); } catch(_){}
+      try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
+      try { sheet.setAttribute('aria-hidden', 'false'); } catch(_){ }
+      try { lockBodyScrollForFilters(sheet); } catch(_){ }
+
       return;
     }
     const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
@@ -1360,7 +1366,9 @@ function activeDeckKey() {
 
 if (wantArticles) {
   // Safety guard: prevent articles training when filters leave fewer than der/die/das in the pool.
-  try {
+  // Virtual decks (favorites/mistakes) ignore filters and must not be blocked by this guard.
+  if (!isVirtualDeckKey(key)) {
+    try {
     const studyLang = getStudyLangForKey(key) || 'xx';
     const v = __validateTrainingFeasibilityForKey(key);
     if (v && v.ok === false) {
@@ -1371,7 +1379,8 @@ if (wantArticles) {
       try { window.dispatchEvent(new CustomEvent('lexitron:filters:changed')); } catch(_){}
       return;
     }
-  } catch(_){}
+    } catch(_){ }
+  }
 
   // Ensure the articles card is mounted into the standard home trainer container.
       try { if (A.ArticlesCard && typeof A.ArticlesCard.mount === 'function') A.ArticlesCard.mount(document.querySelector('.home-trainer')); } catch (_){ }
