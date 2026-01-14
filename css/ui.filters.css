@@ -268,7 +268,7 @@ body.theme-light {
 
 /* Body scroll lock for filters sheet */
 body.mm-modal-open {
-/*  position: fixed;*/
+  position: fixed;
   width: 100%;
   overflow: hidden;
 }
@@ -366,4 +366,22 @@ body.theme-light .filters-item input:checked + span {
   background: var(--mm-filters-accent);
   border-color: var(--mm-filters-accent);
   color: #fff;
+}
+
+
+/* MOYAMOVA: virtual decks filters info */
+.filters-virtual-note{
+  padding:14px;
+  border-radius:12px;
+  background:var(--card-bg, rgba(0,0,0,.04));
+}
+
+.filters-virtual-note .title{
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+.filters-virtual-note .text{
+  opacity:.8;
+  line-height:1.4;
 }
