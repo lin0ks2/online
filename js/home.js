@@ -46,7 +46,13 @@
           }
         }catch(_){}
         const now = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
-        if (now - t0 > maxWaitMs) return resolve(false);
+   
+  // MOYAMOVA: virtual decks (favorites / mistakes)
+  function isVirtualDeckKey(key){
+    return /^(favorites|mistakes):(ru|uk):/i.test(key || '');
+  }
+
+     if (now - t0 > maxWaitMs) return resolve(false);
         (typeof requestAnimationFrame === 'function' ? requestAnimationFrame : setTimeout)(tick, 16);
       })();
     });
@@ -186,6 +192,14 @@ function setUiLang(code){
 
   function getTrainableDeckForKey(deckKey){
     const mode = isArticlesModeForKey(deckKey) ? 'articles' : 'words';
+    // MOYAMOVA: virtual decks → ignore filters completely
+    if (isVirtualDeckKey(deckKey)) {
+      try {
+        return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      } catch(_){ }
+      return [];
+    }
+
     try {
       if (A.Filters && typeof A.Filters.getTrainableDeck === 'function') {
         return A.Filters.getTrainableDeck(deckKey, { mode }) || [];
@@ -426,6 +440,34 @@ function setUiLang(code){
 
     const key = activeDeckKey();
     const studyLang = getStudyLangForKey(key) || 'xx';
+    // MOYAMOVA: virtual decks → filters unavailable (read-only info state)
+    if (isVirtualDeckKey(key)) {
+      // Replace pills with an informational block (RU/UK only)
+      try {
+        list.innerHTML = `
+          <div class="filters-virtual-note">
+            <div class="title">${(window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны')}</div>
+            <div class="text">${(window.I18N_t ? window.I18N_t('filtersVirtualText') : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.')}</div>
+          </div>
+        `;
+      } catch(_){ }
+
+      try {
+        const applyBtn = document.getElementById('filtersApply');
+        const resetBtn = document.getElementById('filtersReset');
+        if (applyBtn) applyBtn.disabled = true;
+        if (resetBtn) resetBtn.disabled = true;
+      } catch(_){ }
+
+      // Keep summary consistent
+      try {
+        const sumEl = document.getElementById('filtersSummary');
+        if (sumEl) sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
+      } catch(_){ }
+
+      return;
+    }
+
     const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
     const selected = new Set((st && st.selected) ? st.selected : []);
 
