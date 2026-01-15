@@ -445,6 +445,21 @@ html[data-runmode="pwa"] .home-hints .hints-body{
  * - min-height:0 is required for iOS flex overflow scrolling.
  * ========================================================== */
 
+/* Reserve space for bottom controls so short lists don't leave a huge dead gap */
+.home.home-fixed-card.home-fixed-card--dicts{ --mm-card-bottom-reserve: 170px; }
+.home.home-fixed-card.home-fixed-card--list{  --mm-card-bottom-reserve: 44px; }
+
+/* Tighten dots/actions spacing inside fixed cards (baseline = Dicts screen 1) */
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots{
+  margin: 6px 0 0;
+}
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots + .dicts-actions,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots + .dicts-actions{
+  margin-top: 4px;
+}
+
+
 /* Stretch the only card on these routes to the full available height */
 .home.home-fixed-card > section.card,
 body[data-route="dicts"] .home > section.card,
@@ -460,11 +475,12 @@ body[data-route="mistakes"] .home > section.card{
 .home.home-fixed-card .dicts-card > table.dicts-table,
 .home.home-fixed-card .dicts-card > table.dicts-table,
 body[data-route="dicts"] .dicts-card > table.dicts-table{
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: block; /* allow overflow on table */
+  max-height: calc(100% - var(--mm-card-bottom-reserve, 160px));
 }
 /* keep table layout after display:block */
 .home.home-fixed-card .dicts-card > table.dicts-table > tbody,
@@ -479,10 +495,11 @@ body[data-route="dicts"] .dicts-card > table.dicts-table > tbody{
 .home.home-fixed-card .dicts-card > .stats-pages,
 .home.home-fixed-card .dicts-card > .stats-pages,
 body[data-route="dicts"] .dicts-card > .stats-pages{
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  max-height: calc(100% - var(--mm-card-bottom-reserve, 160px));
 }
 
 /* Fav/Mistakes: table is the list; keep actions pinned */
@@ -518,4 +535,54 @@ body[data-route="fav"] .dicts-card .dicts-actions,
 body[data-route="mistakes"] .dicts-card .dicts-actions{
   margin-top: auto;
   flex-shrink: 0;
+}
+
+
+/* Empty state inside fixed cards: keep the card baseline but avoid "too tall" feeling */
+.home.home-fixed-card .mm-empty-state{
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 12px;
+  opacity: .85;
+}
+.home.home-fixed-card .mm-empty-state p{ margin: 0; }
+
+
+/* --- (v2) Tighten fixed-card layout: avoid huge dead space above dots/buttons --- */
+.home.home-fixed-card.home-fixed-card--dicts{ --mm-card-bottom-reserve: 170px; }
+.home.home-fixed-card.home-fixed-card--list{ --mm-card-bottom-reserve: 40px; }
+
+/* Instead of forcing the list to fill all remaining space (flex:1),
+   cap it with a max-height so when the list is short the controls sit closer,
+   and when the list is long it scrolls inside the card. */
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card > .stats-pages,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card > table.dicts-table{
+  flex: 0 1 auto !important;
+  max-height: calc(100% - var(--mm-card-bottom-reserve));
+}
+
+/* Reduce extra spacing between list end, dots and actions on dicts page */
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots{
+  margin: 6px 0 0;
+}
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots + .dicts-actions,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots + .dicts-actions{
+  margin-top: 6px;
+}
+
+/* Empty-state pages (Favorites/Mistakes): center text inside the fixed-height card */
+.home.home-fixed-card.home-fixed-card--list .mm-empty-state{
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 12px 18px;
+  opacity: .85;
 }
