@@ -266,13 +266,14 @@ function getDeckWithArticles() {
       return eligible;
     }
 
-    // Если все слова (с валидными артиклями) выучены — начинаем заново с первого сета.
+    // Симметрия с базовым тренером слов:
+    // если весь словарь выучен, НЕ сбрасываем индекс на 0.
+    // Возвращаем текущий сет целиком (для повторения), даже если eps=0.
     if (isWholeDeckLearned(dk, deck)) {
-      currentSetIndex = 0;
-      setBatchIndex(0, dk);
-      var fs = deck.slice(0, Math.min(deck.length, setSize));
-      var fse = eligibleFromSlice(fs);
-      return fse.length ? fse : fs;
+      var startAll = currentSetIndex * setSize;
+      var endAll = Math.min(deck.length, startAll + setSize);
+      var sliceAll = deck.slice(startAll, endAll);
+      return sliceAll.length ? sliceAll : deck;
     }
 
     // Ищем по кругу первый сет, где есть хоть что-то для тренировки.
