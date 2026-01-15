@@ -431,3 +431,32 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .dicts-card .stats-pages-dots + .dicts-actions{
   margin-top: 8px;
 }
+
+
+/* ----------------------------------------------------------
+ * 4. Fixed card visual baseline (Dicts / Favorites / Mistakes)
+ *
+ * Goal: keep card height stable (as on reference screen),
+ *       scroll only the inner content, keep actions visible.
+ * ---------------------------------------------------------- */
+
+/* Make dict cards a flex column so content can scroll inside */
+.home .card.dicts-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Scroll window inside the card */
+.home .card.dicts-card .mm-card-scroll {
+  flex: 1;
+  min-height: 0; /* critical for iOS flex scroll */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Bottom actions area always visible */
+.home .card.dicts-card .dicts-actions,
+.home .card.dicts-card .stats-pages-dots {
+  flex-shrink: 0;
+}
