@@ -179,20 +179,16 @@
 
         const rows = rowsFor(keysAll, selectedKey);
         app.innerHTML = `
-          <div class="home">
+          <div class="home home-fixed-card">
             <section class="card dicts-card">
               <div class="dicts-header">
                 <h3>${T.title}</h3>
                 <div id="dicts-flags" class="dicts-flags"></div>
               </div>
 
-              <div class="mm-card-scroll">
-
               <table class="dicts-table">
                 <tbody>${rows}</tbody>
               </table>
-
-              </div>
 
               <div class="dicts-actions">
                 <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
@@ -207,14 +203,12 @@
         const rows1 = lpKeys.length   ? rowsFor(lpKeys,   selectedLP)   : '';
 
         app.innerHTML = `
-          <div class="home">
+          <div class="home home-fixed-card">
             <section class="card dicts-card">
               <div class="dicts-header">
                 <h3>${T.title}</h3>
                 <div id="dicts-flags" class="dicts-flags"></div>
               </div>
-
-              <div class="mm-card-scroll">
 
               <div class="stats-pages">
                 <div class="stats-page${activePage===0?' is-active':''}" data-page="0">
@@ -233,8 +227,6 @@
                   </table>
                   ${lpKeys.length ? '' : `<p style="opacity:.85;margin:10px 0 0;">${T.empty}</p>`}
                 </div>
-              </div>
-
               </div>
 
               <div class="stats-pages-dots" style="margin-top:12px;">
