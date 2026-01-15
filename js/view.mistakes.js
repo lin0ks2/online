@@ -190,11 +190,11 @@
               <h3>${T.title}</h3>
               <div id="mistakes-flags" class="dicts-flags"></div>
             </div>
-            <table class="dicts-table">
-              
-              <tbody>${rows}</tbody>
-              
-            </table>
+            <div class="mm-card-scroll">
+              <table class="dicts-table">
+                <tbody>${rows}</tbody>
+              </table>
+            </div>
             <div class="dicts-actions">
               <button type="button" class="btn-primary" id="mistakes-apply">${T.ok}</button>
             </div>

@@ -186,9 +186,13 @@
                 <div id="dicts-flags" class="dicts-flags"></div>
               </div>
 
+              <div class="mm-card-scroll">
+
               <table class="dicts-table">
                 <tbody>${rows}</tbody>
               </table>
+
+              </div>
 
               <div class="dicts-actions">
                 <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
@@ -210,6 +214,8 @@
                 <div id="dicts-flags" class="dicts-flags"></div>
               </div>
 
+              <div class="mm-card-scroll">
+
               <div class="stats-pages">
                 <div class="stats-page${activePage===0?' is-active':''}" data-page="0">
                   <table class="dicts-table" data-scope="de-main">
@@ -227,6 +233,8 @@
                   </table>
                   ${lpKeys.length ? '' : `<p style="opacity:.85;margin:10px 0 0;">${T.empty}</p>`}
                 </div>
+              </div>
+
               </div>
 
               <div class="stats-pages-dots" style="margin-top:12px;">
