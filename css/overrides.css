@@ -432,31 +432,90 @@ html[data-runmode="pwa"] .home-hints .hints-body{
   margin-top: 8px;
 }
 
+/* ==========================================================
+ * Fixed card height baseline + internal scroll (Dicts / Fav / Mistakes)
+ * ----------------------------------------------------------
+ * Problem:
+ * - When the list grows, it pushes actions below the visible area (under footer).
+ * - When the list is empty, the card shrinks and pages look inconsistent.
+ * Solution:
+ * - Let the main card flex to fill the available height inside .home.
+ * - Make the list area scroll INSIDE the card; keep dots/actions fixed.
+ * Notes:
+ * - min-height:0 is required for iOS flex overflow scrolling.
+ * ========================================================== */
 
-/* ----------------------------------------------------------
- * 4. Fixed card visual baseline (Dicts / Favorites / Mistakes)
- *
- * Goal: keep card height stable (as on reference screen),
- *       scroll only the inner content, keep actions visible.
- * ---------------------------------------------------------- */
-
-/* Make dict cards a flex column so content can scroll inside */
-.home .card.dicts-card {
+/* Stretch the only card on these routes to the full available height */
+.home.home-fixed-card > section.card,
+body[data-route="dicts"] .home > section.card,
+body[data-route="fav"] .home > section.card,
+body[data-route="mistakes"] .home > section.card{
+  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 0;
 }
 
-/* Scroll window inside the card */
-.home .card.dicts-card .mm-card-scroll {
+/* Dicts: the list area (non-DE) is the table itself */
+.home.home-fixed-card .dicts-card > table.dicts-table,
+.home.home-fixed-card .dicts-card > table.dicts-table,
+body[data-route="dicts"] .dicts-card > table.dicts-table{
   flex: 1;
-  min-height: 0; /* critical for iOS flex scroll */
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block; /* allow overflow on table */
+}
+/* keep table layout after display:block */
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+body[data-route="dicts"] .dicts-card > table.dicts-table > tbody{
+  display: table;
+  width: 100%;
+}
+
+/* Dicts (DE two pages): make the pages container scroll, keep dots/actions fixed */
+.home.home-fixed-card .dicts-card > .stats-pages,
+.home.home-fixed-card .dicts-card > .stats-pages,
+.home.home-fixed-card .dicts-card > .stats-pages,
+body[data-route="dicts"] .dicts-card > .stats-pages{
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Bottom actions area always visible */
-.home .card.dicts-card .dicts-actions,
-.home .card.dicts-card .stats-pages-dots {
+/* Fav/Mistakes: table is the list; keep actions pinned */
+.home.home-fixed-card .dicts-card > table.dicts-table,
+.home.home-fixed-card .dicts-card > table.dicts-table,
+.home.home-fixed-card .dicts-card > table.dicts-table,
+body[data-route="fav"] .dicts-card > table.dicts-table,
+body[data-route="mistakes"] .dicts-card > table.dicts-table{
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+}
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
+body[data-route="fav"] .dicts-card > table.dicts-table > tbody,
+body[data-route="mistakes"] .dicts-card > table.dicts-table > tbody{
+  display: table;
+  width: 100%;
+}
+
+/* Ensure actions stay at the bottom of the card */
+.home.home-fixed-card .dicts-card .dicts-actions,
+.home.home-fixed-card .dicts-card .dicts-actions,
+.home.home-fixed-card .dicts-card .dicts-actions,
+.home.home-fixed-card .dicts-card .dicts-actions,
+.home.home-fixed-card .dicts-card .dicts-actions,
+body[data-route="dicts"] .dicts-card .dicts-actions,
+body[data-route="fav"] .dicts-card .dicts-actions,
+body[data-route="mistakes"] .dicts-card .dicts-actions{
+  margin-top: auto;
   flex-shrink: 0;
 }
