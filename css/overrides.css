@@ -433,112 +433,71 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 
 /* ==========================================================
- * Fixed card height baseline + internal scroll (Dicts / Fav / Mistakes)
- * ----------------------------------------------------------
- * Problem:
- * - When the list grows, it pushes actions below the visible area (under footer).
- * - When the list is empty, the card shrinks and pages look inconsistent.
- * Solution:
- * - Let the main card flex to fill the available height inside .home.
- * - Make the list area scroll INSIDE the card; keep dots/actions fixed.
- * Notes:
- * - min-height:0 is required for iOS flex overflow scrolling.
+ * 5. Fixed card baseline (Dicts / Favorites / Mistakes)
+ *
+ * Target behaviour (screen-1 as baseline):
+ * - The main card has a stable height (fits inside #app.content).
+ * - The content area scrolls INSIDE the card when needed.
+ * - Dots/actions remain visible and never go under the footer.
+ *
+ * Implementation notes:
+ * - #app.content already defines the usable height (100dvh - header - footer).
+ * - Therefore, .home.home-fixed-card MUST be a flex container with height:100%.
+ * - min-height:0 is required for iOS/Safari flex overflow scrolling.
  * ========================================================== */
 
-/* Reserve space for bottom controls so short lists don't leave a huge dead gap */
-.home.home-fixed-card.home-fixed-card--dicts{ --mm-card-bottom-reserve: 170px; }
-.home.home-fixed-card.home-fixed-card--list{  --mm-card-bottom-reserve: 44px; }
-
-/* Tighten dots/actions spacing inside fixed cards (baseline = Dicts screen 1) */
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots{
-  margin: 6px 0 0;
-}
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots + .dicts-actions,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots + .dicts-actions{
-  margin-top: 4px;
-}
-
-
-/* Stretch the only card on these routes to the full available height */
-.home.home-fixed-card > section.card,
-body[data-route="dicts"] .home > section.card,
-body[data-route="fav"] .home > section.card,
-body[data-route="mistakes"] .home > section.card{
-  flex: 1;
+/* Make fixed-card screens a proper height context for flex sizing */
+.home.home-fixed-card{
+  height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  min-height: 0;
 }
 
-/* Dicts: the list area (non-DE) is the table itself */
-.home.home-fixed-card .dicts-card > table.dicts-table,
-.home.home-fixed-card .dicts-card > table.dicts-table,
-body[data-route="dicts"] .dicts-card > table.dicts-table{
-  flex: 0 1 auto;
+/* The single main card fills available space and clips overflow */
+.home.home-fixed-card > section.card{
+  flex: 1;
   min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: block; /* allow overflow on table */
-  max-height: calc(100% - var(--mm-card-bottom-reserve, 160px));
-}
-/* keep table layout after display:block */
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-body[data-route="dicts"] .dicts-card > table.dicts-table > tbody{
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* only the inner area scrolls */
 }
 
-/* Dicts (DE two pages): make the pages container scroll, keep dots/actions fixed */
-.home.home-fixed-card .dicts-card > .stats-pages,
-.home.home-fixed-card .dicts-card > .stats-pages,
-.home.home-fixed-card .dicts-card > .stats-pages,
-body[data-route="dicts"] .dicts-card > .stats-pages{
-  flex: 0 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  max-height: calc(100% - var(--mm-card-bottom-reserve, 160px));
-}
-
-/* Fav/Mistakes: table is the list; keep actions pinned */
-.home.home-fixed-card .dicts-card > table.dicts-table,
-.home.home-fixed-card .dicts-card > table.dicts-table,
-.home.home-fixed-card .dicts-card > table.dicts-table,
-body[data-route="fav"] .dicts-card > table.dicts-table,
-body[data-route="mistakes"] .dicts-card > table.dicts-table{
+/* Preferred: if the view provides an explicit scroll wrapper */
+.home.home-fixed-card .mm-card-scroll{
   flex: 1;
   min-height: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  display: block;
 }
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody,
-body[data-route="fav"] .dicts-card > table.dicts-table > tbody,
-body[data-route="mistakes"] .dicts-card > table.dicts-table > tbody{
+
+/* Fallback: legacy layouts (dicts/fav/mistakes) without mm-card-scroll */
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card > .stats-pages,
+.home.home-fixed-card.home-fixed-card--dicts .dicts-card > table.dicts-table,
+.home.home-fixed-card.home-fixed-card--list  .dicts-card > table.dicts-table{
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block; /* allow overflow on table/container */
+}
+.home.home-fixed-card .dicts-card > table.dicts-table > tbody{
   display: table;
   width: 100%;
 }
 
-/* Ensure actions stay at the bottom of the card */
-.home.home-fixed-card .dicts-card .dicts-actions,
-.home.home-fixed-card .dicts-card .dicts-actions,
-.home.home-fixed-card .dicts-card .dicts-actions,
-.home.home-fixed-card .dicts-card .dicts-actions,
-.home.home-fixed-card .dicts-card .dicts-actions,
-body[data-route="dicts"] .dicts-card .dicts-actions,
-body[data-route="fav"] .dicts-card .dicts-actions,
-body[data-route="mistakes"] .dicts-card .dicts-actions{
-  margin-top: auto;
+/* Keep bottom controls visible (no pushing under footer). */
+.home.home-fixed-card .dicts-card .dicts-page-dots,
+.home.home-fixed-card .dicts-card .stats-pages-dots{
   flex-shrink: 0;
+  margin: 8px 0 0;
+}
+.home.home-fixed-card .dicts-card .dicts-actions{
+  flex-shrink: 0;
+  margin-top: 10px;
 }
 
-
-/* Empty state inside fixed cards: keep the card baseline but avoid "too tall" feeling */
+/* Empty states: keep the card size, center message inside the scroll area */
 .home.home-fixed-card .mm-empty-state{
   flex: 1;
   min-height: 0;
@@ -546,73 +505,8 @@ body[data-route="mistakes"] .dicts-card .dicts-actions{
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 18px 12px;
+  padding: 16px 12px;
   opacity: .85;
 }
 .home.home-fixed-card .mm-empty-state p{ margin: 0; }
 
-
-/* --- (v2) Tighten fixed-card layout: avoid huge dead space above dots/buttons --- */
-.home.home-fixed-card.home-fixed-card--dicts{ --mm-card-bottom-reserve: 170px; }
-.home.home-fixed-card.home-fixed-card--list{ --mm-card-bottom-reserve: 40px; }
-
-/* Instead of forcing the list to fill all remaining space (flex:1),
-   cap it with a max-height so when the list is short the controls sit closer,
-   and when the list is long it scrolls inside the card. */
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card > .stats-pages,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card > table.dicts-table{
-  flex: 0 1 auto !important;
-  max-height: calc(100% - var(--mm-card-bottom-reserve));
-}
-
-/* Reduce extra spacing between list end, dots and actions on dicts page */
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots{
-  margin: 6px 0 0;
-}
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .dicts-page-dots + .dicts-actions,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card .stats-pages-dots + .dicts-actions{
-  margin-top: 6px;
-}
-
-/* Empty-state pages (Favorites/Mistakes): center text inside the fixed-height card */
-.home.home-fixed-card.home-fixed-card--list .mm-empty-state{
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 14px 12px 18px;
-  opacity: .85;
-}
-
-/* ==========================================================
- * (v4) Fixed-card LIST pages (Favorites / Mistakes):
- * - keep button close to the list when it is short (no huge dead gap)
- * - keep button visible when list is long (internal scroll)
- * - do NOT change global strategy; only override list-page geometry
- * ========================================================== */
-
-/* Reserve enough space for the single primary button on list pages */
-.home.home-fixed-card.home-fixed-card--list{ --mm-card-bottom-reserve: 120px; }
-
-/* List table should NOT stretch to fill all remaining space; it should scroll only when needed */
-.home.home-fixed-card.home-fixed-card--list .dicts-card > table.dicts-table{
-  flex: 0 1 auto !important;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: block;
-  max-height: calc(100% - var(--mm-card-bottom-reserve));
-}
-.home.home-fixed-card.home-fixed-card--list .dicts-card > table.dicts-table > tbody{
-  display: table;
-  width: 100%;
-}
-
-/* On list pages, do not push actions to the very bottom with margin-top:auto */
-.home.home-fixed-card.home-fixed-card--list .dicts-card .dicts-actions{
-  margin-top: 10px !important;
-  flex-shrink: 0;
-}
