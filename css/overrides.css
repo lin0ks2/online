@@ -586,3 +586,33 @@ body[data-route="mistakes"] .dicts-card .dicts-actions{
   padding: 14px 12px 18px;
   opacity: .85;
 }
+
+/* ==========================================================
+ * (v4) Fixed-card LIST pages (Favorites / Mistakes):
+ * - keep button close to the list when it is short (no huge dead gap)
+ * - keep button visible when list is long (internal scroll)
+ * - do NOT change global strategy; only override list-page geometry
+ * ========================================================== */
+
+/* Reserve enough space for the single primary button on list pages */
+.home.home-fixed-card.home-fixed-card--list{ --mm-card-bottom-reserve: 120px; }
+
+/* List table should NOT stretch to fill all remaining space; it should scroll only when needed */
+.home.home-fixed-card.home-fixed-card--list .dicts-card > table.dicts-table{
+  flex: 0 1 auto !important;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  max-height: calc(100% - var(--mm-card-bottom-reserve));
+}
+.home.home-fixed-card.home-fixed-card--list .dicts-card > table.dicts-table > tbody{
+  display: table;
+  width: 100%;
+}
+
+/* On list pages, do not push actions to the very bottom with margin-top:auto */
+.home.home-fixed-card.home-fixed-card--list .dicts-card .dicts-actions{
+  margin-top: 10px !important;
+  flex-shrink: 0;
+}
