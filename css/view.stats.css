@@ -11,19 +11,9 @@
   margin-top: 0px;
 }
 
-/* When stats uses the fixed-card layout (same as Dicts),
-   disable scrolling on the middle wrapper and scroll inside the active lang card.
-   This keeps page dots stable at the bottom. */
-.stats-card.dicts-card--fixed .dicts-scroll{
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Список языков (карточки) */
 .stats-lang-list {
   margin-top: 4px;
-  height: 100%;
 }
 
 /* Одна карточка языка */
@@ -32,10 +22,7 @@
 }
 
 .stats-lang-card.is-active {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 0; /* critical for iOS: allow inner overflow */
+  display: block;
 }
 
 /* Шапка карточки (Выучено N из M / Словарей: ...) */
@@ -64,19 +51,7 @@
   padding: 8px 10px 12px;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  min-height: 0; /* allow inner scroll */
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Footer with page dots: stays visible (does not scroll with content) */
-.stats-lang-card__footer {
-  flex: 0 0 auto;
-  padding: 6px 0 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 420px;
 }
 
 /* Контейнер для двух наборов колец */
@@ -166,6 +141,27 @@
     0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
+/* Split ring (переводы vs артикли): один круг с 2 сегментами.
+   Важно: при 0/0 и при 100% одного сегмента визуал должен оставаться "живым".
+   Поэтому используем отдельный conic-gradient с 2 цветами и сохраняем блики/тени. */
+.stats-ring-set--split .stats-ring-layer__ring {
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(53, 182, 255, 0.28),
+      transparent 62%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(15, 76, 120, 0.20),
+      transparent 56%
+    ),
+    conic-gradient(
+      var(--split-color-1, #0ea5e9) 0deg var(--split-angle, 0deg),
+      var(--split-color-2, #6366f1) var(--split-angle, 0deg) 360deg
+    );
+}
+
 @media (prefers-color-scheme: light) {
   .stats-ring-layer__ring {
     background:
@@ -183,6 +179,17 @@
     box-shadow:
       0 0 0 1px rgba(53, 182, 255, 0.22) inset,
       0 0 0 1px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Split ring в light-схеме: не даём общему правилу перезаписать 2-сегментный conic-gradient */
+  .stats-ring-set--split .stats-ring-layer__ring {
+    background:
+      radial-gradient(circle at 30% 20%, rgba(53, 182, 255, 0.18), transparent 62%),
+      radial-gradient(circle at 70% 80%, rgba(53, 182, 255, 0.05), transparent 56%),
+      conic-gradient(
+        var(--split-color-1, #0ea5e9) 0deg var(--split-angle, 0deg),
+        var(--split-color-2, #6366f1) var(--split-angle, 0deg) 360deg
+      );
   }
 }
 
@@ -552,11 +559,13 @@
   gap: 6px;
   margin-top: 8px;
 } */
-/* центрируем индикаторы страниц в статистике */
-.stats-pages-dots {
+/* центрируем индикаторы страниц в статистике:
+   берём ПОСЛЕДНИЙ блок в теле карточки (там лежат точки) */
+.stats-lang-card__body > div:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
+  margin-top: 8px;
 }
 /* ========================= Конец файла: view.stats.css ========================= */
