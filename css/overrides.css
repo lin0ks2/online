@@ -47,6 +47,24 @@
   gap: 16px;
 }
 
+/* ----------------------------------------------------------
+ * Fixed-card layout mode (dicts / favorites / mistakes)
+ *
+ * Когда на экране карточка со внутренним скроллом, внешний
+ * контент-скролл (#app.content) мешает стабильной геометрии
+ * (из-за большого padding-bottom "под футер").
+ *
+ * JS (Router) ставит класс .layout-fixed-card на #app.
+ * Здесь мы:
+ *  - убираем внешний скролл
+ *  - убираем двойной нижний резерв
+ *  - оставляем небольшой safe-area запас
+ * ---------------------------------------------------------- */
+#app.content.layout-fixed-card{
+  overflow: hidden !important;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+}
+
 /* ==========================================================
  * 3. Модалка условий использования
  *    (делаем её похожей на мастер setup-modal)
@@ -431,82 +449,3 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .dicts-card .stats-pages-dots + .dicts-actions{
   margin-top: 8px;
 }
-
-/* ==========================================================
- * 5. Fixed card baseline (Dicts / Favorites / Mistakes)
- *
- * Target behaviour (screen-1 as baseline):
- * - The main card has a stable height (fits inside #app.content).
- * - The content area scrolls INSIDE the card when needed.
- * - Dots/actions remain visible and never go under the footer.
- *
- * Implementation notes:
- * - #app.content already defines the usable height (100dvh - header - footer).
- * - Therefore, .home.home-fixed-card MUST be a flex container with height:100%.
- * - min-height:0 is required for iOS/Safari flex overflow scrolling.
- * ========================================================== */
-
-/* Make fixed-card screens a proper height context for flex sizing */
-.home.home-fixed-card{
-  height: 100%;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-/* The single main card fills available space and clips overflow */
-.home.home-fixed-card > section.card{
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* only the inner area scrolls */
-}
-
-/* Preferred: if the view provides an explicit scroll wrapper */
-.home.home-fixed-card .mm-card-scroll{
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Fallback: legacy layouts (dicts/fav/mistakes) without mm-card-scroll */
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card > .stats-pages,
-.home.home-fixed-card.home-fixed-card--dicts .dicts-card > table.dicts-table,
-.home.home-fixed-card.home-fixed-card--list  .dicts-card > table.dicts-table{
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: block; /* allow overflow on table/container */
-}
-.home.home-fixed-card .dicts-card > table.dicts-table > tbody{
-  display: table;
-  width: 100%;
-}
-
-/* Keep bottom controls visible (no pushing under footer). */
-.home.home-fixed-card .dicts-card .dicts-page-dots,
-.home.home-fixed-card .dicts-card .stats-pages-dots{
-  flex-shrink: 0;
-  margin: 8px 0 0;
-}
-.home.home-fixed-card .dicts-card .dicts-actions{
-  flex-shrink: 0;
-  margin-top: 10px;
-}
-
-/* Empty states: keep the card size, center message inside the scroll area */
-.home.home-fixed-card .mm-empty-state{
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 16px 12px;
-  opacity: .85;
-}
-.home.home-fixed-card .mm-empty-state p{ margin: 0; }
-
