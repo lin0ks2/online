@@ -179,7 +179,7 @@
 
         const rows = rowsFor(keysAll, selectedKey);
         app.innerHTML = `
-          <div class="home home-fixed-card home-fixed-card--dicts">
+          <div class="home">
             <section class="card dicts-card">
               <div class="dicts-header">
                 <h3>${T.title}</h3>
@@ -203,7 +203,7 @@
         const rows1 = lpKeys.length   ? rowsFor(lpKeys,   selectedLP)   : '';
 
         app.innerHTML = `
-          <div class="home home-fixed-card home-fixed-card--dicts">
+          <div class="home">
             <section class="card dicts-card">
               <div class="dicts-header">
                 <h3>${T.title}</h3>

@@ -100,7 +100,7 @@
         : 'Список избранных слов временно недоступен.';
 
       app.innerHTML =
-        `<div class="home home-fixed-card home-fixed-card--list">
+        `<div class="home">
           <section class="card dicts-card favorites-card">
             <div class="dicts-header">
               <h3>${title}</h3>
@@ -115,7 +115,7 @@
 
     const all = gatherFavoriteDecks();
     if (!all.length){
-      app.innerHTML = `<div class="home home-fixed-card home-fixed-card--list"><section class="card dicts-card list-card"><div class="dicts-header"><h3 style="margin:0;">${T.title}</h3></div><div class="mm-empty-state"><p>${T.empty}</p></div></section></div>`;
+      app.innerHTML = `<div class="home"><section class="card"><h3 style="margin:0 0 6px;">${T.title}</h3><p style="opacity:.7;margin:0;">${T.empty}</p></section></div>`;
       return;
     }
 
@@ -170,7 +170,7 @@
       </tr>`).join('');
 
     app.innerHTML = `
-      <div class="home home-fixed-card home-fixed-card--list">
+      <div class="home">
         <section class="card dicts-card">
           <div class="dicts-header">
             <h3>${T.title}</h3>

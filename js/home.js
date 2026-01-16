@@ -1711,19 +1711,6 @@ answers.innerHTML = '';
       const app = document.getElementById('app');
       if (!app) return;
 
-      // ------------------------------------------------------
-      // Layout mode: для экранов со "внутренним скроллом" карточки
-      // (Словари / Избранное / Мои ошибки) нам нужна стабильная
-      // высота контента без большого нижнего padding-резерва под
-      // фиксированный футер. Это позволяет "рисовать" карточку
-      // строго между шапкой и футером, а скролл держать внутри.
-      // ------------------------------------------------------
-      try {
-        const a = String(action || 'home');
-        const fixed = (a === 'dicts' || a === 'fav' || a === 'favorites' || a === 'mistakes');
-        app.classList.toggle('layout-fixed-card', !!fixed);
-      } catch (_) {}
-
       // аналитика: виртуальные экраны (вся навигация идёт через Router)
       try {
         if (A.Analytics && typeof A.Analytics.screen === 'function') {
