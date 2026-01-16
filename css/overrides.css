@@ -462,7 +462,7 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .dicts-card.dicts-card--fixed .dicts-footer{
   flex: 0 0 auto;
 }
-/* Fixed cards: tighten height by small offset so footer doesn't feel pressed */
+/* Fixed cards: cap height (height is ignored under flex:1; use max-height) */
 .home--fixed-card .dicts-card--fixed {
-  height: calc(95% - 14px);
+  max-height: calc(100% - 24px) !important;
 }
