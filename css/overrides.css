@@ -464,5 +464,5 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 /* Fixed cards: cap height (height is ignored under flex:1; use max-height) */
 .home--fixed-card .dicts-card--fixed {
-  max-height: calc(100% - 24px) !important;
+  max-height: calc(100% - 30px) !important;
 }
