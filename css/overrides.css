@@ -464,5 +464,5 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 /* Fixed cards: tighten height by small offset so footer doesn't feel pressed */
 .home--fixed-card .dicts-card--fixed {
-  height: calc(100% - 24px);
+  height: calc(95% - 14px);
 }
