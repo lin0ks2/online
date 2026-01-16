@@ -466,3 +466,9 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .home--fixed-card .dicts-card--fixed {
   max-height: calc(100% - 30px) !important;
 }
+/* PWA/TWA: fixed cards at full available height */
+@media (display-mode: standalone) {
+  .home--fixed-card .dicts-card--fixed {
+    max-height: 100% !important;
+  }
+}
