@@ -225,40 +225,29 @@
     var learnedArticles = countLearnedArticlesByLang(langCode);
     var learnedWords = countLearnedWordsByLang(langCode);
 
-    // Важно для визуала:
-    // - при 0/0 не рисуем "100% одного сегмента" (выглядит плоско)
-    // - при 100% одного сегмента избегаем угла 360deg (iOS делает заливку слишком ровной)
     var totalLearned = learnedWords + learnedArticles;
-    var noData = !totalLearned;
     if (!totalLearned) totalLearned = 1;
 
     var pArticles = Math.round((learnedArticles / totalLearned) * 100);
     var pWords = 100 - pArticles;
 
-    // Если данных нет — рисуем нейтральный 50/50 (цифры в легенде остаются 0).
-    if (noData) {
-      pArticles = 50;
-      pWords = 50;
-    }
-
     var uk = getUiLang() === 'uk';
 
-    // Для сравнения "переводы vs артикли" нужен один круг с 2 сегментами (а не концентрические кольца).
-    // Угол сегмента "переводы".
-    var angleWords = degreesFromPercent(pWords);
-    // Избегаем 360deg (сплошная заливка) и 0deg (полностью пропадает сегмент).
-    if (angleWords >= 360) angleWords = 359;
-    if (angleWords <= 0) angleWords = 1;
-
+    // Используем тот же "кольцевой" визуал 1:1 (layers + legend), только 2 сегмента.
     var buckets = [
       { key: 'words', label: uk ? 'Переклади' : 'Переводы', value: learnedWords, percent: pWords, color: 'var(--stats-color-verbs, #0ea5e9)' },
       { key: 'articles', label: uk ? 'Артиклі' : 'Артикли', value: learnedArticles, percent: pArticles, color: 'var(--stats-color-nouns, #6366f1)' }
     ];
 
-    var layersHtml =
-      '<div class="stats-ring-layer" style="--ring-scale:1;--split-angle:' + angleWords + 'deg;--split-color-1:' + buckets[0].color + ';--split-color-2:' + buckets[1].color + ';">' +
-        '<div class="stats-ring-layer__ring"></div>' +
-      '</div>';
+    var layersHtml = buckets.map(function (b, idx) {
+      var angle = degreesFromPercent(b.percent);
+      var scale = buckets.length === 1 ? 1 : 1 - idx * 0.18;
+      return (
+        '<div class="stats-ring-layer" style="--ring-angle:' + angle + 'deg;--ring-scale:' + scale + ';--ring-color:' + b.color + ';">' +
+          '<div class="stats-ring-layer__ring"></div>' +
+        '</div>'
+      );
+    }).join('');
 
     var legendHtml = buckets.map(function (b) {
       return (
@@ -951,8 +940,10 @@
           '</div>' +
           '</header>' +
           '<div class="stats-lang-card__body">' +
-          pagesHtml +
-          dotsHtml +
+            pagesHtml +
+          '</div>' +
+          '<div class="stats-lang-card__footer">' +
+            dotsHtml +
           '</div>' +
           '</article>'
         );
@@ -1099,7 +1090,8 @@
       if (!body) return;
 
       var pages = body.querySelectorAll('.stats-page');
-      var dots  = body.querySelectorAll('.stats-page-dot');
+      // dots moved to footer (fixed). Keep selection at card-level.
+      var dots  = card.querySelectorAll('.stats-page-dot');
       if (!pages.length || !dots.length) return;
 
       var current = 0;
@@ -1159,6 +1151,9 @@
           goTo(p);
         });
       });
+
+      // Initial state: ensure active page classes are synced on mount.
+      goTo(0);
     });
   }
 
@@ -1173,15 +1168,18 @@
     const cardsHtml = renderLangCards(stats.byLang, texts, activeLang);
 
     const html =
-      '<div class="home">' +
-      '<section class="card dicts-card stats-card">' +
+      '<div class="home home--fixed-card">' +
+      '<section class="card dicts-card stats-card dicts-card--fixed">' +
       '<div class="dicts-header">' +
       '<h3>' +
       texts.title +
       '</h3>' +
       '<div id="stats-flags" class="dicts-flags"></div>' +
       '</div>' +
+      '<div class="dicts-scroll">' +
       cardsHtml +
+      '</div>' +
+      '<div class="dicts-footer"></div>' +
       '</section>' +
       // renderPlaceholderSection(texts) +
       '</div>';
