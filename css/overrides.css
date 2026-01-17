@@ -483,6 +483,9 @@ html[data-runmode="pwa"] .home-hints .hints-body{
  * Burger: PWA/TWA extra settings (compact)
  * ========================================================== */
 
+/* Wrapper for the new preference blocks (handy hook for light-theme background later) */
+.mm-prefs-wrap{ display: block; }
+
 .mm-prefs{ margin-top: 6px; }
 
 /* Make these sections visually secondary */
