@@ -1378,6 +1378,18 @@ function activeDeckKey() {
 
 
   /* ------------------------------- Тренер ------------------------------- */
+
+  // Reverse-translation toggle is meaningful only for the word trainer.
+  // When the Articles trainer is active we silently disable the checkbox
+  // (no toasts / messages) to avoid confusion.
+  function syncReverseToggleAvailability(isArticlesActive){
+    try {
+      const el = document.getElementById('trainReverse');
+      if (!el) return;
+      el.disabled = !!isArticlesActive;
+      // Keep the user's choice intact; just prevent interaction while articles trainer is active.
+    } catch (_){ }
+  }
   function renderTrainer() {
     const key   = activeDeckKey();
 
@@ -1389,6 +1401,9 @@ function activeDeckKey() {
     const wantArticles = !!(A.settings && A.settings.trainerKind === 'articles')
       && String(baseKeyForArticles || '').toLowerCase().startsWith('de_nouns')
       && (A.ArticlesTrainer && A.ArticlesCard);
+
+    // UI: Reverse toggle is not applicable to articles.
+    syncReverseToggleAvailability(wantArticles);
 
 
 if (wantArticles) {
@@ -1648,11 +1663,6 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
-
-          // TTS: в режиме обратного перевода автоозвучка запускается после верного ответа,
-          // чтобы не превращать звук в подсказку при показе вопроса.
-          try { if (reverse && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch (_eTTS) {}
-
           setTimeout(() => { renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
           try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
