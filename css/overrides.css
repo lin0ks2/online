@@ -566,24 +566,4 @@ html[data-theme="dark"] .mm-prefs-wrap > *{
   border-top: none !important;
   border-bottom: none !important;
 }
-/* Dark theme: hide separator just ABOVE prefs group */
-html[data-theme="dark"] .mm-prefs-wrap{
-  position: relative;
-}
 
-/* remove bottom border from the element immediately before prefs wrap */
-html[data-theme="dark"] .mm-prefs-wrap:before{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -1px;
-  height: 2px;
-  background: #000; /* fallback, will be overridden below */
-  pointer-events: none;
-}
-
-/* Use actual menu background to "erase" the line */
-html[data-theme="dark"] .mm-prefs-wrap:before{
-  background: rgba(0,0,0,0.85);
-}
