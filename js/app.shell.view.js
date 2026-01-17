@@ -86,47 +86,54 @@
           '</div>' +
 
 
-          '<div class="menu-item mm-concentration mm-standalone-only">' +
-            '<div class="menu-label" data-i18n="menuConcentration">Концентрация</div>' +
-            '<div class="mm-grid-2">' +
-              '<label class="mm-check">' +
-                '<input type="checkbox" id="mmConcSets" aria-label="Сеты">' +
-                '<span class="mm-check-box" aria-hidden="true"></span>' +
-                '<span class="mm-check-label" data-i18n="menuConcSets">Сеты</span>' +
-              '</label>' +
-              '<label class="mm-check">' +
-                '<input type="checkbox" id="mmConcContext" aria-label="Контекст">' +
-                '<span class="mm-check-box" aria-hidden="true"></span>' +
-                '<span class="mm-check-label" data-i18n="menuConcContext">Контекст</span>' +
-              '</label>' +
-            '</div>' +
-          '</div>' +
-
-          '<div class="menu-item mm-training-prefs mm-standalone-only">' +
-            '<div class="menu-label" data-i18n="menuTrainingMode">Режим тренировки</div>' +
-
-            '<div class="mm-pref-block">' +
-              '<div class="mm-pref-row">' +
-                '<div class="mm-pref-title" data-i18n="menuTranslation">Перевод</div>' +
-                '<label class="mm-check mm-check--compact">' +
-                  '<input type="checkbox" id="mmTransReverse" aria-label="Обратный">' +
-                  '<span class="mm-check-box" aria-hidden="true"></span>' +
-                  '<span class="mm-check-label" data-i18n="menuReverse">Обратный</span>' +
-                '</label>' +
+          (function(){
+            // Standalone-only UI: do not render in browser mode at all.
+            // This avoids any CSS/runmode edge-cases and keeps browser menu clean.
+            var isStandalone = (document.documentElement.getAttribute('data-runmode') === 'pwa');
+            if (!isStandalone) return '';
+            return '' +
+              '<div class="menu-item mm-concentration mm-standalone-only">' +
+                '<div class="menu-label" data-i18n="menuConcentration">Концентрация</div>' +
+                '<div class="mm-grid-2">' +
+                  '<label class="mm-check">' +
+                    '<input type="checkbox" id="mmConcSets" aria-label="Сеты">' +
+                    '<span class="mm-check-box" aria-hidden="true"></span>' +
+                    '<span class="mm-check-label" data-i18n="menuConcSets">Сеты</span>' +
+                  '</label>' +
+                  '<label class="mm-check">' +
+                    '<input type="checkbox" id="mmConcContext" aria-label="Контекст">' +
+                    '<span class="mm-check-box" aria-hidden="true"></span>' +
+                    '<span class="mm-check-label" data-i18n="menuConcContext">Контекст</span>' +
+                  '</label>' +
+                '</div>' +
               '</div>' +
-            '</div>' +
 
-            '<div class="mm-pref-block">' +
-              '<div class="mm-pref-row">' +
-                '<div class="mm-pref-title" data-i18n="menuSetProgress">Переход по сетам</div>' +
-                '<label class="mm-check mm-check--compact">' +
-                  '<input type="checkbox" id="mmFlowAuto" aria-label="Авто">' +
-                  '<span class="mm-check-box" aria-hidden="true"></span>' +
-                  '<span class="mm-check-label" data-i18n="menuAuto">Авто</span>' +
-                '</label>' +
-              '</div>' +
-            '</div>' +
-          '</div>' +
+              '<div class="menu-item mm-training-prefs mm-standalone-only">' +
+                '<div class="menu-label" data-i18n="menuTrainingMode">Режим тренировки</div>' +
+
+                '<div class="mm-pref-block">' +
+                  '<div class="mm-pref-row">' +
+                    '<div class="mm-pref-title" data-i18n="menuTranslation">Перевод</div>' +
+                    '<label class="mm-check mm-check--compact">' +
+                      '<input type="checkbox" id="mmTransReverse" aria-label="Обратный">' +
+                      '<span class="mm-check-box" aria-hidden="true"></span>' +
+                      '<span class="mm-check-label" data-i18n="menuReverse">Обратный</span>' +
+                    '</label>' +
+                  '</div>' +
+                '</div>' +
+
+                '<div class="mm-pref-block">' +
+                  '<div class="mm-pref-row">' +
+                    '<div class="mm-pref-title" data-i18n="menuSetProgress">Переход по сетам</div>' +
+                    '<label class="mm-check mm-check--compact">' +
+                      '<input type="checkbox" id="mmFlowAuto" aria-label="Авто">' +
+                      '<span class="mm-check-box" aria-hidden="true"></span>' +
+                      '<span class="mm-check-label" data-i18n="menuAuto">Авто</span>' +
+                    '</label>' +
+                  '</div>' +
+                '</div>' +
+              '</div>';
+          })() +
           '<div class="menu-item backup-tools">' +
             '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
             '<div class="backup-row">' +
