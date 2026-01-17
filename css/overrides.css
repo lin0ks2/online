@@ -483,12 +483,18 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
   display:flex;
 }
 
+/* Make standalone extra options visually secondary (smaller typography) */
+html[data-runmode="pwa"] .menu-item.mm-standalone-only .menu-label{
+  font-size:15px;
+  opacity:.9;
+}
+
 .menu-item.mm-concentration,
 .menu-item.mm-training-prefs{
-  padding:14px 12px;
+  padding:12px 12px;
   display:flex;
   flex-direction:column;
-  gap:8px;
+  gap:6px;
 }
 
 .mm-grid-2{
@@ -501,7 +507,7 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
   display:flex;
   align-items:center;
   gap:8px;
-  font-size:14px;
+  font-size:13px;
   line-height:1.1;
   color:var(--text);
   user-select:none;
@@ -515,15 +521,15 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
 }
 
 .mm-check-box{
-  width:16px;
-  height:16px;
+  width:14px;
+  height:14px;
   border:1.5px solid var(--border);
   border-radius:4px;
   background:var(--surface-1);
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 16px;
+  flex:0 0 14px;
 }
 
 .mm-check input:checked + .mm-check-box{
@@ -534,7 +540,7 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
 .mm-check input:checked + .mm-check-box:after{
   content:'✓';
   color:#fff;
-  font-size:12px;
+  font-size:11px;
   line-height:1;
 }
 
@@ -552,7 +558,7 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
 }
 
 .mm-pref-title{
-  font-size:13px;
+  font-size:12px;
   opacity:.75;
 }
 
@@ -564,7 +570,7 @@ html[data-runmode="pwa"] .menu-item.mm-standalone-only{
 }
 
 .mm-check--compact{
-  font-size:13px;
+  font-size:12.5px;
 }
 
 .mm-seg-group{
