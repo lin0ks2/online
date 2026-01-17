@@ -551,11 +551,18 @@ html:not([data-theme="dark"]) .mm-prefs-wrap{
   padding: 0px 10px;       /* <-- компактнее, чтобы всё влезало */
 }
 
-/* Guard: never show the light card in dark theme */
+/* Dark theme: group prefs card (same idea as light, but dark "glass") */
 html[data-theme="dark"] .mm-prefs-wrap{
-  background: transparent;
-  border: none;
-  border-radius: 0;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+
   margin: 0;
-  padding: 0;
+  padding: 0px 10px;  /* сохраняем твою компактность по вертикали */
+}
+
+/* Dark theme: remove separators inside the grouped block (so it looks like one card) */
+html[data-theme="dark"] .mm-prefs-wrap > *{
+  border-top: none !important;
+  border-bottom: none !important;
 }
