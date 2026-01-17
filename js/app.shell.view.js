@@ -106,18 +106,24 @@
             '<div class="menu-label" data-i18n="menuTrainingMode">Режим тренировки</div>' +
 
             '<div class="mm-pref-block">' +
-              '<div class="mm-pref-title" data-i18n="menuTranslation">Перевод</div>' +
-              '<div class="mm-seg-group" data-pref-group="translation" role="radiogroup" aria-label="Перевод">' +
-                '<button type="button" class="mm-seg-btn" id="mmTransForward" data-pref="translation" data-value="forward" role="radio" aria-checked="true" data-i18n="menuForward">Прямой</button>' +
-                '<button type="button" class="mm-seg-btn" id="mmTransReverse" data-pref="translation" data-value="reverse" role="radio" aria-checked="false" data-i18n="menuReverse">Обратный</button>' +
+              '<div class="mm-pref-row">' +
+                '<div class="mm-pref-title" data-i18n="menuTranslation">Перевод</div>' +
+                '<label class="mm-check mm-check--compact">' +
+                  '<input type="checkbox" id="mmTransReverse" aria-label="Обратный">' +
+                  '<span class="mm-check-box" aria-hidden="true"></span>' +
+                  '<span class="mm-check-label" data-i18n="menuReverse">Обратный</span>' +
+                '</label>' +
               '</div>' +
             '</div>' +
 
             '<div class="mm-pref-block">' +
-              '<div class="mm-pref-title" data-i18n="menuSetProgress">Переход по сетам</div>' +
-              '<div class="mm-seg-group" data-pref-group="setFlow" role="radiogroup" aria-label="Переход по сетам">' +
-                '<button type="button" class="mm-seg-btn" id="mmFlowManual" data-pref="setFlow" data-value="manual" role="radio" aria-checked="false" data-i18n="menuManual">Ручной</button>' +
-                '<button type="button" class="mm-seg-btn" id="mmFlowAuto" data-pref="setFlow" data-value="auto" role="radio" aria-checked="true" data-i18n="menuAuto">Авто</button>' +
+              '<div class="mm-pref-row">' +
+                '<div class="mm-pref-title" data-i18n="menuSetProgress">Переход по сетам</div>' +
+                '<label class="mm-check mm-check--compact">' +
+                  '<input type="checkbox" id="mmFlowAuto" aria-label="Авто">' +
+                  '<span class="mm-check-box" aria-hidden="true"></span>' +
+                  '<span class="mm-check-label" data-i18n="menuAuto">Авто</span>' +
+                '</label>' +
               '</div>' +
             '</div>' +
           '</div>' +

@@ -223,18 +223,6 @@
     } catch(_) {}
   }
 
-  function mmSetSegment(rootSelector, value){
-    try {
-      const root = document.querySelector(rootSelector);
-      if (!root) return;
-      root.querySelectorAll('.mm-seg-btn').forEach(function(btn){
-        const isOn = String(btn.getAttribute('data-value')) === String(value);
-        btn.classList.toggle('is-active', isOn);
-        btn.setAttribute('aria-checked', isOn ? 'true' : 'false');
-      });
-    } catch(_) {}
-  }
-
   function mmInitStandalonePrefs(){
     // concentration checkboxes
     const cbSets = document.getElementById('mmConcSets');
@@ -255,34 +243,37 @@
       });
     }
 
-    // segmented controls (Stage 1: UI + persistence only)
-    const dir  = String(mmLsGet(MM_PREF.transDir, 'forward') || 'forward');
-    const flow = String(mmLsGet(MM_PREF.setFlow, 'auto') || 'auto');
 
-    // initial paint
-    mmSetSegment('.mm-training-prefs .mm-seg-group[data-pref-group="translation"]', dir === 'reverse' ? 'reverse' : 'forward');
-    mmSetSegment('.mm-training-prefs .mm-seg-group[data-pref-group="setFlow"]', flow === 'manual' ? 'manual' : 'auto');
+    // training prefs (Stage 1: UI + persistence only)
+    // Checkbox semantics:
+    // - Translation: unchecked=forward, checked=reverse
+    // - Set flow:    unchecked=manual,  checked=auto
+    const cbReverse = document.getElementById('mmTransReverse');
+    const cbAuto    = document.getElementById('mmFlowAuto');
 
-    document.querySelectorAll('.mm-training-prefs .mm-seg-btn').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        const pref = btn.getAttribute('data-pref');
-        const val  = btn.getAttribute('data-value');
-        if (!pref || !val) return;
-        if (pref === 'translation'){
-          mmLsSet(MM_PREF.transDir, val);
-          mmSetSegment('.mm-training-prefs .mm-seg-group[data-pref-group="translation"]', val);
-        } else if (pref === 'setFlow'){
-          mmLsSet(MM_PREF.setFlow, val);
-          mmSetSegment('.mm-training-prefs .mm-seg-group[data-pref-group="setFlow"]', val);
-        }
-
+    if (cbReverse){
+      cbReverse.checked = String(mmLsGet(MM_PREF.transDir, 'forward') || 'forward') === 'reverse';
+      cbReverse.addEventListener('change', function(e){
+        mmLsSet(MM_PREF.transDir, e.target.checked ? 'reverse' : 'forward');
         try {
           document.dispatchEvent(new CustomEvent('mm:training-prefs-changed', {
             detail: { translation: mmLsGet(MM_PREF.transDir,'forward'), setFlow: mmLsGet(MM_PREF.setFlow,'auto') }
           }));
         } catch(_) {}
       });
-    });
+    }
+
+    if (cbAuto){
+      cbAuto.checked = String(mmLsGet(MM_PREF.setFlow, 'auto') || 'auto') === 'auto';
+      cbAuto.addEventListener('change', function(e){
+        mmLsSet(MM_PREF.setFlow, e.target.checked ? 'auto' : 'manual');
+        try {
+          document.dispatchEvent(new CustomEvent('mm:training-prefs-changed', {
+            detail: { translation: mmLsGet(MM_PREF.transDir,'forward'), setFlow: mmLsGet(MM_PREF.setFlow,'auto') }
+          }));
+        } catch(_) {}
+      });
+    }
 
     // apply concentration attributes on boot
     mmApplyConcentrationAttrs();
