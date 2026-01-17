@@ -540,34 +540,22 @@ body.mm-focus-hide-context .home-hints{
   pointer-events: none;
 }
 
-/* ==========================================================
- * Burger: light theme grouping card for mm-prefs-wrap
- * Apply in "not-dark" modes (safe across different theme class names)
- * ========================================================== */
-
-/* Common "light" cases */
-html[data-theme="light"] .mm-prefs-wrap,
-html[data-color-scheme="light"] .mm-prefs-wrap,
-body.theme-light .mm-prefs-wrap,
-body.light .mm-prefs-wrap,
-
-/* Fallback: apply when NOT in any known dark marker */
-body:not(.dark):not(.theme-dark):not(.dark-theme):not(.is-dark):not(.mm-dark) .mm-prefs-wrap{
+/* Burger: prefs group background ONLY in light theme */
+html:not([data-theme="dark"]) .mm-prefs-wrap{
   background: #F4F6FA;
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
-  padding: 10px 12px;
-  margin: 8px 0;
+
+  /* compact: no extra top/bottom spacing */
+  margin: 0;               /* <-- убрали сверху/снизу */
+  padding: 8px 10px;       /* <-- компактнее, чтобы всё влезало */
 }
 
-/* Ensure it doesn't affect dark explicitly, if present */
-html[data-theme="dark"] .mm-prefs-wrap,
-html[data-color-scheme="dark"] .mm-prefs-wrap,
-body.theme-dark .mm-prefs-wrap,
-body.dark .mm-prefs-wrap,
-body.dark-theme .mm-prefs-wrap,
-body.is-dark .mm-prefs-wrap,
-body.mm-dark .mm-prefs-wrap{
+/* Guard: never show the light card in dark theme */
+html[data-theme="dark"] .mm-prefs-wrap{
   background: transparent;
   border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
