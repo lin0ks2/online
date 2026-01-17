@@ -544,11 +544,11 @@ body.mm-focus-hide-context .home-hints{
 html:not([data-theme="dark"]) .mm-prefs-wrap{
   background: #F4F6FA;
   border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 12px;
+  border-radius: 10px;
 
   /* compact: no extra top/bottom spacing */
   margin: 0;               /* <-- убрали сверху/снизу */
-  padding: 2px 10px;       /* <-- компактнее, чтобы всё влезало */
+  padding: 0px 10px;       /* <-- компактнее, чтобы всё влезало */
 }
 
 /* Guard: never show the light card in dark theme */
