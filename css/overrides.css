@@ -478,3 +478,131 @@ html[data-runmode="pwa"] .home-hints .hints-body{
     max-height: calc(100% - 30px) !important;
   }
 }
+
+
+/* ==========================================================
+ * Standalone burger: Concentration + Training mode (Stage 1)
+ * - Only visible in PWA/TWA (standalone)
+ * ========================================================== */
+
+.menu-item.mm-standalone-only{
+  display:none;
+}
+
+@media (display-mode: standalone) {
+  .menu-item.mm-standalone-only{
+    display:flex;
+  }
+}
+
+.menu-item.mm-concentration,
+.menu-item.mm-training-prefs{
+  padding:14px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.mm-grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 12px;
+}
+
+.mm-check{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:14px;
+  line-height:1.1;
+  color:var(--text);
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.mm-check input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.mm-check-box{
+  width:16px;
+  height:16px;
+  border:1.5px solid var(--border);
+  border-radius:4px;
+  background:var(--surface-1);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 16px;
+}
+
+.mm-check input:checked + .mm-check-box{
+  background:var(--burger);
+  border-color:var(--burger);
+}
+
+.mm-check input:checked + .mm-check-box:after{
+  content:'✓';
+  color:#fff;
+  font-size:12px;
+  line-height:1;
+}
+
+.mm-check-label{
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.mm-pref-block{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.mm-pref-title{
+  font-size:13px;
+  opacity:.75;
+}
+
+.mm-seg-group{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.mm-seg-btn{
+  height:30px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--surface-2);
+  color:var(--text);
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+}
+
+.mm-seg-btn.is-active{
+  background:var(--burger);
+  border-color:var(--burger);
+  color:#fff;
+}
+
+/* Concentration effects: blur Sets / Context blocks on Home screen (standalone only) */
+@media (display-mode: standalone) {
+  html[data-conc-sets='1'] .home .home-sets{
+    filter: blur(6px);
+    opacity:.35;
+    pointer-events:none;
+  }
+  html[data-conc-context='1'] .home .home-hints{
+    filter: blur(6px);
+    opacity:.35;
+    pointer-events:none;
+  }
+}
