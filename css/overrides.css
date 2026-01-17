@@ -548,7 +548,7 @@ html:not([data-theme="dark"]) .mm-prefs-wrap{
 
   /* compact: no extra top/bottom spacing */
   margin: 0;               /* <-- убрали сверху/снизу */
-  padding: 8px 10px;       /* <-- компактнее, чтобы всё влезало */
+  padding: 6px 8px;       /* <-- компактнее, чтобы всё влезало */
 }
 
 /* Guard: never show the light card in dark theme */
