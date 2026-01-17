@@ -1648,6 +1648,11 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
+
+          // TTS: в режиме обратного перевода автоозвучка запускается после верного ответа,
+          // чтобы не превращать звук в подсказку при показе вопроса.
+          try { if (reverse && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch (_eTTS) {}
+
           setTimeout(() => { renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
           try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
