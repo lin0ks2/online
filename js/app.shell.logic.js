@@ -183,104 +183,79 @@
   }
 
   // ------------------------------------------------------------
-  // Standalone menu: Concentration + Training mode (Stage 1)
-  // - Concentration toggles are functional (visual blur)
-  // - Training mode toggles are UI-only for now (persisted)
+  // PWA/TWA: компактные настройки в бургер-меню
   // ------------------------------------------------------------
+  // Эти элементы добавляются в DOM только в standalone режиме.
+  // В браузере они отсутствуют и логика не активируется.
+  (function initPwaMenuPrefs(){
+    const elFocusSets    = document.getElementById('focusSets');
+    const elFocusContext = document.getElementById('focusContext');
+    const elTrainReverse = document.getElementById('trainReverse');
+    const elTrainAutostep= document.getElementById('trainAutostep');
 
-  const MM_PREF = {
-    concSets: 'mm.pref.conc.sets.v1',
-    concCtx:  'mm.pref.conc.context.v1',
-    transDir: 'mm.pref.training.translation.v1',
-    setFlow:  'mm.pref.training.setFlow.v1'
-  };
+    // Ничего не делаем, если секция не отрисована.
+    if (!elFocusSets && !elFocusContext && !elTrainReverse && !elTrainAutostep) return;
 
-  function mmLsGet(key, defVal){
-    try {
-      const v = localStorage.getItem(key);
-      return v == null ? defVal : v;
-    } catch(_) { return defVal; }
-  }
-  function mmLsSet(key, val){
-    try { localStorage.setItem(key, String(val)); } catch(_) {}
-  }
-  function mmGetBool(key, defVal){
-    const v = String(mmLsGet(key, defVal ? '1' : '0'));
-    return v === '1' || v.toLowerCase() === 'true';
-  }
+    const LS = {
+      focusSets: 'mm.focus.hideSets',
+      focusContext: 'mm.focus.hideContext',
+      trainReverse: 'mm.train.reverse',
+      trainAutostep: 'mm.train.autostep'
+    };
 
-  function mmApplyConcentrationAttrs(){
-    const html = document.documentElement;
-    const sets = mmGetBool(MM_PREF.concSets, false);
-    const ctx  = mmGetBool(MM_PREF.concCtx,  false);
-    if (sets) html.setAttribute('data-conc-sets','1');
-    else html.removeAttribute('data-conc-sets');
-    if (ctx) html.setAttribute('data-conc-context','1');
-    else html.removeAttribute('data-conc-context');
-
-    try {
-      document.dispatchEvent(new CustomEvent('mm:concentration-changed', { detail: { sets, context: ctx } }));
-    } catch(_) {}
-  }
-
-  function mmInitStandalonePrefs(){
-    // concentration checkboxes
-    const cbSets = document.getElementById('mmConcSets');
-    const cbCtx  = document.getElementById('mmConcContext');
-
-    if (cbSets){
-      cbSets.checked = mmGetBool(MM_PREF.concSets, false);
-      cbSets.addEventListener('change', function(e){
-        mmLsSet(MM_PREF.concSets, e.target.checked ? '1' : '0');
-        mmApplyConcentrationAttrs();
-      });
+    function readBool(key, fallback){
+      try {
+        const v = window.localStorage.getItem(key);
+        if (v === null || v === undefined || v === '') return !!fallback;
+        return v === '1' || v === 'true';
+      } catch(_) {
+        return !!fallback;
+      }
     }
-    if (cbCtx){
-      cbCtx.checked = mmGetBool(MM_PREF.concCtx, false);
-      cbCtx.addEventListener('change', function(e){
-        mmLsSet(MM_PREF.concCtx, e.target.checked ? '1' : '0');
-        mmApplyConcentrationAttrs();
-      });
+    function writeBool(key, val){
+      try { window.localStorage.setItem(key, val ? '1' : '0'); } catch(_) {}
     }
 
+    // Инициализация (дефолты под текущий UX: без скрытий)
+    const sHideSets    = readBool(LS.focusSets, false);
+    const sHideContext = readBool(LS.focusContext, false);
+    const sReverse     = readBool(LS.trainReverse, false);
+    const sAutostep    = readBool(LS.trainAutostep, true);
 
-    // training prefs (Stage 1: UI + persistence only)
-    // Checkbox semantics:
-    // - Translation: unchecked=forward, checked=reverse
-    // - Set flow:    unchecked=manual,  checked=auto
-    const cbReverse = document.getElementById('mmTransReverse');
-    const cbAuto    = document.getElementById('mmFlowAuto');
+    if (elFocusSets)    elFocusSets.checked    = sHideSets;
+    if (elFocusContext) elFocusContext.checked = sHideContext;
+    if (elTrainReverse) elTrainReverse.checked = sReverse;
+    if (elTrainAutostep)elTrainAutostep.checked= sAutostep;
 
-    if (cbReverse){
-      cbReverse.checked = String(mmLsGet(MM_PREF.transDir, 'forward') || 'forward') === 'reverse';
-      cbReverse.addEventListener('change', function(e){
-        mmLsSet(MM_PREF.transDir, e.target.checked ? 'reverse' : 'forward');
-        try {
-          document.dispatchEvent(new CustomEvent('mm:training-prefs-changed', {
-            detail: { translation: mmLsGet(MM_PREF.transDir,'forward'), setFlow: mmLsGet(MM_PREF.setFlow,'auto') }
-          }));
-        } catch(_) {}
+    document.body.classList.toggle('mm-focus-hide-sets', sHideSets);
+    document.body.classList.toggle('mm-focus-hide-context', sHideContext);
+
+    // Реакция на изменения
+    if (elFocusSets) {
+      elFocusSets.addEventListener('change', (e)=>{
+        const on = !!e.target.checked;
+        writeBool(LS.focusSets, on);
+        document.body.classList.toggle('mm-focus-hide-sets', on);
       });
     }
-
-    if (cbAuto){
-      cbAuto.checked = String(mmLsGet(MM_PREF.setFlow, 'auto') || 'auto') === 'auto';
-      cbAuto.addEventListener('change', function(e){
-        mmLsSet(MM_PREF.setFlow, e.target.checked ? 'auto' : 'manual');
-        try {
-          document.dispatchEvent(new CustomEvent('mm:training-prefs-changed', {
-            detail: { translation: mmLsGet(MM_PREF.transDir,'forward'), setFlow: mmLsGet(MM_PREF.setFlow,'auto') }
-          }));
-        } catch(_) {}
+    if (elFocusContext) {
+      elFocusContext.addEventListener('change', (e)=>{
+        const on = !!e.target.checked;
+        writeBool(LS.focusContext, on);
+        document.body.classList.toggle('mm-focus-hide-context', on);
       });
     }
-
-    // apply concentration attributes on boot
-    mmApplyConcentrationAttrs();
-  }
-
-  // init now (menu already in DOM)
-  try { mmInitStandalonePrefs(); } catch(_) {}
+    if (elTrainReverse) {
+      elTrainReverse.addEventListener('change', (e)=>{
+        writeBool(LS.trainReverse, !!e.target.checked);
+      });
+    }
+    if (elTrainAutostep) {
+      elTrainAutostep.addEventListener('change', (e)=>{
+        writeBool(LS.trainAutostep, !!e.target.checked);
+      });
+    }
+  })();
 
   
   // Кнопка PRO/донат внизу меню
