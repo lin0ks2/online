@@ -567,3 +567,8 @@ html[data-theme="dark"] .mm-prefs-wrap > *{
   border-bottom: none !important;
 }
 
+/* Burger: remove divider ABOVE prefs card (dark theme only) */
+html[data-theme="dark"] 
+.menu-item:has(+ .mm-prefs-wrap){
+  border-bottom: none !important;
+}
