@@ -466,3 +466,15 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .home--fixed-card .dicts-card--fixed {
   max-height: calc(100% - 30px) !important;
 }
+/* Standalone (PWA/TWA): let fixed cards reach the tabbar (remove extra bottom reserve) */
+@media (display-mode: standalone) {
+  /* контейнер экрана: убираем лишний отступ снизу */
+  #app.content {
+    padding-bottom: 0 !important;
+  }
+
+  /* карточка: без -30px в standalone */
+  .home--fixed-card .dicts-card--fixed {
+    max-height: 100% !important;
+  }
+}
