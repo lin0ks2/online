@@ -539,3 +539,11 @@ body.mm-focus-hide-sets .home-sets,
 body.mm-focus-hide-context .home-hints{
   pointer-events: none;
 }
+/* Light theme: grouped prefs card in burger */
+body.light-theme .mm-prefs-wrap{
+  background: #F4F6FA;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 8px 0;
+}
