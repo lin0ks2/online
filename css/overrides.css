@@ -543,7 +543,7 @@ body.mm-focus-hide-context .home-hints{
 /* Burger: prefs group background ONLY in light theme */
 html:not([data-theme="dark"]) .mm-prefs-wrap{
   background: #F4F6FA;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
   border-radius: 12px;
 
   /* compact: no extra top/bottom spacing */
