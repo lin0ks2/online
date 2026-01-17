@@ -50,6 +50,7 @@
 
   var pwaMenuHtml = showPwaMenuTools ? (
     '' +
+    '<div class="mm-prefs-wrap">' +
     '<div class="menu-item mm-prefs mm-prefs-focus">' +
       '<div class="menu-label mm-prefs-title" data-i18n="menuFocus">Концентрация</div>' +
       '<div class="mm-prefs-grid mm-prefs-grid-2">' +
@@ -70,7 +71,8 @@
           '<label class="mm-check mm-check-compact"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
         '</div>' +
       '</div>' +
-    '</div>'
+	    '</div>' +
+	    '</div>'
   ) : '';
 
   root.innerHTML =
