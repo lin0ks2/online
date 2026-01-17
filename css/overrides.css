@@ -466,6 +466,3 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 .home--fixed-card .dicts-card--fixed {
   max-height: calc(100% - 30px) !important;
 }
-@media (display-mode: standalone) {
-  .home--fixed-card .dicts-card--fixed { outline: 1px solid yellow !important; }
-}
