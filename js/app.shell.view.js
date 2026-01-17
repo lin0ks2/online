@@ -85,6 +85,42 @@
             '</div>' +
           '</div>' +
 
+
+          '<div class="menu-item mm-concentration mm-standalone-only">' +
+            '<div class="menu-label" data-i18n="menuConcentration">Концентрация</div>' +
+            '<div class="mm-grid-2">' +
+              '<label class="mm-check">' +
+                '<input type="checkbox" id="mmConcSets" aria-label="Сеты">' +
+                '<span class="mm-check-box" aria-hidden="true"></span>' +
+                '<span class="mm-check-label" data-i18n="menuConcSets">Сеты</span>' +
+              '</label>' +
+              '<label class="mm-check">' +
+                '<input type="checkbox" id="mmConcContext" aria-label="Контекст">' +
+                '<span class="mm-check-box" aria-hidden="true"></span>' +
+                '<span class="mm-check-label" data-i18n="menuConcContext">Контекст</span>' +
+              '</label>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="menu-item mm-training-prefs mm-standalone-only">' +
+            '<div class="menu-label" data-i18n="menuTrainingMode">Режим тренировки</div>' +
+
+            '<div class="mm-pref-block">' +
+              '<div class="mm-pref-title" data-i18n="menuTranslation">Перевод</div>' +
+              '<div class="mm-seg-group" data-pref-group="translation" role="radiogroup" aria-label="Перевод">' +
+                '<button type="button" class="mm-seg-btn" id="mmTransForward" data-pref="translation" data-value="forward" role="radio" aria-checked="true" data-i18n="menuForward">Прямой</button>' +
+                '<button type="button" class="mm-seg-btn" id="mmTransReverse" data-pref="translation" data-value="reverse" role="radio" aria-checked="false" data-i18n="menuReverse">Обратный</button>' +
+              '</div>' +
+            '</div>' +
+
+            '<div class="mm-pref-block">' +
+              '<div class="mm-pref-title" data-i18n="menuSetProgress">Переход по сетам</div>' +
+              '<div class="mm-seg-group" data-pref-group="setFlow" role="radiogroup" aria-label="Переход по сетам">' +
+                '<button type="button" class="mm-seg-btn" id="mmFlowManual" data-pref="setFlow" data-value="manual" role="radio" aria-checked="false" data-i18n="menuManual">Ручной</button>' +
+                '<button type="button" class="mm-seg-btn" id="mmFlowAuto" data-pref="setFlow" data-value="auto" role="radio" aria-checked="true" data-i18n="menuAuto">Авто</button>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
           '<div class="menu-item backup-tools">' +
             '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
             '<div class="backup-row">' +
