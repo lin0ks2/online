@@ -268,7 +268,16 @@ function getDeckWithArticles() {
     var start0 = currentSetIndex * setSize;
     var end0 = Math.min(deck.length, start0 + setSize);
     var slice0 = deck.slice(start0, end0);
-    if (isSetAutostepEnabled() && slice0.length && isCurrentSetComplete(dk, slice0) && totalSets > 1) {
+
+    var autostepEnabled = isSetAutostepEnabled();
+
+    // If autostep is OFF and the current set is complete, stay in this set and repeat it
+    // (prevents "ignored checkbox" behavior when eps=0 and all words are learned).
+    if (!autostepEnabled && slice0.length && isCurrentSetComplete(dk, slice0)) {
+      return slice0;
+    }
+
+    if (autostepEnabled && slice0.length && isCurrentSetComplete(dk, slice0) && totalSets > 1) {
       var nextIdx = (currentSetIndex + 1) % totalSets;
       setBatchIndex(nextIdx, dk);
       currentSetIndex = nextIdx;
