@@ -240,11 +240,15 @@ function getDeckWithArticles() {
   }
 
   function isSetAutostepEnabled(){
-    try{
-      var el = document.getElementById("trainAutostep");
-      if (el && el.type === "checkbox") return !!el.checked;
-    }catch(_){ }
-    return true;
+    // Single source of truth: localStorage (set by burger prefs).
+    // Default = true (legacy behavior, and browser mode without the UI).
+    try {
+      var v = window.localStorage.getItem('mm.train.autostep');
+      if (v === null || v === undefined || v === '') return true;
+      return (v === '1' || v === 'true');
+    } catch (_) {
+      return true;
+    }
   }
 
   function getArticlesSlice(dk) {
