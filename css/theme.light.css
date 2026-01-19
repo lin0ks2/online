@@ -86,12 +86,6 @@ body{
   font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; /* системный шрифт */
   background:#fff;                                      /* белый фон по умолчанию */
   color:#111;                                           /* базовый текстовый цвет */}
-
-/* Ensure the root element paints the same themed background.
-   In PWA/TWA (standalone) the app uses fixed header/footer and computed heights.
-   On iOS this can reveal the html background when the scroll bounces, so html
-   must track the active theme background. */
-html{ background: var(--bg, #fff); }
 body.menu-open{ overflow:hidden; touch-action:none;}
 /* при открытом меню — не скроллим под ним */
 
@@ -137,7 +131,13 @@ body.menu-open .burger{ color:var(--footer-fg); transform:scale(1.06);}
    ========================= */
 .app-footer{
   position:fixed; left:0; right:0; bottom:0;           /* футер всегда прибит к низу окна */
-  height:calc(var(--footer-h) + var(--safe-bottom));   /* базовая высота + safe-area (перезапишет JS фактом) */
+  /*
+    ВАЖНО:
+    Высоту задаём БЕЗ safe-area, а safe-area добавляем через padding-bottom.
+    Иначе safe-bottom учитывается дважды (в height и в padding),
+    из-за чего иконки/кнопки визуально «поднимаются» выше, чем нужно.
+  */
+  height:var(--footer-h);
   display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); /* пять равных колонок (5 кнопок) */
   column-gap:var(--nav-gap);                            /* горизонтальный зазор между кнопками */
   padding-left:var(--nav-gap); padding-right:var(--nav-gap); /* поля слева/справа внутри футера */
@@ -272,21 +272,15 @@ body.menu-open .oc-panel{ transform:translateX(0);}
      ========================================================================== */
 
   :root{
-    /* safe-area inset (used by footer nudge + ::after background tail) */
-    --safe-bottom: env(safe-area-inset-bottom, 0px);
     --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
   }
 
   .app-footer{
     bottom:0;
     height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
-    padding-bottom:10px;           /* кнопки над home-indicator */
+    padding-bottom:10;             /* кнопки над home-indicator */
     border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
-    /* In standalone, the footer must NOT be in document flow, otherwise you get page scroll + empty space under it. */
-    position:fixed;               /* якорь для ::after + фиксируем панель */
-    left:0;
-    right:0;
-    z-index:60;
+    position:relative;            /* якорь для ::after */
     overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
   }
 
