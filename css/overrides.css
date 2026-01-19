@@ -468,6 +468,22 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 /* Standalone (PWA/TWA): card reaches tabbar area, but keeps safe gap above it */
 @media (display-mode: standalone) {
+  /* ----------------------------------------------------------
+   * PWA/TWA (iOS): disable "rubber-band" scrolling on the main
+   * app container.
+   *
+   * Rationale:
+   * - In iOS PWA/TWA, an overflow:auto container can still show
+   *   a small extra scroll range (bounce), which manifests as a
+   *   ~20–30px strip at the bottom after a pull gesture.
+   * - Locking html/body in this project previously caused footer
+   *   geometry side effects; locking the main container is safer.
+   * ---------------------------------------------------------- */
+  #app.content{
+    overflow: hidden !important;
+    -webkit-overflow-scrolling: auto !important;
+  }
+
   /* убираем лишний резерв контейнера */
   #app.content {
     padding-bottom: 0 !important;
@@ -571,27 +587,4 @@ html[data-theme="dark"] .mm-prefs-wrap > *{
 html[data-theme="dark"] 
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
-}
-
-@media all and (display-mode:standalone){
-  html, body{
-    margin:0;
-    height:100%;
-    min-height:100%;
-    overflow:hidden;
-    overscroll-behavior: none;
-  }
-  @supports (height: 100dvh){
-    html, body{ height:100dvh; }
-  }
-}
-@media all and (display-mode:standalone){
-  :root{
-    --safe-bottom: env(safe-area-inset-bottom, 0px);
-  }
-}
-@supports (height: 100dvh){
-  @media all and (display-mode:standalone){
-    :root{ --vh: 1dvh; }
-  }
 }
