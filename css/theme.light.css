@@ -857,7 +857,8 @@ body.modal-open { overflow: hidden;}
   display:flex;
   flex-direction:column;
   overflow:hidden;
-  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y: none;
+ /* -webkit-overflow-scrolling:touch; */
   height:calc(var(--vh,1vh)*100 - var(--header-h-actual) - var(--footer-h-actual));
   /* запас снизу, чтобы карточки не упирались в фиксированный футер */
   padding-top:8px;
