@@ -266,7 +266,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
      ========================================================================== */
 
   :root{
-    --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
+    --footer-h-pwa: calc(var(--footer-h) - 24px); /* было: var(--footer-h), стало: на 10–20px тоньше */
   }
 
   .app-footer{
