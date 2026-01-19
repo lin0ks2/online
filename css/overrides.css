@@ -20,9 +20,6 @@
  * ---------------------------------------------------------- */
 @supports (height: 100dvh) {
   #app.content {
-    /* Important: prevent extra pixels from padding when height is set explicitly.
-       This is critical in PWA/TWA (standalone) where 100dvh is used. */
-    box-sizing: border-box;
     height: calc(100dvh - var(--header-h-actual) - var(--footer-h-actual));
   }
 }
@@ -471,16 +468,9 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 /* Standalone (PWA/TWA): card reaches tabbar area, but keeps safe gap above it */
 @media (display-mode: standalone) {
-  /* IMPORTANT (PWA/TWA):
-     Do not force padding-bottom to 0 here.
-     In standalone, #app.content uses an explicit height (100dvh-based) and
-     theme.light.css adds bottom padding for the fixed footer/tabbar.
-     Forcing 0 causes height/padding desync and can introduce a 1–4px overflow
-     (visible as a bottom strip + unwanted page scroll), which also degrades
-     the off-canvas menu rendering.
-     Keep a consistent bottom reserve aligned with the PWA footer height. */
-  #app.content{
-    padding-bottom: calc(var(--footer-h-pwa, var(--footer-h-actual, 60px)) + 10px);
+  /* убираем лишний резерв контейнера */
+  #app.content {
+    padding-bottom: 0 !important;
   }
 
   /* возвращаем safe-gap для карточки */
@@ -582,8 +572,3 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
-
- @media all and (display-mode:standalone){
-  .app-footer{ padding-bottom:0px; }
-}
-
