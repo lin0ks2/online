@@ -279,7 +279,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
   }
 
   /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
-  .app-footer .nav-btn{
+  /*.app-footer .nav-btn{
     transform:translateY(calc(var(--safe-bottom) * 0.1));
   }
 
