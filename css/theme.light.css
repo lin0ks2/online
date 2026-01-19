@@ -272,15 +272,15 @@ body.menu-open .oc-panel{ transform:translateX(0);}
   .app-footer{
     bottom:0;
     height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
-    padding-bottom:10px; */            /* кнопки над home-indicator */
+    padding-bottom:10px;             /* кнопки над home-indicator */
     border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
     /* position:fixed inherited; do not override in PWA/TWA */
-    overflow:hidden;             /* разрешаем "хвост" фона уйти вниз */
+    overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
   }
 
   /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
   .app-footer .nav-btn{
-    transform:translateY(calc(var(--safe-bottom) *0.1));
+    transform:translateY(calc(var(--safe-bottom) * 0.1));
   }
 
   /* Дорисовываем фон футера в safe-area (под home-indicator) */
