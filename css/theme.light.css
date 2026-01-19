@@ -271,20 +271,33 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 
   .app-footer{
     bottom:0;
-    /*
-      PWA/TWA: safe-area учитываем ОДИН раз.
-      Раньше тут было 2–3 учёта safe-bottom (padding + ::after + transform),
-      из-за чего таббар поднимался выше нужного.
-    */
-    height:calc(var(--footer-h-pwa) + var(--safe-bottom));
-    padding-bottom:calc(var(--safe-bottom) + 4px);
+    height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
+    padding-bottom:10px;             /* кнопки над home-indicator */
     border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
+    position:relative;            /* якорь для ::after */
+    overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
+  }
+
+  /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
+  .app-footer .nav-btn{
+    transform:translateY(calc(var(--safe-bottom) * 0.1));
+  }
+
+  /* Дорисовываем фон футера в safe-area (под home-indicator) */
+  .app-footer::after{
+    content:"";
+    position:absolute;
+    left:0; right:0;
+    bottom:calc(-1 * var(--safe-bottom));
+    height:var(--safe-bottom);
+    background:var(--footer-bg);
+    pointer-events:none;
   }
 
   /* Контент в PWA/TWA не должен дополнительно учитывать safe-bottom,
      иначе появляется «пустота» над футером */
   .content{
-    padding-bottom:calc(var(--footer-h-pwa) + var(--safe-bottom) + 4px);
+    padding-bottom:calc(var(--footer-h-pwa) + 10px);
   }
 
   /* ===================== END MOYAMOVA PWA/TWA FOOTER PATCH ==================== */
