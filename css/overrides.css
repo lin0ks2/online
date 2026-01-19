@@ -38,6 +38,25 @@
 }
 
 /* ----------------------------------------------------------
+ * 2.2. iOS PWA/TWA: убрать "пустой" скролл и нижнюю полосу
+ *
+ * В standalone (PWA/TWA) iOS может оставлять небольшой запас
+ * прокрутки на корневом контейнере (#app.content) из-за
+ * внутренних паддингов/геометрии. Это проявляется как белая
+ * полоса снизу после первого жеста прокрутки.
+ *
+ * Здесь мы запрещаем прокрутку именно контейнеру приложения,
+ * не трогая фиксированный футер/бургер.
+ * ---------------------------------------------------------- */
+@media all and (display-mode:standalone){
+  #app.content{
+    overflow:hidden !important;
+    -webkit-overflow-scrolling:auto !important;
+    overscroll-behavior-y:none;
+  }
+}
+
+/* ----------------------------------------------------------
  * 2.1. Кнопки действий на экранах словарей/избранного/ошибок
  *
  * Увеличиваем расстояние между кнопками
@@ -468,22 +487,6 @@ html[data-runmode="pwa"] .home-hints .hints-body{
 }
 /* Standalone (PWA/TWA): card reaches tabbar area, but keeps safe gap above it */
 @media (display-mode: standalone) {
-  /* ----------------------------------------------------------
-   * PWA/TWA (iOS): disable "rubber-band" scrolling on the main
-   * app container.
-   *
-   * Rationale:
-   * - In iOS PWA/TWA, an overflow:auto container can still show
-   *   a small extra scroll range (bounce), which manifests as a
-   *   ~20–30px strip at the bottom after a pull gesture.
-   * - Locking html/body in this project previously caused footer
-   *   geometry side effects; locking the main container is safer.
-   * ---------------------------------------------------------- */
-  #app.content{
-    overflow: hidden !important;
-    -webkit-overflow-scrolling: auto !important;
-  }
-
   /* убираем лишний резерв контейнера */
   #app.content {
     padding-bottom: 0 !important;
