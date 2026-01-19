@@ -274,7 +274,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
     height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
     padding-bottom:10px;             /* кнопки над home-indicator */
     border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
-    position:relative;            /* якорь для ::after */
+    /* position:fixed inherited; do not override in PWA/TWA */
     overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
   }
 
