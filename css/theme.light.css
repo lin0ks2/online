@@ -266,7 +266,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
      ========================================================================== */
 
   :root{
-    --footer-h-pwa: calc(var(--footer-h) - 24px); /* было: var(--footer-h), стало: на 10–20px тоньше */
+    --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
   }
 
   .app-footer{
@@ -280,7 +280,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 
   /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
   .app-footer .nav-btn{
-    transform:translateY(calc(var(--safe-bottom) * 0.1));
+    transform:translateY(calc(var(--safe-bottom) * 0.2));
   }
 
   /* Дорисовываем фон футера в safe-area (под home-indicator) */
