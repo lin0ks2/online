@@ -572,3 +572,11 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
+
+@media all and (display-mode:standalone){
+  html, body{
+    height:100%;
+    overflow:hidden;
+    overscroll-behavior-y:none;
+  }
+}
