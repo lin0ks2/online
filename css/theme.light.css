@@ -266,20 +266,23 @@ body.menu-open .oc-panel{ transform:translateX(0);}
      ========================================================================== */
 
   :root{
-   --footer-h-pwa: calc(var(--footer-h) - 14px - var(--safe-bottom)); /* было: var(--footer-h), стало: на 10–20px тоньше */
+	    --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
+	    /* PWA/TWA: контент резервирует место ТОЛЬКО под панель кнопок (без safe-area).
+	       Safe-area закрываем исключительно фоном через .app-footer::after. */
+	    --footer-h-actual: var(--footer-h-pwa);
   }
 
   .app-footer{
     bottom:0;
     height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
-    /*padding-bottom:10px;             /* кнопки над home-indicator */
+    padding-bottom:10px;             /* кнопки над home-indicator */
     border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
     /* position:fixed inherited; do not override in PWA/TWA */
     overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
   }
 
   /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
-  /*.app-footer .nav-btn{
+  .app-footer .nav-btn{
     transform:translateY(calc(var(--safe-bottom) * 0.1));
   }
 
