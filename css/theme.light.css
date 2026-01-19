@@ -138,7 +138,7 @@ body.menu-open .burger{ color:var(--footer-fg); transform:scale(1.06);}
   background:var(--footer-bg); color:var(--footer-fg); /* фон и цвет иконок/текста */
   border-top:1px solid #e5e7eb;                        /* линия сверху футера */
   border-bottom:1px solid #e5e7eb;                     /* линия снизу футера (в PWA мы её отключим) */
-  z-index:1000;                                        /* над контентом */
+  z-index:9999;                                        /* над контентом */
   padding-bottom:var(--safe-bottom);                   /* отступ под home-бар (в PWA уберём) */
   box-shadow:none;                                     /* тени убраны для чистых стыков */}
 /* кнопка навигации в футере */
