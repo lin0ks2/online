@@ -585,3 +585,13 @@ html[data-theme="dark"]
     html, body{ height:100dvh; }
   }
 }
+@media all and (display-mode:standalone){
+  :root{
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+@supports (height: 100dvh){
+  @media all and (display-mode:standalone){
+    :root{ --vh: 1dvh; }
+  }
+}
