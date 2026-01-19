@@ -86,12 +86,6 @@ body{
   font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; /* системный шрифт */
   background:#fff;                                      /* белый фон по умолчанию */
   color:#111;                                           /* базовый текстовый цвет */}
-
-/* Ensure the root element paints the same themed background.
-   In PWA/TWA (standalone) the app uses fixed header/footer and computed heights.
-   On iOS this can reveal the html background when the scroll bounces, so html
-   must track the active theme background. */
-html{ background: var(--bg, #fff); }
 body.menu-open{ overflow:hidden; touch-action:none;}
 /* при открытом меню — не скроллим под ним */
 
@@ -264,56 +258,54 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 /* футер на нуле — твоё идеальное текущее поведение в браузерах */}
 /* 2) PWA (display-mode: standalone) — прижимаем кнопки НА САМЫЙ НИЗ, без дублей safe-area */
 @media all and (display-mode:standalone){
-  /* ======================= MOYAMOVA PWA/TWA FOOTER PATCH =======================
-     Цель: как в нативных iOS-приложениях (OLX/Google/EarFun)
-     - Кнопки остаются ВЫШЕ home-indicator (НЕ в safe-area)
-     - Safe-area снизу закрываем ТОЛЬКО фоном футера
-     - В PWA/TWA делаем футер чуть тоньше (−14px) и слегка опускаем иконки
-     ========================================================================== */
+  /* PWA/TWA: fixed footer without double safe-area accounting.
+     Safe-area background is painted by ::after, while controls stay lower. */
 
   :root{
-    /* safe-area inset (used by footer nudge + ::after background tail) */
-    --safe-bottom: env(safe-area-inset-bottom, 0px);
-    --footer-h-pwa: calc(var(--footer-h) - 14px); /* было: var(--footer-h), стало: на 10–20px тоньше */
+    --safe-bottom: env(safe-area-inset-bottom);
   }
 
   .app-footer{
-    bottom:0;
-    height:var(--footer-h-pwa);   /* высота панели с кнопками (без safe-area) */
-    padding-bottom:0;              /* без подъёма кнопок; safe-area закрываем ::after */
-    border-bottom:0;              /* нижняя линия в PWA обычно мешает у края */
-    /* In standalone, the footer must NOT be in document flow, otherwise you get page scroll + empty space under it. */
-    position:fixed;               /* якорь для ::after + фиксируем панель */
+    position:fixed;
     left:0;
     right:0;
-    z-index:60;
-    overflow:visible;             /* разрешаем "хвост" фона уйти вниз */
+    bottom:0;
+
+    /* keep canonical height; safe-area handled separately */
+    height: var(--footer-h);
+    padding-bottom: 0;
+
+    /* no divider in PWA */
+    border-bottom:none;
+    box-shadow:none;
+    z-index: 200;
   }
 
-  /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
-  .app-footer .nav-btn{
-    transform:none;
-  }
-
-  /* Дорисовываем фон футера в safe-area (под home-indicator) */
+  /* Paint the safe-area strip under the footer to avoid scroll/white gap */
   .app-footer::after{
     content:"";
     position:absolute;
-    left:0; right:0;
-    bottom:calc(-1 * var(--safe-bottom));
-    height:var(--safe-bottom);
-    background:var(--footer-bg);
-    pointer-events:none;
+    left:0;
+    right:0;
+    height: var(--safe-bottom);
+    bottom: calc(-1 * var(--safe-bottom));
+    background: var(--footer-bg);
   }
 
-  /* Контент в PWA/TWA не должен дополнительно учитывать safe-bottom,
-     иначе появляется «пустота» над футером */
+  /* Move footer icons closer to the bottom edge */
+  .app-footer .nav-btn{
+    align-items:flex-end;
+    padding: 8px 4px 6px;
+  }
+
+  /* Ensure main content never goes behind the fixed footer */
   .content{
-    padding-bottom:calc(var(--footer-h-pwa) + 10px);
+    padding-bottom: calc(var(--footer-h) + 10px);
   }
 
   /* ===================== END MOYAMOVA PWA/TWA FOOTER PATCH ==================== */
 }
+
 
 
 /* ========================================================================== */
