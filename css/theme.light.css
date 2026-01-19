@@ -280,7 +280,7 @@ body.menu-open .oc-panel{ transform:translateX(0);}
 
   /* Лёгкий "nudge" вниз: визуально ближе к нативным таб-барам, но без ухода в системную зону жестов */
   .app-footer .nav-btn{
-    transform:translateY(calc(var(--safe-bottom) * 0.2));
+    transform:translateY(calc(var(--safe-bottom) * 0.4));
   }
 
   /* Дорисовываем фон футера в safe-area (под home-indicator) */
