@@ -572,35 +572,3 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
-
-/* =========================================================
-   PWA/TWA: footer pinned + no extra scroll/blank space
-   ========================================================= */
-@media all and (display-mode:standalone){
-
-  /* 1) Footer fixed, safe-area inside footer (no ::after needed) */
-  .app-footer{
-    position: fixed !important;
-    left: 0; right: 0; bottom: 0;
-
-    /* высота = “тонкий футер” + safe-bottom */
-    height: calc(var(--footer-h-pwa, var(--footer-h)) + var(--safe-bottom)) !important;
-
-    /* “опускаем” кнопки визуально вниз как ты хотел */
-    padding-bottom: calc(10px + var(--safe-bottom)) !important;
-
-    overflow: hidden !important; /* важно: убирает “хвост”, который создавал лишнюю высоту */
-  }
-
-  /* 2) Отключаем дорисовку safe-area, она больше не нужна */
-  .app-footer::after{
-    content: none !important;
-    display: none !important;
-  }
-
-  /* 3) Контент НЕ должен дополнительно учитывать футер в standalone,
-        иначе появится пустота/скролл */
-  .content{
-    padding-bottom: calc(var(--footer-h-pwa, var(--footer-h)) + var(--safe-bottom) + 10px) !important;
-  }
-}
