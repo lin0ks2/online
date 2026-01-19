@@ -572,3 +572,36 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
+
+@media (display-mode: standalone) {
+  html[data-env="standalone"] .app-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* реальная высота футера = кнопки + safe-area */
+    height: calc(var(--footer-h-pwa) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+  }
+
+  /* ВАЖНО: убрать любые “дорисовки” safe-area снизу,
+     если у тебя был ::after — отключаем его в standalone */
+  html[data-env="standalone"] .app-footer::after{
+    content: none !important;
+    display: none !important;
+  }
+}
+
+@media (display-mode: standalone) {
+  html[data-env="standalone"] .content,
+  html[data-env="standalone"] #app.content{
+    padding-bottom: 0 !important;
+  }
+
+  /* если где-то высота считается как 100vh - footer, то в standalone тоже обнуляем */
+  html[data-env="standalone"] #app.content{
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
