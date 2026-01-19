@@ -572,3 +572,15 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
+/* FIX: standalone footer must stay fixed, иначе появляется скролл и пустота снизу */
+html[data-env="standalone"] .app-footer{
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* optional: поправить невалидный паддинг (если он у тебя есть в теме) */
+html[data-env="standalone"] .app-footer{
+  padding-bottom: 10px; /* вместо 10 */
+}
