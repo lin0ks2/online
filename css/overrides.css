@@ -573,35 +573,34 @@ html[data-theme="dark"]
   border-bottom: none !important;
 }
 
-@media (display-mode: standalone) {
-  html[data-env="standalone"] .app-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+/* =========================================================
+   PWA/TWA: footer pinned + no extra scroll/blank space
+   ========================================================= */
+@media all and (display-mode:standalone){
 
-    /* реальная высота футера = кнопки + safe-area */
-    height: calc(var(--footer-h-pwa) + var(--safe-bottom));
-    padding-bottom: var(--safe-bottom);
+  /* 1) Footer fixed, safe-area inside footer (no ::after needed) */
+  .app-footer{
+    position: fixed !important;
+    left: 0; right: 0; bottom: 0;
+
+    /* высота = “тонкий футер” + safe-bottom */
+    height: calc(var(--footer-h-pwa, var(--footer-h)) + var(--safe-bottom)) !important;
+
+    /* “опускаем” кнопки визуально вниз как ты хотел */
+    padding-bottom: calc(10px + var(--safe-bottom)) !important;
+
+    overflow: hidden !important; /* важно: убирает “хвост”, который создавал лишнюю высоту */
   }
 
-  /* ВАЖНО: убрать любые “дорисовки” safe-area снизу,
-     если у тебя был ::after — отключаем его в standalone */
-  html[data-env="standalone"] .app-footer::after{
+  /* 2) Отключаем дорисовку safe-area, она больше не нужна */
+  .app-footer::after{
     content: none !important;
     display: none !important;
   }
-}
 
-@media (display-mode: standalone) {
-  html[data-env="standalone"] .content,
-  html[data-env="standalone"] #app.content{
-    padding-bottom: 0 !important;
-  }
-
-  /* если где-то высота считается как 100vh - footer, то в standalone тоже обнуляем */
-  html[data-env="standalone"] #app.content{
-    height: auto !important;
-    min-height: auto !important;
+  /* 3) Контент НЕ должен дополнительно учитывать футер в standalone,
+        иначе появится пустота/скролл */
+  .content{
+    padding-bottom: calc(var(--footer-h-pwa, var(--footer-h)) + var(--safe-bottom) + 10px) !important;
   }
 }
