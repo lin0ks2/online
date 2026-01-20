@@ -592,35 +592,39 @@ html[data-theme="dark"]
   border-bottom: none !important;
 }
 
-/* 1. Блокируем саму возможность «потянуть» экран */
+/* 1. Сохраняем блокировку скролла, но без смещения координат */
 html, body {
-  /* Фиксируем высоту по вьюпорту без возможности растяжения */
   height: 100dvh !important;
   width: 100vw !important;
   overflow: hidden !important;
-  
-  /* Отключаем системную обработку свайпов как прокрутки */
-  /* Это уберет эффект «резинки», из-за которой видна белая полоса */
-  touch-action: none !important;
-  
-  /* Убираем отступы, если они были */
-  margin: 0 !important;
-  padding: 0 !important;
+  position: fixed; /* Держим экран жестко */
+  overscroll-behavior: none;
 }
 
-/* 2. Убираем причину появления полосы — лишние пиксели */
-/* В overrides.css есть секция «страхующий отступ снизу». 
-   Если он активен, он выталкивает футер за пределы 100dvh. Обнуляем его: */
+/* 2. Убираем тот самый "прыжок". 
+   Обнуляем страхующий отступ из пункта 2 вашего overrides.css */
 #app.content {
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
-  /* Оставляем ваш calc, но гарантируем, что он не даст скролла */
-  overflow: hidden !important;
+  /* Корректируем высоту, чтобы она была строго до края футера */
+  height: calc(100dvh - var(--header-h-actual) - var(--footer-h-actual)) !important;
 }
 
-/* 3. Маскировка (визуальный трюк) */
-/* Если вдруг микро-зазор все равно возникнет на системном уровне, 
-   сделаем фон html таким же, как фон вашего приложения/футера */
-html {
-  background-color: var(--bg-main) !important;
+/* 3. Настройка футера: опускаем кнопки в "нативную" позицию */
+footer, .footer, [class*="footer"] {
+  /* Убираем любые лишние отступы, кроме системного */
+  margin-bottom: 0 !important;
+  
+  /* Устанавливаем отступ только для Safe Area (полоска iPhone/Android) */
+  /* Если кнопки всё равно высоко, уменьшите 16px до 8px или 0 */
+  padding-bottom: env(safe-area-inset-bottom, 16px) !important;
+  
+  /* Гарантируем прижатие к низу */
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  
+  /* Чтобы контент за кнопками не просвечивал, если они прозрачные */
+  background-color: var(--bg-main);
 }
