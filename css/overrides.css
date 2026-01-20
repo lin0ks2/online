@@ -591,3 +591,16 @@ html[data-theme="dark"]
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
 }
+
+html[data-sg-enabled="1"]::after{
+  content:"SG-ON";
+  position:fixed;
+  top:6px;
+  left:8px;
+  z-index:999999;
+  padding:2px 6px;
+  font:12px/1 system-ui;
+  background:rgba(255,200,0,.9);
+  color:#000;
+  border-radius:6px;
+}
