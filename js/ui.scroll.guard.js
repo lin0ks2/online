@@ -41,9 +41,17 @@
 
   function isStandalone(){
     try {
-      return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
-             (navigator.standalone === true) ||
-             (document.documentElement && document.documentElement.getAttribute('data-runmode') === 'pwa');
+      // iOS PWA: matchMedia/display-mode and navigator.standalone.
+      // Project-specific: also respect html[data-runmode] for hybrid shells.
+      var dm = !!(window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+      var ns = (navigator.standalone === true);
+      var rm = '';
+      try { rm = (document.documentElement && (document.documentElement.getAttribute('data-runmode') || '')) || ''; } catch(_){ rm=''; }
+      rm = String(rm || '').toLowerCase();
+
+      // Accept both PWA and wrapper runmodes.
+      var rmOk = (rm === 'pwa' || rm === 'twa' || rm === 'standalone' || rm === 'app');
+      return dm || ns || rmOk;
     } catch(e){
       return false;
     }
@@ -93,32 +101,14 @@
   // Активный жест
   var touchStartY = 0;
   var touchActive = false;
-  var activeScrollEl = null;
 
   function onTouchStart(e){
     if (!e || !e.touches || e.touches.length !== 1) {
       touchActive = false;
-      activeScrollEl = null;
       return;
     }
     touchActive = true;
     touchStartY = e.touches[0].clientY;
-
-    // iOS может показывать rubber-band (bounce) внутри scroll-контейнеров
-    // даже если мы гасим touchmove на документе. Чтобы исключить bounce,
-    // мы "сдвигаем" scrollTop с границ (0/max) на 1px внутрь.
-    try {
-      var t = e.target;
-      var allowed = closestAllowed(t);
-      activeScrollEl = allowed;
-      if (allowed && canScroll(allowed)) {
-        var maxTop = allowed.scrollHeight - allowed.clientHeight;
-        if (allowed.scrollTop <= 0) allowed.scrollTop = 1;
-        else if (allowed.scrollTop >= maxTop) allowed.scrollTop = Math.max(0, maxTop - 1);
-      }
-    } catch(_){
-      activeScrollEl = null;
-    }
   }
 
   function onTouchMove(e){
@@ -130,9 +120,7 @@
     if (Math.abs(deltaY) < CFG.deltaThresholdPx) return;
 
     var target = e.target;
-    // Используем кэш из touchstart, чтобы избежать рассинхронизации при
-    // вложенных элементах/перерисовках.
-    var allowed = activeScrollEl || closestAllowed(target);
+    var allowed = closestAllowed(target);
 
     // Если не находим разрешенного контейнера — гасим всегда.
     if (!allowed) {
@@ -141,7 +129,10 @@
     }
 
     // Если контейнер вообще не скроллится — гасим, чтобы не было bounce.
-    if (!canScroll(allowed)) { e.preventDefault(); return; }
+    if (!canScroll(allowed)) {
+      e.preventDefault();
+      return;
+    }
 
     // Если контейнер у края и жест тянет дальше — гасим bounce.
     if (!canScrollInDirection(allowed, deltaY)) {
@@ -154,18 +145,16 @@
 
   function onTouchEnd(){
     touchActive = false;
-    activeScrollEl = null;
   }
 
   function init(){
     if (!shouldEnable()) return;
-    // Важно:
-    //  - passive:false на touchmove, иначе preventDefault не сработает.
-    //  - capture:true, иначе iOS может начать нативный scroll до нашей логики.
-    document.addEventListener('touchstart', onTouchStart, { passive: true, capture: true });
-    document.addEventListener('touchmove', onTouchMove, { passive: false, capture: true });
-    document.addEventListener('touchend', onTouchEnd, { passive: true, capture: true });
-    document.addEventListener('touchcancel', onTouchEnd, { passive: true, capture: true });
+    // Важно: passive:false, иначе preventDefault не сработает.
+    // Capture-phase is important on iOS to win against native scroll start.
+    document.addEventListener('touchstart', onTouchStart, { passive: true,  capture: true });
+    document.addEventListener('touchmove',  onTouchMove,  { passive: false, capture: true });
+    document.addEventListener('touchend',   onTouchEnd,   { passive: true,  capture: true });
+    document.addEventListener('touchcancel',onTouchEnd,   { passive: true,  capture: true });
   }
 
   // Авто-инициализация
