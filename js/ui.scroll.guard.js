@@ -1,3 +1,4 @@
+document.documentElement.setAttribute('data-sg', '1');
 /* ==========================================================
    Проект: MOYAMOVA
    Файл: ui.scroll.guard.js
