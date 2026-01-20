@@ -617,7 +617,7 @@ footer, .footer, [class*="footer"] {
   
   /* Устанавливаем отступ только для Safe Area (полоска iPhone/Android) */
   /* Если кнопки всё равно высоко, уменьшите 16px до 8px или 0 */
-  padding-bottom: env(safe-area-inset-bottom, 16px) !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
   
   /* Гарантируем прижатие к низу */
   position: fixed !important;
