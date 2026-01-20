@@ -159,11 +159,13 @@
 
   function init(){
     if (!shouldEnable()) return;
-    // Важно: passive:false, иначе preventDefault не сработает.
-    document.addEventListener('touchstart', onTouchStart, { passive: true });
-    document.addEventListener('touchmove', onTouchMove, { passive: false });
-    document.addEventListener('touchend', onTouchEnd, { passive: true });
-    document.addEventListener('touchcancel', onTouchEnd, { passive: true });
+    // Важно:
+    //  - passive:false на touchmove, иначе preventDefault не сработает.
+    //  - capture:true, иначе iOS может начать нативный scroll до нашей логики.
+    document.addEventListener('touchstart', onTouchStart, { passive: true, capture: true });
+    document.addEventListener('touchmove', onTouchMove, { passive: false, capture: true });
+    document.addEventListener('touchend', onTouchEnd, { passive: true, capture: true });
+    document.addEventListener('touchcancel', onTouchEnd, { passive: true, capture: true });
   }
 
   // Авто-инициализация
