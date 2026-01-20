@@ -857,7 +857,7 @@
 
     return (
       '<section class="stats-section stats-section--activity">' +
-        '<h2 class="stats-subtitle">' + texts.activityTitle + '</h2>' +
+        '<h2 class="stats-subtitle">' + (langCode === '__all__' ? (texts.activityTitleAll || texts.activityTitle) : texts.activityTitle) + '</h2>' +
         weekdaysHtml +
         '<div class="stats-activity-grid">' + cellsHtml + '</div>' +
         legendHtml +
