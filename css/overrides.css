@@ -592,37 +592,35 @@ html[data-theme="dark"]
   border-bottom: none !important;
 }
 
-/* 1. Убираем эффект «резинки» и системный фон */
-html {
-  /* Запрещаем оттягивание страницы (bounce effect) */
-  overscroll-behavior: none !important;
-  /* Красим фон html в цвет вашей темы, чтобы полоса не была белой */
-  background-color: var(--bg-main) !important;
-}
-
-body {
-  /* Запрещаем прокрутку на уровне body */
+/* 1. Блокируем саму возможность «потянуть» экран */
+html, body {
+  /* Фиксируем высоту по вьюпорту без возможности растяжения */
+  height: 100dvh !important;
+  width: 100vw !important;
   overflow: hidden !important;
-  /* Оставляем высоту как есть, но страхуем от переполнения */
-  max-height: 100dvh !important;
-  /* Убираем bounce на уровне body */
-  overscroll-behavior: none !important;
-  /* Важно: НЕ меняем position на fixed, чтобы не прыгали кнопки */
+  
+  /* Отключаем системную обработку свайпов как прокрутки */
+  /* Это уберет эффект «резинки», из-за которой видна белая полоса */
+  touch-action: none !important;
+  
+  /* Убираем отступы, если они были */
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* 2. Если внутри #app.content все же есть микро-скролл, 
-      который вызывает полосу — блокируем его */
+/* 2. Убираем причину появления полосы — лишние пиксели */
+/* В overrides.css есть секция «страхующий отступ снизу». 
+   Если он активен, он выталкивает футер за пределы 100dvh. Обнуляем его: */
 #app.content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  /* Оставляем ваш calc, но гарантируем, что он не даст скролла */
   overflow: hidden !important;
-  /* Гарантируем, что блок не выше, чем задумано */
-  max-height: calc(100dvh - var(--header-h-actual) - var(--footer-h-actual)) !important;
 }
 
-/* 3. Фикс для iOS PWA: иногда они игнорируют overscroll-behavior */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    /* Жесткая блокировка сдвига в некоторых версиях Safari */
-    position: sticky; 
-    top: 0;
-  }
+/* 3. Маскировка (визуальный трюк) */
+/* Если вдруг микро-зазор все равно возникнет на системном уровне, 
+   сделаем фон html таким же, как фон вашего приложения/футера */
+html {
+  background-color: var(--bg-main) !important;
 }
