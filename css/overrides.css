@@ -700,3 +700,12 @@ html[data-theme="dark"]
 
   }
 }
+
+
+.actions-row-bottom .action-btn--stub{
+  opacity:.7;
+  cursor:default;
+}
+.actions-row-bottom .action-btn--stub:active{
+  transform:none;
+}
