@@ -33,7 +33,7 @@
  * ---------------------------------------------------------- */
 @media (max-height: 720px) {
   #app.content {
-    padding-bottom: calc(var(--footer-h-actual, 60px) + 18px);
+    padding-bottom: calc(var(--footer-h-actual, 60px) + 0px);
   }
 }
 
