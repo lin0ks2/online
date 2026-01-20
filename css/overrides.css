@@ -33,7 +33,7 @@
  * ---------------------------------------------------------- */
 @media (max-height: 720px) {
   #app.content {
-    padding-bottom: calc(var(--footer-h-actual, 60px) + 0px);
+    padding-bottom: calc(var(--footer-h-actual, 60px) + 18px);
   }
 }
 
@@ -590,49 +590,4 @@ html[data-theme="dark"] .mm-prefs-wrap > *{
 html[data-theme="dark"] 
 .menu-item:has(+ .mm-prefs-wrap){
   border-bottom: none !important;
-}
-
-/* ==========================================================
- * ФИНАЛЬНЫЙ ВАРЯНТ: БЛОКИРОВКА СКРОЛЛА БЕЗ СДВИГА КНОПОК
- * ========================================================== */
-
-/* 1. Блокируем "резинку" и красим подложку в цвет темы */
-html {
-  /* Это уберет БЕЛЫЙ цвет, даже если экран дернется */
-  background-color: var(--bg-main) !important;
-  height: 100dvh !important;
-  overflow: hidden !important;
-  /* Запрещаем браузеру тянуть страницу */
-  overscroll-behavior: none !important;
-}
-
-body {
-  height: 100dvh !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  position: relative; /* Возвращаем стандартное позиционирование */
-  overscroll-behavior: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* 2. Очищаем контент от всех "прыгающих" отступов */
-#app.content {
-  /* Строго по вашим переменным */
-  height: calc(100dvh - var(--header-h-actual) - var(--footer-h-actual)) !important;
-  overflow: hidden !important;
-  /* Убираем 12px из вашего медиа-запроса, которые толкали кнопки */
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* 3. Футер: возвращаем в нативное состояние */
-footer, .footer, [class*="footer"] {
-  /* Ставим 0px как запасной вариант, чтобы ничего не "пухло" */
-  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
-  
-  /* Убираем лишние внешние отступы */
-  margin: 0 !important;
-  
-  /* Гарантируем, что футер не будет выше, чем переменная --footer-h-actual */
-  box-sizing: border-box !important;
 }
