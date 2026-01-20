@@ -592,41 +592,37 @@ html[data-theme="dark"]
   border-bottom: none !important;
 }
 
-/* ==========================================================
- * ФИКС БЕЛОЙ ПОЛОСЫ И БЛОКИРОВКА СКРОЛЛА (PATCH)
- * ========================================================== */
-
-/* 1. Запрещаем всему документу скроллиться и "оттягиваться" */
-html, body {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100dvh;
-  /* Убираем эффект резинового скролла */
-  overscroll-behavior: none; 
-  /* Красим подложку в цвет фона темы, чтобы даже при лаге не было белого */
-  background-color: var(--bg-main, #ffffff);
+/* 1. Убираем эффект «резинки» и системный фон */
+html {
+  /* Запрещаем оттягивание страницы (bounce effect) */
+  overscroll-behavior: none !important;
+  /* Красим фон html в цвет вашей темы, чтобы полоса не была белой */
+  background-color: var(--bg-main) !important;
 }
 
-/* 2. Гарантируем, что корневой контейнер занимает строго экран */
-#app {
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+body {
+  /* Запрещаем прокрутку на уровне body */
+  overflow: hidden !important;
+  /* Оставляем высоту как есть, но страхуем от переполнения */
+  max-height: 100dvh !important;
+  /* Убираем bounce на уровне body */
+  overscroll-behavior: none !important;
+  /* Важно: НЕ меняем position на fixed, чтобы не прыгали кнопки */
 }
 
-/* 3. Если кнопки прыгали, сбрасываем лишние отступы, 
-   которые могли суммироваться при смене позиционирования */
-footer, .footer {
-  /* Оставляем только системный отступ, если он не задан в родителях */
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  flex-shrink: 0;
-}
-
-/* 4. Контент внутри должен занимать всё место, но не толкать футер */
+/* 2. Если внутри #app.content все же есть микро-скролл, 
+      который вызывает полосу — блокируем его */
 #app.content {
-  flex: 1;
-  overflow: hidden; /* или auto, если внутри всё же нужен скролл списка */
-  height: auto !important; /* перебиваем calc из начала файла для гибкости flex */
+  overflow: hidden !important;
+  /* Гарантируем, что блок не выше, чем задумано */
+  max-height: calc(100dvh - var(--header-h-actual) - var(--footer-h-actual)) !important;
+}
+
+/* 3. Фикс для iOS PWA: иногда они игнорируют overscroll-behavior */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    /* Жесткая блокировка сдвига в некоторых версиях Safari */
+    position: sticky; 
+    top: 0;
+  }
 }
