@@ -668,7 +668,7 @@ html[data-theme="dark"]
   font-size: calc(20px * var(--oc-scale)) !important;
 }
 
-/* === New prefs blocks (already in overrides.css) — scale them too === */
+/* === New prefs blocks (already in overrides.css) — scale them too ===
 .oc-panel .mm-prefs-title{
   font-size: calc(15px * var(--oc-scale)) !important;
 }
@@ -680,3 +680,4 @@ html[data-theme="dark"]
   width: calc(20px * var(--oc-scale)) !important;
   height: calc(20px * var(--oc-scale)) !important;
 }
+*/
