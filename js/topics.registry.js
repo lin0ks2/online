@@ -86,6 +86,25 @@
     'care':'health',
   });
 
+  // Tags that are too abstract/linguistic to be meaningful in a user-facing "Topics" filter.
+  // We intentionally DO NOT map them to any canonical topic to avoid noisy matches.
+  const BLACKLIST = new Set([
+    // semantic/logic tags often used as meta-categories
+    'abstract','general','common','misc','other','miscellaneous','unknown',
+    'addition','absence','degree','quantity','quality','comparison','contrast','cause','condition','certainty','negation','relation','purpose','reason',
+    'process','state','attribute','intensity','measure','part','whole','direction','location',
+    // overly broad UI/ops tags
+    'update','updates','system','meta','test',
+  ]);
+
+  // If a tag matches these patterns, treat it as non-user-facing and ignore it.
+  const BLACKLIST_RX = [
+    // Pure parts of speech / grammar meta-categories (too broad as a "topic")
+    /^(noun|verb|adjective|adverb|pronoun|preposition|conjunction|article|determiner|interjection|numeral|particle)s?$/,
+    // very generic property tags
+    /^(easy|hard|basic|advanced)$/,
+  ];
+
   function _normKey(s){
     return String(s || '')
       .trim()
@@ -121,13 +140,13 @@
     if (/(city|town|street|address|station)/.test(key)) return 'city';
 
     // work
-    if (/(work|job|office|company|business|admin|administration|bureaucracy|career|customer care)/.test(key)) return 'work';
+    if (/(work|job|office|company|business|admin|administration|bureaucracy|career)/.test(key)) return 'work';
 
     // study / grammar / language
     if (/(study|school|class|classroom|lesson|alphabet|grammar|adverb|conjunction|pronoun|noun|verb|article|tense)/.test(key)) return 'study';
 
     // health
-    if (/(health|body|care|doctor|medicine|ill|disease|sport|fitness)/.test(key)) return 'health';
+    if (/(health|body|care|doctor|medicine|ill|disease)/.test(key)) return 'health';
 
     // time
     if (/(time|day|week|month|year|daily|routine)/.test(key)) return 'time';
@@ -136,7 +155,7 @@
     if (/(number|numbers|count|math|percent|quarter|half)/.test(key)) return 'numbers';
 
     // communication
-    if (/(communication|speak|talk|say|greet|greeting|colloquial|dialog|phone|email|message)/.test(key)) return 'communication';
+    if (/(communication|customer care|support|speak|talk|say|greet|greeting|colloquial|dialog|phone|email|message)/.test(key)) return 'communication';
 
     // nature
     if (/(nature|animal|animals|biology|chemistry|plant|tree|river|sea|mountain|weather)/.test(key)) return 'nature';
@@ -154,6 +173,11 @@
     const direct = _normKey(raw);
     if (!direct) return null;
     if (CANON_IDS[direct]) return direct;
+
+    // Explicit aliases
+    // Ignore non-user-facing tags
+    if (BLACKLIST.has(direct)) return null;
+    for (const rx of BLACKLIST_RX) { if (rx.test(direct)) return null; }
 
     // Explicit aliases
     if (ALIASES[direct]) return ALIASES[direct];
