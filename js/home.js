@@ -1179,7 +1179,7 @@ function activeDeckKey() {
           </div>
 
           <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
-            <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
+            <!-- <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4> -->
             <div class="filters-list" id="filtersTopicsList"></div>
           </div>
 
