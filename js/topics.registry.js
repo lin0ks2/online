@@ -1,7 +1,7 @@
 /* ==========================================================
  * Проект: MOYAMOVA
  * Файл: topics.registry.js
- * Назначение: Нормализация тем (topics) + алиасы + UI label helpers
+ * Назначение: Нормализация тем (topics) + aliases + UI labels
  * Версия: 1.0
  * Обновлено: 2026-01-22
  * ========================================================== */
@@ -12,63 +12,41 @@
   const A = (window.App = window.App || {});
   A.Topics = A.Topics || {};
 
-  // Минимальный набор алиасов: добавляем по мере выявления дублей в UI.
-  const ALIASES = Object.freeze({
-    // format variants are handled by normalize(); semantic aliases go here:
-    everyday_life: 'daily_life',
-  });
+  // Minimal, safe aliases for semantic merges.
+  // Add items gradually when you see obvious duplicates in UI.
+  const ALIASES = {
+    // everyday_life: 'daily_life',
+  };
 
-  function _safeStr(x) {
-    return String(x == null ? '' : x);
+  function _toString(v){
+    try { return String(v == null ? '' : v); } catch(_){ return ''; }
   }
 
-  /**
-   * Приводит "сырую" тему к каноническому id:
-   * - trim
-   * - lower
-   * - пробелы/дефисы -> "_"
-   * - удаление лишних символов
-   * - схлопывание "__"
-   */
-  function normalizeTopic(raw) {
-    let s = _safeStr(raw).trim();
+  function normalize(raw){
+    let s = _toString(raw).trim();
     if (!s) return '';
+    // unify separators
+    s = s.replace(/[\s\-]+/g, '_');
+    // drop non word chars except underscore
+    s = s.replace(/[^a-zA-Z0-9_]/g, '');
     s = s.toLowerCase();
-
-    // unify separators to underscore
-    s = s.replace(/[-\s]+/g, '_');
-
-    // drop characters that are unsafe for ids
-    s = s.replace(/[^a-z0-9_]/g, '');
-
-    // collapse underscores
-    s = s.replace(/_+/g, '_').replace(/^_+|_+$/g, '');
-
+    s = s.replace(/_+/g, '_').replace(/^_+|_+$/g,'');
     if (!s) return '';
-    // apply semantic aliasing
-    if (ALIASES[s]) s = ALIASES[s];
+    if (Object.prototype.hasOwnProperty.call(ALIASES, s)) return ALIASES[s];
     return s;
   }
 
-  function humanizeTopicId(topicId) {
-    const s = _safeStr(topicId).trim();
-    if (!s) return '';
-    // daily_life -> Daily life
-    const t = s.replace(/_+/g, ' ');
-    return t.charAt(0).toUpperCase() + t.slice(1);
-  }
-
-  /**
-   * Возвращает label для UI. Сейчас — humanize по id.
-   * В будущем сюда можно добавить локализованные названия (RU/UK) по topicId.
-   */
-  function label(topicId /*, uiLang */) {
-    return humanizeTopicId(topicId);
+  // Default label: humanize id.
+  // Later можно заменить на полноценную локализацию topicId → {ru,uk,de}.
+  function label(topicId, uiLang){
+    const id = normalize(topicId);
+    if (!id) return '';
+    // humanize: daily_life -> Daily life
+    const txt = id.replace(/_/g,' ');
+    return txt.charAt(0).toUpperCase() + txt.slice(1);
   }
 
   A.Topics.ALIASES = ALIASES;
-  A.Topics.normalize = normalizeTopic;
-  A.Topics.humanize = humanizeTopicId;
+  A.Topics.normalize = normalize;
   A.Topics.label = label;
-
 })();
