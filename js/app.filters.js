@@ -198,27 +198,45 @@
     const lang = String(studyLang || '').toLowerCase();
     if (!lang) return [];
     if (_cache.topicsByStudyLang[lang]) return _cache.topicsByStudyLang[lang].slice();
-    const all = [];
-    const norm = (v) => (A.Topics && A.Topics.normalize) ? A.Topics.normalize(v) : String(v || '').trim().toLowerCase();
+
+    const counts = Object.create(null);
+    const norm = (v) => (A.Topics && A.Topics.normalize)
+      ? A.Topics.normalize(v)
+      : String(v || '').trim().toLowerCase();
+
     try {
       const decks = (window.decks || {});
       for (const k in decks) {
         if (!Object.prototype.hasOwnProperty.call(decks, k)) continue;
-        const dk = String(k || '').toLowerCase();
-        if (!dk.startsWith(lang + '_')) continue;
-        const arr = decks[k] || [];
-        for (const w of arr) {
-          const tp = (w && w.topics) || (w && w.topic) || null;
+        const deck = decks[k];
+        if (!deck || String(deck.lang || '').toLowerCase() !== lang) continue;
+        const words = Array.isArray(deck.words) ? deck.words : [];
+        for (const w of words) {
+          if (!w) continue;
+          const tp = w.topics || w.topic || null;
           if (!tp) continue;
           const list = Array.isArray(tp) ? tp : [tp];
           for (const t of list) {
             const id = norm(t);
-            if (id) all.push(id);
+            if (!id) continue;
+            counts[id] = (counts[id] || 0) + 1;
           }
         }
       }
     } catch (_) {}
-    const res = uniq(all).sort();
+
+    // Prefer canonical order (16 topics) when registry provides it.
+    let res = [];
+    if (A.Topics && typeof A.Topics.order === 'function') {
+      const ordered = A.Topics.order();
+      for (const id of ordered) {
+        if (counts[id]) res.push(id);
+      }
+      // If nothing matched (e.g., topics not filled), fall back to empty list
+    } else {
+      res = Object.keys(counts).sort();
+    }
+
     _cache.topicsByStudyLang[lang] = res.slice();
     return res;
   }
