@@ -1,15 +1,26 @@
 /* ==========================================================
- * MOYAMOVA — ui.scroll.guard.js
- * iOS PWA/TWA: блокировка rubber-band overscroll ("белая полоса")
- * при сохранении прокрутки только внутри разрешённых скролл-контейнеров.
- * ========================================================== */
+   Проект: MOYAMOVA
+   Файл: ui.scroll.guard.js
+   Назначение: iOS PWA/TWA — блокировка rubber-band overscroll
+              с сохранением прокрутки только внутри разрешенных
+              скролл-контейнеров (карточки списков, бургер,
+              legal/guide страницы и т.п.).
+   Стратегия:
+     - В standalone режиме на iOS перехватываем touchmove.
+     - Разрешаем скролл только в контейнерах, которые:
+         a) явно помечены data-scroll-allow="1" ИЛИ
+         b) совпадают с allowSelectors.
+     - И дополнительно: скролл разрешается только если
+       контейнер реально может скроллиться в направлении жеста
+       (иначе гасим, чтобы не было bounce и белой полосы).
+   ========================================================== */
 
 (function(){
   'use strict';
 
   var CFG = {
+    // Контейнеры, где скролл допустим: словари/списки, бургер, контентные страницы, модалки.
     allowSelectors: [
-      '[data-scroll-allow="1"]',
       '.dicts-scroll',
       '.oc-body',
       '.legal-modal-body',
@@ -17,132 +28,84 @@
       '.mm-modal-body',
       '.page-scroll',
       '.guide-scroll',
-      '.donate-scroll'
+      '.donate-scroll',
+      '[data-scroll-allow="1"]'
     ].join(','),
-    deltaThresholdPx: 2,
-    edgeEpsilon: 1
+    // Порог, чтобы не ловить шум.
+    deltaThresholdPx: 2
   };
 
   function isIOS(){
-    // iPadOS may spoof Mac; we keep your current scope (iPhone focus)
-    // and also handle iPadOS "MacIntel" + touch.
-    var ua = navigator.userAgent || '';
-    var isiDevice = /iP(hone|od|ad)/.test(ua);
-    var isIpadOS = (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    return isiDevice || isIpadOS;
+    return /iP(hone|od|ad)/.test(navigator.userAgent || '');
   }
 
   function isStandalone(){
     try {
-      var dm = !!(window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
-      var ns = (navigator.standalone === true);
-      var rm = '';
-      try { rm = (document.documentElement && (document.documentElement.getAttribute('data-runmode') || '')) || ''; } catch(_){ rm=''; }
-      rm = String(rm || '').toLowerCase();
-      var rmOk = (rm === 'pwa' || rm === 'twa' || rm === 'standalone' || rm === 'app');
-      return dm || ns || rmOk;
+      return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+             (navigator.standalone === true) ||
+             (document.documentElement && document.documentElement.getAttribute('data-runmode') === 'pwa');
     } catch(e){
       return false;
     }
   }
 
   function shouldEnable(){
+    // Только iOS + standalone/PWA/TWA + touch.
     if (!isIOS()) return false;
     if (!isStandalone()) return false;
-    // touch capable
-    if (!('ontouchstart' in window) && !(navigator.maxTouchPoints > 0)) return false;
+    if (!('ontouchstart' in window)) return false;
     return true;
   }
 
-  function hasScrollableOverflow(el){
-    if (!el || el === document || el === document.documentElement || el === document.body) return false;
-    var cs;
-    try { cs = window.getComputedStyle(el); } catch(e){ cs = null; }
-    if (!cs) return false;
-    var oy = (cs.overflowY || cs.overflow || '');
-    // treat "overlay" as scroll as well (legacy)
-    return (oy === 'auto' || oy === 'scroll' || oy === 'overlay');
-  }
-
-  /**
-   * Determine which element should be treated as the active scroll container.
-   * Priority:
-   *  1) explicitly allowed containers (data-scroll-allow or known classes)
-   *  2) nearest ancestor that is actually scrollable (overflow-y auto/scroll + scrollHeight>clientHeight)
-   */
-  function getActiveScroller(startEl){
-    if (!startEl) return null;
-
-    // 1) explicit allow list
-    try {
-      if (startEl.closest) {
-        var hit = startEl.closest(CFG.allowSelectors);
-        if (hit) return hit;
-      }
-    } catch(_){ }
-
-    // 2) dynamic scrollable ancestor discovery
-    var el = startEl;
-    while (el && el !== document.documentElement && el !== document.body) {
-      if (hasScrollableOverflow(el) && (el.scrollHeight - el.clientHeight) > 1) {
-        return el;
-      }
+  function closestAllowed(el){
+    if (!el || el === document) return null;
+    if (el.closest) {
+      var hit = el.closest(CFG.allowSelectors);
+      return hit || null;
+    }
+    // Fallback (очень старые движки) — ручной проход.
+    while (el && el !== document.documentElement) {
+      try {
+        if (el.matches && el.matches(CFG.allowSelectors)) return el;
+      } catch(e){}
       el = el.parentElement;
     }
     return null;
   }
 
-  function getMaxTop(el){
-    return Math.max(0, (el.scrollHeight - el.clientHeight));
-  }
-
-  function isScrollable(el){
-    return !!el && getMaxTop(el) > 0;
-  }
-
-  function nudgeFromEdges(el){
-    if (!el) return;
-    if (!isScrollable(el)) return;
-    var maxTop = getMaxTop(el);
-    if (el.scrollTop <= 0) {
-      el.scrollTop = CFG.edgeEpsilon;
-    } else if (el.scrollTop >= maxTop) {
-      el.scrollTop = Math.max(0, maxTop - CFG.edgeEpsilon);
-    }
+  function canScroll(el){
+    // Есть ли вообще скролл.
+    return el && (el.scrollHeight - el.clientHeight) > 1;
   }
 
   function canScrollInDirection(el, deltaY){
+    // deltaY > 0: палец вниз => контент должен идти вверх => scrollTop должен быть > 0
+    // deltaY < 0: палец вверх => контент вниз => должна быть возможность увеличить scrollTop
     if (!el) return false;
-    var maxTop = getMaxTop(el);
-    if (maxTop <= 0) return false;
-
     var top = el.scrollTop;
-
-    // deltaY > 0: палец вниз => контент вверх => top должен убывать => нужен top>0
+    var maxTop = el.scrollHeight - el.clientHeight;
+    if (maxTop < 1) return false;
     if (deltaY > 0) return top > 0;
-    // deltaY < 0: палец вверх => контент вниз => top должен расти => нужен top<max
-    if (deltaY < 0) return top < maxTop;
+    if (deltaY < 0) return top < (maxTop - 1);
     return false;
   }
 
+  // Активный жест
   var touchStartY = 0;
+
+  function isInteractiveTarget(el){
+    if (!el || !el.closest) return false;
+    return !!el.closest('a,button,input,select,textarea,label,[role="button"],[role="link"],.filters-btn,.action-btn');
+  }
   var touchActive = false;
-  var activeScroller = null;
 
   function onTouchStart(e){
     if (!e || !e.touches || e.touches.length !== 1) {
       touchActive = false;
-      activeScroller = null;
       return;
     }
     touchActive = true;
     touchStartY = e.touches[0].clientY;
-    activeScroller = getActiveScroller(e.target);
-
-    // Nudge early to avoid iOS entering overscroll mode at edges.
-    if (activeScroller) {
-      nudgeFromEdges(activeScroller);
-    }
   }
 
   function onTouchMove(e){
@@ -153,53 +116,55 @@
     var deltaY = y - touchStartY;
     if (Math.abs(deltaY) < CFG.deltaThresholdPx) return;
 
-    var scroller = activeScroller || getActiveScroller(e.target);
+    var target = e.target;
+    // Не гасим touchmove на интерактивных элементах: иначе тап может не породить click
+    // (на некоторых устройствах микросдвиг пальца вызывает touchmove > threshold).
+    if (isInteractiveTarget(target)) return;
 
-    // Вне разрешённых зон — блокируем всегда.
-    if (!scroller) {
+    var allowed = closestAllowed(target);
+
+    // Если не находим разрешенного контейнера — гасим всегда.
+    if (!allowed) {
       e.preventDefault();
       return;
     }
 
-    // Если скролл невозможен — блокируем, чтобы не было bounce.
-    if (!isScrollable(scroller)) {
+    // Если контейнер вообще не скроллится — гасим, чтобы не было bounce.
+    if (!canScroll(allowed)) {
       e.preventDefault();
       return;
     }
 
-    // На границах — блокируем, чтобы не было rubber-band.
-    if (!canScrollInDirection(scroller, deltaY)) {
+    // Если контейнер у края и жест тянет дальше — гасим bounce.
+    if (!canScrollInDirection(allowed, deltaY)) {
       e.preventDefault();
       return;
     }
 
-    // Иначе — даём нативно скроллить внутри scroller.
+    // Иначе — разрешаем, скролл пойдет внутри allowed.
   }
 
   function onTouchEnd(){
     touchActive = false;
-    activeScroller = null;
   }
 
   function init(){
     if (!shouldEnable()) return;
-
-    // capture=true важно, чтобы попасть до нативного старта скролла.
-    document.addEventListener('touchstart', onTouchStart, { passive: true,  capture: true });
-    document.addEventListener('touchmove',  onTouchMove,  { passive: false, capture: true });
-    document.addEventListener('touchend',   onTouchEnd,   { passive: true,  capture: true });
-    document.addEventListener('touchcancel',onTouchEnd,   { passive: true,  capture: true });
-
-    // Маркер для быстрого самопроверочного CSS (не виден пользователю).
-    try { document.documentElement.setAttribute('data-scroll-guard', 'on'); } catch(_){ }
+    // Важно: passive:false, иначе preventDefault не сработает.
+    document.addEventListener('touchstart', onTouchStart, { passive: true });
+    document.addEventListener('touchmove', onTouchMove, { passive: false });
+    document.addEventListener('touchend', onTouchEnd, { passive: true });
+    document.addEventListener('touchcancel', onTouchEnd, { passive: true });
   }
 
+  // Авто-инициализация
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
 
+  // Экспорт для отладки/настройки (если потребуется)
   window.MMScrollGuard = {
     init: init,
     cfg: CFG
