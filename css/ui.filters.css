@@ -385,3 +385,10 @@ body.theme-light .filters-item input:checked + span {
   opacity:.8;
   line-height:1.4;
 }
+
+
+/* Topics section: can be disabled when no topics are available */
+.filters-topics-section.is-disabled {
+  opacity: .55;
+  pointer-events: none;
+}
