@@ -284,21 +284,30 @@ function setUiLang(code){
 
   function __rememberLastValidFilterState(studyLang){
     try {
-      if (A.Filters && typeof A.Filters.getState === 'function') {
-        const st = A.Filters.getState(studyLang || 'xx');
-        __lastValidFilterStateByStudyLang[String(studyLang||'xx').toLowerCase()] = {
-          enabled: !!(st && st.enabled),
-          selected: (st && st.selected) ? st.selected.slice() : []
-        };
-      }
+      const lang = String(studyLang||'xx').toLowerCase();
+      const stL = (A.Filters && typeof A.Filters.getState === 'function') ? A.Filters.getState(studyLang || 'xx') : null;
+      const stT = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang || 'xx') : null;
+      __lastValidFilterStateByStudyLang[lang] = {
+        enabled: !!(stL && stL.enabled),
+        selected: (stL && stL.selected) ? stL.selected.slice() : [],
+        topicsEnabled: !!(stT && stT.enabled),
+        topicsSelected: (stT && stT.selected) ? stT.selected.slice() : []
+      };
     } catch(_){}
   }
 
   function __restoreFilterState(studyLang, st){
     try {
-      if (!A.Filters || typeof A.Filters.setLevels !== 'function') return;
-      const sel = (st && st.selected) ? st.selected.slice() : [];
-      A.Filters.setLevels(studyLang, sel);
+      if (A.Filters && typeof A.Filters.setLevels === 'function') {
+        const sel = (st && st.selected) ? st.selected.slice() : [];
+        A.Filters.setLevels(studyLang, sel);
+      }
+    } catch(_){}
+    try {
+      if (A.Filters && typeof A.Filters.setTopics === 'function') {
+        const selT = (st && st.topicsSelected) ? st.topicsSelected.slice() : [];
+        A.Filters.setTopics(studyLang, selT);
+      }
     } catch(_){}
   }
 
@@ -340,11 +349,21 @@ function setUiLang(code){
     const sumEl = document.getElementById('filtersSummary');
     if (!sumEl) return;
     try {
-      const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
-      if (!st || !st.enabled || !st.selected || !st.selected.length) {
+      const stL = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
+      const stT = (A.Filters && A.Filters.getTopicsState) ? A.Filters.getTopicsState(studyLang) : { enabled:false, selected:[] };
+
+      const parts = [];
+      if (stL && stL.enabled && stL.selected && stL.selected.length) parts.push(stL.selected.join(', '));
+      if (stT && stT.enabled && stT.selected && stT.selected.length) {
+        const uiLang = (window.I18N_getLang ? window.I18N_getLang() : 'ru');
+        const labels = stT.selected.map(tid => (A.Topics && typeof A.Topics.label === 'function') ? A.Topics.label(tid, uiLang) : String(tid));
+        parts.push(labels.join(', '));
+      }
+
+      if (!parts.length) {
         sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
       } else {
-        sumEl.textContent = st.selected.join(', ');
+        sumEl.textContent = parts.join(' • ');
       }
     } catch(_){
       sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
@@ -389,10 +408,6 @@ function setUiLang(code){
         if (t && t.closest) {
           const allow = t.closest(
             '.oc-body,' +
-            '#setsViewport,' +
-            '#hintsBody,' +
-            '.sets-viewport,' +
-            '.hints-body,' +
             '.dicts-scroll,' +
             '#filtersSheet,' +
             '#filtersOverlay,' +
@@ -554,7 +569,72 @@ function setUiLang(code){
       list.appendChild(row);
     }
 
-    overlay.classList.remove('filters-hidden');
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    // Topics list (enabled only when there are topics in the current studyLang)
+    try {
+      const topicsSection = document.getElementById('filtersTopicsSection');
+      const topicsList = document.getElementById('filtersTopicsList');
+      if (topicsList) {
+        const uiLang = (window.I18N_getLang ? window.I18N_getLang() : 'ru');
+
+        let stT = null;
+        try {
+          stT = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang) : null;
+        } catch(_){ stT = null; }
+        const selectedT = new Set((stT && stT.selected) ? stT.selected : []);
+
+        let topics = [];
+        try {
+          if (A.Filters && typeof A.Filters.collectTopicsForStudyLang === 'function') topics = A.Filters.collectTopicsForStudyLang(studyLang) || [];
+        } catch(_){ topics = []; }
+        if (!topics.length) {
+          try { topics = (A.Filters && typeof A.Filters.collectTopics === 'function') ? (A.Filters.collectTopics(getTrainableDeckForKey(key)) || []) : []; } catch(_){ topics = []; }
+        }
+
+        const enabled = !!topics.length;
+        if (topicsSection) {
+          topicsSection.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+          topicsSection.classList.toggle('is-disabled', !enabled);
+        }
+
+        topicsList.innerHTML = '';
+        if (enabled) {
+          for (const tid of topics) {
+            const id = 'ftc_' + String(tid).replace(/[^a-z0-9]/gi,'_');
+            const row = document.createElement('label');
+            row.className = 'filters-item';
+            const label = (A.Topics && typeof A.Topics.label === 'function') ? A.Topics.label(tid, uiLang) : String(tid);
+            row.innerHTML = '<input type="checkbox" id="'+id+'" data-topic="'+tid+'"><span>'+label+'</span>';
+            const cb = row.querySelector('input');
+            if (cb) cb.checked = selectedT.has(tid);
+            topicsList.appendChild(row);
+          }
+        }
+      }
+    } catch(_){ }
+overlay.classList.remove('filters-hidden');
     sheet.classList.remove('filters-hidden');
 
     try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
@@ -588,6 +668,30 @@ function setUiLang(code){
       .filter(Boolean);
   }
 
+
+  function __readDraftTopicsFromSheet(){
+    const list = document.getElementById('filtersTopicsList');
+    if (!list) return [];
+    return Array.from(list.querySelectorAll('input[type="checkbox"][data-topic]'))
+      .filter(cb => !!cb && cb.checked)
+      .map(cb => String(cb.getAttribute('data-topic') || '').trim())
+      .filter(Boolean);
+  }
+
+  function __syncTopicsSheetCheckboxes(studyLang){
+    const list = document.getElementById('filtersTopicsList');
+    if (!list) return;
+    let st = null;
+    try { st = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang || 'xx') : null; } catch(_){ st = null; }
+    const selected = new Set((st && st.selected) ? st.selected : []);
+    const cbs = Array.from(list.querySelectorAll('input[type="checkbox"][data-topic]'));
+    for (const cb of cbs){
+      const tid = String(cb.getAttribute('data-topic') || '').trim();
+      if (!tid) continue;
+      cb.checked = selected.has(tid);
+    }
+  }
+
   function __setFiltersHint(text){
     const el = document.getElementById('filtersHint');
     if (!el) return;
@@ -607,7 +711,7 @@ function setUiLang(code){
     btn.disabled = !enabled;
   }
 
-  function __validateDraftSelectionForKey(key, draftLevels){
+  function __validateDraftSelectionForKey(key, draftLevels, draftTopics){
     const studyLang = getStudyLangForKey(key) || 'xx';
     let prevState = null;
     try {
@@ -616,10 +720,15 @@ function setUiLang(code){
       }
     } catch(_){ prevState = null; }
 
-    // Temporarily apply draft levels to evaluate feasibility, then restore.
+    // Temporarily apply draft levels/topics to evaluate feasibility, then restore.
     try {
       if (A.Filters && typeof A.Filters.setLevels === 'function') {
         A.Filters.setLevels(studyLang, draftLevels || []);
+      }
+    } catch(_){}
+    try {
+      if (A.Filters && typeof A.Filters.setTopics === 'function') {
+        A.Filters.setTopics(studyLang, draftTopics || []);
       }
     } catch(_){}
 
@@ -642,9 +751,10 @@ function setUiLang(code){
     const studyLang = getStudyLangForKey(key) || 'xx';
 
     const draftLevels = __readDraftLevelsFromSheet();
+          const draftTopics = __readDraftTopicsFromSheet();
 
     // Validate without committing: if invalid, keep the sheet open and allow user to adjust.
-    const v = __validateDraftSelectionForKey(key, draftLevels);
+    const v = __validateDraftSelectionForKey(key, draftLevels, draftTopics);
     if (v && v.ok === false) {
       try { __setFiltersHint(v.msg || 'Недостаточно слов для тренировки. Добавьте ещё уровни.'); } catch(_){}
       try { __setApplyEnabled(false); } catch(_){}
@@ -652,10 +762,15 @@ function setUiLang(code){
       return;
     }
 
-    // Commit selected levels
+    // Commit selected levels + topics
     try {
       if (A.Filters && typeof A.Filters.setLevels === 'function') {
         A.Filters.setLevels(studyLang, draftLevels);
+      }
+    } catch(_){}
+    try {
+      if (A.Filters && typeof A.Filters.setTopics === 'function') {
+        A.Filters.setTopics(studyLang, draftTopics);
       }
     } catch(_){}
 
@@ -725,7 +840,8 @@ function setUiLang(code){
         try {
           const key = activeDeckKey();
           const draftLevels = __readDraftLevelsFromSheet();
-          const v = __validateDraftSelectionForKey(key, draftLevels);
+          const draftTopics = __readDraftTopicsFromSheet();
+          const v = __validateDraftSelectionForKey(key, draftLevels, draftTopics);
           if (v && v.ok === false) {
             __setApplyEnabled(false);
             __setFiltersHint(v.msg || 'Недостаточно слов для тренировки. Добавьте ещё уровни.');
@@ -767,6 +883,8 @@ function setUiLang(code){
           try {
             const list = document.getElementById('filtersLevelsList');
             if (list) list.querySelectorAll('input[type="checkbox"][data-level]').forEach(cb => { cb.checked = false; });
+            const tlist = document.getElementById('filtersTopicsList');
+            if (tlist) tlist.querySelectorAll('input[type="checkbox"][data-topic]').forEach(cb => { cb.checked = false; });
           } catch(_){}
           scheduleDraftValidation();
           return;
@@ -781,6 +899,9 @@ function setUiLang(code){
         const t = e.target;
         if (!t) return;
         if (t.matches && t.matches('#filtersLevelsList input[type="checkbox"][data-level]')) {
+          scheduleDraftValidation();
+        }
+        if (t.matches && t.matches('#filtersTopicsList input[type="checkbox"][data-topic]')) {
           scheduleDraftValidation();
         }
       } catch(_){}
@@ -1178,7 +1299,7 @@ function activeDeckKey() {
             <div class="filters-hint" id="filtersHint" aria-live="polite"></div>
           </div>
 
-          <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
+          <div class="filters-section filters-topics-section is-disabled" id="filtersTopicsSection" aria-disabled="true">
             <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
             <div class="filters-list" id="filtersTopicsList"></div>
           </div>

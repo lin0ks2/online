@@ -16,6 +16,7 @@
   const STORAGE_PREFIX_TOPICS = 'mm.filters.topics.'; // + <studyLang> (future)
   const _cache = {
     levelsByStudyLang: Object.create(null),
+    topicsByStudyLang: Object.create(null),
   };
 
   function safeJsonParse(s, fallback) {
@@ -47,7 +48,25 @@
     return s.replace(/\s+/g, '');
   }
 
-  function sortLevels(levels) {
+  
+  function normalizeTopic(topic) {
+    try {
+      if (A.Topics && typeof A.Topics.normalize === 'function') return A.Topics.normalize(topic);
+    } catch (_){ }
+    const s0 = String(topic || '').trim().toLowerCase();
+    if (!s0) return '';
+    return s0
+      .replace(/[-\s]+/g, '_')
+      .replace(/[^a-z0-9_]/g, '')
+      .replace(/_+/g, '_')
+      .replace(/^_+|_+$/g, '');
+  }
+
+  function sortTopics(topics) {
+    return (topics || []).slice().sort((a,b) => String(a||'').localeCompare(String(b||'')));
+  }
+
+function sortLevels(levels) {
     const order = { A: 1, B: 2, C: 3, D: 4 };
     return (levels || []).slice().sort((a, b) => {
       const A1 = String(a || '').toUpperCase();
@@ -81,6 +100,11 @@
     return STORAGE_PREFIX + String(studyLang || 'xx').toLowerCase();
   }
 
+  function storageKeyTopics(studyLang) {
+    return STORAGE_PREFIX_TOPICS + String(studyLang || 'xx').toLowerCase();
+  }
+
+
   function getState(studyLang) {
     const lang = String(studyLang || 'xx').toLowerCase();
     const k = storageKey(lang);
@@ -89,8 +113,31 @@
     const data = safeJsonParse(raw, null) || {};
     const enabled = !!data.enabled;
     const selected = uniq((data.selected || []).map(normalizeLevel)).filter(Boolean);
-    return { enabled, selected, studyLang: lang };
+    const t = getTopicsState(lang);
+    return { enabled, selected, studyLang: lang, topicsEnabled: !!(t && t.enabled), topicsSelected: (t && t.selected) ? t.selected.slice() : [] };
   }
+
+  function getTopicsState(studyLang) {
+    const lang = String(studyLang || 'xx').toLowerCase();
+    const k = storageKeyTopics(lang);
+    let raw = null;
+    try { raw = localStorage.getItem(k); } catch (_) {}
+    const data = safeJsonParse(raw, null) || {};
+    const enabled = !!data.enabled;
+    const selected = uniq((data.selected || []).map(normalizeTopic)).filter(Boolean);
+    const t = getTopicsState(lang);
+    return { enabled, selected, studyLang: lang, topicsEnabled: !!(t && t.enabled), topicsSelected: (t && t.selected) ? t.selected.slice() : [] };
+  }
+
+  function setTopics(studyLang, selectedTopics) {
+    const lang = String(studyLang || 'xx').toLowerCase();
+    const k = storageKeyTopics(lang);
+    const sel = uniq((selectedTopics || []).map(normalizeTopic)).filter(Boolean);
+    const enabled = !!sel.length;
+    const payload = JSON.stringify({ enabled, selected: sel });
+    try { localStorage.setItem(k, payload); } catch (_) {}
+  }
+
 
   function setState(studyLang, state) {
     const lang = String(studyLang || 'xx').toLowerCase();
@@ -169,7 +216,57 @@
     return out;
   }
 
-  function applyArticlesOnly(words) {
+  
+  function applyTopics(words, topicsState) {
+    const st = topicsState || { enabled: false, selected: [] };
+    if (!st.enabled || !st.selected || !st.selected.length) return (words || []).slice();
+    const allow = new Set((st.selected || []).map(normalizeTopic).filter(Boolean));
+    const out = [];
+    for (const w of (words || [])) {
+      const topics = Array.isArray(w && w.topics) ? w.topics : [];
+      let ok = false;
+      for (const t of topics) {
+        const tid = normalizeTopic(t);
+        if (tid && allow.has(tid)) { ok = true; break; }
+      }
+      if (ok) out.push(w);
+    }
+    return out;
+  }
+
+  function collectTopics(words) {
+    const all = [];
+    for (const w of (words || [])) {
+      const topics = Array.isArray(w && w.topics) ? w.topics : [];
+      for (const t of topics) {
+        const tid = normalizeTopic(t);
+        if (tid) all.push(tid);
+      }
+    }
+    return sortTopics(uniq(all));
+  }
+
+  function collectTopicsForStudyLang(studyLang) {
+    const lang = String(studyLang || 'xx').toLowerCase();
+    if (_cache.topicsByStudyLang[lang]) return _cache.topicsByStudyLang[lang].slice();
+
+    let keys = [];
+    try { keys = (A.Decks && typeof A.Decks.keysForLang === 'function') ? (A.Decks.keysForLang(lang) || []) : []; } catch (_) { keys = []; }
+
+    const all = [];
+    for (const k of keys) {
+      try {
+        const raw = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(k) || []) : [];
+        const ts = collectTopics(raw);
+        for (const t of ts) all.push(t);
+      } catch (_) {}
+    }
+    const res = sortTopics(uniq(all));
+    _cache.topicsByStudyLang[lang] = res.slice();
+    return res;
+  }
+
+function applyArticlesOnly(words) {
     const out = [];
     for (const w of (words || [])) {
       const raw = String((w && (w.word || w.term || w.de)) || '').trim().toLowerCase();
@@ -188,7 +285,10 @@
       raw = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
     } catch (_) { raw = []; }
 
+    const stTopics = getTopicsState(studyLang);
+
     let out = applyLevels(raw, st);
+    out = applyTopics(out, stTopics);
 
     if (mode === 'articles') {
       out = applyArticlesOnly(out);
@@ -204,13 +304,18 @@
 
   // Public API
   A.Filters.normalizeLevel = normalizeLevel;
+  A.Filters.normalizeTopic = normalizeTopic;
   A.Filters.getStudyLangFromDeckKey = getStudyLangFromDeckKey;
   A.Filters.getState = getState;
+  A.Filters.getTopicsState = getTopicsState;
   A.Filters.setLevels = setLevels;
+  A.Filters.setTopics = setTopics;
   A.Filters.reset = reset;
   A.Filters.resetAll = reset;
   A.Filters.collectLevels = collectLevels;
   A.Filters.collectLevelsForStudyLang = collectLevelsForStudyLang;
+  A.Filters.collectTopics = collectTopics;
+  A.Filters.collectTopicsForStudyLang = collectTopicsForStudyLang;
   A.Filters.getTrainableDeck = getTrainableDeck;
   A.Filters.summaryText = summaryText;
 
