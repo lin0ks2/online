@@ -468,7 +468,7 @@ function setUiLang(code){
     const overlay = document.getElementById('filtersOverlay');
     const sheet = document.getElementById('filtersSheet');
     const list = document.getElementById('filtersLevelsList');
-    if (!overlay || !sheet || !list) return;
+    if (!overlay || !sheet) return;
 
     // Keep the sheet above the fixed bottom navigation (tabbar/footer).
     // We do it here (on open) to support dynamic layouts and both themes.
@@ -524,7 +524,7 @@ function setUiLang(code){
       // Replace pills with an informational block (RU/UK only)
       const title = (window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны');
       const text  = (window.I18N_t ? window.I18N_t('filtersVirtualText')  : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.');
-      list.innerHTML = `
+      if (list) list.innerHTML = `
         <div class="filters-virtual-note">
           <div class="title">${title}</div>
           <div class="text">${text}</div>
@@ -558,7 +558,7 @@ function setUiLang(code){
       try { levels = (A.Filters && A.Filters.collectLevels) ? (A.Filters.collectLevels(getTrainableDeckForKey(key)) || []) : []; } catch(_){}
     }
 
-    list.innerHTML = '';
+    if (list) list.innerHTML = '';
     for (const lv of levels) {
       const id = 'flv_' + String(lv).replace(/[^a-z0-9]/gi,'_');
       const row = document.createElement('label');
@@ -566,7 +566,7 @@ function setUiLang(code){
       row.innerHTML = '<input type="checkbox" id="'+id+'" data-level="'+lv+'"><span>'+lv+'</span>';
       const cb = row.querySelector('input');
       if (cb) cb.checked = selected.has(lv);
-      list.appendChild(row);
+      if (list) list.appendChild(row);
     }
 
 
@@ -832,6 +832,23 @@ overlay.classList.remove('filters-hidden');
     // поэтому прямые onclick легко теряются.
     if (A.__filtersDelegationBound) return;
     A.__filtersDelegationBound = true;
+
+// Extra-safe: ensure filters open/close works even if DOM remounts or
+// delegation is affected by other global handlers.
+if (!A.__filtersDirectBound) {
+  A.__filtersDirectBound = true;
+  document.addEventListener('click', function(e){
+    try {
+      const t = e.target;
+      if (!t || !t.closest) return;
+      if (t.closest('#filtersBtn')) { openFiltersSheet(); scheduleDraftValidation(); return; }
+      if (t.closest('#filtersOverlay')) { closeFiltersSheet(); return; }
+      if (t.closest('#filtersApply')) { applyFiltersFromSheet(); return; }
+      if (t.closest('#filtersReset')) { resetFiltersFromSheet(); scheduleDraftValidation(); return; }
+    } catch(_){}
+  }, { capture: true, passive: true });
+}
+
 
     let __draftT = null;
     function scheduleDraftValidation(){
