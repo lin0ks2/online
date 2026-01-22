@@ -341,25 +341,41 @@ function setUiLang(code){
     const studyLang = getStudyLangForKey(key) || 'xx';
     const sumEl = document.getElementById('filtersSummary');
     if (!sumEl) return;
+
+    const uk = (typeof getUiLang === 'function') ? (getUiLang() === 'uk') : false;
+
     try {
       const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
-      if (!st || !st.enabled || !st.selected || !st.selected.length) {
-        sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
-      } else {
-        const tps = (A.Filters && typeof A.Filters.getTopicsState==='function') ? (A.Filters.getTopicsState(studyLang)||{}).selected || [] : [];
-        if (tps && tps.length) {
-          // show levels + topics (compact)
-          const lbl = tps.map(id => (window.App && App.Topics && App.Topics.label) ? App.Topics.label(id, getUiLang()) : id);
-          sumEl.textContent = st.selected.join(', ') + ' • ' + lbl.join(', ');
-        } else {
-          sumEl.textContent = st.selected.join(', ');
-        }
+      const levels = (st && st.enabled && Array.isArray(st.selected)) ? st.selected.filter(Boolean) : [];
+
+      const tps = (A.Filters && typeof A.Filters.getTopicsState === 'function')
+        ? ((A.Filters.getTopicsState(studyLang) || {}).selected || [])
+        : [];
+      const topics = Array.isArray(tps) ? tps.filter(Boolean) : [];
+
+      if (!levels.length && !topics.length) {
+        sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : (uk ? 'Без фільтра' : 'Без фильтра'));
+        return;
       }
+
+      if (levels.length && topics.length) {
+        const lbl = topics.map(id => (window.App && App.Topics && App.Topics.label) ? App.Topics.label(id, getUiLang()) : id);
+        sumEl.textContent = levels.join(', ') + ' • ' + lbl.join(', ');
+        return;
+      }
+
+      if (levels.length) {
+        sumEl.textContent = levels.join(', ');
+        return;
+      }
+
+      // topics only
+      const lbl = topics.map(id => (window.App && App.Topics && App.Topics.label) ? App.Topics.label(id, getUiLang()) : id);
+      sumEl.textContent = (uk ? 'Теми: ' : 'Темы: ') + lbl.join(', ');
     } catch(_){
-      sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
+      sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : (uk ? 'Без фільтра' : 'Без фильтра'));
     }
   }
-
   /* ---------------------------- Filters: scroll lock ---------------------------- */
   let __filtersScrollY = 0;
   let __filtersTouchMoveBound = false;
