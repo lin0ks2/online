@@ -284,30 +284,21 @@ function setUiLang(code){
 
   function __rememberLastValidFilterState(studyLang){
     try {
-      const lang = String(studyLang||'xx').toLowerCase();
-      const stL = (A.Filters && typeof A.Filters.getState === 'function') ? A.Filters.getState(studyLang || 'xx') : null;
-      const stT = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang || 'xx') : null;
-      __lastValidFilterStateByStudyLang[lang] = {
-        enabled: !!(stL && stL.enabled),
-        selected: (stL && stL.selected) ? stL.selected.slice() : [],
-        topicsEnabled: !!(stT && stT.enabled),
-        topicsSelected: (stT && stT.selected) ? stT.selected.slice() : []
-      };
+      if (A.Filters && typeof A.Filters.getState === 'function') {
+        const st = A.Filters.getState(studyLang || 'xx');
+        __lastValidFilterStateByStudyLang[String(studyLang||'xx').toLowerCase()] = {
+          enabled: !!(st && st.enabled),
+          selected: (st && st.selected) ? st.selected.slice() : []
+        };
+      }
     } catch(_){}
   }
 
   function __restoreFilterState(studyLang, st){
     try {
-      if (A.Filters && typeof A.Filters.setLevels === 'function') {
-        const sel = (st && st.selected) ? st.selected.slice() : [];
-        A.Filters.setLevels(studyLang, sel);
-      }
-    } catch(_){}
-    try {
-      if (A.Filters && typeof A.Filters.setTopics === 'function') {
-        const selT = (st && st.topicsSelected) ? st.topicsSelected.slice() : [];
-        A.Filters.setTopics(studyLang, selT);
-      }
+      if (!A.Filters || typeof A.Filters.setLevels !== 'function') return;
+      const sel = (st && st.selected) ? st.selected.slice() : [];
+      A.Filters.setLevels(studyLang, sel);
     } catch(_){}
   }
 
@@ -349,21 +340,11 @@ function setUiLang(code){
     const sumEl = document.getElementById('filtersSummary');
     if (!sumEl) return;
     try {
-      const stL = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
-      const stT = (A.Filters && A.Filters.getTopicsState) ? A.Filters.getTopicsState(studyLang) : { enabled:false, selected:[] };
-
-      const parts = [];
-      if (stL && stL.enabled && stL.selected && stL.selected.length) parts.push(stL.selected.join(', '));
-      if (stT && stT.enabled && stT.selected && stT.selected.length) {
-        const uiLang = (window.I18N_getLang ? window.I18N_getLang() : 'ru');
-        const labels = stT.selected.map(tid => (A.Topics && typeof A.Topics.label === 'function') ? A.Topics.label(tid, uiLang) : String(tid));
-        parts.push(labels.join(', '));
-      }
-
-      if (!parts.length) {
+      const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
+      if (!st || !st.enabled || !st.selected || !st.selected.length) {
         sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
       } else {
-        sumEl.textContent = parts.join(' • ');
+        sumEl.textContent = st.selected.join(', ');
       }
     } catch(_){
       sumEl.textContent = (window.I18N_t ? window.I18N_t('filtersNoFilter') : 'Без фильтра');
@@ -468,7 +449,7 @@ function setUiLang(code){
     const overlay = document.getElementById('filtersOverlay');
     const sheet = document.getElementById('filtersSheet');
     const list = document.getElementById('filtersLevelsList');
-    if (!overlay || !sheet) return;
+    if (!overlay || !sheet || !list) return;
 
     // Keep the sheet above the fixed bottom navigation (tabbar/footer).
     // We do it here (on open) to support dynamic layouts and both themes.
@@ -524,7 +505,7 @@ function setUiLang(code){
       // Replace pills with an informational block (RU/UK only)
       const title = (window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны');
       const text  = (window.I18N_t ? window.I18N_t('filtersVirtualText')  : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.');
-      if (list) list.innerHTML = `
+      list.innerHTML = `
         <div class="filters-virtual-note">
           <div class="title">${title}</div>
           <div class="text">${text}</div>
@@ -558,7 +539,7 @@ function setUiLang(code){
       try { levels = (A.Filters && A.Filters.collectLevels) ? (A.Filters.collectLevels(getTrainableDeckForKey(key)) || []) : []; } catch(_){}
     }
 
-    if (list) list.innerHTML = '';
+    list.innerHTML = '';
     for (const lv of levels) {
       const id = 'flv_' + String(lv).replace(/[^a-z0-9]/gi,'_');
       const row = document.createElement('label');
@@ -566,75 +547,10 @@ function setUiLang(code){
       row.innerHTML = '<input type="checkbox" id="'+id+'" data-level="'+lv+'"><span>'+lv+'</span>';
       const cb = row.querySelector('input');
       if (cb) cb.checked = selected.has(lv);
-      if (list) list.appendChild(row);
+      list.appendChild(row);
     }
 
-
-
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    // Topics list (enabled only when there are topics in the current studyLang)
-    try {
-      const topicsSection = document.getElementById('filtersTopicsSection');
-      const topicsList = document.getElementById('filtersTopicsList');
-      if (topicsList) {
-        const uiLang = (window.I18N_getLang ? window.I18N_getLang() : 'ru');
-
-        let stT = null;
-        try {
-          stT = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang) : null;
-        } catch(_){ stT = null; }
-        const selectedT = new Set((stT && stT.selected) ? stT.selected : []);
-
-        let topics = [];
-        try {
-          if (A.Filters && typeof A.Filters.collectTopicsForStudyLang === 'function') topics = A.Filters.collectTopicsForStudyLang(studyLang) || [];
-        } catch(_){ topics = []; }
-        if (!topics.length) {
-          try { topics = (A.Filters && typeof A.Filters.collectTopics === 'function') ? (A.Filters.collectTopics(getTrainableDeckForKey(key)) || []) : []; } catch(_){ topics = []; }
-        }
-
-        const enabled = !!topics.length;
-        if (topicsSection) {
-          topicsSection.setAttribute('aria-disabled', enabled ? 'false' : 'true');
-          topicsSection.classList.toggle('is-disabled', !enabled);
-        }
-
-        topicsList.innerHTML = '';
-        if (enabled) {
-          for (const tid of topics) {
-            const id = 'ftc_' + String(tid).replace(/[^a-z0-9]/gi,'_');
-            const row = document.createElement('label');
-            row.className = 'filters-item';
-            const label = (A.Topics && typeof A.Topics.label === 'function') ? A.Topics.label(tid, uiLang) : String(tid);
-            row.innerHTML = '<input type="checkbox" id="'+id+'" data-topic="'+tid+'"><span>'+label+'</span>';
-            const cb = row.querySelector('input');
-            if (cb) cb.checked = selectedT.has(tid);
-            topicsList.appendChild(row);
-          }
-        }
-      }
-    } catch(_){ }
-overlay.classList.remove('filters-hidden');
+    overlay.classList.remove('filters-hidden');
     sheet.classList.remove('filters-hidden');
 
     try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
@@ -668,30 +584,6 @@ overlay.classList.remove('filters-hidden');
       .filter(Boolean);
   }
 
-
-  function __readDraftTopicsFromSheet(){
-    const list = document.getElementById('filtersTopicsList');
-    if (!list) return [];
-    return Array.from(list.querySelectorAll('input[type="checkbox"][data-topic]'))
-      .filter(cb => !!cb && cb.checked)
-      .map(cb => String(cb.getAttribute('data-topic') || '').trim())
-      .filter(Boolean);
-  }
-
-  function __syncTopicsSheetCheckboxes(studyLang){
-    const list = document.getElementById('filtersTopicsList');
-    if (!list) return;
-    let st = null;
-    try { st = (A.Filters && typeof A.Filters.getTopicsState === 'function') ? A.Filters.getTopicsState(studyLang || 'xx') : null; } catch(_){ st = null; }
-    const selected = new Set((st && st.selected) ? st.selected : []);
-    const cbs = Array.from(list.querySelectorAll('input[type="checkbox"][data-topic]'));
-    for (const cb of cbs){
-      const tid = String(cb.getAttribute('data-topic') || '').trim();
-      if (!tid) continue;
-      cb.checked = selected.has(tid);
-    }
-  }
-
   function __setFiltersHint(text){
     const el = document.getElementById('filtersHint');
     if (!el) return;
@@ -711,7 +603,7 @@ overlay.classList.remove('filters-hidden');
     btn.disabled = !enabled;
   }
 
-  function __validateDraftSelectionForKey(key, draftLevels, draftTopics){
+  function __validateDraftSelectionForKey(key, draftLevels){
     const studyLang = getStudyLangForKey(key) || 'xx';
     let prevState = null;
     try {
@@ -720,15 +612,10 @@ overlay.classList.remove('filters-hidden');
       }
     } catch(_){ prevState = null; }
 
-    // Temporarily apply draft levels/topics to evaluate feasibility, then restore.
+    // Temporarily apply draft levels to evaluate feasibility, then restore.
     try {
       if (A.Filters && typeof A.Filters.setLevels === 'function') {
         A.Filters.setLevels(studyLang, draftLevels || []);
-      }
-    } catch(_){}
-    try {
-      if (A.Filters && typeof A.Filters.setTopics === 'function') {
-        A.Filters.setTopics(studyLang, draftTopics || []);
       }
     } catch(_){}
 
@@ -751,10 +638,9 @@ overlay.classList.remove('filters-hidden');
     const studyLang = getStudyLangForKey(key) || 'xx';
 
     const draftLevels = __readDraftLevelsFromSheet();
-          const draftTopics = __readDraftTopicsFromSheet();
 
     // Validate without committing: if invalid, keep the sheet open and allow user to adjust.
-    const v = __validateDraftSelectionForKey(key, draftLevels, draftTopics);
+    const v = __validateDraftSelectionForKey(key, draftLevels);
     if (v && v.ok === false) {
       try { __setFiltersHint(v.msg || 'Недостаточно слов для тренировки. Добавьте ещё уровни.'); } catch(_){}
       try { __setApplyEnabled(false); } catch(_){}
@@ -762,15 +648,10 @@ overlay.classList.remove('filters-hidden');
       return;
     }
 
-    // Commit selected levels + topics
+    // Commit selected levels
     try {
       if (A.Filters && typeof A.Filters.setLevels === 'function') {
         A.Filters.setLevels(studyLang, draftLevels);
-      }
-    } catch(_){}
-    try {
-      if (A.Filters && typeof A.Filters.setTopics === 'function') {
-        A.Filters.setTopics(studyLang, draftTopics);
       }
     } catch(_){}
 
@@ -833,23 +714,6 @@ overlay.classList.remove('filters-hidden');
     if (A.__filtersDelegationBound) return;
     A.__filtersDelegationBound = true;
 
-// Extra-safe: ensure filters open/close works even if DOM remounts or
-// delegation is affected by other global handlers.
-if (!A.__filtersDirectBound) {
-  A.__filtersDirectBound = true;
-  document.addEventListener('click', function(e){
-    try {
-      const t = e.target;
-      if (!t || !t.closest) return;
-      if (t.closest('#filtersBtn')) { openFiltersSheet(); scheduleDraftValidation(); return; }
-      if (t.closest('#filtersOverlay')) { closeFiltersSheet(); return; }
-      if (t.closest('#filtersApply')) { applyFiltersFromSheet(); return; }
-      if (t.closest('#filtersReset')) { resetFiltersFromSheet(); scheduleDraftValidation(); return; }
-    } catch(_){}
-  }, { capture: true, passive: true });
-}
-
-
     let __draftT = null;
     function scheduleDraftValidation(){
       try { if (__draftT) clearTimeout(__draftT); } catch(_){}
@@ -857,8 +721,7 @@ if (!A.__filtersDirectBound) {
         try {
           const key = activeDeckKey();
           const draftLevels = __readDraftLevelsFromSheet();
-          const draftTopics = __readDraftTopicsFromSheet();
-          const v = __validateDraftSelectionForKey(key, draftLevels, draftTopics);
+          const v = __validateDraftSelectionForKey(key, draftLevels);
           if (v && v.ok === false) {
             __setApplyEnabled(false);
             __setFiltersHint(v.msg || 'Недостаточно слов для тренировки. Добавьте ещё уровни.');
@@ -900,8 +763,6 @@ if (!A.__filtersDirectBound) {
           try {
             const list = document.getElementById('filtersLevelsList');
             if (list) list.querySelectorAll('input[type="checkbox"][data-level]').forEach(cb => { cb.checked = false; });
-            const tlist = document.getElementById('filtersTopicsList');
-            if (tlist) tlist.querySelectorAll('input[type="checkbox"][data-topic]').forEach(cb => { cb.checked = false; });
           } catch(_){}
           scheduleDraftValidation();
           return;
@@ -916,9 +777,6 @@ if (!A.__filtersDirectBound) {
         const t = e.target;
         if (!t) return;
         if (t.matches && t.matches('#filtersLevelsList input[type="checkbox"][data-level]')) {
-          scheduleDraftValidation();
-        }
-        if (t.matches && t.matches('#filtersTopicsList input[type="checkbox"][data-topic]')) {
           scheduleDraftValidation();
         }
       } catch(_){}
@@ -1316,7 +1174,7 @@ function activeDeckKey() {
             <div class="filters-hint" id="filtersHint" aria-live="polite"></div>
           </div>
 
-          <div class="filters-section filters-topics-section is-disabled" id="filtersTopicsSection" aria-disabled="true">
+          <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
             <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
             <div class="filters-list" id="filtersTopicsList"></div>
           </div>
