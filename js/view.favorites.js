@@ -105,7 +105,7 @@
             <div class="dicts-header">
               <h3>${title}</h3>
             </div>
-            <div class="dicts-scroll" data-scroll-allow="1" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">
+            <div class="dicts-scroll" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">
               <p style="margin:0;">${body}</p>
             </div>
           </section>
@@ -121,7 +121,7 @@
             <div class="dicts-header">
               <h3 style="margin:0;">${T.title}</h3>
             </div>
-            <div class="dicts-scroll" data-scroll-allow="1">
+            <div class="dicts-scroll">
               <p style="opacity:.7;margin:0;">${T.empty}</p>
             </div>
           </section>
@@ -186,7 +186,7 @@
             <h3>${T.title}</h3>
             <div id="fav-flags" class="dicts-flags"></div>
           </div>
-          <div class="dicts-scroll" data-scroll-allow="1">
+          <div class="dicts-scroll">
             <table class="dicts-table"><tbody>${rows}</tbody></table>
           </div>
           <div class="dicts-footer">

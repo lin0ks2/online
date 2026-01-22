@@ -16,7 +16,6 @@
   const STORAGE_PREFIX_TOPICS = 'mm.filters.topics.'; // + <studyLang> (future)
   const _cache = {
     levelsByStudyLang: Object.create(null),
-    topicsByStudyLang: Object.create(null),
   };
 
   function safeJsonParse(s, fallback) {
@@ -93,22 +92,6 @@
     return { enabled, selected, studyLang: lang };
   }
 
-  function getTopicsState(studyLang) {
-    const lang = String(studyLang || 'xx').toLowerCase();
-    const k = STORAGE_PREFIX_TOPICS + lang;
-    try {
-      const raw = localStorage.getItem(k);
-      const arr = raw ? JSON.parse(raw) : [];
-      const sel = uniq((arr || []).map((x) => (A.Topics && A.Topics.normalize ? A.Topics.normalize(x) : String(x || '').trim().toLowerCase())))
-        .filter(Boolean);
-      return { enabled: !!sel.length, selected: sel, studyLang: lang };
-    } catch (_) {
-      return { enabled: false, selected: [], studyLang: lang };
-    }
-  }
-
-
-
   function setState(studyLang, state) {
     const lang = String(studyLang || 'xx').toLowerCase();
     const k = storageKey(lang);
@@ -135,16 +118,6 @@
     }
     setState(studyLang, { enabled: true, selected: sel });
   }
-
-  function setTopics(studyLang, selectedTopics) {
-    const lang = String(studyLang || 'xx').toLowerCase();
-    const k = STORAGE_PREFIX_TOPICS + lang;
-    const norm = (v) => (A.Topics && A.Topics.normalize) ? A.Topics.normalize(v) : String(v || '').trim().toLowerCase();
-    const sel = uniq((selectedTopics || []).map(norm)).filter(Boolean);
-    try { localStorage.setItem(k, JSON.stringify(sel)); } catch (_) {}
-  }
-
-
 
   function collectLevels(words) {
     const out = [];
@@ -178,90 +151,6 @@
     _cache.levelsByStudyLang[lang] = res.slice();
     return res;
   }
-
-  function collectTopics(words) {
-    const out = [];
-    const norm = (v) => (A.Topics && A.Topics.normalize) ? A.Topics.normalize(v) : String(v || '').trim().toLowerCase();
-    for (const w of (words || [])) {
-      const arr = (w && w.topics) || (w && w.topic) || null;
-      if (!arr) continue;
-      const list = Array.isArray(arr) ? arr : [arr];
-      for (const t of list) {
-        const id = norm(t);
-        if (id) out.push(id);
-      }
-    }
-    return uniq(out).sort();
-  }
-
-  function collectTopicsForStudyLang(studyLang) {
-    const lang = String(studyLang || '').toLowerCase();
-    if (!lang) return [];
-    if (_cache.topicsByStudyLang[lang]) return _cache.topicsByStudyLang[lang].slice();
-
-    const counts = Object.create(null);
-    const norm = (v) => (A.Topics && A.Topics.normalize)
-      ? A.Topics.normalize(v)
-      : String(v || '').trim().toLowerCase();
-
-    try {
-      const decks = (window.decks || {});
-      for (const k in decks) {
-        if (!Object.prototype.hasOwnProperty.call(decks, k)) continue;
-        const deck = decks[k];
-        if (!deck || String(deck.lang || '').toLowerCase() !== lang) continue;
-        const words = Array.isArray(deck.words) ? deck.words : [];
-        for (const w of words) {
-          if (!w) continue;
-          const tp = w.topics || w.topic || null;
-          if (!tp) continue;
-          const list = Array.isArray(tp) ? tp : [tp];
-          for (const t of list) {
-            const id = norm(t);
-            if (!id) continue;
-            counts[id] = (counts[id] || 0) + 1;
-          }
-        }
-      }
-    } catch (_) {}
-
-    // Prefer canonical order (16 topics) when registry provides it.
-    let res = [];
-    if (A.Topics && typeof A.Topics.order === 'function') {
-      const ordered = A.Topics.order();
-      for (const id of ordered) {
-        if (counts[id]) res.push(id);
-      }
-      // If nothing matched (e.g., topics not filled), fall back to empty list
-    } else {
-      res = Object.keys(counts).sort();
-    }
-
-    _cache.topicsByStudyLang[lang] = res.slice();
-    return res;
-  }
-
-  function applyTopics(words, topicsState) {
-    const st = topicsState || { enabled:false, selected:[] };
-    if (!st.enabled || !st.selected || !st.selected.length) return words || [];
-    const wanted = new Set(st.selected);
-    const norm = (v) => (A.Topics && A.Topics.normalize) ? A.Topics.normalize(v) : String(v || '').trim().toLowerCase();
-    const out = [];
-    for (const w of (words || [])) {
-      const tp = (w && w.topics) || (w && w.topic) || null;
-      if (!tp) continue;
-      const list = Array.isArray(tp) ? tp : [tp];
-      let ok = false;
-      for (const t of list) {
-        const id = norm(t);
-        if (id && wanted.has(id)) { ok = true; break; }
-      }
-      if (ok) out.push(w);
-    }
-    return out;
-  }
-
-
 
   function applyLevels(words, state) {
     const st = state || { enabled: false, selected: [] };
@@ -301,12 +190,6 @@
 
     let out = applyLevels(raw, st);
 
-    // Topics (optional)
-    let tpSt = null;
-    try { tpSt = getTopicsState(studyLang || 'xx'); } catch (_) { tpSt = null; }
-    out = applyTopics(out, tpSt);
-
-
     if (mode === 'articles') {
       out = applyArticlesOnly(out);
     }
@@ -324,10 +207,6 @@
   A.Filters.getStudyLangFromDeckKey = getStudyLangFromDeckKey;
   A.Filters.getState = getState;
   A.Filters.setLevels = setLevels;
-  A.Filters.getTopicsState = getTopicsState;
-  A.Filters.setTopics = setTopics;
-  A.Filters.collectTopics = collectTopics;
-  A.Filters.collectTopicsForStudyLang = collectTopicsForStudyLang;
   A.Filters.reset = reset;
   A.Filters.resetAll = reset;
   A.Filters.collectLevels = collectLevels;
