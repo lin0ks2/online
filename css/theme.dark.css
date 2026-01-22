@@ -148,7 +148,6 @@ html[data-theme="dark"] .dicts-table tbody tr.is-selected > td{
 html[data-theme="dark"] .actions-row-bottom{
   background: var(--surface-2);
   border-top: 1px solid var(--divider);
-  border-top-color: transparent;
 }
 /* только цвет разделителей — ширину/стиль берём из базы */
 html[data-theme="dark"] .actions-row-bottom .action-btn:not(:last-child){
