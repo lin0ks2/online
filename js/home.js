@@ -193,21 +193,12 @@ function setUiLang(code){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
       return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
+        && /^([a-z]{2})_prepositions_trainer$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }
 
   function getTrainableDeckForKey(deckKey){
-    // Guard: if a prepositions virtual key is accidentally used while not in prepositions mode,
-    // fall back to the last real deck key to avoid "not enough words" loops.
-    try{
-      if (/^[a-z]{2}_prepositions$/i.test(String(deckKey||'').trim()) && !(A.settings && A.settings.trainerKind === 'prepositions')) {
-        const pref = (A.settings && A.settings.preferredReturnKey) ? String(A.settings.preferredReturnKey) : '';
-        if (pref && !/^[a-z]{2}_prepositions$/i.test(pref)) deckKey = pref;
-      }
-    }catch(_){}
-
     const isPrep = isPrepositionsModeForKey(deckKey);
     const mode = isPrep ? 'prepositions' : (isArticlesModeForKey(deckKey) ? 'articles' : 'words');
 
@@ -1569,7 +1560,7 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
-      && /^en_prepositions$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
+      && /^en_prepositions_trainer$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
       && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
 
 

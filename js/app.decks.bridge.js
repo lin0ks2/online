@@ -159,7 +159,7 @@
       if (isVirtual(key)) return resolveVirtualDeck(key) || [];
     }catch(_){}
 
-    // Prepositions trainer: virtual exercise decks like "en_prepositions"
+    // Prepositions trainer: virtual exercise decks like "en_prepositions_trainer"
     try{
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
         if (typeof A.Prepositions.getDeckForKey === 'function') return A.Prepositions.getDeckForKey(key) || [];
@@ -211,15 +211,11 @@
   };
 
     A.Decks.langOfKey = function(key){
-    // Prepositions trainer: detect by key format even if A.Prepositions module is not loaded yet
-    try{
-      var mm = String(key||'').trim().match(/^([a-z]{2})_prepositions$/i);
-      if (mm) return mm[1].toLowerCase();
-    }catch(_){}
-
     try{
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
         if (typeof A.Prepositions.langOfPrepositionsKey === 'function') return A.Prepositions.langOfPrepositionsKey(key);
+        var m = String(key||'').trim().match(/^([a-z]{2})_prepositions_trainer$/i);
+        return m ? m[1].toLowerCase() : null;
       }
     }catch(_){ }
     return _langOf ? _langOf(key) : null;

@@ -57,7 +57,7 @@ out.sort(function(a,b){
     if (!key) return [];
 
     // Virtual trainer deck: Prepositions (EN now; DE later).
-    // Key format: <lang>_prepositions (e.g., en_prepositions)
+    // Key format: <lang>_prepositions_trainer_trainer (e.g., en_prepositions_trainer_trainer_trainer)
     try {
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function'
           && A.Prepositions.isPrepositionsDeckKey(key)

@@ -13,11 +13,11 @@
   A.Prepositions = A.Prepositions || {};
 
   function isPrepositionsDeckKey(key){
-    return /^([a-z]{2})_prepositions$/i.test(String(key||'').trim());
+    return /^([a-z]{2})_prepositions_trainer$/i.test(String(key||'').trim());
   }
 
   function langOfPrepositionsKey(key){
-    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions$/i);
+    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions_trainer$/i);
     return m ? m[1].toLowerCase() : null;
   }
 

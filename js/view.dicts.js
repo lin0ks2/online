@@ -125,7 +125,10 @@
     }
 
     function renderTableForLang(lang){
-      const keysAll = byLang[lang] || [];
+      const keysAllRaw = byLang[lang] || [];
+      // Hide base prepositions POS decks in Dictionaries list (prepositions trainer has its own entry)
+      const keysAll = keysAllRaw.filter(k => !/^[a-z]{2}_prepositions$/i.test(String(k||'')));
+
 
       // --- helpers for LearnPunkt split (only for DE) ---
       const isLP = (k)=> String(k||'').toLowerCase().endsWith('_lernpunkt');
@@ -191,6 +194,12 @@
               </td>
             </tr>`;
         }).join('');
+      }
+
+      // Prepositions trainer entry: only for English (EN)
+      if (lang === 'en'){
+        const prepKey = 'en_prepositions_trainer';
+        if (!keysAll.includes(prepKey)) keysAll.push(prepKey);
       }
 
       // --- render ---
@@ -312,16 +321,6 @@
           } else {
             selectedKey = key;
             saveSelectedKeyScoped(key, 'any');
-            try{
-              if (!/_prepositions$/i.test(String(key||''))) {
-                const lg = (A.Decks && typeof A.Decks.langOfKey==='function') ? (A.Decks.langOfKey(key)||'') : '';
-                if (String(lg).toLowerCase()==='en') {
-                  A.settings = A.settings || {};
-                  A.settings.preferredReturnKey = key;
-                  if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
-                }
-              }
-            }catch(_){ }
             card.querySelectorAll('.dict-row').forEach(r=> r.classList.remove('is-selected'));
             row.classList.add('is-selected');
           }
@@ -377,28 +376,6 @@
         });
       }
 
-      function pickSafeWordsKey(){
-        // If current selection is a virtual prepositions row, fall back to the last real deck key (preferredReturnKey) or first EN deck.
-        try{
-          const cur = String(selectedKey||'');
-          if (!/_prepositions$/i.test(cur)) return cur;
-          const pref = (A.settings && A.settings.preferredReturnKey) ? String(A.settings.preferredReturnKey) : '';
-          if (pref && !/_prepositions$/i.test(pref) && (A.Decks && typeof A.Decks.resolveDeckByKey==='function')) {
-            const d = A.Decks.resolveDeckByKey(pref) || [];
-            if (d && d.length) return pref;
-          }
-          // find first EN non-prepositions deck
-          const all = (A.Decks && typeof A.Decks.keys==='function') ? (A.Decks.keys()||[]) : [];
-          for (let i=0;i<all.length;i++){
-            const k = String(all[i]||'');
-            if (/_prepositions$/i.test(k)) continue;
-            const lg = (A.Decks && typeof A.Decks.langOfKey==='function') ? (A.Decks.langOfKey(k)||'') : '';
-            if (String(lg).toLowerCase()==='en') return k;
-          }
-        }catch(_){}
-        return '';
-      }
-
       function updateArticlesButton(){
         try{
           const b = document.getElementById('dicts-articles');
@@ -416,8 +393,7 @@
           if (!b) return;
           // Показываем кнопку пока ТОЛЬКО для английского
           const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const isPrepsRow = /_prepositions$/i.test(String(selectedKey||''));
-          const show = (String(lang||'').toLowerCase() === 'en') && isPrepsRow;
+          const show = (String(lang||'').toLowerCase() === 'en');
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -435,7 +411,7 @@
             if (A.Analytics && typeof A.Analytics.track === 'function') {
               A.Analytics.track('dict_apply', {
                 kind: 'words',
-                deck_key: String((pickSafeWordsKey() || selectedKey) || ''),
+                deck_key: String(selectedKey || ''),
                 ui_lang: getUiLang(),
                 learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
               });
@@ -445,15 +421,11 @@
           try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){}
           try {
             A.settings = A.settings || {};
-            const targetKey = pickSafeWordsKey();
-            A.settings.lastDeckKey = targetKey || selectedKey;
-            // remember last real deck key for returning from virtual rows
-            try{ if (targetKey && !/_prepositions$/i.test(String(targetKey))) A.settings.preferredReturnKey = targetKey; }catch(_){ }
+            A.settings.lastDeckKey = selectedKey;
             if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
           } catch(_){}
           try {
-            const targetKey2 = pickSafeWordsKey();
-            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: (targetKey2 || selectedKey) } }));
+            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: selectedKey } }));
           } catch(_){}
           goHome();
         };
@@ -477,10 +449,7 @@
           try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){}
           try {
             A.settings = A.settings || {};
-            const targetKey = pickSafeWordsKey();
-            A.settings.lastDeckKey = targetKey || selectedKey;
-            // remember last real deck key for returning from virtual rows
-            try{ if (targetKey && !/_prepositions$/i.test(String(targetKey))) A.settings.preferredReturnKey = targetKey; }catch(_){ }
+            A.settings.lastDeckKey = selectedKey;
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){}
           try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
@@ -503,22 +472,18 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
+          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions_trainer,
           // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
             A.settings = A.settings || {};
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
-            try{
-            if (!/_prepositions$/i.test(String(selectedKey||''))) {
-              A.settings.preferredReturnKey = selectedKey;
-            }
-          }catch(_){ }
+            A.settings.preferredReturnKey = selectedKey;
             // активный ключ для тренера
-            A.settings.lastDeckKey = 'en_prepositions';
+            A.settings.lastDeckKey = 'en_prepositions_trainer';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions' } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer' } })); } catch(_){ }
           goHome();
         };
       }

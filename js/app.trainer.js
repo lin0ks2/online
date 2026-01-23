@@ -535,8 +535,8 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   try {
     A.settings = A.settings || {};
     // Do not overwrite the user's last selected dictionary with virtual trainer keys
-    // (e.g., en_prepositions). This prevents confusing navigation on the Dictionaries screen.
-    if (/^[a-z]{2}_prepositions$/i.test(String(key||''))) return;
+    // (e.g., en_prepositions_trainer). This prevents confusing navigation on the Dictionaries screen.
+    if (/^[a-z]{2}_prepositions_trainer$/i.test(String(key||''))) return;
 
     if (A.settings.lastDeckKey !== key) {
       A.settings.lastDeckKey = key;
