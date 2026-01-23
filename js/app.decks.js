@@ -56,6 +56,17 @@ out.sort(function(a,b){
   function resolveDeckByKey(key){
     if (!key) return [];
 
+    // Virtual trainer deck: Prepositions (EN now; DE later).
+    // Key format: <lang>_prepositions (e.g., en_prepositions)
+    try {
+      if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function'
+          && A.Prepositions.isPrepositionsDeckKey(key)
+          && typeof A.Prepositions.getDeckForKey === 'function') {
+        return A.Prepositions.getDeckForKey(key) || [];
+      }
+    } catch(_){}
+
+
     if (key === 'mistakes'){
       try {
         return (App.Mistakes && App.Mistakes.deck) ? (App.Mistakes.deck() || []) : [];

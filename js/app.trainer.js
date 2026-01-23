@@ -534,6 +534,10 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   function _save(key) {
   try {
     A.settings = A.settings || {};
+    // Do not overwrite the user's last selected dictionary with virtual trainer keys
+    // (e.g., en_prepositions). This prevents confusing navigation on the Dictionaries screen.
+    if (/^[a-z]{2}_prepositions$/i.test(String(key||''))) return;
+
     if (A.settings.lastDeckKey !== key) {
       A.settings.lastDeckKey = key;
       if (typeof A.saveSettings === 'function') {

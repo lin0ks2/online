@@ -180,7 +180,44 @@
     }
   }
 
-  function countLearnedWordsByLang(langCode) {
+  
+  function countLearnedPrepositionsByLang(langCode) {
+    // Считаем «выучено паттернов предлогов» — прогресс тренера предлогов.
+    // Сейчас реализовано только для EN, но API готово для DE позже.
+    try {
+      var lang = String(langCode || '').toLowerCase();
+      if (!lang) return 0;
+      if (!A.Prepositions || typeof A.Prepositions.getDeckForKey !== 'function') return 0;
+
+      var key = lang + '_prepositions';
+      var deck = A.Prepositions.getDeckForKey(key) || [];
+      if (!deck.length) return 0;
+
+      // уникальные паттерны по id
+      var uniq = {};
+      for (var i=0; i<deck.length; i++){
+        var w = deck[i];
+        if (!w || w.id == null) continue;
+        uniq[String(w.id)] = true;
+      }
+
+      var starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+      var state = (A.state && A.state.stars) ? A.state.stars : null;
+      if (!state) return 0;
+
+      var learned = 0;
+      for (var pid in uniq){
+        var sk = key + ':' + String(pid);
+        var st = state[sk];
+        var s = (st && st.stars != null) ? (st.stars|0) : 0;
+        if (s >= starsMax) learned++;
+      }
+      return learned;
+    } catch(_){}
+    return 0;
+  }
+
+function countLearnedWordsByLang(langCode) {
     // Считаем «выучено слов с переводами» — это прогресс обычного тренера слов.
     // Важно: используем тот же контекст base vs lernpunkt, чтобы не смешивать данные.
     try {
@@ -225,19 +262,23 @@
     var split = sumSplitSecondsByLang(langCode);
     var learnedArticles = countLearnedArticlesByLang(langCode);
     var learnedWords = countLearnedWordsByLang(langCode);
+    var learnedPreps = countLearnedPrepositionsByLang(langCode);
 
-    var totalLearned = learnedWords + learnedArticles;
+    var totalLearned = learnedWords + learnedArticles + learnedPreps;
     if (!totalLearned) totalLearned = 1;
 
     var pArticles = Math.round((learnedArticles / totalLearned) * 100);
-    var pWords = 100 - pArticles;
+    var pPreps    = Math.round((learnedPreps / totalLearned) * 100);
+    // остаток отдаём словам, чтобы сумма всегда была 100
+    var pWords    = 100 - pArticles - pPreps;
 
     var uk = getUiLang() === 'uk';
 
     // Используем тот же "кольцевой" визуал 1:1 (layers + legend), только 2 сегмента.
     var buckets = [
       { key: 'words', label: uk ? 'Переклади' : 'Переводы', value: learnedWords, percent: pWords, color: 'var(--stats-color-verbs, #0ea5e9)' },
-      { key: 'articles', label: uk ? 'Артиклі' : 'Артикли', value: learnedArticles, percent: pArticles, color: 'var(--stats-color-nouns, #6366f1)' }
+      { key: 'articles', label: uk ? 'Артиклі' : 'Артикли', value: learnedArticles, percent: pArticles, color: 'var(--stats-color-nouns, #22c55e)' },
+      { key: 'prepositions', label: uk ? 'Прийменники' : 'Предлоги', value: learnedPreps, percent: pPreps, color: 'var(--stats-color-prepositions, #a855f7)' }
     ];
 
     var layersHtml = buckets.map(function (b, idx) {

@@ -21,6 +21,10 @@
   function getSetSizeForKey(key){
     const k = String(key || '').toLowerCase();
     try {
+      if (isPrepositionsModeForKey(key)) return 30;
+    } catch(_){ }
+
+    try {
       // Prefer canonical logic from the trainer (it already supports virtual keys).
       if (A.Trainer && typeof A.Trainer.getSetSize === 'function') {
         const n = Number(A.Trainer.getSetSize(key));
@@ -184,8 +188,19 @@ function setUiLang(code){
     return false;
   }
 
+
+  function isPrepositionsModeForKey(deckKey){
+    try {
+      const base = extractBaseFromVirtual(deckKey) || deckKey;
+      return !!(A.settings && A.settings.trainerKind === 'prepositions')
+        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
+    } catch(_){}
+    return false;
+  }
+
   function getTrainableDeckForKey(deckKey){
-    const mode = isArticlesModeForKey(deckKey) ? 'articles' : 'words';
+    const isPrep = isPrepositionsModeForKey(deckKey);
+    const mode = isPrep ? 'prepositions' : (isArticlesModeForKey(deckKey) ? 'articles' : 'words');
 
     // MOYAMOVA: virtual decks → ignore filters completely
     if (isVirtualDeckKey(deckKey)) {
@@ -454,6 +469,36 @@ function setUiLang(code){
     const sheet = document.getElementById('filtersSheet');
     const list = document.getElementById('filtersLevelsList');
     if (!overlay || !sheet || !list) return;
+
+    // Prepositions trainer: filters are not available, but the sheet should still open.
+    try {
+      if (isPrepositionsModeForKey(activeDeckKey())) {
+        // hide levels list
+        try { list.style.display = 'none'; } catch(_){}
+        // disable controls
+        try {
+          const applyBtn = document.getElementById('filtersApply');
+          const resetBtn = document.getElementById('filtersReset');
+          if (applyBtn) applyBtn.disabled = true;
+          if (resetBtn) resetBtn.disabled = true;
+        } catch(_){}
+        // hint text
+        try {
+          const uk = getUiLang() === 'uk';
+          __setFiltersHint(uk
+            ? 'Для цього тренера фільтрація недоступна.'
+            : 'Для этого тренера фильтрация недоступна.');
+        } catch(_){}
+      } else {
+        try { list.style.display = ''; } catch(_){}
+        try {
+          const resetBtn = document.getElementById('filtersReset');
+          if (resetBtn) resetBtn.disabled = false;
+        } catch(_){}
+      }
+    } catch(_){}
+
+
 
     // Keep the sheet above the fixed bottom navigation (tabbar/footer).
     // We do it here (on open) to support dynamic layouts and both themes.
@@ -1037,6 +1082,7 @@ function activeDeckKey() {
   // При включении "Обратный" показываем перевод как вопрос, а на кнопках — терм.
   function isReverseTraining() {
     try {
+      if (isPrepositionsModeForKey(activeDeckKey())) return false;
       const el = document.getElementById('trainReverse');
       return !!(el && el.checked);
     } catch (_) {
@@ -1055,9 +1101,13 @@ function activeDeckKey() {
 
   function forwardPromptText() {
     const uk = getUiLang() === 'uk';
+    if (isPrepositionsModeForKey(activeDeckKey())) {
+      return uk ? 'Оберіть правильний прийменник' : 'Выберите правильный предлог';
+    }
     return uk ? 'Оберіть переклад' : 'Выберите перевод';
   }
-  function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
+
+    function shuffle(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
   function uniqueById(arr) { const s = new Set(); return arr.filter(x => { const id = String(x.id); if (s.has(id)) return false; s.add(id); return true; }); }
 
   /* --------------------------- Избранное (сердце) --------------------------- */
@@ -1132,10 +1182,12 @@ function activeDeckKey() {
           <p class="sets-stats" id="setStats"></p>
         </section>
 
+        ${isPrepositionsModeForKey(activeDeckKey()) ? '' : `
         <!-- ЗОНА 2: Подсказки -->
         <section class="card home-hints">
           <div class="hints-body" id="hintsBody"></div>
         </section>
+        `}
 
         <!-- ЗОНА 3: Тренер -->
         <section class="card home-trainer">
@@ -1178,10 +1230,10 @@ function activeDeckKey() {
             <div class="filters-hint" id="filtersHint" aria-live="polite"></div>
           </div>
 
-         <!-- <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
-           <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
-           <div class="filters-list" id="filtersTopicsList"></div>
-              </div> -->
+        <!--  <div class="filters-section" aria-disabled="true" style="opacity:.55;pointer-events:none;">
+            <h4>${(window.I18N_t ? window.I18N_t('filtersTopics') : 'Темы')}</h4>
+            <div class="filters-list" id="filtersTopicsList"></div>
+              </div>  -->
 
         </div>
         ` : ''}
@@ -1270,8 +1322,8 @@ function activeDeckKey() {
       } else {
         statsEl.style.display = '';
         statsEl.textContent = uk
-          ? `Слів у наборі: ${words.length} / Вивчено: ${learned}`
-          : `Слов в наборе: ${words.length} / Выучено: ${learned}`;
+          ? `${isPrepositionsModeForKey(key) ? 'Патернів' : 'Слів'} у наборі: ${words.length} / Вивчено: ${learned}`
+          : `${isPrepositionsModeForKey(key) ? 'Паттернов' : 'Слов'} в наборе: ${words.length} / Выучено: ${learned}`;
       }
     }
   }
@@ -1317,6 +1369,51 @@ function activeDeckKey() {
   function buildOptions(word) {
     const key = activeDeckKey();
     const reverse = isReverseTraining();
+    const isPrep = isPrepositionsModeForKey(key);
+    if (isPrep) {
+      // Options are prepositions only: 1 correct + 3 distractors.
+      const SIZEP = 4;
+      const correct = String(word && word._prepCorrect || '').trim();
+      const lang = String(word && word._prepLang || 'en').toLowerCase();
+      const pool = (A.Prepositions && typeof A.Prepositions.getDistractorPool === 'function')
+        ? (A.Prepositions.getDistractorPool(lang) || [])
+        : [];
+      // build unique distractors
+      const seen = {};
+      seen[correct.toLowerCase()] = true;
+
+      const distractors = [];
+      for (let i=0; i<pool.length && distractors.length < (SIZEP-1); i++){
+        const p = String(pool[i] || '').trim();
+        if (!p) continue;
+        const k = p.toLowerCase();
+        if (seen[k]) continue;
+        seen[k] = true;
+        distractors.push(p);
+      }
+
+      // Fallback if pool is short
+      const fallback = ['at','on','in','to','from','for','with','by','about','of','under','over','before','after'];
+      for (let j=0; j<fallback.length && distractors.length < (SIZEP-1); j++){
+        const p = fallback[j];
+        const k = p.toLowerCase();
+        if (seen[k]) continue;
+        seen[k] = true;
+        distractors.push(p);
+      }
+
+      const out = [];
+      // correct option uses the same id to satisfy core equality checks
+      out.push({ id: String(word.id), _optLabel: correct });
+      for (let d=0; d<distractors.length; d++){
+        out.push({ id: String(word.id) + '__d' + (d+1), _optLabel: distractors[d] });
+      }
+
+      // shuffle without changing ids
+      return shuffle(out).slice(0, SIZEP);
+    }
+
+
 
     // Требование UX: НИКОГДА не показывать одинаковые подписи на кнопках.
     // Причина дублей: разные слова (id) могут иметь одинаковый перевод (ru/uk).
@@ -1442,11 +1539,11 @@ function activeDeckKey() {
   // Reverse-translation toggle is meaningful only for the word trainer.
   // When the Articles trainer is active we silently disable the checkbox
   // (no toasts / messages) to avoid confusion.
-  function syncReverseToggleAvailability(isArticlesActive){
+  function syncReverseToggleAvailability(disabled){
     try {
       const el = document.getElementById('trainReverse');
       if (!el) return;
-      el.disabled = !!isArticlesActive;
+      el.disabled = !!disabled;
       // Keep the user's choice intact; just prevent interaction while articles trainer is active.
     } catch (_){ }
   }
@@ -1462,8 +1559,13 @@ function activeDeckKey() {
       && String(baseKeyForArticles || '').toLowerCase().startsWith('de_nouns')
       && (A.ArticlesTrainer && A.ArticlesCard);
 
+    const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
+      && /^en_prepositions$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
+      && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
+
+
     // UI: Reverse toggle is not applicable to articles.
-    syncReverseToggleAvailability(wantArticles);
+    syncReverseToggleAvailability(wantArticles || wantPrepositions);
 
 
 if (wantArticles) {
@@ -1655,6 +1757,34 @@ if (wantArticles) {
     }
     renderStarsFor(word);
 
+    // Нижняя статистика в карточке тренера
+    try {
+      if (stats) {
+        const uk = getUiLang() === 'uk';
+        if (isPrepositionsModeForKey(key)) {
+          // Всего паттернов считаем по уникальным id в data (30), а "выучено" — по звёздам.
+          const deckAll = getTrainableDeckForKey(key) || [];
+          const uniq = {};
+          for (let i=0; i<deckAll.length; i++){
+            const w = deckAll[i];
+            if (!w || w.id == null) continue;
+            uniq[String(w.id)] = true;
+          }
+          const total = Object.keys(uniq).length;
+          let learned = 0;
+          for (const pid in uniq){
+            try {
+              if (isLearned({ id: pid }, key)) learned++;
+            } catch(_){}
+          }
+          stats.textContent = uk
+            ? `Усього патернів: ${total} / Вивчено: ${learned}`
+            : `Всего паттернов: ${total} / Выучено: ${learned}`;
+        } else {
+          // оставить как есть (если где-то ещё заполняется)
+        }
+      }
+    } catch(_){}
 
 const opts = buildOptions(word);
 
@@ -2164,3 +2294,14 @@ if (hasProgress) {
   else document.addEventListener('DOMContentLoaded', mountApp);
 })();
 /* ========================= Конец файла: home.js ========================= */
+    // Prepositions trainer: filters are not available (virtual exercise deck).
+    if (isPrep) {
+      try {
+        return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function')
+          ? (A.Decks.resolveDeckByKey(deckKey) || [])
+          : [];
+      } catch(_){}
+      return [];
+    }
+
+

@@ -326,6 +326,7 @@
           } catch(_){ }
 
           updateArticlesButton();
+            updatePrepositionsButton();
         }, { passive:true });
       });
 
@@ -369,7 +370,19 @@
         }catch(_){}
       }
 
-      // primary sync
+      
+      function updatePrepositionsButton(){
+        try{
+          const b = document.getElementById('dicts-prepositions');
+          if (!b) return;
+          // Показываем кнопку пока ТОЛЬКО для английского
+          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
+          const show = (String(lang||'').toLowerCase() === 'en');
+          b.style.display = show ? '' : 'none';
+        }catch(_){}
+      }
+
+// primary sync
       updateArticlesButton();
 
       const ok = document.getElementById('dicts-apply');
@@ -511,3 +524,34 @@
 
 })();
 /* ========================= Конец файла: view.dicts.js ========================= */
+      const prepsBtn = document.getElementById('dicts-prepositions');
+      if (prepsBtn){
+        prepsBtn.onclick = ()=>{
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_apply', {
+                kind: 'prepositions',
+                deck_key: String(selectedKey || ''),
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
+              });
+            }
+          } catch(_){ }
+
+          // ВАЖНО: тренер предлогов — виртуальная колода "en_prepositions",
+          // чтобы прогресс/звёзды не смешивались с обычными словарями.
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){}
+          try {
+            A.settings = A.settings || {};
+            // сохраняем реальный выбранный словарь как "последний" (для экранов словарей)
+            A.settings.lastDeckKey = selectedKey;
+            if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
+          } catch(_){}
+          try {
+            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: 'en_prepositions' } }));
+          } catch(_){}
+          goHome();
+        };
+      }
+
+
