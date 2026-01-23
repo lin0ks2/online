@@ -24,6 +24,10 @@
     try { return A.settings && A.settings.trainerKind === 'articles'; } catch (e) { return false; }
   }
 
+  function isPrepositionsMode() {
+    try { return A.settings && A.settings.trainerKind === 'prepositions'; } catch (e) { return false; }
+  }
+
   function isReverseMode() {
     try {
       var el = document.getElementById('trainReverse');
@@ -135,6 +139,16 @@
 
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
+
+    // Prepositions trainer: do not render TTS button at all (even in PRO),
+    // because it becomes a visual artefact after the blank is filled.
+    if (isPrepositionsMode()) {
+      try {
+        var existing = wordEl.querySelector('.trainer-audio-btn');
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+      } catch (e) {}
+      return;
+    }
 
     // ищем кнопку ВНУТРИ .trainer-word
     var btn = wordEl.querySelector('.trainer-audio-btn');
