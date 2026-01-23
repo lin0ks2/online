@@ -140,12 +140,11 @@
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // Prepositions trainer: do not render TTS button at all (even in PRO),
-    // because it becomes a visual artefact after the blank is filled.
+    // Prepositions trainer: no audio button at all (even after correct answer).
     if (isPrepositionsMode()) {
       try {
         var existing = wordEl.querySelector('.trainer-audio-btn');
-        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+        if (existing) existing.remove();
       } catch (e) {}
       return;
     }

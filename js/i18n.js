@@ -64,6 +64,9 @@
       filtersVirtualText: "В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.",
       filtersPrepsTitle: "Фильтры недоступны",
       filtersPrepsText: "Для упражнения «Предлоги» фильтрация недоступна.",
+      // aliases (older keys used in some builds)
+      filtersDisabledTitle: "Фильтры недоступны",
+      filtersDisabledPreps: "Для упражнения «Предлоги» фильтрация недоступна.",
       filtersEmpty: "По выбранным фильтрам нет слов.",
       filtersOpen: "Открыть фильтры",
 
@@ -130,6 +133,9 @@
       filtersVirtualText: "В Обраному та Моїх помилках тренуються всі збережені слова. Додаткові фільтри не застосовуються.",
       filtersPrepsTitle: "Фільтри недоступні",
       filtersPrepsText: "Для вправи «Прийменники» фільтрація недоступна.",
+      // aliases (older keys used in some builds)
+      filtersDisabledTitle: "Фільтри недоступні",
+      filtersDisabledPreps: "Для вправи «Прийменники» фільтрація недоступна.",
       filtersEmpty: "За вибраними фільтрами немає слів.",
       filtersOpen: "Відкрити фільтри",
 }

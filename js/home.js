@@ -193,7 +193,7 @@ function setUiLang(code){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
       return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions(?:_trainer)?$/i.test(String(base || '').trim());
+        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }
@@ -470,6 +470,36 @@ function setUiLang(code){
     const list = document.getElementById('filtersLevelsList');
     if (!overlay || !sheet || !list) return;
 
+    // Prepositions trainer: filters are not available, but the sheet should still open.
+    try {
+      if (isPrepositionsModeForKey(activeDeckKey())) {
+        // hide levels list
+        try { list.style.display = 'none'; } catch(_){}
+        // disable controls
+        try {
+          const applyBtn = document.getElementById('filtersApply');
+          const resetBtn = document.getElementById('filtersReset');
+          if (applyBtn) applyBtn.disabled = true;
+          if (resetBtn) resetBtn.disabled = true;
+        } catch(_){}
+        // hint text
+        try {
+          const uk = getUiLang() === 'uk';
+          __setFiltersHint(uk
+            ? 'Для цього тренера фільтрація недоступна.'
+            : 'Для этого тренера фильтрация недоступна.');
+        } catch(_){}
+      } else {
+        try { list.style.display = ''; } catch(_){}
+        try {
+          const resetBtn = document.getElementById('filtersReset');
+          if (resetBtn) resetBtn.disabled = false;
+        } catch(_){}
+      }
+    } catch(_){}
+
+
+
     // Keep the sheet above the fixed bottom navigation (tabbar/footer).
     // We do it here (on open) to support dynamic layouts and both themes.
     try {
@@ -522,6 +552,8 @@ function setUiLang(code){
 
     if (isVirtualDeckKey(key)) {
       // Replace pills with an informational block (RU/UK only)
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
       const title = (window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны');
       const text  = (window.I18N_t ? window.I18N_t('filtersVirtualText')  : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.');
       list.innerHTML = `
@@ -547,17 +579,18 @@ function setUiLang(code){
       return;
     }
 
-    // Prepositions trainer: filters are not available (info-only state)
+    // MOYAMOVA: Prepositions trainer → filters unavailable (read-only info state)
     if (isPrepositionsModeForKey(key)) {
-      const title = (window.I18N_t ? window.I18N_t('filtersDisabledTitle') : 'Фильтры недоступны');
-      const text  = (window.I18N_t ? window.I18N_t('filtersDisabledPreps') : 'Для этого упражнения фильтрация недоступна.');
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
+      const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
+      const textMsg  = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
       list.innerHTML = `
         <div class="filters-virtual-note">
           <div class="title">${title}</div>
-          <div class="text">${text}</div>
+          <div class="text">${textMsg}</div>
         </div>
       `;
-
       try {
         const applyBtn = document.getElementById('filtersApply');
         const resetBtn = document.getElementById('filtersReset');
@@ -565,17 +598,14 @@ function setUiLang(code){
         if (resetBtn) resetBtn.disabled = true;
       } catch(_){ }
 
-      try { __setApplyEnabled(false); } catch(_){ }
-      try { __setFiltersHint(''); } catch(_){ }
-
       try { overlay.classList.remove('filters-hidden'); } catch(_){ }
       try { sheet.classList.remove('filters-hidden'); } catch(_){ }
       try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
       try { sheet.setAttribute('aria-hidden', 'false'); } catch(_){ }
       try { lockBodyScrollForFilters(sheet); } catch(_){ }
-
       return;
     }
+
     const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
     const selected = new Set((st && st.selected) ? st.selected : []);
 
@@ -769,17 +799,17 @@ function setUiLang(code){
       __draftT = setTimeout(function(){
         try {
           const key = activeDeckKey();
+          const draftLevels = __readDraftLevelsFromSheet();
 
-          // Prepositions trainer: filters are not applicable.
-          // Skip validation so we don't show "insufficient words" message.
+          // Prepositions trainer: filtering is not supported.
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
-            // Do not duplicate the informational text: it is already rendered
-            // inside the filters sheet body for this exercise.
-            __setFiltersHint('');
+            const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
+            const msg = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
+            __setFiltersHint(`<b>${title}</b><br>${msg}`);
             return;
           }
-          const draftLevels = __readDraftLevelsFromSheet();
+
           const v = __validateDraftSelectionForKey(key, draftLevels);
           if (v && v.ok === false) {
             __setApplyEnabled(false);
@@ -1193,7 +1223,7 @@ function activeDeckKey() {
         </section>
 
         <!-- ЗОНА 2: Подсказки -->
-        <section class="card home-hints${isPrepositionsModeForKey(activeDeckKey()) ? ' is-preps-placeholder' : ''}">
+        <section class="card home-hints${isPrepositionsModeForKey(activeDeckKey()) ? ' mm-hints-placeholder' : ''}">
           <div class="hints-body" id="hintsBody"></div>
         </section>
 
@@ -1542,7 +1572,41 @@ function activeDeckKey() {
   }
 
 
-  /* ------------------------------- Тренер ------------------------------- */
+  
+  function __escapeHtml(s){
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function __fillPrepBlank(sentence, answer){
+    const s = String(sentence||'');
+    const a = String(answer||'').trim();
+    if (!a) return __escapeHtml(s);
+
+    // Prefer underscore placeholders like ___
+    const reUnd = /_{2,}/;
+    if (reUnd.test(s)) {
+      const parts = s.split(reUnd);
+      const before = parts.shift() || '';
+      const after = parts.join('___');
+      return __escapeHtml(before) + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>` + __escapeHtml(after);
+    }
+
+    // Fallback: three dots / ellipsis
+    const reDots = /\.\.\.|…/;
+    if (reDots.test(s)) {
+      const m = s.match(reDots);
+      if (m) {
+        const i = s.indexOf(m[0]);
+        const before = s.slice(0, i);
+        const after = s.slice(i + m[0].length);
+        return __escapeHtml(before) + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>` + __escapeHtml(after);
+      }
+    }
+
+    // Last resort: append
+    return __escapeHtml(s) + ' ' + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>`;
+  }
+/* ------------------------------- Тренер ------------------------------- */
 
   // Reverse-translation toggle is meaningful only for the word trainer.
   // When the Articles trainer is active we silently disable the checkbox
@@ -1555,7 +1619,17 @@ function activeDeckKey() {
       // Keep the user's choice intact; just prevent interaction while articles trainer is active.
     } catch (_){ }
   }
-  function renderTrainer() {
+  
+  // Context toggle is not applicable for the prepositions trainer (the context card is hidden).
+  // Keep the user's choice intact; just prevent interaction while the prepositions trainer is active.
+  function syncContextToggleAvailability(disabled){
+    try {
+      const el = document.getElementById('focusContext');
+      if (!el) return;
+      el.disabled = !!disabled;
+    } catch(_){ }
+  }
+function renderTrainer() {
     const key   = activeDeckKey();
 
     // Trainer variant switching (words vs articles).
@@ -1568,15 +1642,13 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
-      && /^en_prepositions(?:_trainer)?$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
+      && /^en_prepositions$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
       && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
-
-    // Used by burger UI (disable Context checkbox) and small layout adjustments.
-    try { document.body.classList.toggle('mm-preps-mode', !!wantPrepositions); } catch(_) {}
 
 
     // UI: Reverse toggle is not applicable to articles.
     syncReverseToggleAvailability(wantArticles || wantPrepositions);
+    syncContextToggleAvailability(wantPrepositions);
 
 
 if (wantArticles) {
@@ -1848,6 +1920,15 @@ answers.innerHTML = '';
           solved = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, true); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
+
+          // Prepositions trainer: reveal the correct answer inside the sentence placeholder.
+          try {
+            if (isPrepositionsModeForKey(key) && wordEl) {
+              const correct = String(word && word._prepCorrect || '').trim();
+              const currentQ = String(wordEl.textContent || '');
+              wordEl.innerHTML = __fillPrepBlank(currentQ, correct);
+            }
+          } catch(_){ }
 
           // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
           try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
