@@ -385,7 +385,7 @@
 
           // Кнопка "Предлоги" доступна ТОЛЬКО если выбрана строка тренера предлогов.
           const key = String(selectedKey || '');
-          const show = (key === 'en_prepositions_trainer');
+          const show = /_prepositions_trainer$/i.test(key);
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -472,10 +472,10 @@
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
             A.settings.preferredReturnKey = selectedKey;
             // активный ключ для тренера
-            A.settings.lastDeckKey = 'en_prepositions_trainer_trainer';
+            A.settings.lastDeckKey = 'en_prepositions_trainer';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer_trainer' } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer' } })); } catch(_){ }
           goHome();
         };
       }
