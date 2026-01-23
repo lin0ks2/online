@@ -125,10 +125,7 @@
     }
 
     function renderTableForLang(lang){
-      const keysAllRaw = byLang[lang] || [];
-      // Hide base prepositions POS decks in Dictionaries list (prepositions trainer has its own entry)
-      const keysAll = keysAllRaw.filter(k => !/^[a-z]{2}_prepositions$/i.test(String(k||'')));
-
+      const keysAll = byLang[lang] || [];
 
       // --- helpers for LearnPunkt split (only for DE) ---
       const isLP = (k)=> String(k||'').toLowerCase().endsWith('_lernpunkt');
@@ -194,12 +191,6 @@
               </td>
             </tr>`;
         }).join('');
-      }
-
-      // Prepositions trainer entry: only for English (EN)
-      if (lang === 'en'){
-        const prepKey = 'en_prepositions_trainer';
-        if (!keysAll.includes(prepKey)) keysAll.push(prepKey);
       }
 
       // --- render ---
@@ -391,9 +382,10 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-          // Показываем кнопку пока ТОЛЬКО для английского
-          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const show = (String(lang||'').toLowerCase() === 'en');
+
+          // Кнопка "Предлоги" доступна ТОЛЬКО если выбрана строка тренера предлогов.
+          const key = String(selectedKey || '');
+          const show = (key === 'en_prepositions_trainer');
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -480,10 +472,10 @@
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
             A.settings.preferredReturnKey = selectedKey;
             // активный ключ для тренера
-            A.settings.lastDeckKey = 'en_prepositions_trainer';
+            A.settings.lastDeckKey = 'en_prepositions_trainer_trainer';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer' } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer_trainer' } })); } catch(_){ }
           goHome();
         };
       }
