@@ -164,10 +164,17 @@
     // Only in prepositions-trainer mode we swap the deck to the expanded patterns deck.
     try{
       const kind = (A.settings && A.settings.trainerKind) ? String(A.settings.trainerKind) : 'words';
+      const isPrepsKey = (() => {
+        try {
+          if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') return !!A.Prepositions.isAnyPrepositionsKey(key);
+          if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) return true;
+          return /^([a-z]{2})_prepositions$/i.test(String(key||'').trim());
+        } catch(_){ return false; }
+      })();
+
       if (kind === 'prepositions'
         && A.Prepositions
-        && typeof A.Prepositions.isPrepositionsDeckKey === 'function'
-        && A.Prepositions.isPrepositionsDeckKey(key)
+        && isPrepsKey
         && typeof A.Prepositions.getDeckForKey === 'function') {
         return A.Prepositions.getDeckForKey(key) || [];
       }

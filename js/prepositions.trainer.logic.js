@@ -13,11 +13,22 @@
   A.Prepositions = A.Prepositions || {};
 
   function isPrepositionsDeckKey(key){
+    // "trainer" ключ (виртуальный/служебный) — на будущее
     return /^([a-z]{2})_prepositions_trainer$/i.test(String(key||'').trim());
   }
 
+  function isPrepositionsSourceDeckKey(key){
+    // "реальная" дека словаря: en_prepositions (используется и для words, и как точка входа для тренера предлогов)
+    return /^([a-z]{2})_prepositions$/i.test(String(key||'').trim());
+  }
+
+  function isAnyPrepositionsKey(key){
+    return isPrepositionsDeckKey(key) || isPrepositionsSourceDeckKey(key);
+  }
+
   function langOfPrepositionsKey(key){
-    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions_trainer$/i);
+    var s = String(key||'').trim();
+    var m = s.match(/^([a-z]{2})_prepositions_trainer$/i) || s.match(/^([a-z]{2})_prepositions$/i);
     return m ? m[1].toLowerCase() : null;
   }
 
@@ -67,7 +78,7 @@
   }
 
   function getDeckForKey(key){
-    if (!isPrepositionsDeckKey(key)) return [];
+    if (!isAnyPrepositionsKey(key)) return [];
     var lang = langOfPrepositionsKey(key) || 'en';
     if (__cacheDeckByLang[lang]) return __cacheDeckByLang[lang].slice();
     var deck = buildExpandedDeck(lang);
@@ -96,6 +107,8 @@
 
   // Публичное API
   A.Prepositions.isPrepositionsDeckKey = isPrepositionsDeckKey;
+  A.Prepositions.isPrepositionsSourceDeckKey = isPrepositionsSourceDeckKey;
+  A.Prepositions.isAnyPrepositionsKey = isAnyPrepositionsKey;
   A.Prepositions.langOfPrepositionsKey = langOfPrepositionsKey;
   A.Prepositions.getDeckForKey = getDeckForKey;
   A.Prepositions.getDistractorPool = getDistractorPool;
