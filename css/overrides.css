@@ -213,6 +213,11 @@ body.no-scroll {
   bottom: 16px;  /* если нужно выше/ниже — меняем это значение */
 }
 
+/* Prepositions trainer: the speaker icon is not applicable */
+body.mm-preps-mode .trainer-audio-btn {
+  display: none !important;
+}
+
 /* Hover (десктоп) */
 @media (hover:hover) {
   .trainer-audio-btn:hover {
