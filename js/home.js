@@ -552,6 +552,8 @@ function setUiLang(code){
 
     if (isVirtualDeckKey(key)) {
       // Replace pills with an informational block (RU/UK only)
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
       const title = (window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны');
       const text  = (window.I18N_t ? window.I18N_t('filtersVirtualText')  : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.');
       list.innerHTML = `
@@ -579,6 +581,8 @@ function setUiLang(code){
 
     // MOYAMOVA: Prepositions trainer → filters unavailable (read-only info state)
     if (isPrepositionsModeForKey(key)) {
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
       const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
       const textMsg  = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
       list.innerHTML = `
@@ -1926,15 +1930,8 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: авто-озвучка после верного ответа (manual speaks always).
-          // Для упражнения «Предлоги» следующий вопрос показываем только
-          // после завершения озвучки, чтобы пользователь успел увидеть/услышать.
-          let __ttsAfterCorrect = null;
-          try {
-            if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
-              __ttsAfterCorrect = A.AudioTTS.onCorrect();
-            }
-          } catch(_eTTS) {}
+          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
+          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
 
 
           // аналитика: ответ в тренере
@@ -1952,25 +1949,12 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
-          const __advanceAfterCorrect = () => { renderSets();
+          setTimeout(() => { renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){ }
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
         } else {
           renderTrainer();
-        } };
-
-          // В тренере предлогов ждём завершения озвучки перед переключением вопроса.
-          const __isPrepsNow = (typeof isPrepositionsModeForKey === 'function') ? isPrepositionsModeForKey(key) : false;
-          if (__isPrepsNow && __ttsAfterCorrect && typeof __ttsAfterCorrect.then === 'function') {
-            const __t0 = Date.now();
-            const __minHoldMs = 250;
-            __ttsAfterCorrect.finally(() => {
-              const __elapsed = Date.now() - __t0;
-              setTimeout(__advanceAfterCorrect, Math.max(0, __minHoldMs - __elapsed));
-            });
-          } else {
-            setTimeout(__advanceAfterCorrect, ADV_DELAY);
-          }
+        } }, ADV_DELAY);
           return;
         }
 

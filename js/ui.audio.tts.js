@@ -82,6 +82,16 @@
   }
 
   function getCurrentWord() {
+    // Для тренера предлогов озвучиваем ТО, что реально показано на экране.
+    // Это важно, потому что после верного ответа в фразу вставляется предлог.
+    try {
+      if (isPrepositionsMode()) {
+        var el = document.querySelector('.trainer-word');
+        var t = el ? (el.textContent || '') : '';
+        return String(t || '').replace(/\s+/g, ' ').trim();
+      }
+    } catch (e) {}
+
     var w = A.__currentWord || null;
     if (!w) return '';
     var raw = w.wordBasic || w.word || '';
@@ -90,44 +100,27 @@
   }
 
   // force=true используется для ручной озвучки по кнопке (работает всегда).
-  // Возвращает Promise, который завершается, когда озвучка закончилась (или сразу, если не стартовала).
   function speakText(text, force) {
-    return new Promise(function (resolve) {
-      if (!A.isPro || !A.isPro()) return resolve(false); // озвучка только в PRO
-      if (!force && !audioEnabled) return resolve(false); // авто-озвучка зависит от переключателя
-      if (!hasTTS()) return resolve(false);
-      if (!text) return resolve(false);
+    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
+    if (!force && !audioEnabled) return; // авто-озвучка зависит от переключателя
+    if (!hasTTS()) return;
+    if (!text) return;
 
-      var done = false;
-      function finish() {
-        if (done) return;
-        done = true;
-        resolve(true);
-      }
-
-      // fallback, чтобы не зависнуть если onend не придёт
-      var safety = setTimeout(finish, 9000);
-
-      try {
-        window.speechSynthesis.cancel();
-        var u = new window.SpeechSynthesisUtterance(String(text));
-        u.lang  = getTtsLang();
-        u.rate  = 0.95;
-        u.pitch = 1.0;
-        u.onend = function () { try { clearTimeout(safety); } catch (_) {} finish(); };
-        u.onerror = function () { try { clearTimeout(safety); } catch (_) {} finish(); };
-        window.speechSynthesis.speak(u);
-      } catch (e) {
-        try { clearTimeout(safety); } catch (_) {}
-        finish();
-      }
-    });
+    try {
+      window.speechSynthesis.cancel();
+      var u = new window.SpeechSynthesisUtterance(String(text));
+      u.lang  = getTtsLang();
+      u.rate  = 0.95;
+      u.pitch = 1.0;
+      window.speechSynthesis.speak(u);
+    } catch (e) {
+      // молча игнорируем
+    }
   }
 
   function speakCurrentWord(force) {
     var w = getCurrentWord();
-    if (!w) return Promise.resolve(false);
-    return speakText(w, !!force);
+    if (w) speakText(w, !!force);
   }
 
   /* ========================================================== */
@@ -157,8 +150,21 @@
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // ищем кнопку ВНУТРИ .trainer-word
-    var btn = wordEl.querySelector('.trainer-audio-btn');
+    // В тренере предлогов НЕ добавляем кнопку внутрь .trainer-word,
+    // чтобы ничего не "прилипало" к тексту фразы.
+    var hostEl = wordEl;
+    if (isPrepositionsMode()) {
+      hostEl = document.querySelector('.home-trainer') || wordEl;
+
+      // если раньше кнопка уже была вставлена в .trainer-word — удаляем
+      try {
+        var oldInside = wordEl.querySelector('.trainer-audio-btn');
+        if (oldInside) oldInside.remove();
+      } catch (e) {}
+    }
+
+    // ищем кнопку в выбранном хосте
+    var btn = hostEl.querySelector('.trainer-audio-btn');
 
     if (!btn) {
       btn = document.createElement('button');
@@ -182,13 +188,13 @@
         updateButtonIcon(btn);
       });
 
-      wordEl.appendChild(btn);
+      hostEl.appendChild(btn);
     }
 
     updateButtonIcon(btn);
 
     // Автоозвучка нового слова — только для word-trainer в прямом режиме.
-    // В articles / reverse / prepositions автоозвучку отключаем,
+    // В articles-режиме и в режиме обратного перевода автоозвучку отключаем,
     // чтобы звук не превращался в подсказку.
     if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) {
       var word = getCurrentWord();
@@ -293,22 +299,14 @@
     // - articles trainer: всегда
     // - word trainer: только в режиме обратного перевода (чтобы не было подсказки при показе вопроса)
     A.AudioTTS.onCorrect = function () {
-      // articles trainer: всегда
-      // word trainer: только в режиме обратного перевода
-      // prepositions trainer: всегда (озвучка после верного ответа)
-      if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return Promise.resolve(false);
-      if (!A.isPro || !A.isPro()) return Promise.resolve(false);
-      if (!audioEnabled) return Promise.resolve(false);
+      if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return;
+      if (!A.isPro || !A.isPro()) return;
+      if (!audioEnabled) return;
       try {
         var w = getCurrentWord();
         if (w) lastAutoSpokenWord = w;
       } catch (_e) {}
-      return speakCurrentWord(false);
-    };
-
-    // Экспортируем async-озвучку для точечных кейсов (например, предлоги: ждать окончания озвучки).
-    A.AudioTTS.speakCurrent = function (force) {
-      return speakCurrentWord(!!force);
+      speakCurrentWord(false);
     };
   }
 
