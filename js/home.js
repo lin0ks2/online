@@ -210,14 +210,6 @@ function setUiLang(code){
       return [];
     }
 
-    // Prepositions mode: ignore filters even for real decks (avoid 'not enough words' loop)
-    if (isPrep) {
-      try {
-        return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-      } catch(_){ }
-      return [];
-    }
-
     try {
       if (A.Filters && typeof A.Filters.getTrainableDeck === 'function') {
         return A.Filters.getTrainableDeck(deckKey, { mode }) || [];
