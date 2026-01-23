@@ -382,9 +382,12 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-          // Показываем кнопку пока ТОЛЬКО для английского
-          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const show = (String(lang||'').toLowerCase() === 'en');
+
+          // Кнопка «Предлоги» должна быть доступна ТОЛЬКО на строке словаря предлогов.
+          // Это зеркалит логику «Артикли» (кнопка появляется только на nouns),
+          // и исключает смешение режимов, когда выбран не тот ряд таблицы.
+          const k = String(selectedKey || '').trim();
+          const show = /^en_prepositions_trainer$/i.test(k) || /^en_prepositions$/i.test(k); // совместимость со старым ключом
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -463,18 +466,18 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов стартует из выбранной строки "Предлоги".
-          // В режиме prepositions колода разворачивается в набор паттернов и не смешивается с обычными словами.
+          // ВАЖНО: тренер предлогов работает через отдельную колоду en_prepositions_trainer (и совместим со старым en_prepositions),
+          // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
             A.settings = A.settings || {};
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
             A.settings.preferredReturnKey = selectedKey;
             // активный ключ для тренера
-            A.settings.lastDeckKey = selectedKey;
+            A.settings.lastDeckKey = 'en_prepositions';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions' } })); } catch(_){ }
           goHome();
         };
       }
