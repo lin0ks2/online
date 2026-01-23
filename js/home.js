@@ -1930,8 +1930,15 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
-          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
+          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always).
+          // For prepositions we wait until the audio ends before moving to the next question,
+          // so the user can read and listen to the completed sentence.
+          let __ttsDone = null;
+          try {
+            if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
+              __ttsDone = A.AudioTTS.onCorrect();
+            }
+          } catch(_eTTS) { __ttsDone = null; }
 
 
           // аналитика: ответ в тренере
@@ -1949,12 +1956,25 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
-          setTimeout(() => { renderSets();
-        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
-        } else {
-          renderTrainer();
-        } }, ADV_DELAY);
+
+          const __goNext = () => {
+            renderSets();
+            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+              try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){ }
+            } else {
+              renderTrainer();
+            }
+          };
+
+          // In prepositions mode: wait for TTS to finish (if it actually started),
+          // then add a small grace period so the user can see the filled blank.
+          if (isPrepositionsModeForKey(key) && __ttsDone && typeof __ttsDone.then === 'function') {
+            __ttsDone.finally(function () {
+              setTimeout(__goNext, 250);
+            });
+          } else {
+            setTimeout(__goNext, ADV_DELAY);
+          }
           return;
         }
 

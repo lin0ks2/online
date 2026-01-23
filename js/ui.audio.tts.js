@@ -100,11 +100,13 @@
   }
 
   // force=true используется для ручной озвучки по кнопке (работает всегда).
+  // Returns a Promise that resolves when the utterance finishes (or errors).
+  // Used to delay UI transitions until the user has heard the audio.
   function speakText(text, force) {
-    if (!A.isPro || !A.isPro()) return; // озвучка только в PRO
-    if (!force && !audioEnabled) return; // авто-озвучка зависит от переключателя
-    if (!hasTTS()) return;
-    if (!text) return;
+    if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
+    if (!force && !audioEnabled) return null; // авто-озвучка зависит от переключателя
+    if (!hasTTS()) return null;
+    if (!text) return null;
 
     try {
       window.speechSynthesis.cancel();
@@ -112,15 +114,30 @@
       u.lang  = getTtsLang();
       u.rate  = 0.95;
       u.pitch = 1.0;
-      window.speechSynthesis.speak(u);
+
+      return new Promise(function (resolve) {
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          resolve();
+        }
+        u.onend = finish;
+        u.onerror = finish;
+        // Some environments may not fire onend reliably after cancel;
+        // keep a soft fallback so UI can't hang.
+        setTimeout(finish, 6000);
+        window.speechSynthesis.speak(u);
+      });
     } catch (e) {
-      // молча игнорируем
+      return null;
     }
   }
 
   function speakCurrentWord(force) {
     var w = getCurrentWord();
-    if (w) speakText(w, !!force);
+    if (!w) return null;
+    return speakText(w, !!force);
   }
 
   /* ========================================================== */
@@ -306,7 +323,7 @@
         var w = getCurrentWord();
         if (w) lastAutoSpokenWord = w;
       } catch (_e) {}
-      speakCurrentWord(false);
+      return speakCurrentWord(false);
     };
   }
 
