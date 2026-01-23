@@ -56,6 +56,10 @@
           id: String(p.id),
           // term (верхняя строка) — фраза с пропуском
           de: sentence,
+          // Для экранов Избранное/Мои ошибки (таблица Word/Translation)
+          // используем корректный предлог как "перевод".
+          ru: String(p.answer || "").trim(),
+          uk: String(p.answer || "").trim(),
           // корректный ответ (предлог)
           _prepCorrect: String(p.answer || '').trim(),
           // язык для выбора отвлекалок
