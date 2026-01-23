@@ -199,7 +199,24 @@
     const full = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(baseDeckKey) || []) : [];
     if (!full.length) return [];
     const ids = new Set(getIds(trainLang, baseDeckKey).map(String));
-    return full.filter(w => ids.has(String(w.id)));
+    var filtered = full.filter(w => ids.has(String(w.id)));
+
+    // IMPORTANT: Prepositions trainer deck is expanded (variants/sets) and contains
+    // 5 карточек на один patternId. В «Мои ошибки» мы считаем единицей именно pattern,
+    // поэтому при сборке ошибки-декы дедуплицируем по id.
+    try {
+      if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(baseDeckKey)) {
+        const seen = new Set();
+        filtered = filtered.filter(w => {
+          const id = String(w && w.id);
+          if (!id || seen.has(id)) return false;
+          seen.add(id);
+          return true;
+        });
+      }
+    } catch(_){ }
+
+    return filtered;
   }
 
   // Импорт структуры «Мои ошибки» из бэкапа / App.state

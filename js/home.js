@@ -1044,6 +1044,33 @@ function activeDeckKey() {
     return ACTIVE_KEY_FALLBACK;
   }
 }
+
+// Effective key for the trainer runtime.
+// IMPORTANT: Prepositions trainer must use its dedicated virtual deck key
+// (<lang>_prepositions_trainer) for stars/favorites/mistakes to avoid leaking data
+// into обычные словари and to keep lists stable.
+function effectiveTrainerDeckKey(){
+  try {
+    if (A.settings && String(A.settings.trainerKind||'') === 'prepositions') {
+      var lang = null;
+      // Prefer language derived from the real dictionary selection (preferredReturnKey)
+      try {
+        var srcKey = (A.settings && (A.settings.preferredReturnKey || A.settings.lastDeckKey)) || null;
+        if (srcKey && A.Decks && typeof A.Decks.langOfKey === 'function') {
+          lang = A.Decks.langOfKey(srcKey) || null;
+        }
+      } catch(_){ }
+
+      // Fallbacks: active dictionaries filter / study language
+      if (!lang && A.settings && A.settings.dictsLangFilter) lang = A.settings.dictsLangFilter;
+      if (!lang && A.settings && A.settings.studyLang) lang = A.settings.studyLang;
+
+      lang = String(lang || 'en').toLowerCase();
+      return lang + '_prepositions_trainer';
+    }
+  } catch(_){ }
+  return activeDeckKey();
+}
   // Идшники слов текущего сета
   function getActiveBatchIndex() {
     try { return (A.Trainer && typeof A.Trainer.getBatchIndex === 'function') ? A.Trainer.getBatchIndex(activeDeckKey()) : 0; }
@@ -1548,7 +1575,7 @@ function activeDeckKey() {
     } catch (_){ }
   }
   function renderTrainer() {
-    const key   = activeDeckKey();
+    const key   = effectiveTrainerDeckKey();
 
     // Trainer variant switching (words vs articles).
     // We must NOT fall back to the default trainer when the user interacts with
@@ -1560,8 +1587,8 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
-      && /^en_prepositions_trainer$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
-      && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
+      && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function')
+      && A.Prepositions.isPrepositionsDeckKey(String(extractBaseFromVirtual(key) || key || '').trim());
 
 
     // UI: Reverse toggle is not applicable to articles.
