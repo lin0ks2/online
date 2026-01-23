@@ -470,34 +470,6 @@ function setUiLang(code){
     const list = document.getElementById('filtersLevelsList');
     if (!overlay || !sheet || !list) return;
 
-    // Prepositions trainer: filters are not available, but the sheet should still open.
-    try {
-      if (isPrepositionsModeForKey(activeDeckKey())) {
-        // hide levels list
-        try { list.style.display = 'none'; } catch(_){}
-        // disable controls
-        try {
-          const applyBtn = document.getElementById('filtersApply');
-          const resetBtn = document.getElementById('filtersReset');
-          if (applyBtn) applyBtn.disabled = true;
-          if (resetBtn) resetBtn.disabled = true;
-        } catch(_){}
-        // hint text
-        try {
-          const uk = getUiLang() === 'uk';
-          __setFiltersHint(uk
-            ? 'Для цього тренера фільтрація недоступна.'
-            : 'Для этого тренера фильтрация недоступна.');
-        } catch(_){}
-      } else {
-        try { list.style.display = ''; } catch(_){}
-        try {
-          const resetBtn = document.getElementById('filtersReset');
-          if (resetBtn) resetBtn.disabled = false;
-        } catch(_){}
-      }
-    } catch(_){}
-
 
 
     // Keep the sheet above the fixed bottom navigation (tabbar/footer).
@@ -802,7 +774,8 @@ function setUiLang(code){
             __setApplyEnabled(false);
             const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
             const msg = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
-            __setFiltersHint(`<b>${title}</b><br>${msg}`);
+            // NOTE: The hint node uses textContent, so do not pass HTML tags here.
+            __setFiltersHint(`${title}. ${msg}`);
             return;
           }
 
