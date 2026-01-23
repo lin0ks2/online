@@ -159,17 +159,10 @@
       if (isVirtual(key)) return resolveVirtualDeck(key) || [];
     }catch(_){}
 
-    // Prepositions trainer: for keys like "en_prepositions"
-    // IMPORTANT: in "words" mode the deck must behave as a normal dictionary deck.
-    // Only in prepositions-trainer mode we swap the deck to the expanded patterns deck.
+    // Prepositions trainer: virtual exercise decks like "en_prepositions"
     try{
-      const kind = (A.settings && A.settings.trainerKind) ? String(A.settings.trainerKind) : 'words';
-      if (kind === 'prepositions'
-        && A.Prepositions
-        && typeof A.Prepositions.isPrepositionsDeckKey === 'function'
-        && A.Prepositions.isPrepositionsDeckKey(key)
-        && typeof A.Prepositions.getDeckForKey === 'function') {
-        return A.Prepositions.getDeckForKey(key) || [];
+      if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
+        if (typeof A.Prepositions.getDeckForKey === 'function') return A.Prepositions.getDeckForKey(key) || [];
       }
     }catch(_){}
 
@@ -221,7 +214,7 @@
     try{
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
         if (typeof A.Prepositions.langOfPrepositionsKey === 'function') return A.Prepositions.langOfPrepositionsKey(key);
-        var m = String(key||'').trim().match(/^([a-z]{2})_prepositions$/i);
+        var m = String(key||'').trim().match(/^([a-z]{2})_prepositions(?:_trainer)?$/i);
         return m ? m[1].toLowerCase() : null;
       }
     }catch(_){ }

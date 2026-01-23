@@ -12,12 +12,16 @@
   var A = (window.App = window.App || {});
   A.Prepositions = A.Prepositions || {};
 
+  // Prepositions decks:
+  // - legacy/visible dictionary deck:   en_prepositions
+  // - safe trainer entry/deck key:      en_prepositions_trainer
+  // We treat BOTH as prepositions-capable keys.
   function isPrepositionsDeckKey(key){
-    return /^([a-z]{2})_prepositions_trainer$/i.test(String(key||'').trim());
+    return /^([a-z]{2})_prepositions(?:_trainer)?$/i.test(String(key||'').trim());
   }
 
   function langOfPrepositionsKey(key){
-    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions_trainer$/i);
+    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions(?:_trainer)?$/i);
     return m ? m[1].toLowerCase() : null;
   }
 

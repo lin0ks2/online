@@ -192,8 +192,15 @@ function setUiLang(code){
   function isPrepositionsModeForKey(deckKey){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
-      return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
+      if (!(A.settings && A.settings.trainerKind === 'prepositions')) return false;
+
+      // Delegate to the dedicated prepositions module when available.
+      if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function') {
+        return !!A.Prepositions.isPrepositionsDeckKey(base);
+      }
+
+      // Fallback: support both legacy and safe keys.
+      return /^([a-z]{2})_prepositions(?:_trainer)?$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }
