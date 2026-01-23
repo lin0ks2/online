@@ -2295,13 +2295,3 @@ if (hasProgress) {
 })();
 /* ========================= Конец файла: home.js ========================= */
     // Prepositions trainer: filters are not available (virtual exercise deck).
-    if (isPrep) {
-      try {
-        return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function')
-          ? (A.Decks.resolveDeckByKey(deckKey) || [])
-          : [];
-      } catch(_){}
-      return [];
-    }
-
-

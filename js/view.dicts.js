@@ -439,37 +439,7 @@
         };
       }
 
-            const prepsBtn = document.getElementById('dicts-prepositions');
-      if (prepsBtn){
-        prepsBtn.onclick = ()=>{
-          // аналитика: запуск тренера предлогов из экрана словарей
-          try {
-            if (A.Analytics && typeof A.Analytics.track === 'function') {
-              A.Analytics.track('dict_apply', {
-                kind: 'prepositions',
-                deck_key: String(selectedKey || ''),
-                ui_lang: getUiLang(),
-                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
-              });
-            }
-          } catch(_){ }
-
-          // ВАЖНО: тренер предлогов — виртуальная колода "en_prepositions",
-          // чтобы прогресс/звёзды не смешивались с обычными словарями.
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){}
-          try {
-            A.settings = A.settings || {};
-            // сохраняем реальный выбранный словарь как "последний" (для экранов словарей)
-            A.settings.lastDeckKey = selectedKey;
-            if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
-          } catch(_){}
-          try {
-            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: 'en_prepositions' } }));
-          } catch(_){}
-          goHome();
-        };
-      }
-renderFlagsUI();
+      renderFlagsUI();
     }
 
     // Панель флагов (для фильтрации)
