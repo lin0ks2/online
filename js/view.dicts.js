@@ -67,7 +67,312 @@
 
     // Группировка по языку
     const byLang = allKeys.reduce((acc, key)=>{
-      const show = /^en_prepositions$/i.test(String(selectedKey||'').trim());
+      const lang = (A.Decks.langOfKey && A.Decks.langOfKey(key)) || '';
+      if (!lang) return acc;
+      (acc[lang] || (acc[lang] = [])).push(key);
+      return acc;
+    }, {});
+    const langs = Object.keys(byLang);
+    if (!langs.length){
+      app.innerHTML = `
+        <div class="home home--fixed-card">
+          <section class="card dicts-card dicts-card--fixed">
+            <div class="dicts-header">
+              <h3>${T.title}</h3>
+            </div>
+            <div class="dicts-scroll">
+              <p style="opacity:.7;margin:0;">${T.empty}</p>
+            </div>
+          </section>
+        </div>`;
+      return;
+    }
+
+    // Активный язык для фильтра
+    function loadActiveLang(){
+      try {
+        const s = (A.settings && A.settings.dictsLang);
+        if (s && byLang[s] && byLang[s].length) return s;
+      } catch(_){}
+      return langs[0];
+    }
+    function saveActiveLang(lang){
+      try { if (A.settings) A.settings.dictsLang = lang; } catch(_){}
+    }
+    let activeLang = loadActiveLang();
+
+    // Выбранная строка (кандидат)
+    function loadSelectedKey(){
+      const saved = (A.settings && A.settings.lastDeckKey) || '';
+      if (saved && byLang[activeLang]?.includes(saved)) return saved;
+      return (byLang[activeLang] && byLang[activeLang][0]) || '';
+    }
+    let selectedKey = loadSelectedKey();
+
+    // Надёжный переход «домой»
+    function goHome(){
+      // выставим активную кнопку сразу
+      setFooterActive('home');
+      try {
+        if (window.Router && typeof Router.routeTo === 'function') { Router.routeTo('home'); return; }
+        if (A.Router && typeof A.Router.routeTo === 'function')      { A.Router.routeTo('home'); return; }
+      } catch(_){}
+      const homeBtn = document.querySelector('footer .nav-btn[data-action="home"]');
+      if (homeBtn) { homeBtn.click(); return; }
+      document.body.setAttribute('data-route','home');
+      try { document.dispatchEvent(new Event('lexitron:route-changed')); } catch(_){}
+      try { window.dispatchEvent(new Event('lexitron:route-changed')); } catch(_){}
+    }
+
+    function renderTableForLang(lang){
+      const keysAll = byLang[lang] || [];
+
+      // --- helpers for LearnPunkt split (only for DE) ---
+      const isLP = (k)=> String(k||'').toLowerCase().endsWith('_lernpunkt');
+      const mainKeys = (lang === 'de') ? keysAll.filter(k=>!isLP(k)) : keysAll;
+      const lpKeys   = (lang === 'de') ? keysAll.filter(isLP) : [];
+
+      // selections
+      function loadSelectedKeyScoped(scopeKeys, scopeName){
+        const saved =
+          (A.settings && (
+            scopeName === 'de-main' ? A.settings.dictsSelectedKeyDeMain :
+            scopeName === 'de-lp'   ? A.settings.dictsSelectedKeyDeLP   :
+            A.settings.lastDeckKey
+          )) || '';
+        if (saved && scopeKeys.includes(saved)) return saved;
+        return scopeKeys[0] || '';
+      }
+      let selectedMain = (lang === 'de') ? loadSelectedKeyScoped(mainKeys, 'de-main') : '';
+      let selectedLP   = (lang === 'de') ? loadSelectedKeyScoped(lpKeys,   'de-lp')   : '';
+
+      function saveSelectedKeyScoped(key, scopeName){
+        try{
+          A.settings = A.settings || {};
+          if (scopeName === 'de-main') A.settings.dictsSelectedKeyDeMain = key;
+          else if (scopeName === 'de-lp') A.settings.dictsSelectedKeyDeLP = key;
+          else A.settings.lastDeckKey = key;
+          if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
+        }catch(_){}
+      }
+
+      // active page only for DE
+      let activePage = 0;
+      if (lang === 'de'){
+        try {
+          const p = (A.settings && A.settings.dictsDePage);
+          activePage = (p === 1) ? 1 : 0;
+        } catch(_){}
+      }
+
+      // selectedKey is what будет применяться кнопками
+      let selectedKey = (lang === 'de')
+        ? ((activePage === 1 ? selectedLP : selectedMain) || (mainKeys[0] || lpKeys[0] || ''))
+        : (loadSelectedKey() || '');
+
+      // ensure selection is valid for non-DE
+      if (lang !== 'de'){
+        if (!keysAll.includes(selectedKey)) selectedKey = keysAll[0] || '';
+      }
+
+      function rowsFor(keys, currentSel){
+        return keys.map(key=>{
+          const deck = A.Decks.resolveDeckByKey(key) || [];
+          const flag = A.Decks.flagForKey(key);
+          const name = A.Decks.resolveNameByKey(key);
+          const isSel = (key === currentSel);
+          return `
+            <tr class="dict-row${isSel ? ' is-selected' : ''}" data-key="${key}">
+              <td class="t-center">${flag}</td>
+              <td>${name}</td>
+              <td class="t-center">${deck.length}</td>
+              <td class="t-center">
+                <span class="dicts-preview" title="${T.preview}" data-key="${key}" role="button" aria-label="${T.preview}">👁‍🗨</span>
+              </td>
+            </tr>`;
+        }).join('');
+      }
+
+      // --- render ---
+      if (lang !== 'de'){
+        // 1:1 старое поведение для не-DE
+        if (!keysAll.includes(selectedKey)) selectedKey = keysAll[0] || '';
+
+        const rows = rowsFor(keysAll, selectedKey);
+        app.innerHTML = `
+          <div class="home home--fixed-card">
+            <section class="card dicts-card dicts-card--fixed">
+              <div class="dicts-header">
+                <h3>${T.title}</h3>
+                <div id="dicts-flags" class="dicts-flags"></div>
+              </div>
+
+              <div class="dicts-scroll">
+                <table class="dicts-table">
+                  <tbody>${rows}</tbody>
+                </table>
+              </div>
+
+              <div class="dicts-footer">
+                <div class="dicts-actions">
+                  <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
+                  <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
+                  <button type="button" class="btn-primary" id="dicts-prepositions" style="display:none">${T.preps}</button>
+                </div>
+              </div>
+            </section>
+          </div>`;
+
+      } else {
+        // DE: две страницы (обычные деки + LearnPunkt)
+        const rows0 = mainKeys.length ? rowsFor(mainKeys, selectedMain) : '';
+        const rows1 = lpKeys.length   ? rowsFor(lpKeys,   selectedLP)   : '';
+
+        app.innerHTML = `
+          <div class="home home--fixed-card">
+            <section class="card dicts-card dicts-card--fixed">
+              <div class="dicts-header">
+                <h3>${T.title}</h3>
+                <div id="dicts-flags" class="dicts-flags"></div>
+              </div>
+
+              <div class="dicts-scroll">
+              <div class="stats-pages">
+                <div class="stats-page${activePage===0?' is-active':''}" data-page="0">
+                  <table class="dicts-table" data-scope="de-main">
+                    <tbody>${rows0 || ''}</tbody>
+                  </table>
+                  ${mainKeys.length ? '' : `<p style="opacity:.85;margin:10px 0 0;">${T.empty}</p>`}
+                </div>
+
+                <div class="stats-page${activePage===1?' is-active':''}" data-page="1">
+                  <div style="display:flex;align-items:center;gap:10px;margin:6px 2px 10px;">
+                    <h3 style="margin:0;font-size:18px;">LearnPunkt</h3>
+                  </div>
+                  <table class="dicts-table" data-scope="de-lp">
+                    <tbody>${rows1 || ''}</tbody>
+                  </table>
+                  ${lpKeys.length ? '' : `<p style="opacity:.85;margin:10px 0 0;">${T.empty}</p>`}
+                </div>
+              </div>
+
+              </div>
+
+              <div class="dicts-footer">
+                <div class="stats-pages-dots">
+                  <button type="button" class="stats-page-dot${activePage===0?' is-active':''}" data-page="0" aria-label="Page 1"></button>
+                  <button type="button" class="stats-page-dot${activePage===1?' is-active':''}" data-page="1" aria-label="Page 2"></button>
+                </div>
+
+                <div class="dicts-actions">
+                  <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
+                  <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
+                  <button type="button" class="btn-primary" id="dicts-prepositions" style="display:none">${T.preps}</button>
+                </div>
+              </div>
+            </section>
+          </div>`;
+      }
+
+      // --- handlers ---
+      const card = app.querySelector('.dicts-card');
+      if (!card) return;
+
+      // preview + row selection (delegation per table)
+      card.querySelectorAll('.dicts-table tbody').forEach(tbody=>{
+        tbody.addEventListener('click', (e)=>{
+          const eye = e.target.closest('.dicts-preview');
+          if (eye){
+            e.stopPropagation();
+            openPreview(eye.dataset.key);
+            return;
+          }
+          const row = e.target.closest('.dict-row');
+          if (!row) return;
+          const key = row.dataset.key;
+          if (!key) return;
+
+          // determine scope
+          const table = row.closest('.dicts-table');
+          const scope = table ? table.getAttribute('data-scope') : null;
+
+          if (lang === 'de' && scope === 'de-lp'){
+            selectedLP = key;
+            saveSelectedKeyScoped(key, 'de-lp');
+            // update selection styles in that table only
+            table.querySelectorAll('.dict-row').forEach(r=>r.classList.remove('is-selected'));
+            row.classList.add('is-selected');
+            if (activePage === 1) selectedKey = key;
+          } else if (lang === 'de' && scope === 'de-main'){
+            selectedMain = key;
+            saveSelectedKeyScoped(key, 'de-main');
+            table.querySelectorAll('.dict-row').forEach(r=>r.classList.remove('is-selected'));
+            row.classList.add('is-selected');
+            if (activePage === 0) selectedKey = key;
+          } else {
+            selectedKey = key;
+            saveSelectedKeyScoped(key, 'any');
+            card.querySelectorAll('.dict-row').forEach(r=> r.classList.remove('is-selected'));
+            row.classList.add('is-selected');
+          }
+
+          // аналитика: выбор словаря
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_select_deck', {
+                deck_key: String(key || ''),
+                scope: scope || null,
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(key) || null) : null
+              });
+            }
+          } catch(_){ }
+
+          updateArticlesButton();
+
+
+          updatePrepositionsButton();
+        }, { passive:true });
+      });
+
+      // pager for DE
+      if (lang === 'de'){
+        const dots = card.querySelectorAll('.stats-page-dot');
+        const pages = card.querySelectorAll('.stats-page');
+        dots.forEach(d=>{
+          d.addEventListener('click', ()=>{
+            const p = (d.getAttribute('data-page')|0) ? 1 : 0;
+            if (p === activePage) return;
+            activePage = p;
+
+            // аналитика: переключение страницы (DE / LearnPunkt)
+            try {
+              if (A.Analytics && typeof A.Analytics.track === 'function') {
+                A.Analytics.track('dict_pager_change', {
+                  lang: 'de',
+                  page: activePage,
+                  ui_lang: getUiLang(),
+                  deck_key: String((activePage === 1 ? selectedLP : selectedMain) || selectedKey || '')
+                });
+              }
+            } catch(_){ }
+            try { A.settings = A.settings || {}; A.settings.dictsDePage = activePage; if (typeof A.saveSettings === 'function') A.saveSettings(A.settings); } catch(_){}
+            pages.forEach(pg=>pg.classList.toggle('is-active', (pg.getAttribute('data-page')|0) === activePage));
+            dots.forEach(dd=>dd.classList.toggle('is-active', (dd.getAttribute('data-page')|0) === activePage));
+            selectedKey = (activePage === 1 ? selectedLP : selectedMain) || selectedKey;
+            updateArticlesButton();
+
+            updatePrepositionsButton();
+          }, { passive:true });
+        });
+      }
+
+      function updateArticlesButton(){
+        try{
+          const b = document.getElementById('dicts-articles');
+          if (!b) return;
+          const hasPlugin = !!(A.ArticlesTrainer && A.ArticlesCard);
+          const show = hasPlugin && String(selectedKey || '').toLowerCase().startsWith('de_nouns');
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -77,8 +382,12 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-          // Показываем кнопку пока ТОЛЬКО для английского
-          const show = /^en_prepositions$/i.test(String(selectedKey||'').trim());
+
+          // Кнопка «Предлоги» должна быть доступна ТОЛЬКО на строке словаря предлогов.
+          // Это зеркалит логику «Артикли» (кнопка появляется только на nouns),
+          // и исключает смешение режимов, когда выбран не тот ряд таблицы.
+          const k = String(selectedKey || '').trim();
+          const show = /^en_prepositions_trainer$/i.test(k) || /^en_prepositions$/i.test(k); // совместимость со старым ключом
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -157,18 +466,18 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
+          // ВАЖНО: тренер предлогов работает через отдельную колоду en_prepositions_trainer (и совместим со старым en_prepositions),
           // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
             A.settings = A.settings || {};
-            // запоминаем выбранную строку предлогов
-            A.settings.lastPrepositionsDeckKey = selectedKey;
-            // активный ключ для тренера (тот же, что выбран строкой)
-            A.settings.lastDeckKey = selectedKey;
+            // запоминаем реальный выбранный словарь для возврата/экрана словарей
+            A.settings.preferredReturnKey = selectedKey;
+            // активный ключ для тренера
+            A.settings.lastDeckKey = 'en_prepositions';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions' } })); } catch(_){ }
           goHome();
         };
       }
