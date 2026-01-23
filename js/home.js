@@ -199,6 +199,15 @@ function setUiLang(code){
   }
 
   function getTrainableDeckForKey(deckKey){
+    // Guard: if a prepositions virtual key is accidentally used while not in prepositions mode,
+    // fall back to the last real deck key to avoid "not enough words" loops.
+    try{
+      if (/^[a-z]{2}_prepositions$/i.test(String(deckKey||'').trim()) && !(A.settings && A.settings.trainerKind === 'prepositions')) {
+        const pref = (A.settings && A.settings.preferredReturnKey) ? String(A.settings.preferredReturnKey) : '';
+        if (pref && !/^[a-z]{2}_prepositions$/i.test(pref)) deckKey = pref;
+      }
+    }catch(_){}
+
     const isPrep = isPrepositionsModeForKey(deckKey);
     const mode = isPrep ? 'prepositions' : (isArticlesModeForKey(deckKey) ? 'articles' : 'words');
 

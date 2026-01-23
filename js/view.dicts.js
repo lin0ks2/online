@@ -312,6 +312,16 @@
           } else {
             selectedKey = key;
             saveSelectedKeyScoped(key, 'any');
+            try{
+              if (!/_prepositions$/i.test(String(key||''))) {
+                const lg = (A.Decks && typeof A.Decks.langOfKey==='function') ? (A.Decks.langOfKey(key)||'') : '';
+                if (String(lg).toLowerCase()==='en') {
+                  A.settings = A.settings || {};
+                  A.settings.preferredReturnKey = key;
+                  if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
+                }
+              }
+            }catch(_){ }
             card.querySelectorAll('.dict-row').forEach(r=> r.classList.remove('is-selected'));
             row.classList.add('is-selected');
           }
@@ -367,6 +377,28 @@
         });
       }
 
+      function pickSafeWordsKey(){
+        // If current selection is a virtual prepositions row, fall back to the last real deck key (preferredReturnKey) or first EN deck.
+        try{
+          const cur = String(selectedKey||'');
+          if (!/_prepositions$/i.test(cur)) return cur;
+          const pref = (A.settings && A.settings.preferredReturnKey) ? String(A.settings.preferredReturnKey) : '';
+          if (pref && !/_prepositions$/i.test(pref) && (A.Decks && typeof A.Decks.resolveDeckByKey==='function')) {
+            const d = A.Decks.resolveDeckByKey(pref) || [];
+            if (d && d.length) return pref;
+          }
+          // find first EN non-prepositions deck
+          const all = (A.Decks && typeof A.Decks.keys==='function') ? (A.Decks.keys()||[]) : [];
+          for (let i=0;i<all.length;i++){
+            const k = String(all[i]||'');
+            if (/_prepositions$/i.test(k)) continue;
+            const lg = (A.Decks && typeof A.Decks.langOfKey==='function') ? (A.Decks.langOfKey(k)||'') : '';
+            if (String(lg).toLowerCase()==='en') return k;
+          }
+        }catch(_){}
+        return '';
+      }
+
       function updateArticlesButton(){
         try{
           const b = document.getElementById('dicts-articles');
@@ -384,7 +416,8 @@
           if (!b) return;
           // Показываем кнопку пока ТОЛЬКО для английского
           const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const show = (String(lang||'').toLowerCase() === 'en');
+          const isPrepsRow = /_prepositions$/i.test(String(selectedKey||''));
+          const show = (String(lang||'').toLowerCase() === 'en') && isPrepsRow;
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -402,7 +435,7 @@
             if (A.Analytics && typeof A.Analytics.track === 'function') {
               A.Analytics.track('dict_apply', {
                 kind: 'words',
-                deck_key: String(selectedKey || ''),
+                deck_key: String((pickSafeWordsKey() || selectedKey) || ''),
                 ui_lang: getUiLang(),
                 learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
               });
@@ -412,11 +445,15 @@
           try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){}
           try {
             A.settings = A.settings || {};
-            A.settings.lastDeckKey = selectedKey;
+            const targetKey = pickSafeWordsKey();
+            A.settings.lastDeckKey = targetKey || selectedKey;
+            // remember last real deck key for returning from virtual rows
+            try{ if (targetKey && !/_prepositions$/i.test(String(targetKey))) A.settings.preferredReturnKey = targetKey; }catch(_){ }
             if (typeof A.saveSettings === 'function') { A.saveSettings(A.settings); }
           } catch(_){}
           try {
-            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: selectedKey } }));
+            const targetKey2 = pickSafeWordsKey();
+            document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: (targetKey2 || selectedKey) } }));
           } catch(_){}
           goHome();
         };
@@ -440,7 +477,10 @@
           try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){}
           try {
             A.settings = A.settings || {};
-            A.settings.lastDeckKey = selectedKey;
+            const targetKey = pickSafeWordsKey();
+            A.settings.lastDeckKey = targetKey || selectedKey;
+            // remember last real deck key for returning from virtual rows
+            try{ if (targetKey && !/_prepositions$/i.test(String(targetKey))) A.settings.preferredReturnKey = targetKey; }catch(_){ }
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){}
           try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
@@ -469,7 +509,11 @@
           try {
             A.settings = A.settings || {};
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
-            A.settings.preferredReturnKey = selectedKey;
+            try{
+            if (!/_prepositions$/i.test(String(selectedKey||''))) {
+              A.settings.preferredReturnKey = selectedKey;
+            }
+          }catch(_){ }
             // активный ключ для тренера
             A.settings.lastDeckKey = 'en_prepositions';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
