@@ -801,12 +801,19 @@ function setUiLang(code){
           const key = activeDeckKey();
           const draftLevels = __readDraftLevelsFromSheet();
 
+          // Virtual decks: filtering is not supported.
+          // The sheet already renders an informational block; keep the feasibility hint empty.
+          if (isVirtualDeckKey(key)) {
+            __setApplyEnabled(false);
+            __setFiltersHint('');
+            return;
+          }
+
           // Prepositions trainer: filtering is not supported.
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
-            const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
-            const msg = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
-            __setFiltersHint(`<b>${title}</b><br>${msg}`);
+            // The sheet already renders an informational block; keep the feasibility hint empty.
+            __setFiltersHint('');
             return;
           }
 
