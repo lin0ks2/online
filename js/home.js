@@ -470,73 +470,10 @@ function setUiLang(code){
     const list = document.getElementById('filtersLevelsList');
     if (!overlay || !sheet || !list) return;
 
-    // Prepositions trainer: filters are not available, but the sheet should still open.
-    try {
-      if (isPrepositionsModeForKey(activeDeckKey())) {
-        // hide levels list
-        try { list.style.display = 'none'; } catch(_){}
-        // disable controls
-        try {
-          const applyBtn = document.getElementById('filtersApply');
-          const resetBtn = document.getElementById('filtersReset');
-          if (applyBtn) applyBtn.disabled = true;
-          if (resetBtn) resetBtn.disabled = true;
-        } catch(_){}
-        // hint text
-        try {
-          const uk = getUiLang() === 'uk';
-          __setFiltersHint(uk
-            ? 'Для цього тренера фільтрація недоступна.'
-            : 'Для этого тренера фильтрация недоступна.');
-        } catch(_){}
-      } else {
-        try { list.style.display = ''; } catch(_){}
-        try {
-          const resetBtn = document.getElementById('filtersReset');
-          if (resetBtn) resetBtn.disabled = false;
-        } catch(_){}
-      }
-    } catch(_){}
-
-
-
-    // Keep the sheet above the fixed bottom navigation (tabbar/footer).
-    // We do it here (on open) to support dynamic layouts and both themes.
-    try {
-      const h = (function(){
-        const candidates = [
-          '#bottomNav', '#bottomBar', '#tabbar', '#tabs',
-          '.bottom-nav', '.bottomBar', '.tabbar', '.tabs',
-          '.app-footer', '.footer-nav', '.footerBar',
-          'footer'
-        ];
-        let best = 0;
-        for (const sel of candidates){
-          const el = document.querySelector(sel);
-          if (!el) continue;
-          const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
-          const hh = r ? Math.round(r.height) : (el.offsetHeight || 0);
-          if (hh <= 0) continue;
-
-          // Heuristic: we only want fixed/sticky bottom bars.
-          let pos = '';
-          try { pos = String(getComputedStyle(el).position || '').toLowerCase(); } catch(_){ pos = ''; }
-          if (pos && pos !== 'fixed' && pos !== 'sticky') continue;
-
-          // Another heuristic: it must be close to the viewport bottom.
-          try {
-            if (r && r.bottom < (window.innerHeight - 8)) continue;
-          } catch(_){ }
-
-          best = Math.max(best, hh);
-        }
-        return best;
-      })();
-      // If not found, keep the CSS default.
-      if (h && Number.isFinite(h) && h > 0) {
-        document.documentElement.style.setProperty('--mm-filters-bottom-offset', `${h}px`);
-      }
-    } catch(_){ }
+    // NOTE: Do not special-case the prepositions trainer here.
+    // Prepositions / virtual-decks behavior is handled later in this function
+    // by injecting a dedicated notice block and disabling Apply/Reset.
+    try { list.style.display = ''; } catch(_){ }
 
     const key = activeDeckKey();
     const studyLang = getStudyLangForKey(key) || 'xx';
@@ -801,19 +738,12 @@ function setUiLang(code){
           const key = activeDeckKey();
           const draftLevels = __readDraftLevelsFromSheet();
 
-          // Virtual decks: filtering is not supported.
-          // The sheet already renders an informational block; keep the feasibility hint empty.
-          if (isVirtualDeckKey(key)) {
-            __setApplyEnabled(false);
-            __setFiltersHint('');
-            return;
-          }
-
           // Prepositions trainer: filtering is not supported.
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
-            // The sheet already renders an informational block; keep the feasibility hint empty.
-            __setFiltersHint('');
+            const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
+            const msg = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
+            __setFiltersHint(`<b>${title}</b><br>${msg}`);
             return;
           }
 
@@ -1937,15 +1867,8 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always).
-          // For prepositions we wait until the audio ends before moving to the next question,
-          // so the user can read and listen to the completed sentence.
-          let __ttsDone = null;
-          try {
-            if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
-              __ttsDone = A.AudioTTS.onCorrect();
-            }
-          } catch(_eTTS) { __ttsDone = null; }
+          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
+          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
 
 
           // аналитика: ответ в тренере
@@ -1963,25 +1886,12 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
-
-          const __goNext = () => {
-            renderSets();
-            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-              try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){ }
-            } else {
-              renderTrainer();
-            }
-          };
-
-          // In prepositions mode: wait for TTS to finish (if it actually started),
-          // then add a small grace period so the user can see the filled blank.
-          if (isPrepositionsModeForKey(key) && __ttsDone && typeof __ttsDone.then === 'function') {
-            __ttsDone.finally(function () {
-              setTimeout(__goNext, 250);
-            });
-          } else {
-            setTimeout(__goNext, ADV_DELAY);
-          }
+          setTimeout(() => { renderSets();
+        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
+        } else {
+          renderTrainer();
+        } }, ADV_DELAY);
           return;
         }
 
