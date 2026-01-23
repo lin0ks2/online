@@ -193,7 +193,7 @@ function setUiLang(code){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
       return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions_trainer$/i.test(String(base || '').trim());
+        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }
@@ -207,6 +207,14 @@ function setUiLang(code){
       try {
         return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
       } catch(_){}
+      return [];
+    }
+
+    // Prepositions mode: ignore filters even for real decks (avoid 'not enough words' loop)
+    if (isPrep) {
+      try {
+        return (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      } catch(_){ }
       return [];
     }
 
@@ -1560,7 +1568,7 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
-      && /^en_prepositions_trainer$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
+      && /^en_prepositions$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
       && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
 
 

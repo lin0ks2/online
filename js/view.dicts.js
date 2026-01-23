@@ -125,7 +125,13 @@
     }
 
     function renderTableForLang(lang){
-      const keysAll = byLang[lang] || [];
+      const keysAllRaw = byLang[lang] || [];
+      // Hide real *_prepositions decks everywhere except EN (we will use EN prepositions row as entry-point)
+      const isPrepsDeck = (k)=> /_prepositions$/i.test(String(k||'').trim());
+      const keysAll = (String(lang||'').toLowerCase() === 'en')
+        ? keysAllRaw.filter(k=> !isPrepsDeck(k) || String(k).toLowerCase()==='en_prepositions')
+        : keysAllRaw.filter(k=> !isPrepsDeck(k));
+
 
       // --- helpers for LearnPunkt split (only for DE) ---
       const isLP = (k)=> String(k||'').toLowerCase().endsWith('_lernpunkt');
@@ -382,10 +388,11 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-
-          // Кнопка "Предлоги" доступна ТОЛЬКО если выбрана строка тренера предлогов.
-          const key = String(selectedKey || '');
-          const show = /_prepositions_trainer$/i.test(key);
+          // Показываем кнопку только на строке предлогов (EN)
+          const baseKey = (extractBaseFromVirtual ? (extractBaseFromVirtual(selectedKey) || selectedKey) : selectedKey);
+          const k = String(baseKey||'').trim().toLowerCase();
+          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(baseKey) || null) : null;
+          const show = (String(lang||'').toLowerCase() === 'en') && (k === 'en_prepositions');
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -464,18 +471,17 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions_trainer,
+          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
           // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
             A.settings = A.settings || {};
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
-            A.settings.preferredReturnKey = selectedKey;
-            // активный ключ для тренера
-            A.settings.lastDeckKey = 'en_prepositions_trainer';
+            // активный ключ для тренера (строка 'Предлоги' в словарях)
+            A.settings.lastDeckKey = selectedKey;
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions_trainer' } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){ }
           goHome();
         };
       }
