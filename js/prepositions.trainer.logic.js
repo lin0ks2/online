@@ -13,11 +13,11 @@
   A.Prepositions = A.Prepositions || {};
 
   function isPrepositionsDeckKey(key){
-    return /^([a-z]{2})_prepositions_trainer$/i.test(String(key||'').trim());
+    return /^([a-z]{2})_prepositions$/i.test(String(key||'').trim());
   }
 
   function langOfPrepositionsKey(key){
-    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions_trainer$/i);
+    var m = String(key||'').trim().match(/^([a-z]{2})_prepositions$/i);
     return m ? m[1].toLowerCase() : null;
   }
 
@@ -55,13 +55,14 @@
         deck.push({
           id: String(p.id),
           // term (верхняя строка) — фраза с пропуском
+          word: sentence,
+          // fallback for legacy renderers
           de: sentence,
-          // Для экранов Избранное/Мои ошибки (таблица Word/Translation)
-          // используем корректный предлог как "перевод".
-          ru: String(p.answer || "").trim(),
-          uk: String(p.answer || "").trim(),
           // корректный ответ (предлог)
           _prepCorrect: String(p.answer || '').trim(),
+          // preview translation columns (RU/UA i18n only; store answer as value)
+          ru: String(p.answer || '').trim(),
+          uk: String(p.answer || '').trim(),
           // язык для выбора отвлекалок
           _prepLang: lang
         });

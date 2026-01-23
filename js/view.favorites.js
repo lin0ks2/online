@@ -64,6 +64,16 @@
       let baseKeys = Object.keys(decks)
         .filter(k => Array.isArray(decks[k]) && !/^favorites:|^mistakes:/i.test(k));
 
+      // Prepositions trainer (virtual): include it in favorites list only for EN
+      try{
+        if (TL==='en' && window.App && App.Decks && typeof App.Decks.resolveDeckByKey==='function'){
+          const pk = 'en_prepositions_trainer';
+          const pd = App.Decks.resolveDeckByKey(pk) || [];
+          if (pd.length && baseKeys.indexOf(pk)===-1) baseKeys.push(pk);
+        }
+      }catch(_){}
+
+
       // Articles mode: do NOT mix base and LearnPunkt decks in lists (prevents "leak" illusion)
       if (isArticlesMode()){
         const grp = currentArticlesGroup();
