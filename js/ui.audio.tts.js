@@ -82,6 +82,16 @@
   }
 
   function getCurrentWord() {
+    // Для тренера предлогов озвучиваем ТО, что реально показано на экране.
+    // Это важно, потому что после верного ответа в фразу вставляется предлог.
+    try {
+      if (isPrepositionsMode()) {
+        var el = document.querySelector('.trainer-word');
+        var t = el ? (el.textContent || '') : '';
+        return String(t || '').replace(/\s+/g, ' ').trim();
+      }
+    } catch (e) {}
+
     var w = A.__currentWord || null;
     if (!w) return '';
     var raw = w.wordBasic || w.word || '';
@@ -140,17 +150,21 @@
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // Prepositions trainer: no audio button at all (even after correct answer).
+    // В тренере предлогов НЕ добавляем кнопку внутрь .trainer-word,
+    // чтобы ничего не "прилипало" к тексту фразы.
+    var hostEl = wordEl;
     if (isPrepositionsMode()) {
+      hostEl = document.querySelector('.home-trainer') || wordEl;
+
+      // если раньше кнопка уже была вставлена в .trainer-word — удаляем
       try {
-        var existing = wordEl.querySelector('.trainer-audio-btn');
-        if (existing) existing.remove();
+        var oldInside = wordEl.querySelector('.trainer-audio-btn');
+        if (oldInside) oldInside.remove();
       } catch (e) {}
-      return;
     }
 
-    // ищем кнопку ВНУТРИ .trainer-word
-    var btn = wordEl.querySelector('.trainer-audio-btn');
+    // ищем кнопку в выбранном хосте
+    var btn = hostEl.querySelector('.trainer-audio-btn');
 
     if (!btn) {
       btn = document.createElement('button');
@@ -174,7 +188,7 @@
         updateButtonIcon(btn);
       });
 
-      wordEl.appendChild(btn);
+      hostEl.appendChild(btn);
     }
 
     updateButtonIcon(btn);
@@ -182,7 +196,7 @@
     // Автоозвучка нового слова — только для word-trainer в прямом режиме.
     // В articles-режиме и в режиме обратного перевода автоозвучку отключаем,
     // чтобы звук не превращался в подсказку.
-    if (!isArticlesMode() && !isReverseMode()) {
+    if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) {
       var word = getCurrentWord();
       if (word && audioEnabled && word !== lastAutoSpokenWord) {
         lastAutoSpokenWord = word;
@@ -285,7 +299,7 @@
     // - articles trainer: всегда
     // - word trainer: только в режиме обратного перевода (чтобы не было подсказки при показе вопроса)
     A.AudioTTS.onCorrect = function () {
-      if (!isArticlesMode() && !isReverseMode()) return;
+      if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return;
       if (!A.isPro || !A.isPro()) return;
       if (!audioEnabled) return;
       try {
