@@ -463,13 +463,18 @@
             }
           } catch(_){ }
 
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){}
+          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
+          // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
             A.settings = A.settings || {};
-            A.settings.lastDeckKey = selectedKey;
+            // запоминаем реальный выбранный словарь для возврата/экрана словарей
+            A.settings.preferredReturnKey = selectedKey;
+            // активный ключ для тренера
+            A.settings.lastDeckKey = 'en_prepositions';
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
-          } catch(_){}
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
+          } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions' } })); } catch(_){ }
           goHome();
         };
       }
