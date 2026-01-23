@@ -26,8 +26,9 @@
       trans:   uk ? 'Переклад' : 'Перевод',
       close:   uk ? 'Закрити' : 'Закрыть',
       // This button starts the default word trainer
-      ok:      uk ? 'Вчити слова' : 'Учить слова',
-      articles: uk ? 'Вчити артиклі' : 'Учить артикли'
+      ok:      uk ? 'Слова' : 'Слова',
+      articles: uk ? 'Артиклі' : 'Артикли',
+      preps:   uk ? 'Прийменники' : 'Предлоги'
     };
   }
 
@@ -216,6 +217,7 @@
                 <div class="dicts-actions">
                   <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
                   <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
+                  <button type="button" class="btn-primary" id="dicts-prepositions" style="display:none">${T.preps}</button>
                 </div>
               </div>
             </section>
@@ -265,6 +267,7 @@
                 <div class="dicts-actions">
                   <button type="button" class="btn-primary" id="dicts-apply">${T.ok}</button>
                   <button type="button" class="btn-primary" id="dicts-articles" style="display:none">${T.articles}</button>
+                  <button type="button" class="btn-primary" id="dicts-prepositions" style="display:none">${T.preps}</button>
                 </div>
               </div>
             </section>
@@ -326,7 +329,9 @@
           } catch(_){ }
 
           updateArticlesButton();
-            updatePrepositionsButton();
+
+
+          updatePrepositionsButton();
         }, { passive:true });
       });
 
@@ -356,6 +361,8 @@
             dots.forEach(dd=>dd.classList.toggle('is-active', (dd.getAttribute('data-page')|0) === activePage));
             selectedKey = (activePage === 1 ? selectedLP : selectedMain) || selectedKey;
             updateArticlesButton();
+
+            updatePrepositionsButton();
           }, { passive:true });
         });
       }
@@ -384,6 +391,8 @@
 
 // primary sync
       updateArticlesButton();
+
+      updatePrepositionsButton();
 
       const ok = document.getElementById('dicts-apply');
       if (ok){
@@ -429,6 +438,32 @@
           } catch(_){ }
 
           try { A.settings = A.settings || {}; A.settings.trainerKind = "articles"; } catch(_){}
+          try {
+            A.settings = A.settings || {};
+            A.settings.lastDeckKey = selectedKey;
+            if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
+          } catch(_){}
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: selectedKey } })); } catch(_){}
+          goHome();
+        };
+      }
+
+      const prepsBtn = document.getElementById('dicts-prepositions');
+      if (prepsBtn){
+        prepsBtn.onclick = ()=>{
+          // аналитика: запуск тренера предлогов из экрана словарей
+          try {
+            if (A.Analytics && typeof A.Analytics.track === 'function') {
+              A.Analytics.track('dict_apply', {
+                kind: 'prepositions',
+                deck_key: String(selectedKey || ''),
+                ui_lang: getUiLang(),
+                learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null
+              });
+            }
+          } catch(_){ }
+
+          try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){}
           try {
             A.settings = A.settings || {};
             A.settings.lastDeckKey = selectedKey;
