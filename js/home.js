@@ -1068,56 +1068,27 @@ function setUiLang(code){
 
 
   function setDictStatsText(statsEl, deckKey){
-  if(!statsEl) return;
+    try{
+      if (!statsEl) return;
+      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
-  const lang = getActiveLang();
-  const maxStars = (A.App && A.App.starsMax) ? A.App.starsMax : 5;
+      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
 
-  // Prepositions: показываем статистику по паттернам (уникальным заданиям), а не по словам/вариантам.
-  if(typeof isPrepositionsModeForKey === 'function' && isPrepositionsModeForKey(deckKey)){
-    const items = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-    const uniq = new Map();
-    for(const w of items){
-      const id = w && (w.id ?? w.key ?? w.de ?? w.en);
-      if(id == null) continue;
-      if(!uniq.has(id)) uniq.set(id, w);
-    }
-    const total = uniq.size || items.length;
-    let learned = 0;
-
-    for(const w of uniq.values()){
-      const starKey = (typeof getStarKey === 'function') ? getStarKey(deckKey, w) : null;
-      const v = starKey ? Number((A.state && A.state.stars && A.state.stars[starKey]) || 0) : 0;
-      if(v >= maxStars) learned++;
-    }
-
-    if(lang === 'uk') statsEl.textContent = `Всього патернів: ${total} / Вивчено: ${learned}`;
-    else if(lang === 'en') statsEl.textContent = `Total patterns: ${total} / Learned: ${learned}`;
-    else statsEl.textContent = `Всего паттернов: ${total} / Выучено: ${learned}`;
-    return;
+      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
+      const uk = getUiLang() === 'uk';
+      if (isArticles) {
+        const learnedA = countLearnedArticles(full, deckKey);
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
+      } else {
+        statsEl.style.display = '';
+        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
+                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+      }
+    }catch(_){}
   }
-
-  // Articles: считаем по словам (уникальные леммы), как и раньше.
-  if(typeof isArticlesDeckKey === 'function' && isArticlesDeckKey(deckKey)){
-    const words = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-    const total = words.length;
-    const learned = words.filter(w => typeof isLearned === 'function' ? isLearned(deckKey, w) : false).length;
-
-    if(lang === 'uk') statsEl.textContent = `Всього слів: ${total} / Вивчено: ${learned}`;
-    else if(lang === 'en') statsEl.textContent = `Total words: ${total} / Learned: ${learned}`;
-    else statsEl.textContent = `Всего слов: ${total} / Выучено: ${learned}`;
-    return;
-  }
-
-  // Words trainer (обычные словари)
-  const words = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-  const total = words.length;
-  const learned = words.filter(w => typeof isLearned === 'function' ? isLearned(deckKey, w) : false).length;
-
-  if(lang === 'uk') statsEl.textContent = `Всього слів: ${total} / Вивчено: ${learned}`;
-  else if(lang === 'en') statsEl.textContent = `Total words: ${total} / Learned: ${learned}`;
-  else statsEl.textContent = `Всего слов: ${total} / Выучено: ${learned}`;
-}
 
 
 // Выбор активного словаря
@@ -1924,22 +1895,28 @@ if (wantArticles) {
     try {
       if (stats) {
         const uk = getUiLang() === 'uk';
-        if (isPrepositionsModeForKey(key)) {
-          // Всего паттернов считаем по уникальным id в data (30), а "выучено" — по звёздам.
-          const deckAll = getTrainableDeckForKey(key) || [];
-          const uniq = {};
-          for (let i=0; i<deckAll.length; i++){
-            const w = deckAll[i];
-            if (!w || w.id == null) continue;
-            uniq[String(w.id)] = true;
-          }
-          const total = Object.keys(uniq).length;
-          let learned = 0;
-          for (const pid in uniq){
-            try {
-              if (isLearned({ id: pid }, key)) learned++;
-            } catch(_){}
-          }
+	        if (isPrepositionsModeForKey(key)) {
+	          // Всего паттернов считаем по ВСЕЙ деке (все сеты), а "выучено" — по звёздам.
+	          // Важно: getTrainableDeckForKey() в режиме предлогов может возвращать только активный сет,
+	          // поэтому для общего счётчика берём исходную деку напрямую.
+	          const deckAll = (A && A.Decks && typeof A.Decks.resolveDeckByKey === 'function'
+	            ? (A.Decks.resolveDeckByKey(key) || [])
+	            : (getTrainableDeckForKey(key) || []));
+	          // "Всего" — количество строк в деке (все паттерны/примеры).
+	          // "Выучено" — по уникальным id (звёзды/прогресс на уровне паттерна).
+	          const total = deckAll.length;
+	          const uniqIds = {};
+	          for (let i = 0; i < deckAll.length; i++) {
+	            const w = deckAll[i];
+	            if (!w || w.id == null) continue;
+	            uniqIds[String(w.id)] = true;
+	          }
+	          let learned = 0;
+	          for (const pid in uniqIds) {
+	            try {
+	              if (isLearned({ id: pid }, key)) learned++;
+	            } catch (_) {}
+	          }
           stats.textContent = uk
             ? `Усього патернів: ${total} / Вивчено: ${learned}`
             : `Всего паттернов: ${total} / Выучено: ${learned}`;
