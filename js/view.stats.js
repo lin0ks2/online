@@ -141,10 +141,11 @@
     try {
       var store = (A.state && A.state.activity) || {};
       var langMap = store[langCode];
-      if (!langMap) return { words: 0, articles: 0, total: 0 };
+      if (!langMap) return { words: 0, articles: 0, prepositions: 0, total: 0 };
 
       var words = 0;
       var articles = 0;
+      var prepositions = 0;
       var total = 0;
 
       Object.keys(langMap).forEach(function (dateKey) {
@@ -152,16 +153,22 @@
         total += Number(row.seconds || 0);
         words += Number(row.wordsSeconds || 0);
         articles += Number(row.articlesSeconds || 0);
+        prepositions += Number(row.prepositionsSeconds || 0);
       });
 
-      // Фолбэк для старых данных: если wordsSeconds нет, но total есть — считаем остаток.
-      if (words <= 0 && total > 0 && articles > 0) {
+      // Fallback for older data:
+      // 1) If split fields are missing but total exists — count everything as 'words' (avoid zeros in the ring).
+      // 2) Legacy words+articles format — count words as (total - articles) when wordsSeconds is missing.
+      var splitSum = words + articles + prepositions;
+      if (splitSum <= 0 && total > 0) {
+        words = total;
+      } else if (words <= 0 && total > 0 && articles > 0 && prepositions <= 0) {
         words = Math.max(0, total - articles);
       }
 
-      return { words: words, articles: articles, total: total };
+      return { words: words, articles: articles, prepositions: prepositions, total: total };
     } catch (_) {
-      return { words: 0, articles: 0, total: 0 };
+      return { words: 0, articles: 0, prepositions: 0, total: 0 };
     }
   }
 
