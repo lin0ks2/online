@@ -1067,28 +1067,67 @@ function setUiLang(code){
   }
 
 
-  function setDictStatsText(statsEl, deckKey){
-    try{
-      if (!statsEl) return;
-      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+  function setDictStatsText(statsEl, deckKey) {
+  try {
+    if (!statsEl) return;
 
-      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+    const kind = (A.Trainer && A.Trainer.getTrainerKind) ? A.Trainer.getTrainerKind() : '';
+    const isArticles = (kind === 'articles');
+    const isPreps = (typeof isPrepositionsModeForKey === 'function') ? isPrepositionsModeForKey(deckKey) : false;
 
-      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
-      const uk = getUiLang() === 'uk';
-      if (isArticles) {
-        const learnedA = countLearnedArticles(full, deckKey);
-        statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
-      } else {
-        statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+    let total = 0;
+    let learned = 0;
+
+    if (isArticles) {
+      // Articles: we already store learned counter in a specialized way.
+      total = (A.Trainer && A.Trainer.getDeckTotal) ? A.Trainer.getDeckTotal(deckKey) : 0;
+      learned = (typeof countLearnedArticles === 'function') ? countLearnedArticles(deckKey) : 0;
+
+      const labelTotal = (currentLang() === 'uk') ? 'Всього слів:' : 'Всего слов:';
+      const labelLearned = (currentLang() === 'uk') ? 'Вивчено:' : 'Выучено:';
+      statsEl.textContent = `${labelTotal} ${total} / ${labelLearned} ${learned}`;
+      statsEl.style.display = '';
+      return;
+    }
+
+    if (isPreps) {
+      // Prepositions: deck contains 1 row per example, but progress is per pattern (unique id).
+      const deckAll = (A.Dict && A.Dict.getDeck) ? (A.Dict.getDeck(deckKey) || []) : [];
+      const uniq = new Set();
+      for (const it of deckAll) {
+        if (!it) continue;
+        const id = (it.id != null) ? String(it.id) : '';
+        if (id) uniq.add(id);
       }
-    }catch(_){}
+
+      total = uniq.size;
+
+      const starsMax = (A.Trainer && A.Trainer.starsMax) ? A.Trainer.starsMax() : 5;
+      for (const id of uniq) {
+        const sk = (typeof starKey === 'function') ? starKey(id, deckKey) : (deckKey + ':' + id);
+        const s = (A.state && A.state.stars && (A.state.stars[sk] != null)) ? A.state.stars[sk] : 0;
+        if (s >= starsMax) learned++;
+      }
+
+      const labelTotal = (currentLang() === 'uk') ? 'Всього патернів:' : 'Всего паттернов:';
+      const labelLearned = (currentLang() === 'uk') ? 'Вивчено:' : 'Выучено:';
+      statsEl.textContent = `${labelTotal} ${total} / ${labelLearned} ${learned}`;
+      statsEl.style.display = '';
+      return;
+    }
+
+    // Default words mode.
+    total = (A.Trainer && A.Trainer.getDeckTotal) ? A.Trainer.getDeckTotal(deckKey) : 0;
+    learned = (A.Trainer && A.Trainer.getLearnedCount) ? A.Trainer.getLearnedCount(deckKey) : 0;
+
+    const labelTotal = (currentLang() === 'uk') ? 'Всього слів:' : 'Всего слов:';
+    const labelLearned = (currentLang() === 'uk') ? 'Вивчено:' : 'Выучено:';
+    statsEl.textContent = `${labelTotal} ${total} / ${labelLearned} ${learned}`;
+    statsEl.style.display = '';
+  } catch (e) {
+    // fail-safe: do not break UI
   }
+}
 
 
 // Выбор активного словаря
