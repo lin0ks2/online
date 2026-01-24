@@ -386,7 +386,11 @@
           if (!b) return;
           // Показываем кнопку пока ТОЛЬКО для английского
           const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const show = (String(lang||'').toLowerCase() === 'en');
+          const isPrepsDeck = (window.A && A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function')
+            ? !!A.Prepositions.isPrepositionsDeckKey(selectedKey)
+            : /_prepositions$/i.test(String(selectedKey||''));
+          // Показываем кнопку "Учить предлоги" ТОЛЬКО когда выбрана дека предлогов (en_prepositions).
+          const show = (String(lang||'').toLowerCase() === 'en') && isPrepsDeck;
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }

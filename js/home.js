@@ -1263,10 +1263,12 @@ function activeDeckKey() {
           <p class="sets-stats" id="setStats"></p>
         </section>
 
+        ${isPrepositionsModeForKey(key) ? '' : `
         <!-- ЗОНА 2: Подсказки -->
-        <section class="card home-hints${isPrepositionsModeForKey(activeDeckKey()) ? ' mm-hints-placeholder' : ''}">
+        <section class="card home-hints">
           <div class="hints-body" id="hintsBody"></div>
         </section>
+        `}
 
         <!-- ЗОНА 3: Тренер -->
         <section class="card home-trainer">
