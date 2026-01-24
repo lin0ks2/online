@@ -205,7 +205,14 @@
     // 5 карточек на один patternId. В «Мои ошибки» мы считаем единицей именно pattern,
     // поэтому при сборке ошибки-декы дедуплицируем по id.
     try {
-      if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(baseDeckKey)) {
+      var isPrepsKey = false;
+      if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') {
+        isPrepsKey = !!A.Prepositions.isAnyPrepositionsKey(baseDeckKey);
+      } else {
+        // fallback for older bases
+        isPrepsKey = (baseDeckKey === 'en_prepositions_trainer');
+      }
+      if (isPrepsKey) {
         const seen = new Set();
         filtered = filtered.filter(w => {
           const id = String(w && w.id);
