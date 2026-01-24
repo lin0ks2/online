@@ -1695,6 +1695,11 @@ function renderTrainer() {
     // UI: Reverse toggle is not applicable to articles.
     syncReverseToggleAvailability(wantArticles || wantPrepositions);
     syncContextToggleAvailability(wantPrepositions);
+    // Prepositions: mark trainer card to allow stable layout (reserve space for 2-line pattern)
+    try {
+      const __trainerCard = document.querySelector('.home-trainer');
+      if (__trainerCard) __trainerCard.classList.toggle('home-trainer--preps', !!wantPrepositions);
+    } catch(_){ }
 
 
 if (wantArticles) {
