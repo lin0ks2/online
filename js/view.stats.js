@@ -24,7 +24,23 @@
       title: (i && i.statsTitle) || (uk ? 'Статистика' : 'Статистика'),
       coreTitle: uk ? 'Основні частини мови' : 'Основные части речи',
       otherTitle: uk ? 'Інші частини мови' : 'Другие части речи',
-      splitTitle: uk ? 'Вивчено: переклади vs артиклі' : 'Выучено: переводы vs артикли',
+      splitTitleDe: uk
+        ? 'Вивчено: переклади vs артиклі vs прийменники'
+        : 'Выучено: переводы vs артикли vs предлоги',
+      splitTitleEn: uk
+        ? 'Вивчено: слова vs прийменники'
+        : 'Выучено: слова vs предлоги',
+      splitCardWords: uk ? 'Переклади' : 'Переводы',
+      splitCardArticles: uk ? 'Артиклі' : 'Артикли',
+      splitCardPreps: uk ? 'Прийменники' : 'Предлоги',
+      splitCardTime: uk ? 'Час у тренері' : 'Время в тренере',
+      splitCardLearnedWords: uk ? 'Вивчено слів з перекладами' : 'Выучено слов с переводами',
+      splitCardLearnedArticles: uk ? 'Вивчено слів з артиклями' : 'Выучено слов с артиклями',
+      splitCardLearnedPreps: uk ? 'Вивчено патернів' : 'Выучено паттернов',
+      splitLabelTime: uk ? 'Час у тренері' : 'Время в тренере',
+      splitLabelLearnedWords: uk ? 'Вивчено слів з перекладами' : 'Выучено слов с переводами',
+      splitLabelLearnedArticles: uk ? 'Вивчено слів з артиклями' : 'Выучено слов с артиклями',
+      splitLabelLearnedPreps: uk ? 'Вивчено патернів' : 'Выучено паттернов',
       activityTitle: uk ? 'Активність' : 'Активность',
       activityTitleAll: uk ? 'Активність (усі мови)' : 'Активность (все языки)',
       activityNoData: uk
@@ -260,26 +276,30 @@ function countLearnedWordsByLang(langCode) {
     // Диаграмма на этой странице должна показывать не время,
     // а сравнение «выучено переводов слов» vs «выучено слов с артиклями».
     var split = sumSplitSecondsByLang(langCode);
-    var learnedArticles = countLearnedArticlesByLang(langCode);
+    var hasArticles = String(langCode || '').toLowerCase() === 'de';
+    var learnedArticles = hasArticles ? countLearnedArticlesByLang(langCode) : 0;
     var learnedWords = countLearnedWordsByLang(langCode);
     var learnedPreps = countLearnedPrepositionsByLang(langCode);
 
-    var totalLearned = learnedWords + learnedArticles + learnedPreps;
+    var totalLearned = learnedWords + learnedPreps + (hasArticles ? learnedArticles : 0);
     if (!totalLearned) totalLearned = 1;
 
-    var pArticles = Math.round((learnedArticles / totalLearned) * 100);
+    var pArticles = hasArticles ? Math.round((learnedArticles / totalLearned) * 100) : 0;
     var pPreps    = Math.round((learnedPreps / totalLearned) * 100);
     // остаток отдаём словам, чтобы сумма всегда была 100
     var pWords    = 100 - pArticles - pPreps;
 
     var uk = getUiLang() === 'uk';
 
-    // Используем тот же "кольцевой" визуал 1:1 (layers + legend), только 2 сегмента.
+    // Используем тот же "кольцевой" визуал 1:1 (layers + legend).
+    // DE: переводы + артикли + предлоги; EN: слова + предлоги.
     var buckets = [
-      { key: 'words', label: uk ? 'Переклади' : 'Переводы', value: learnedWords, percent: pWords, color: 'var(--stats-color-verbs, #0ea5e9)' },
-      { key: 'articles', label: uk ? 'Артиклі' : 'Артикли', value: learnedArticles, percent: pArticles, color: 'var(--stats-color-nouns, #22c55e)' },
-      { key: 'prepositions', label: uk ? 'Прийменники' : 'Предлоги', value: learnedPreps, percent: pPreps, color: 'var(--stats-color-prepositions, #a855f7)' }
+      { key: 'words', label: texts.splitCardWords, value: learnedWords, percent: pWords, color: 'var(--stats-color-verbs, #0ea5e9)' },
     ];
+    if (hasArticles) {
+      buckets.push({ key: 'articles', label: texts.splitCardArticles, value: learnedArticles, percent: pArticles, color: 'var(--stats-color-nouns, #22c55e)' });
+    }
+    buckets.push({ key: 'prepositions', label: texts.splitCardPreps, value: learnedPreps, percent: pPreps, color: 'var(--stats-color-prepositions, #a855f7)' });
 
     var layersHtml = buckets.map(function (b, idx) {
       var angle = degreesFromPercent(b.percent);
@@ -301,34 +321,38 @@ function countLearnedWordsByLang(langCode) {
       );
     }).join('');
 
-    // Метрики под легендой: две строки (артикли / переводы) и две колонки (выучено / время).
-    var extraHtml =
-      '<div class="stats-split-metrics">' +
+    // Метрики под легендой: для DE — 3 строки (артикли/переводы/предлоги), для EN — 2 строки (переводы/предлоги).
+    function metricsRow(title, learnedLabel, learnedVal, timeVal) {
+      return (
         '<div class="stats-split-metrics__row">' +
           '<div class="stats-split-metrics__cell">' +
-            '<div class="stats-split-metrics__label">' + (uk ? 'Вивчено слів з артиклями' : 'Выучено слов с артиклями') + '</div>' +
-            '<div class="stats-split-metrics__value">' + learnedArticles + '</div>' +
+            '<div class="stats-split-metrics__label">' + learnedLabel + '</div>' +
+            '<div class="stats-split-metrics__value">' + learnedVal + '</div>' +
           '</div>' +
           '<div class="stats-split-metrics__cell">' +
-            '<div class="stats-split-metrics__label">' + (uk ? 'Час у тренері артиклів' : 'Время в тренере артиклей') + '</div>' +
-            '<div class="stats-split-metrics__value">' + formatMinutes(split.articles) + '</div>' +
+            '<div class="stats-split-metrics__label">' + texts.splitCardTime + ' — ' + title + '</div>' +
+            '<div class="stats-split-metrics__value">' + timeVal + '</div>' +
           '</div>' +
-        '</div>' +
-        '<div class="stats-split-metrics__row">' +
-          '<div class="stats-split-metrics__cell">' +
-            '<div class="stats-split-metrics__label">' + (uk ? 'Вивчено слів з перекладами' : 'Выучено слов с переводами') + '</div>' +
-            '<div class="stats-split-metrics__value">' + learnedWords + '</div>' +
-          '</div>' +
-          '<div class="stats-split-metrics__cell">' +
-            '<div class="stats-split-metrics__label">' + (uk ? 'Час у тренері перекладів' : 'Время в тренере переводов') + '</div>' +
-            '<div class="stats-split-metrics__value">' + formatMinutes(split.words) + '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
+        '</div>'
+      );
+    }
+
+    var rows = [];
+    if (langCode === 'de') {
+      rows.push(metricsRow(texts.splitCardArticles, texts.splitCardLearnedArticles, learnedArticles, formatMinutes(split.articles)));
+      rows.push(metricsRow(texts.splitCardWords, texts.splitCardLearnedWords, learnedWords, formatMinutes(split.words)));
+      rows.push(metricsRow(texts.splitCardPreps, texts.splitCardLearnedPreps, learnedPreps, formatMinutes(split.prepositions)));
+    } else {
+      // EN и прочие языки (если тренер предлогов включён): переводы + предлоги.
+      rows.push(metricsRow(texts.splitCardWords, texts.splitCardLearnedWords, learnedWords, formatMinutes(split.words)));
+      rows.push(metricsRow(texts.splitCardPreps, texts.splitCardLearnedPreps, learnedPreps, formatMinutes(split.prepositions)));
+    }
+
+    var extraHtml = '<div class="stats-split-metrics">' + rows.join('') + '</div>';
 
     return (
       '<div class="stats-ring-set stats-ring-set--split">' +
-        '<div class="stats-ring-set__title">' + texts.splitTitle + '</div>' +
+        '<div class="stats-ring-set__title">' + (langCode === 'de' ? texts.splitTitleDe : texts.splitTitleEn) + '</div>' +
         '<div class="stats-ring-set__circle">' +
           '<div class="stats-ring-set__circle-inner">' + layersHtml + '</div>' +
         '</div>' +
@@ -934,13 +958,15 @@ function countLearnedWordsByLang(langCode) {
         const coreSetHtml = renderRingSet(split.core, texts, 'core');
         const otherSetHtml = renderRingSet(split.other, texts, 'other');
         const isGerman = langCode === 'de';
-        const splitTimeHtml = isGerman ? renderTimeSplitSet(langCode, texts) : '';
+        const isEnglish = langCode === 'en';
+        const hasSplitPage = isGerman || isEnglish;
+        const splitTimeHtml = hasSplitPage ? renderTimeSplitSet(langCode, texts) : '';
         const activityKey = (langStats.length > 1) ? '__all__' : langCode;
         const activityHtml = renderActivitySection(activityKey, texts);
 
         // Страница "Время: слова vs артикли" показывается только для немецкого языка (de).
         // Пейджер и PRO-гейт должны работать независимо от количества страниц.
-        const activityPage = isGerman ? 3 : 2;
+        const activityPage = hasSplitPage ? 3 : 2;
 
         const pagesHtml =
           '<div class="stats-pages">' +
@@ -954,7 +980,7 @@ function countLearnedWordsByLang(langCode) {
                 otherSetHtml +
               '</div>' +
             '</div>' +
-            (isGerman
+            (hasSplitPage
               ? ('<div class="stats-page stats-page--split" data-page="2">' +
                    '<div class="stats-ring-sets stats-ring-sets--single">' +
                      splitTimeHtml +
@@ -970,7 +996,7 @@ function countLearnedWordsByLang(langCode) {
           '<div class="stats-pages-dots">' +
             '<button class="stats-page-dot is-active" type="button" data-page="0"></button>' +
             '<button class="stats-page-dot" type="button" data-page="1"></button>' +
-            (isGerman ? '<button class="stats-page-dot" type="button" data-page="2"></button>' : '') +
+            (hasSplitPage ? '<button class="stats-page-dot" type="button" data-page="2"></button>' : '') +
             '<button class="stats-page-dot" type="button" data-page="' + activityPage + '"></button>' +
           '</div>';
 
@@ -980,16 +1006,6 @@ function countLearnedWordsByLang(langCode) {
           '" data-lang="' +
           langCode +
           '">' +
-          '<header class="stats-lang-card__header">' +
-          '<div class="stats-lang-card__title">' +
-          '<span class="stats-lang-card__meta">' +
-          texts.learnedLangShort(learned, total) +
-          '</span>' +
-          '</div>' +
-          '<div class="stats-lang-card__decks">' +
-          texts.decksSummary(started, completed, langStat.decks.length) +
-          '</div>' +
-          '</header>' +
           '<div class="stats-lang-card__body">' +
             pagesHtml +
           '</div>' +
