@@ -24,13 +24,11 @@
       empty:   uk ? 'Словників не знайдено' : 'Словари не найдены',
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
-      pattern: uk ? 'Патерн' : 'Паттерн',
-      prep:    uk ? 'Прийменник' : 'Предлог',
       close:   uk ? 'Закрити' : 'Закрыть',
       // This button starts the default word trainer
-      ok:      uk ? 'Вчити слова' : 'Учить слова',
-      articles: uk ? 'Вчити артиклі' : 'Учить артикли',
-      preps:   uk ? 'Вчити прийменники' : 'Учить предлоги'
+      ok:      uk ? 'Слова' : 'Слова',
+      articles: uk ? 'Артиклі' : 'Артикли',
+      preps:   uk ? 'Прийменники' : 'Предлоги'
     };
   }
 
@@ -384,9 +382,12 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-          // Показываем кнопку пока ТОЛЬКО для английского
-          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const show = (String(lang||'').toLowerCase() === 'en');
+
+          // Кнопка «Предлоги» должна быть доступна ТОЛЬКО на строке словаря предлогов.
+          // Это зеркалит логику «Артикли» (кнопка появляется только на nouns),
+          // и исключает смешение режимов, когда выбран не тот ряд таблицы.
+          const k = String(selectedKey || '').trim();
+          const show = /^en_prepositions_trainer$/i.test(k) || /^en_prepositions$/i.test(k); // совместимость со старым ключом
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -465,7 +466,7 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
+          // ВАЖНО: тренер предлогов работает через отдельную колоду en_prepositions_trainer (и совместим со старым en_prepositions),
           // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
@@ -513,86 +514,69 @@
   }
 
   /* ---------------------- modal preview ---------------------- */
-  function openPreview(key){
-    // аналитика: предпросмотр словаря
-    try {
-      if (A.Analytics && typeof A.Analytics.track === 'function') {
-        A.Analytics.track('dict_preview', {
-          deck_key: String(key || ''),
-          ui_lang: getUiLang(),
-          learn_lang: (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(key) || null) : null
-        });
-      }
-    } catch(_){ }
-    const T = t();
-    const deck = A.Decks.resolveDeckByKey(key) || [];
-    const name = A.Decks.resolveNameByKey(key);
-    const flag = A.Decks.flagForKey(key);
-    const lang = getUiLang();
+    function openPreview(key) {
+    // Resolve deck
+    const isPreps =
+      (window.App && App.Prepositions && typeof App.Prepositions.isPrepositionsDeckKey === "function" && App.Prepositions.isPrepositionsDeckKey(key)) ||
+      /prepositions/i.test(String(key));
 
-    const isPreps = (deck || []).some(w => w && typeof w === 'object' && ('_prepCorrect' in w));
+    var deck = isPreps ? (App.Prepositions && App.Prepositions.getDeckForKey ? App.Prepositions.getDeckForKey(key) : []) : App.Decks.resolveDeckByKey(key);
+    if (!deck || !deck.length) return;
 
-    // Для предлогов показываем 5 паттернов (1 пример на паттерн): «паттерн → верный предлог»
-    const previewDeck = (()=>{
-      if (!isPreps) return deck || [];
-      const out = [];
-      const seen = new Set();
-      for (const w of (deck || [])) {
-        const id = (w && (w.id || w._patternId)) ? String(w.id || w._patternId) : null;
-        if (id && seen.has(id)) continue;
-        if (id) seen.add(id);
-        out.push(w);
-        if (out.length >= 5) break;
-      }
-      return out;
-    })();
+    // Choose headers
+    var T = t();
+    var hLeft = isPreps ? (T.prepsPattern || T.word) : T.word;
+    var hRight = isPreps ? (T.prepsPreposition || T.trans) : T.trans;
 
-    const rows = (previewDeck || []).map((w,i)=>{
-      if (isPreps) {
-        const pattern = (w && (w.de || w.pattern || w.sentence)) ? (w.de || w.pattern || w.sentence) : '';
-        const prep = (w && (w._prepCorrect || w.prep || w.answer)) ? (w._prepCorrect || w.prep || w.answer) : '';
-        return `
-          <tr>
-            <td>${i+1}</td>
-            <td style="white-space:normal;word-break:break-word;">${pattern}</td>
-            <td style="white-space:normal;word-break:break-word;">${prep}</td>
-          </tr>`;
-      }
-
-      return `
-        <tr>
-          <td>${i+1}</td>
-          <td>${w.word || w.term || ''}</td>
-          <td>${lang === 'uk' ? (w.uk || w.translation_uk || '') 
-                               : (w.ru || w.translation_ru || '')}</td>
-        </tr>`;
-    }).join('');
-
-    const wrap = document.createElement('div');
-    wrap.className = 'mmodal is-open';
-    wrap.innerHTML = `
-      <div class="mmodal__overlay"></div>
-      <div class="mmodal__panel" role="dialog" aria-modal="true">
-        <div class="mmodal__header">
-          <h3>${flag} ${name}</h3>
-          <button class="mmodal__close" aria-label="${T.close}">✕</button>
+    var html = `
+      <div class="mm-preview mm-modal-backdrop" id="mm-preview" role="dialog" aria-modal="true">
+        <div class="mm-modal">
+          <div class="mm-modal-head">
+            <div class="mm-modal-title">${escapeHTML(App.Decks.resolveDeckLabel(key))}</div>
+            <button class="mm-modal-x" id="mm-preview-x" aria-label="Close">×</button>
+          </div>
+          <div class="mm-modal-body">
+            <table class="mm-preview-table">
+              <thead>
+                <tr>
+                  <th>${escapeHTML(hLeft)}</th>
+                  <th>${escapeHTML(hRight)}</th>
+                </tr>
+              </thead>
+              <tbody id="mm-preview-rows"></tbody>
+            </table>
+          </div>
         </div>
-        <div class="mmodal__body">
-          <table class="dict-table">
-            <thead><tr><th>#</th><th>${isPreps ? T.pattern : T.word}</th><th>${isPreps ? T.prep : T.trans}</th></tr></thead>
-            <tbody>${rows || `<tr><td colspan="3" style="opacity:.6">${T.empty}</td></tr>`}</tbody>
-          </table>
-        </div>
-      </div>`;
-    document.body.appendChild(wrap);
+      </div>
+    `;
 
-    const close = ()=>wrap.remove();
-    wrap.querySelector('.mmodal__overlay').onclick = close;
-    wrap.querySelector('.mmodal__close').onclick = close;
+    document.body.insertAdjacentHTML("beforeend", html);
+    var rowsEl = document.getElementById("mm-preview-rows");
+
+    if (isPreps) {
+      // Show ALL expanded examples (1 row = 1 example sentence with blank + correct preposition).
+      deck.forEach(function (it) {
+        var left = it.de || it.word || it.term || "";
+        var right = it._prepCorrect || it.prep || it.correct || it.ru || it.uk || "";
+        var tr = document.createElement("tr");
+        tr.innerHTML = `<td class="mm-preview-left">${escapeHTML(String(left))}</td><td class="mm-preview-right">${escapeHTML(String(right))}</td>`;
+        rowsEl.appendChild(tr);
+      });
+    } else {
+      var lang = App.State.lang;
+      deck.forEach(function (w) {
+        var left = w.de || w.word || w.term || "";
+        var right = w[lang] || w.translation || w.trans || "";
+        var tr = document.createElement("tr");
+        tr.innerHTML = `<td class="mm-preview-left">${escapeHTML(String(left))}</td><td class="mm-preview-right">${escapeHTML(String(right))}</td>`;
+        rowsEl.appendChild(tr);
+      });
+    }
+
+    document.getElementById("mm-preview-x").addEventListener("click", closePreview);
+    document.getElementById("mm-preview").addEventListener("click", function (e) {
+      if (e.target && e.target.id === "mm-preview") closePreview();
+    });
   }
 
-  /* ---------------------- export ---------------------- */
-  A.ViewDicts = { mount: function(){ try{ if (A.stopAllTrainers) A.stopAllTrainers('view:dicts'); }catch(_){} return renderDictList(); } };
 
-})();
-/* ========================= Конец файла: view.dicts.js ========================= */
