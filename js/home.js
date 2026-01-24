@@ -1917,7 +1917,6 @@ if (wantArticles) {
         } else {
           // WORDS/ARTICLES: вернуть стандартную нижнюю статистику (как было до prepositions)
           try { setDictStatsText(stats, key); } catch(_){}
-(если где-то ещё заполняется)
         }
       }
     } catch(_){}
