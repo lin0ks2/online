@@ -804,6 +804,9 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   white-space: normal;
   line-height: 1.25;
   font-size: 18px;
+  /* Резервируем место под 2 строки, чтобы после вставки верного предлога
+     карточка не меняла высоту и не создавала эффект "прыжка" */
+  min-height: 2.5em;
 }
 .trainer-card--prepositions .trainer-subtitle{
   margin-top: 6px;
@@ -812,6 +815,12 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 /* keep answers comfortably spaced for short labels */
 .trainer-card--prepositions .answers-grid{
   gap: 10px;
+}
+
+/* Плейсхолдер вместо блока подсказок/контекста в тренере предлогов.
+   Держим карточку тренера на привычном месте, оставляя сверху "пустое" пространство. */
+.mm-context-gap{
+  height: clamp(72px, 10vh, 132px);
 }
 
 /* Preview tables: allow wrapping (esp. long preposition patterns) */
