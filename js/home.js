@@ -845,7 +845,7 @@ function setUiLang(code){
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
             __setFiltersHint({
-              title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
+              // title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
               body: (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.')
             });
             return;
@@ -2030,7 +2030,7 @@ answers.innerHTML = '';
                 const p = A.AudioTTS.speakText(exText, false);
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
-                    setTimeout(_proceedNext, 250);
+                    setTimeout(_proceedNext, 750);
                   }).catch(function () {
                     setTimeout(_proceedNext, ADV_DELAY);
                   });
