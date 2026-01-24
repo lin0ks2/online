@@ -800,7 +800,7 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 
 
 /* ========================= Prepositions trainer ========================= */
-.trainer-card--prepositions .trainer-word{
+.home-trainer.home-trainer--preps .trainer-word{
   white-space: normal;
   line-height: 1.25;
   font-size: 18px;
@@ -808,12 +808,12 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
      карточка не меняла высоту и не создавала эффект "прыжка" */
   min-height: 2.5em;
 }
-.trainer-card--prepositions .trainer-subtitle{
+.home-trainer.home-trainer--preps .trainer-subtitle{
   margin-top: 6px;
 }
 
 /* keep answers comfortably spaced for short labels */
-.trainer-card--prepositions .answers-grid{
+.home-trainer.home-trainer--preps .answers-grid{
   gap: 10px;
 }
 
