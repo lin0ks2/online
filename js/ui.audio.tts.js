@@ -61,24 +61,92 @@
     return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
   }
 
-  function getTtsLang() {
-    var study = (A.settings && A.settings.studyLang) || 'de';
-    switch (study) {
-      case 'en':
-        return 'en-US';
-      case 'es':
-        return 'es-ES';
-      case 'uk':
-        return 'uk-UA';
-      case 'ru':
-        return 'ru-RU';
-      case 'fr':
-        return 'fr-FR';
-      case 'sr':
-        return 'sr-RS';
-      default:
-        return 'de-DE';
+  // ==========================================================
+  // Выбор языка/голоса TTS
+  // Важно: язык озвучки должен соответствовать языку текущего словаря,
+  // а не "языку обучения" приложения. Иначе в EN-тренере могут звучать
+  // числа и фрагменты по DE-голосу (типовой баг, который вы увидели).
+  // ==========================================================
+
+  var _voicesCache = null;
+  var _voicesReady = false;
+
+  function _loadVoices() {
+    try {
+      if (!window.speechSynthesis) return [];
+      var v = window.speechSynthesis.getVoices ? window.speechSynthesis.getVoices() : [];
+      return Array.isArray(v) ? v : [];
+    } catch (e) {
+      return [];
     }
+  }
+
+  function _ensureVoices() {
+    if (_voicesReady && _voicesCache) return _voicesCache;
+    _voicesCache = _loadVoices();
+    if (_voicesCache && _voicesCache.length) _voicesReady = true;
+    return _voicesCache || [];
+  }
+
+  // 2-letter lang -> reasonable default BCP47
+  function _defaultLangTag(lang2) {
+    switch (String(lang2 || '').toLowerCase()) {
+      case 'en': return 'en-US';
+      case 'de': return 'de-DE';
+      case 'es': return 'es-ES';
+      case 'uk': return 'uk-UA';
+      case 'ru': return 'ru-RU';
+      case 'fr': return 'fr-FR';
+      case 'sr': return 'sr-RS';
+      default:   return 'en-US';
+    }
+  }
+
+  function _lang2FromDeckKey() {
+    try {
+      // Основной источник истины — активная дека.
+      var key = (A.settings && A.settings.lastDeckKey) ? String(A.settings.lastDeckKey) : '';
+      if (A.Decks && typeof A.Decks.langOfKey === 'function') {
+        var l = A.Decks.langOfKey(key);
+        if (l) return String(l).toLowerCase();
+      }
+      // Фолбэк — префикс ключа вида "en_*".
+      var m = key.match(/^([a-z]{2})_/i);
+      if (m && m[1]) return String(m[1]).toLowerCase();
+    } catch (e) {}
+    return null;
+  }
+
+  function getTtsLang() {
+    // 1) Пытаемся определить язык по текущей деке
+    var lang2 = _lang2FromDeckKey();
+    // 2) Фолбэк — прежнее поведение (studyLang)
+    if (!lang2) lang2 = (A.settings && A.settings.studyLang) ? String(A.settings.studyLang) : 'de';
+    return _defaultLangTag(lang2);
+  }
+
+  function _pickVoiceForLang(langTag) {
+    var voices = _ensureVoices();
+    if (!voices || !voices.length) return null;
+
+    var want = String(langTag || '').toLowerCase();
+    var want2 = want.slice(0, 2);
+
+    // 1) Exact match
+    for (var i = 0; i < voices.length; i++) {
+      var v = voices[i];
+      if (!v || !v.lang) continue;
+      if (String(v.lang).toLowerCase() === want) return v;
+    }
+    // 2) Prefix match (en-*, de-*)
+    for (var j = 0; j < voices.length; j++) {
+      var v2 = voices[j];
+      if (!v2 || !v2.lang) continue;
+      var l2 = String(v2.lang).toLowerCase();
+      if (l2.slice(0, 2) === want2) return v2;
+    }
+    // 3) Anything
+    return voices[0] || null;
   }
 
   function getCurrentWord() {
@@ -111,7 +179,13 @@
     try {
       window.speechSynthesis.cancel();
       var u = new window.SpeechSynthesisUtterance(String(text));
+      // ВАЖНО: жёстко выбираем язык/голос по активной деке.
+      // Это устраняет эффект "английский текст + немецкие цифры" при системном DE-голосе.
       u.lang  = getTtsLang();
+      try {
+        var v = _pickVoiceForLang(u.lang);
+        if (v) u.voice = v;
+      } catch (_eVoice) {}
       u.rate  = 0.95;
       u.pitch = 1.0;
 
@@ -297,6 +371,18 @@
 
   function init() {
     if (!hasTTS()) return;
+
+    // Голоса часто подгружаются асинхронно (особенно на мобильных).
+    // Обновляем кэш, чтобы выбор voice по языку работал стабильно.
+    try {
+      if (window.speechSynthesis && 'onvoiceschanged' in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = function () {
+          _voicesCache = null;
+          _voicesReady = false;
+          _ensureVoices();
+        };
+      }
+    } catch (_eVoicesChanged) {}
 
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', setupGlobalObserver);
