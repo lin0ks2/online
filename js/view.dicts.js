@@ -24,11 +24,13 @@
       empty:   uk ? 'Словників не знайдено' : 'Словари не найдены',
       word:    uk ? 'Слово' : 'Слово',
       trans:   uk ? 'Переклад' : 'Перевод',
+      pattern: uk ? 'Патерн' : 'Паттерн',
+      prep:    uk ? 'Прийменник' : 'Предлог',
       close:   uk ? 'Закрити' : 'Закрыть',
       // This button starts the default word trainer
-      ok:      uk ? 'Слова' : 'Слова',
-      articles: uk ? 'Артиклі' : 'Артикли',
-      preps:   uk ? 'Прийменники' : 'Предлоги'
+      ok:      uk ? 'Вчити слова' : 'Учить слова',
+      articles: uk ? 'Вчити артиклі' : 'Учить артикли',
+      preps:   uk ? 'Вчити прийменники' : 'Учить предлоги'
     };
   }
 
@@ -382,12 +384,9 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-
-          // Кнопка «Предлоги» должна быть доступна ТОЛЬКО на строке словаря предлогов.
-          // Это зеркалит логику «Артикли» (кнопка появляется только на nouns),
-          // и исключает смешение режимов, когда выбран не тот ряд таблицы.
-          const k = String(selectedKey || '').trim();
-          const show = /^en_prepositions_trainer$/i.test(k) || /^en_prepositions$/i.test(k); // совместимость со старым ключом
+          // Показываем кнопку пока ТОЛЬКО для английского
+          const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
+          const show = (String(lang||'').toLowerCase() === 'en');
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -466,7 +465,7 @@
             }
           } catch(_){ }
 
-          // ВАЖНО: тренер предлогов работает через отдельную колоду en_prepositions_trainer (и совместим со старым en_prepositions),
+          // ВАЖНО: тренер предлогов работает через виртуальную колоду en_prepositions,
           // чтобы прогресс/звёзды/ошибки не смешивались с обычными словарями.
           try { A.settings = A.settings || {}; A.settings.trainerKind = "prepositions"; } catch(_){ }
           try {
@@ -531,13 +530,43 @@
     const flag = A.Decks.flagForKey(key);
     const lang = getUiLang();
 
-    const rows = deck.map((w,i)=>`
-      <tr>
-        <td>${i+1}</td>
-        <td>${w.word || w.term || ''}</td>
-        <td>${lang === 'uk' ? (w.uk || w.translation_uk || '') 
-                             : (w.ru || w.translation_ru || '')}</td>
-      </tr>`).join('');
+    const isPreps = (deck || []).some(w => w && typeof w === 'object' && ('_prepCorrect' in w));
+
+    // Для предлогов показываем 5 паттернов (1 пример на паттерн): «паттерн → верный предлог»
+    const previewDeck = (()=>{
+      if (!isPreps) return deck || [];
+      const out = [];
+      const seen = new Set();
+      for (const w of (deck || [])) {
+        const id = (w && (w.id || w._patternId)) ? String(w.id || w._patternId) : null;
+        if (id && seen.has(id)) continue;
+        if (id) seen.add(id);
+        out.push(w);
+        if (out.length >= 5) break;
+      }
+      return out;
+    })();
+
+    const rows = (previewDeck || []).map((w,i)=>{
+      if (isPreps) {
+        const pattern = (w && (w.de || w.pattern || w.sentence)) ? (w.de || w.pattern || w.sentence) : '';
+        const prep = (w && (w._prepCorrect || w.prep || w.answer)) ? (w._prepCorrect || w.prep || w.answer) : '';
+        return `
+          <tr>
+            <td>${i+1}</td>
+            <td style="white-space:normal;word-break:break-word;">${pattern}</td>
+            <td style="white-space:normal;word-break:break-word;">${prep}</td>
+          </tr>`;
+      }
+
+      return `
+        <tr>
+          <td>${i+1}</td>
+          <td>${w.word || w.term || ''}</td>
+          <td>${lang === 'uk' ? (w.uk || w.translation_uk || '') 
+                               : (w.ru || w.translation_ru || '')}</td>
+        </tr>`;
+    }).join('');
 
     const wrap = document.createElement('div');
     wrap.className = 'mmodal is-open';
@@ -550,7 +579,7 @@
         </div>
         <div class="mmodal__body">
           <table class="dict-table">
-            <thead><tr><th>#</th><th>${T.word}</th><th>${T.trans}</th></tr></thead>
+            <thead><tr><th>#</th><th>${isPreps ? T.pattern : T.word}</th><th>${isPreps ? T.prep : T.trans}</th></tr></thead>
             <tbody>${rows || `<tr><td colspan="3" style="opacity:.6">${T.empty}</td></tr>`}</tbody>
           </table>
         </div>

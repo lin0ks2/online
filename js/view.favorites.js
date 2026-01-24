@@ -64,16 +64,6 @@
       let baseKeys = Object.keys(decks)
         .filter(k => Array.isArray(decks[k]) && !/^favorites:|^mistakes:/i.test(k));
 
-      // Prepositions trainer (virtual): include it in favorites list only for EN
-      try{
-        if (TL==='en' && window.App && App.Decks && typeof App.Decks.resolveDeckByKey==='function'){
-          const pk = 'en_prepositions_trainer';
-          const pd = App.Decks.resolveDeckByKey(pk) || [];
-          if (pd.length && baseKeys.indexOf(pk)===-1) baseKeys.push(pk);
-        }
-      }catch(_){}
-
-
       // Articles mode: do NOT mix base and LearnPunkt decks in lists (prevents "leak" illusion)
       if (isArticlesMode()){
         const grp = currentArticlesGroup();
@@ -390,7 +380,32 @@ if (del){
       ? (A.Decks.resolveDeckByKey(favKey) || [])
       : [];
     const ui = getUiLang();
-    const rows = deck.slice(0,150).map((w,i)=>{
+
+    const isPreps = (deck || []).some(w => w && (w._prepCorrect || w.prepCorrect));
+    const hdr1 = isPreps ? (ui === 'uk' ? 'Патерн' : 'Паттерн') : (ui === 'uk' ? 'Слово' : 'Слово');
+    const hdr2 = isPreps ? (ui === 'uk' ? 'Прийменник' : 'Предлог') : (ui === 'uk' ? 'Переклад' : 'Перевод');
+
+    const list = (()=>{
+      if (!isPreps) return deck.slice(0,150);
+      const seen = new Set();
+      const out = [];
+      for (const w of deck){
+        if (!w) continue;
+        const id = (w.id != null) ? String(w.id) : null;
+        if (id && seen.has(id)) continue;
+        if (id) seen.add(id);
+        out.push(w);
+        if (out.length >= 5) break;
+      }
+      return out;
+    })();
+
+    const rows = list.map((w,i)=>{
+      if (isPreps){
+        const pattern = w.de || w.pattern || '';
+        const prep = w._prepCorrect || w.prepCorrect || '';
+        return `<tr><td class="t-center">${i+1}</td><td>${pattern}</td><td>${prep}</td></tr>`;
+      }
       const tr = (ui==='uk') ? (w.uk || w.ru || '') : (w.ru || w.uk || '');
       return `<tr><td class="t-center">${i+1}</td><td>${w.word||''}</td><td>${tr}</td></tr>`;
     }).join('');
@@ -406,7 +421,7 @@ if (del){
         </div>
         <div class="mmodal__body">
           <table class="dict-table">
-            <thead><tr><th>#</th><th>Word</th><th>Translation</th></tr></thead>
+            <thead><tr><th>#</th><th>${hdr1}</th><th>${hdr2}</th></tr></thead>
             <tbody>${rows || `<tr><td colspan="3" style="opacity:.6">${T.empty}</td></tr>`}</tbody>
           </table>
         </div>
