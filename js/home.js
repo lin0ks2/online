@@ -193,7 +193,7 @@ function setUiLang(code){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
       return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions_trainer$/i.test(String(base || '').trim());
+        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }
@@ -552,6 +552,8 @@ function setUiLang(code){
 
     if (isVirtualDeckKey(key)) {
       // Replace pills with an informational block (RU/UK only)
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
       const title = (window.I18N_t ? window.I18N_t('filtersVirtualTitle') : 'Фильтры недоступны');
       const text  = (window.I18N_t ? window.I18N_t('filtersVirtualText')  : 'В Избранном и Моих ошибках тренируются все сохранённые слова. Дополнительные фильтры не применяются.');
       list.innerHTML = `
@@ -576,6 +578,34 @@ function setUiLang(code){
 
       return;
     }
+
+    // MOYAMOVA: Prepositions trainer → filters unavailable (read-only info state)
+    if (isPrepositionsModeForKey(key)) {
+      // Also hide any previous feasibility hint to avoid duplicated messages in the sheet.
+      try { __setFiltersHint(''); } catch(_){ }
+      const title = (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны');
+      const textMsg  = (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.');
+      list.innerHTML = `
+        <div class="filters-virtual-note">
+          <div class="title">${title}</div>
+          <div class="text">${textMsg}</div>
+        </div>
+      `;
+      try {
+        const applyBtn = document.getElementById('filtersApply');
+        const resetBtn = document.getElementById('filtersReset');
+        if (applyBtn) applyBtn.disabled = true;
+        if (resetBtn) resetBtn.disabled = true;
+      } catch(_){ }
+
+      try { overlay.classList.remove('filters-hidden'); } catch(_){ }
+      try { sheet.classList.remove('filters-hidden'); } catch(_){ }
+      try { overlay.setAttribute('aria-hidden', 'false'); } catch(_){ }
+      try { sheet.setAttribute('aria-hidden', 'false'); } catch(_){ }
+      try { lockBodyScrollForFilters(sheet); } catch(_){ }
+      return;
+    }
+
     const st = (A.Filters && A.Filters.getState) ? A.Filters.getState(studyLang) : { enabled:false, selected:[] };
     const selected = new Set((st && st.selected) ? st.selected : []);
 
@@ -633,16 +663,56 @@ function setUiLang(code){
       .filter(Boolean);
   }
 
-  function __setFiltersHint(text){
+  function __setFiltersHint(payload){
     const el = document.getElementById('filtersHint');
     if (!el) return;
-    const t = String(text || '').trim();
-    if (!t) {
+
+    // Backward compatible:
+    // - string => one-line plain hint
+    // - { title, body } => structured hint (no HTML required)
+    const isObj = payload && typeof payload === 'object' && !Array.isArray(payload);
+    const title = isObj ? String(payload.title || '').trim() : '';
+    const body  = isObj ? String(payload.body  || '').trim() : '';
+    const text  = !isObj ? String(payload || '').trim() : '';
+
+    if (isObj) {
+      if (!title && !body) {
+        el.innerHTML = '';
+        el.style.display = 'none';
+        return;
+      }
+      el.innerHTML = '';
+      if (title) {
+        const h = document.createElement('div');
+        h.className = 'mm-filters-hint-title';
+        h.textContent = title;
+        el.appendChild(h);
+      }
+      if (body) {
+        const p = document.createElement('div');
+        p.className = 'mm-filters-hint-body';
+        p.textContent = body;
+        el.appendChild(p);
+      }
+      el.style.display = 'block';
+      return;
+    }
+
+    if (!text) {
       el.textContent = '';
       el.style.display = 'none';
       return;
     }
-    el.textContent = t;
+    // Legacy cleanup: some callers used inline HTML like <b>...</b><br>...
+    // This hint is displayed as plain text, so strip tags and map <br> to new lines.
+    let clean = text;
+    if (clean.indexOf('<') !== -1) {
+      clean = clean
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<\/?[^>]+>/g, '')
+        .trim();
+    }
+    el.textContent = clean;
     el.style.display = 'block';
   }
 
@@ -770,6 +840,17 @@ function setUiLang(code){
         try {
           const key = activeDeckKey();
           const draftLevels = __readDraftLevelsFromSheet();
+
+          // Prepositions trainer: filtering is not supported.
+          if (isPrepositionsModeForKey(key)) {
+            __setApplyEnabled(false);
+            __setFiltersHint({
+              title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
+              body: (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.')
+            });
+            return;
+          }
+
           const v = __validateDraftSelectionForKey(key, draftLevels);
           if (v && v.ok === false) {
             __setApplyEnabled(false);
@@ -987,50 +1068,56 @@ function setUiLang(code){
 
 
   function setDictStatsText(statsEl, deckKey){
-    try{
-      if (!statsEl) return;
-      const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
-      const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
+  if(!statsEl) return;
 
-      const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+  const lang = getActiveLang();
+  const maxStars = (A.App && A.App.starsMax) ? A.App.starsMax : 5;
 
-      const isPreps = !!(A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(deckKey));
+  // Prepositions: показываем статистику по паттернам (уникальным заданиям), а не по словам/вариантам.
+  if(typeof isPrepositionsModeForKey === 'function' && isPrepositionsModeForKey(deckKey)){
+    const items = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+    const uniq = new Map();
+    for(const w of items){
+      const id = w && (w.id ?? w.key ?? w.de ?? w.en);
+      if(id == null) continue;
+      if(!uniq.has(id)) uniq.set(id, w);
+    }
+    const total = uniq.size || items.length;
+    let learned = 0;
 
-      // Word trainer counts are per-entry. Prepositions trainer expands each pattern into multiple
-      // variants with the same id, so we must count unique pattern ids to avoid xN inflation.
-      let prepsTotal = 0;
-      let prepsLearned = 0;
-      if (isPreps) {
-        const m = String(deckKey || '').match(/^([a-z]{2})_prepositions/);
-        const lang = m ? m[1] : null;
-        const cfg = (lang && window.prepositionsTrainer && window.prepositionsTrainer[lang]) ? window.prepositionsTrainer[lang] : null;
-        const variantsPerPattern = (cfg && cfg.variantsPerPattern) ? cfg.variantsPerPattern : starsMax;
-        const ids = (cfg && Array.isArray(cfg.patterns))
-          ? cfg.patterns.map(p => p && p.id).filter(Boolean)
-          : full.map(w => w && w.id).filter(Boolean);
-        const uniq = Array.from(new Set(ids));
-        prepsTotal = uniq.length;
-        prepsLearned = uniq.filter(id => (((A.state && A.state.stars && A.state.stars[starKey(id, deckKey)]) || 0) >= variantsPerPattern)).length;
-      }
+    for(const w of uniq.values()){
+      const starKey = (typeof getStarKey === 'function') ? getStarKey(deckKey, w) : null;
+      const v = starKey ? Number((A.state && A.state.stars && A.state.stars[starKey]) || 0) : 0;
+      if(v >= maxStars) learned++;
+    }
 
-      const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
-      const uk = getUiLang() === 'uk';
-      if (isArticles) {
-        const learnedA = countLearnedArticles(full, deckKey);
-        statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
-      } else if (isPreps) {
-        statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього патернів: ${prepsTotal} / Вивчено: ${prepsLearned}`
-                               : `Всего паттернов: ${prepsTotal} / Выучено: ${prepsLearned}`;
-      } else {
-        statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
-      }
-    }catch(_){}
+    if(lang === 'uk') statsEl.textContent = `Всього патернів: ${total} / Вивчено: ${learned}`;
+    else if(lang === 'en') statsEl.textContent = `Total patterns: ${total} / Learned: ${learned}`;
+    else statsEl.textContent = `Всего паттернов: ${total} / Выучено: ${learned}`;
+    return;
   }
+
+  // Articles: считаем по словам (уникальные леммы), как и раньше.
+  if(typeof isArticlesDeckKey === 'function' && isArticlesDeckKey(deckKey)){
+    const words = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+    const total = words.length;
+    const learned = words.filter(w => typeof isLearned === 'function' ? isLearned(deckKey, w) : false).length;
+
+    if(lang === 'uk') statsEl.textContent = `Всього слів: ${total} / Вивчено: ${learned}`;
+    else if(lang === 'en') statsEl.textContent = `Total words: ${total} / Learned: ${learned}`;
+    else statsEl.textContent = `Всего слов: ${total} / Выучено: ${learned}`;
+    return;
+  }
+
+  // Words trainer (обычные словари)
+  const words = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
+  const total = words.length;
+  const learned = words.filter(w => typeof isLearned === 'function' ? isLearned(deckKey, w) : false).length;
+
+  if(lang === 'uk') statsEl.textContent = `Всього слів: ${total} / Вивчено: ${learned}`;
+  else if(lang === 'en') statsEl.textContent = `Total words: ${total} / Learned: ${learned}`;
+  else statsEl.textContent = `Всего слов: ${total} / Выучено: ${learned}`;
+}
 
 
 // Выбор активного словаря
@@ -1205,7 +1292,10 @@ function activeDeckKey() {
           <p class="sets-stats" id="setStats"></p>
         </section>
 
-        ${isPrepositionsModeForKey(activeDeckKey()) ? '' : `
+        ${isPrepositionsModeForKey(key) ? `
+        <!-- ЗОНА 2: Плейсхолдер (контекст скрыт для предлогов) -->
+        <div class="mm-context-gap" aria-hidden="true"></div>
+        ` : `
         <!-- ЗОНА 2: Подсказки -->
         <section class="card home-hints">
           <div class="hints-body" id="hintsBody"></div>
@@ -1557,7 +1647,41 @@ function activeDeckKey() {
   }
 
 
-  /* ------------------------------- Тренер ------------------------------- */
+  
+  function __escapeHtml(s){
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function __fillPrepBlank(sentence, answer){
+    const s = String(sentence||'');
+    const a = String(answer||'').trim();
+    if (!a) return __escapeHtml(s);
+
+    // Prefer underscore placeholders like ___
+    const reUnd = /_{2,}/;
+    if (reUnd.test(s)) {
+      const parts = s.split(reUnd);
+      const before = parts.shift() || '';
+      const after = parts.join('___');
+      return __escapeHtml(before) + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>` + __escapeHtml(after);
+    }
+
+    // Fallback: three dots / ellipsis
+    const reDots = /\.\.\.|…/;
+    if (reDots.test(s)) {
+      const m = s.match(reDots);
+      if (m) {
+        const i = s.indexOf(m[0]);
+        const before = s.slice(0, i);
+        const after = s.slice(i + m[0].length);
+        return __escapeHtml(before) + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>` + __escapeHtml(after);
+      }
+    }
+
+    // Last resort: append
+    return __escapeHtml(s) + ' ' + `<span class="mm-prep-filled">${__escapeHtml(a)}</span>`;
+  }
+/* ------------------------------- Тренер ------------------------------- */
 
   // Reverse-translation toggle is meaningful only for the word trainer.
   // When the Articles trainer is active we silently disable the checkbox
@@ -1570,7 +1694,17 @@ function activeDeckKey() {
       // Keep the user's choice intact; just prevent interaction while articles trainer is active.
     } catch (_){ }
   }
-  function renderTrainer() {
+  
+  // Context toggle is not applicable for the prepositions trainer (the context card is hidden).
+  // Keep the user's choice intact; just prevent interaction while the prepositions trainer is active.
+  function syncContextToggleAvailability(disabled){
+    try {
+      const el = document.getElementById('focusContext');
+      if (!el) return;
+      el.disabled = !!disabled;
+    } catch(_){ }
+  }
+function renderTrainer() {
     const key   = activeDeckKey();
 
     // Trainer variant switching (words vs articles).
@@ -1583,12 +1717,18 @@ function activeDeckKey() {
       && (A.ArticlesTrainer && A.ArticlesCard);
 
     const wantPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions')
-      && /^en_prepositions_trainer$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
+      && /^en_prepositions$/i.test(String(extractBaseFromVirtual(key) || key || '').trim())
       && (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function');
 
 
     // UI: Reverse toggle is not applicable to articles.
     syncReverseToggleAvailability(wantArticles || wantPrepositions);
+    syncContextToggleAvailability(wantPrepositions);
+    // Prepositions: mark trainer card to allow stable layout (reserve space for 2-line pattern)
+    try {
+      const __trainerCard = document.querySelector('.home-trainer');
+      if (__trainerCard) __trainerCard.classList.toggle('home-trainer--preps', !!wantPrepositions);
+    } catch(_){ }
 
 
 if (wantArticles) {
@@ -1860,6 +2000,15 @@ answers.innerHTML = '';
           solved = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, true); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
+
+          // Prepositions trainer: reveal the correct answer inside the sentence placeholder.
+          try {
+            if (isPrepositionsModeForKey(key) && wordEl) {
+              const correct = String(word && word._prepCorrect || '').trim();
+              const currentQ = String(wordEl.textContent || '');
+              wordEl.innerHTML = __fillPrepBlank(currentQ, correct);
+            }
+          } catch(_){ }
 
           // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
           try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
