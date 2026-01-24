@@ -663,16 +663,56 @@ function setUiLang(code){
       .filter(Boolean);
   }
 
-  function __setFiltersHint(text){
+  function __setFiltersHint(payload){
     const el = document.getElementById('filtersHint');
     if (!el) return;
-    const t = String(text || '').trim();
-    if (!t) {
+
+    // Backward compatible:
+    // - string => one-line plain hint
+    // - { title, body } => structured hint (no HTML required)
+    const isObj = payload && typeof payload === 'object' && !Array.isArray(payload);
+    const title = isObj ? String(payload.title || '').trim() : '';
+    const body  = isObj ? String(payload.body  || '').trim() : '';
+    const text  = !isObj ? String(payload || '').trim() : '';
+
+    if (isObj) {
+      if (!title && !body) {
+        el.innerHTML = '';
+        el.style.display = 'none';
+        return;
+      }
+      el.innerHTML = '';
+      if (title) {
+        const h = document.createElement('div');
+        h.className = 'mm-filters-hint-title';
+        h.textContent = title;
+        el.appendChild(h);
+      }
+      if (body) {
+        const p = document.createElement('div');
+        p.className = 'mm-filters-hint-body';
+        p.textContent = body;
+        el.appendChild(p);
+      }
+      el.style.display = 'block';
+      return;
+    }
+
+    if (!text) {
       el.textContent = '';
       el.style.display = 'none';
       return;
     }
-    el.textContent = t;
+    // Legacy cleanup: some callers used inline HTML like <b>...</b><br>...
+    // This hint is displayed as plain text, so strip tags and map <br> to new lines.
+    let clean = text;
+    if (clean.indexOf('<') !== -1) {
+      clean = clean
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<\/?[^>]+>/g, '')
+        .trim();
+    }
+    el.textContent = clean;
     el.style.display = 'block';
   }
 
@@ -804,9 +844,10 @@ function setUiLang(code){
           // Prepositions trainer: filtering is not supported.
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
-            // The prepositions trainer shows a dedicated notice block inside the sheet;
-            // keep the generic hint area empty to avoid duplicated / raw-tag output.
-            __setFiltersHint('');
+            __setFiltersHint({
+              title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
+              body: (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.')
+            });
             return;
           }
 
