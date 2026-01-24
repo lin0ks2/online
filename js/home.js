@@ -845,7 +845,7 @@ function setUiLang(code){
           if (isPrepositionsModeForKey(key)) {
             __setApplyEnabled(false);
             __setFiltersHint({
-              // title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
+              title: (window.I18N_t ? window.I18N_t('filtersPrepsTitle') : 'Фильтры недоступны'),
               body: (window.I18N_t ? window.I18N_t('filtersPrepsText') : 'Для упражнения «Предлоги» фильтрация недоступна.')
             });
             return;
@@ -2030,12 +2030,27 @@ answers.innerHTML = '';
                 const p = A.AudioTTS.speakText(exText, false);
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
+                    // micro-delay after example TTS ends
                     setTimeout(_proceedNext, 750);
                   }).catch(function () {
                     setTimeout(_proceedNext, ADV_DELAY);
                   });
                   return;
                 }
+              }
+            }
+
+            // Prepositions trainer: do NOT advance while current TTS is still speaking.
+            // User can answer faster than the auto-voice finishes, so we wait for idle.
+            if (isPrepsKey && A.AudioTTS && typeof A.AudioTTS.waitUntilIdle === 'function') {
+              const w = A.AudioTTS.waitUntilIdle(9000);
+              if (w && typeof w.then === 'function') {
+                w.then(function () {
+                  setTimeout(_proceedNext, ADV_DELAY);
+                }).catch(function () {
+                  setTimeout(_proceedNext, ADV_DELAY);
+                });
+                return;
               }
             }
           } catch (_eExTTS) {}

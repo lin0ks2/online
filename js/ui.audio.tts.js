@@ -70,6 +70,7 @@
 
   var _voicesCache = null;
   var _voicesReady = false;
+  var _voicesPromise = null;
 
   function _loadVoices() {
     try {
@@ -86,6 +87,98 @@
     _voicesCache = _loadVoices();
     if (_voicesCache && _voicesCache.length) _voicesReady = true;
     return _voicesCache || [];
+  }
+
+  // Голоса на iOS/мобильных часто появляются асинхронно.
+  // Этот хелпер гарантирует, что список голосов будет заполнен
+  // (или мы корректно продолжим без конкретного voice) ДО старта speak().
+  function _ensureVoicesAsync() {
+    try {
+      if (_voicesReady && _voicesCache && _voicesCache.length) return Promise.resolve(_voicesCache);
+      if (_voicesPromise) return _voicesPromise;
+
+      _voicesPromise = new Promise(function (resolve) {
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          try {
+            _ensureVoices();
+          } catch (_e) {}
+          resolve(_voicesCache || []);
+        }
+
+        // 1) пробуем сразу
+        try {
+          _ensureVoices();
+          if (_voicesCache && _voicesCache.length) return finish();
+        } catch (_e0) {}
+
+        // 2) ждём событие voiceschanged
+        var timer = null;
+        var poll  = null;
+        try {
+          if (window.speechSynthesis && 'onvoiceschanged' in window.speechSynthesis) {
+            var prev = window.speechSynthesis.onvoiceschanged;
+            window.speechSynthesis.onvoiceschanged = function () {
+              try {
+                if (typeof prev === 'function') prev();
+              } catch (_ePrev) {}
+              _voicesCache = null;
+              _voicesReady = false;
+              finish();
+            };
+          }
+        } catch (_e1) {}
+
+        // 3) короткий polling как фолбэк
+        poll = setInterval(function () {
+          try {
+            _ensureVoices();
+            if (_voicesCache && _voicesCache.length) finish();
+          } catch (_eP) {}
+        }, 120);
+
+        timer = setTimeout(function () {
+          finish();
+        }, 1500);
+
+        // очистка
+        var origFinish = finish;
+        finish = function () {
+          try { if (poll) clearInterval(poll); } catch (_eC1) {}
+          try { if (timer) clearTimeout(timer); } catch (_eC2) {}
+          origFinish();
+        };
+      });
+
+      return _voicesPromise;
+    } catch (_e) {
+      return Promise.resolve([]);
+    }
+  }
+
+  // Подождать, пока SpeechSynthesis закончит текущую озвучку.
+  // Важно для prepositions: пользователь может ответить быстрее, чем закончится
+  // авто-озвучка текущей фразы, и UI не должен переключать паттерн "поверх" речи.
+  function waitUntilIdle(timeoutMs) {
+    var ms = (typeof timeoutMs === 'number' && timeoutMs > 0) ? timeoutMs : 8000;
+    if (!hasTTS()) return Promise.resolve();
+    return new Promise(function (resolve) {
+      var start = Date.now();
+      function tick() {
+        try {
+          if (!window.speechSynthesis) return resolve();
+          var busy = !!(window.speechSynthesis.speaking || window.speechSynthesis.pending);
+          if (!busy) return resolve();
+          if (Date.now() - start > ms) return resolve();
+        } catch (_e) {
+          return resolve();
+        }
+        setTimeout(tick, 80);
+      }
+      tick();
+    });
   }
 
   // 2-letter lang -> reasonable default BCP47
@@ -177,31 +270,38 @@
     if (!text) return null;
 
     try {
-      window.speechSynthesis.cancel();
-      var u = new window.SpeechSynthesisUtterance(String(text));
-      // ВАЖНО: жёстко выбираем язык/голос по активной деке.
-      // Это устраняет эффект "английский текст + немецкие цифры" при системном DE-голосе.
-      u.lang  = getTtsLang();
-      try {
-        var v = _pickVoiceForLang(u.lang);
-        if (v) u.voice = v;
-      } catch (_eVoice) {}
-      u.rate  = 0.95;
-      u.pitch = 1.0;
+      // Важно: дождаться подгрузки voices (особенно iOS), иначе первое воспроизведение
+      // для некоторых языков может быть "немым" до первой успешной озвучки.
+      return _ensureVoicesAsync().then(function () {
+        try {
+          window.speechSynthesis.cancel();
+          var u = new window.SpeechSynthesisUtterance(String(text));
+          // ВАЖНО: жёстко выбираем язык/голос по активной деке.
+          u.lang  = getTtsLang();
+          try {
+            var v = _pickVoiceForLang(u.lang);
+            if (v) u.voice = v;
+          } catch (_eVoice) {}
+          u.rate  = 0.95;
+          u.pitch = 1.0;
 
-      return new Promise(function (resolve) {
-        var done = false;
-        function finish() {
-          if (done) return;
-          done = true;
-          resolve();
+          return new Promise(function (resolve) {
+            var done = false;
+            function finish() {
+              if (done) return;
+              done = true;
+              resolve();
+            }
+            u.onend = finish;
+            u.onerror = finish;
+            // Some environments may not fire onend reliably after cancel;
+            // keep a soft fallback so UI can't hang.
+            setTimeout(finish, 8000);
+            window.speechSynthesis.speak(u);
+          });
+        } catch (_eInner) {
+          return null;
         }
-        u.onend = finish;
-        u.onerror = finish;
-        // Some environments may not fire onend reliably after cancel;
-        // keep a soft fallback so UI can't hang.
-        setTimeout(finish, 6000);
-        window.speechSynthesis.speak(u);
       });
     } catch (e) {
       return null;
@@ -395,6 +495,10 @@
     // публичный хелпер: озвучить произвольный текст и дождаться завершения
     A.AudioTTS.speakText = function (text, force) {
       return speakText(text, !!force);
+    };
+    // публичный хелпер: дождаться, пока текущая озвучка завершится
+    A.AudioTTS.waitUntilIdle = function (timeoutMs) {
+      return waitUntilIdle(timeoutMs);
     };
     A.AudioTTS.setEnabled = function (flag) {
       audioEnabled = !!flag;
