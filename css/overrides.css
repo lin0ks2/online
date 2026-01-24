@@ -213,11 +213,6 @@ body.no-scroll {
   bottom: 16px;  /* если нужно выше/ниже — меняем это значение */
 }
 
-/* Prepositions trainer: the speaker icon is not applicable */
-body.mm-preps-mode .trainer-audio-btn {
-  display: none !important;
-}
-
 /* Hover (десктоп) */
 @media (hover:hover) {
   .trainer-audio-btn:hover {
@@ -819,16 +814,9 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   gap: 10px;
 }
 
-
-/* Prepositions trainer: keep the layout spacing, but hide the hints card */
-.home-hints.mm-hints-placeholder{
-  visibility: hidden;
-  pointer-events: none;
-  min-height: 90px;
-}
-
-/* Prepositions trainer: highlight the inserted correct answer in the sentence */
-.mm-prep-filled{
-  color: var(--brand, #35b6ff);
-  font-weight: 700;
+/* Preview tables: allow wrapping (esp. long preposition patterns) */
+.dict-preview-table td,
+.dict-preview-table th{
+  white-space: normal;
+  word-break: break-word;
 }
