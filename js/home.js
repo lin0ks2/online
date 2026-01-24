@@ -1074,6 +1074,7 @@ function setUiLang(code){
       const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
       const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
+      const isPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions');
 
       const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
       const uk = getUiLang() === 'uk';
@@ -1083,9 +1084,11 @@ function setUiLang(code){
         statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
                                : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
       } else {
+        const totalLabel = uk
+          ? (isPrepositions ? 'Всього патернів' : 'Всього слів')
+          : (isPrepositions ? 'Всего паттернов' : 'Всего слов');
         statsEl.style.display = '';
-        statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
-                               : `Всего слов: ${full.length} / Выучено: ${learnedWords}`;
+        statsEl.textContent = `${totalLabel}: ${full.length} / ${uk ? 'Вивчено' : 'Выучено'}: ${learnedWords}`;
       }
     }catch(_){}
   }
