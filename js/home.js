@@ -1986,8 +1986,17 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
-          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
+          // TTS: in reverse/articles/prepositions mode auto-speaks after correct answer (manual speaks always)
+          // IMPORTANT: in prepositions we must not advance the pattern until the utterance finishes,
+          // otherwise the UI changes while the old sentence is still being spoken.
+          var _ttsAfterCorrectPromise = null;
+          try {
+            if (!(A.settings && A.settings.trainerKind === 'articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
+              _ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
+            }
+          } catch (_eTTS) {
+            _ttsAfterCorrectPromise = null;
+          }
 
 
           // аналитика: ответ в тренере
@@ -2040,18 +2049,15 @@ answers.innerHTML = '';
               }
             }
 
-            // Prepositions trainer: do NOT advance while current TTS is still speaking.
-            // User can answer faster than the auto-voice finishes, so we wait for idle.
-            if (isPrepsKey && A.AudioTTS && typeof A.AudioTTS.waitUntilIdle === 'function') {
-              const w = A.AudioTTS.waitUntilIdle(9000);
-              if (w && typeof w.then === 'function') {
-                w.then(function () {
-                  setTimeout(_proceedNext, ADV_DELAY);
-                }).catch(function () {
-                  setTimeout(_proceedNext, ADV_DELAY);
-                });
-                return;
-              }
+            // Prepositions trainer: wait for the post-correct utterance (sentence with the correct preposition)
+            // and only then advance.
+            if (isPrepsKey && _ttsAfterCorrectPromise && typeof _ttsAfterCorrectPromise.then === 'function') {
+              _ttsAfterCorrectPromise.then(function () {
+                setTimeout(_proceedNext, ADV_DELAY);
+              }).catch(function () {
+                setTimeout(_proceedNext, ADV_DELAY);
+              });
+              return;
             }
           } catch (_eExTTS) {}
 

@@ -270,37 +270,40 @@
     if (!text) return null;
 
     try {
-      // Важно: дождаться подгрузки voices (особенно iOS), иначе первое воспроизведение
-      // для некоторых языков может быть "немым" до первой успешной озвучки.
-      return _ensureVoicesAsync().then(function () {
-        try {
-          window.speechSynthesis.cancel();
-          var u = new window.SpeechSynthesisUtterance(String(text));
-          // ВАЖНО: жёстко выбираем язык/голос по активной деке.
-          u.lang  = getTtsLang();
-          try {
-            var v = _pickVoiceForLang(u.lang);
-            if (v) u.voice = v;
-          } catch (_eVoice) {}
-          u.rate  = 0.95;
-          u.pitch = 1.0;
+      // IMPORTANT (iOS/WebKit): speechSynthesis.speak() should run directly off the user gesture.
+      // Waiting asynchronously for voices may cause the first utterance to be blocked.
+      // Поэтому: пробуем обновить voices синхронно, но НЕ ждём их.
+      try { _ensureVoices(); } catch (_eV) {}
 
-          return new Promise(function (resolve) {
-            var done = false;
-            function finish() {
-              if (done) return;
-              done = true;
-              resolve();
-            }
-            u.onend = finish;
-            u.onerror = finish;
-            // Some environments may not fire onend reliably after cancel;
-            // keep a soft fallback so UI can't hang.
-            setTimeout(finish, 8000);
-            window.speechSynthesis.speak(u);
-          });
-        } catch (_eInner) {
-          return null;
+      try { window.speechSynthesis.cancel(); } catch (_eCancel) {}
+      try { window.speechSynthesis.resume && window.speechSynthesis.resume(); } catch (_eResume) {}
+
+      var u = new window.SpeechSynthesisUtterance(String(text));
+      // ВАЖНО: жёстко выбираем язык/голос по активной деке.
+      u.lang  = getTtsLang();
+      try {
+        var v = _pickVoiceForLang(u.lang);
+        if (v) u.voice = v;
+      } catch (_eVoice) {}
+      u.rate  = 0.95;
+      u.pitch = 1.0;
+
+      return new Promise(function (resolve) {
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          resolve();
+        }
+        u.onend = finish;
+        u.onerror = finish;
+        // Some environments may not fire onend reliably after cancel;
+        // keep a soft fallback so UI can't hang.
+        setTimeout(finish, 8000);
+        try {
+          window.speechSynthesis.speak(u);
+        } catch (_eSpeak) {
+          finish();
         }
       });
     } catch (e) {
