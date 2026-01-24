@@ -820,3 +820,9 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   white-space: normal;
   word-break: break-word;
 }
+
+/* Prepositions: inserted correct preposition highlight (brand color) */
+.mm-prep-filled{
+  color: var(--accent, var(--brand, #35b6ff));
+  font-weight: 700;
+}
