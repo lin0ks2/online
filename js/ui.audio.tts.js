@@ -344,10 +344,33 @@ function speakText(text, force) {
             // голоса могли подгрузиться только сейчас
             if (retries < 1) {
               retries++;
-              // небольшой зазор перед ретраем, чтобы voices успели появиться
-              setTimeout(function () {
-                attemptSpeak();
-              }, 80);
+
+              // iOS/WebKit: на "холодную" длинная фраза (пример) на DE иногда не стартует,
+              // хотя короткие слова стартуют. Тёплый "тихий" прогрев помогает.
+              // Делаем один бесшумный warm-up utterance (volume=0), затем повторяем speak.
+              try {
+                var warm = new window.SpeechSynthesisUtterance('.');
+                warm.lang = getTtsLang();
+                warm.volume = 0; // бесшумно
+                warm.rate = 1.0;
+                warm.pitch = 1.0;
+
+                warm.onend = function () {
+                  setTimeout(function () { attemptSpeak(); }, 60);
+                };
+                warm.onerror = function () {
+                  setTimeout(function () { attemptSpeak(); }, 60);
+                };
+
+                try { window.speechSynthesis.cancel(); } catch (_eCw) {}
+                try { window.speechSynthesis.speak(warm); } catch (_eSw) {
+                  setTimeout(function () { attemptSpeak(); }, 60);
+                }
+                return;
+              } catch (_eWarm) {
+                // небольшой зазор перед ретраем, чтобы voices успели появиться
+                setTimeout(function () { attemptSpeak(); }, 80);
+              }
             } else {
               // не удалось стартовать — не блокируем UI
               finish();
