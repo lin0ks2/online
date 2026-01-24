@@ -263,53 +263,105 @@
   // force=true используется для ручной озвучки по кнопке (работает всегда).
   // Returns a Promise that resolves when the utterance finishes (or errors).
   // Used to delay UI transitions until the user has heard the audio.
-  function speakText(text, force) {
+  
+function speakText(text, force) {
     if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
     if (!force && !audioEnabled) return null; // авто-озвучка зависит от переключателя
     if (!hasTTS()) return null;
-    if (!text) return null;
 
     try {
-      // IMPORTANT (iOS/WebKit): speechSynthesis.speak() should run directly off the user gesture.
-      // Waiting asynchronously for voices may cause the first utterance to be blocked.
-      // Поэтому: пробуем обновить voices синхронно, но НЕ ждём их.
-      try { _ensureVoices(); } catch (_eV) {}
+      // Best-effort: синхронно прогреваем голоса (на iOS список может быть пустым до первого getVoices()).
+      try { _ensureVoices(); } catch (_eWarm) {}
 
-      try { window.speechSynthesis.cancel(); } catch (_eCancel) {}
-      try { window.speechSynthesis.resume && window.speechSynthesis.resume(); } catch (_eResume) {}
-
-      var u = new window.SpeechSynthesisUtterance(String(text));
-      // ВАЖНО: жёстко выбираем язык/голос по активной деке.
-      u.lang  = getTtsLang();
-      try {
-        var v = _pickVoiceForLang(u.lang);
-        if (v) u.voice = v;
-      } catch (_eVoice) {}
-      u.rate  = 0.95;
-      u.pitch = 1.0;
+      // iOS/WebKit: иногда помогает "разбудить" движок.
+      try { window.speechSynthesis.resume(); } catch (_eRes) {}
 
       return new Promise(function (resolve) {
         var done = false;
+        var started = false;
+        var watchdogId = null;
+        var startCheckId = null;
+        var retries = 0;
+
         function finish() {
           if (done) return;
           done = true;
+          if (watchdogId) clearTimeout(watchdogId);
+          if (startCheckId) clearTimeout(startCheckId);
           resolve();
         }
-        u.onend = finish;
-        u.onerror = finish;
-        // Some environments may not fire onend reliably after cancel;
-        // keep a soft fallback so UI can't hang.
-        setTimeout(finish, 8000);
-        try {
-          window.speechSynthesis.speak(u);
-        } catch (_eSpeak) {
-          finish();
+
+        function buildUtterance() {
+          var u = new window.SpeechSynthesisUtterance(String(text));
+          u.lang = getTtsLang();
+
+          // Подбор голоса по языку активной деки (best-effort).
+          try {
+            var v = _pickVoiceForLang(u.lang);
+            if (v) u.voice = v;
+          } catch (_eVoice) {}
+
+          u.rate = 0.95;
+          u.pitch = 1.0;
+
+          u.onstart = function () { started = true; };
+          u.onend = finish;
+          u.onerror = finish;
+
+          return u;
         }
+
+        function attemptSpeak() {
+          started = false;
+
+          // ВАЖНО: cancel перед новым speak, иначе на iOS легко получить "залипание" очереди.
+          try { window.speechSynthesis.cancel(); } catch (_eCancel) {}
+
+          // Ещё раз пробуем прогреть голоса непосредственно перед speak.
+          try { _ensureVoices(); } catch (_eWarm2) {}
+
+          var u = buildUtterance();
+
+          // Жёсткий watchdog, чтобы UI не мог зависнуть, если onend не придёт.
+          if (watchdogId) clearTimeout(watchdogId);
+          watchdogId = setTimeout(finish, 7000);
+
+          try {
+            window.speechSynthesis.speak(u);
+          } catch (_eSpeak) {
+            finish();
+            return;
+          }
+
+          // Если через небольшой интервал не началось воспроизведение — делаем один ретрай.
+          // Это чинит "холодный" запуск DE на iOS, когда первый speak может быть тихим/пропущенным.
+          if (startCheckId) clearTimeout(startCheckId);
+          startCheckId = setTimeout(function () {
+            var speaking = false;
+            try { speaking = !!window.speechSynthesis.speaking; } catch (_eSp) {}
+            if (started || speaking) return;
+
+            // голоса могли подгрузиться только сейчас
+            if (retries < 1) {
+              retries++;
+              // небольшой зазор перед ретраем, чтобы voices успели появиться
+              setTimeout(function () {
+                attemptSpeak();
+              }, 80);
+            } else {
+              // не удалось стартовать — не блокируем UI
+              finish();
+            }
+          }, 260);
+        }
+
+        attemptSpeak();
       });
     } catch (e) {
       return null;
     }
   }
+
 
   function speakCurrentWord(force) {
     var w = getCurrentWord();
