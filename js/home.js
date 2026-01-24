@@ -1074,7 +1074,7 @@ function setUiLang(code){
       const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
       const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-      const isPrepositions = !!(A.settings && A.settings.trainerKind === 'prepositions');
+      const isPreps = !!(A.settings && A.settings.trainerKind === 'prepositions');
 
       const learnedWords = full.filter(w => ((A.state && A.state.stars && A.state.stars[starKey(w.id, deckKey)]) || 0) >= starsMax).length;
       const uk = getUiLang() === 'uk';
@@ -1084,11 +1084,12 @@ function setUiLang(code){
         statsEl.textContent = uk ? `Всього слів: ${full.length} / Вивчено: ${learnedA}`
                                : `Всего слов: ${full.length} / Выучено: ${learnedA}`;
       } else {
-        const totalLabel = uk
-          ? (isPrepositions ? 'Всього патернів' : 'Всього слів')
-          : (isPrepositions ? 'Всего паттернов' : 'Всего слов');
         statsEl.style.display = '';
-        statsEl.textContent = `${totalLabel}: ${full.length} / ${uk ? 'Вивчено' : 'Выучено'}: ${learnedWords}`;
+        statsEl.textContent = isPreps
+          ? (uk ? `Всього патернів: ${full.length} / Вивчено: ${learnedWords}`
+                : `Всего паттернов: ${full.length} / Выучено: ${learnedWords}`)
+          : (uk ? `Всього слів: ${full.length} / Вивчено: ${learnedWords}`
+                : `Всего слов: ${full.length} / Выучено: ${learnedWords}`);
       }
     }catch(_){}
   }
@@ -2004,12 +2005,42 @@ answers.innerHTML = '';
             btn.disabled = true;
           });
           afterAnswer(true);
-          setTimeout(() => { renderSets();
-        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
-        } else {
-          renderTrainer();
-        } }, ADV_DELAY);
+
+          // Переход к следующему слову (word-trainer, forward):
+          // после верного ответа — озвучить пример целиком, дождаться окончания, пауза 250мс, затем смена слова.
+          // В reverse-режиме поведение НЕ меняем.
+          function _proceedNext() {
+            renderSets();
+            if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
+              try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_) {}
+            } else {
+              renderTrainer();
+            }
+          }
+
+          try {
+            const isWordsMode = !!(A.settings && A.settings.trainerKind === 'words');
+            const isReverse = (typeof isReverseMode === 'function') ? !!isReverseMode() : false;
+            const isPrepsKey = !!isPrepositionsModeForKey(key);
+
+            if (isWordsMode && !isReverse && !isPrepsKey) {
+              const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
+              const exText = String(ex || '').trim();
+              if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
+                const p = A.AudioTTS.speakText(exText, false);
+                if (p && typeof p.then === 'function') {
+                  p.then(function () {
+                    setTimeout(_proceedNext, 250);
+                  }).catch(function () {
+                    setTimeout(_proceedNext, ADV_DELAY);
+                  });
+                  return;
+                }
+              }
+            }
+          } catch (_eExTTS) {}
+
+          setTimeout(_proceedNext, ADV_DELAY);
           return;
         }
 

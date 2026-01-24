@@ -392,6 +392,10 @@
 
     // хук для ручного обновления, если понадобится
     (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
+    // публичный хелпер: озвучить произвольный текст и дождаться завершения
+    A.AudioTTS.speakText = function (text, force) {
+      return speakText(text, !!force);
+    };
     A.AudioTTS.setEnabled = function (flag) {
       audioEnabled = !!flag;
       saveAudioEnabled();
