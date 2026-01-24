@@ -1861,6 +1861,11 @@ if (wantArticles) {
     const stats   = document.getElementById('dictStats');
     const modeEl  = document.getElementById('trainerModeIndicator');
 
+
+    // Ensure footer stats are rendered for ALL trainer kinds (words/articles/prepositions)
+    // even if we early-return later due to feasibility guards.
+    try { setDictStatsText(stats, key); } catch(_){ }
+
     if (favBtn) {
       const favNow = isFav(key, word.id);
       favBtn.textContent = favNow ? '♥' : '♡';
