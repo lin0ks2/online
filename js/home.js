@@ -2064,13 +2064,6 @@ answers.innerHTML = '';
 
           setTimeout(_proceedNext, ADV_DELAY);
           return;
-                }
-              }
-            }
-          } catch (_eExTTS) {}
-
-          setTimeout(_proceedNext, ADV_DELAY);
-          return;
         }
 
         b.classList.add('is-wrong');
