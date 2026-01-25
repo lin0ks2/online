@@ -281,8 +281,8 @@
     if (sheet) return;
 
     const css = `
-      .guide-sheet{
-        position:fixed;
+       .guide-sheet{
+        position:absolute;
         left:0; right:0;
         top:var(--header-h-actual);
         bottom:var(--footer-h-actual);
@@ -360,30 +360,27 @@
 
     scroller = document.createElement('div');
     scroller.className = 'guide-content guide-scroll';
-    scroller.setAttribute('data-scroll-allow','1');
 
     sheet.appendChild(top);
     sheet.appendChild(scroller);
     document.body.appendChild(sheet);
 
     // свайп вправо — закрытие
-    // ВАЖНО (iOS PWA/TWA): listeners на всём sheet могут "съедать" вертикальный скролл overflow-контейнера.
-    // Поэтому жест закрытия слушаем только на верхней панели (guide-top).
-    top.addEventListener('touchstart', function (e) {
-      if (!e || !e.touches || e.touches.length !== 1) return;
+    sheet.addEventListener('touchstart', function (e) {
+      if (e.touches.length !== 1) return;
       swX0 = e.touches[0].clientX;
       swY0 = e.touches[0].clientY;
       swMoved = false;
     }, { passive: true });
 
-    top.addEventListener('touchmove', function (e) {
-      if (!e || !e.touches || e.touches.length !== 1) return;
+    sheet.addEventListener('touchmove', function (e) {
+      if (e.touches.length !== 1) return;
       const dx = e.touches[0].clientX - swX0;
       const dy = e.touches[0].clientY - swY0;
       if (Math.abs(dx) > 6 || Math.abs(dy) > 6) swMoved = true;
     }, { passive: true });
 
-    top.addEventListener('touchend', function (e) {
+    sheet.addEventListener('touchend', function (e) {
       if (!swMoved) return;
       const t = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]);
       if (!t) return;
