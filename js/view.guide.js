@@ -396,16 +396,6 @@
         close();
       }
     }, { passive: false });
-      if (!t) return;
-      const dx = t.clientX - swX0;
-      const dy = t.clientY - swY0;
-      const ady = Math.abs(dy);
-      const MIN_RIGHT = 80, MAX_UPDOWN = 48;
-      if (dx > MIN_RIGHT && ady <= MAX_UPDOWN) {
-        try { e.preventDefault(); } catch (_) {}
-        close();
-      }
-    }, { passive: false });
 
     // Esc — закрыть
     document.addEventListener('keydown', function (e) {
