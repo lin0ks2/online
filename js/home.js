@@ -2028,30 +2028,42 @@ answers.innerHTML = '';
             const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
             const isPrepsKey = !!isPrepositionsModeForKey(key);
 
-            // По умолчанию word-trainer — это всё, что НЕ articles и НЕ prepositions.
-            // На "холодную" trainerKind может быть не инициализирован, поэтому не требуем === 'words'.
-            if (!isArticles && !isPrepsKey && !isReverse) {
+            // 1) Prepositions: always wait for TTS (from onCorrect) before advancing.
+            if (isPrepsKey) {
+              if (__ttsAfterCorrectPromise && typeof __ttsAfterCorrectPromise.then === 'function') {
+                __ttsAfterCorrectPromise.then(function () {
+                  setTimeout(_proceedNext, ADV_DELAY);
+                }).catch(function () {
+                  setTimeout(_proceedNext, ADV_DELAY);
+                });
+              } else {
+                setTimeout(_proceedNext, ADV_DELAY);
+              }
+              return;
+            }
+
+            // 2) Word-trainer (forward): after correct answer, speak example, wait end, pause, then advance.
+            // Reverse mode behavior remains unchanged.
+            // On "cold" start trainerKind may be uninitialized, so we treat words as "not articles".
+            if (!isArticles && !isReverse) {
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
                 const p = A.AudioTTS.speakText(exText, false, { noVoice: true, isExample: true });
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
-                    setTimeout(_proceedNext, 1000);
+                    setTimeout(_proceedNext, ADV_DELAY);
                   }).catch(function () {
-                    // For prepositions trainer: ensure we never advance while TTS is still speaking
-          // (iOS PWA may report `speechSynthesis.speaking` unreliably, so we prefer the promise from onCorrect()).
-          try {
-            if (isPrepsKey && __ttsAfterCorrectPromise && typeof __ttsAfterCorrectPromise.then === 'function') {
-              __ttsAfterCorrectPromise.then(function(){ setTimeout(_proceedNext, ADV_DELAY); })
-                .catch(function(){ setTimeout(_proceedNext, ADV_DELAY); });
-              return;
-            }
-          } catch(_eWait) {}
-
-          setTimeout(_proceedNext, ADV_DELAY);
+                    setTimeout(_proceedNext, ADV_DELAY);
                   });
                   return;
+                }
+              }
+            }
+          } catch (_eExTTS) {}
+
+          setTimeout(_proceedNext, ADV_DELAY);
+          return;
                 }
               }
             }
