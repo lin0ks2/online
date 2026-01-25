@@ -332,7 +332,23 @@ if (del){
     }
 
     function launchTraining(key){
+      // Detect prepositions decks (incl. virtual favorites:* keys) and route to the correct trainer.
+      // IMPORTANT: favorites/mistakes views historically forced 'words' which breaks prepositions.
+      try{
+        const s0 = String(key||'');
+        let baseKey = s0;
+        const vm = s0.match(/^(favorites):(ru|uk):(.+)$/i);
+        if (vm){
+          const tail = String(vm[3]||'');
+          if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
+        }
+        if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
+          A.settings = A.settings || {};
+          A.settings.trainerKind = 'prepositions';
+        }
+      }catch(_){}
       // Switch to the default word trainer
+
       try { A.settings = A.settings || {}; /* keep current mode; default to words */ if (!A.settings.trainerKind) A.settings.trainerKind = 'words'; } catch(_){ }
       // Auto-grouping: base vs LearnPunkt для words favorites
       try{

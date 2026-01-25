@@ -293,8 +293,23 @@
             return;
           }
 
-          // Default words trainer
-          try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(_){ }
+          // Detect prepositions decks (incl. virtual mistakes:* keys) and route to the correct trainer.
+          try{
+            const s0 = String(key||'');
+            let baseKey = s0;
+            const vm = s0.match(/^(mistakes):(ru|uk):(.+)$/i);
+            if (vm){
+              const tail = String(vm[3]||'');
+              if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
+            }
+            if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
+              A.settings = A.settings || {};
+              A.settings.trainerKind = "prepositions";
+            } else {
+              // Default words trainer
+              A.settings = A.settings || {}; A.settings.trainerKind = "words";
+            }
+          } catch(_){ try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(__){} }
           try {
             A.settings = A.settings || {};
             // Auto-grouping: base vs LearnPunkt для words mistakes
