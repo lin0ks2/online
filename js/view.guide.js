@@ -308,6 +308,8 @@
         flex:1 1 auto;
         overflow:auto;
         -webkit-overflow-scrolling:touch;
+        overscroll-behavior:contain;
+        touch-action:pan-y;
         padding:14px 12px 18px;
         color:var(--text, #111111);
       }
@@ -335,9 +337,12 @@
       .guide-list li{
         margin-bottom:4px;
       }
-      body.guide-open{
-        overflow:hidden;
-      }
+      /* IMPORTANT (iOS PWA/TWA): do NOT lock body overflow for the guide.
+         When body is overflow:hidden and the guide is position:fixed,
+         iOS standalone may refuse to scroll the inner overflow:auto scroller.
+         We keep the guide as a fixed sheet (like Legal), but avoid body lock.
+      */
+      body.guide-open{ }
       @media (max-width:360px){
         .guide-content{ padding:10px 10px 14px; }
         .guide-title{ font-size:17px; }
@@ -359,8 +364,7 @@
     top.innerHTML = '<div class="guide-title"></div>';
 
     scroller = document.createElement('div');
-    scroller.className = 'guide-content guide-scroll';
-    scroller.setAttribute('data-scroll-allow','1');
+    scroller.className = 'guide-content';
 
     sheet.appendChild(top);
     sheet.appendChild(scroller);
