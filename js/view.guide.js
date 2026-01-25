@@ -281,14 +281,11 @@
     if (sheet) return;
 
     const css = `
-
       .guide-sheet{
         position:fixed;
         left:0; right:0;
-        top:0;
-        bottom:0;
-        padding-top:var(--header-h-actual, 0px);
-        padding-bottom:var(--footer-h-actual, 0px);
+        top:var(--header-h-actual);
+        bottom:var(--footer-h-actual);
         z-index:1200;
         display:none;
         flex-direction:column;
@@ -309,7 +306,6 @@
       .guide-content{
         position:relative;
         flex:1 1 auto;
-        min-height:0;
         overflow:auto;
         -webkit-overflow-scrolling:touch;
         padding:14px 12px 18px;
