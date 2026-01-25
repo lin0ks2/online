@@ -282,6 +282,7 @@
 
     const css = `
       .guide-sheet{
+        min-height:0;
         position:fixed;
         left:0; right:0;
         top:var(--header-h-actual);
@@ -289,7 +290,6 @@
         z-index:1200;
         display:none;
         flex-direction:column;
-        min-height:0;
         background:var(--surface-1, #ffffff);
         font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
       }
