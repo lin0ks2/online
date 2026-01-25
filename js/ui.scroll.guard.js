@@ -135,11 +135,15 @@
   // Disable via: remove param and set localStorage mm.debug.scroll = "0"
   // ----------------------------------------------------------
   var DBG = (function(){
+    // ALWAYS-ON in iOS standalone builds (PWA/TWA), because query params are not reliably preserved.
+    // To disable: set localStorage mm.debug.scroll = "0".
     var enabled = false;
     try {
-      enabled = (typeof location !== 'undefined' && /(?:\?|&)debugScroll=1(?:&|$)/.test(location.search)) ||
-                (typeof localStorage !== 'undefined' && localStorage.getItem('mm.debug.scroll') === '1');
-    } catch (e) {}
+      var forcedOff = (typeof localStorage !== 'undefined' && localStorage.getItem('mm.debug.scroll') === '0');
+      enabled = !forcedOff && shouldEnable();
+    } catch (e) {
+      enabled = shouldEnable();
+    }
 
     var el = null;
     var lines = [];
@@ -195,6 +199,7 @@
 
     return { enabled: enabled, push: push, set: set, fmtNode: fmtNode };
   })();
+;
 
 
   function onTouchStart(e){
