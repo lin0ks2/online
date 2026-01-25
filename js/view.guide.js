@@ -281,8 +281,8 @@
     if (sheet) return;
 
     const css = `
-       .guide-sheet{
-        position:absolute;
+      .guide-sheet{
+        position:fixed;
         left:0; right:0;
         top:var(--header-h-actual);
         bottom:var(--footer-h-actual);
@@ -360,6 +360,7 @@
 
     scroller = document.createElement('div');
     scroller.className = 'guide-content guide-scroll';
+    scroller.setAttribute('data-scroll-allow','1');
 
     sheet.appendChild(top);
     sheet.appendChild(scroller);
