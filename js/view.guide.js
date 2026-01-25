@@ -350,8 +350,7 @@
     document.head.appendChild(styleTag);
 
     sheet = document.createElement('section');
-    sheet.className = 'guide-sheet guide-scroll';
-    sheet.setAttribute('data-scroll-allow','1');
+    sheet.className = 'guide-sheet';
     sheet.setAttribute('role', 'dialog');
     sheet.style.display = 'none';
 
