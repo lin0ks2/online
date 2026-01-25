@@ -359,7 +359,7 @@
     top.innerHTML = '<div class="guide-title"></div>';
 
     scroller = document.createElement('div');
-    scroller.className = 'guide-content';
+    scroller.className = 'guide-content guide-scroll';
 
     sheet.appendChild(top);
     sheet.appendChild(scroller);
