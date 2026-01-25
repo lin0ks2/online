@@ -184,49 +184,11 @@
   function init(){
     if (!shouldEnable()) return;
 
-    var listenersOn = false;
-
-    function attach(){
-      if (listenersOn) return;
-      listenersOn = true;
-      // capture=true важно, чтобы попасть до нативного старта скролла.
-      document.addEventListener('touchstart', onTouchStart, { passive: true,  capture: true });
-      document.addEventListener('touchmove',  onTouchMove,  { passive: false, capture: true });
-      document.addEventListener('touchend',   onTouchEnd,   { passive: true,  capture: true });
-      document.addEventListener('touchcancel',onTouchEnd,   { passive: true,  capture: true });
-    }
-
-    function detach(){
-      if (!listenersOn) return;
-      listenersOn = false;
-      document.removeEventListener('touchstart', onTouchStart, { capture: true });
-      document.removeEventListener('touchmove',  onTouchMove,  { capture: true });
-      document.removeEventListener('touchend',   onTouchEnd,   { capture: true });
-      document.removeEventListener('touchcancel',onTouchEnd,   { capture: true });
-    }
-
-    function isGuideOpen(){
-      try { return document.body && document.body.classList.contains('guide-open'); } catch(_){ return false; }
-    }
-
-    // На экране инструкции (guide) полностью отключаем scroll-guard,
-    // т.к. в iOS standalone фиксированные оверлеи + document touchmove (passive:false)
-    // могут "глушить" нативный scroll внутренних контейнеров, даже без preventDefault.
-    function sync(){
-      if (isGuideOpen()) detach();
-      else attach();
-    }
-
-    // initial
-    sync();
-
-    // Следим за переключением классов body, чтобы guard включался/выключался автоматически.
-    try {
-      var mo = new MutationObserver(function(){
-        sync();
-      });
-      mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    } catch(_){ /* ignore */ }
+    // capture=true важно, чтобы попасть до нативного старта скролла.
+    document.addEventListener('touchstart', onTouchStart, { passive: true,  capture: true });
+    document.addEventListener('touchmove',  onTouchMove,  { passive: false, capture: true });
+    document.addEventListener('touchend',   onTouchEnd,   { passive: true,  capture: true });
+    document.addEventListener('touchcancel',onTouchEnd,   { passive: true,  capture: true });
 
     // Маркер для быстрого самопроверочного CSS (не виден пользователю).
     try { document.documentElement.setAttribute('data-scroll-guard', 'on'); } catch(_){ }
