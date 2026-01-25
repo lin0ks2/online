@@ -289,6 +289,7 @@
         z-index:1200;
         display:none;
         flex-direction:column;
+        min-height:0;
         background:var(--surface-1, #ffffff);
         font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
       }
@@ -306,6 +307,7 @@
       .guide-content{
         position:relative;
         flex:1 1 auto;
+        min-height:0;
         overflow:auto;
         -webkit-overflow-scrolling:touch;
         padding:14px 12px 18px;
