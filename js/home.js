@@ -1947,7 +1947,7 @@ answers.innerHTML = '';
 
     let penalized = false;
     let solved = false;
-    const ADV_DELAY = 750;
+    const ADV_DELAY = 1000;
 
     function afterAnswer() {
       try { A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender(); } catch(_){}
@@ -1986,17 +1986,13 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse/articles/prepositions mode auto-speaks after correct answer (manual speaks always)
-          // IMPORTANT: in prepositions we must not advance the pattern until the utterance finishes,
-          // otherwise the UI changes while the old sentence is still being spoken.
-          var _ttsAfterCorrectPromise = null;
+          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
+          let __ttsAfterCorrectPromise = null;
           try {
-            if (!(A.settings && A.settings.trainerKind === 'articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
-              _ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
+            if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
+              __ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
             }
-          } catch (_eTTS) {
-            _ttsAfterCorrectPromise = null;
-          }
+          } catch(_eTTS) { __ttsAfterCorrectPromise = null; }
 
 
           // аналитика: ответ в тренере
@@ -2028,36 +2024,36 @@ answers.innerHTML = '';
           }
 
           try {
-            const isWordsMode = !!(A.settings && A.settings.trainerKind === 'words');
             const isReverse = (typeof isReverseMode === 'function') ? !!isReverseMode() : false;
+            const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
             const isPrepsKey = !!isPrepositionsModeForKey(key);
 
-            if (isWordsMode && !isReverse && !isPrepsKey) {
+            // По умолчанию word-trainer — это всё, что НЕ articles и НЕ prepositions.
+            // На "холодную" trainerKind может быть не инициализирован, поэтому не требуем === 'words'.
+            if (!isArticles && !isPrepsKey && !isReverse) {
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
-                const p = A.AudioTTS.speakText(exText, false);
+                const p = A.AudioTTS.speakText(exText, false, { noVoice: true, isExample: true });
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
-                    // micro-delay after example TTS ends
-                    setTimeout(_proceedNext, 750);
+                    setTimeout(_proceedNext, 1000);
                   }).catch(function () {
-                    setTimeout(_proceedNext, ADV_DELAY);
+                    // For prepositions trainer: ensure we never advance while TTS is still speaking
+          // (iOS PWA may report `speechSynthesis.speaking` unreliably, so we prefer the promise from onCorrect()).
+          try {
+            if (isPrepsKey && __ttsAfterCorrectPromise && typeof __ttsAfterCorrectPromise.then === 'function') {
+              __ttsAfterCorrectPromise.then(function(){ setTimeout(_proceedNext, ADV_DELAY); })
+                .catch(function(){ setTimeout(_proceedNext, ADV_DELAY); });
+              return;
+            }
+          } catch(_eWait) {}
+
+          setTimeout(_proceedNext, ADV_DELAY);
                   });
                   return;
                 }
               }
-            }
-
-            // Prepositions trainer: wait for the post-correct utterance (sentence with the correct preposition)
-            // and only then advance.
-            if (isPrepsKey && _ttsAfterCorrectPromise && typeof _ttsAfterCorrectPromise.then === 'function') {
-              _ttsAfterCorrectPromise.then(function () {
-                setTimeout(_proceedNext, ADV_DELAY);
-              }).catch(function () {
-                setTimeout(_proceedNext, ADV_DELAY);
-              });
-              return;
             }
           } catch (_eExTTS) {}
 
