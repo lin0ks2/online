@@ -146,6 +146,14 @@
   }
 
   function onTouchMove(e){
+    // --- Special-case: Guide screen (Instruction) ---
+    // If the guide sheet is open, allow native scrolling inside it.
+    try {
+      if (document.body && document.body.classList && document.body.classList.contains("guide-open")) {
+        var tgt = e && e.target;
+        if (tgt && tgt.closest && tgt.closest(".guide-sheet")) return;
+      }
+    } catch(_) {}
     if (!touchActive) return;
     if (!e || !e.touches || e.touches.length !== 1) return;
 
