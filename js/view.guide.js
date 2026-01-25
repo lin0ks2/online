@@ -281,12 +281,14 @@
     if (sheet) return;
 
     const css = `
+
       .guide-sheet{
-        min-height:0;
         position:fixed;
         left:0; right:0;
-        top:var(--header-h-actual);
-        bottom:var(--footer-h-actual);
+        top:0;
+        bottom:0;
+        padding-top:var(--header-h-actual, 0px);
+        padding-bottom:var(--footer-h-actual, 0px);
         z-index:1200;
         display:none;
         flex-direction:column;
