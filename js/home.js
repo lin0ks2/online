@@ -2019,11 +2019,13 @@ answers.innerHTML = '';
           }
 
           try {
-            const isWordsMode = !!(A.settings && A.settings.trainerKind === 'words');
             const isReverse = (typeof isReverseMode === 'function') ? !!isReverseMode() : false;
+            const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
             const isPrepsKey = !!isPrepositionsModeForKey(key);
 
-            if (isWordsMode && !isReverse && !isPrepsKey) {
+            // По умолчанию word-trainer — это всё, что НЕ articles и НЕ prepositions.
+            // На "холодную" trainerKind может быть не инициализирован, поэтому не требуем === 'words'.
+            if (!isArticles && !isPrepsKey && !isReverse) {
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
