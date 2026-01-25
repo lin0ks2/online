@@ -1986,8 +1986,17 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
-          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
+          // TTS: in reverse/articles/prepositions mode auto-speaks after correct answer (manual speaks always)
+          // IMPORTANT: in prepositions we must not advance the pattern until the utterance finishes,
+          // otherwise the UI changes while the old sentence is still being spoken.
+          var _ttsAfterCorrectPromise = null;
+          try {
+            if (!(A.settings && A.settings.trainerKind === 'articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
+              _ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
+            }
+          } catch (_eTTS) {
+            _ttsAfterCorrectPromise = null;
+          }
 
 
           // аналитика: ответ в тренере
@@ -2019,26 +2028,36 @@ answers.innerHTML = '';
           }
 
           try {
+            const isWordsMode = !!(A.settings && A.settings.trainerKind === 'words');
             const isReverse = (typeof isReverseMode === 'function') ? !!isReverseMode() : false;
-            const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
             const isPrepsKey = !!isPrepositionsModeForKey(key);
 
-            // По умолчанию word-trainer — это всё, что НЕ articles и НЕ prepositions.
-            // На "холодную" trainerKind может быть не инициализирован, поэтому не требуем === 'words'.
-            if (!isArticles && !isPrepsKey && !isReverse) {
+            if (isWordsMode && !isReverse && !isPrepsKey) {
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
-                const p = A.AudioTTS.speakText(exText, false, { noVoice: true, isExample: true });
+                const p = A.AudioTTS.speakText(exText, false);
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
-                    setTimeout(_proceedNext, 250);
+                    // micro-delay after example TTS ends
+                    setTimeout(_proceedNext, 750);
                   }).catch(function () {
                     setTimeout(_proceedNext, ADV_DELAY);
                   });
                   return;
                 }
               }
+            }
+
+            // Prepositions trainer: wait for the post-correct utterance (sentence with the correct preposition)
+            // and only then advance.
+            if (isPrepsKey && _ttsAfterCorrectPromise && typeof _ttsAfterCorrectPromise.then === 'function') {
+              _ttsAfterCorrectPromise.then(function () {
+                setTimeout(_proceedNext, ADV_DELAY);
+              }).catch(function () {
+                setTimeout(_proceedNext, ADV_DELAY);
+              });
+              return;
             }
           } catch (_eExTTS) {}
 
