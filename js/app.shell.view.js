@@ -22,6 +22,7 @@
   }
 
   var donateBtnHtml = isTwa
+   var donateBtnHtml = isTwa
   ? '<button class="action-btn action-btn--stub" type="button" disabled aria-label="🙂">🙂</button>'
   : '<button class="action-btn" data-action="donate" aria-label="Поддержать проект">💰</button>';
 

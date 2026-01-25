@@ -472,6 +472,8 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
         document.dispatchEvent(
           new CustomEvent('lexitron:set-complete', { detail: { key } })
         );
+    advanceSetCircular,
+    updateModeIndicator
       }
     } catch (_) {}
   }
@@ -500,6 +502,8 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
     _recentShown,
     isCurrentSetComplete,
     isWholeDeckComplete,
+    advanceSetCircular,
+    updateModeIndicator
   });
 })();
 
