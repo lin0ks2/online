@@ -306,10 +306,9 @@
       .guide-content{
         position:relative;
         flex:1 1 auto;
+        min-height:0;
         overflow:auto;
         -webkit-overflow-scrolling:touch;
-        overscroll-behavior:contain;
-        touch-action:pan-y;
         padding:14px 12px 18px;
         color:var(--text, #111111);
       }
@@ -337,12 +336,9 @@
       .guide-list li{
         margin-bottom:4px;
       }
-      /* IMPORTANT (iOS PWA/TWA): do NOT lock body overflow for the guide.
-         When body is overflow:hidden and the guide is position:fixed,
-         iOS standalone may refuse to scroll the inner overflow:auto scroller.
-         We keep the guide as a fixed sheet (like Legal), but avoid body lock.
-      */
-      body.guide-open{ }
+      body.guide-open{
+        overflow:hidden;
+      }
       @media (max-width:360px){
         .guide-content{ padding:10px 10px 14px; }
         .guide-title{ font-size:17px; }
@@ -364,30 +360,42 @@
     top.innerHTML = '<div class="guide-title"></div>';
 
     scroller = document.createElement('div');
-    scroller.className = 'guide-content';
+    scroller.className = 'guide-content guide-scroll';
+    scroller.setAttribute('data-scroll-allow','1');
 
     sheet.appendChild(top);
     sheet.appendChild(scroller);
     document.body.appendChild(sheet);
 
-    // свайп вправо — закрытие
-    sheet.addEventListener('touchstart', function (e) {
+    // свайп вправо — закрытие (только по верхней панели, чтобы не мешать вертикальному скроллу)
+
+    top.addEventListener('touchstart', function (e) {
       if (e.touches.length !== 1) return;
       swX0 = e.touches[0].clientX;
       swY0 = e.touches[0].clientY;
       swMoved = false;
     }, { passive: true });
 
-    sheet.addEventListener('touchmove', function (e) {
+    top.addEventListener('touchmove', function (e) {
       if (e.touches.length !== 1) return;
       const dx = e.touches[0].clientX - swX0;
       const dy = e.touches[0].clientY - swY0;
       if (Math.abs(dx) > 6 || Math.abs(dy) > 6) swMoved = true;
     }, { passive: true });
 
-    sheet.addEventListener('touchend', function (e) {
+    top.addEventListener('touchend', function (e) {
       if (!swMoved) return;
       const t = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]);
+      if (!t) return;
+      const dx = t.clientX - swX0;
+      const dy = t.clientY - swY0;
+      const ady = Math.abs(dy);
+      const MIN_RIGHT = 80, MAX_UPDOWN = 48;
+      if (dx > MIN_RIGHT && ady <= MAX_UPDOWN) {
+        try { e.preventDefault(); } catch (_) {}
+        close();
+      }
+    }, { passive: false });
       if (!t) return;
       const dx = t.clientX - swX0;
       const dy = t.clientY - swY0;
