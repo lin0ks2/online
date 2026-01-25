@@ -264,7 +264,7 @@
   // Returns a Promise that resolves when the utterance finishes (or errors).
   // Used to delay UI transitions until the user has heard the audio.
   
-function speakText(text, force) {
+function speakText(text, force, opts) {
     if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
     if (!force && !audioEnabled) return null; // авто-озвучка зависит от переключателя
     if (!hasTTS()) return null;
@@ -296,10 +296,16 @@ function speakText(text, force) {
           u.lang = getTtsLang();
 
           // Подбор голоса по языку активной деки (best-effort).
-          try {
-            var v = _pickVoiceForLang(u.lang);
-            if (v) u.voice = v;
-          } catch (_eVoice) {}
+          // ВАЖНО (iOS/WebKit): для длинных фраз на "холодную" выбор конкретного voice
+          // иногда приводит к тихому/пропущенному воспроизведению. Для примеров разрешаем
+          // режим noVoice (только lang), чтобы повысить надёжность.
+          var noVoice = !!(opts && opts.noVoice);
+          if (!noVoice) {
+            try {
+              var v = _pickVoiceForLang(u.lang);
+              if (v) u.voice = v;
+            } catch (_eVoice) {}
+          }
 
           u.rate = 0.95;
           u.pitch = 1.0;
@@ -571,8 +577,8 @@ function speakText(text, force) {
     // хук для ручного обновления, если понадобится
     (A.AudioTTS = A.AudioTTS || {}).refresh = renderAudioButton;
     // публичный хелпер: озвучить произвольный текст и дождаться завершения
-    A.AudioTTS.speakText = function (text, force) {
-      return speakText(text, !!force);
+    A.AudioTTS.speakText = function (text, force, opts) {
+      return speakText(text, !!force, opts);
     };
     // публичный хелпер: дождаться, пока текущая озвучка завершится
     A.AudioTTS.waitUntilIdle = function (timeoutMs) {

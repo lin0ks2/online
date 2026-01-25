@@ -1986,17 +1986,8 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse/articles/prepositions mode auto-speaks after correct answer (manual speaks always)
-          // IMPORTANT: in prepositions we must not advance the pattern until the utterance finishes,
-          // otherwise the UI changes while the old sentence is still being spoken.
-          var _ttsAfterCorrectPromise = null;
-          try {
-            if (!(A.settings && A.settings.trainerKind === 'articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
-              _ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
-            }
-          } catch (_eTTS) {
-            _ttsAfterCorrectPromise = null;
-          }
+          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
+          try { if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch(_eTTS) {}
 
 
           // аналитика: ответ в тренере
@@ -2036,28 +2027,16 @@ answers.innerHTML = '';
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
-                const p = A.AudioTTS.speakText(exText, false);
+                const p = A.AudioTTS.speakText(exText, false, { noVoice: true, isExample: true });
                 if (p && typeof p.then === 'function') {
                   p.then(function () {
-                    // micro-delay after example TTS ends
-                    setTimeout(_proceedNext, 750);
+                    setTimeout(_proceedNext, 250);
                   }).catch(function () {
                     setTimeout(_proceedNext, ADV_DELAY);
                   });
                   return;
                 }
               }
-            }
-
-            // Prepositions trainer: wait for the post-correct utterance (sentence with the correct preposition)
-            // and only then advance.
-            if (isPrepsKey && _ttsAfterCorrectPromise && typeof _ttsAfterCorrectPromise.then === 'function') {
-              _ttsAfterCorrectPromise.then(function () {
-                setTimeout(_proceedNext, ADV_DELAY);
-              }).catch(function () {
-                setTimeout(_proceedNext, ADV_DELAY);
-              });
-              return;
             }
           } catch (_eExTTS) {}
 
