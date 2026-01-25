@@ -129,6 +129,74 @@
   var touchActive = false;
   var activeScroller = null;
 
+  // ----------------------------------------------------------
+  // DEBUG OVERLAY (no console needed)
+  // Enable via: ?debugScroll=1  OR localStorage mm.debug.scroll = "1"
+  // Disable via: remove param and set localStorage mm.debug.scroll = "0"
+  // ----------------------------------------------------------
+  var DBG = (function(){
+    var enabled = false;
+    try {
+      enabled = (typeof location !== 'undefined' && /(?:\?|&)debugScroll=1(?:&|$)/.test(location.search)) ||
+                (typeof localStorage !== 'undefined' && localStorage.getItem('mm.debug.scroll') === '1');
+    } catch (e) {}
+
+    var el = null;
+    var lines = [];
+
+    function ensure(){
+      if (!enabled || el) return;
+      el = document.createElement('div');
+      el.id = 'mm-scroll-debug';
+      el.style.cssText = [
+        'position:fixed',
+        'left:8px',
+        'right:8px',
+        'top:8px',
+        'z-index:2147483647',
+        'background:rgba(0,0,0,0.75)',
+        'color:#fff',
+        'font:12px/1.35 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif',
+        'padding:8px',
+        'border-radius:10px',
+        'white-space:pre-wrap',
+        'pointer-events:none',
+        'max-height:42vh',
+        'overflow:hidden'
+      ].join(';');
+      document.body.appendChild(el);
+    }
+
+    function fmtNode(n){
+      if (!n) return '(null)';
+      var s = n.tagName ? n.tagName.toLowerCase() : String(n);
+      if (n.id) s += '#' + n.id;
+      if (n.className && typeof n.className === 'string') {
+        var c = n.className.trim().replace(/\s+/g,'.');
+        if (c) s += '.' + c;
+      }
+      return s;
+    }
+
+    function push(text){
+      if (!enabled) return;
+      ensure();
+      lines.push(text);
+      if (lines.length > 14) lines.shift();
+      if (el) el.textContent = lines.join('\n');
+    }
+
+    function set(text){
+      if (!enabled) return;
+      ensure();
+      lines = [text];
+      if (el) el.textContent = text;
+    }
+
+    return { enabled: enabled, push: push, set: set, fmtNode: fmtNode };
+  })();
+
+
   function onTouchStart(e){
     if (!e || !e.touches || e.touches.length !== 1) {
       touchActive = false;
@@ -138,6 +206,20 @@
     touchActive = true;
     touchStartY = e.touches[0].clientY;
     activeScroller = getActiveScroller(e.target);
+
+    if (DBG.enabled) {
+      try {
+        var cs = activeScroller ? window.getComputedStyle(activeScroller) : null;
+        DBG.set(
+          'SCROLLDBG\n' +
+          'start target: ' + DBG.fmtNode(e.target) + '\n' +
+          'activeScroller: ' + DBG.fmtNode(activeScroller) + '\n' +
+          (activeScroller ? ('scroller H=' + activeScroller.clientHeight + ' SH=' + activeScroller.scrollHeight + ' top=' + activeScroller.scrollTop + '\n') : '') +
+          (cs ? ('overflowY=' + cs.overflowY + ' overflow=' + cs.overflow + '\n') : '') +
+          'allowSel match: ' + (e.target && e.target.closest ? (e.target.closest(CFG.allowSelectors) ? 'YES' : 'NO') : 'n/a')
+        );
+      } catch (e2) {}
+    }
 
     // Nudge early to avoid iOS entering overscroll mode at edges.
     if (activeScroller) {
@@ -153,33 +235,34 @@
     var deltaY = y - touchStartY;
     if (Math.abs(deltaY) < CFG.deltaThresholdPx) return;
 
-    // FIX iOS PWA/TWA: allow native scrolling inside the Guide sheet.
-    // The Guide uses an inner scroller; if ScrollGuard fails to resolve it, it would block touchmove.
-    try {
-      if (e && e.target && e.target.closest && e.target.closest('.guide-sheet')) return;
-    } catch(_){ }
-
     var scroller = activeScroller || getActiveScroller(e.target);
 
     // Вне разрешённых зон — блокируем всегда.
     if (!scroller) {
+      if (DBG.enabled) DBG.push('move dy=' + deltaY + ' -> BLOCK (no scroller) target=' + DBG.fmtNode(e.target));
       e.preventDefault();
       return;
     }
 
     // Если скролл невозможен — блокируем, чтобы не было bounce.
     if (!isScrollable(scroller)) {
+      if (DBG.enabled) DBG.push('move dy=' + deltaY + ' -> BLOCK (not scrollable) scroller=' + DBG.fmtNode(scroller) +
+        ' H=' + scroller.clientHeight + ' SH=' + scroller.scrollHeight + ' top=' + scroller.scrollTop);
       e.preventDefault();
       return;
     }
 
     // На границах — блокируем, чтобы не было rubber-band.
     if (!canScrollInDirection(scroller, deltaY)) {
+      if (DBG.enabled) DBG.push('move dy=' + deltaY + ' -> BLOCK (edge/bounce) scroller=' + DBG.fmtNode(scroller) +
+        ' top=' + scroller.scrollTop + ' max=' + (scroller.scrollHeight - scroller.clientHeight));
       e.preventDefault();
       return;
     }
 
     // Иначе — даём нативно скроллить внутри scroller.
+    if (DBG.enabled) DBG.push('move dy=' + deltaY + ' -> ALLOW scroller=' + DBG.fmtNode(scroller) +
+      ' top=' + scroller.scrollTop + '/' + (scroller.scrollHeight - scroller.clientHeight));
   }
 
   function onTouchEnd(){
