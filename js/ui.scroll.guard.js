@@ -146,20 +146,18 @@
   }
 
   function onTouchMove(e){
-    // --- Special-case: Guide screen (Instruction) ---
-    // If the guide sheet is open, allow native scrolling inside it.
-    try {
-      if (document.body && document.body.classList && document.body.classList.contains("guide-open")) {
-        var tgt = e && e.target;
-        if (tgt && tgt.closest && tgt.closest(".guide-sheet")) return;
-      }
-    } catch(_) {}
     if (!touchActive) return;
     if (!e || !e.touches || e.touches.length !== 1) return;
 
     var y = e.touches[0].clientY;
     var deltaY = y - touchStartY;
     if (Math.abs(deltaY) < CFG.deltaThresholdPx) return;
+
+    // FIX iOS PWA/TWA: allow native scrolling inside the Guide sheet.
+    // The Guide uses an inner scroller; if ScrollGuard fails to resolve it, it would block touchmove.
+    try {
+      if (e && e.target && e.target.closest && e.target.closest('.guide-sheet')) return;
+    } catch(_){ }
 
     var scroller = activeScroller || getActiveScroller(e.target);
 
