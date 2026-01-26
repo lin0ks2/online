@@ -1576,10 +1576,10 @@ window.decks.de_nouns = [
       "das Netz"
     ],
     ruSynonyms: [
-      "сеть (интернет)"
+      "сеть"
     ],
     ukSynonyms: [
-      "мережа (інтернет)"
+      "мережа"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -1949,11 +1949,11 @@ window.decks.de_nouns = [
       "die Feindin"
     ],
     ruAntonyms: [
-      "враг (женщина)",
+      "враг",
       "противница"
     ],
     ukAntonyms: [
-      "ворог (жінка)",
+      "ворог",
       "противниця"
     ],
     examples: [
@@ -2084,10 +2084,10 @@ window.decks.de_nouns = [
       "das Abendbrot"
     ],
     ruSynonyms: [
-      "ужин (обычно с хлебом, колбасой и т.п.)"
+      "ужин"
     ],
     ukSynonyms: [
-      "вечеря (зазвичай з хлібом, ковбасою тощо)"
+      "вечеря"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -2290,10 +2290,10 @@ window.decks.de_nouns = [
       "die Medizinerin"
     ],
     ruSynonyms: [
-      "медик (женщина)"
+      "медик"
     ],
     ukSynonyms: [
-      "медик (жінка)"
+      "медик"
     ],
     deAntonyms: [
       "die Patientin"
@@ -4471,10 +4471,10 @@ window.decks.de_nouns = [
       "die Berechtigung"
     ],
     ruSynonyms: [
-      "право (на что-то)"
+      "право"
     ],
     ukSynonyms: [
-      "право (на щось)"
+      "право"
     ],
     deAntonyms: [
       "die Pflicht"
@@ -5411,10 +5411,10 @@ window.decks.de_nouns = [
       "der Zweck"
     ],
     ruSynonyms: [
-      "цель (смысл)"
+      "цель"
     ],
     ukSynonyms: [
-      "мета (сенс)"
+      "мета"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -6268,10 +6268,10 @@ window.decks.de_nouns = [
       "die Nachtruhe"
     ],
     ruSynonyms: [
-      "сон (как процесс)"
+      "сон"
     ],
     ukSynonyms: [
-      "сон (як процес)"
+      "сон"
     ],
     deAntonyms: [
       "das Wachsein"
@@ -10223,11 +10223,11 @@ window.decks.de_nouns = [
     ],
     ruSynonyms: [
       "торговый автомат",
-      "банкомат (контекстно)"
+      "банкомат"
     ],
     ukSynonyms: [
       "торговий автомат",
-      "банкомат (контекстно)"
+      "банкомат"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -10642,7 +10642,7 @@ window.decks.de_nouns = [
       "рубеж"
     ],
     ukSynonyms: [
-      "межа (переносно)",
+      "межа",
       "державний кордон"
     ],
     deAntonyms: [],
@@ -10670,10 +10670,10 @@ window.decks.de_nouns = [
       "der Reisepass"
     ],
     ruSynonyms: [
-      "загранпаспорт (контекстно)"
+      "загранпаспорт"
     ],
     ukSynonyms: [
-      "закордонний паспорт (контекстно)"
+      "закордонний паспорт"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -10936,7 +10936,7 @@ window.decks.de_nouns = [
       "law"
     ],
     deSynonyms: [
-      "die Bewerbung (контекстно)",
+      "die Bewerbung",
       "das Gesuch"
     ],
     ruSynonyms: [
@@ -16284,7 +16284,7 @@ window.decks.de_nouns = [
     ],
     ruAntonyms: [
       "разделение",
-      "розвязка (отвязка)"
+      "розвязка"
     ],
     ukAntonyms: [
       "розділення",
@@ -18365,11 +18365,11 @@ window.decks.de_nouns = [
       "der Coverage-Wert"
     ],
     ruSynonyms: [
-      "покрытие (тестами)",
+      "покрытие",
       "охват"
     ],
     ukSynonyms: [
-      "покриття (тестами)",
+      "покриття",
       "охоплення"
     ],
     deAntonyms: [
@@ -19045,11 +19045,11 @@ window.decks.de_nouns = [
     ],
     ruSynonyms: [
       "стопа",
-      "нога (внизу)"
+      "нога"
     ],
     ukSynonyms: [
       "ступня",
-      "нога (внизу)"
+      "нога"
     ],
     deAntonyms: [
       "die Hand"
@@ -19287,7 +19287,7 @@ window.decks.de_nouns = [
     examples: [
       {
         L2: "Die Praxis ist bis 18 Uhr geöffnet.",
-        ru: "Практика (кабинет) открыт до 18 часов.",
+        ru: "Практика открыт до 18 часов.",
         uk: "Практика відкрита до 18-ї години."
       }
     ]
@@ -19583,7 +19583,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "der Infekt",
-      "die Verkühlung (AT)"
+      "die Verkühlung"
     ],
     ruSynonyms: [
       "простуда",
@@ -20272,7 +20272,7 @@ window.decks.de_nouns = [
     ],
     ukSynonyms: [
       "готель",
-      "гостиниця (розм.)"
+      "гостиниця"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -20572,11 +20572,11 @@ window.decks.de_nouns = [
     ],
     ruSynonyms: [
       "домашнее задание",
-      "домашка (разг.)"
+      "домашка"
     ],
     ukSynonyms: [
       "домашнє завдання",
-      "домашка (розм.)"
+      "домашка"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -20677,7 +20677,7 @@ window.decks.de_nouns = [
       "учительница"
     ],
     ukSynonyms: [
-      "учителька (школи)",
+      "учителька",
       "вчителька"
     ],
     deAntonyms: [
@@ -21898,7 +21898,7 @@ window.decks.de_nouns = [
     ],
     ruSynonyms: [
       "сахар",
-      "песок (сахар)"
+      "песок"
     ],
     ukSynonyms: [
       "цукор",
@@ -23262,10 +23262,10 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [],
     ruSynonyms: [
-      "экран (в кино)"
+      "экран"
     ],
     ukSynonyms: [
-      "екран (у кіно)"
+      "екран"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -26140,8 +26140,8 @@ window.decks.de_nouns = [
     examples: [
       {
         L2: "Der Ertrag war dieses Jahr besonders gut.",
-        ru: "Доход (урожай) в этом году был особенно хорошим.",
-        uk: "Дохід (урожай) цього року був особливо добрим."
+        ru: "Доход в этом году был особенно хорошим.",
+        uk: "Дохід цього року був особливо добрим."
       }
     ]
   },
@@ -29001,7 +29001,7 @@ window.decks.de_nouns = [
       "startups"
     ],
     deSynonyms: [
-      "der Markterfolg (früh)",
+      "der Markterfolg",
       "das Wachstum"
     ],
     ruSynonyms: [
@@ -29510,7 +29510,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "die Toleranz",
-      "die Akzeptanz (medizinisch)"
+      "die Akzeptanz"
     ],
     ruSynonyms: [
       "переносимость",
@@ -29707,10 +29707,10 @@ window.decks.de_nouns = [
       "das Körpergewebe"
     ],
     ruSynonyms: [
-      "ткань (биологическая)"
+      "ткань"
     ],
     ukSynonyms: [
-      "тканина (біологічна)"
+      "тканина"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -29733,7 +29733,7 @@ window.decks.de_nouns = [
       "biology"
     ],
     deSynonyms: [
-      "die Mitose (allgemein)",
+      "die Mitose",
       "die Zellvermehrung"
     ],
     ruSynonyms: [
@@ -29833,7 +29833,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "die Beweislage",
-      "der Nachweis (wissenschaftlich)"
+      "der Nachweis"
     ],
     ruSynonyms: [
       "доказательность",
@@ -30166,7 +30166,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "die Solarstromtechnik",
-      "die Solartechnik (für Strom)"
+      "die Solartechnik"
     ],
     ruSynonyms: [
       "солнечная генерация",
@@ -30701,7 +30701,7 @@ window.decks.de_nouns = [
       "statistics"
     ],
     deSynonyms: [
-      "die Streuung (statistisch)"
+      "die Streuung"
     ],
     ruSynonyms: [
       "вариация",
@@ -30772,7 +30772,7 @@ window.decks.de_nouns = [
       "statistics"
     ],
     deSynonyms: [
-      "der Zusammenhang (statistisch)"
+      "der Zusammenhang"
     ],
     ruSynonyms: [
       "статистическая связь",
@@ -31172,7 +31172,7 @@ window.decks.de_nouns = [
       "education"
     ],
     deSynonyms: [
-      "der Ursprung (von Informationen)",
+      "der Ursprung",
       "das Informationsquelle"
     ],
     ruSynonyms: [
@@ -31239,7 +31239,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "die Gehaltsentwicklung",
-      "die Lohnsteigerung (Prozess)"
+      "die Lohnsteigerung"
     ],
     ruSynonyms: [
       "динамика заработной платы",
@@ -32066,7 +32066,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "die Retoure",
-      "die Rückgabe (per Post)"
+      "die Rückgabe"
     ],
     ruSynonyms: [
       "обратная отправка",
@@ -32237,7 +32237,7 @@ window.decks.de_nouns = [
       "migration"
     ],
     deSynonyms: [
-      "die Aufenthaltserlaubnis (offizielles Dokument)",
+      "die Aufenthaltserlaubnis",
       "das Aufenthaltsdokument"
     ],
     ruSynonyms: [
@@ -32376,10 +32376,10 @@ window.decks.de_nouns = [
     ],
     ruSynonyms: [
       "подданство",
-      "национальная принадлежность (юрид.)"
+      "национальная принадлежность"
     ],
     ukSynonyms: [
-      "національна приналежність (юрид.)"
+      "національна приналежність"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -32440,7 +32440,7 @@ window.decks.de_nouns = [
       "administration"
     ],
     deSynonyms: [
-      "die Anschrift (als Wohnort)",
+      "die Anschrift",
       "der Wohnort"
     ],
     ruSynonyms: [
@@ -32515,7 +32515,7 @@ window.decks.de_nouns = [
       "business"
     ],
     deSynonyms: [
-      "die Verantwortung (juristisch)",
+      "die Verantwortung",
       "die Ersatzpflicht"
     ],
     ruSynonyms: [
@@ -32694,7 +32694,7 @@ window.decks.de_nouns = [
       "work"
     ],
     deSynonyms: [
-      "die Verfügbarkeit (telefonisch)",
+      "die Verfügbarkeit",
       "die Kontaktierbarkeit"
     ],
     ruSynonyms: [
@@ -32735,7 +32735,7 @@ window.decks.de_nouns = [
     ],
     deSynonyms: [
       "der Kredit",
-      "das Hypothekendarlehen (bei Immobilien)"
+      "das Hypothekendarlehen"
     ],
     ruSynonyms: [
       "кредит",
@@ -32938,18 +32938,18 @@ window.decks.de_nouns = [
       "media"
     ],
     deSynonyms: [
-      "die Gebühr (finanziell)",
-      "der Artikel (medial)"
+      "die Gebühr",
+      "der Artikel"
     ],
     ruSynonyms: [
       "членский взнос",
       "плата",
-      "публикация (в медиа)"
+      "публикация"
     ],
     ukSynonyms: [
       "членський внесок",
       "плата",
-      "публікація (в медіа)"
+      "публікація"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -78686,10 +78686,10 @@ window.decks.de_adjectives = [
       "intern"
     ],
     ruSynonyms: [
-      "внутренний (служебный)"
+      "внутренний"
     ],
     ukSynonyms: [
-      "внутрішній (службовий)"
+      "внутрішній"
     ],
     deAntonyms: [
       "äußerlich"
@@ -80334,7 +80334,7 @@ window.decks.de_adjectives = [
       "rechtzeitig"
     ],
     ruSynonyms: [
-      "точный (по времени)"
+      "точный"
     ],
     ukSynonyms: [
       "вчасний"
@@ -80627,7 +80627,7 @@ window.decks.de_adjectives = [
       "würzig"
     ],
     ruSynonyms: [
-      "острый (на вкус)"
+      "острый"
     ],
     ukSynonyms: [
       "пекучий"
@@ -81493,10 +81493,10 @@ window.decks.de_adjectives = [
       "kühl"
     ],
     ruSynonyms: [
-      "холодный (в общении)"
+      "холодный"
     ],
     ukSynonyms: [
-      "холодний (у спілкуванні)"
+      "холодний"
     ],
     deAntonyms: [
       "freundlich"
@@ -84412,7 +84412,7 @@ window.decks.de_adverbs = [
       "formal"
     ],
     deSynonyms: [
-      "damit (formell)",
+      "damit",
       "mit diesem Schreiben"
     ],
     ruSynonyms: [
@@ -86611,11 +86611,11 @@ window.decks.de_adverbs = [
       "vor allem, weil"
     ],
     ruSynonyms: [
-      "тем более (что)",
+      "тем более",
       "особенно"
     ],
     ukSynonyms: [
-      "тим більше (що)",
+      "тим більше",
       "особливо"
     ],
     deAntonyms: [],
@@ -86939,7 +86939,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "time"
     ],
-    case: "Dativ (обычно)",
+    case: "Dativ",
     caseTags: [
       "DAT"
     ],
@@ -87038,7 +87038,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "money"
     ],
-    case: "Genitiv (часто с von + Dativ)",
+    case: "Genitiv",
     caseTags: [
       "DAT",
       "GEN"
@@ -87073,7 +87073,7 @@ window.decks.de_prepositions = [
       "location",
       "time"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -87140,7 +87140,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "abstract"
     ],
-    case: "Dativ (через von)",
+    case: "Dativ",
     caseTags: [
       "DAT"
     ],
@@ -87278,7 +87278,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "location"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -87625,7 +87625,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "time"
     ],
-    case: "Akkusativ (часто без артикля)",
+    case: "Akkusativ",
     caseTags: [
       "AKK"
     ],
@@ -88221,7 +88221,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "location"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -88454,7 +88454,7 @@ window.decks.de_prepositions = [
       "location",
       "time"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -88706,7 +88706,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "quantity"
     ],
-    case: "meist Akkusativ (має значення «на кожного»)",
+    case: "meist Akkusativ",
     caseTags: [
       "AKK"
     ],
@@ -88811,7 +88811,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "law"
     ],
-    case: "Genitiv (часто с von + Dativ)",
+    case: "Genitiv",
     caseTags: [
       "DAT",
       "GEN"
@@ -89215,7 +89215,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "location"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -89669,7 +89669,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "contrast"
     ],
-    case: "Genitiv (разг. Dativ)",
+    case: "Genitiv",
     caseTags: [
       "DAT",
       "GEN"
@@ -89856,7 +89856,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "location"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -90070,7 +90070,7 @@ window.decks.de_prepositions = [
       "location",
       "time"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -90110,7 +90110,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "cause"
     ],
-    case: "Genitiv (разг. Dativ)",
+    case: "Genitiv",
     caseTags: [
       "DAT",
       "GEN"
@@ -90260,7 +90260,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "abstract"
     ],
-    case: "Dativ (постпозиция)",
+    case: "Dativ",
     caseTags: [
       "DAT"
     ],
@@ -90425,7 +90425,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "money"
     ],
-    case: "Dativ/Genitiv (через von)",
+    case: "Dativ/Genitiv",
     caseTags: [
       "DAT",
       "GEN"
@@ -90492,7 +90492,7 @@ window.decks.de_prepositions = [
       "prepositions",
       "location"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -90527,7 +90527,7 @@ window.decks.de_prepositions = [
       "location",
       "topic"
     ],
-    case: "Wechselpräposition (Akkusativ/Dativ)",
+    case: "Wechselpräposition",
     caseTags: [
       "AKK",
       "DAT"
@@ -90690,9 +90690,9 @@ window.decks.de_conjunctions = [
     ],
     patterns: [
       {
-        de: "Bevor Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Прежде чем придаточное (глагол в конце), главное",
-        uk: "Перш ніж підрядне (дієслово в кінці), головне"
+        de: "Bevor Nebensatz, Hauptsatz",
+        ru: "Прежде чем придаточное, главное",
+        uk: "Перш ніж підрядне, головне"
       }
     ],
     examples: [
@@ -90718,7 +90718,7 @@ window.decks.de_conjunctions = [
     wordOrder: "verb-final",
     requiresComma: true,
     deSynonyms: [
-      "so dass (Zweck)",
+      "so dass",
       "auf dass"
     ],
     ruSynonyms: [
@@ -90732,9 +90732,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, damit Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, чтобы придаточное (глагол в конце)",
-        uk: "Головне речення, щоб підрядне (дієслово в кінці)"
+        de: "Hauptsatz, damit Nebensatz",
+        ru: "Главное предложение, чтобы придаточное",
+        uk: "Головне речення, щоб підрядне"
       }
     ],
     examples: [
@@ -90767,9 +90767,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, dass Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, что придаточное (глагол в конце)",
-        uk: "Головне речення, що підрядне (дієслово в кінці)"
+        de: "Hauptsatz, dass Nebensatz",
+        ru: "Главное предложение, что придаточное",
+        uk: "Головне речення, що підрядне"
       }
     ],
     examples: [
@@ -90795,7 +90795,7 @@ window.decks.de_conjunctions = [
     wordOrder: "V2-main-clauses",
     requiresComma: true,
     deSynonyms: [
-      "weil (mit anderer Wortstellung)",
+      "weil",
       "da"
     ],
     ruSynonyms: [
@@ -90932,7 +90932,7 @@ window.decks.de_conjunctions = [
     wordOrder: "verb-final",
     requiresComma: true,
     deSynonyms: [
-      "wenn (konditional)"
+      "wenn"
     ],
     ruSynonyms: [
       "в случае если"
@@ -90945,9 +90945,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Falls Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Если придаточное (глагол в конце), то главное предложение",
-        uk: "Якщо підрядне (дієслово в кінці), то головне речення"
+        de: "Falls Nebensatz, Hauptsatz",
+        ru: "Если придаточное, то главное предложение",
+        uk: "Якщо підрядне, то головне речення"
       }
     ],
     examples: [
@@ -90984,9 +90984,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, indem Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, тем что придаточное (глагол в конце)",
-        uk: "Головне речення, тим що підрядне (дієслово в кінці)"
+        de: "Hauptsatz, indem Nebensatz",
+        ru: "Главное предложение, тем что придаточное",
+        uk: "Головне речення, тим що підрядне"
       }
     ],
     examples: [
@@ -91106,9 +91106,9 @@ window.decks.de_conjunctions = [
     ],
     patterns: [
       {
-        de: "Nachdem Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "После того как придаточное (глагол в конце), главное предложение",
-        uk: "Після того як підрядне (дієслово в кінці), головне речення"
+        de: "Nachdem Nebensatz, Hauptsatz",
+        ru: "После того как придаточное, главное предложение",
+        uk: "Після того як підрядне, головне речення"
       }
     ],
     examples: [
@@ -91150,9 +91150,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Obgleich Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Хотя придаточное (глагол в конце), главное предложение",
-        uk: "Хоча підрядне (дієслово в кінці), головне речення"
+        de: "Obgleich Nebensatz, Hauptsatz",
+        ru: "Хотя придаточное, главное предложение",
+        uk: "Хоча підрядне, головне речення"
       }
     ],
     examples: [
@@ -91192,9 +91192,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Obschon Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Хотя придаточное (глагол в конце), главное предложение",
-        uk: "Хоча підрядне (дієслово в кінці), головне речення"
+        de: "Obschon Nebensatz, Hauptsatz",
+        ru: "Хотя придаточное, главное предложение",
+        uk: "Хоча підрядне, головне речення"
       }
     ],
     examples: [
@@ -91236,9 +91236,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Obwohl Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Хотя придаточное (глагол в конце), главное предложение",
-        uk: "Хоча підрядне (дієслово в кінці), головне речення"
+        de: "Obwohl Nebensatz, Hauptsatz",
+        ru: "Хотя придаточное, главное предложение",
+        uk: "Хоча підрядне, головне речення"
       }
     ],
     examples: [
@@ -91316,9 +91316,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Sobald Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Как только придаточное (глагол в конце), главное предложение",
-        uk: "Як тільки підрядне (дієслово в кінці), головне речення"
+        de: "Sobald Nebensatz, Hauptsatz",
+        ru: "Как только придаточное, главное предложение",
+        uk: "Як тільки підрядне, головне речення"
       }
     ],
     examples: [
@@ -91359,9 +91359,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, sodass Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, так что придаточное (глагол в конце)",
-        uk: "Головне речення, так що підрядне (дієслово в кінці)"
+        de: "Hauptsatz, sodass Nebensatz",
+        ru: "Главное предложение, так что придаточное",
+        uk: "Головне речення, так що підрядне"
       }
     ],
     examples: [
@@ -91400,9 +91400,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Sofern Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Если только придаточное (глагол в конце), главное предложение",
-        uk: "Якщо тільки підрядне (дієслово в кінці), головне речення"
+        de: "Sofern Nebensatz, Hauptsatz",
+        ru: "Если только придаточное, главное предложение",
+        uk: "Якщо тільки підрядне, головне речення"
       }
     ],
     examples: [
@@ -91483,9 +91483,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Soweit Nebensatz (Verb am Ende), ...",
-        ru: "Поскольку придаточное (глагол в конце), ...",
-        uk: "Наскільки підрядне (дієслово в кінці), ..."
+        de: "Soweit Nebensatz, ...",
+        ru: "Поскольку придаточное, ...",
+        uk: "Наскільки підрядне, ..."
       }
     ],
     examples: [
@@ -91610,9 +91610,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, weil Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, потому что придаточное (глагол в конце)",
-        uk: "Головне речення, тому що підрядне (дієслово в кінці)"
+        de: "Hauptsatz, weil Nebensatz",
+        ru: "Главное предложение, потому что придаточное",
+        uk: "Головне речення, тому що підрядне"
       }
     ],
     examples: [
@@ -91652,16 +91652,16 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Wenn Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Когда/если придаточное (глагол в конце), главное предложение",
-        uk: "Коли/якщо підрядне (дієслово в кінці), головне речення"
+        de: "Wenn Nebensatz, Hauptsatz",
+        ru: "Когда/если придаточное, главное предложение",
+        uk: "Коли/якщо підрядне, головне речення"
       }
     ],
     examples: [
       {
         L2: "Wenn ich Zeit habe, lese ich.",
-        ru: "Когда (если) у меня есть время, я читаю.",
-        uk: "Коли (якщо) в мене є час, я читаю."
+        ru: "Когда у меня есть время, я читаю.",
+        uk: "Коли в мене є час, я читаю."
       }
     ]
   },
@@ -91815,7 +91815,7 @@ window.decks.de_conjunctions = [
     wordOrder: "verb-final",
     requiresComma: true,
     deSynonyms: [
-      "während (im Gegensatz)"
+      "während"
     ],
     ruSynonyms: [
       "тогда как",
@@ -91830,9 +91830,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, wohingegen Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, тогда как придаточное (глагол в конце)",
-        uk: "Головне речення, тоді як підрядне (дієслово в кінці)"
+        de: "Hauptsatz, wohingegen Nebensatz",
+        ru: "Главное предложение, тогда как придаточное",
+        uk: "Головне речення, тоді як підрядне"
       }
     ],
     examples: [
@@ -91859,7 +91859,7 @@ window.decks.de_conjunctions = [
     wordOrder: "verb-final",
     requiresComma: true,
     deSynonyms: [
-      "wohingegen (bei Kontrast)"
+      "wohingegen"
     ],
     ruSynonyms: [
       "пока",
@@ -91874,9 +91874,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Während Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "Пока/в то время как придаточное (глагол в конце), главное предложение",
-        uk: "Поки/в той час як підрядне (дієслово в кінці), головне речення"
+        de: "Während Nebensatz, Hauptsatz",
+        ru: "Пока/в то время как придаточное, главное предложение",
+        uk: "Поки/в той час як підрядне, головне речення"
       }
     ],
     examples: [
@@ -91903,7 +91903,7 @@ window.decks.de_conjunctions = [
     requiresComma: true,
     deSynonyms: [
       "damit",
-      "zumal dass (реже)"
+      "zumal dass"
     ],
     ruSynonyms: [
       "для того чтобы",
@@ -91918,9 +91918,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Zum Zweck, dass Nebensatz (Verb am Ende), Hauptsatz",
-        ru: "С той целью, чтобы придаточное (глагол в конце), главное предложение",
-        uk: "З тією метою, щоб підрядне (дієслово в кінці), головне речення"
+        de: "Zum Zweck, dass Nebensatz, Hauptsatz",
+        ru: "С той целью, чтобы придаточное, главное предложение",
+        uk: "З тією метою, щоб підрядне, головне речення"
       }
     ],
     examples: [
@@ -91959,9 +91959,9 @@ window.decks.de_conjunctions = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Hauptsatz, zumal Nebensatz (Verb am Ende)",
-        ru: "Главное предложение, тем более что придаточное (глагол в конце)",
-        uk: "Головне речення, тим більше що підрядне (дієслово в кінці)"
+        de: "Hauptsatz, zumal Nebensatz",
+        ru: "Главное предложение, тем более что придаточное",
+        uk: "Головне речення, тим більше що підрядне"
       }
     ],
     examples: [
@@ -91994,12 +91994,12 @@ window.decks.de_particles = [
     ],
     ruSynonyms: [
       "только",
-      "же (предупредительно)",
+      "же",
       "смотри не..."
     ],
     ukSynonyms: [
       "лише",
-      "же (попереджувально)"
+      "же"
     ],
     deAntonyms: [],
     ruAntonyms: [],
@@ -92037,11 +92037,11 @@ window.decks.de_particles = [
       "eigentlich"
     ],
     ruSynonyms: [
-      "же (в вопросе)",
+      "же",
       "собственно"
     ],
     ukSynonyms: [
-      "же (в запитанні)",
+      "же",
       "власне"
     ],
     deAntonyms: [],
@@ -92269,8 +92269,8 @@ window.decks.de_particles = [
     patterns: [
       {
         de: "Du weißt das ja.",
-        ru: "Ты же это знаешь (типичный шаблон напоминания).",
-        uk: "Ти ж це знаєш (типовий шаблон нагадування)."
+        ru: "Ты же это знаешь.",
+        uk: "Ти ж це знаєш."
       }
     ],
     examples: [
@@ -92428,15 +92428,15 @@ window.decks.de_particles = [
     intonation: "мягкое, с успокаивающим тоном, без резкого ударения",
     deSynonyms: [
       "wohl",
-      "bestimmt (как модальная частица)"
+      "bestimmt"
     ],
     ruSynonyms: [
       "уж",
-      "уже (успокаивающе)",
+      "уже",
       "всё будет нормально"
     ],
     ukSynonyms: [
-      "вже (заспокійливо)",
+      "вже",
       "усе буде добре"
     ],
     deAntonyms: [],
@@ -92554,7 +92554,7 @@ window.decks.de_pronouns = [
         uk: "«alle» + іменник у множині"
       },
       {
-        de: "Alle + Verb (3. Person Plural)",
+        de: "Alle + Verb",
         ru: "«Alle» как подлежащее + глагол в 3-м лице мн. числа",
         uk: "«Alle» як підмет + дієслово в 3-й особі множини"
       }
@@ -92582,7 +92582,7 @@ window.decks.de_pronouns = [
     number: "singular",
     gender: "all",
     caseUsage: "склоняется как притяжательное прилагательное; согласуется по роду, числу и падежу с существительным",
-    function: "обозначает принадлежность предмета адресату (2-е лицо ед. числа)",
+    function: "обозначает принадлежность предмета адресату",
     register: "neutral",
     deSynonyms: [],
     ruSynonyms: [
@@ -92634,7 +92634,7 @@ window.decks.de_pronouns = [
     person: null,
     number: "both",
     gender: "all",
-    caseUsage: "форма родительного падежа относительного местоимения «die» (жен. род ед. числа и множественное число)",
+    caseUsage: "форма родительного падежа относительного местоимения «die»",
     function: "связывает главное и придаточное предложение, выражая принадлежность группы или лица",
     register: "neutral",
     deSynonyms: [],
@@ -92779,7 +92779,7 @@ window.decks.de_pronouns = [
     person: null,
     number: "singular",
     gender: "masculine",
-    caseUsage: "родительный падеж относительного местоимения «der» (муж. род ед. числа)",
+    caseUsage: "родительный падеж относительного местоимения «der»",
     function: "выражает принадлежность лица или предмета в придаточном предложении",
     register: "neutral",
     deSynonyms: [],
@@ -92886,7 +92886,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "du + Verb (2. Person Singular)",
+        de: "du + Verb",
         ru: "«ты» + глагол во 2-м лице ед. числа",
         uk: "«ти» + дієслово в 2-й особі однини"
       }
@@ -92913,7 +92913,7 @@ window.decks.de_pronouns = [
     person: null,
     number: "plural",
     gender: "all",
-    caseUsage: "используется в косвенных падежах (mit, zu, für einander и т.д.)",
+    caseUsage: "используется в косвенных падежах",
     function: "обозначает взаимное действие между несколькими лицами",
     register: "neutral",
     deSynonyms: [],
@@ -92929,7 +92929,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Subjekt (Plural) + Verb + einander",
+        de: "Subjekt + Verb + einander",
         ru: "подлежащее во мн. числе + глагол + «друг друга»",
         uk: "підмет у множині + дієслово + «один одного»"
       }
@@ -92977,7 +92977,7 @@ window.decks.de_pronouns = [
     ],
     patterns: [
       {
-        de: "er + Verb (3. Person Singular)",
+        de: "er + Verb",
         ru: "«он» + глагол в 3-м лице ед. числа",
         uk: "«він» + дієслово в 3-й особі однини"
       }
@@ -93018,7 +93018,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "Es + Verb (безличные конструкции)",
+        de: "Es + Verb",
         ru: "«Es» как формальное подлежащее: «Идёт дождь» и т.п.",
         uk: "«Es» як формальний підмет: «Йде дощ» тощо"
       }
@@ -93094,7 +93094,7 @@ window.decks.de_pronouns = [
     number: "plural",
     gender: "all",
     caseUsage: "склоняется как притяжательное прилагательное; согласуется с существительным",
-    function: "обозначает принадлежность группе адресатов (2-е лицо мн. числа)",
+    function: "обозначает принадлежность группе адресатов",
     register: "neutral",
     deSynonyms: [],
     ruSynonyms: [
@@ -93161,7 +93161,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "ich + Verb (1. Person Singular)",
+        de: "ich + Verb",
         ru: "«я» + глагол в 1-м лице ед. числа",
         uk: "«я» + дієслово в 1-й особі однини"
       }
@@ -93206,7 +93206,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "ihr + Verb (2. Person Plural)",
+        de: "ihr + Verb",
         ru: "«вы» + глагол во 2-м лице мн. числа",
         uk: "«ви» + дієслово в 2-й особі множини"
       }
@@ -93286,7 +93286,7 @@ window.decks.de_pronouns = [
     person: 3,
     number: "singular",
     gender: "all",
-    caseUsage: "неопределённое местоимение; склоняется по падежам (jemandem, jemanden)",
+    caseUsage: "неопределённое местоимение; склоняется по падежам",
     function: "обозначает неопределённое лицо: кто-то",
     register: "neutral",
     deSynonyms: [
@@ -93310,7 +93310,7 @@ window.decks.de_pronouns = [
     ],
     patterns: [
       {
-        de: "jemand + Verb (3. Person Singular)",
+        de: "jemand + Verb",
         ru: "«кто-то» + глагол в 3-м лице ед. числа",
         uk: "«хтось» + дієслово в 3-й особі однини"
       }
@@ -93362,8 +93362,8 @@ window.decks.de_pronouns = [
     patterns: [
       {
         de: "jener + Nomen",
-        ru: "«тот» + существительное (чаще в прошлом контексте)",
-        uk: "«той» + іменник (часто про минулі події)"
+        ru: "«тот» + существительное",
+        uk: "«той» + іменник"
       }
     ],
     examples: [
@@ -93461,7 +93461,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "man + Verb (3. Person Singular)",
+        de: "man + Verb",
         ru: "«man» + глагол в 3-м лице ед. числа: «говорят, делают»",
         uk: "«man» + дієслово в 3-й особі однини"
       }
@@ -93667,7 +93667,7 @@ window.decks.de_pronouns = [
     ],
     patterns: [
       {
-        de: "Niemand + Verb (3. Person Singular)",
+        de: "Niemand + Verb",
         ru: "«Никто» + глагол в 3-м лице ед. числа",
         uk: "«Ніхто» + дієслово в 3-й особі однини"
       }
@@ -93755,7 +93755,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "sie + Verb (3. Person Singular/Plural)",
+        de: "sie + Verb",
         ru: "«она/они» + глагол в 3-м лице",
         uk: "«вона/вони» + дієслово в 3-й особі"
       }
@@ -93854,8 +93854,8 @@ window.decks.de_pronouns = [
     patterns: [
       {
         de: "sämtliche + Pluralnomen",
-        ru: "«все (без исключения)» + существительное во множественном числе",
-        uk: "«усі (без винятку)» + іменник у множині"
+        ru: "«все» + существительное во множественном числе",
+        uk: "«усі» + іменник у множині"
       }
     ],
     examples: [
@@ -94214,7 +94214,7 @@ window.decks.de_pronouns = [
     ukAntonyms: [],
     patterns: [
       {
-        de: "wir + Verb (1. Person Plural)",
+        de: "wir + Verb",
         ru: "«мы» + глагол в 1-м лице мн. числа",
         uk: "«ми» + дієслово в 1-й особі множини"
       }
