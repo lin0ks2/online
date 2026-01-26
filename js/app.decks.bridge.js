@@ -210,7 +210,8 @@
     try{
       // Prepositions trainer decks
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
-        return '🧩';
+        // Show language flag (not a generic icon) — consistent with other decks.
+        return _flag ? (_flag(key) || '🌐') : '🌐';
       }
 
       const p = parseVirtualKey(key);
@@ -228,7 +229,7 @@
     try{
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
         if (typeof A.Prepositions.langOfPrepositionsKey === 'function') return A.Prepositions.langOfPrepositionsKey(key);
-        var m = String(key||'').trim().match(/^([a-z]{2})_prepositions(_trainer)?$/i);
+        var m = String(key||'').trim().match(/^([a-z]{2})_prepositions$/i);
         return m ? m[1].toLowerCase() : null;
       }
     }catch(_){ }

@@ -64,6 +64,19 @@
       let baseKeys = Object.keys(decks)
         .filter(k => Array.isArray(decks[k]) && !/^favorites:|^mistakes:/i.test(k));
 
+      // Add prepositions trainer keys (they are generated dynamically and are not present in window.decks)
+      try{
+        if (A.Prepositions && typeof A.Prepositions.getDeckForKey === 'function') {
+          ['en_prepositions_trainer','de_prepositions_trainer'].forEach(function(k){
+            if (baseKeys.indexOf(k) !== -1) return;
+            var d = A.Prepositions.getDeckForKey(k) || [];
+            // Only add if the deck exists (data loaded) — favorites count check will filter empties.
+            if (d && d.length) baseKeys.push(k);
+          });
+        }
+      }catch(_){ }
+
+
       // Articles mode: do NOT mix base and LearnPunkt decks in lists (prevents "leak" illusion)
       if (isArticlesMode()){
         const grp = currentArticlesGroup();
