@@ -384,13 +384,14 @@
         try{
           const b = document.getElementById('dicts-prepositions');
           if (!b) return;
-          // Показываем кнопку пока ТОЛЬКО для английского
+          // Показываем кнопку только когда выбрана дека предлогов (<lang>_prepositions)
+          // и для этого языка реально подгружены данные тренера.
           const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
-          const isPrepsDeck = (window.A && A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function')
-            ? !!A.Prepositions.isPrepositionsDeckKey(selectedKey)
+          const isPrepsDeck = (window.A && A.Prepositions && typeof A.Prepositions.isPrepositionsSourceDeckKey === 'function')
+            ? !!A.Prepositions.isPrepositionsSourceDeckKey(selectedKey)
             : /_prepositions$/i.test(String(selectedKey||''));
-          // Показываем кнопку "Учить предлоги" ТОЛЬКО когда выбрана дека предлогов (en_prepositions).
-          const show = (String(lang||'').toLowerCase() === 'en') && isPrepsDeck;
+          const hasData = (()=>{ try{ return !!(window.prepositionsTrainer && lang && window.prepositionsTrainer[String(lang).toLowerCase()]); } catch(_){ return false; } })();
+          const show = !!lang && isPrepsDeck && hasData;
           b.style.display = show ? '' : 'none';
         }catch(_){}
       }
@@ -477,10 +478,14 @@
             // запоминаем реальный выбранный словарь для возврата/экрана словарей
             A.settings.preferredReturnKey = selectedKey;
             // активный ключ для тренера
-            A.settings.lastDeckKey = 'en_prepositions';
+            // Для изоляции прогресса используем служебный ключ <lang>_prepositions_trainer
+            const lang = (A.Decks && typeof A.Decks.langOfKey === 'function') ? (A.Decks.langOfKey(selectedKey) || null) : null;
+            const trainerKey = (lang ? (String(lang).toLowerCase() + '_prepositions_trainer') : 'en_prepositions_trainer');
+            A.settings.lastDeckKey = trainerKey;
+            A.settings.lastPrepositionsDeckKey = trainerKey;
             if (typeof A.saveSettings === "function") { A.saveSettings(A.settings); }
           } catch(_){ }
-          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: 'en_prepositions' } })); } catch(_){ }
+          try { document.dispatchEvent(new CustomEvent("lexitron:deck-selected", { detail:{ key: (A.settings && A.settings.lastDeckKey) || trainerKey } })); } catch(_){ }
           goHome();
         };
       }
