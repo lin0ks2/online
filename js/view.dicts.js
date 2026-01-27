@@ -181,12 +181,9 @@
         return keys.map(key=>{
           const deck = A.Decks.resolveDeckByKey(key) || [];
           const isPreps = (deck || []).some(w => w && (w._prepCorrect || w.prepCorrect));
-          let count = deck.length;
-          if (isPreps){
-            const seen = new Set();
-            for (const w of deck){ if (w && w.id!=null) seen.add(String(w.id)); }
-            count = seen.size || deck.length;
-          }
+          // For prepositions we show the expanded exercise count (what sets are built from),
+          // to avoid confusion between patterns vs exercises.
+          let count = deck.length
           const flag = A.Decks.flagForKey(key);
           const name = A.Decks.resolveNameByKey(key);
           const isSel = (key === currentSel);
