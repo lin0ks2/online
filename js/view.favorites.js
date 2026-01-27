@@ -314,7 +314,15 @@ if (del){
       // 1) если есть сохранённый ключ и он присутствует в таблице — выбираем его
       let key = null;
       try { key = A.settings && A.settings.lastFavoritesKey; } catch(_){}
-      let tr = key ? tbody.querySelector(`tr[data-key="${CSS.escape(key)}"]`) : null;
+      let tr = null;
+      if (key){
+        try{
+          // Avoid CSS.escape dependency (Safari/PWA quirks): find by attribute match.
+          tbody.querySelectorAll('tr[data-key]').forEach(row=>{
+            if (!tr && row.getAttribute('data-key') === key) tr = row;
+          });
+        }catch(_){}
+      }
 
       // 2) иначе — первая строка
       if (!tr) tr = tbody.querySelector('tr');
