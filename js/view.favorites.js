@@ -345,66 +345,68 @@ if (del){
     }
 
     function launchTraining(key){
-      // Detect prepositions decks (incl. virtual favorites:* keys) and route to the correct trainer.
-      // IMPORTANT: favorites/mistakes views historically forced 'words' which breaks prepositions.
-      try{
-        const s0 = String(key||'');
-        let baseKey = s0;
-        const vm = s0.match(/^(favorites):(ru|uk):(.+)$/i);
-        if (vm){
-          const tail = String(vm[3]||'');
-          if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
-        }
-        if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
-          A.settings = A.settings || {};
-          A.settings.trainerKind = 'prepositions';
-        }
-      }catch(_){}
-      // Switch to the default word trainer
+  try{
+    const s0 = String(key||'');
+    let baseKey = s0;
+    const vm = s0.match(/^(favorites):(ru|uk):(.+)$/i);
+    if (vm){
+      const tail = String(vm[3]||'');
+      if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
+    }
 
-      try { A.settings = A.settings || {}; /* keep current mode; default to words */ if (!A.settings.trainerKind) A.settings.trainerKind = 'words'; } catch(_){ }
-      // Auto-grouping: base vs LearnPunkt для words favorites
-      try{
-        if (!isArticlesMode()){
+    // Detect prepositions and route to prepositions trainer.
+    if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
+      A.settings = A.settings || {};
+      A.settings.trainerKind = 'prepositions';
+    } else {
+      // Default to words (keep current if already set)
+      try { A.settings = A.settings || {}; if (!A.settings.trainerKind) A.settings.trainerKind = 'words'; } catch(_){}
+    }
+
+    // Auto-grouping (base vs LearnPunkt) ONLY for word decks, NEVER for prepositions.
+    try{
+      if (!isArticlesMode()){
+        const isPreps = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey));
+        if (!isPreps){
           const s = String(key||'');
           const m = s.match(/^(favorites):(ru|uk):(.+)$/i);
           if (m){
             const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
             const tail = String(m[3]||'');
-            const isPrepsKey = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') ? A.Prepositions.isAnyPrepositionsKey(tail) : false;
-            if (!isPrepsKey && !/^(base|lernpunkt)$/i.test(tail)){
+            if (!/^(base|lernpunkt)$/i.test(tail)){
               const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
               key = `favorites:${tl}:${grp}`;
             }
           }
         }
-      }catch(_){}
+      }
+    }catch(_){}
+  }catch(_){}
 
-            // Persist selection (important for correct start after routing)
-      try { A.settings = A.settings || {}; A.settings.lastDeckKey = key; if (typeof A.saveSettings==='function') A.saveSettings(A.settings); } catch(_){ }
+  // Persist intended deckKey before routing (prevents "fall back to last mistakes")
+  try{ A.settings = A.settings || {}; A.settings.lastDeckKey = key; }catch(_){}
 
-// 1) как в других вью: общий стартер, если есть
-      if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
-        A.UI.startTrainingWithKey(key);
-        return;
-      }
-      if (A.Home && typeof A.Home.startTrainingWithKey === 'function'){
-        A.Home.startTrainingWithKey(key);
-        return;
-      }
-      // 2) фоллбэк: проставить ключ тренеру и уйти на home
-      if (A.Trainer && typeof A.Trainer.setDeckKey === 'function'){
-        A.Trainer.setDeckKey(key);
-      }
-      if (A.Router && typeof A.Router.routeTo === 'function'){
-        A.Router.routeTo('home');
-      } else if (A.UI && typeof A.UI.goHome === 'function'){
-        A.UI.goHome();
-      } else {
-        location.hash = '';
-      }
-    }
+  // 1) Common starter if present
+  if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
+    A.UI.startTrainingWithKey(key);
+    return;
   }
+  if (A.Home && typeof A.Home.startTrainingWithKey === 'function'){
+    A.Home.startTrainingWithKey(key);
+    return;
+  }
+  // 2) Fallback: set key and go home
+  if (A.Trainer && typeof A.Trainer.setDeckKey === 'function'){
+    A.Trainer.setDeckKey(key);
+  }
+  if (A.Router && typeof A.Router.routeTo === 'function'){
+    A.Router.routeTo('home');
+  } else if (A.UI && typeof A.UI.goHome === 'function'){
+    A.UI.goHome();
+  } else {
+    location.hash = '';
+  }
+}
 
   /* -------- модальное превью -------- */
   function openPreview(favKey){

@@ -235,23 +235,31 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
   }
 
   function getSetSize(deckKey) {
-    try {
-      var k = String(deckKey || '').toLowerCase();
+  try {
+    var k = String(deckKey || '').toLowerCase();
 
-      // Prepositions trainer: use compact sets.
-      // IMPORTANT: do NOT depend on trainerKind (views might not have switched it yet).
-      // Single source of truth = deck key.
-      try{
-        if (/^([a-z]{2})_prepositions(_trainer)?$/i.test(k)) return 25;
-      }catch(_){}
+    // Prepositions trainer: compact sets (same size for EN/DE to align the number of sets).
+    // IMPORTANT: do NOT rely on App.settings.trainerKind here — it may be stale during routing
+    // (favorites/mistakes, home redirects). Detect by deckKey itself.
+    try{
+      // direct keys: en_prepositions_trainer / de_prepositions_trainer / en_prepositions / de_prepositions
+      if (/^([a-z]{2})_prepositions(_trainer)?$/i.test(k)) return 25;
 
+      // virtual keys: favorites:<TL>:<baseKey> or mistakes:<TL>:<baseKey>
+      // where <baseKey> may be *_prepositions(_trainer)
+      var vm = k.match(/^(favorites|mistakes):(ru|uk):(.+)$/i);
+      if (vm){
+        var baseKey = String(vm[3]||'');
+        if (baseKey && /^([a-z]{2})_prepositions(_trainer)?$/i.test(baseKey)) return 25;
+      }
+    }catch(_){}
 
-      if (k.endsWith('_lernpunkt')) return 10;
-      return (App.Config && App.Config.setSizeDefault) || 50;
-    } catch (_) {
-      return 50;
-    }
+    if (k.endsWith('_lernpunkt')) return 10;
+    return (App.Config && App.Config.setSizeDefault) || 50;
+  } catch (_) {
+    return 50;
   }
+}
 
   /* --------------------------- сеты/наборы ---------------------------- */
 

@@ -57,18 +57,29 @@
         const group = String(p.group).toLowerCase();
         const TL = p.trainLang;
         const decksObj = (window.decks && typeof window.decks==='object') ? window.decks : {};
-        const baseKeys = Object.keys(decksObj)
-          .filter(k => Array.isArray(decksObj[k]) && !/^favorites:|^mistakes:/i.test(k))
-          .filter(k => {
-            try{
-              const ctxKey = (A.Trainer && A.Trainer.getDeckKey) ? A.Trainer.getDeckKey() : (A.settings && A.settings.lastDeckKey);
-              const ctxLang = ctxKey ? (_langOf ? _langOf(ctxKey) : null) : null;
-              if (!ctxLang) return true;
-              const kLang = _langOf ? _langOf(k) : null;
-              return !kLang || kLang === ctxLang;
-            }catch(_){ return true; }
-          })
-          .filter(k => group==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k));
+
+// Determine active dictionary language to avoid cross-language bleed in grouped favorites/mistakes.
+// Priority: explicit dictsLang (Dicts screen), fallback: lastDeckKey prefix.
+let activeDictLang = '';
+try{
+  activeDictLang = (App.settings && App.settings.dictsLang) ? String(App.settings.dictsLang).toLowerCase() : '';
+}catch(_){}
+try{
+  if (!activeDictLang){
+    const lk = (App.settings && App.settings.lastDeckKey) ? String(App.settings.lastDeckKey).toLowerCase() : '';
+    const mm = lk.match(/^([a-z]{2})_/i);
+    if (mm) activeDictLang = mm[1].toLowerCase();
+  }
+}catch(_){}
+
+const baseKeys = Object.keys(decksObj)
+  .filter(k => Array.isArray(decksObj[k]) && !/^favorites:|^mistakes:/i.test(k))
+  // Grouping applies to word decks only (exclude prepositions/articles trainers etc.)
+  .filter(k => !/^([a-z]{2})_prepositions(_trainer)?$/i.test(k))
+  .filter(k => group==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k))
+  // Filter by active dictionary language when known.
+  .filter(k => !activeDictLang ? true : String(k).toLowerCase().startsWith(activeDictLang + '_'));
+
 
         // В articles-режиме используем изолированные контуры.
         const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
