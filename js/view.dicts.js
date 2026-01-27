@@ -180,6 +180,13 @@
       function rowsFor(keys, currentSel){
         return keys.map(key=>{
           const deck = A.Decks.resolveDeckByKey(key) || [];
+          const isPreps = (deck || []).some(w => w && (w._prepCorrect || w.prepCorrect));
+          let count = deck.length;
+          if (isPreps){
+            const seen = new Set();
+            for (const w of deck){ if (w && w.id!=null) seen.add(String(w.id)); }
+            count = seen.size || deck.length;
+          }
           const flag = A.Decks.flagForKey(key);
           const name = A.Decks.resolveNameByKey(key);
           const isSel = (key === currentSel);
@@ -187,7 +194,7 @@
             <tr class="dict-row${isSel ? ' is-selected' : ''}" data-key="${key}">
               <td class="t-center">${flag}</td>
               <td>${name}</td>
-              <td class="t-center">${deck.length}</td>
+              <td class="t-center">${count}</td>
               <td class="t-center">
                 <span class="dicts-preview" title="${T.preview}" data-key="${key}" role="button" aria-label="${T.preview}">👁‍🗨</span>
               </td>

@@ -272,7 +272,7 @@
         ok.onclick = ()=>{
           const row = app.querySelector('.dict-row.is-selected');
           if (!row) return;
-          const key = row.getAttribute('data-key');
+          let key = row.getAttribute('data-key');
           const count = row.getAttribute('data-count')|0;
           if (count < 4) {
             // просто превью, тренировка недоступна
@@ -320,7 +320,8 @@
                 if (m){
                   const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
                   const tail = String(m[3]||'');
-                  if (!/^(base|lernpunkt)$/i.test(tail)){
+                  const isPrepsKey = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') ? A.Prepositions.isAnyPrepositionsKey(tail) : false;
+                  if (!isPrepsKey && !/^(base|lernpunkt)$/i.test(tail)){
                     const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
                     key = `mistakes:${tl}:${grp}`;
                   }

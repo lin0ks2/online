@@ -371,7 +371,8 @@ if (del){
           if (m){
             const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
             const tail = String(m[3]||'');
-            if (!/^(base|lernpunkt)$/i.test(tail)){
+            const isPrepsKey = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') ? A.Prepositions.isAnyPrepositionsKey(tail) : false;
+            if (!isPrepsKey && !/^(base|lernpunkt)$/i.test(tail)){
               const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
               key = `favorites:${tl}:${grp}`;
             }
@@ -379,7 +380,10 @@ if (del){
         }
       }catch(_){}
 
-      // 1) как в других вью: общий стартер, если есть
+            // Persist selection (important for correct start after routing)
+      try { A.settings = A.settings || {}; A.settings.lastDeckKey = key; if (typeof A.saveSettings==='function') A.saveSettings(A.settings); } catch(_){ }
+
+// 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
         A.UI.startTrainingWithKey(key);
         return;

@@ -239,13 +239,12 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
       var k = String(deckKey || '').toLowerCase();
 
       // Prepositions trainer: use compact sets.
-      // Set size is fixed to 25 (better pacing, less fatigue, and more stable variety).
+      // IMPORTANT: do NOT depend on trainerKind (views might not have switched it yet).
+      // Single source of truth = deck key.
       try{
-        var kind = (App.settings && App.settings.trainerKind) ? String(App.settings.trainerKind) : 'words';
-        if (kind === 'prepositions' && /^([a-z]{2})_prepositions(_trainer)?$/i.test(k)){
-          return 25;
-        }
-      }catch(_){ }
+        if (/^([a-z]{2})_prepositions(_trainer)?$/i.test(k)) return 25;
+      }catch(_){}
+
 
       if (k.endsWith('_lernpunkt')) return 10;
       return (App.Config && App.Config.setSizeDefault) || 50;

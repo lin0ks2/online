@@ -59,6 +59,15 @@
         const decksObj = (window.decks && typeof window.decks==='object') ? window.decks : {};
         const baseKeys = Object.keys(decksObj)
           .filter(k => Array.isArray(decksObj[k]) && !/^favorites:|^mistakes:/i.test(k))
+          .filter(k => {
+            try{
+              const ctxKey = (A.Trainer && A.Trainer.getDeckKey) ? A.Trainer.getDeckKey() : (A.settings && A.settings.lastDeckKey);
+              const ctxLang = ctxKey ? (_langOf ? _langOf(ctxKey) : null) : null;
+              if (!ctxLang) return true;
+              const kLang = _langOf ? _langOf(k) : null;
+              return !kLang || kLang === ctxLang;
+            }catch(_){ return true; }
+          })
           .filter(k => group==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k));
 
         // В articles-режиме используем изолированные контуры.
