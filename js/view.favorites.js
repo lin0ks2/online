@@ -104,27 +104,6 @@
     if (!app) return;
     const T = t();
 
-    // (v3) Ранее было ограничение PRO — сейчас весь функционал бесплатный
-    if (!A.isPro || !A.isPro()) {
-      const lang = getUiLang();
-      const title = T.title;
-      const body = (lang === 'uk')
-        ? 'Список обраних слів тимчасово недоступний.'
-        : 'Список избранных слов временно недоступен.';
-
-      app.innerHTML =
-        `<div class="home home--fixed-card">
-          <section class="card dicts-card favorites-card dicts-card--fixed">
-            <div class="dicts-header">
-              <h3>${title}</h3>
-            </div>
-            <div class="dicts-scroll" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">
-              <p style="margin:0;">${body}</p>
-            </div>
-          </section>
-        </div>`;
-      return;
-    }
 
     const all = gatherFavoriteDecks();
     if (!all.length){
