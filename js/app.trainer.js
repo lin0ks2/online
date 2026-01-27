@@ -239,13 +239,16 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
       var k = String(deckKey || '').toLowerCase();
 
       // Prepositions trainer: use compact sets.
-      // Set size is fixed to 25 (better pacing, less fatigue, and more stable variety).
+      // EN: 30 per set (150 total), DE: 25 per set (200 total planned).
       try{
         var kind = (App.settings && App.settings.trainerKind) ? String(App.settings.trainerKind) : 'words';
         if (kind === 'prepositions' && /^([a-z]{2})_prepositions(_trainer)?$/i.test(k)){
-          return 25;
+          var m = k.match(/^([a-z]{2})_prepositions/i);
+          var lang = m ? m[1].toLowerCase() : 'en';
+          if (lang === 'de') return 25;
+          return 30;
         }
-      }catch(_){ }
+      }catch(_){}
 
       if (k.endsWith('_lernpunkt')) return 10;
       return (App.Config && App.Config.setSizeDefault) || 50;
