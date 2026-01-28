@@ -149,6 +149,32 @@
  };
 }
 
+// Активная дека (best-effort), нужна для выбора L2 (de/en/..) в синонимах/антонимах.
+// Здесь нельзя тянуть home.js напрямую, поэтому делаем безопасный резолв из settings.
+function getActiveDeckKeySafe() {
+ try {
+  const A = window.App || {};
+  const s = A.settings || {};
+
+  const last = s.lastDeckKey;
+  if (typeof last === 'string' && last) return last;
+
+  const prefer = s.preferredReturnKey;
+  if (typeof prefer === 'string' && prefer) return prefer;
+
+  // первый запуск: если есть StartupManager — берём оттуда
+  if (window.StartupManager && typeof StartupManager.readSettings === 'function') {
+   const ss = StartupManager.readSettings() || {};
+   if (typeof ss.lastDeckKey === 'string' && ss.lastDeckKey) return ss.lastDeckKey;
+   if (typeof ss.preferredReturnKey === 'string' && ss.preferredReturnKey) return ss.preferredReturnKey;
+  }
+ } catch (_) {}
+
+ // fallback: не знаем деку
+ return null;
+}
+
+
  // Тексты "нет данных"
  function getNoDataText(kind) {
  const lang = getUiLang();
@@ -575,7 +601,7 @@ function getAntonyms(word, deckKey) {
    escapeHtml(label) +
    ': ' +
    l2Text +
-   '<span class="hint-tr">' +
+   '<span class="hint-tr is-visible">' +
    dash +
    l1Text +
    '</span>' +
