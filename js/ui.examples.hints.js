@@ -15,6 +15,12 @@
 
  let wordObserver = null; // наблюдатель за .trainer-word
  let wrongAttempts = 0; // счётчик неверных ответов для текущего слова
+
+ let translationUnlocked = false; // переводы можно раскрывать тапом (сбрасывается на новом слове)
+
+ function unlockTranslations() {
+  translationUnlocked = true;
+ }
  let currentTab = 'examples'; // 'examples' | 'extra' (на сессию)
 
  /* ----------------------------- Вспомогательные функции ----------------------------- */
@@ -315,6 +321,7 @@ function getAntonyms(word, deckKey) {
  btn.addEventListener('click', function () {
  if (currentTab === tab) return;
  currentTab = tab; // запоминаем выбор на сессию
+ translationUnlocked = false;
  renderExampleHint(); // перерисовываем содержимое
  });
 
@@ -604,7 +611,7 @@ function getAntonyms(word, deckKey) {
    '</span>' +
    ' ' +
    '<span class="hint-l2">' + l2Text + '</span>' +
-   '<span class="hint-tr hint-tr-inline is-visible">' +
+   '<span class="hint-tr hint-tr-inline">' +
    dash +
    l1Text +
    '</span>' +
@@ -647,6 +654,22 @@ function getAntonyms(word, deckKey) {
  function showTranslation() {
  const body = document.getElementById('hintsBody');
  if (!body) return;
+
+ unlockTranslations();
+
+ // Extra tab: раскрываем все переводы (синонимы + антонимы)
+ if (currentTab === 'extra') {
+  const trList = body.querySelectorAll('.hint-example.hint-extra-row .hint-tr');
+  if (!trList || !trList.length) return;
+
+  trList.forEach(function(trEl){
+   trEl.classList.add('is-visible');
+   ensureTranslationVisible(trEl);
+  });
+  return;
+ }
+
+ // Examples (default): один блок
  const root = body.querySelector('.hint-example');
  if (!root) return;
  const trEl = root.querySelector('.hint-tr');
@@ -654,7 +677,7 @@ function getAntonyms(word, deckKey) {
 
  trEl.classList.add('is-visible');
  ensureTranslationVisible(trEl);
- }
+}
 
  /* ----------------------------- Наблюдение за тренером ----------------------------- */
 
@@ -685,6 +708,7 @@ function getAntonyms(word, deckKey) {
  last = t;
 
  // новое слово → сбрасываем счётчик неверных попыток
+ translationUnlocked = false;
  wrongAttempts = 0;
 
  const body = document.getElementById('hintsBody');
@@ -700,6 +724,7 @@ function getAntonyms(word, deckKey) {
  });
 
  // первый рендер для уже выведенного слова
+ translationUnlocked = false;
  wrongAttempts = 0;
  const body = document.getElementById('hintsBody');
  if (body) body.scrollTop = 0;
@@ -761,6 +786,11 @@ function getAntonyms(word, deckKey) {
  // Поэтому расширяем зону тапа до всего блока .hint-example (кроме пагинатора/кнопок).
  const hintRoot = target.closest('.hint-example');
  if (hintRoot && !target.closest('.hint-pager') && !target.closest('button')) {
+  // Вкладка "Дополнительно": до успешного ответа не даём раскрывать перевод тапом (иначе ломает обучение)
+  if (currentTab === 'extra' && hintRoot.classList.contains('hint-extra-row') && !translationUnlocked) {
+   return;
+  }
+
   const trEl = hintRoot.querySelector('.hint-tr');
   if (trEl) {
    const willShow = !trEl.classList.contains('is-visible');
