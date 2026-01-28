@@ -868,3 +868,28 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   opacity: 0.88;
   font-size: 0.95em;
 }
+
+/* Extra tab rows: allow wrap if needed, keep translation chunk together */
+.hints-body .hint-example.hint-extra-row .hint-de{
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-align: left;
+  line-height: 1.25;
+}
+
+/* Keep translation chunk together: it either stays inline or jumps as a whole */
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 8px;
+  opacity: 0.88;
+  font-size: 0.95em;
+}
+
+/* Empty line (breathing room) between ➕ and ➖ rows */
+.hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
+  margin-top: 10px;
+}
