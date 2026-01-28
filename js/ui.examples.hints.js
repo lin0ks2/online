@@ -329,7 +329,7 @@ function getAntonyms(word, deckKey) {
  if (isArticlesTrainerMode()) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getExerciseLockText()) +
    '</p>' +
    '</div>';
@@ -386,7 +386,7 @@ function getAntonyms(word, deckKey) {
  if (isArticlesTrainerMode()) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getExerciseLockText()) +
    '</p>' +
    '</div>';
@@ -396,7 +396,7 @@ function getAntonyms(word, deckKey) {
  if (!A.isPro || !A.isPro()) {
  body.innerHTML =
  '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
+ '<p class="hint-tr hint-tr-inline is-visible">' +
  escapeHtml(getProLockText('synonyms')) +
  '</p>' +
  '</div>';
@@ -417,7 +417,7 @@ function getAntonyms(word, deckKey) {
  if (!l2.length) {
  body.innerHTML =
  '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
+ '<p class="hint-tr hint-tr-inline is-visible">' +
  escapeHtml(getNoDataText('synonyms')) +
  '</p>' +
  '</div>';
@@ -439,7 +439,7 @@ function getAntonyms(word, deckKey) {
  if (reverse && !beforeText) {
    body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getNoDataText('synonyms')) +
    '</p>' +
    '</div>';
@@ -458,7 +458,7 @@ function getAntonyms(word, deckKey) {
  if (isArticlesTrainerMode()) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getExerciseLockText()) +
    '</p>' +
    '</div>';
@@ -468,7 +468,7 @@ function getAntonyms(word, deckKey) {
  if (!A.isPro || !A.isPro()) {
  body.innerHTML =
  '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
+ '<p class="hint-tr hint-tr-inline is-visible">' +
  escapeHtml(getProLockText('antonyms')) +
  '</p>' +
  '</div>';
@@ -489,7 +489,7 @@ function getAntonyms(word, deckKey) {
  if (!l2.length) {
  body.innerHTML =
  '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
+ '<p class="hint-tr hint-tr-inline is-visible">' +
  escapeHtml(getNoDataText('antonyms')) +
  '</p>' +
  '</div>';
@@ -511,7 +511,7 @@ function getAntonyms(word, deckKey) {
  if (reverse && !beforeText) {
    body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getNoDataText('antonyms')) +
    '</p>' +
    '</div>';
@@ -550,7 +550,7 @@ function getAntonyms(word, deckKey) {
  if (isArticlesTrainerMode()) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getExerciseLockText()) +
    '</p>' +
    '</div>';
@@ -561,7 +561,7 @@ function getAntonyms(word, deckKey) {
  if (A.isPro && !A.isPro()) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getProLockText('extra')) +
    '</p>' +
    '</div>';
@@ -578,7 +578,7 @@ function getAntonyms(word, deckKey) {
  if (!hasSyn && !hasAnt) {
   body.innerHTML =
    '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
+   '<p class="hint-tr hint-tr-inline is-visible">' +
    escapeHtml(getNoDataText('extra')) +
    '</p>' +
    '</div>';
@@ -598,10 +598,10 @@ function getAntonyms(word, deckKey) {
   body.innerHTML +=
    '<div class="hint-example">' +
    '<p class="hint-de">' +
-   escapeHtml(label) +
+   escapeHtml('• ' + label) +
    ': ' +
    l2Text +
-   '<span class="hint-tr is-visible">' +
+   '<span class="hint-tr hint-tr-inline is-visible">' +
    dash +
    l1Text +
    '</span>' +
