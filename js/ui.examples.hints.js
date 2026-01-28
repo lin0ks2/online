@@ -598,8 +598,8 @@ function getAntonyms(word, deckKey) {
   body.innerHTML +=
    '<div class="hint-example hint-extra-row">' +
    '<p class="hint-de">' +
-   escapeHtml('• ' + label) +
-   ': ' +
+   escapeHtml(label) +
+   ' ' +
    l2Text +
    '<span class="hint-tr hint-tr-inline is-visible">' +
    dash +
@@ -610,8 +610,8 @@ function getAntonyms(word, deckKey) {
  }
 
  const lang = getUiLang();
- const synLabel = (lang === 'uk') ? 'Син.' : 'Син.';
- const antLabel = (lang === 'uk') ? 'Ант.' : 'Ант.';
+ const synLabel = '➕';
+ const antLabel = '➖';
 
  if (hasSyn) renderRow(synLabel, syn.l2, syn.l1);
  if (hasAnt) renderRow(antLabel, ant.l2, ant.l1);
