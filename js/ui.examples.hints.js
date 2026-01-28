@@ -15,7 +15,6 @@
 
  let wordObserver = null; // наблюдатель за .trainer-word
  let wrongAttempts = 0;
- translationUnlocked = false; // счётчик неверных ответов для текущего слова
  let currentTab = 'examples'; // 'examples' | 'extra' (на сессию)
 
  let translationUnlocked = false; // переводы во вкладке "Дополнительно" можно раскрывать (после correct / 2 wrong / idk)
@@ -546,6 +545,7 @@ function renderExampleHint() {
 
  // новое слово → сбрасываем счётчик неверных попыток
  wrongAttempts = 0;
+ translationUnlocked = false;
 
  const body = document.getElementById('hintsBody');
  if (body) body.scrollTop = 0;
