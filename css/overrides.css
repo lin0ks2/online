@@ -848,3 +848,17 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 .hints-body .hint-example .hint-de {
   line-height: 1.25;
 }
+
+/* Extra tab rows: keep Syn/Ant in ONE line (no wrap). If too long — ellipsis. */
+.hints-body .hint-example.hint-extra-row .hint-de{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Ensure the inline translation does not force a line break */
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  white-space: nowrap;
+  display: inline;
+}
