@@ -840,7 +840,7 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
    EXTRA (Syn/Ant) – final
    ========================= */
 
-/* Row layout + wrapping */
+/* Row layout + wrapping (2nd line only when needed) */
 .hints-body .hint-example.hint-extra-row .hint-de{
   white-space: normal;
   overflow-wrap: anywhere;
@@ -861,24 +861,12 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   font-weight: 700;
 }
 
-/* Translation: secondary, переносится целиком */
-.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
-  white-space: nowrap;
-  display: inline-block;
-  margin-left: 8px;
-  opacity: 0.78;
-  font-size: 0.95em;
-}
-
-/* Space between Syn and Ant rows */
-.hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
-  margin-top: 10px;
-}
-
-/* Extra tab: translation hidden by default, revealed only after correct */
+/* Translation: hidden by default; revealed after correct (adds .is-visible).
+   Keep translation chunk together when it appears. */
 .hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
   display: none;
   white-space: nowrap;
+  display: none;
   margin-left: 8px;
   opacity: 0.78;
   font-size: 0.95em;
@@ -886,4 +874,9 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 
 .hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline.is-visible{
   display: inline-block;
+}
+
+/* Space between Syn and Ant rows */
+.hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
+  margin-top: 10px;
 }
