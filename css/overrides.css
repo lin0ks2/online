@@ -861,13 +861,16 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   font-weight: 700;
 }
 
-/* Translation: secondary, переносится целиком */
+/* Translation: hidden by default; revealed after answer via .is-visible */
 .hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  display: none;
   white-space: nowrap;
-  display: inline-block;
   margin-left: 8px;
   opacity: 0.78;
   font-size: 0.95em;
+}
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline.is-visible{
+  display: inline-block;
 }
 
 /* Space between Syn and Ant rows */
