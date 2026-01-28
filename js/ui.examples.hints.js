@@ -133,28 +133,16 @@
  }
 
  // Названия вкладок
- function getTabLabels() {
+function getTabLabels() {
  const lang = getUiLang();
  if (lang === 'uk') {
-  return {
-   examples: 'Приклад',
-   extra: 'Додатково'
-  };
+  return { examples: 'Приклад', extra: 'Додатково' };
  }
- return {
-  examples: 'Пример',
-  extra: 'Дополнительно'
- };
-};
- }
- return {
- examples: 'Пример',
- synonyms: 'Синонимы',
- antonyms: 'Антонимы'
- };
- }
+ return { examples: 'Пример', extra: 'Дополнительно' };
+}
 
- // Тексты "нет данных"
+// Тексты "нет данных"
+
  function getNoDataText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
@@ -162,43 +150,25 @@
   if (kind === 'extra') return 'Для цього слова немає синонімів і антонімів.';
   return '';
  }
- // ru
  if (kind === 'examples') return 'Для этого слова нет примеров.';
  if (kind === 'extra') return 'Для этого слова нет синонимов и антонимов.';
  return '';
 }
- // ru
- if (kind === 'examples') return 'Для этого слова нет примеров.';
- if (kind === 'synonyms') return 'Для этого слова нет синонимов.';
- if (kind === 'antonyms') return 'Для этого слова нет антонимов.';
- return '';
- }
 
+// Тексты заглушки для PRO (синонимы/антонимы)
 
- // Тексты заглушки для PRO (синонимы/антонимы)
  function getProLockText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
   if (kind === 'extra') return 'Додаткові підказки (синоніми/антоніми) доступні у версії PRO.';
-  // legacy
-  if (kind === 'synonyms') return 'Синоніми доступні у версії PRO.';
-  if (kind === 'antonyms') return 'Антоніми доступні у версії PRO.';
   return 'Функція доступна у версії PRO.';
  }
- // ru
  if (kind === 'extra') return 'Дополнительные подсказки (синонимы/антонимы) доступны в версии PRO.';
- // legacy
- if (kind === 'synonyms') return 'Синонимы доступны в версии PRO.';
- if (kind === 'antonyms') return 'Антонимы доступны в версии PRO.';
  return 'Функция доступна в версии PRO.';
 }
- // ru
- if (kind === 'synonyms') return 'Синонимы доступны в версии PRO. ';
- if (kind === 'antonyms') return 'Антонимы доступны в версии PRO. ';
- return 'Функция доступна в версии PRO. ';
- }
 
- // Заглушка для упражнения "Артикли" (примеры/синонимы/антонимы)
+// Заглушка для упражнения "Артикли"
+ (примеры/синонимы/антонимы)
  function isArticlesTrainerMode() {
   return (
     typeof A !== 'undefined' &&
