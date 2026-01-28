@@ -613,9 +613,9 @@ function getAntonyms(word, deckKey) {
  }
 
  const lang = getUiLang();
- const synLabelText = (lang === 'uk') ? 'Синоніми: ' : 'Синонимы: ': 
+ const synLabelText = (lang === 'uk') ? 'Син.' : 'Син.';
 
- const antLabelText = (lang === 'uk') ? 'Антоніми: ' : 'Антонимы: ';
+ const antLabelText = (lang === 'uk') ? 'Ант.' : 'Ант.';
 
 
  if (hasSyn) renderRow(synLabelText, syn.l2, syn.l1);
