@@ -532,14 +532,23 @@ function getAntonyms(word, deckKey) {
  function showTranslation() {
  const body = document.getElementById('hintsBody');
  if (!body) return;
+
+ // Extra tab: reveal all translations only after correct
+ if (currentTab === 'extra') {
+  const trs = body.querySelectorAll('.hint-example.hint-extra-row .hint-tr');
+  trs.forEach(function(tr){
+   tr.classList.add('is-visible');
+  });
+  return;
+ }
+
+ // Examples (default)
  const root = body.querySelector('.hint-example');
  if (!root) return;
  const trEl = root.querySelector('.hint-tr');
  if (!trEl) return;
-
  trEl.classList.add('is-visible');
- ensureTranslationVisible(trEl);
- }
+}
 
  /* ----------------------------- Наблюдение за тренером ----------------------------- */
 
