@@ -589,16 +589,19 @@ function getAntonyms(word, deckKey) {
 
  // Рендер в 1 строку: "Синонимы: ... — перевод" / "Антонимы: ... — перевод"
  // Перевод живёт в .hint-tr (inline) и раскрывается тапом/после верного ответа.
- function renderRow(label, l2Arr, l1Arr) {
+ function renderRow(labelText, labelClass, l2Arr, l1Arr) {
   const l2Text = escapeHtml(l2Arr.join(', '));
   const l1Text = escapeHtml(l1Arr.join(', '));
+
   const hasL1 = !!l1Text;
   const dash = hasL1 ? ' — ' : '';
 
   body.innerHTML +=
    '<div class="hint-example hint-extra-row">' +
    '<p class="hint-de">' +
-   escapeHtml(label) +
+   '<span class="hint-label ' + escapeHtml(labelClass) + '">' +
+   escapeHtml(labelText) +
+   '</span>' +
    ' ' +
    l2Text +
    '<span class="hint-tr hint-tr-inline is-visible">' +
@@ -610,11 +613,13 @@ function getAntonyms(word, deckKey) {
  }
 
  const lang = getUiLang();
- const synLabel = '➕';
- const antLabel = '➖';
+ const synLabelText = (lang === 'uk') ? 'Син.' : 'Син.';
+ const synLabelClass = 'hint-label-syn';
+ const antLabelText = (lang === 'uk') ? 'Ант.' : 'Ант.';
+ const antLabelClass = 'hint-label-ant';
 
- if (hasSyn) renderRow(synLabel, syn.l2, syn.l1);
- if (hasAnt) renderRow(antLabel, ant.l2, ant.l1);
+ if (hasSyn) renderRow(synLabelText, synLabelClass, syn.l2, syn.l1);
+ if (hasAnt) renderRow(antLabelText, antLabelClass, ant.l2, ant.l1);
 }
 
 
