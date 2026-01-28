@@ -874,3 +874,16 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 .hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
   margin-top: 10px;
 }
+
+/* Extra tab: translation hidden by default, revealed only when .is-visible */
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  display: none;             /* скрыто сразу */
+  white-space: nowrap;
+  margin-left: 8px;
+  opacity: 0.78;
+  font-size: 0.95em;
+}
+
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline.is-visible{
+  display: inline-block;     /* показываем после correct */
+}
