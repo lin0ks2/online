@@ -784,9 +784,7 @@ function getAntonyms(word, deckKey) {
  // Поэтому расширяем зону тапа до всего блока .hint-example (кроме пагинатора/кнопок).
  const hintRoot = target.closest('.hint-example');
  if (hintRoot && !target.closest('.hint-pager') && !target.closest('button')) {
-  if (currentTab === 'extra' && hintRoot.classList.contains('hint-extra-row') && !translationUnlocked) {
-   return;
-  }
+  // anti-cheat guard removed: allow manual reveal anytime
 
   const trEl = hintRoot.querySelector('.hint-tr');
   if (trEl) {
