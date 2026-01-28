@@ -835,3 +835,16 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   color: var(--accent, var(--brand, #35b6ff));
   font-weight: 700;
 }
+
+/* Extra tab: keep translation inline (do not break line like examples) */
+.hint-tr.hint-tr-inline {
+  display: inline;
+  margin-left: 8px;
+  opacity: 0.88;
+  font-size: 0.95em;
+}
+
+/* Slightly tighten rows in "Дополнительно" for readability */
+.hints-body .hint-example .hint-de {
+  line-height: 1.25;
+}
