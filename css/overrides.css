@@ -903,3 +903,33 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 .hints-body .hint-example.hint-extra-row .hint-label-ant{
   opacity: 0.85;
 }
+/* Extra tab: highlight L2 terms (syn/ant) with brand color */
+.hints-body .hint-example.hint-extra-row .hint-l2{
+  color: var(--brand, var(--accent, #1fa8ff));
+  font-weight: 700;
+}
+
+/* Extra tab: translation is secondary (still readable) */
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  opacity: 0.78;
+}
+
+/* Keep wrapping behavior from earlier */
+.hints-body .hint-example.hint-extra-row .hint-de{
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.95em;
+}
+
+/* Empty line between syn/ant rows */
+.hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
+  margin-top: 10px;
+}
