@@ -3,7 +3,7 @@
  * Файл: ui.examples.hints.js
  * Назначение: Пример использования текущего слова
  * в зоне .home-hints под сетами
- * (Пример / Синонимы / Антонимы)
+ * (Пример / Дополнительно)
  * Версия: 3.0 (вкладки + общая логика показа перевода)
  * Обновлено: 2025-11-29
  * ========================================================== */
@@ -14,8 +14,15 @@
  const A = (window.App = window.App || {});
 
  let wordObserver = null; // наблюдатель за .trainer-word
- let wrongAttempts = 0; // счётчик неверных ответов для текущего слова
- let currentTab = 'examples'; // 'examples' | 'synonyms' | 'antonyms' (на сессию)
+ let wrongAttempts = 0;
+ translationUnlocked = false; // счётчик неверных ответов для текущего слова
+ let currentTab = 'examples'; // 'examples' | 'extra' (на сессию)
+
+ let translationUnlocked = false; // переводы во вкладке "Дополнительно" можно раскрывать (после correct / 2 wrong / idk)
+
+ function unlockTranslations() {
+  translationUnlocked = true;
+ }
 
  /* ----------------------------- Вспомогательные функции ----------------------------- */
 
@@ -130,11 +137,16 @@
  function getTabLabels() {
  const lang = getUiLang();
  if (lang === 'uk') {
+  return {
+   examples: 'Приклад',
+   extra: 'Додатково'
+  };
+ }
  return {
- examples: 'Приклад',
- synonyms: 'Синоніми',
- antonyms: 'Антоніми'
+  examples: 'Пример',
+  extra: 'Дополнительно'
  };
+};
  }
  return {
  examples: 'Пример',
@@ -147,11 +159,15 @@
  function getNoDataText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
- if (kind === 'examples') return 'Для цього слова немає прикладів.';
- if (kind === 'synonyms') return 'Для цього слова немає синонімів.';
- if (kind === 'antonyms') return 'Для цього слова немає антонімів.';
- return '';
+  if (kind === 'examples') return 'Для цього слова немає прикладів.';
+  if (kind === 'extra') return 'Для цього слова немає синонімів і антонімів.';
+  return '';
  }
+ // ru
+ if (kind === 'examples') return 'Для этого слова нет примеров.';
+ if (kind === 'extra') return 'Для этого слова нет синонимов и антонимов.';
+ return '';
+}
  // ru
  if (kind === 'examples') return 'Для этого слова нет примеров.';
  if (kind === 'synonyms') return 'Для этого слова нет синонимов.';
@@ -164,10 +180,19 @@
  function getProLockText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
- if (kind === 'synonyms') return 'Синоніми доступні у версії PRO. ';
- if (kind === 'antonyms') return 'Антоніми доступні у версії PRO. ';
- return 'Функція доступна у версії PRO. ';
+  if (kind === 'extra') return 'Додаткові підказки (синоніми/антоніми) доступні у версії PRO.';
+  // legacy
+  if (kind === 'synonyms') return 'Синоніми доступні у версії PRO.';
+  if (kind === 'antonyms') return 'Антоніми доступні у версії PRO.';
+  return 'Функція доступна у версії PRO.';
  }
+ // ru
+ if (kind === 'extra') return 'Дополнительные подсказки (синонимы/антонимы) доступны в версии PRO.';
+ // legacy
+ if (kind === 'synonyms') return 'Синонимы доступны в версии PRO.';
+ if (kind === 'antonyms') return 'Антонимы доступны в версии PRO.';
+ return 'Функция доступна в версии PRO.';
+}
  // ru
  if (kind === 'synonyms') return 'Синонимы доступны в версии PRO. ';
  if (kind === 'antonyms') return 'Антонимы доступны в версии PRO. ';
@@ -266,7 +291,7 @@ function getAntonyms(word, deckKey) {
 
  // индикаторы вкладок
  pager.innerHTML = '';
- ['examples', 'synonyms', 'antonyms'].forEach(function (tab) {
+ ['examples', 'extra'].forEach(function (tab) {
  const btn = document.createElement('button');
  btn.type = 'button';
  btn.className = 'hints-dot' + (tab === currentTab ? ' is-active' : '');
@@ -275,6 +300,9 @@ function getAntonyms(word, deckKey) {
  btn.addEventListener('click', function () {
  if (currentTab === tab) return;
  currentTab = tab; // запоминаем выбор на сессию
+ translationUnlocked = false;
+ const body = document.getElementById('hintsBody');
+ if (body) body.scrollTop = 0;
  renderExampleHint(); // перерисовываем содержимое
  });
 
@@ -341,8 +369,8 @@ function getAntonyms(word, deckKey) {
  '</div>';
  }
 
- function renderSynonymsTab(word, body) {
- // В упражнении "Артикли" синонимы недоступны
+ function renderExtraTab(word, body) {
+ // В упражнении "Артикли" доп. контент недоступен
  if (isArticlesTrainerMode()) {
   body.innerHTML =
    '<div class="hint-example">' +
@@ -353,15 +381,17 @@ function getAntonyms(word, deckKey) {
   return;
  }
 
+ // PRO-gate: синонимы/антонимы доступны только в Pro
  if (!A.isPro || !A.isPro()) {
- body.innerHTML =
- '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
- escapeHtml(getProLockText('synonyms')) +
- '</p>' +
- '</div>';
- return;
+  body.innerHTML =
+   '<div class="hint-example">' +
+   '<p class="hint-tr is-visible">' +
+   escapeHtml(getProLockText('extra')) +
+   '</p>' +
+   '</div>';
+  return;
  }
+
  let deckKey = null;
  try {
   if (A.Trainer && typeof A.Trainer.getDeckKey === 'function') {
@@ -370,122 +400,59 @@ function getAntonyms(word, deckKey) {
  } catch (_) {}
 
  const syn = getSynonyms(word, deckKey);
- const l2 = (syn.l2 || []).filter(Boolean);
- const l1 = (syn.l1 || []).filter(Boolean);
+ const ant = getAntonyms(word, deckKey);
 
- // Если нет данных по L2 — считаем, что синонимов нет
- if (!l2.length) {
- body.innerHTML =
- '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
- escapeHtml(getNoDataText('synonyms')) +
- '</p>' +
- '</div>';
- return;
- }
+ const synL2 = (syn.l2 || []).filter(Boolean);
+ const synL1 = (syn.l1 || []).filter(Boolean);
+ const antL2 = (ant.l2 || []).filter(Boolean);
+ const antL1 = (ant.l1 || []).filter(Boolean);
 
- const top = l2.join(', ');
- const bottom = l1.join(', ');
+ const hasSyn = synL2.length > 0;
+ const hasAnt = antL2.length > 0;
 
- const reverse = isReverseTraining();
-
- // Reverse mode: show L1 first, reveal DE after answer.
- // Forward mode: show DE first, reveal L1 after answer.
- const beforeText = reverse ? bottom : top;
- const afterText  = reverse ? top : bottom;
-
- // If the "before" side is missing in reverse, show the same RU/UK placeholder as today.
- // (Requested: keep RU/UK placeholders for now.)
- if (reverse && !beforeText) {
-   body.innerHTML =
-   '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
-   escapeHtml(getNoDataText('synonyms')) +
-   '</p>' +
-   '</div>';
-   return;
- }
-
- body.innerHTML =
- '<div class="hint-example">' +
- (beforeText ? '<p class="hint-de">' + escapeHtml(beforeText) + '</p>' : '') +
- (afterText  ? '<p class="hint-tr">' + escapeHtml(afterText)  + '</p>' : '') +
- '</div>';
-}
-
- function renderAntonymsTab(word, body) {
- // В упражнении "Артикли" антонимы недоступны
- if (isArticlesTrainerMode()) {
+ if (!hasSyn && !hasAnt) {
   body.innerHTML =
    '<div class="hint-example">' +
    '<p class="hint-tr is-visible">' +
-   escapeHtml(getExerciseLockText()) +
+   escapeHtml(getNoDataText('extra')) +
    '</p>' +
    '</div>';
   return;
  }
 
- if (!A.isPro || !A.isPro()) {
- body.innerHTML =
- '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
- escapeHtml(getProLockText('antonyms')) +
- '</p>' +
- '</div>';
- return;
- }
- let deckKey = null;
- try {
-  if (A.Trainer && typeof A.Trainer.getDeckKey === 'function') {
-   deckKey = A.Trainer.getDeckKey();
-  }
- } catch (_) {}
+ body.innerHTML = '';
 
- const ant = getAntonyms(word, deckKey);
- const l2 = (ant.l2 || []).filter(Boolean);
- const l1 = (ant.l1 || []).filter(Boolean);
+ function renderRow(labelText, l2Arr, l1Arr) {
+  const l2Text = escapeHtml(l2Arr.join(', '));
+  const l1Text = escapeHtml(l1Arr.join(', '));
 
- // Если нет данных по L2 — считаем, что антонимов нет
- if (!l2.length) {
- body.innerHTML =
- '<div class="hint-example">' +
- '<p class="hint-tr is-visible">' +
- escapeHtml(getNoDataText('antonyms')) +
- '</p>' +
- '</div>';
- return;
- }
+  const hasL1 = !!l1Text;
+  const dash = hasL1 ? ' — ' : '';
 
- const top = l2.join(', ');
- const bottom = l1.join(', ');
-
- const reverse = isReverseTraining();
-
- // Reverse mode: show L1 first, reveal DE after answer.
- // Forward mode: show DE first, reveal L1 after answer.
- const beforeText = reverse ? bottom : top;
- const afterText  = reverse ? top : bottom;
-
- // If the "before" side is missing in reverse, show the same RU/UK placeholder as today.
- // (Requested: keep RU/UK placeholders for now.)
- if (reverse && !beforeText) {
-   body.innerHTML =
-   '<div class="hint-example">' +
-   '<p class="hint-tr is-visible">' +
-   escapeHtml(getNoDataText('antonyms')) +
+  body.innerHTML +=
+   '<div class="hint-example hint-extra-row">' +
+   '<p class="hint-de">' +
+   '<span class="hint-label">' + escapeHtml(labelText) + '</span>' +
+   ' ' +
+   '<span class="hint-l2">' + l2Text + '</span>' +
+   '<span class="hint-tr hint-tr-inline">' +
+   dash +
+   l1Text +
+   '</span>' +
    '</p>' +
    '</div>';
-   return;
  }
 
- body.innerHTML =
- '<div class="hint-example">' +
- (beforeText ? '<p class="hint-de">' + escapeHtml(beforeText) + '</p>' : '') +
- (afterText  ? '<p class="hint-tr">' + escapeHtml(afterText)  + '</p>' : '') +
- '</div>';
+ const lang = getUiLang();
+ const synLabel = (lang === 'uk') ? 'Син.' : 'Син.';
+ const antLabel = (lang === 'uk') ? 'Ант.' : 'Ант.';
+
+ if (hasSyn) renderRow(synLabel, synL2, synL1);
+ if (hasAnt) renderRow(antLabel, antL2, antL1);
 }
 
- function renderExampleHint() {
+
+function renderExampleHint() {
  const section = document.querySelector('.home-hints');
  const body = document.getElementById('hintsBody');
  if (!section || !body) return;
@@ -498,13 +465,10 @@ function getAntonyms(word, deckKey) {
  return;
  }
 
- if (currentTab === 'synonyms') {
- renderSynonymsTab(word, body);
- } else if (currentTab === 'antonyms') {
- renderAntonymsTab(word, body);
+ if (currentTab === 'extra') {
+  renderExtraTab(word, body);
  } else {
- // 'examples' или любые другие значения по умолчанию → примеры
- renderExamplesTab(word, body);
+  renderExamplesTab(word, body);
  }
  }
 
@@ -533,16 +497,18 @@ function getAntonyms(word, deckKey) {
  const body = document.getElementById('hintsBody');
  if (!body) return;
 
- // Extra tab: reveal all translations only after correct
+ unlockTranslations();
+
+ // Extra tab: reveal all translations (syn + ant)
  if (currentTab === 'extra') {
   const trs = body.querySelectorAll('.hint-example.hint-extra-row .hint-tr');
-  trs.forEach(function(tr){
-   tr.classList.add('is-visible');
+  trs.forEach(function (trEl) {
+   trEl.classList.add('is-visible');
   });
   return;
  }
 
- // Examples (default)
+ // Examples
  const root = body.querySelector('.hint-example');
  if (!root) return;
  const trEl = root.querySelector('.hint-tr');
@@ -594,6 +560,7 @@ function getAntonyms(word, deckKey) {
  });
 
  // первый рендер для уже выведенного слова
+ translationUnlocked = false;
  wrongAttempts = 0;
  const body = document.getElementById('hintsBody');
  if (body) body.scrollTop = 0;
@@ -650,24 +617,24 @@ function getAntonyms(word, deckKey) {
  document.addEventListener('click', function (evt) {
  const target = evt.target;
 
- // 1) Клик по немецкому примеру — показать/скрыть перевод вручную
- const deEl = target.closest('.hint-de');
- if (deEl) {
- const root = deEl.closest('.hint-example');
- if (!root) return;
+ // 1) Тап по блоку подсказки — показать/скрыть перевод вручную
+ // Вкладка "Дополнительно": до раскрытия (после correct/2 wrong/idk) перевод тапом не открываем,
+ // чтобы не ломать обучение.
+ const hintRoot = target.closest('.hint-example');
+ if (hintRoot && !target.closest('.hints-pager') && !target.closest('button')) {
+  if (currentTab === 'extra' && hintRoot.classList.contains('hint-extra-row') && !translationUnlocked) {
+   return;
+  }
 
- const trEl = root.querySelector('.hint-tr');
- if (!trEl) return;
-
- const willShow = !trEl.classList.contains('is-visible');
-
- trEl.classList.toggle('is-visible');
-
- // Если перевод только что показали — следим, чтобы он не спрятался под скролл
- if (willShow) {
- ensureTranslationVisible(trEl);
- }
- return;
+  const trEl = hintRoot.querySelector('.hint-tr');
+  if (trEl) {
+   const willShow = !trEl.classList.contains('is-visible');
+   trEl.classList.toggle('is-visible');
+   if (willShow) {
+    ensureTranslationVisible(trEl);
+   }
+   return;
+  }
  }
 
  // 2) Клик по вариантам ответов / "Не знаю"
