@@ -170,15 +170,23 @@
  function getProLockText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
- if (kind === 'synonyms') return 'Синоніми доступні у версії PRO. ';
- if (kind === 'antonyms') return 'Антоніми доступні у версії PRO. ';
- return 'Функція доступна у версії PRO. ';
+  if (kind === 'examples') return 'Приклади доступні у версії PRO.';
+  if (kind === 'extra') return 'Додаткові підказки (синоніми/антоніми) доступні у версії PRO.';
+  // legacy keys (backward compatibility)
+  if (kind === 'synonyms') return 'Синоніми доступні у версії PRO.';
+  if (kind === 'antonyms') return 'Антоніми доступні у версії PRO.';
+  return 'Функція доступна у версії PRO.';
  }
- // ru
- if (kind === 'synonyms') return 'Синонимы доступны в версии PRO. ';
- if (kind === 'antonyms') return 'Антонимы доступны в версии PRO. ';
- return 'Функция доступна в версии PRO. ';
- }
+
+ // ru (default)
+ if (kind === 'examples') return 'Примеры доступны в версии PRO.';
+ if (kind === 'extra') return 'Дополнительные подсказки (синонимы/антонимы) доступны в версии PRO.';
+ // legacy keys
+ if (kind === 'synonyms') return 'Синонимы доступны в версии PRO.';
+ if (kind === 'antonyms') return 'Антонимы доступны в версии PRO.';
+ return 'Функция доступна в версии PRO.';
+}
+
 
  // Заглушка для упражнения "Артикли" (примеры/синонимы/антонимы)
  function isArticlesTrainerMode() {
@@ -528,7 +536,7 @@ function getAntonyms(word, deckKey) {
   body.innerHTML =
    '<div class="hint-example">' +
    '<p class="hint-tr is-visible">' +
-   escapeHtml(getProRequiredText()) +
+   escapeHtml(getProLockText('extra')) +
    '</p>' +
    '</div>';
   return;
