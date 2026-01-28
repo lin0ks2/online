@@ -596,7 +596,7 @@ function getAntonyms(word, deckKey) {
   const dash = hasL1 ? ' — ' : '';
 
   body.innerHTML +=
-   '<div class="hint-example">' +
+   '<div class="hint-example hint-extra-row">' +
    '<p class="hint-de">' +
    escapeHtml('• ' + label) +
    ': ' +
