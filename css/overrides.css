@@ -849,16 +849,22 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
   line-height: 1.25;
 }
 
-/* Extra tab rows: keep Syn/Ant in ONE line (no wrap). If too long — ellipsis. */
+/* Extra tab rows: allow wrap if needed (2nd line only when necessary) */
 .hints-body .hint-example.hint-extra-row .hint-de{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: left;
+  white-space: normal;          /* разрешаем перенос */
+  overflow: visible;            /* не обрезаем */
+  text-overflow: clip;          /* без троеточия */
+  overflow-wrap: anywhere;      /* чтобы ничего не вылезало за край */
+  word-break: normal;
+  text-align: left;             /* как у тебя сейчас выглядит хорошо */
+  line-height: 1.25;
 }
 
-/* Ensure the inline translation does not force a line break */
+/* Keep translation chunk together: it either stays inline or jumps as a whole to next line */
 .hints-body .hint-example.hint-extra-row .hint-tr.hint-tr-inline{
-  white-space: nowrap;
-  display: inline;
+  white-space: nowrap;          /* “— перевод” не рвём */
+  display: inline-block;        /* чтобы переносился целиком блоком */
+  margin-left: 8px;
+  opacity: 0.88;
+  font-size: 0.95em;
 }
