@@ -147,11 +147,17 @@
  function getNoDataText(kind) {
  const lang = getUiLang();
  if (lang === 'uk') {
- if (kind === 'examples') return 'Для цього слова немає прикладів.';
- if (kind === 'extra') return 'Для цього слова немає синонімів і антонімів.';
- 
- return '';
+  if (kind === 'examples') return 'Для цього слова немає прикладів.';
+  if (kind === 'extra') return 'Для цього слова немає синонімів і антонімів.';
+  return '';
  }
+
+ // ru (default)
+ if (kind === 'examples') return 'Для этого слова нет примеров.';
+ if (kind === 'extra') return 'Для этого слова нет синонимов и антонимов.';
+ return '';
+}
+
  // ru
  if (kind === 'examples') return 'Для этого слова нет примеров.';
  if (kind === 'extra') return 'Для этого слова нет синонимов и антонимов.';
