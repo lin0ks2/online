@@ -2335,8 +2335,8 @@ window.decks.de_nouns_lernpunkt = [
   {
     "id": 95,
     "word": "die Kamera",
-    "ru": "камера / фотоаппарат",
-    "uk": "камера / фотоапарат",
+    "ru": "камера, фотоаппарат",
+    "uk": "камера, фотоапарат",
     "level": "A1",
     "topics": [
       "technology",
@@ -4160,8 +4160,8 @@ window.decks.de_nouns_lernpunkt = [
   {
     "id": 186,
     "word": "die Paprika",
-    "ru": "паприка/сладкий перец",
-    "uk": "паприка/перець",
+    "ru": "паприка, сладкий перец",
+    "uk": "паприка, перець",
     "level": "A1",
     "topics": [
       "food"
@@ -4212,8 +4212,8 @@ window.decks.de_nouns_lernpunkt = [
   {
     "id": 188,
     "word": "die Kirsche",
-    "ru": "вишня/черешня",
-    "uk": "вишня/черешня",
+    "ru": "вишня, черешня",
+    "uk": "вишня, черешня",
     "level": "A1",
     "topics": [
       "food"
@@ -4227,8 +4227,8 @@ window.decks.de_nouns_lernpunkt = [
     "examples": [
       {
         "L2": "Ich esse Kirschen.",
-        "ru": "Я ем вишню/черешню.",
-        "uk": "Я їм вишні/черешні."
+        "ru": "Я ем вишню, черешню.",
+        "uk": "Я їм вишні, черешні."
       }
     ]
   },
@@ -9261,8 +9261,8 @@ window.decks.de_verbs_lernpunkt = [
   {
     id: 31,
     word: "gehen",
-    ru: "идти / ходить",
-    uk: "йти / ходити",
+    ru: "идти, ходить",
+    uk: "йти, ходити",
     level: "A1",
     topics: [ "movement", "basic_verbs" ],
     deSynonyms: [],
@@ -9336,8 +9336,8 @@ window.decks.de_verbs_lernpunkt = [
   {
     id: 119,
     word: "lösen",
-    ru: "решать / отклеивать",
-    uk: "розв’язувати / відклеювати",
+    ru: "решать, отклеивать",
+    uk: "розв’язувати, відклеювати",
     level: "A2",
     topics: [ "handlung" ],
     deSynonyms: [],
@@ -9489,8 +9489,8 @@ window.decks.de_verbs_lernpunkt = [
 {
     id: 128,
     word: "kochen",
-    ru: "готовить/варить",
-    uk: "готувати/варити",
+    ru: "готовить, варить",
+    uk: "готувати, варити",
     level: "A1",
     topics: ["kitchen"],
     ukAntonyms: [  ],
@@ -9569,8 +9569,8 @@ window.decks.de_verbs_lernpunkt = [
 {
     id: 132,
     word: "abkühlen",
-    ru: "остужать/остывать",
-    uk: "охолоджувати/охолоджуватися",
+    ru: "остужать, остывать",
+    uk: "охолоджувати, охолоджуватися",
     level: "A1",
     topics: ["kitchen"],
     ukAntonyms: [ "підігрівати" ],
@@ -10094,15 +10094,15 @@ window.decks.de_adjectives_lernpunkt = [
     ruSynonyms: [],
     ukSynonyms: [],
     deAntonyms: [ "schwer" ],
-    ruAntonyms: [ "тяжёлый/трудный" ],
-    ukAntonyms: [ "важкий/складний" ],
+    ruAntonyms: [ "тяжёлый, трудный" ],
+    ukAntonyms: [ "важкий, складний" ],
     examples: [{ L2: "Die Tasche ist leicht.", ru: "Сумка лёгкая.", uk: "Сумка легка." }]
   },
   {
     id: 5,
     word: "schwer",
-    ru: "тяжёлый/трудный",
-    uk: "важкий/складний",
+    ru: "тяжёлый, трудный",
+    uk: "важкий, складний",
     level: "A1",
     topics: [ "quality" ],
     deSynonyms: [],
@@ -11732,8 +11732,8 @@ window.decks.de_prepositions_lernpunkt = [
   {
     id: 1,
     word: "von",
-    ru: "от / из",
-    uk: "від / з",
+    ru: "от, из",
+    uk: "від, з",
     level: "A1",
     topics: [ "grammar" ],
     deSynonyms: [],
@@ -11748,7 +11748,7 @@ window.decks.de_prepositions_lernpunkt = [
     id: 2,
     word: "in",
     ru: "в",
-    uk: "у / в",
+    uk: "у, в",
     level: "A1",
     topics: [ "grammar" ],
     deSynonyms: [],
@@ -12395,8 +12395,8 @@ window.decks.de_conjunctions_lernpunkt = [
   {
     id: 6,
     word: "wenn",
-    ru: "если/когда",
-    uk: "якщо/коли",
+    ru: "если, когда",
+    uk: "якщо, коли",
     level: "A1",
     topics: [ "grammar" ],
     deSynonyms: [],
@@ -12455,8 +12455,8 @@ window.decks.de_conjunctions_lernpunkt = [
   {
     id: 10,
     word: "trotzdem",
-    ru: "всё равно/тем не менее",
-    uk: "все одно/проте",
+    ru: "всё равно, тем не менее",
+    uk: "все одно, проте",
     level: "A1",
     topics: [ "grammar" ],
     deSynonyms: [],
@@ -12608,8 +12608,8 @@ window.decks.de_particles_lernpunkt = [
   {
     id: 10,
     word: "doch",
-    ru: "всё-таки / да",
-    uk: "усе ж таки / так",
+    ru: "всё-таки, да",
+    uk: "усе ж таки, так",
     level: "A1",
     topics: [ "particles" ],
     deSynonyms: [],
