@@ -64,19 +64,6 @@
       let baseKeys = Object.keys(decks)
         .filter(k => Array.isArray(decks[k]) && !/^favorites:|^mistakes:/i.test(k));
 
-      // Add prepositions trainer keys (they are generated dynamically and are not present in window.decks)
-      try{
-        if (A.Prepositions && typeof A.Prepositions.getDeckForKey === 'function') {
-          ['en_prepositions_trainer','de_prepositions_trainer'].forEach(function(k){
-            if (baseKeys.indexOf(k) !== -1) return;
-            var d = A.Prepositions.getDeckForKey(k) || [];
-            // Only add if the deck exists (data loaded) — favorites count check will filter empties.
-            if (d && d.length) baseKeys.push(k);
-          });
-        }
-      }catch(_){ }
-
-
       // Articles mode: do NOT mix base and LearnPunkt decks in lists (prevents "leak" illusion)
       if (isArticlesMode()){
         const grp = currentArticlesGroup();
@@ -372,13 +359,8 @@ if (del){
             const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
             const tail = String(m[3]||'');
             if (!/^(base|lernpunkt)$/i.test(tail)){
-              // Do NOT auto-group prepositions favorites into base/lernpunkt (keep exact deck key)
-              const baseKey2 = tail;
-              const isPrepsKey = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey2));
-              if (!isPrepsKey){
-                const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
-                key = `favorites:${tl}:${grp}`;
-              }
+              const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
+              key = `favorites:${tl}:${grp}`;
             }
           }
         }
@@ -386,18 +368,15 @@ if (del){
 
       // 1) как в других вью: общий стартер, если есть
       if (A.UI && typeof A.UI.startTrainingWithKey === 'function'){
-        try{ A.settings = A.settings || {}; A.settings.lastDeckKey = key; }catch(_){}
         A.UI.startTrainingWithKey(key);
         return;
       }
       if (A.Home && typeof A.Home.startTrainingWithKey === 'function'){
-        try{ A.settings = A.settings || {}; A.settings.lastDeckKey = key; }catch(_){}
         A.Home.startTrainingWithKey(key);
         return;
       }
       // 2) фоллбэк: проставить ключ тренеру и уйти на home
       if (A.Trainer && typeof A.Trainer.setDeckKey === 'function'){
-        try{ A.settings = A.settings || {}; A.settings.lastDeckKey = key; }catch(_){}
         A.Trainer.setDeckKey(key);
       }
       if (A.Router && typeof A.Router.routeTo === 'function'){

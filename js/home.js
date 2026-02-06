@@ -193,7 +193,7 @@ function setUiLang(code){
     try {
       const base = extractBaseFromVirtual(deckKey) || deckKey;
       return !!(A.settings && A.settings.trainerKind === 'prepositions')
-        && /^([a-z]{2})_prepositions(_trainer)?$/i.test(String(base || '').trim());
+        && /^([a-z]{2})_prepositions$/i.test(String(base || '').trim());
     } catch(_){}
     return false;
   }

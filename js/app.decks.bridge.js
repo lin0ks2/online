@@ -57,29 +57,9 @@
         const group = String(p.group).toLowerCase();
         const TL = p.trainLang;
         const decksObj = (window.decks && typeof window.decks==='object') ? window.decks : {};
-
-// Determine active dictionary language to avoid cross-language bleed in grouped favorites/mistakes.
-// Priority: explicit dictsLang (Dicts screen), fallback: lastDeckKey prefix.
-let activeDictLang = '';
-try{
-  activeDictLang = (App.settings && App.settings.dictsLang) ? String(App.settings.dictsLang).toLowerCase() : '';
-}catch(_){}
-try{
-  if (!activeDictLang){
-    const lk = (App.settings && App.settings.lastDeckKey) ? String(App.settings.lastDeckKey).toLowerCase() : '';
-    const mm = lk.match(/^([a-z]{2})_/i);
-    if (mm) activeDictLang = mm[1].toLowerCase();
-  }
-}catch(_){}
-
-const baseKeys = Object.keys(decksObj)
-  .filter(k => Array.isArray(decksObj[k]) && !/^favorites:|^mistakes:/i.test(k))
-  // Grouping applies to word decks only (exclude prepositions/articles trainers etc.)
-  .filter(k => !/^([a-z]{2})_prepositions(_trainer)?$/i.test(k))
-  .filter(k => group==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k))
-  // Filter by active dictionary language when known.
-  .filter(k => !activeDictLang ? true : String(k).toLowerCase().startsWith(activeDictLang + '_'));
-
+        const baseKeys = Object.keys(decksObj)
+          .filter(k => Array.isArray(decksObj[k]) && !/^favorites:|^mistakes:/i.test(k))
+          .filter(k => group==='lernpunkt' ? /_lernpunkt$/i.test(k) : !/_lernpunkt$/i.test(k));
 
         // В articles-режиме используем изолированные контуры.
         const Mist = isArticles ? (A.ArticlesMistakes || null) : (A.Mistakes || null);
@@ -230,8 +210,7 @@ const baseKeys = Object.keys(decksObj)
     try{
       // Prepositions trainer decks
       if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
-        // Show language flag (not a generic icon) — consistent with other decks.
-        return _flag ? (_flag(key) || '🌐') : '🌐';
+        return '🧩';
       }
 
       const p = parseVirtualKey(key);

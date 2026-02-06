@@ -35,16 +35,7 @@
     try{ return (App.Decks && App.Decks.langOfKey) ? (App.Decks.langOfKey(key) || null) : null; }catch(e){ return null; }
   }
   function resolveDeck(key){
-    try{
-      var deck = (App.Decks && App.Decks.resolveDeckByKey) ? (App.Decks.resolveDeckByKey(key) || []) : [];
-      // Favorites/Mistakes screens may run in 'words' mode where prepositions decks are not resolved via Decks bridge.
-      // For prepositions trainer/source keys, load the expanded deck directly.
-      if ((!deck || !deck.length) && App.Prepositions && typeof App.Prepositions.isAnyPrepositionsKey === 'function'
-          && App.Prepositions.isAnyPrepositionsKey(key) && typeof App.Prepositions.getDeckForKey === 'function') {
-        deck = App.Prepositions.getDeckForKey(key) || [];
-      }
-      return deck;
-    }catch(e){ return []; }
+    try{ return (App.Decks && App.Decks.resolveDeckByKey) ? (App.Decks.resolveDeckByKey(key) || []) : []; }catch(e){ return []; }
   }
 
   function aliveWord(dictKey, id){
@@ -316,15 +307,6 @@
         var p = _parseFavoritesKey(key);
         if (!p) return [];
         var full = (A.Decks && A.Decks.resolveDeckByKey) ? (A.Decks.resolveDeckByKey(p.baseDeckKey) || []) : [];
-        // In favorites view we may be in 'words' mode — prepositions decks won't resolve via Decks bridge.
-        // Load expanded prepositions deck directly when needed.
-        try{
-          if ((!full || !full.length) && A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function'
-              && A.Prepositions.isAnyPrepositionsKey(p.baseDeckKey) && typeof A.Prepositions.getDeckForKey === 'function') {
-            full = A.Prepositions.getDeckForKey(p.baseDeckKey) || [];
-          }
-        }catch(_){}
-
         var out = [];
         for (var i=0;i<full.length;i++){
           var w = full[i];
@@ -333,12 +315,9 @@
         // Prepositions trainer uses an expanded deck where the same pattern id is repeated
         // across multiple variants. Favorites are stored by pattern id, so we must dedupe.
         try{
-          var isPreps = false;
-          if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function') {
-            isPreps = !!A.Prepositions.isAnyPrepositionsKey(p.baseDeckKey);
-          } else {
-            isPreps = /^([a-z]{2})_prepositions(?:_trainer)?$/i.test(String(p.baseDeckKey||''));
-          }
+          var isPreps = (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function')
+            ? A.Prepositions.isAnyPrepositionsKey(p.baseDeckKey)
+            : (String(p.baseDeckKey||'') === 'en_prepositions_trainer');
 
           if (isPreps && out.length > 1){
             var seen = {};

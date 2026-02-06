@@ -294,48 +294,41 @@
           }
 
           // Detect prepositions decks (incl. virtual mistakes:* keys) and route to the correct trainer.
-let __isPreps = false;
-try{
-  const s0 = String(key||'');
-  let baseKey = s0;
-  const vm = s0.match(/^(mistakes):(ru|uk):(.+)$/i);
-  if (vm){
-    const tail = String(vm[3]||'');
-    if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
-  }
-  if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
-    __isPreps = true;
-    A.settings = A.settings || {};
-    A.settings.trainerKind = "prepositions";
-  }
-} catch(_){ __isPreps = false; }
+          try{
+            const s0 = String(key||'');
+            let baseKey = s0;
+            const vm = s0.match(/^(mistakes):(ru|uk):(.+)$/i);
+            if (vm){
+              const tail = String(vm[3]||'');
+              if (tail && !/^(base|lernpunkt)$/i.test(tail)) baseKey = tail;
+            }
+            if (A.Prepositions && typeof A.Prepositions.isAnyPrepositionsKey === 'function' && A.Prepositions.isAnyPrepositionsKey(baseKey)){
+              A.settings = A.settings || {};
+              A.settings.trainerKind = "prepositions";
+            } else {
+              // Default words trainer
+              A.settings = A.settings || {}; A.settings.trainerKind = "words";
+            }
+          } catch(_){ try { A.settings = A.settings || {}; A.settings.trainerKind = "words"; } catch(__){} }
+          try {
+            A.settings = A.settings || {};
+            // Auto-grouping: base vs LearnPunkt для words mistakes
+            try{
+              if (!isArticlesMode()){
+                const s = String(key||'');
+                const m = s.match(/^(mistakes):(ru|uk):(.+)$/i);
+                if (m){
+                  const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
+                  const tail = String(m[3]||'');
+                  if (!/^(base|lernpunkt)$/i.test(tail)){
+                    const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
+                    key = `mistakes:${tl}:${grp}`;
+                  }
+                }
+              }
+            }catch(_){}
 
-// Default words trainer ONLY when not prepositions (and keep current kind if already set).
-try{
-  if (!__isPreps){
-    A.settings = A.settings || {};
-    if (!A.settings.trainerKind) A.settings.trainerKind = "words";
-  }
-} catch(_){ try { if (!__isPreps){ A.settings = A.settings || {}; A.settings.trainerKind = "words"; } } catch(__){} }
-
-try {
-  A.settings = A.settings || {};
-  // Auto-grouping: base vs LearnPunkt для words mistakes (NEVER for prepositions)
-  try{
-    if (!__isPreps && !isArticlesMode()){
-      const s = String(key||'');
-      const m = s.match(/^(mistakes):(ru|uk):(.+)$/i);
-      if (m){
-        const tl = String(m[2]).toLowerCase()==='uk' ? 'uk' : 'ru';
-        const tail = String(m[3]||'');
-        if (!/^(base|lernpunkt)$/i.test(tail)){
-          const grp = /_lernpunkt$/i.test(tail) ? 'lernpunkt' : 'base';
-          key = `mistakes:${tl}:${grp}`;
-        }
-      }
-    }
-  }catch(_){}
-A.settings.lastDeckKey = key;
+            A.settings.lastDeckKey = key;
             if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
           } catch(_){ }
           try { document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: key } })); } catch(_){ }
