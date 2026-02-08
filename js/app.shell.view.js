@@ -73,8 +73,7 @@
         '</div>' +
         '<div class="mm-prefs-row mm-prefs-row-sound">' +
           '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
-        '</div>' +
-        '<div class="mm-tts-pills" role="group" aria-label="Звук">' +
+          '<div class="mm-tts-pills" role="group" aria-label="Звук">' +
           '<button type="button" class="mm-pill" data-tts="off" data-i18n="ttsOff">Выкл</button>' +
           '<button type="button" class="mm-pill" data-tts="words" data-i18n="ttsWords">Слова</button>' +
           '<button type="button" class="mm-pill" data-tts="examples" data-i18n="ttsExamples">Примеры</button>' +
