@@ -61,7 +61,7 @@
     '</div>' +
 
     '<div class="menu-item mm-prefs mm-prefs-training">' +
-      '<div class="menu-label mm-prefs-title" data-i18n="menuTrainingMode">Режим тренировки</div>' +
+      '' +
       '<div class="mm-prefs-grid">' +
         '<div class="mm-prefs-row">' +
           '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +

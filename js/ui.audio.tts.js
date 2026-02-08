@@ -242,7 +242,6 @@
   // Used to delay UI transitions until the user has heard the audio.
   
 function speakText(text, force, opts) {
-    if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
     if (!hasTTS()) return null;
 
     try {
@@ -379,12 +378,14 @@ function speakText(text, force, opts) {
   function updateButtonIcon(btn) {
     if (!btn) return;
 
-    if (!hasTTS() || !A.isPro || !A.isPro()) {
+    if (!hasTTS()) {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка недоступна');
       btn.disabled = true;
       return;
     }
+
+    btn.disabled = false;
 
     if (isAnySoundEnabled()) {
       btn.textContent = '🔊';
