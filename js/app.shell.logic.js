@@ -192,15 +192,21 @@
     const elFocusContext = document.getElementById('focusContext');
     const elTrainReverse = document.getElementById('trainReverse');
     const elTrainAutostep= document.getElementById('trainAutostep');
+    const elTtsPills    = document.querySelectorAll('.mm-tts-pills .mm-pill');
 
     // Ничего не делаем, если секция не отрисована.
-    if (!elFocusSets && !elFocusContext && !elTrainReverse && !elTrainAutostep) return;
+    var hasPills = false;
+    try { hasPills = !!(elTtsPills && elTtsPills.length); } catch(_) { hasPills = false; }
+    if (!elFocusSets && !elFocusContext && !elTrainReverse && !elTrainAutostep && !hasPills) return;
 
     const LS = {
       focusSets: 'mm.focus.hideSets',
       focusContext: 'mm.focus.hideContext',
       trainReverse: 'mm.train.reverse',
-      trainAutostep: 'mm.train.autostep'
+      trainAutostep: 'mm.train.autostep',
+      ttsWords: 'mm.tts.words',
+      ttsExamples: 'mm.tts.examples',
+      ttsLegacy: 'mm.audioEnabled.v2'
     };
 
     function readBool(key, fallback){
@@ -224,6 +230,39 @@
     const sReverse     = readBool(LS.trainReverse, false);
     const sAutostep    = readBool(LS.trainAutostep, true);
 
+    // --- TTS pills (Sound) ---
+    // Migration from legacy audio flag (single on/off) to new granular flags.
+    try {
+      var hasNew = window.localStorage.getItem(LS.ttsWords) !== null || window.localStorage.getItem(LS.ttsExamples) !== null;
+      if (!hasNew) {
+        var legacyOn = readBool(LS.ttsLegacy, false);
+        // Conservative mapping: keep words ON, examples OFF.
+        if (legacyOn) {
+          writeBool(LS.ttsWords, true);
+          writeBool(LS.ttsExamples, false);
+        }
+      }
+    } catch(_eMig) {}
+
+    var sTtsWords    = readBool(LS.ttsWords, false);
+    var sTtsExamples = readBool(LS.ttsExamples, false);
+
+    function updateTtsPillsUI(){
+      if (!hasPills) return;
+      var any = !!(sTtsWords || sTtsExamples);
+      try {
+        elTtsPills.forEach(function(p){
+          var kind = p.getAttribute('data-tts');
+          var active = false;
+          if (kind === 'off') active = !any;
+          else if (kind === 'words') active = !!sTtsWords;
+          else if (kind === 'examples') active = !!sTtsExamples;
+          p.classList.toggle('is-active', active);
+          p.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      } catch(_e) {}
+    }
+
     // UI семантика: checked = показывать (hide = !checked)
     if (elFocusSets)    elFocusSets.checked    = !sHideSets;
     if (elFocusContext) elFocusContext.checked = !sHideContext;
@@ -232,6 +271,8 @@
 
     document.body.classList.toggle('mm-focus-hide-sets', sHideSets);
     document.body.classList.toggle('mm-focus-hide-context', sHideContext);
+
+    updateTtsPillsUI();
 
     // Реакция на изменения
     if (elFocusSets) {
@@ -259,6 +300,29 @@
       elTrainAutostep.addEventListener('change', (e)=>{
         writeBool(LS.trainAutostep, !!e.target.checked);
       });
+    }
+
+    // TTS pills: OFF / WORDS / EXAMPLES (can select WORDS+EXAMPLES together)
+    if (hasPills) {
+      try {
+        elTtsPills.forEach(function(p){
+          p.addEventListener('click', function(){
+            var kind = p.getAttribute('data-tts');
+            if (kind === 'off') {
+              sTtsWords = false; sTtsExamples = false;
+            } else if (kind === 'words') {
+              sTtsWords = !sTtsWords;
+            } else if (kind === 'examples') {
+              sTtsExamples = !sTtsExamples;
+            }
+            writeBool(LS.ttsWords, sTtsWords);
+            writeBool(LS.ttsExamples, sTtsExamples);
+            updateTtsPillsUI();
+            // Refresh trainer icon (indicator) if module is present
+            try { if (window.App && App.AudioTTS && typeof App.AudioTTS.refresh === 'function') { App.AudioTTS.refresh(); } } catch(_eR) {}
+          });
+        });
+      } catch(_eBind) {}
     }
   })();
 

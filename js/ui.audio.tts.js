@@ -4,7 +4,7 @@
  * Назначение: Озвучка текущего слова в тренере (SpeechSynthesis)
  *   - Кнопка рядом со словом
  *   - Автоозвучка при смене слова
- *   - Двойной клик по кнопке — включить/выключить звук (🔊 / 🔇)
+ *   - Иконка рядом со словом: индикатор + ручная озвучка (управление звуком только через бургер)
  * Версия: 2.2 (кнопка внутри .trainer-word)
  * Обновлено: 2025-11-23
  * ========================================================== */
@@ -14,48 +14,25 @@
 
   var A = (window.App = window.App || {});
 
-  var LS_KEY = 'mm.audioEnabled.v2';
+    // Sound flags (source of truth is burger pills)
+  var LS_WORDS = 'mm.tts.words';
+  var LS_EXAMPLES = 'mm.tts.examples';
   var wordObserver = null;
 
-  // включён ли звук (по умолчанию: НЕТ, чтобы не пугать)
-  var audioEnabled = loadAudioEnabled();
-
-  function isArticlesMode() {
-    try { return A.settings && A.settings.trainerKind === 'articles'; } catch (e) { return false; }
-  }
-
-  function isPrepositionsMode() {
-    try { return A.settings && A.settings.trainerKind === 'prepositions'; } catch (e) { return false; }
-  }
-
-  function isReverseMode() {
+  function _readBoolLS(key, fallback){
     try {
-      var el = document.getElementById('trainReverse');
-      return !!(el && el.checked);
-    } catch (e) {
-      return false;
-    }
+      var v = window.localStorage.getItem(key);
+      if (v === null || v === undefined || v === '') return !!fallback;
+      return v === '1' || v === 'true';
+    } catch(_e) { return !!fallback; }
   }
-
-  // запоминаем, какое слово было озвучено автоматически, чтобы не дублировать
-  var lastAutoSpokenWord = '';
-
-  function loadAudioEnabled() {
-    try {
-      var v = window.localStorage.getItem(LS_KEY);
-      if (v === '1') return true;   // 1 = звук ВКЛ
-      if (v === '0') return false;  // 0 = звук ВЫКЛ
-      return false;                 // по умолчанию: выключен
-    } catch (e) {
-      return false;
-    }
+  function _writeBoolLS(key, val){
+    try { window.localStorage.setItem(key, val ? '1' : '0'); } catch(_e) {}
   }
+  function isWordsEnabled(){ return _readBoolLS(LS_WORDS, false); }
+  function isExamplesEnabled(){ return _readBoolLS(LS_EXAMPLES, false); }
+  function isAnySoundEnabled(){ return !!(isWordsEnabled() || isExamplesEnabled()); }
 
-  function saveAudioEnabled() {
-    try {
-      window.localStorage.setItem(LS_KEY, audioEnabled ? '1' : '0');
-    } catch (e) {}
-  }
 
   function hasTTS() {
     return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
@@ -266,7 +243,6 @@
   
 function speakText(text, force, opts) {
     if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
-    if (!force && !audioEnabled) return null; // авто-озвучка зависит от переключателя
     if (!hasTTS()) return null;
 
     try {
@@ -410,9 +386,9 @@ function speakText(text, force, opts) {
       return;
     }
 
-    if (audioEnabled) {
+    if (isAnySoundEnabled()) {
       btn.textContent = '🔊';
-      btn.setAttribute('aria-label', 'Озвучить слово');
+      btn.setAttribute('aria-label', 'Озвучить');
     } else {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка выключена');
@@ -446,21 +422,40 @@ function speakText(text, force, opts) {
       btn.type = 'button';
       btn.className = 'trainer-audio-btn';
 
-      // одиночный клик — озвучка (если звук включён)
+      // Клик — ручная озвучка (строго в рамках выбранных пилюль).
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         if (!A.isPro || !A.isPro()) return;
-        // Ручная озвучка работает всегда, независимо от состояния авто-озвучки.
-        speakCurrentWord(true);
-      });
 
-      // двойной клик — вкл/выкл звук
-      btn.addEventListener('dblclick', function (e) {
-        e.preventDefault();
-        if (!A.isPro || !A.isPro()) return;
-        audioEnabled = !audioEnabled;
-        saveAudioEnabled();
-        updateButtonIcon(btn);
+        var wordsOn = isWordsEnabled();
+        var exOn = isExamplesEnabled();
+        if (!wordsOn && !exOn) return; // Выкл
+
+        function getExampleText(){
+          try {
+            var wObj = A.__currentWord || null;
+            var ex = (wObj && wObj.examples && wObj.examples[0]) ? wObj.examples[0] : null;
+            var t = ex ? (ex.L2 || ex.de || ex.en || ex.text) : '';
+            return String(t || '').trim();
+          } catch(_e) { return ''; }
+        }
+
+        // Важно: слово -> пример (если выбраны оба)
+        var p = null;
+        if (wordsOn) {
+          p = speakCurrentWord(true);
+        }
+        if (exOn) {
+          var exText = getExampleText();
+          if (exText) {
+            if (p && typeof p.then === 'function') {
+              p = p.then(function(){ return speakText(exText, true, { noVoice: true }); });
+            } else {
+              p = speakText(exText, true, { noVoice: true });
+            }
+          }
+        }
+        return p;
       });
 
       hostEl.appendChild(btn);
@@ -473,7 +468,7 @@ function speakText(text, force, opts) {
     // чтобы звук не превращался в подсказку.
     if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) {
       var word = getCurrentWord();
-      if (word && audioEnabled && word !== lastAutoSpokenWord) {
+      if (word && isWordsEnabled() && word !== lastAutoSpokenWord) {
         lastAutoSpokenWord = word;
         setTimeout(function () {
           speakText(word, false);
@@ -584,9 +579,11 @@ function speakText(text, force, opts) {
     A.AudioTTS.waitUntilIdle = function (timeoutMs) {
       return waitUntilIdle(timeoutMs);
     };
+        // Legacy helper: enables/disables BOTH words and examples flags.
     A.AudioTTS.setEnabled = function (flag) {
-      audioEnabled = !!flag;
-      saveAudioEnabled();
+      var on = !!flag;
+      _writeBoolLS(LS_WORDS, on);
+      _writeBoolLS(LS_EXAMPLES, on);
       var btn = document.querySelector('.trainer-audio-btn');
       if (btn) updateButtonIcon(btn);
     };
@@ -596,7 +593,7 @@ function speakText(text, force, opts) {
     A.AudioTTS.onCorrect = function () {
       if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return;
       if (!A.isPro || !A.isPro()) return;
-      if (!audioEnabled) return;
+      if (!isWordsEnabled()) return;
       try {
         var w = getCurrentWord();
         if (w) lastAutoSpokenWord = w;

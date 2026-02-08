@@ -64,12 +64,20 @@
       '<div class="menu-label mm-prefs-title" data-i18n="menuTrainingMode">Режим тренировки</div>' +
       '<div class="mm-prefs-grid">' +
         '<div class="mm-prefs-row">' +
-          '<div class="mm-prefs-left" data-i18n="trainTranslate">Перевод</div>' +
-          '<label class="mm-check mm-check-compact"><input type="checkbox" id="trainReverse"><span data-i18n="trainReverse">Обратный</span></label>' +
+          '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +
+          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse" aria-label="Обратный перевод"><span data-i18n="trainReverse" aria-hidden="true">Обратный</span></label>' +
         '</div>' +
         '<div class="mm-prefs-row">' +
-          '<div class="mm-prefs-left" data-i18n="trainSetsNav">Переход по сетам</div>' +
-          '<label class="mm-check mm-check-compact"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
+          '<div class="mm-prefs-left" data-i18n="trainAutostepFull">Авто переход по сетам</div>' +
+          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep" aria-label="Авто переход по сетам"><span data-i18n="trainAuto" aria-hidden="true">Авто</span></label>' +
+        '</div>' +
+        '<div class="mm-prefs-row mm-prefs-row-sound">' +
+          '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
+        '</div>' +
+        '<div class="mm-tts-pills" role="group" aria-label="Звук">' +
+          '<button type="button" class="mm-pill" data-tts="off" data-i18n="ttsOff">Выкл</button>' +
+          '<button type="button" class="mm-pill" data-tts="words" data-i18n="ttsWords">Слова</button>' +
+          '<button type="button" class="mm-pill" data-tts="examples" data-i18n="ttsExamples">Примеры</button>' +
         '</div>' +
       '</div>' +
 	    '</div>' +
@@ -198,46 +206,5 @@
         '</div>' +
       '</div>' +
     '</div>';
-
-  /* ===================== Hidden dictionaries gate (Beta mode) ===================== */
-  function __mm_isBetaEnabled(){
-    try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
-  }
-  function __mm_setBetaEnabled(v){
-    try { localStorage.setItem('mm_beta', v ? '1' : '0'); } catch(_){}
-  }
-  function __mm_toast(msg){
-    try { if (window.App && App.Msg && typeof App.Msg.toast === 'function') { App.Msg.toast(String(msg||''), 2200); return; } } catch(_){}
-    try { console.log('[MoyaMova]', msg); } catch(_){}
-  }
-
-  // 7 taps on "App version" menu item toggles Beta mode (shows hidden dictionaries)
-  (function __mm_initBetaTapOnVersion(){
-    var el = document.querySelector('.menu-item.app-version');
-    if (!el) return;
-
-    var taps = 0;
-    var timer = null;
-    function reset(){
-      taps = 0;
-      if (timer) { clearTimeout(timer); timer = null; }
-    }
-
-    el.addEventListener('click', function(){
-      taps += 1;
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(reset, 1800);
-
-      if (taps >= 7){
-        reset();
-        var next = !__mm_isBetaEnabled();
-        __mm_setBetaEnabled(next);
-        __mm_toast(next ? 'Beta mode: ON' : 'Beta mode: OFF');
-        // Reload to re-render dictionaries list cleanly
-        try { location.reload(); } catch(_){}
-      }
-    }, { passive: true });
-  })();
-
 })();
 /* ========================= Конец файла: app.shell.view.js ========================= */

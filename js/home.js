@@ -2131,6 +2131,10 @@ answers.innerHTML = '';
             // Reverse mode behavior remains unchanged.
             // On "cold" start trainerKind may be uninitialized, so we treat words as "not articles".
             if (!isArticles && !isReverse) {
+              // Auto TTS for examples is controlled by burger pills (mm.tts.examples)
+              let exEnabled = false;
+              try { exEnabled = String(localStorage.getItem('mm.tts.examples') || '') === '1'; } catch(_eTts) { exEnabled = false; }
+              if (exEnabled) {
               const ex = (word && word.examples && word.examples[0] && (word.examples[0].L2 || word.examples[0].de || word.examples[0].en || word.examples[0].text)) || '';
               const exText = String(ex || '').trim();
               if (exText && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') {
@@ -2143,6 +2147,7 @@ answers.innerHTML = '';
                   });
                   return;
                 }
+              }
               }
             }
           } catch (_eExTTS) {}
