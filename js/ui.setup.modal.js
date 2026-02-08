@@ -9,13 +9,6 @@
 (function (root) {
   'use strict';
 
-  // Hidden dictionaries gate (Beta mode). By default hide Serbian (sr) from setup.
-  function __mm_isBetaEnabled(){
-    try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
-  }
-
-
-
   var doc = root.document;
 
   // Ключи StartupManager
@@ -147,7 +140,13 @@
     { code: 'es', flag: '🇪🇸', label: 'Español' }
   ];
 
-  // Определяем, для каких языков реально есть словари (по window.decks)
+  
+
+  function isSrEnabled(){
+    try { return localStorage.getItem('mm_sr') === '1'; } catch(_) { return false; }
+  }
+
+// Определяем, для каких языков реально есть словари (по window.decks)
   function detectAvailableStudyLangCodes() {
     try {
       var decks = (root.decks || window.decks || {});
@@ -175,7 +174,7 @@
   var STUDY_LANGS = (function () {
     var available = detectAvailableStudyLangCodes();
     return STUDY_LANGS_MASTER.filter(function (item) {
-      if (item.code === 'sr' && !__mm_isBetaEnabled()) return false;
+      if (item.code === 'sr' && !isSrEnabled()) return false;
       return available.indexOf(item.code) !== -1;
     });
   })();

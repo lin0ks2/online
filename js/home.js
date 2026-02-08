@@ -984,53 +984,11 @@ function setUiLang(code){
 
   /* ------------------------------ Утилиты выбора ключа ------------------------------ */
 
-  
-  // Hidden dictionaries gate (Beta mode). By default hide: Serbian (sr_*) and LearnPunkt (*_lernpunkt)
-  function __mm_isBetaEnabled(){
-    try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
-  }
-  function __mm_isHiddenDeckKey(k){
-    const key = String(k||'');
-    return /^sr_/i.test(key) || /_lernpunkt$/i.test(key);
-  }
-
-
-  // Legacy migration: if Serbian was already used before gating was introduced,
-  // enable beta automatically so the user doesn't "lose" the language after update.
-  function __mm_hasLegacySrUsage(){
-    try {
-      // 1) Last selected deck key in settings (fast path)
-      const last = (A.settings && A.settings.lastDeckKey) ? String(A.settings.lastDeckKey) : '';
-      if (/^sr_/i.test(last)) return true;
-
-      // 2) localStorage keys (progress/favorites/mistakes/etc.) containing sr_ usage
-      if (typeof localStorage !== 'undefined' && localStorage) {
-        for (let i = 0; i < localStorage.length; i++) {
-          const k = localStorage.key(i) || '';
-          if (/sr_/i.test(k)) return true;
-          // Sometimes deckKey is stored as a value
-          const v = String(localStorage.getItem(k) || '');
-          if (/^sr_/i.test(v)) return true;
-        }
-      }
-    } catch(_){ }
-    return false;
-  }
-
-  (function __mm_maybeEnableBetaForLegacySr(){
-    try{
-      const cur = localStorage.getItem('mm_beta');
-      if (cur === null || cur === undefined || cur === '') {
-        if (__mm_hasLegacySrUsage()) localStorage.setItem('mm_beta', '1');
-      }
-    } catch(_){ }
-  })();
-
-
-function isValidDeckKey(key){
-    try {
+  function isValidDeckKey(key) {
+  // Hidden decks are valid only when enabled
+  if (!isAllowedDeckKey(key)) return false;
+  try {
       if (!key) return false;
-      if (!__mm_isBetaEnabled() && __mm_isHiddenDeckKey(key)) return false;
       if (!A.Decks || typeof A.Decks.resolveDeckByKey !== 'function') return false;
       const arr = A.Decks.resolveDeckByKey(key) || [];
       return Array.isArray(arr) && arr.length > 0;
