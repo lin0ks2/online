@@ -9,6 +9,13 @@
 (function (root) {
   'use strict';
 
+  // Hidden dictionaries gate (Beta mode). By default hide Serbian (sr) from setup.
+  function __mm_isBetaEnabled(){
+    try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
+  }
+
+
+
   var doc = root.document;
 
   // Ключи StartupManager
@@ -168,6 +175,7 @@
   var STUDY_LANGS = (function () {
     var available = detectAvailableStudyLangCodes();
     return STUDY_LANGS_MASTER.filter(function (item) {
+      if (item.code === 'sr' && !__mm_isBetaEnabled()) return false;
       return available.indexOf(item.code) !== -1;
     });
   })();

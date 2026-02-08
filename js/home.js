@@ -994,6 +994,39 @@ function setUiLang(code){
     return /^sr_/i.test(key) || /_lernpunkt$/i.test(key);
   }
 
+
+  // Legacy migration: if Serbian was already used before gating was introduced,
+  // enable beta automatically so the user doesn't "lose" the language after update.
+  function __mm_hasLegacySrUsage(){
+    try {
+      // 1) Last selected deck key in settings (fast path)
+      const last = (A.settings && A.settings.lastDeckKey) ? String(A.settings.lastDeckKey) : '';
+      if (/^sr_/i.test(last)) return true;
+
+      // 2) localStorage keys (progress/favorites/mistakes/etc.) containing sr_ usage
+      if (typeof localStorage !== 'undefined' && localStorage) {
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i) || '';
+          if (/sr_/i.test(k)) return true;
+          // Sometimes deckKey is stored as a value
+          const v = String(localStorage.getItem(k) || '');
+          if (/^sr_/i.test(v)) return true;
+        }
+      }
+    } catch(_){ }
+    return false;
+  }
+
+  (function __mm_maybeEnableBetaForLegacySr(){
+    try{
+      const cur = localStorage.getItem('mm_beta');
+      if (cur === null || cur === undefined || cur === '') {
+        if (__mm_hasLegacySrUsage()) localStorage.setItem('mm_beta', '1');
+      }
+    } catch(_){ }
+  })();
+
+
 function isValidDeckKey(key){
     try {
       if (!key) return false;
