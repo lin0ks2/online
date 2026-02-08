@@ -397,23 +397,24 @@ function speakText(text, force, opts) {
   }
 
   function renderAudioButton() {
-    if (!hasTTS()) return;
+    // Кнопка озвучки должна присутствовать всегда как индикатор.
+    // В некоторых окружениях (iOS/WebView) speechSynthesis может быть недоступен
+    // или появляться не сразу — но индикатор пользователю всё равно нужен.
 
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // В тренере предлогов НЕ добавляем кнопку внутрь .trainer-word,
-    // чтобы ничего не "прилипало" к тексту фразы.
-    var hostEl = wordEl;
-    if (isPrepositionsMode()) {
-      hostEl = document.querySelector('.home-trainer') || wordEl;
+    // ВАЖНО: кнопку держим на уровне карточки (.home-trainer), а не внутри .trainer-word.
+    // Иначе при перерендерах/перезаписи innerHTML в .trainer-word она может пропадать.
+    // Для prepositions-режима это тоже корректно (и визуально предпочтительно).
+    var hostEl = document.querySelector('.home-trainer') || wordEl;
 
-      // если раньше кнопка уже была вставлена в .trainer-word — удаляем
-      try {
-        var oldInside = wordEl.querySelector('.trainer-audio-btn');
-        if (oldInside) oldInside.remove();
-      } catch (e) {}
-    }
+    // если раньше кнопка уже была вставлена внутрь .trainer-word — удаляем
+    // (оставляем только одну «живую» кнопку в хосте)
+    try {
+      var oldInside = wordEl.querySelector('.trainer-audio-btn');
+      if (oldInside && oldInside !== hostEl.querySelector('.trainer-audio-btn')) oldInside.remove();
+    } catch (e) {}
 
     // ищем кнопку в выбранном хосте
     var btn = hostEl.querySelector('.trainer-audio-btn');
@@ -426,6 +427,8 @@ function speakText(text, force, opts) {
       // Клик — ручная озвучка (строго в рамках выбранных пилюль).
       btn.addEventListener('click', function (e) {
         e.preventDefault();
+        // ручной запуск разрешаем только если TTS доступен
+        if (!hasTTS()) return;
         if (!A.isPro || !A.isPro()) return;
 
         var wordsOn = isWordsEnabled();
@@ -550,7 +553,8 @@ function speakText(text, force, opts) {
   }
 
   function init() {
-    if (!hasTTS()) return;
+    // Не выходим из init, даже если TTS недоступен.
+    // Нам нужно поставить наблюдатели и показать индикатор.
 
     // Голоса часто подгружаются асинхронно (особенно на мобильных).
     // Обновляем кэш, чтобы выбор voice по языку работал стабильно.
