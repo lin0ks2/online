@@ -877,3 +877,15 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 .hints-body .hint-example.hint-extra-row + .hint-example.hint-extra-row{
   margin-top: 10px;
 }
+
+
+/* =========================
+   TTS pills (burger sound)
+   ========================= */
+
+.mm-check.mm-check-nolabel span{display:none;}
+.mm-prefs-row.mm-prefs-row-sound{margin-top:8px;}
+.mm-tts-pills{display:flex;justify-content:center;gap:8px;margin:6px 0 2px;flex-wrap:wrap;}
+.mm-tts-pills .mm-pill{font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;border:1px solid rgba(127,127,127,0.35);background:transparent;color:inherit;cursor:pointer;}
+.mm-tts-pills .mm-pill.is-active{background:var(--brand, var(--accent, #1fa8ff));border-color:var(--brand, var(--accent, #1fa8ff));color:#fff;}
+.mm-tts-pills .mm-pill:active{transform:translateY(1px);}
