@@ -984,9 +984,20 @@ function setUiLang(code){
 
   /* ------------------------------ Утилиты выбора ключа ------------------------------ */
 
-  function isValidDeckKey(key){
+  
+  // Hidden dictionaries gate (Beta mode). By default hide: Serbian (sr_*) and LearnPunkt (*_lernpunkt)
+  function __mm_isBetaEnabled(){
+    try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
+  }
+  function __mm_isHiddenDeckKey(k){
+    const key = String(k||'');
+    return /^sr_/i.test(key) || /_lernpunkt$/i.test(key);
+  }
+
+function isValidDeckKey(key){
     try {
       if (!key) return false;
+      if (!__mm_isBetaEnabled() && __mm_isHiddenDeckKey(key)) return false;
       if (!A.Decks || typeof A.Decks.resolveDeckByKey !== 'function') return false;
       const arr = A.Decks.resolveDeckByKey(key) || [];
       return Array.isArray(arr) && arr.length > 0;

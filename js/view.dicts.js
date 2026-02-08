@@ -51,7 +51,17 @@
     if (!app) return;
     const T = t();
 
-    const allKeys = (A.Decks?.builtinKeys?.() || []);
+    // Hidden dictionaries gate (Beta mode). By default hide: Serbian (sr_*) and LearnPunkt (*_lernpunkt)
+    function __mm_isBetaEnabled(){
+      try { return localStorage.getItem('mm_beta') === '1'; } catch(_){ return false; }
+    }
+    function __mm_isHiddenDeckKey(k){
+      const key = String(k||'');
+      return /^sr_/i.test(key) || /_lernpunkt$/i.test(key);
+    }
+
+    const allKeysRaw = (A.Decks?.builtinKeys?.() || []);
+    const allKeys = __mm_isBetaEnabled() ? allKeysRaw : allKeysRaw.filter(k=>!__mm_isHiddenDeckKey(k));
     if (!allKeys.length){
       app.innerHTML = `
         <div class="home home--fixed-card">
