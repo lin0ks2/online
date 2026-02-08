@@ -324,7 +324,8 @@
   })();
 
 
-  // Hidden dictionaries toggle (7 taps on app version): OFF -> SR -> SR+LP -> OFF
+  // Hidden dictionaries toggle (7 taps on app version):
+  // OFF -> SR -> LP -> SR+LP -> OFF
   (function(){
     function getFlag(name){ try { return localStorage.getItem(name) === '1'; } catch(_) { return false; } }
     function setFlag(name,val){ try { localStorage.setItem(name, val ? '1' : '0'); } catch(_) {} }
@@ -332,11 +333,13 @@
     function nextState(){
       var sr = getFlag('mm_sr');
       var lp = getFlag('mm_lp');
-      // OFF
-      if (!sr && !lp) { setFlag('mm_sr', true); setFlag('mm_lp', false); return; }
-      // SR
-      if (sr && !lp)  { setFlag('mm_sr', true); setFlag('mm_lp', true);  return; }
-      // SR+LP
+      // OFF -> SR
+      if (!sr && !lp) { setFlag('mm_sr', true);  setFlag('mm_lp', false); return; }
+      // SR -> LP
+      if (sr && !lp)  { setFlag('mm_sr', false); setFlag('mm_lp', true);  return; }
+      // LP -> SR+LP
+      if (!sr && lp)  { setFlag('mm_sr', true);  setFlag('mm_lp', true);  return; }
+      // SR+LP -> OFF
       setFlag('mm_sr', false); setFlag('mm_lp', false);
     }
 
