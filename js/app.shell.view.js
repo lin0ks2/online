@@ -48,8 +48,32 @@
 
   var showPwaMenuTools = isPwaOrTwaRunmode();
 
-  // В PWA/TWA все "инструменты" (backup/updates/version) должны находиться в той же карточке,
-  // что и блок prefs (концентрация/режим тренировки/звук). Это делает бургер визуально 1:1 как в эталоне.
+  // PWA/TWA: показываем расширенную "карточку" prefs (включая backup/updates/version).
+  // WEB: prefs-карточка скрыта, но инструменты (backup/updates/version) должны оставаться видимыми как раньше.
+
+  // Общие инструменты (markup можно использовать и внутри карточки, и как отдельные пункты в web-версии).
+  var commonToolsHtml = '' +
+    '<div class="menu-item backup-tools">' +
+      '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
+      '<div class="backup-row">' +
+        '<button type="button" class="backup-btn" data-action="export" data-i18n="btnExport">Экспорт</button>' +
+        '<button type="button" class="backup-btn" data-action="import" data-i18n="btnImport">Импорт</button>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="menu-item updates-check">' +
+      '<div class="menu-label" data-i18n="menuUpdates">Обновления</div>' +
+      '<div class="updates-row">' +
+        '<button class="primary-btn" id="btnCheckUpdates" data-i18n="btnCheckUpdates">Проверить обновления</button>' +
+      '</div>' +
+    '</div>' +
+
+    '<div class="menu-item app-version" aria-live="polite">' +
+      '<div class="menu-label" data-i18n="menuAppVersion">Версия приложения</div>' +
+      '<div class="app-version-value" id="appVersion">—</div>' +
+    '</div>';
+
+  // PWA/TWA prefs card (включает общие инструменты внутри карточки)
   var pwaMenuHtml = showPwaMenuTools ? (
     '' +
     '<div class="mm-prefs-wrap">' +
@@ -84,32 +108,12 @@
         '</div>' +
       '</div>' +
 
-      // Backup tools (inside prefs card)
-      '<div class="menu-item backup-tools">' +
-        '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
-        '<div class="backup-row">' +
-          '<button type="button" class="backup-btn" data-action="export" data-i18n="btnExport">Экспорт</button>' +
-          '<button type="button" class="backup-btn" data-action="import" data-i18n="btnImport">Импорт</button>' +
-        '</div>' +
-      '</div>' +
-
-      // Updates (inside prefs card)
-      '<div class="menu-item updates-check">' +
-        '<div class="menu-label" data-i18n="menuUpdates">Обновления</div>' +
-        '<div class="updates-row">' +
-          '<button class="primary-btn" id="btnCheckUpdates" data-i18n="btnCheckUpdates">Проверить обновления</button>' +
-        '</div>' +
-      '</div>' +
-
-      // App version (inside prefs card)
-      '<div class="menu-item app-version" aria-live="polite">' +
-        '<div class="menu-label" data-i18n="menuAppVersion">Версия приложения</div>' +
-        '<div class="app-version-value" id="appVersion">—</div>' +
-      '</div>' +
-
+      commonToolsHtml +
     '</div>'
   ) : '';
 
+  // WEB-only tools (без prefs-карточки)
+  var webMenuToolsHtml = !showPwaMenuTools ? commonToolsHtml : '';
   root.innerHTML =
     '<header class="header">' +
       '<div class="brand">' +
@@ -171,6 +175,8 @@
           '</div>' +
 
           pwaMenuHtml +
+
+          webMenuToolsHtml +
         '</div>' +
 
         '<div class="actions-row-bottom" role="group" aria-label="Быстрые действия">' +
