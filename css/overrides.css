@@ -935,3 +935,61 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 
 .mm-tts-pills .mm-pill:active{transform:translateY(1px);}
 
+
+
+/* === PATCH: prefs card balance (checkbox zone) === */
+.mm-prefs-wrap{
+  background: rgba(0,0,0,0.04);
+  border-radius: 14px;
+  padding: 12px 12px 10px;
+  margin-top: 10px;
+}
+
+/* make items inside card look unified */
+.mm-prefs-wrap .menu-item{
+  background: transparent !important;
+  border: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* labels slightly stronger */
+.mm-prefs-wrap .menu-label,
+.mm-prefs-wrap .mm-prefs-left{
+  opacity: .9;
+}
+
+/* Sound row: keep label + pills on one line */
+.mm-prefs-wrap .mm-prefs-row-sound{
+  display:flex !important;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.mm-prefs-wrap .mm-prefs-row-sound .mm-prefs-left{
+  white-space:nowrap;
+}
+.mm-prefs-wrap .mm-tts-pills{
+  flex-wrap:nowrap !important;
+}
+
+/* Pills: a bit bigger (less tiny), still compact */
+.mm-tts-pills .mm-pill{
+  font-size: 11px;
+  padding: 4px 9px;
+  border-width: 1px;
+}
+
+/* Backup/updates buttons: slightly smaller to balance */
+.mm-prefs-wrap .backup-tools button,
+.mm-prefs-wrap .updates-check button{
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+/* Version inside card: softer */
+.mm-prefs-wrap .app-version{
+  opacity: .7;
+  font-size: 12px;
+}
