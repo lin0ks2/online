@@ -22,9 +22,8 @@
   }
 
   var donateBtnHtml = isTwa
-   var donateBtnHtml = isTwa
-  ? '<button class="action-btn action-btn--stub" type="button" disabled aria-label="🙂">🙂</button>'
-  : '<button class="action-btn" data-action="donate" aria-label="Поддержать проект">💰</button>';
+    ? '<button class="action-btn action-btn--stub" type="button" disabled aria-label="🙂">🙂</button>'
+    : '<button class="action-btn" data-action="donate" aria-label="Поддержать проект">💰</button>';
 
   // Показываем расширенные настройки только в установленном режиме (PWA/TWA).
   // В браузере места меньше, и UX становится хрупким.
@@ -49,39 +48,66 @@
 
   var showPwaMenuTools = isPwaOrTwaRunmode();
 
+  // В PWA/TWA все "инструменты" (backup/updates/version) должны находиться в той же карточке,
+  // что и блок prefs (концентрация/режим тренировки/звук). Это делает бургер визуально 1:1 как в эталоне.
   var pwaMenuHtml = showPwaMenuTools ? (
     '' +
     '<div class="mm-prefs-wrap">' +
-    '<div class="menu-item mm-prefs mm-prefs-focus">' +
-      '<div class="menu-label mm-prefs-title" data-i18n="menuFocus">Концентрация</div>' +
-      '<div class="mm-prefs-grid mm-prefs-grid-2">' +
-        '<label class="mm-check"><input type="checkbox" id="focusSets"><span data-i18n="focusSets">Сеты</span></label>' +
-        '<label class="mm-check"><input type="checkbox" id="focusContext"><span data-i18n="focusContext">Контекст</span></label>' +
+      // Focus
+      '<div class="menu-item mm-prefs mm-prefs-focus">' +
+        '<div class="menu-label mm-prefs-title" data-i18n="menuFocus">Концентрация</div>' +
+        '<div class="mm-prefs-grid mm-prefs-grid-2">' +
+          '<label class="mm-check"><input type="checkbox" id="focusSets"><span data-i18n="focusSets">Сеты</span></label>' +
+          '<label class="mm-check"><input type="checkbox" id="focusContext"><span data-i18n="focusContext">Контекст</span></label>' +
+        '</div>' +
       '</div>' +
-    '</div>' +
 
-    '<div class="menu-item mm-prefs mm-prefs-training">' +
-      '' +
-      '<div class="mm-prefs-grid">' +
-        '<div class="mm-prefs-row">' +
-          '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +
-          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse"><span data-i18n="trainReverse">Обратный</span></label>' +
-        '</div>' +
-        '<div class="mm-prefs-row">' +
-          '<div class="mm-prefs-left" data-i18n="trainAutostepFull">Авто переход по сетам</div>' +
-          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
-        '</div>' +
-        '<div class="mm-prefs-row mm-prefs-row-sound">' +
-          '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
-          '<div class="mm-tts-pills" role="group" aria-label="TTS">' +
-            '<button type="button" class="mm-pill" id="ttsOff" data-tts="off" data-i18n="ttsOff" aria-pressed="true">Выкл</button>' +
-            '<button type="button" class="mm-pill" id="ttsWords" data-tts="words" data-i18n="ttsWords" aria-pressed="false">Слова</button>' +
-            '<button type="button" class="mm-pill" id="ttsExamples" data-tts="examples" data-i18n="ttsExamples" aria-pressed="false">Примеры</button>' +
+      // Training
+      '<div class="menu-item mm-prefs mm-prefs-training">' +
+        '<div class="mm-prefs-grid">' +
+          '<div class="mm-prefs-row">' +
+            '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +
+            '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse"><span data-i18n="trainReverse">Обратный</span></label>' +
+          '</div>' +
+          '<div class="mm-prefs-row">' +
+            '<div class="mm-prefs-left" data-i18n="trainAutostepFull">Авто переход по сетам</div>' +
+            '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
+          '</div>' +
+          '<div class="mm-prefs-row mm-prefs-row-sound">' +
+            '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
+            '<div class="mm-tts-pills" role="group" aria-label="TTS">' +
+              '<button type="button" class="mm-pill" id="ttsOff" data-tts="off" data-i18n="ttsOff" aria-pressed="true">Выкл</button>' +
+              '<button type="button" class="mm-pill" id="ttsWords" data-tts="words" data-i18n="ttsWords" aria-pressed="false">Слова</button>' +
+              '<button type="button" class="mm-pill" id="ttsExamples" data-tts="examples" data-i18n="ttsExamples" aria-pressed="false">Примеры</button>' +
+            '</div>' +
           '</div>' +
         '</div>' +
       '</div>' +
-	    '</div>' +
-	    '</div>'
+
+      // Backup tools (inside prefs card)
+      '<div class="menu-item backup-tools">' +
+        '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
+        '<div class="backup-row">' +
+          '<button type="button" class="backup-btn" data-action="export" data-i18n="btnExport">Экспорт</button>' +
+          '<button type="button" class="backup-btn" data-action="import" data-i18n="btnImport">Импорт</button>' +
+        '</div>' +
+      '</div>' +
+
+      // Updates (inside prefs card)
+      '<div class="menu-item updates-check">' +
+        '<div class="menu-label" data-i18n="menuUpdates">Обновления</div>' +
+        '<div class="updates-row">' +
+          '<button class="primary-btn" id="btnCheckUpdates" data-i18n="btnCheckUpdates">Проверить обновления</button>' +
+        '</div>' +
+      '</div>' +
+
+      // App version (inside prefs card)
+      '<div class="menu-item app-version" aria-live="polite">' +
+        '<div class="menu-label" data-i18n="menuAppVersion">Версия приложения</div>' +
+        '<div class="app-version-value" id="appVersion">—</div>' +
+      '</div>' +
+
+    '</div>'
   ) : '';
 
   root.innerHTML =
@@ -145,26 +171,6 @@
           '</div>' +
 
           pwaMenuHtml +
-
-          '<div class="menu-item backup-tools">' +
-            '<div class="menu-label" data-i18n="menuBackup">Резервное копирование</div>' +
-            '<div class="backup-row">' +
-              '<button type="button" class="backup-btn" data-action="export" data-i18n="btnExport">Экспорт</button>' +
-              '<button type="button" class="backup-btn" data-action="import" data-i18n="btnImport">Импорт</button>' +
-            '</div>' +
-          '</div>' +
-
-          '<div class="menu-item updates-check">' +
-            '<div class="menu-label" data-i18n="menuUpdates">Обновления</div>' +
-            '<div class="updates-row">' +
-              '<button class="primary-btn" id="btnCheckUpdates" data-i18n="btnCheckUpdates">Проверить обновления</button>' +
-            '</div>' +
-          '</div>' +
-
-          '<div class="menu-item app-version" aria-live="polite">' +
-            '<div class="menu-label" data-i18n="menuAppVersion">Версия приложения</div>' +
-            '<div class="app-version-value" id="appVersion">—</div>' +
-          '</div>' +
         '</div>' +
 
         '<div class="actions-row-bottom" role="group" aria-label="Быстрые действия">' +
