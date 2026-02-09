@@ -78,6 +78,13 @@
 
     },
     uk: {
+    trainReverseFull: 'Зворотний переклад',
+    trainAutostepFull: 'Автоперехід по сетах',
+    ttsLabel: 'Звук',
+    ttsOff: 'Вимк',
+    ttsWords: 'Слова',
+    ttsExamples: 'Приклади',
+
       // === auto: donate ===
       donateTitle: "Підтримати проєкт",
       donateLegalNote: "Ваш донат є добровільним і не є оплатою товарів чи послуг.",
