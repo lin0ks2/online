@@ -211,7 +211,6 @@ body.no-scroll {
   position: absolute;
   right: 16px;   /* можно подстроить под вкус: 12–20px */
   bottom: 16px;  /* если нужно выше/ниже — меняем это значение */
-  z-index: 5;    /* чтобы иконка не пряталась под футером/оверлеями */
 }
 
 /* Hover (десктоп) */
@@ -568,8 +567,7 @@ html:not([data-theme="dark"]) .mm-prefs-wrap{
 
   /* compact: no extra top/bottom spacing */
   margin: 0;               /* <-- убрали сверху/снизу */
-  /* единая карточка: внутри живут prefs + backup + updates + version */
-  padding: 10px 12px;
+  padding: 0px 10px;       /* <-- компактнее, чтобы всё влезало */
 }
 
 /* Dark theme: group prefs card (same idea as light, but dark "glass") */
@@ -579,77 +577,7 @@ html[data-theme="dark"] .mm-prefs-wrap{
   border-radius: 10px;
 
   margin: 0;
-  padding: 10px 12px;
-}
-
-/* ==========================================================
-   Burger: make grouped card look like ONE card (reference screenshot)
-   - menu-item blocks inside .mm-prefs-wrap must NOT look like separate cards
-   - remove separators/backgrounds and normalize spacing
-   ========================================================== */
-
-.mm-prefs-wrap .menu-item{
-  background: transparent !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* keep section spacing inside the unified card */
-.mm-prefs-wrap .mm-prefs + .mm-prefs{ margin-top: 10px; }
-.mm-prefs-wrap .backup-tools{ margin-top: 14px; }
-.mm-prefs-wrap .updates-check{ margin-top: 14px; }
-.mm-prefs-wrap .app-version{ margin-top: 14px; }
-
-/* labels inside card */
-.mm-prefs-wrap .menu-label{
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* buttons rows inside card */
-.mm-prefs-wrap .backup-row,
-.mm-prefs-wrap .updates-row{
-  display: flex;
-  gap: 12px;
-}
-
-.mm-prefs-wrap .backup-btn,
-.mm-prefs-wrap .primary-btn{
-  flex: 1;
-}
-
-/* app version value tighter */
-.mm-prefs-wrap .app-version-value{
-  font-size: 20px;
-  font-weight: 600;
-  opacity: .85;
-}
-
-/* Sound pills layout like reference: two pills on first row, "Examples" on second centered */
-.mm-prefs-row.mm-prefs-row-sound{
-  align-items: flex-start;
-}
-.mm-prefs-row.mm-prefs-row-sound .mm-tts-pills{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-start;
-  max-width: 210px;
-}
-.mm-prefs-row.mm-prefs-row-sound .mm-tts-pills .mm-pill{
-  padding: 6px 12px;
-  border-radius: 16px;
-  font-size: 13px;
-  line-height: 1;
-}
-.mm-prefs-row.mm-prefs-row-sound .mm-tts-pills .mm-pill[data-tts="examples"]{
-  flex-basis: 100%;
-  width: 100%;
-  max-width: 120px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0px 10px;  /* сохраняем твою компактность по вертикали */
 }
 
 /* Dark theme: remove separators inside the grouped block (so it looks like one card) */
@@ -956,8 +884,54 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
    ========================= */
 
 .mm-check.mm-check-nolabel span{display:none;}
-.mm-prefs-row.mm-prefs-row-sound{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.mm-tts-pills{display:flex;justify-content:flex-end;gap:6px;margin:0;flex-wrap:nowrap;}
-.mm-tts-pills .mm-pill{font-size:11px;line-height:1;padding:4px 8px;border-radius:999px;border:1px solid rgba(127,127,127,0.35);background:transparent;color:inherit;cursor:pointer;}
-.mm-tts-pills .mm-pill.is-active{background:var(--brand, var(--accent, #1fa8ff));border-color:var(--brand, var(--accent, #1fa8ff));color:#fff;}
+
+/* Sound row: label + pills inline (single line) */
+.mm-prefs-row.mm-prefs-row-sound{
+  display:flex !important;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+/* Keep label from wrapping */
+.mm-prefs-row.mm-prefs-row-sound .mm-prefs-left{
+  white-space:nowrap;
+}
+
+/* Pills: force one line, compact */
+.mm-tts-pills{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:5px;
+  margin:0;
+  padding:0;
+  flex-wrap:nowrap !important;
+  white-space:nowrap;
+}
+
+/* allow the pills group to shrink instead of wrapping */
+.mm-tts-pills{
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.mm-tts-pills .mm-pill{
+  font-size:10px;
+  line-height:1;
+  padding:3px 7px;
+  border-radius:999px;
+  border:1px solid rgba(127,127,127,0.32);
+  background:transparent;
+  color:inherit;
+  cursor:pointer;
+}
+
+.mm-tts-pills .mm-pill.is-active{
+  background:var(--brand, var(--accent, #1fa8ff));
+  border-color:var(--brand, var(--accent, #1fa8ff));
+  color:#fff;
+}
+
 .mm-tts-pills .mm-pill:active{transform:translateY(1px);}
+
