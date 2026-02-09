@@ -211,7 +211,6 @@ body.no-scroll {
   position: absolute;
   right: 16px;   /* можно подстроить под вкус: 12–20px */
   bottom: 16px;  /* если нужно выше/ниже — меняем это значение */
-  z-index: 5;    /* чтобы иконка не пряталась под футером/оверлеями */
 }
 
 /* Hover (десктоп) */
@@ -880,13 +879,34 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
 }
 
 
-/* =========================
-   TTS pills (burger sound)
-   ========================= */
+/* === TTS pills in burger (compact) === */
+.mm-check-nolabel span{ display:none; }
 
-.mm-check.mm-check-nolabel span{display:none;}
-.mm-prefs-row.mm-prefs-row-sound{display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.mm-tts-pills{display:flex;justify-content:flex-end;gap:6px;margin:0;flex-wrap:nowrap;}
-.mm-tts-pills .mm-pill{font-size:11px;line-height:1;padding:4px 8px;border-radius:999px;border:1px solid rgba(127,127,127,0.35);background:transparent;color:inherit;cursor:pointer;}
-.mm-tts-pills .mm-pill.is-active{background:var(--brand, var(--accent, #1fa8ff));border-color:var(--brand, var(--accent, #1fa8ff));color:#fff;}
-.mm-tts-pills .mm-pill:active{transform:translateY(1px);}
+.mm-prefs-row-sound{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.mm-tts-pills{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:6px;
+  flex-wrap:nowrap;
+}
+.mm-tts-pills .mm-pill{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.mm-tts-pills .mm-pill.is-active{
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+  font-weight: 700;
+}
