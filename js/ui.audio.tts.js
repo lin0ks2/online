@@ -19,6 +19,24 @@
   var LS_TTS_EXAMPLES = 'mm.tts.examples';
   var wordObserver = null;
 
+  function isPwaOrTwaRunmode(){
+    try {
+      if (String(location.search||'').indexOf('twa=1') !== -1) return true;
+    } catch(_){}
+    try {
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+    } catch(_){}
+    try {
+      if (typeof window.navigator !== 'undefined' && window.navigator.standalone === true) return true;
+    } catch(_){}
+    try {
+      var rm = String(document.documentElement.getAttribute('data-runmode') || document.documentElement.dataset.runmode || '').toLowerCase();
+      if (rm === 'pwa' || rm === 'twa') return true;
+    } catch(_){}
+    return false;
+  }
+
+
   // включён ли звук (по умолчанию: НЕТ, чтобы не пугать)
   var audioEnabled = loadAudioEnabled();
 
@@ -496,7 +514,13 @@ function speakText(text, force, opts) {
         try {
           var wOn = ttsWordsEnabled();
           var eOn = ttsExamplesEnabled();
-          if (!wOn && !eOn) return;
+          if (!wOn && !eOn) {
+            // WEB: prefs card hidden, user cannot enable sound — show a hint.
+            if (!isPwaOrTwaRunmode()) {
+              try { if (A.Msg && A.Msg.toast) A.Msg.toast('tts.web.install'); } catch(_){}
+            }
+            return;
+          }
           if (wOn) speakText(getCurrentWord(), true);
           if (eOn) {
             var cw = A.__currentWord || null;
