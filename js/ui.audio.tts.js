@@ -5,7 +5,7 @@
  *   - Кнопка рядом со словом
  *   - Автоозвучка при смене слова
  *   - Двойной клик по кнопке — включить/выключить звук (🔊 / 🔇)
- * Версия: 2.4 (TTS pills: words/examples, button is indicator + manual)
+ * Версия: 2.2 (кнопка внутри .trainer-word)
  * Обновлено: 2025-11-23
  * ========================================================== */
 
@@ -15,37 +15,16 @@
   var A = (window.App = window.App || {});
 
   var LS_KEY = 'mm.audioEnabled.v2';
-
-  // New split flags (words/examples) controlled by burger pills
-  var LS_WORDS    = 'mm.tts.words';
+  var LS_WORDS = 'mm.tts.words';
   var LS_EXAMPLES = 'mm.tts.examples';
-
-  function _lsGet(key){
-    try{ return window.localStorage.getItem(key); }catch(e){ return null; }
-  }
-  function isWordsEnabled(){
-    var v=_lsGet(LS_WORDS);
-    if(v==='1') return true;
-    if(v==='0') return false;
-    // backward: old switch controlled word auto-TTS
-    return !!audioEnabled;
-  }
-  function isExamplesEnabled(){
-    var v=_lsGet(LS_EXAMPLES);
-    if(v==='1') return true;
-    if(v==='0') return false;
-    // backward: examples auto-TTS did not exist in v2
-    return false;
-  }
-  function isAnyTtsEnabled(){
-    return isWordsEnabled() || isExamplesEnabled();
-  }
-
-
   var wordObserver = null;
 
-  // включён ли звук (по умолчанию: НЕТ, чтобы не пугать)
-  var audioEnabled = loadAudioEnabled();
+  function _getFlag(key){
+    try { return window.localStorage.getItem(key) === '1'; } catch(e) { return false; }
+  }
+  function isWordsEnabled(){ return _getFlag(LS_WORDS); }
+  function isExamplesEnabled(){ return _getFlag(LS_EXAMPLES); }
+  function isAnyEnabled(){ return isWordsEnabled() || isExamplesEnabled(); }
 
   function isArticlesMode() {
     try { return A.settings && A.settings.trainerKind === 'articles'; } catch (e) { return false; }
@@ -293,14 +272,7 @@
   
 function speakText(text, force, opts) {
     if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
-    if (!force) {
-      var isEx = !!(opts && opts.isExample);
-      if (isEx) {
-        if (!isExamplesEnabled()) return null;
-      } else {
-        if (!isWordsEnabled()) return null;
-      }
-    }
+    if (!force && !audioEnabled) return null; // авто-озвучка зависит от переключателя
     if (!hasTTS()) return null;
 
     try {
@@ -432,7 +404,52 @@ function speakText(text, force, opts) {
     return speakText(w, !!force);
   }
 
-  /* ========================================================== */
+  
+function getCurrentExampleText() {
+  try {
+    var w = A.__currentWord || null;
+    if (!w) return '';
+    var ex = (w.examples && w.examples[0] && (w.examples[0].L2 || w.examples[0].de || w.examples[0].en || w.examples[0].text)) || '';
+    return String(ex || '').trim();
+  } catch(e) { return ''; }
+}
+
+function speakManualByPills() {
+  if (!hasTTS()) return null;
+  if (!A.isPro || !A.isPro()) return null;
+
+  var wordsOn = isWordsEnabled();
+  var exOn    = isExamplesEnabled();
+  if (!wordsOn && !exOn) return null;
+
+  // Слово
+  var p = null;
+  if (wordsOn) {
+    p = speakCurrentWord(true);
+  }
+
+  // Пример (после слова, если оба включены)
+  if (exOn) {
+    var exText = getCurrentExampleText();
+    if (!exText) return p;
+    if (p && typeof p.then === 'function') {
+      return p.then(function(){ return speakText(exText, true, { noVoice:true, isExample:true }); });
+    }
+    return speakText(exText, true, { noVoice:true, isExample:true });
+  }
+
+  return p;
+}
+
+// Обновить иконку во всех видимых кнопках
+function refreshIndicators() {
+  try {
+    var btns = document.querySelectorAll('.trainer-audio-btn');
+    btns.forEach(function(b){ updateButtonIcon(b); });
+  } catch(e) {}
+}
+
+/* ========================================================== */
 
   function updateButtonIcon(btn) {
     if (!btn) return;
@@ -444,11 +461,9 @@ function speakText(text, force, opts) {
       return;
     }
 
-    var on = isAnyTtsEnabled();
-
-    if (on) {
+    if (isAnyEnabled()) {
       btn.textContent = '🔊';
-      btn.setAttribute('aria-label', 'Озвучить');
+      btn.setAttribute('aria-label', 'Озвучка');
     } else {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка выключена');
@@ -461,14 +476,18 @@ function speakText(text, force, opts) {
     var wordEl = document.querySelector('.trainer-word');
     if (!wordEl) return;
 
-    // Attach button to the trainer card (stable node) so it survives re-renders of .trainer-word.
-    var hostEl = document.querySelector('.home-trainer') || wordEl;
+    // В тренере предлогов НЕ добавляем кнопку внутрь .trainer-word,
+    // чтобы ничего не "прилипало" к тексту фразы.
+    var hostEl = wordEl;
+    if (isPrepositionsMode()) {
+      hostEl = document.querySelector('.home-trainer') || wordEl;
 
-    // If a legacy button was inserted inside .trainer-word earlier — remove it to avoid duplicates.
-    try {
-      var oldInside = wordEl.querySelector('.trainer-audio-btn');
-      if (oldInside) oldInside.remove();
-    } catch (e) {}
+      // если раньше кнопка уже была вставлена в .trainer-word — удаляем
+      try {
+        var oldInside = wordEl.querySelector('.trainer-audio-btn');
+        if (oldInside) oldInside.remove();
+      } catch (e) {}
+    }
 
     // ищем кнопку в выбранном хосте
     var btn = hostEl.querySelector('.trainer-audio-btn');
@@ -478,43 +497,15 @@ function speakText(text, force, opts) {
       btn.type = 'button';
       btn.className = 'trainer-audio-btn';
 
-      // одиночный клик — ручная озвучка (строго по пилюлям)
+      // одиночный клик — ручная озвучка (уважает пилюли)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         if (!A.isPro || !A.isPro()) return;
-
-        // OFF: absolute silence
-        if (!isAnyTtsEnabled()) {
-          updateButtonIcon(btn);
-          return;
-        }
-
-        // Word text
-        var w = getCurrentWord();
-
-        // Example text (best-effort)
-        var exText = '';
-        try {
-          var cw = A.__currentWord || null;
-          var ex = (cw && cw.examples && cw.examples[0]) ? cw.examples[0] : null;
-          exText = String((ex && (ex.L2 || ex.de || ex.en || ex.text)) || '').trim();
-        } catch (_eEx) {}
-
-        var doWord = isWordsEnabled();
-        var doEx   = isExamplesEnabled();
-
-        // speak sequence: word -> example
-        if (doWord && w) {
-          var p = speakText(w, false, { isExample: false });
-          if (doEx && exText && p && typeof p.then === 'function') {
-            p.then(function(){ speakText(exText, false, { noVoice: true, isExample: true }); });
-          } else if (doEx && exText) {
-            speakText(exText, false, { noVoice: true, isExample: true });
-          }
-        } else if (doEx && exText) {
-          speakText(exText, false, { noVoice: true, isExample: true });
-        }
-
+        speakManualByPills();
+      });
+        if (!A.isPro || !A.isPro()) return;
+        audioEnabled = !audioEnabled;
+        saveAudioEnabled();
         updateButtonIcon(btn);
       });
 
@@ -538,53 +529,77 @@ function speakText(text, force, opts) {
   }
   /* ========================================================== */
 
-  // Следим за изменением слова/карточки и обновляем кнопку/автоозвучку
-// Важно: .trainer-word может пересоздаваться целиком, поэтому наблюдаем за корнем карточки.
-function setupWordObserver() {
-  // best-effort: всегда дорисуем кнопку при инициализации
-  renderAudioButton();
+  // Следим за изменением .trainer-word и обновляем кнопку/озвучку
+  function setupWordObserver() {
+    var wordEl = document.querySelector('.trainer-word');
 
-  if (typeof MutationObserver === 'undefined') return;
+    if (!wordEl || typeof MutationObserver === 'undefined') {
+      renderAudioButton();
+      return;
+    }
 
-  if (wordObserver) {
-    try { wordObserver.disconnect(); } catch(_e) {}
-    wordObserver = null;
+    if (wordObserver) {
+      wordObserver.disconnect();
+      wordObserver = null;
+    }
+
+    var lastText = wordEl.textContent || '';
+
+    wordObserver = new MutationObserver(function () {
+      var t = wordEl.textContent || '';
+      if (t === lastText) return;
+      lastText = t;
+      renderAudioButton();
+    });
+
+    wordObserver.observe(wordEl, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+
+    // первый рендер
+    renderAudioButton();
   }
 
-  var root = document.querySelector('.home-trainer') || document.querySelector('.trainer') || document.body;
-  if (!root) return;
+  // Глобальный наблюдатель: ждём появления .trainer-word в DOM
+  function setupGlobalObserver() {
+    if (typeof MutationObserver === 'undefined') return;
 
-  var scheduled = false;
-  function scheduleRender(){
-    if (scheduled) return;
-    scheduled = true;
-    setTimeout(function(){
-      scheduled = false;
-      try { renderAudioButton(); } catch(_e) {}
-    }, 0);
+    var obs = new MutationObserver(function (mutations) {
+      var need = false;
+      for (var i = 0; i < mutations.length; i++) {
+        var m = mutations[i];
+        if (!m.addedNodes) continue;
+        for (var j = 0; j < m.addedNodes.length; j++) {
+          var n = m.addedNodes[j];
+          if (n.nodeType !== 1) continue;
+          if (n.matches && n.matches('.trainer-word')) {
+            need = true;
+            break;
+          }
+          if (n.querySelector && n.querySelector('.trainer-word')) {
+            need = true;
+            break;
+          }
+        }
+        if (need) break;
+      }
+      if (need) {
+        setupWordObserver();
+      }
+    });
+
+    obs.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // на случай, если .trainer-word уже есть
+    setupWordObserver();
   }
 
-  wordObserver = new MutationObserver(function(){
-    scheduleRender();
-  });
-
-  wordObserver.observe(root, { childList: true, subtree: true, characterData: true });
-}
-
-// Публичный хелпер: мгновенно обновить индикатор (без ожидания смены слова/кликов)
-function refreshIndicator() {
-  try {
-    var host = document.querySelector('.home-trainer') || document.body || document;
-    var btn = host && host.querySelector ? host.querySelector('.trainer-audio-btn') : null;
-    if (btn) updateButtonIcon(btn);
-  } catch(_e) {}
-}
-
-// expose for burger / other callers
-A.AudioTTS.refreshIndicator = refreshIndicator;
-A.AudioTTS.refresh = function(){ try { renderAudioButton(); } catch(_e) {} };
-
-function init() {
+  function init() {
     if (!hasTTS()) return;
 
     // Голоса часто подгружаются асинхронно (особенно на мобильных).
@@ -617,32 +632,15 @@ function init() {
     };
     A.AudioTTS.setEnabled = function (flag) {
       audioEnabled = !!flag;
-      saveAudioEnabled();
-      var btn = document.querySelector('.trainer-audio-btn');
-      if (btn) updateButtonIcon(btn);
+      // состояние озвучки теперь управляется пилюлями в меню
+      refreshIndicators();
     };
     // Озвучка после верного ответа:
     // - articles trainer: всегда
     // - word trainer: только в режиме обратного перевода (чтобы не было подсказки при показе вопроса)
-      // Immediate UI refresh when user toggles TTS pills in burger
-  // (storage event does not fire in same tab)
-  try {
-    document.addEventListener('click', function(ev){
-      var t = ev && ev.target;
-      if (!t) return;
-      var pill = t.closest ? t.closest('.mm-tts-pills, .mm-tts-pills-inline, .mm-tts-pills-row') : null;
-      if (pill) {
-        setTimeout(function(){
-          try {
-            var b = (document.querySelector('.home-trainer') || document.body || document).querySelector('.trainer-audio-btn');
-            if (b) updateButtonIcon(b);
-          } catch(_e){}
-        }, 0);
-      }
-    }, true);
-  } catch(_eClick){}
+    A.AudioTTS.refreshIndicators = refreshIndicators;
 
-A.AudioTTS.onCorrect = function () {
+    A.AudioTTS.onCorrect = function () {
       if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return;
       if (!A.isPro || !A.isPro()) return;
       if (!isWordsEnabled()) return;

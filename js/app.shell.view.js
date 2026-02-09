@@ -60,23 +60,22 @@
       '</div>' +
     '</div>' +
 
-    '<div class="menu-item mm-prefs mm-prefs-training">' +
-      '' +
-      '<div class="mm-prefs-grid">' +
+    '<div class="menu-item mm-prefs mm-prefs-training">' +      '<div class="mm-prefs-grid">' +
         '<div class="mm-prefs-row">' +
           '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +
-          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse" aria-label="Обратный перевод"><span data-i18n="trainReverse" aria-hidden="true">Обратный</span></label>' +
+          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse"><span data-i18n="trainReverse">Обратный</span></label>' +
         '</div>' +
         '<div class="mm-prefs-row">' +
           '<div class="mm-prefs-left" data-i18n="trainAutostepFull">Авто переход по сетам</div>' +
-          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep" aria-label="Авто переход по сетам"><span data-i18n="trainAuto" aria-hidden="true">Авто</span></label>' +
+          '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
         '</div>' +
         '<div class="mm-prefs-row mm-prefs-row-sound">' +
           '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
-          '<div class="mm-tts-pills" role="group" aria-label="Звук">' +
-          '<button type="button" class="mm-pill" data-tts="off" data-i18n="ttsOff">Выкл</button>' +
-          '<button type="button" class="mm-pill" data-tts="words" data-i18n="ttsWords">Слова</button>' +
-          '<button type="button" class="mm-pill" data-tts="examples" data-i18n="ttsExamples">Примеры</button>' +
+          '<div class="mm-tts-pills" role="group" aria-label="TTS">' +
+            '<button type="button" class="mm-pill" data-tts-pill="off" data-i18n="ttsOff">Выкл</button>' +
+            '<button type="button" class="mm-pill" data-tts-pill="words" data-i18n="ttsWords">Слова</button>' +
+            '<button type="button" class="mm-pill" data-tts-pill="examples" data-i18n="ttsExamples">Примеры</button>' +
+          '</div>' +
         '</div>' +
       '</div>' +
 	    '</div>' +
