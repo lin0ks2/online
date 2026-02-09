@@ -307,6 +307,7 @@
       try {
         elTtsPills.forEach(function(p){
           p.addEventListener('click', function(){
+            var prevAny = !!(sTtsWords || sTtsExamples);
             var kind = p.getAttribute('data-tts');
             if (kind === 'off') {
               sTtsWords = false; sTtsExamples = false;
@@ -318,8 +319,18 @@
             writeBool(LS.ttsWords, sTtsWords);
             writeBool(LS.ttsExamples, sTtsExamples);
             updateTtsPillsUI();
-            // Refresh trainer icon (indicator) if module is present
-            try { if (window.App && App.AudioTTS && typeof App.AudioTTS.refresh === 'function') { App.AudioTTS.refresh(); } } catch(_eR) {}
+            // Prime TTS on first enable (iOS/WebKit may require a user gesture)
+            try {
+              var any2 = !!(sTtsWords || sTtsExamples);
+              if (!prevAny && any2 && window.A && A.AudioTTS && typeof A.AudioTTS.prime === 'function') {
+                A.AudioTTS.prime();
+              }
+            } catch(_eP) {}
+            // Refresh trainer icon (indicator) immediately if module is present
+            try { if (window.A && A.AudioTTS) {
+              if (typeof A.AudioTTS.refreshIndicator === 'function') A.AudioTTS.refreshIndicator();
+              if (typeof A.AudioTTS.refresh === 'function') A.AudioTTS.refresh();
+            } } catch(_eR) {}
           });
         });
       } catch(_eBind) {}
