@@ -14,6 +14,12 @@
   // ------------------------------------------------------------
   window.I18N = {
     ru: {
+    trainReverseFull: 'Обратный перевод',
+    trainAutostepFull: 'Авто переход по сетам',
+    ttsLabel: 'Звук',
+    ttsOff: 'Выкл',
+    ttsWords: 'Слова',
+    ttsExamples: 'Примеры',
       // === auto: donate ===
       donateTitle: "Поддержать проект",
       donateLegalNote: "Ваше пожертвование является добровольным и не является оплатой товаров или услуг.",
@@ -49,12 +55,6 @@
       trainReverse: "Обратный",
       trainSetsNav: "Переход по сетам",
       trainAuto: "Авто",
-      trainReverseFull: "Обратный перевод",
-      trainAutostepFull: "Авто переход по сетам",
-      ttsLabel: "Звук",
-      ttsOff: "Выкл",
-      ttsWords: "Слова",
-      ttsExamples: "Примеры",
       legalTerms: "Условия",
       legalPrivacy: "Конфиденциальность",
       legalImpressum: "Юридическая информация",
@@ -114,12 +114,6 @@
       trainReverse: "Зворотний",
       trainSetsNav: "Перехід по сетах",
       trainAuto: "Авто",
-      trainReverseFull: "Зворотний переклад",
-      trainAutostepFull: "Авто перехід по сетах",
-      ttsLabel: "Звук",
-      ttsOff: "Вимк",
-      ttsWords: "Слова",
-      ttsExamples: "Приклади",
       // === training prefs (PWA/TWA) ===
       menuFocus: "Концентрація",
       focusSets: "Сети",
