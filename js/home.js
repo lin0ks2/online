@@ -2200,7 +2200,9 @@ answers.innerHTML = '';
           } else if (A.Analytics && typeof A.Analytics.trainingPing === 'function') {
             A.Analytics.trainingPing({ reason: 'answer_idk' });
           }
-        // FIX: дневная активность должна считаться и для "Не знаю"
+        } catch (_) {}
+
+                // FIX: дневная активность должна считаться и для "Не знаю"
         try {
           if (A.Stats && typeof A.Stats.bump === 'function') {
             var __lang = null;
