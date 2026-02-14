@@ -17,6 +17,15 @@
     return String(s).toLowerCase() === 'uk' ? 'uk' : 'ru';
   }
 
+  function isSerbianEnabled() {
+    try {
+      return localStorage.getItem('mm_sr') === '1';
+    } catch (_) {
+      return false;
+    }
+  }
+
+
   function t() {
     const uk = getUiLang() === 'uk';
     const i = (A.i18n && A.i18n()) || null;
@@ -127,16 +136,10 @@
   function currentDeckGroup() {
     // Контекст статистики: базовые деки vs LearnPunkt.
     // Используем последний выбранный словарь, чтобы не смешивать прогресс между группами.
-    // Важно: если LearnPunkt скрыт (mm_lp != '1'), принудительно работаем в base-контексте.
     try {
-      var lp = String(localStorage.getItem('mm_lp') || '') === '1';
-      if (!lp) return 'base';
       var k = (A.settings && A.settings.lastDeckKey) || '';
       return isLernpunktKey(k) ? 'lernpunkt' : 'base';
     } catch (_) {
-      return 'base';
-    }
-  } catch (_) {
       return 'base';
     }
   }
@@ -478,12 +481,9 @@ function countLearnedWordsByLang(langCode) {
         return;
       }
       if (!lang) return;
-      // Gate: скрываем SR из статистики, если язык выключен (по умолчанию скрыт).
-      if (lang === 'sr') {
-        var srOn = String(localStorage.getItem('mm_sr') || '') === '1';
-        if (!srOn) return;
-      }
 
+      // Gate: если сербский скрыт в приложении, не показываем его и в статистике
+      if (lang === 'sr' && !isSerbianEnabled()) return;
 
       const words = decksApi.resolveDeckByKey(deckKey) || [];
       if (!words.length) return;
