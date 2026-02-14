@@ -17,15 +17,6 @@
     return String(s).toLowerCase() === 'uk' ? 'uk' : 'ru';
   }
 
-  function isSerbianEnabled() {
-    try {
-      return localStorage.getItem('mm_sr') === '1';
-    } catch (_) {
-      return false;
-    }
-  }
-
-
   function t() {
     const uk = getUiLang() === 'uk';
     const i = (A.i18n && A.i18n()) || null;
@@ -136,10 +127,16 @@
   function currentDeckGroup() {
     // Контекст статистики: базовые деки vs LearnPunkt.
     // Используем последний выбранный словарь, чтобы не смешивать прогресс между группами.
+    // Важно: если LearnPunkt скрыт (mm_lp != '1'), принудительно работаем в base-контексте.
     try {
+      var lp = String(localStorage.getItem('mm_lp') || '') === '1';
+      if (!lp) return 'base';
       var k = (A.settings && A.settings.lastDeckKey) || '';
       return isLernpunktKey(k) ? 'lernpunkt' : 'base';
     } catch (_) {
+      return 'base';
+    }
+  } catch (_) {
       return 'base';
     }
   }
@@ -481,9 +478,12 @@ function countLearnedWordsByLang(langCode) {
         return;
       }
       if (!lang) return;
+      // Gate: скрываем SR из статистики, если язык выключен (по умолчанию скрыт).
+      if (lang === 'sr') {
+        var srOn = String(localStorage.getItem('mm_sr') || '') === '1';
+        if (!srOn) return;
+      }
 
-      // Gate: если сербский скрыт в приложении, не показываем его и в статистике
-      if (lang === 'sr' && !isSerbianEnabled()) return;
 
       const words = decksApi.resolveDeckByKey(deckKey) || [];
       if (!words.length) return;
@@ -768,19 +768,30 @@ function countLearnedWordsByLang(langCode) {
         var title = '';
 
         if (entry) {
-          if (nonZeroCount < 5) {
-            // Мало данных: используем абсолютные пороги, чтобы 1 ответ не выглядел как "максимум"
-            var s = entry.score;
-            if (s >= 30) lvl = 3;
-            else if (s >= 15) lvl = 2;
-            else if (s >= 3) lvl = 1;
-            else lvl = 0;
+          // Активность по "сетам" (условно 1 сет ≈ 30 баллов по score).
+          // Требование: максимум (lvl3) только при 3+ сетах.
+          var s = entry.score;
+
+          // lvl3: 3+ сетов (≈ 90+ баллов) — всегда максимум, независимо от истории пользователя
+          if (s >= 90) {
+            lvl = 3;
           } else {
-            var ratio = entry.score / maxScore;
-            if (ratio >= 0.75) lvl = 3;
-            else if (ratio >= 0.5) lvl = 2;
-            else if (ratio >= 0.25) lvl = 1;
-            else lvl = 0;
+            // До lvl2 считаем мягко (не даём lvl3 при 1 сете даже если это "лучший день").
+            // Для "новых" пользователей оставляем абсолютные пороги; для остальных — относительные,
+            // но с верхним потолком lvl2.
+            if (nonZeroCount < 5) {
+              // абсолютные пороги (все значения в единицах score)
+              if (s >= 30) lvl = 2;        // 1–2 сета
+              else if (s >= 20) lvl = 1;   // < 1 сета, но заметная активность
+              else if (s > 0)  lvl = 1;    // любая активность
+              else lvl = 0;
+            } else {
+              var ratio = s / maxScore;
+              if (ratio >= 0.75) lvl = 2;
+              else if (ratio >= 0.5) lvl = 2;
+              else if (ratio >= 0.25) lvl = 1;
+              else lvl = s > 0 ? 1 : 0;
+            }
           }
 
           var d = entry.data;
