@@ -651,3 +651,22 @@ html[data-theme="dark"] .trainer-desktop-shell,
 @media (max-width: 899px) {
   .sets-desktop-tools { display: none !important; }
 }
+
+
+/* 1.8.2 — real language asset in the desktop set header */
+.trainer-lang-flag{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:22px;
+  line-height:1;
+}
+.trainer-lang-flag img{
+  display:block;
+  width:26px;
+  height:18px;
+  object-fit:cover;
+  border-radius:3px;
+  box-shadow:0 0 0 1px rgba(15,23,42,.12);
+}

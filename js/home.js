@@ -1371,7 +1371,7 @@ function activeDeckKey() {
     <button type="button" class="sets-arrow" id="setsPrev" aria-label="${getUiLang()==='uk' ? 'Попередні набори' : 'Предыдущие сеты'}">‹</button>
     <button type="button" class="sets-arrow" id="setsNext" aria-label="${getUiLang()==='uk' ? 'Наступні набори' : 'Следующие сеты'}">›</button>
   </div>
-  <span class="flag" aria-hidden="true">${flag}</span>
+  <span class="flag trainer-lang-flag" aria-hidden="true"><img src="./img/flags/${(__trainerLearnLang === 'ua' ? 'uk' : __trainerLearnLang)}.svg" alt=""></span>
 </header>
           <div class="sets-viewport" id="setsViewport">
             <div class="sets-grid" id="setsBar"></div>

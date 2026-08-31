@@ -307,3 +307,31 @@ html[data-theme="dark"] .desktop-pages-shell,
   --dbd:#263447;
   --nav:#09121c;
 }
+
+
+/* ==========================================================
+ * 1.8.2 — Match the REAL Home outer width
+ * Home still carries max-width:1180px from its base rule.
+ * Mirror that exact constraint on Trainer and secondary pages.
+ * ========================================================== */
+@media (min-width:900px){
+  .trainer-desktop-shell,
+  .desktop-pages-shell{
+    width:100%!important;
+    max-width:1180px!important;
+  }
+
+  /* Match Home's actual inner grid behavior: the shell owns width,
+     the right pane simply fills the remainder next to the sidebar. */
+  .trainer-desktop-main,
+  .desktop-pages-main{
+    max-width:none!important;
+  }
+}
+
+@media (min-width:1400px){
+  .trainer-desktop-shell,
+  .desktop-pages-shell{
+    max-width:1180px!important;
+  }
+}
