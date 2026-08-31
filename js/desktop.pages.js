@@ -4,9 +4,18 @@
  * ========================================================== */
 (function(){
   'use strict';
-  const A = window.App || (window.App={});
-  const app = document.getElementById('app');
-  if(!app) return;
+
+  function boot(){
+    const A = window.App || (window.App={});
+    const app = document.getElementById('app');
+    if(!app){
+      if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', boot, {once:true});
+      }else{
+        setTimeout(boot, 0);
+      }
+      return;
+    }
 
   const FLAGS = {de:'de',en:'en',sr:'sr',ru:'ru',uk:'uk',ua:'uk',es:'es',fr:'fr'};
   const NAMES = {de:'Deutsch',en:'English',sr:'Srpski',es:'Español',fr:'Français'};
@@ -120,7 +129,7 @@
 
     const k=kind();
     if(!k) return;
-    const home=app.querySelector(':scope > .home');
+    const home=app.querySelector('.home.home--fixed-card:not(.desktop-page-home)');
     if(!home) return;
 
     busy=true;
@@ -143,4 +152,11 @@
   document.addEventListener('lexitron:ui-lang-changed',()=>requestAnimationFrame(upgrade));
   window.addEventListener('resize',()=>requestAnimationFrame(upgrade));
   requestAnimationFrame(upgrade);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot, {once:true});
+  }else{
+    boot();
+  }
 })();

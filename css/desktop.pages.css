@@ -106,3 +106,64 @@ html[data-theme="dark"] .desktop-pages-main .dicts-card.dicts-card--fixed,
 .dark .desktop-pages-main .dicts-card.dicts-card--fixed{background:#121c28}
 html[data-theme="dark"] .desktop-pages-main .dicts-scroll>p:only-child,
 .dark .desktop-pages-main .dicts-scroll>p:only-child{background:#101923;border-color:#263447}
+
+
+/* ==========================================================
+ * 1.8.0 — Unified desktop geometry
+ * One shell width for Home / Trainer / Dicts / Mistakes /
+ * Favorites / Stats. Mobile branches remain untouched.
+ * ========================================================== */
+@media (min-width:900px){
+  :root{
+    --mm-desktop-shell-width:1420px;
+    --mm-desktop-main-width:1180px;
+  }
+
+  .content:has(.dashboard),
+  .content:has(.trainer-desktop-shell),
+  .content:has(.desktop-pages-shell){
+    padding:16px 20px 32px!important;
+  }
+
+  .dashboard,
+  .trainer-desktop-shell,
+  .desktop-pages-shell{
+    width:min(100%,var(--mm-desktop-shell-width))!important;
+    min-height:calc(100vh - 32px)!important;
+    grid-template-columns:224px minmax(0,1fr)!important;
+  }
+
+  .dash-side,
+  .trainer-desktop-shell .trainer-side,
+  .desktop-pages-side{
+    width:224px!important;
+    min-width:224px!important;
+  }
+
+  .dash-main,
+  .trainer-desktop-main,
+  .desktop-pages-main{
+    width:100%!important;
+    max-width:var(--mm-desktop-main-width)!important;
+    margin:0 auto!important;
+    padding:20px 24px 30px!important;
+    box-sizing:border-box!important;
+  }
+}
+
+@media (min-width:1400px){
+  :root{ --mm-desktop-main-width:1200px; }
+
+  .dashboard,
+  .trainer-desktop-shell,
+  .desktop-pages-shell{
+    grid-template-columns:232px minmax(0,1fr)!important;
+  }
+
+  .dash-side,
+  .trainer-desktop-shell .trainer-side,
+  .desktop-pages-side{
+    width:232px!important;
+    min-width:232px!important;
+  }
+}
