@@ -1135,6 +1135,10 @@ function countLearnedWordsByLang(langCode) {
       });
 
       try {
+        requestAnimationFrame(function(){ syncDesktopStatsPageHeight(root); });
+      } catch (_) {}
+
+      try {
         A.settings = A.settings || {};
         A.settings.statsLang = lang;
       } catch (_) {}
@@ -1211,6 +1215,42 @@ function countLearnedWordsByLang(langCode) {
 
   /* ---------------------- Пейджер по трём экранам ---------------------- */
 
+
+  /* ---------------------- desktop equal-height pages ---------------------- */
+
+  function syncDesktopStatsPageHeight(root) {
+    try {
+      if (!root || !window.matchMedia || !window.matchMedia('(min-width:900px)').matches) return;
+
+      const cards = root.querySelectorAll('.stats-lang-card');
+      if (!cards.length) return;
+
+      cards.forEach(function(card){
+        const pages = Array.prototype.slice.call(card.querySelectorAll('.stats-page'));
+        if (!pages.length) return;
+
+        let maxH = 0;
+
+        pages.forEach(function(page){
+          const wasActive = page.classList.contains('is-active');
+
+          page.classList.add('stats-page--measure');
+          if (!wasActive) page.classList.add('stats-page--measure-hidden');
+
+          const h = Math.ceil(Math.max(page.scrollHeight || 0, page.getBoundingClientRect().height || 0));
+          if (h > maxH) maxH = h;
+
+          page.classList.remove('stats-page--measure');
+          page.classList.remove('stats-page--measure-hidden');
+        });
+
+        if (maxH > 0) {
+          card.style.setProperty('--stats-page-fixed-h', maxH + 'px');
+        }
+      });
+    } catch (_) {}
+  }
+
   function setupStatsPager(root) {
     if (!root) return;
 
@@ -1274,6 +1314,10 @@ function countLearnedWordsByLang(langCode) {
           var dIdx = parseInt(dotEl.getAttribute('data-page') || '0', 10) || 0;
           dotEl.classList.toggle('is-active', dIdx === current);
         });
+
+        try {
+          requestAnimationFrame(function(){ syncDesktopStatsPageHeight(root); });
+        } catch (_) {}
       }
 
       dots.forEach(function (dot) {
@@ -1319,6 +1363,29 @@ function countLearnedWordsByLang(langCode) {
     app.innerHTML = html;
     setupLangFlags(app, stats.byLang, activeLang);
     setupStatsPager(app);
+
+    try {
+      requestAnimationFrame(function(){
+        syncDesktopStatsPageHeight(app);
+        setTimeout(function(){ syncDesktopStatsPageHeight(app); }, 80);
+      });
+    } catch (_) {}
+
+    try {
+      if (!A.__statsDesktopResizeBound) {
+        A.__statsDesktopResizeBound = true;
+        let rt = 0;
+        window.addEventListener('resize', function(){
+          clearTimeout(rt);
+          rt = setTimeout(function(){
+            try {
+              const currentApp = document.getElementById('app');
+              if (currentApp) syncDesktopStatsPageHeight(currentApp);
+            } catch (_) {}
+          }, 120);
+        });
+      }
+    } catch (_) {}
   }
 
   A.ViewStats = {

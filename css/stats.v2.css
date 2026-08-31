@@ -459,3 +459,49 @@ html[data-theme="dark"] .desktop-pages-main--stats .stats-page-dot.is-active,
   background:#173252!important;
   border-color:#3978b9!important;
 }
+
+
+/* ==========================================================
+ * 1.8.8 — Equal-height desktop statistics pages
+ * Each language card adopts the height of its tallest tab.
+ * ========================================================== */
+@media (min-width:900px){
+  .desktop-pages-main--stats .stats-lang-card{
+    --stats-page-fixed-h:410px;
+  }
+
+  .desktop-pages-main--stats .stats-pages{
+    position:relative;
+    min-height:var(--stats-page-fixed-h)!important;
+  }
+
+  .desktop-pages-main--stats .stats-page{
+    min-height:var(--stats-page-fixed-h)!important;
+    height:var(--stats-page-fixed-h)!important;
+    box-sizing:border-box!important;
+  }
+
+  .desktop-pages-main--stats .stats-page.is-active{
+    min-height:var(--stats-page-fixed-h)!important;
+    height:var(--stats-page-fixed-h)!important;
+  }
+
+  /* Temporary measurement state: page is rendered off-flow,
+     invisible, and allowed to grow to its natural full height. */
+  .desktop-pages-main--stats .stats-page.stats-page--measure{
+    display:flex!important;
+    position:absolute!important;
+    inset:0 auto auto 0!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+    overflow:visible!important;
+  }
+
+  .desktop-pages-main--stats .stats-page.stats-page--measure-hidden{
+    opacity:0!important;
+  }
+}
