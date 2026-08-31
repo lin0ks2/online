@@ -92,17 +92,17 @@
 
     if (ru) {
       return {
-        title: 'MOYAMOVA — тренажёр слов',
-        subtitle: 'Карточки для изучения языков — работает офлайн.',
+        title: 'Добро пожаловать в MOYAMOVA!',
+        subtitle: 'Тренажёр слов — учите языки эффективно.',
         intro:
-          'Учите и повторяйте иностранные слова по карточкам, отслеживайте прогресс. Без регистрации и интернета.',
+          'Карточки работают полностью офлайн. Учите и повторяйте слова, отслеживайте прогресс — без регистрации и интернета.',
         uiLabel: 'Язык интерфейса',
         studyLabel: 'Язык, который вы хотите изучать',
         levelLabel: 'Режим сложности',
         normalTitle: 'Обычный режим',
         hardTitle: 'Сложный режим',
-        note: 'Все эти настройки можно изменить позже в меню.',
-        start: 'Старт',
+        note: 'Все настройки можно изменить позже в разделе «Настройки».',
+        start: 'Начать обучение',
         langRu: 'Русский',
         langUk: 'Украинский',
         tosLabel: 'Я принимаю условия использования приложения.',
@@ -112,17 +112,17 @@
     }
 
     return {
-      title: 'MOYAMOVA — тренажер слів',
-      subtitle: 'Картки для вивчення мов — працює офлайн.',
+      title: 'Ласкаво просимо до MOYAMOVA!',
+      subtitle: 'Тренажер слів — вивчайте мови ефективно.',
       intro:
-        'Вивчайте й повторюйте іноземні слова за картками та відстежуйте прогрес. Без реєстрації та інтернету.',
+        'Картки працюють повністю офлайн. Вивчайте й повторюйте слова, відстежуйте прогрес — без реєстрації та інтернету.',
       uiLabel: 'Мова інтерфейсу',
       studyLabel: 'Мова, яку ви хочете вивчати',
       levelLabel: 'Режим складності',
       normalTitle: 'Звичайний режим',
       hardTitle: 'Складний режим',
-      note: 'Усі ці налаштування можна змінити пізніше в меню.',
-      start: 'Старт',
+      note: 'Усі налаштування можна змінити пізніше в розділі «Налаштування».',
+      start: 'Почати навчання',
       langRu: 'Російська',
       langUk: 'Українська',
       tosLabel: 'Я приймаю умови використання застосунку.',
@@ -200,19 +200,19 @@
       '      <p class="setup-subtitle" data-setup-subtitle></p>',
       '      <p class="setup-intro" data-setup-intro></p>',
       '    </div>',
-      '    <div class="setup-section">',
-      '      <div class="setup-section__label" data-setup-ui-label></div>',
+      '    <div class="setup-section setup-section--step">',
+      '      <div class="setup-step-meta"><span class="setup-step-num">1</span><span class="setup-step-icon">◎</span><div><div class="setup-section__label" data-setup-ui-label></div><small data-setup-ui-help></small></div></div>',
       '      <div class="setup-mode-toggle setup-mode-toggle--lang" data-setup-ui-flags></div>',
       '    </div>',
-      '    <div class="setup-section">',
-      '      <div class="setup-section__label" data-setup-study-label></div>',
+      '    <div class="setup-section setup-section--step">',
+      '      <div class="setup-step-meta"><span class="setup-step-num">2</span><span class="setup-step-icon">◇</span><div><div class="setup-section__label" data-setup-study-label></div><small data-setup-study-help></small></div></div>',
       '      <div class="setup-flags-row" data-setup-study-flags></div>',
       '    </div>',
-      '    <div class="setup-section">',
-      '      <div class="setup-section__label" data-setup-level-label></div>',
+      '    <div class="setup-section setup-section--step">',
+      '      <div class="setup-step-meta"><span class="setup-step-num">3</span><span class="setup-step-icon">▥</span><div><div class="setup-section__label" data-setup-level-label></div><small data-setup-level-help></small></div></div>',
       '      <div class="setup-mode-toggle" data-setup-level-toggle></div>',
       '    </div>',
-      '    <div class="setup-consent" data-setup-consent></div>',
+      '    <div class="setup-consent setup-consent--step"><div class="setup-step-meta setup-step-meta--consent"><span class="setup-step-num">4</span><span class="setup-step-icon">✓</span><div><div class="setup-section__label" data-setup-consent-title></div></div></div><div data-setup-consent-body></div></div>',
       '    <p class="setup-note" data-setup-note></p>',
       '    <div class="setup-footer">',
       '      <button type="button" class="setup-start-btn" data-setup-start></button>',
@@ -252,12 +252,13 @@
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       btn.setAttribute('aria-label', lang.label);
 
+      var nativeName = lang.code === 'ru' ? 'Русский' : 'Українська';
       btn.innerHTML =
         '<span class="setup-inline-flag" aria-hidden="true"><img src="./img/flags/' +
         (lang.code === 'uk' ? 'uk' : lang.code) +
-        '.svg" alt=""></span><span>' +
+        '.svg" alt=""></span><span class="setup-choice-copy"><strong>' +
         lang.label +
-        '</span>';
+        '</strong><small>' + nativeName + '</small></span>';
 
       btn.addEventListener('click', function () {
         if (state.uiLang === lang.code) return;
@@ -288,10 +289,18 @@
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       btn.setAttribute('aria-label', item.label);
 
+      var localized = item.label;
+      if (state.uiLang === 'uk') {
+        localized = ({de:'Німецька',en:'Англійська',fr:'Французька',sr:'Сербська',es:'Іспанська'})[item.code] || item.label;
+      } else {
+        localized = ({de:'Немецкий',en:'Английский',fr:'Французский',sr:'Сербский',es:'Испанский'})[item.code] || item.label;
+      }
       btn.innerHTML =
         '<span class="setup-flag-btn__flag" aria-hidden="true"><img src="./img/flags/' +
         (item.code === 'uk' ? 'uk' : item.code) +
-        '.svg" alt=""></span>';
+        '.svg" alt=""></span><span class="setup-choice-copy"><strong>' +
+        localized +
+        '</strong><small>' + item.label + '</small></span>';
 
       btn.addEventListener('click', function () {
         if (state.studyLang === item.code) return;
@@ -335,12 +344,15 @@
       btn.setAttribute('data-level', cfg.code);
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
 
+      var desc = cfg.code === 'normal'
+        ? (state.uiLang === 'uk' ? 'Для комфортного навчання' : 'Для комфортного обучения')
+        : (state.uiLang === 'uk' ? 'Для досвідчених учнів' : 'Для опытных учеников');
       btn.innerHTML =
-        '<span aria-hidden="true">' +
+        '<span class="setup-level-icon" aria-hidden="true">' +
         cfg.icon +
-        '</span><span>' +
+        '</span><span class="setup-choice-copy"><strong>' +
         cfg.label +
-        '</span>';
+        '</strong><small>' + desc + '</small></span>';
 
       btn.addEventListener('click', function () {
         if (state.level === cfg.code) return;
@@ -496,8 +508,18 @@
     overlay.querySelector('[data-setup-level-label]').textContent  = msgs.levelLabel;
     overlay.querySelector('[data-setup-note]').textContent         = msgs.note;
 
+    var ukUi = state.uiLang === 'uk';
+    var uiHelp = overlay.querySelector('[data-setup-ui-help]');
+    var studyHelp = overlay.querySelector('[data-setup-study-help]');
+    var levelHelp = overlay.querySelector('[data-setup-level-help]');
+    var consentTitle = overlay.querySelector('[data-setup-consent-title]');
+    if (uiHelp) uiHelp.textContent = ukUi ? 'Оберіть мову інтерфейсу застосунку' : 'Выберите язык интерфейса приложения';
+    if (studyHelp) studyHelp.textContent = ukUi ? 'Оберіть основну мову для навчання' : 'Выберите основной язык для изучения';
+    if (levelHelp) levelHelp.textContent = ukUi ? 'Оберіть комфортний темп навчання' : 'Выберите комфортный режим обучения';
+    if (consentTitle) consentTitle.textContent = ukUi ? 'Налаштування та конфіденційність' : 'Настройки и конфиденциальность';
+
     var startBtn = overlay.querySelector('[data-setup-start]');
-    startBtn.textContent = msgs.start;
+    startBtn.innerHTML = '<span aria-hidden="true">↗</span> ' + msgs.start;
 
     renderUiLangToggle(
       overlay.querySelector('[data-setup-ui-flags]')
@@ -508,7 +530,7 @@
     renderLevelToggle(
       overlay.querySelector('[data-setup-level-toggle]')
     );
-    renderConsents(overlay.querySelector('[data-setup-consent]'));
+    renderConsents(overlay.querySelector('[data-setup-consent-body]'));
     updateStartDisabled();
   }
 
