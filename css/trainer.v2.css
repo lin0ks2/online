@@ -178,3 +178,22 @@ html[data-theme="dark"] .home-trainer--words .answers-grid .answer-btn{
 @media (prefers-reduced-motion: reduce){
   .home-trainer--words .answers-grid .answer-btn{ transition:none; }
 }
+
+
+/* 1.7.1 — keep the secondary “Не знаю” control compact.
+   Answer options remain full-width 1×4. */
+.word-trainer-v2 .idk-btn {
+  width: auto;
+  min-width: 132px;
+  max-width: min(240px, 52%);
+  align-self: center;
+  padding-inline: 22px;
+}
+
+@media (max-width: 720px) {
+  .word-trainer-v2 .idk-btn {
+    min-width: 116px;
+    max-width: 46%;
+    padding-inline: 16px;
+  }
+}
