@@ -1,10 +1,10 @@
 /* ==========================================================
  * Проект: MOYAMOVA
  * Файл: trainer.prepositions.de.js
- * Назначение: Данные для тренера предлогов (DE) — CLEAN v5.1 QA hotfix
- * Статус: точечный фикс (aufs Spiel setzen) + добавлен distractor "aufs"
- * Версия: 5.1
- * Обновлено: 2026-02-07
+ * Назначение: Данные для тренера предлогов (DE) — CLEAN v5 SCALE (60 patterns)
+ * Статус: шаг 5 (масштабирование: 60 паттернов)
+ * Версия: 5.0
+ * Обновлено: 2026-02-06
  * ========================================================== */
 
 (function(){
@@ -16,10 +16,8 @@
     totalPatterns: 60,
     variantsPerPattern: 5,
 
-    // Пул предлогов-отвлекалок (уникальные подписи на кнопках — обязательны)
-    // Точечный фикс: добавлено "aufs" для паттерна "aufs Spiel setzen"
     distractorPool: [
-      'in','auf','aufs','an','unter','über','zwischen','vor','hinter','neben',
+      'in','auf','an','unter','über','zwischen','vor','hinter','neben',
       'zu','nach','von','bei','mit','aus','seit',
       'für','ohne','durch','gegen','um','bis'
     ],
@@ -173,14 +171,13 @@
         "Er macht sich ständig Sorgen ___ seine Gesundheit."
       ], meta:{ type:"nvv", source:"book", anchor:"sich Sorgen machen um" } },
 
-      // ✅ Точечный фикс: "aufs Spiel setzen" (раньше было "___s Spiel" с answer "auf")
-      { id: "de_book_nvv_007_aufs_spiel_setzen_auf", answer: "aufs", items: [
-        "Wir dürfen unsere Zukunft nicht ___ Spiel setzen.",
-        "Er setzt alles ___ Spiel, um zu gewinnen.",
-        "Setz deine Gesundheit nicht ___ Spiel.",
-        "Sie hat ihre Karriere ___ Spiel gesetzt.",
-        "Man sollte nichts ___ Spiel setzen, was wichtig ist."
-      ], meta:{ type:"nvv", source:"book", anchor:"aufs Spiel setzen", hotfix:"v5.1" } },
+      { id: "de_book_nvv_007_aufs_spiel_setzen_auf", answer: "auf", items: [
+        "Wir dürfen unsere Zukunft nicht ___s Spiel setzen.",
+        "Er setzt alles ___s Spiel, um zu gewinnen.",
+        "Setz deine Gesundheit nicht ___s Spiel.",
+        "Sie hat ihre Karriere ___s Spiel gesetzt.",
+        "Man sollte nichts ___s Spiel setzen, was wichtig ist."
+      ], meta:{ type:"nvv", source:"book", anchor:"aufs Spiel setzen" } },
 
       { id: "de_book_nvv_008_zweifel_haben_an", answer: "an", items: [
         "Viele Menschen haben Zweifel ___ dieser Entscheidung.",
@@ -271,9 +268,11 @@
       ], meta:{ type:"nvv", source:"book", anchor:"Abschied nehmen von" } },
 
       /* =========================
-       * SCALE ADD-ON (30 patterns)
+       * SCALE ADD-ON (30 new patterns)
+       * Verb-Prep / Adj-Prep / weitere feste Verbindungen
        * ========================= */
 
+      // warten auf
       { id: "de_scale_001_warten_auf", answer: "auf", items: [
         "Wir warten ___ den Bus.",
         "Ich warte noch ___ deine Antwort.",
@@ -282,6 +281,7 @@
         "Alle warten ___ das Ergebnis."
       ], meta:{ type:"verb_prep", anchor:"warten auf" } },
 
+      // sich freuen auf
       { id: "de_scale_002_freuen_auf", answer: "auf", items: [
         "Ich freue mich ___ das Wochenende.",
         "Sie freut sich ___ den Urlaub.",
@@ -290,6 +290,7 @@
         "Er freut sich ___ den Besuch."
       ], meta:{ type:"verb_prep", anchor:"sich freuen auf" } },
 
+      // sich freuen über
       { id: "de_scale_003_freuen_ueber", answer: "über", items: [
         "Ich freue mich ___ die gute Nachricht.",
         "Sie freut sich ___ das Geschenk.",
@@ -298,6 +299,7 @@
         "Alle freuen sich ___ das Ergebnis."
       ], meta:{ type:"verb_prep", anchor:"sich freuen über" } },
 
+      // sich erinnern an
       { id: "de_scale_004_erinnern_an", answer: "an", items: [
         "Ich erinnere mich ___ seinen Namen.",
         "Sie erinnert sich ___ das Gespräch.",
@@ -306,6 +308,7 @@
         "Erinnerst du dich ___ die Adresse?"
       ], meta:{ type:"verb_prep", anchor:"sich erinnern an" } },
 
+      // denken an
       { id: "de_scale_005_denken_an", answer: "an", items: [
         "Ich denke oft ___ meine Familie.",
         "Denk bitte ___ den Schlüssel.",
@@ -314,6 +317,7 @@
         "Er denkt ___ den nächsten Schritt."
       ], meta:{ type:"verb_prep", anchor:"denken an" } },
 
+      // sprechen über
       { id: "de_scale_006_sprechen_ueber", answer: "über", items: [
         "Wir sprechen ___ das neue Projekt.",
         "Sie spricht ___ ihre Arbeit.",
@@ -322,6 +326,7 @@
         "Alle sprechen ___ diese Entscheidung."
       ], meta:{ type:"verb_prep", anchor:"sprechen über" } },
 
+      // informieren über
       { id: "de_scale_007_informieren_ueber", answer: "über", items: [
         "Bitte informieren Sie mich ___ den Stand.",
         "Wir informieren uns ___ die Regeln.",
@@ -330,6 +335,7 @@
         "Ich möchte mich ___ die Bedingungen informieren."
       ], meta:{ type:"verb_prep", anchor:"informieren über" } },
 
+      // entscheiden für
       { id: "de_scale_008_entscheiden_fuer", answer: "für", items: [
         "Ich entscheide mich ___ die erste Option.",
         "Sie hat sich ___ das Angebot entschieden.",
@@ -338,6 +344,7 @@
         "Hast du dich ___ das Studium entschieden?"
       ], meta:{ type:"verb_prep", anchor:"sich entscheiden für" } },
 
+      // entscheiden gegen
       { id: "de_scale_009_entscheiden_gegen", answer: "gegen", items: [
         "Er entscheidet sich ___ diesen Vorschlag.",
         "Sie hat sich ___ den Umzug entschieden.",
@@ -346,6 +353,7 @@
         "Hast du dich ___ das Angebot entschieden?"
       ], meta:{ type:"verb_prep", anchor:"sich entscheiden gegen" } },
 
+      // sich bewerben um
       { id: "de_scale_010_bewerben_um", answer: "um", items: [
         "Er bewirbt sich ___ eine Stelle.",
         "Sie bewirbt sich ___ ein Praktikum.",
@@ -354,6 +362,7 @@
         "Bewirbst du dich ___ das Stipendium?"
       ], meta:{ type:"verb_prep", anchor:"sich bewerben um" } },
 
+      // bitten um
       { id: "de_scale_011_bitten_um", answer: "um", items: [
         "Ich bitte ___ Hilfe.",
         "Sie bittet ___ Geduld.",
@@ -362,6 +371,7 @@
         "Kann ich ___ einen Rat bitten?"
       ], meta:{ type:"verb_prep", anchor:"bitten um" } },
 
+      // danken für
       { id: "de_scale_012_danken_fuer", answer: "für", items: [
         "Ich danke dir ___ deine Unterstützung.",
         "Wir danken Ihnen ___ die Einladung.",
@@ -370,6 +380,7 @@
         "Danke ___ die Information."
       ], meta:{ type:"verb_prep", anchor:"danken für" } },
 
+      // sich entschuldigen für
       { id: "de_scale_013_entschuldigen_fuer", answer: "für", items: [
         "Ich entschuldige mich ___ die Verspätung.",
         "Sie entschuldigt sich ___ den Fehler.",
@@ -378,6 +389,7 @@
         "Entschuldigen Sie sich bitte ___ die Störung."
       ], meta:{ type:"verb_prep", anchor:"sich entschuldigen für" } },
 
+      // Angst haben vor
       { id: "de_scale_014_angst_vor", answer: "vor", items: [
         "Er hat Angst ___ der Prüfung.",
         "Sie hat Angst ___ Hunden.",
@@ -386,6 +398,7 @@
         "Hast du Angst ___ der Dunkelheit?"
       ], meta:{ type:"adj_prep", anchor:"Angst haben vor" } },
 
+      // warnen vor
       { id: "de_scale_015_warnen_vor", answer: "vor", items: [
         "Die Polizei warnt ___ Betrügern.",
         "Experten warnen ___ zu viel Stress.",
@@ -394,6 +407,7 @@
         "Wir warnen ___ Risiken."
       ], meta:{ type:"verb_prep", anchor:"warnen vor" } },
 
+      // abhängig sein von
       { id: "de_scale_016_abhaengig_von", answer: "von", items: [
         "Das hängt ___ der Situation ab.",
         "Der Preis ist ___ der Saison abhängig.",
@@ -402,6 +416,7 @@
         "Es ist ___ deiner Entscheidung abhängig."
       ], meta:{ type:"adj_prep", anchor:"abhängig von" } },
 
+      // gehören zu
       { id: "de_scale_017_gehoeren_zu", answer: "zu", items: [
         "Das gehört ___ unserem Plan.",
         "Sie gehört ___ dem Team.",
@@ -410,6 +425,7 @@
         "Diese Regeln gehören ___ der Prüfung."
       ], meta:{ type:"verb_prep", anchor:"gehören zu" } },
 
+      // teilnehmen an
       { id: "de_scale_018_teilnehmen_an", answer: "an", items: [
         "Ich nehme ___ dem Kurs teil.",
         "Sie nimmt ___ der Sitzung teil.",
@@ -418,6 +434,7 @@
         "Nimmst du ___ dem Treffen teil?"
       ], meta:{ type:"verb_prep", anchor:"teilnehmen an" } },
 
+      // Interesse haben an
       { id: "de_scale_019_interesse_an", answer: "an", items: [
         "Ich habe Interesse ___ diesem Angebot.",
         "Sie hat Interesse ___ dem Job.",
@@ -426,6 +443,7 @@
         "Hast du Interesse ___ dem Kurs?"
       ], meta:{ type:"adj_prep", anchor:"Interesse an" } },
 
+      // stolz sein auf
       { id: "de_scale_020_stolz_auf", answer: "auf", items: [
         "Sie ist stolz ___ ihre Leistung.",
         "Wir sind stolz ___ unser Team.",
@@ -434,6 +452,7 @@
         "Seid ihr stolz ___ euer Ergebnis?"
       ], meta:{ type:"adj_prep", anchor:"stolz auf" } },
 
+      // bestehen aus
       { id: "de_scale_021_bestehen_aus", answer: "aus", items: [
         "Das Team besteht ___ fünf Personen.",
         "Der Vertrag besteht ___ zwei Teilen.",
@@ -442,6 +461,7 @@
         "Der Kurs besteht ___ mehreren Modulen."
       ], meta:{ type:"verb_prep", anchor:"bestehen aus" } },
 
+      // anfangen mit
       { id: "de_scale_022_anfangen_mit", answer: "mit", items: [
         "Wir fangen ___ dem ersten Teil an.",
         "Fang bitte ___ der Aufgabe an.",
@@ -450,6 +470,7 @@
         "Womit fangen wir an? — ___ dem Plan."
       ], meta:{ type:"verb_prep", anchor:"anfangen mit" } },
 
+      // aufhören mit
       { id: "de_scale_023_aufhoeren_mit", answer: "mit", items: [
         "Er hört ___ dem Rauchen auf.",
         "Sie hat ___ dem Lernen aufgehört.",
@@ -458,6 +479,7 @@
         "Ich will ___ dem Stress aufhören."
       ], meta:{ type:"verb_prep", anchor:"aufhören mit" } },
 
+      // rechnen mit
       { id: "de_scale_024_rechnen_mit", answer: "mit", items: [
         "Rechnen Sie ___ höheren Kosten.",
         "Ich rechne ___ einer Antwort.",
@@ -466,6 +488,7 @@
         "Man muss ___ Problemen rechnen."
       ], meta:{ type:"verb_prep", anchor:"rechnen mit" } },
 
+      // leiden unter
       { id: "de_scale_025_leiden_unter", answer: "unter", items: [
         "Viele Menschen leiden ___ Stress.",
         "Er leidet ___ Rückenschmerzen.",
@@ -474,6 +497,7 @@
         "Das Team leidet ___ Personalmangel."
       ], meta:{ type:"verb_prep", anchor:"leiden unter" } },
 
+      // sich konzentrieren auf
       { id: "de_scale_026_konzentrieren_auf", answer: "auf", items: [
         "Ich konzentriere mich ___ die Aufgabe.",
         "Bitte konzentrieren Sie sich ___ das Wesentliche.",
@@ -482,6 +506,7 @@
         "Er kann sich nicht ___ die Arbeit konzentrieren."
       ], meta:{ type:"verb_prep", anchor:"sich konzentrieren auf" } },
 
+      // sich beschweren über
       { id: "de_scale_027_beschweren_ueber", answer: "über", items: [
         "Er beschwert sich ___ den Lärm.",
         "Sie beschwert sich ___ den Service.",
@@ -490,6 +515,7 @@
         "Beschwerst du dich ___ das Ergebnis?"
       ], meta:{ type:"verb_prep", anchor:"sich beschweren über" } },
 
+      // sich verlassen auf
       { id: "de_scale_028_verlassen_auf", answer: "auf", items: [
         "Du kannst dich ___ mich verlassen.",
         "Wir verlassen uns ___ den Plan.",
@@ -498,6 +524,7 @@
         "Man sollte sich nicht nur ___ Glück verlassen."
       ], meta:{ type:"verb_prep", anchor:"sich verlassen auf" } },
 
+      // sich kümmern um (повтор якоря, но норм как отдельный паттерн)
       { id: "de_scale_029_kuemmern_um", answer: "um", items: [
         "Ich kümmere mich ___ die Rechnung.",
         "Sie kümmert sich ___ ihre Eltern.",
@@ -506,6 +533,7 @@
         "Kümmerst du dich ___ die Termine?"
       ], meta:{ type:"verb_prep", anchor:"sich kümmern um" } },
 
+      // achten auf
       { id: "de_scale_030_achten_auf", answer: "auf", items: [
         "Achte bitte ___ die Aussprache.",
         "Wir achten ___ die Qualität.",

@@ -2,15 +2,15 @@
  * Проект: MOYAMOVA
  * Файл: sw.js
  * Назначение: Service Worker (PWA, офлайн, обновления)
- * Версия SW: 1.3.9
+ * Версия SW: 1.5.1
  * Обновлено: 2026-01-08
  * ========================================================== */
 
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.3.9';
-const CACHE_NAME = 'moyamova-cache-v1.3.9';
+const SW_VERSION = '1.5.1';
+const CACHE_NAME = 'moyamova-cache-v1.5.1';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -64,6 +64,7 @@ const APP_SHELL = [
   'js/ui.legal.modal.js',
   'js/ui.audio.tts.js',
   'js/ui.examples.hints.js',
+  'js/ui.scroll.guard.js',
 
   // Экраны
   'js/view.stats.js',
@@ -85,6 +86,9 @@ const APP_SHELL = [
   'dicts/deck.de.lernpunkt.js',
   'dicts/deck.en.js',
   'dicts/deck.sr.js',
+  'dicts/trainer.prepositions.en.js',
+  'dicts/trainer.prepositions.de.js',
+  'js/prepositions.trainer.logic.js',
 
   // Тренер артиклей (логика/прогресс/избранное/ошибки/статистика)
   'js/articles.card.shell.js',
@@ -287,5 +291,4 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-
 
