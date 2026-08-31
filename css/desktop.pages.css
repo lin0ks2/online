@@ -1,0 +1,108 @@
+/* ==========================================================
+ * MOYAMOVA 1.7.9 — Desktop Dicts / Mistakes / Favorites / Stats
+ * ========================================================== */
+.ui-flag-img,.asset-flag{
+  display:block;width:26px;height:18px;object-fit:cover;border-radius:3px;
+  box-shadow:0 0 0 1px rgba(15,23,42,.10)
+}
+.lang-label .ui-flag-img{width:28px;height:19px}
+.dict-flag .asset-flag{width:25px;height:17px;margin:auto}
+.asset-flag--row{width:26px;height:18px;margin:auto}
+
+@media (min-width:900px){
+  body:has(.desktop-pages-shell){overflow-y:auto!important;overflow-x:hidden}
+  body:has(.desktop-pages-shell) .header{display:none!important}
+  body:has(.desktop-pages-shell) .app-footer{display:none!important}
+
+  .content:has(.desktop-pages-shell){
+    display:block!important;height:auto!important;min-height:100vh;max-width:none!important;
+    overflow:visible!important;padding:12px 18px 28px!important;box-sizing:border-box
+  }
+
+  .desktop-pages-shell{
+    display:grid;grid-template-columns:224px minmax(0,1fr);
+    width:min(100%,1440px);min-height:calc(100vh - 24px);margin:0 auto;
+    background:#f5f8fd;border-radius:20px;overflow:hidden;
+    box-shadow:0 16px 50px rgba(20,40,80,.08)
+  }
+  .desktop-pages-side{
+    width:224px;min-width:224px;min-height:100%;
+    padding:18px 14px 14px;box-sizing:border-box
+  }
+  .desktop-pages-main{
+    min-width:0;width:100%;max-width:1200px;margin:0 auto;
+    padding:18px 24px 30px;box-sizing:border-box
+  }
+  .desktop-pages-main>.home.desktop-page-home{
+    width:100%;max-width:none!important;min-height:0!important;
+    margin:0!important;padding:0!important
+  }
+  .desktop-pages-main .dicts-card.dicts-card--fixed{
+    width:100%;max-width:none;min-height:0;height:auto!important;
+    padding:18px;border-radius:16px;background:#fff;
+    box-shadow:0 4px 18px rgba(20,40,80,.045)
+  }
+  .desktop-pages-main .dicts-header{
+    min-height:46px;margin:0 0 14px;padding:0 2px 13px;
+    display:flex;align-items:center;justify-content:space-between
+  }
+  .desktop-pages-main .dicts-header h3{font-size:22px}
+  .desktop-pages-main .dicts-scroll{
+    min-height:0!important;height:auto!important;max-height:none!important;
+    overflow:visible!important;padding:1px
+  }
+  .desktop-pages-main .dicts-table tbody{
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:11px
+  }
+  .desktop-pages-main .dicts-table tbody tr.dict-row,
+  .desktop-pages-main .dicts-table tbody tr{
+    min-height:68px
+  }
+  .desktop-pages-main .dicts-footer{
+    min-height:0;padding-top:16px;margin-top:4px
+  }
+  .desktop-pages-main .dicts-actions{justify-content:flex-end}
+  .desktop-pages-main .dicts-actions .btn-primary{
+    min-width:170px;min-height:44px;border-radius:11px
+  }
+  .desktop-pages-main .dict-flag{
+    width:42px;height:32px;padding:0;display:inline-flex;align-items:center;justify-content:center
+  }
+
+  /* Stats gets room to breathe instead of the old fixed/mobile viewport. */
+  .desktop-pages-main--stats .stats-lang-list,
+  .desktop-pages-main--stats .stats-lang-card.is-active{
+    height:auto!important;min-height:0!important
+  }
+  .desktop-pages-main--stats .stats-lang-card__body{
+    overflow:visible!important;height:auto!important
+  }
+  .desktop-pages-main--stats .stats-ring-sets{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;
+    align-items:start
+  }
+  .desktop-pages-main--stats .stats-ring-set__circle{max-width:240px}
+  .desktop-pages-main--stats .stats-lang-card__header{
+    padding:10px 8px 12px;margin-bottom:12px
+  }
+
+  /* Empty states should still look intentional inside the large desktop canvas. */
+  .desktop-pages-main .dicts-scroll>p:only-child{
+    min-height:180px;display:flex;align-items:center;justify-content:center;
+    text-align:center;border:1px dashed #dbe4ef;border-radius:14px;background:#f9fbfe
+  }
+}
+@media (min-width:1400px){
+  .desktop-pages-shell{grid-template-columns:232px minmax(0,1fr)}
+  .desktop-pages-side{width:232px;min-width:232px}
+}
+@media (max-width:899px){
+  .desktop-pages-shell,.desktop-pages-main{display:contents}
+  .desktop-pages-shell>.desktop-pages-side{display:none!important}
+}
+
+html[data-theme="dark"] .desktop-pages-shell,.dark .desktop-pages-shell{background:#0d141d}
+html[data-theme="dark"] .desktop-pages-main .dicts-card.dicts-card--fixed,
+.dark .desktop-pages-main .dicts-card.dicts-card--fixed{background:#121c28}
+html[data-theme="dark"] .desktop-pages-main .dicts-scroll>p:only-child,
+.dark .desktop-pages-main .dicts-scroll>p:only-child{background:#101923;border-color:#263447}

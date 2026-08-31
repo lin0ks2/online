@@ -153,12 +153,12 @@
           '<div class="menu-item lang-toggle">' +
             '<div class="menu-label" data-i18n="menuUiLang">Язык интерфейса</div>' +
             '<div class="lang-switch">' +
-              '<span class="lang-label left" role="img" aria-label="Русский">🇷🇺</span>' +
+              '<span class="lang-label left" role="img" aria-label="Русский"><img class="ui-flag-img" src="./img/flags/ru.svg" alt=""></span>' +
               '<label class="switch">' +
                 '<input type="checkbox" id="langToggle" aria-label="Переключить язык интерфейса">' +
                 '<span class="slider"></span>' +
               '</label>' +
-              '<span class="lang-label right" role="img" aria-label="Українська">🇺🇦</span>' +
+              '<span class="lang-label right" role="img" aria-label="Українська"><img class="ui-flag-img" src="./img/flags/uk.svg" alt=""></span>' +
             '</div>' +
           '</div>' +
 
