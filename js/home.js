@@ -1246,7 +1246,9 @@ function activeDeckKey() {
     try {
       if (isPrepositionsModeForKey(activeDeckKey())) return false;
       const el = document.getElementById('trainReverse');
-      return !!(el && el.checked);
+      if (el) return !!el.checked;
+      const v = window.localStorage.getItem('mm.train.reverse');
+      return v === '1' || v === 'true';
     } catch (_) {
       return false;
     }
@@ -1370,6 +1372,30 @@ function activeDeckKey() {
           <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
         </section>
+
+        ${__isWordHome ? `
+        <section class="trainer-quickbar" id="trainerQuickbar" aria-label="${getUiLang()==='uk' ? 'Швидкі налаштування тренування' : 'Быстрые настройки тренировки'}">
+          <button type="button" class="trainer-qbtn" data-trainer-q="auto" aria-pressed="false" title="${getUiLang()==='uk' ? 'Автоперехід між сетами' : 'Автопереход между сетами'}">
+            <span class="trainer-qico qico-auto" aria-hidden="true">↻</span>
+            <span class="trainer-qlabel">Auto</span>
+          </button>
+          <button type="button" class="trainer-qbtn" data-trainer-q="reverse" aria-pressed="false" title="${getUiLang()==='uk' ? 'Зворотний переклад' : 'Обратный перевод'}">
+            <span class="trainer-qico qico-reverse" aria-hidden="true">⇄</span>
+            <span class="trainer-qlabel">Reverse</span>
+          </button>
+          <button type="button" class="trainer-qbtn" data-trainer-q="focus" aria-pressed="false" title="${getUiLang()==='uk' ? 'Режим концентрації' : 'Режим концентрации'}">
+            <span class="trainer-qico qico-focus" aria-hidden="true">◎</span>
+            <span class="trainer-qlabel">Focus</span>
+          </button>
+          <span class="trainer-qsep" aria-hidden="true"></span>
+          <button type="button" class="trainer-qbtn trainer-qbtn--audio" data-trainer-q="ttsExamples" aria-pressed="false" title="${getUiLang()==='uk' ? 'Озвучення прикладів' : 'Озвучка примеров'}">
+            <span class="trainer-qico qico-example" aria-hidden="true">🔊</span>
+          </button>
+          <button type="button" class="trainer-qbtn trainer-qbtn--audio" data-trainer-q="ttsWords" aria-pressed="false" title="${getUiLang()==='uk' ? 'Озвучення слів' : 'Озвучка слов'}">
+            <span class="trainer-qico qico-word" aria-hidden="true">🔊</span>
+          </button>
+        </section>
+        ` : ''}
 
         ${showFilters ? `
         <!-- ЗОНА 4: Фильтры (только PWA/TWA) -->
@@ -1759,6 +1785,99 @@ function activeDeckKey() {
       el.disabled = !!disabled;
     } catch(_){ }
   }
+
+  /* ----------------------- Quick trainer controls ----------------------- */
+  function __qReadBool(key, fallback){
+    try{
+      const v = window.localStorage.getItem(key);
+      if (v === null || v === undefined || v === '') return !!fallback;
+      return v === '1' || v === 'true';
+    }catch(_){ return !!fallback; }
+  }
+  function __qWriteBool(key, val){
+    try{ window.localStorage.setItem(key, val ? '1' : '0'); }catch(_){}
+  }
+  function __qSyncMenuCheckbox(id, checked){
+    try{
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.checked = !!checked;
+    }catch(_){}
+  }
+  function __syncTrainerQuickbar(){
+    try{
+      const bar = document.getElementById('trainerQuickbar');
+      if (!bar) return;
+
+      const auto = __qReadBool('mm.train.autostep', true);
+      const reverse = __qReadBool('mm.train.reverse', false);
+      const hideSets = __qReadBool('mm.focus.hideSets', false);
+      const hideContext = __qReadBool('mm.focus.hideContext', false);
+      const focus = hideSets && hideContext;
+      const ttsWords = __qReadBool('mm.tts.words', false);
+      const ttsExamples = __qReadBool('mm.tts.examples', false);
+
+      const setState = (name, on) => {
+        const b = bar.querySelector('[data-trainer-q="'+name+'"]');
+        if (!b) return;
+        b.classList.toggle('is-active', !!on);
+        b.setAttribute('aria-pressed', String(!!on));
+      };
+      setState('auto', auto);
+      setState('reverse', reverse);
+      setState('focus', focus);
+      setState('ttsWords', ttsWords);
+      setState('ttsExamples', ttsExamples);
+    }catch(_){}
+  }
+  function __applyTrainerQuickControl(name){
+    try{
+      if (name === 'auto'){
+        const next = !__qReadBool('mm.train.autostep', true);
+        __qWriteBool('mm.train.autostep', next);
+        __qSyncMenuCheckbox('trainAutostep', next);
+      } else if (name === 'reverse'){
+        const next = !__qReadBool('mm.train.reverse', false);
+        __qWriteBool('mm.train.reverse', next);
+        __qSyncMenuCheckbox('trainReverse', next);
+        try{ renderTrainer(); }catch(_){}
+      } else if (name === 'focus'){
+        const active = __qReadBool('mm.focus.hideSets', false) && __qReadBool('mm.focus.hideContext', false);
+        const next = !active;
+        __qWriteBool('mm.focus.hideSets', next);
+        __qWriteBool('mm.focus.hideContext', next);
+        try{
+          document.body.classList.toggle('mm-focus-hide-sets', next);
+          document.body.classList.toggle('mm-focus-hide-context', next);
+        }catch(_){}
+        // Burger checkboxes mean “show”, hence the inverse state.
+        __qSyncMenuCheckbox('focusSets', !next);
+        __qSyncMenuCheckbox('focusContext', !next);
+      } else if (name === 'ttsWords' || name === 'ttsExamples'){
+        const key = name === 'ttsWords' ? 'mm.tts.words' : 'mm.tts.examples';
+        const next = !__qReadBool(key, false);
+        __qWriteBool(key, next);
+        try{
+          if (A.AudioTTS && typeof A.AudioTTS.refreshIndicators === 'function') A.AudioTTS.refreshIndicators();
+          else if (A.AudioTTS && typeof A.AudioTTS.refresh === 'function') A.AudioTTS.refresh();
+        }catch(_){}
+      }
+      __syncTrainerQuickbar();
+    }catch(_){}
+  }
+
+  if (!document.documentElement.__mmTrainerQuickbarBound){
+    document.documentElement.__mmTrainerQuickbarBound = true;
+    document.addEventListener('click', function(e){
+      try{
+        const b = e.target && e.target.closest ? e.target.closest('[data-trainer-q]') : null;
+        if (!b) return;
+        e.preventDefault();
+        __applyTrainerQuickControl(String(b.getAttribute('data-trainer-q') || ''));
+      }catch(_){}
+    }, false);
+  }
+
 function renderTrainer() {
     const key   = activeDeckKey();
 
@@ -1913,6 +2032,8 @@ if (wantArticles) {
     const idkBtn  = document.querySelector('.idk-btn');
     const stats   = document.getElementById('dictStats');
     const modeEl  = document.getElementById('trainerModeIndicator');
+
+    try { __syncTrainerQuickbar(); } catch(_){}
 
     if (favBtn) {
       const favNow = isFav(key, word.id);
