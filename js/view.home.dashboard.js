@@ -1,6 +1,6 @@
 /* ==========================================================
  * MOYAMOVA — Home Dashboard
- * Version: 1.7.0
+ * Version: 1.7.2
  * ========================================================== */
 (function(){
   'use strict';
@@ -62,12 +62,30 @@
   }
   function quickMode(mode){
     try {
-      const setToggle=(id,val)=>{ const el=document.getElementById(id); if(el){ el.checked=!!val; try{ el.dispatchEvent(new Event('change',{bubbles:true})); }catch(_){} } };
-      if(mode==='auto'){ localStorage.setItem('mm.train.autostep','1'); setToggle('trainAutostep',true); }
-      if(mode==='reverse'){ localStorage.setItem('mm.train.reverse','1'); setToggle('trainReverse',true); }
+      const setChecked=(id,val)=>{
+        const el=document.getElementById(id);
+        if(el) el.checked=!!val;
+      };
+
+      if(mode==='auto'){
+        localStorage.setItem('mm.train.autostep','1');
+        setChecked('trainAutostep',true);
+      }
+
+      if(mode==='reverse'){
+        localStorage.setItem('mm.train.reverse','1');
+        setChecked('trainReverse',true);
+      }
+
       if(mode==='focus'){
-        localStorage.setItem('mm.focus.hideSets','1'); localStorage.setItem('mm.focus.hideContext','1');
-        setToggle('focusSets',true); setToggle('focusContext',true);
+        // Focus means HIDE both auxiliary blocks.
+        // Burger checkboxes use the inverse semantics: checked = SHOW.
+        localStorage.setItem('mm.focus.hideSets','1');
+        localStorage.setItem('mm.focus.hideContext','1');
+        document.body.classList.add('mm-focus-hide-sets');
+        document.body.classList.add('mm-focus-hide-context');
+        setChecked('focusSets',false);
+        setChecked('focusContext',false);
       }
     } catch(_){}
     startDeck(lastKeyForLang(currentLang()));
