@@ -134,30 +134,57 @@
     });
   });
 
-  // 100vh фикс + портретная заглушка
+  // 100vh fix + orientation guard only for installed mobile PWA/TWA.
+  // Desktop/browser layouts are allowed in landscape.
   (function(){
     function setVhUnit(){
       document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
     }
+
     const mqLandscape = window.matchMedia('(orientation: landscape)');
-    function applyOrientation(){
-      const isLandscape = mqLandscape.matches;
-      document.body.classList.toggle('landscape', isLandscape);
-      const app = document.getElementById('app');
-      if (app) app.setAttribute('aria-hidden', isLandscape ? 'true' : 'false');
+
+    function isInstalledMobileRunmode(){
       try {
-        if (window.App && App.applyI18nTitles) {
+        const isTwa = String(location.search || '').indexOf('twa=1') !== -1;
+        const isStandalone = !!(
+          (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+          (typeof navigator !== 'undefined' && navigator.standalone === true) ||
+          document.documentElement.dataset.runmode === 'pwa' ||
+          document.documentElement.dataset.runmode === 'twa'
+        );
+        const coarse = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+        const narrow = Math.min(window.innerWidth || 9999, window.innerHeight || 9999) < 900;
+        return (isTwa || isStandalone) && coarse && narrow;
+      } catch(_) {
+        return false;
+      }
+    }
+
+    function applyOrientation(){
+      const shouldLock = isInstalledMobileRunmode() && mqLandscape.matches;
+      document.body.classList.toggle('landscape', shouldLock);
+      const app = document.getElementById('app');
+      if (app) app.setAttribute('aria-hidden', shouldLock ? 'true' : 'false');
+      try {
+        if (shouldLock && window.App && App.applyI18nTitles) {
           App.applyI18nTitles(document.querySelector('.rotate-lock'));
         }
       } catch (_) {}
     }
+
     try { mqLandscape.addEventListener('change', applyOrientation); }
     catch(_) { mqLandscape.addListener && mqLandscape.addListener(applyOrientation); }
-    window.addEventListener('resize', setVhUnit);
+
+    window.addEventListener('resize', function(){
+      setVhUnit();
+      applyOrientation();
+    });
+
     window.addEventListener('orientationchange', function(){
       setVhUnit();
       applyOrientation();
     });
+
     setVhUnit();
     applyOrientation();
   })();
