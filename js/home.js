@@ -1335,7 +1335,32 @@ function activeDeckKey() {
     const __isArticlesHome = !!isArticlesModeForKey(key);
     const __isWordHome = !__isPrepsHome && !__isArticlesHome;
 
+    const __trainerLearnLang = (() => {
+      try { return (A.Decks && A.Decks.langOfKey) ? (A.Decks.langOfKey(key) || 'de') : String(key||'de').split('_')[0]; }
+      catch(_) { return 'de'; }
+    })();
+    const __trainerLangName = ({de:'Deutsch',en:'English',sr:'Srpski'})[__trainerLearnLang] || String(__trainerLearnLang||'').toUpperCase();
+    const __navT = getUiLang()==='uk'
+      ? {home:'Головна',trainer:'Тренажер',dicts:'Словники',errors:'Помилки',fav:'Вибране',stats:'Статистика'}
+      : {home:'Главная',trainer:'Тренажёр',dicts:'Словари',errors:'Ошибки',fav:'Избранное',stats:'Статистика'};
+
     app.innerHTML = `
+      ${__isWordHome ? `
+      <div class="trainer-desktop-shell" data-lang="${__trainerLearnLang}">
+        <aside class="dash-side trainer-side">
+          <div class="dash-brand"><img src="./img/logo_64.png" alt=""><div><strong>MOYAMOVA</strong><span>${__trainerLangName}</span></div></div>
+          <nav>
+            <button data-trainer-route="home">⌂ <span>${__navT.home}</span></button>
+            <button class="is-active" data-trainer-route="trainer">▶ <span>${__navT.trainer}</span></button>
+            <button data-trainer-route="dicts">▤ <span>${__navT.dicts}</span></button>
+            <button data-trainer-route="mistakes">△ <span>${__navT.errors}</span></button>
+            <button data-trainer-route="fav">☆ <span>${__navT.fav}</span></button>
+            <button data-trainer-route="stats">▥ <span>${__navT.stats}</span></button>
+          </nav>
+          <div class="dash-side-foot">v${A.APP_VER||'1.7.7'} · Offline <i></i></div>
+        </aside>
+        <main class="trainer-desktop-main">
+      ` : ''}
       <div class="home${__isWordHome ? ' home--word-trainer' : ''}">
         <!-- ЗОНА 1: Сеты -->
         <section class="card home-sets">
@@ -1431,7 +1456,18 @@ function activeDeckKey() {
 
         </div>
         ` : ''}
-      </div>`;
+      </div>
+      ${__isWordHome ? `</main></div>` : ''}`;
+
+    if (__isWordHome) {
+      app.querySelectorAll('[data-trainer-route]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const action = btn.getAttribute('data-trainer-route');
+          if (action && A.Router && typeof A.Router.routeTo === 'function') A.Router.routeTo(action);
+          else if (action && typeof Router !== 'undefined' && Router.routeTo) Router.routeTo(action);
+        });
+      });
+    }
 
     // Инициализация summary после отрисовки (если фильтры показаны)
     try { if (showFilters) updateFiltersSummary(); } catch(_){ }
