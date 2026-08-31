@@ -220,3 +220,172 @@ html[data-theme="dark"] .desktop-pages-main--stats .dicts-flags,
 
 html[data-theme="dark"] .desktop-pages-main--stats .stats-overview__ring:before,
 .dark .desktop-pages-main--stats .stats-overview__ring:before{background:#121c28!important}
+
+
+/* ==========================================================
+ * 1.8.5 — Desktop Stats composition polish
+ * Center ring content and turn the old dot pager into true tabs.
+ * ========================================================== */
+@media (min-width:900px){
+  /* Center the active statistics composition inside the card. */
+  .desktop-pages-main--stats .stats-page{
+    min-height:410px;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    box-sizing:border-box;
+  }
+
+  .desktop-pages-main--stats .stats-page > .stats-ring-sets,
+  .desktop-pages-main--stats .stats-page > .stats-section{
+    width:min(100%,760px)!important;
+    margin:0 auto!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-sets--single{
+    display:block!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set{
+    width:100%;
+    max-width:720px;
+    margin:0 auto;
+    display:grid!important;
+    grid-template-columns:270px minmax(0,1fr)!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:44px!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__circle{
+    width:230px!important;
+    max-width:230px!important;
+    margin:0 auto!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__legend{
+    width:100%;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:9px!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__legend-item{
+    min-height:42px;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:12px!important;
+    padding:9px 12px!important;
+    border:1px solid #edf1f6!important;
+    border-radius:10px!important;
+    background:#f8fafc!important;
+    box-sizing:border-box!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__caption{
+    max-width:75%!important;
+    font-size:13px!important;
+    font-weight:800!important;
+    color:#334155!important;
+  }
+
+  /* Analytics page should use available width naturally instead of forced centering. */
+  .desktop-pages-main--stats .stats-page--analytics{
+    align-items:flex-start!important;
+  }
+  .desktop-pages-main--stats .stats-page--analytics > .stats-section{
+    width:100%!important;
+    max-width:none!important;
+  }
+
+  /* Real desktop tabs: hide any legacy dot visuals completely. */
+  .desktop-pages-main--stats .stats-pages-dots{
+    display:flex!important;
+    align-items:center!important;
+    gap:6px!important;
+    padding:6px!important;
+    border:1px solid #e4eaf3!important;
+    border-radius:12px!important;
+    background:#fff!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot{
+    appearance:none!important;
+    -webkit-appearance:none!important;
+    position:relative!important;
+    width:auto!important;
+    height:36px!important;
+    min-width:100px!important;
+    margin:0!important;
+    padding:0 14px!important;
+    border:1px solid transparent!important;
+    border-radius:9px!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    opacity:1!important;
+    font-size:0!important;
+    cursor:pointer!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot::before{
+    content:none!important;
+    display:none!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot::after{
+    content:attr(data-label)!important;
+    position:static!important;
+    display:block!important;
+    width:auto!important;
+    height:auto!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:#6d7788!important;
+    font:800 11px/34px system-ui,-apple-system,"Segoe UI",sans-serif!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot:hover{
+    background:#f6f9fd!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot.is-active{
+    border-color:#cfe3ff!important;
+    background:#edf5ff!important;
+    box-shadow:0 1px 4px rgba(23,105,232,.08)!important;
+  }
+
+  .desktop-pages-main--stats .stats-page-dot.is-active::after{
+    color:#1769e8!important;
+  }
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-ring-set__legend-item,
+.dark .desktop-pages-main--stats .stats-ring-set__legend-item{
+  background:#162231!important;
+  border-color:#263447!important;
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-ring-set__caption,
+.dark .desktop-pages-main--stats .stats-ring-set__caption{
+  color:#dce7f5!important;
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-pages-dots,
+.dark .desktop-pages-main--stats .stats-pages-dots{
+  background:#121c28!important;
+  border-color:#263447!important;
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-page-dot:hover,
+.dark .desktop-pages-main--stats .stats-page-dot:hover{
+  background:#162231!important;
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-page-dot.is-active,
+.dark .desktop-pages-main--stats .stats-page-dot.is-active{
+  background:#173252!important;
+  border-color:#245e9b!important;
+}
