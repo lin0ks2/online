@@ -1366,6 +1366,11 @@ function activeDeckKey() {
         <section class="card home-sets">
           <header class="sets-header">
   <h2 class="sets-title">${title}</h2>
+  <div class="sets-desktop-tools" aria-label="${getUiLang()==='uk' ? 'Навігація по наборах' : 'Навигация по сетам'}">
+    <span class="sets-desktop-stats" id="desktopSetStats"></span>
+    <button type="button" class="sets-arrow" id="setsPrev" aria-label="${getUiLang()==='uk' ? 'Попередні набори' : 'Предыдущие сеты'}">‹</button>
+    <button type="button" class="sets-arrow" id="setsNext" aria-label="${getUiLang()==='uk' ? 'Наступні набори' : 'Следующие сеты'}">›</button>
+  </div>
   <span class="flag" aria-hidden="true">${flag}</span>
 </header>
           <div class="sets-viewport" id="setsViewport">
@@ -1463,8 +1468,9 @@ function activeDeckKey() {
       app.querySelectorAll('[data-trainer-route]').forEach(btn => {
         btn.addEventListener('click', () => {
           const action = btn.getAttribute('data-trainer-route');
-          if (action && A.Router && typeof A.Router.routeTo === 'function') A.Router.routeTo(action);
-          else if (action && typeof Router !== 'undefined' && Router.routeTo) Router.routeTo(action);
+          // Use this module's live Router directly. A.Router may still point to an
+          // older shell router created before Home was initialised.
+          if (action) Router.routeTo(action);
         });
       });
     }
@@ -1510,7 +1516,8 @@ function activeDeckKey() {
 
       const btn = document.createElement('button');
       btn.className = 'set-pill' + (i === activeIdx ? ' is-active' : '') + (done ? ' is-done' : '');
-      btn.textContent = i + 1;
+      const desktopSets = !!(window.matchMedia && window.matchMedia('(min-width: 900px)').matches);
+      btn.textContent = desktopSets ? `${getUiLang()==='uk' ? 'Набір' : 'Сет'} ${i + 1}` : String(i + 1);
       btn.onclick = () => {
         try {
           if (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.setSetIndex === 'function') {
@@ -1529,6 +1536,34 @@ function activeDeckKey() {
       };
       grid.appendChild(btn);
     }
+
+    // Desktop: one-line set strip. Arrows scroll the strip without changing
+    // the active set; the active set is brought into view after re-render.
+    try {
+      const viewport = document.getElementById('setsViewport');
+      const prevBtn = document.getElementById('setsPrev');
+      const nextBtn = document.getElementById('setsNext');
+      const isDesktopSets = !!(window.matchMedia && window.matchMedia('(min-width: 900px)').matches);
+      if (viewport && isDesktopSets) {
+        const updateArrows = () => {
+          const max = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+          if (prevBtn) prevBtn.disabled = viewport.scrollLeft <= 2;
+          if (nextBtn) nextBtn.disabled = viewport.scrollLeft >= max - 2;
+        };
+        const step = () => Math.max(260, Math.round(viewport.clientWidth * .72));
+        if (prevBtn) prevBtn.onclick = () => viewport.scrollBy({left:-step(), behavior:'smooth'});
+        if (nextBtn) nextBtn.onclick = () => viewport.scrollBy({left: step(), behavior:'smooth'});
+        viewport.onscroll = updateArrows;
+        requestAnimationFrame(() => {
+          const active = grid.querySelector('.set-pill.is-active');
+          if (active) {
+            const want = active.offsetLeft - Math.max(0, (viewport.clientWidth - active.offsetWidth) / 2);
+            viewport.scrollLeft = Math.max(0, want);
+          }
+          updateArrows();
+        });
+      }
+    } catch(_){}
 
     const i = (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
       ? Number(A.ArticlesTrainer.getSetIndex(key) || 0)
@@ -1555,6 +1590,10 @@ function activeDeckKey() {
           ? `${isPrepositionsModeForKey(key) ? 'Патернів' : 'Слів'} у наборі: ${words.length} / Вивчено: ${learned}`
           : `${isPrepositionsModeForKey(key) ? 'Паттернов' : 'Слов'} в наборе: ${words.length} / Выучено: ${learned}`;
       }
+      try {
+        const desktopStats = document.getElementById('desktopSetStats');
+        if (desktopStats) desktopStats.textContent = statsEl.textContent || '';
+      } catch(_){}
     }
   }
 
