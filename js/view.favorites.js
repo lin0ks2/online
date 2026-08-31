@@ -380,7 +380,7 @@ if (del){
         A.Trainer.setDeckKey(key);
       }
       if (A.Router && typeof A.Router.routeTo === 'function'){
-        A.Router.routeTo('home');
+        A.Router.routeTo('trainer');
       } else if (A.UI && typeof A.UI.goHome === 'function'){
         A.UI.goHome();
       } else {

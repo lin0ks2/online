@@ -289,7 +289,7 @@
               if (typeof A.saveSettings === 'function') A.saveSettings(A.settings);
             } catch(_){ }
             try { document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: key } })); } catch(_){ }
-            try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){ }
+            try { A.Router && A.Router.routeTo && A.Router.routeTo('trainer'); } catch(_){ }
             return;
           }
 
@@ -333,7 +333,7 @@
           } catch(_){ }
           try { document.dispatchEvent(new CustomEvent('lexitron:deck-selected', { detail:{ key: key } })); } catch(_){ }
           try { A.Trainer && A.Trainer.setDeckKey && A.Trainer.setDeckKey(key); } catch(_){ }
-          try { A.Router && A.Router.routeTo && A.Router.routeTo('home'); } catch(_){ }
+          try { A.Router && A.Router.routeTo && A.Router.routeTo('trainer'); } catch(_){ }
         };
       }
     }

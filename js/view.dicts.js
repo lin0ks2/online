@@ -125,8 +125,8 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
       // выставим активную кнопку сразу
       setFooterActive('home');
       try {
-        if (window.Router && typeof Router.routeTo === 'function') { Router.routeTo('home'); return; }
-        if (A.Router && typeof A.Router.routeTo === 'function')      { A.Router.routeTo('home'); return; }
+        if (window.Router && typeof Router.routeTo === 'function') { Router.routeTo('trainer'); return; }
+        if (A.Router && typeof A.Router.routeTo === 'function')      { A.Router.routeTo('trainer'); return; }
       } catch(_){}
       const homeBtn = document.querySelector('footer .nav-btn[data-action="home"]');
       if (homeBtn) { homeBtn.click(); return; }

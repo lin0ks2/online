@@ -2300,7 +2300,7 @@ answers.innerHTML = '';
       // iOS PWA/TWA: prevent rubber-band overscroll on HOME (native-like behavior).
       // Keep other screens scrollable (dicts, favorites, etc.).
       try {
-        const wantLock = __isStandaloneRunmode() && String(action || 'home') === 'home';
+        const wantLock = __isStandaloneRunmode() && String(action || 'home') === 'trainer';
         setHomeRubberBandLock(wantLock);
       } catch(_){ }
 
@@ -2318,7 +2318,7 @@ answers.innerHTML = '';
       } catch(_){ }
 
       // аналитика: если уходим с главного экрана — завершаем тренировку
-      if (prev === 'home' && action !== 'home') {
+      if (prev === 'trainer' && action !== 'trainer') {
         try {
           if (A.Analytics && typeof A.Analytics.trainingEnd === 'function') {
             A.Analytics.trainingEnd({ reason: 'route_change:' + action });
@@ -2327,35 +2327,25 @@ answers.innerHTML = '';
       }
 
       if (action === 'home') {
+        if (A.HomeDashboard && typeof A.HomeDashboard.mount === 'function') A.HomeDashboard.mount();
+        else { mountMarkup(); renderSets(); renderTrainer(); }
+        return;
+      }
+      if (action === 'trainer') {
         mountMarkup();
         renderSets();
         renderTrainer();
         const hb = document.getElementById('hintsBody');
         if (hb) hb.textContent = ' ';
-
-        // аналитика: старт тренировки
         try {
           if (A.Analytics && typeof A.Analytics.trainingStart === 'function') {
             const learnLang = getCurrentLearnLang();
             const uiLang = getCurrentUiLang();
-
             let deckKey = null;
-            try {
-              if (A.Trainer && typeof A.Trainer.getDeckKey === 'function') {
-                deckKey = A.Trainer.getDeckKey();
-              } else if (A.settings && A.settings.lastDeckKey) {
-                deckKey = A.settings.lastDeckKey;
-              }
-            } catch (_){}
-
-            A.Analytics.trainingStart({
-              learnLang: learnLang,
-              uiLang: uiLang,
-              deckKey: deckKey
-            });
+            try { deckKey = (A.Trainer && A.Trainer.getDeckKey && A.Trainer.getDeckKey()) || (A.settings && A.settings.lastDeckKey) || null; } catch (_){}
+            A.Analytics.trainingStart({ learnLang, uiLang, deckKey });
           }
         } catch(_){}
-
         return;
       }
       if (action === 'dicts') { A.ViewDicts && A.ViewDicts.mount && A.ViewDicts.mount(); return; }
