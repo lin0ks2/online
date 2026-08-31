@@ -49,6 +49,21 @@
       }
     }
 
+    function syncDesktopNavLabels(shell){
+      if(!shell) return;
+      const T=uk()
+        ? {home:'Головна',trainer:'Тренажер',dicts:'Словники',mistakes:'Помилки',fav:'Обране',stats:'Статистика',settings:'Налаштування'}
+        : {home:'Главная',trainer:'Тренажёр',dicts:'Словари',mistakes:'Ошибки',fav:'Избранное',stats:'Статистика',settings:'Настройки'};
+      const map={home:T.home,trainer:T.trainer,dicts:T.dicts,mistakes:T.mistakes,fav:T.fav,stats:T.stats};
+      shell.querySelectorAll('[data-trainer-route],[data-desktop-route]').forEach(btn=>{
+        const key=btn.getAttribute('data-trainer-route')||btn.getAttribute('data-desktop-route');
+        const span=btn.querySelector('span');
+        if(span && map[key]) span.textContent=map[key];
+      });
+      const sb=shell.querySelector('[data-desktop-settings] span');
+      if(sb) sb.textContent=T.settings;
+    }
+
     function renderSettings(shell){
       if(settingsBusy) return;
       const main=mainOf(shell);
@@ -144,24 +159,34 @@
       main.querySelectorAll('[data-lang-value]').forEach(btn=>{
         btn.onclick=()=>{
           const val=btn.dataset.langValue;
+          const before=String((A.settings&&(A.settings.uiLang||A.settings.lang))||document.documentElement.dataset.lang||'ru').toLowerCase();
+          if(before===val) return;
+
           settingsOpen=true;
-          // Canonical home.js semantics: checked = UK, unchecked = RU.
-          const el=document.getElementById('langToggle');
-          if(el){
-            el.checked=(val==='uk');
-            el.dispatchEvent(new Event('change',{bubbles:true}));
-          }else{
-            document.documentElement.dataset.lang=val;
-            document.documentElement.setAttribute('lang',val);
-            try{
-              A.settings=A.settings||{};
-              A.settings.lang=val; A.settings.uiLang=val;
-              if(A.saveSettings) A.saveSettings(A.settings);
-            }catch(_){}
-            try{ document.dispatchEvent(new Event('lexitron:ui-lang-changed')); }catch(_){}
-          }
-          // Mutation observer reopens Settings after the canonical route rerender.
-          setTimeout(()=>inject(),0);
+
+          // Desktop: change language IN PLACE. Do not trigger home.js langToggle,
+          // because its canonical mobile handler reroutes the current screen and
+          // caused visible shaking + expensive full-page rebuilds.
+          try{
+            A.settings=A.settings||{};
+            A.settings.lang=val;
+            A.settings.uiLang=val;
+            if(A.saveSettings) A.saveSettings(A.settings);
+          }catch(_){}
+
+          document.documentElement.dataset.lang=val;
+          document.documentElement.setAttribute('lang',val);
+
+          // Keep the hidden/mobile control synchronized WITHOUT firing its route handler.
+          const legacy=document.getElementById('langToggle');
+          if(legacy) legacy.checked=(val==='uk');
+
+          // Update only the desktop shell + settings card.
+          syncDesktopNavLabels(shell);
+          try{ if(A.applyI18nTitles) A.applyI18nTitles(document); }catch(_){}
+          try{ document.dispatchEvent(new CustomEvent('lexitron:ui-lang-changed',{detail:{lang:val,desktop:true}})); }catch(_){}
+
+          renderSettings(shell);
         };
       });
 
@@ -259,10 +284,21 @@
       if(b && !b.hasAttribute('data-desktop-settings')) settingsOpen=false;
     },true);
 
-    const mo=new MutationObserver(()=>requestAnimationFrame(inject));
-    mo.observe(app,{childList:true,subtree:true});
-    window.addEventListener('resize',inject);
-    document.addEventListener('lexitron:ui-lang-changed',()=>requestAnimationFrame(inject));
+    let injectRaf=0;
+    function scheduleInject(){
+      if(injectRaf) return;
+      injectRaf=requestAnimationFrame(()=>{
+        injectRaf=0;
+        inject();
+      });
+    }
+
+    // Route changes replace app-level children. Watching the entire subtree was
+    // unnecessarily expensive because trainer/stats mutate many descendants.
+    const mo=new MutationObserver(scheduleInject);
+    mo.observe(app,{childList:true,subtree:false});
+    window.addEventListener('resize',scheduleInject);
+    document.addEventListener('lexitron:ui-lang-changed',()=>{ if(!settingsOpen) requestAnimationFrame(inject); });
     requestAnimationFrame(inject);
   }
 
