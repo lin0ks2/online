@@ -196,6 +196,10 @@
       '<div class="setup-modal">',
       '  <div class="setup-modal__inner">',
       '    <div class="setup-header">',
+      '      <div class="setup-brand">',
+      '        <img class="setup-brand__logo" data-setup-brand-logo src="./img/setup-logo-ru.png" alt="">',
+      '        <div class="setup-brand__copy"><strong>MOYAMOVA</strong><span>TRAINING</span></div>',
+      '      </div>',
       '      <h2 class="setup-title" data-setup-title></h2>',
       '      <p class="setup-subtitle" data-setup-subtitle></p>',
       '      <p class="setup-intro" data-setup-intro></p>',
@@ -499,6 +503,14 @@
   function renderAll() {
     var overlay = createOverlayIfNeeded();
     var msgs = t();
+
+    var brandLogo = overlay.querySelector('[data-setup-brand-logo]');
+    if (brandLogo) {
+      brandLogo.src = state.uiLang === 'uk' ? './img/setup-logo-uk.png' : './img/setup-logo-ru.png';
+      brandLogo.alt = state.uiLang === 'uk'
+        ? 'MOYAMOVA Deutsch — українська версія'
+        : 'MOYAMOVA Deutsch — русская версия';
+    }
 
     overlay.querySelector('[data-setup-title]').textContent    = msgs.title;
     overlay.querySelector('[data-setup-subtitle]').textContent = msgs.subtitle;
