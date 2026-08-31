@@ -2,15 +2,15 @@
  * Проект: MOYAMOVA
  * Файл: sw.js
  * Назначение: Service Worker (PWA, офлайн, обновления)
- * Версия SW: 1.5.1
+ * Версия SW: 1.5.2
  * Обновлено: 2026-01-08
  * ========================================================== */
 
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.5.1';
-const CACHE_NAME = 'moyamova-cache-v1.5.1';
+const SW_VERSION = '1.5.2';
+const CACHE_NAME = 'moyamova-cache-v1.5.2';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -81,11 +81,45 @@ const APP_SHELL = [
   'js/ga.consent.js',
   'js/analytics.js',
   'js/legal.js',
-  // Словари (деки) – обязательно для первого офлайн-запуска
-  'dicts/deck.de.js',
-  'dicts/deck.de.lernpunkt.js',
-  'dicts/deck.en.js',
-  'dicts/deck.sr.js',
+  // JSON data layer + словари – обязательно для первого офлайн-запуска
+  'js/deck.loader.js',
+  'dicts/decks.manifest.json',
+  'dicts/data/de/nouns.json',
+  'dicts/data/de/verbs.json',
+  'dicts/data/de/adjectives.json',
+  'dicts/data/de/adverbs.json',
+  'dicts/data/de/prepositions.json',
+  'dicts/data/de/conjunctions.json',
+  'dicts/data/de/particles.json',
+  'dicts/data/de/pronouns.json',
+  'dicts/data/de/numbers.json',
+  'dicts/data/en/nouns.json',
+  'dicts/data/en/adjectives.json',
+  'dicts/data/en/verbs.json',
+  'dicts/data/en/adverbs.json',
+  'dicts/data/en/pronouns.json',
+  'dicts/data/en/prepositions.json',
+  'dicts/data/en/conjunctions.json',
+  'dicts/data/en/particles.json',
+  'dicts/data/en/numbers.json',
+  'dicts/data/de/nouns.lernpunkt.json',
+  'dicts/data/de/verbs.lernpunkt.json',
+  'dicts/data/de/adjectives.lernpunkt.json',
+  'dicts/data/de/adverbs.lernpunkt.json',
+  'dicts/data/de/pronouns.lernpunkt.json',
+  'dicts/data/de/prepositions.lernpunkt.json',
+  'dicts/data/de/numbers.lernpunkt.json',
+  'dicts/data/de/conjunctions.lernpunkt.json',
+  'dicts/data/de/particles.lernpunkt.json',
+  'dicts/data/sr/verbs.json',
+  'dicts/data/sr/nouns.json',
+  'dicts/data/sr/adverbs.json',
+  'dicts/data/sr/adjectives.json',
+  'dicts/data/sr/prepositions.json',
+  'dicts/data/sr/pronouns.json',
+  'dicts/data/sr/numbers.json',
+  'dicts/data/sr/conjunctions.json',
+  'dicts/data/sr/particles.json',
   'dicts/trainer.prepositions.en.js',
   'dicts/trainer.prepositions.de.js',
   'js/prepositions.trainer.logic.js',

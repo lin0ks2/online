@@ -2,7 +2,7 @@
      Проект: MOYAMOVA
      Файл: index.html
      Назначение: Основной HTML-шаблон приложения
-     Версия: 1.0
+     Версия: 1.5.2
      Обновлено: 2025-11-17
      ========================================================== -->
 <!doctype html>
@@ -125,11 +125,8 @@
   <!-- === РЕЕСТР СЛОВАРЕЙ (ДОЛЖЕН БЫТЬ ДО deck.*.js) === -->
   <script src="./js/dicts.js" defer></script>
 
-  <!-- === ДАННЫЕ СЛОВАРЕЙ === -->
-  <script src="./dicts/deck.de.js" defer></script>
-  <script src="./dicts/deck.en.js" defer></script>
-  <script src="./dicts/deck.de.lernpunkt.js" defer></script>
-  <script src="./dicts/deck.sr.js" defer></script>
+  <!-- === ДАННЫЕ СЛОВАРЕЙ (JSON data layer; sync bootstrap for 1.5.x compatibility) === -->
+  <script src="./js/deck.loader.js"></script>
   <!-- Prepositions trainer datasets (load only languages that have datasets) -->
   <script src="./dicts/trainer.prepositions.en.js" defer></script>
   <script src="./dicts/trainer.prepositions.de.js" defer></script>
