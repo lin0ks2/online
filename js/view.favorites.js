@@ -169,7 +169,7 @@
     }
 
     const rows = (activeLang ? byLang[activeLang] : all).map(r=>`
-      <tr data-key="${r.key}" data-base="${r.baseKey}">
+      <tr class="dict-row favorites-row" data-key="${r.key}" data-base="${r.baseKey}">
         <td class="t-center">${r.flag}</td>
         <td>${r.name}</td>
         <td class="t-center">${r.count|0}</td>
