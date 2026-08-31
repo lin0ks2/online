@@ -116,3 +116,17 @@ html[data-theme="dark"] .desktop-pages-main--mistakes .dicts-table tbody tr,
 html[data-theme="dark"] .desktop-pages-main--fav .dicts-table tbody tr,
 .dark .desktop-pages-main--mistakes .dicts-table tbody tr,
 .dark .desktop-pages-main--fav .dicts-table tbody tr{background:#162231!important;border-color:#263447!important}
+
+
+/* 1.8.6 — Theme control and multi-row Interface card */
+@media (min-width:900px){
+  .desktop-settings__row--secondary{
+    margin-top:13px;
+    padding-top:13px;
+    border-top:1px solid #edf1f6;
+  }
+}
+html[data-theme="dark"] .desktop-settings__row--secondary,
+.dark .desktop-settings__row--secondary{
+  border-top-color:#263447;
+}

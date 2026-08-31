@@ -389,3 +389,73 @@ html[data-theme="dark"] .desktop-pages-main--stats .stats-page-dot.is-active,
   background:#173252!important;
   border-color:#245e9b!important;
 }
+
+
+/* ==========================================================
+ * 1.8.6 — Functional desktop statistics tabs
+ * One active page at a time. Visual language follows the
+ * approved desktop statistics concept.
+ * ========================================================== */
+@media (min-width:900px){
+  /* Undo 1.8.5's always-visible flex override. */
+  .desktop-pages-main--stats .stats-page{
+    display:none!important;
+    min-height:410px;
+    box-sizing:border-box;
+  }
+
+  .desktop-pages-main--stats .stats-page.is-active{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  .desktop-pages-main--stats .stats-page--analytics.is-active{
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+  }
+
+  /* Active tab is a real selected control, with no pseudo-dot residue. */
+  .desktop-pages-main--stats .stats-page-dot{
+    outline:none!important;
+  }
+  .desktop-pages-main--stats .stats-page-dot::before{
+    content:none!important;
+    display:none!important;
+    width:0!important;
+    height:0!important;
+  }
+  .desktop-pages-main--stats .stats-page-dot.is-active{
+    background:#edf5ff!important;
+    border:1px solid #9cc8ff!important;
+    box-shadow:0 2px 7px rgba(23,105,232,.10)!important;
+  }
+
+  /* More deliberate desktop composition. */
+  .desktop-pages-main--stats .stats-ring-set{
+    min-height:350px;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__circle{
+    filter:drop-shadow(0 6px 14px rgba(23,105,232,.07));
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__legend{
+    max-width:360px;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__legend-item{
+    min-height:48px!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set__legend-item strong,
+  .desktop-pages-main--stats .stats-ring-set__legend-item b{
+    color:#182235;
+  }
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-page-dot.is-active,
+.dark .desktop-pages-main--stats .stats-page-dot.is-active{
+  background:#173252!important;
+  border-color:#3978b9!important;
+}
