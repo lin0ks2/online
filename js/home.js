@@ -1329,9 +1329,12 @@ function activeDeckKey() {
     const T = tUI();
 
     const showFilters = isPwaOrTwaRunmode();
+    const __isPrepsHome = !!isPrepositionsModeForKey(key);
+    const __isArticlesHome = !!isArticlesModeForKey(key);
+    const __isWordHome = !__isPrepsHome && !__isArticlesHome;
 
     app.innerHTML = `
-      <div class="home">
+      <div class="home${__isWordHome ? ' home--word-trainer' : ''}">
         <!-- ЗОНА 1: Сеты -->
         <section class="card home-sets">
           <header class="sets-header">
@@ -1355,7 +1358,7 @@ function activeDeckKey() {
         `}
 
         <!-- ЗОНА 3: Тренер -->
-        <section class="card home-trainer">
+        <section class="card home-trainer${__isWordHome ? ' home-trainer--words' : ''}">
           <div class="trainer-top">
             <div class="trainer-stars" aria-hidden="true"></div>
             <button aria-label="${T.fav}" class="heart" data-title-key="tt_favorites" id="favBtn">♡</button>
@@ -2051,7 +2054,11 @@ answers.innerHTML = '';
     opts.forEach(opt => {
       const b = document.createElement('button');
       b.className = 'answer-btn';
-      b.textContent = (opt && opt._optLabel) ? opt._optLabel : tWord(opt);
+      const __answerLabel = String((opt && opt._optLabel) ? opt._optLabel : tWord(opt) || '');
+      b.textContent = __answerLabel;
+      // 1.6: geometry stays fixed; only typography gets denser for genuinely long units.
+      if (__answerLabel.length > 38) b.classList.add('answer-btn--long');
+      if (__answerLabel.length > 64) b.classList.add('answer-btn--xlong');
       b.setAttribute('data-id', String(opt.id));
       b.onclick = () => {
         if (solved) return;
