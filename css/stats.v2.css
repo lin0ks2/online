@@ -1,0 +1,222 @@
+/* ==========================================================
+ * MOYAMOVA 1.8.4 — Desktop Statistics V2
+ * Desktop-only visual layer. Mobile statistics stays unchanged.
+ * ========================================================== */
+@media (min-width:900px){
+  .desktop-pages-main--stats .stats-card{
+    border:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    padding:0!important;
+  }
+
+  .desktop-pages-main--stats .dicts-header{
+    background:transparent!important;
+    border-bottom:0!important;
+    padding:0!important;
+    margin:0 0 14px!important;
+    min-height:42px!important;
+  }
+  .desktop-pages-main--stats .dicts-header h3{
+    font:700 27px/1.1 Montserrat,system-ui,sans-serif!important;
+    color:#182235!important;
+  }
+
+  .desktop-pages-main--stats .dicts-flags{
+    padding:4px;
+    border:1px solid #e4eaf3;
+    border-radius:12px;
+    background:#fff;
+    gap:5px;
+  }
+  .desktop-pages-main--stats .dict-flag{
+    width:42px!important;height:32px!important;border-radius:9px!important;
+    background:#f5f8fc!important;border-color:transparent!important;
+  }
+  .desktop-pages-main--stats .dict-flag.active{
+    background:#edf5ff!important;border-color:#84bfff!important;
+    box-shadow:none!important;
+  }
+
+  .desktop-pages-main--stats .stats-lang-card.is-active{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:12px!important;
+  }
+
+  .desktop-pages-main--stats .stats-overview{
+    display:grid;
+    grid-template-columns:1.45fr repeat(3,minmax(0,.8fr));
+    gap:10px;
+  }
+  .desktop-pages-main--stats .stats-overview>article{
+    min-height:112px;
+    border:1px solid #e4eaf3;
+    border-radius:14px;
+    background:#fff;
+    box-sizing:border-box;
+  }
+  .desktop-pages-main--stats .stats-overview__hero{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:14px 16px;
+  }
+  .desktop-pages-main--stats .stats-overview__ring{
+    --stats-pct:0%;
+    width:72px;height:72px;border-radius:50%;
+    display:grid;place-items:center;flex:0 0 auto;
+    background:conic-gradient(#1769e8 var(--stats-pct),#e9eff7 0);
+    position:relative;
+  }
+  .desktop-pages-main--stats .stats-overview__ring:before{
+    content:"";position:absolute;inset:7px;border-radius:50%;background:#fff;
+  }
+  .desktop-pages-main--stats .stats-overview__ring span{
+    position:relative;z-index:1;font:800 16px Montserrat,system-ui,sans-serif;color:#182235;
+  }
+  .desktop-pages-main--stats .stats-overview__hero-copy{
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .desktop-pages-main--stats .stats-overview__hero-copy small,
+  .desktop-pages-main--stats .stats-overview__metric small{
+    color:#6d7788;font-size:11px;font-weight:700;
+  }
+  .desktop-pages-main--stats .stats-overview__hero-copy strong{
+    font:800 22px Montserrat,system-ui,sans-serif;color:#182235;
+  }
+  .desktop-pages-main--stats .stats-overview__hero-copy span,
+  .desktop-pages-main--stats .stats-overview__metric>span:last-child{
+    color:#8a95a5;font-size:11px;
+  }
+  .desktop-pages-main--stats .stats-overview__metric{
+    padding:12px 13px;
+    display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:3px;
+  }
+  .desktop-pages-main--stats .stats-overview__icon{
+    width:28px;height:28px;border-radius:9px;background:#edf5ff;color:#1769e8;
+    display:grid;place-items:center;font-weight:900;margin-bottom:4px;
+  }
+  .desktop-pages-main--stats .stats-overview__metric strong{
+    font:800 22px Montserrat,system-ui,sans-serif;color:#182235;
+  }
+
+  .desktop-pages-main--stats .stats-lang-card__body{
+    padding:0!important;
+    border:1px solid #e4eaf3;
+    border-radius:14px;
+    background:#fff;
+    overflow:hidden!important;
+  }
+
+  .desktop-pages-main--stats .stats-pages{
+    min-height:410px;
+  }
+  .desktop-pages-main--stats .stats-page{
+    padding:20px 22px!important;
+  }
+
+  .desktop-pages-main--stats .stats-ring-set{
+    display:grid!important;
+    grid-template-columns:minmax(250px,.75fr) minmax(0,1.25fr)!important;
+    align-items:center!important;
+    gap:28px!important;
+  }
+  .desktop-pages-main--stats .stats-ring-set__circle{
+    max-width:230px!important;
+  }
+  .desktop-pages-main--stats .stats-ring-set__legend{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  .desktop-pages-main--stats .stats-ring-set__legend-item{
+    border:1px solid #edf1f6;
+    background:#f8fafc;
+    border-radius:10px;
+    padding:9px 10px;
+  }
+
+  /* Pager becomes clear desktop tabs instead of tiny mobile dots. */
+  .desktop-pages-main--stats .stats-lang-card__footer{
+    padding:0!important;
+  }
+  .desktop-pages-main--stats .stats-pages-dots{
+    display:flex!important;
+    justify-content:flex-start!important;
+    gap:6px!important;
+    padding:7px!important;
+    margin:0!important;
+    border:1px solid #e4eaf3;
+    border-radius:12px;
+    background:#fff;
+  }
+  .desktop-pages-main--stats .stats-page-dot{
+    width:auto!important;height:34px!important;
+    min-width:92px!important;
+    border-radius:8px!important;
+    border:0!important;
+    background:transparent!important;
+    opacity:1!important;
+    padding:0 12px!important;
+  }
+  .desktop-pages-main--stats .stats-page-dot:after{
+    content:attr(data-label);
+    font-size:11px;font-weight:800;color:#6d7788;
+  }
+  .desktop-pages-main--stats .stats-page-dot.is-active{
+    background:#edf5ff!important;
+  }
+  .desktop-pages-main--stats .stats-page-dot.is-active:after{
+    color:#1769e8;
+  }
+
+  .desktop-pages-main--stats .stats-activity-weekdays{
+    margin-top:14px!important;
+  }
+  .desktop-pages-main--stats .stats-activity-grid{
+    max-width:700px;
+  }
+  .desktop-pages-main--stats .stats-activity-history__list{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:8px!important;
+  }
+  .desktop-pages-main--stats .stats-activity-history__item{
+    border:1px solid #edf1f6!important;
+    border-radius:10px!important;
+    background:#f8fafc!important;
+    padding:10px!important;
+  }
+
+  .desktop-pages-main--stats .dicts-footer{
+    display:none!important;
+  }
+}
+
+@media (min-width:900px) and (max-width:1120px){
+  .desktop-pages-main--stats .stats-overview{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+html[data-theme="dark"] .desktop-pages-main--stats .dicts-header h3,
+.dark .desktop-pages-main--stats .dicts-header h3,
+html[data-theme="dark"] .desktop-pages-main--stats .stats-overview__hero-copy strong,
+.dark .desktop-pages-main--stats .stats-overview__hero-copy strong,
+html[data-theme="dark"] .desktop-pages-main--stats .stats-overview__metric strong,
+.dark .desktop-pages-main--stats .stats-overview__metric strong,
+html[data-theme="dark"] .desktop-pages-main--stats .stats-overview__ring span,
+.dark .desktop-pages-main--stats .stats-overview__ring span{color:#edf5ff!important}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-overview>article,
+.dark .desktop-pages-main--stats .stats-overview>article,
+html[data-theme="dark"] .desktop-pages-main--stats .stats-lang-card__body,
+.dark .desktop-pages-main--stats .stats-lang-card__body,
+html[data-theme="dark"] .desktop-pages-main--stats .stats-pages-dots,
+.dark .desktop-pages-main--stats .stats-pages-dots,
+html[data-theme="dark"] .desktop-pages-main--stats .dicts-flags,
+.dark .desktop-pages-main--stats .dicts-flags{background:#121c28!important;border-color:#263447!important}
+
+html[data-theme="dark"] .desktop-pages-main--stats .stats-overview__ring:before,
+.dark .desktop-pages-main--stats .stats-overview__ring:before{background:#121c28!important}

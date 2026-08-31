@@ -979,6 +979,41 @@ function countLearnedWordsByLang(langCode) {
           if (d.totalWords > 0 && d.learnedWords >= d.totalWords) completed += 1;
         });
 
+        const learnedPct = total > 0 ? Math.round((learned / total) * 100) : 0;
+        const inProgress = Math.max(0, started - completed);
+        const ukUi = getUiLang() === 'uk';
+        const overviewHtml =
+          '<div class="stats-overview">' +
+            '<article class="stats-overview__hero">' +
+              '<div class="stats-overview__ring" style="--stats-pct:' + learnedPct + '%">' +
+                '<span>' + learnedPct + '%</span>' +
+              '</div>' +
+              '<div class="stats-overview__hero-copy">' +
+                '<small>' + (ukUi ? 'Загальний прогрес' : 'Общий прогресс') + '</small>' +
+                '<strong>' + learned + ' / ' + total + '</strong>' +
+                '<span>' + (ukUi ? 'слів вивчено' : 'слов выучено') + '</span>' +
+              '</div>' +
+            '</article>' +
+            '<article class="stats-overview__metric">' +
+              '<span class="stats-overview__icon">✓</span>' +
+              '<small>' + (ukUi ? 'Завершено словників' : 'Завершено словарей') + '</small>' +
+              '<strong>' + completed + '</strong>' +
+              '<span>' + (ukUi ? 'з ' : 'из ') + langStat.decks.length + '</span>' +
+            '</article>' +
+            '<article class="stats-overview__metric">' +
+              '<span class="stats-overview__icon">▣</span>' +
+              '<small>' + (ukUi ? 'У процесі' : 'В процессе') + '</small>' +
+              '<strong>' + inProgress + '</strong>' +
+              '<span>' + (ukUi ? 'словників' : 'словарей') + '</span>' +
+            '</article>' +
+            '<article class="stats-overview__metric">' +
+              '<span class="stats-overview__icon">Σ</span>' +
+              '<small>' + (ukUi ? 'Всього словників' : 'Всего словарей') + '</small>' +
+              '<strong>' + langStat.decks.length + '</strong>' +
+              '<span>' + (ukUi ? 'доступно' : 'доступно') + '</span>' +
+            '</article>' +
+          '</div>';
+
         const split = splitPosBuckets(langStat);
         const coreSetHtml = renderRingSet(split.core, texts, 'core');
         const otherSetHtml = renderRingSet(split.other, texts, 'other');
@@ -1019,10 +1054,10 @@ function countLearnedWordsByLang(langCode) {
 
         const dotsHtml =
           '<div class="stats-pages-dots">' +
-            '<button class="stats-page-dot is-active" type="button" data-page="0"></button>' +
-            '<button class="stats-page-dot" type="button" data-page="1"></button>' +
-            (hasSplitPage ? '<button class="stats-page-dot" type="button" data-page="2"></button>' : '') +
-            '<button class="stats-page-dot" type="button" data-page="' + activityPage + '"></button>' +
+            '<button class="stats-page-dot is-active" type="button" data-page="0" data-label="' + (getUiLang()==='uk' ? 'Основні' : 'Основные') + '"></button>' +
+            '<button class="stats-page-dot" type="button" data-page="1" data-label="' + (getUiLang()==='uk' ? 'Інші' : 'Другие') + '"></button>' +
+            (hasSplitPage ? '<button class="stats-page-dot" type="button" data-page="2" data-label="' + (getUiLang()==='uk' ? 'Режими' : 'Режимы') + '"></button>' : '') +
+            '<button class="stats-page-dot" type="button" data-page="' + activityPage + '" data-label="' + (getUiLang()==='uk' ? 'Активність' : 'Активность') + '"></button>' +
           '</div>';
 
         return (
@@ -1031,6 +1066,7 @@ function countLearnedWordsByLang(langCode) {
           '" data-lang="' +
           langCode +
           '">' +
+          overviewHtml +
           '<div class="stats-lang-card__body">' +
             pagesHtml +
           '</div>' +
@@ -1111,7 +1147,11 @@ function countLearnedWordsByLang(langCode) {
       btn.className = 'dict-flag' + (lang === activeLang ? ' active' : '');
       btn.dataset.lang = lang;
       btn.title = lang.toUpperCase();
-      btn.textContent = FLAG[lang] || lang.toUpperCase();
+      if (['de','en','sr','ru','uk','es','fr'].indexOf(lang) !== -1) {
+        btn.innerHTML = '<img class="asset-flag" src="./img/flags/' + (lang === 'ua' ? 'uk' : lang) + '.svg" alt="">';
+      } else {
+        btn.textContent = FLAG[lang] || lang.toUpperCase();
+      }
       btn.addEventListener('click', function () {
         if (lang === activeLang) return;
         applyActive(lang);
