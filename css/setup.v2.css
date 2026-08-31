@@ -1,0 +1,127 @@
+/* ==========================================================
+ * MOYAMOVA 1.8.9 — Setup Wizard V2
+ * New calm card language; mechanics remain unchanged.
+ * ========================================================== */
+.setup-overlay{padding:22px!important}
+.setup-backdrop{
+  background:rgba(9,18,28,.58)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+}
+.setup-modal{max-width:680px!important}
+.setup-modal__inner{
+  position:relative;
+  overflow:hidden;
+  padding:0!important;
+  border:1px solid rgba(218,228,240,.95)!important;
+  border-radius:22px!important;
+  background:#f5f8fd!important;
+  box-shadow:0 24px 70px rgba(15,35,60,.22)!important;
+}
+.setup-header{
+  padding:25px 28px 20px!important;
+  margin:0!important;
+  background:linear-gradient(135deg,#eef6ff 0%,#f8fbff 65%,#f3f7fd 100%)!important;
+  border-bottom:1px solid #e1e9f3!important;
+  text-align:left!important;
+}
+.setup-header:before{
+  content:"MOYAMOVA";
+  display:inline-block;
+  margin-bottom:9px;
+  color:#1769e8;
+  font:800 11px/1 system-ui;
+  letter-spacing:.09em;
+}
+.setup-title{
+  margin:0 0 6px!important;
+  color:#182235!important;
+  font:800 27px/1.12 Montserrat,system-ui,sans-serif!important;
+}
+.setup-subtitle{margin:0 0 7px!important;color:#1769e8!important;font-weight:750!important}
+.setup-intro{margin:0!important;color:#6d7788!important;line-height:1.45!important}
+
+.setup-section{
+  margin:12px 20px 0!important;
+  padding:14px 16px!important;
+  border:1px solid #e3eaf3!important;
+  border-radius:14px!important;
+  background:#fff!important;
+}
+.setup-section__label{
+  margin:0 0 10px!important;
+  color:#536174!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  letter-spacing:.035em!important;
+  text-transform:uppercase!important;
+}
+.setup-mode-toggle,.setup-flags-row{
+  display:grid!important;
+  gap:8px!important;
+}
+.setup-mode-toggle{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.setup-flags-row{grid-template-columns:repeat(auto-fit,minmax(64px,1fr))!important}
+.setup-mode-btn,.setup-flag-btn{
+  min-height:48px!important;
+  border:1px solid #e0e8f1!important;
+  border-radius:11px!important;
+  background:#f8fafc!important;
+  box-shadow:none!important;
+  color:#344255!important;
+  font-weight:750!important;
+  transition:border-color .15s ease,background-color .15s ease,box-shadow .15s ease,transform .15s ease!important;
+}
+.setup-mode-btn:hover,.setup-flag-btn:hover{
+  border-color:#9ccfff!important;background:#fff!important;transform:translateY(-1px)
+}
+.setup-mode-btn.is-active,.setup-flag-btn.is-active{
+  border-color:#65b8ff!important;
+  background:#edf7ff!important;
+  color:#1769e8!important;
+  box-shadow:0 0 0 2px rgba(31,182,255,.10)!important;
+}
+.setup-inline-flag{display:inline-flex;width:27px;height:18px}
+.setup-inline-flag img,.setup-flag-btn__flag img{
+  display:block;width:100%;height:100%;object-fit:cover;border-radius:3px;
+  box-shadow:0 0 0 1px rgba(15,23,42,.10)
+}
+.setup-flag-btn__flag{display:block!important;width:31px!important;height:21px!important;margin:auto!important;font-size:0!important}
+
+.setup-consent{
+  margin:12px 20px 0!important;
+  padding:12px 16px!important;
+  border:1px solid #e3eaf3!important;
+  border-radius:14px!important;
+  background:#fff!important;
+}
+.setup-checkbox{min-height:34px!important;border-radius:9px!important;padding:5px 7px!important}
+.setup-checkbox:hover{background:#f7faff!important}
+.setup-checkbox__label{font-size:12px!important;line-height:1.35!important;color:#5f6c7d!important}
+.setup-note{margin:12px 24px 0!important;color:#8792a2!important;font-size:11px!important;text-align:center!important}
+.setup-footer{padding:14px 20px 20px!important;margin:0!important}
+.setup-start-btn{
+  width:100%!important;min-height:48px!important;border:0!important;border-radius:12px!important;
+  background:#1769e8!important;color:#fff!important;font-weight:800!important;
+  box-shadow:0 7px 18px rgba(23,105,232,.20)!important;
+}
+.setup-start-btn:hover:not(:disabled){background:#155fce!important;transform:translateY(-1px)}
+.setup-start-btn:disabled{background:#cbd6e3!important;box-shadow:none!important}
+
+@media (max-width:699px){
+  .setup-overlay{padding:12px!important}
+  .setup-modal{max-width:500px!important}
+  .setup-header{padding:20px 18px 16px!important}
+  .setup-title{font-size:23px!important}
+  .setup-section,.setup-consent{margin-left:12px!important;margin-right:12px!important}
+  .setup-footer{padding-left:12px!important;padding-right:12px!important}
+}
+html[data-theme="dark"] .setup-modal__inner,.dark .setup-modal__inner{background:#0d141d!important;border-color:#263447!important}
+html[data-theme="dark"] .setup-header,.dark .setup-header{background:linear-gradient(135deg,#142338,#101b29)!important;border-color:#263447!important}
+html[data-theme="dark"] .setup-title,.dark .setup-title{color:#edf5ff!important}
+html[data-theme="dark"] .setup-section,html[data-theme="dark"] .setup-consent,
+.dark .setup-section,.dark .setup-consent{background:#121c28!important;border-color:#263447!important}
+html[data-theme="dark"] .setup-mode-btn,html[data-theme="dark"] .setup-flag-btn,
+.dark .setup-mode-btn,.dark .setup-flag-btn{background:#162231!important;border-color:#2a3a4d!important;color:#dce7f5!important}
+html[data-theme="dark"] .setup-mode-btn.is-active,html[data-theme="dark"] .setup-flag-btn.is-active,
+.dark .setup-mode-btn.is-active,.dark .setup-flag-btn.is-active{background:#173252!important;border-color:#3978b9!important;color:#8fcaff!important}

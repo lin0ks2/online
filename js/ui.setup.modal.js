@@ -253,9 +253,9 @@
       btn.setAttribute('aria-label', lang.label);
 
       btn.innerHTML =
-        '<span aria-hidden="true">' +
-        lang.flag +
-        '</span><span>' +
+        '<span class="setup-inline-flag" aria-hidden="true"><img src="./img/flags/' +
+        (lang.code === 'uk' ? 'uk' : lang.code) +
+        '.svg" alt=""></span><span>' +
         lang.label +
         '</span>';
 
@@ -289,9 +289,9 @@
       btn.setAttribute('aria-label', item.label);
 
       btn.innerHTML =
-        '<span class="setup-flag-btn__flag" aria-hidden="true">' +
-        item.flag +
-        '</span>';
+        '<span class="setup-flag-btn__flag" aria-hidden="true"><img src="./img/flags/' +
+        (item.code === 'uk' ? 'uk' : item.code) +
+        '.svg" alt=""></span>';
 
       btn.addEventListener('click', function () {
         if (state.studyLang === item.code) return;
