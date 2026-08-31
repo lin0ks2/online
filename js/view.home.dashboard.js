@@ -1,6 +1,6 @@
 /* ==========================================================
  * MOYAMOVA — Home Dashboard
- * Version: 1.7.2
+ * Version: 1.7.3
  * ========================================================== */
 (function(){
   'use strict';
@@ -120,7 +120,7 @@
         <div class="dash-side-foot">v${esc(A.APP_VER||'1.7.0')} · Offline <i></i></div>
       </aside>
       <section class="dash-main">
-        <header class="dash-head"><div><div class="dash-eyebrow">${esc(languageName(lg))}</div><h2>${T.hello} 👋</h2><p>${T.sub}</p></div><button class="dash-settings" data-open-menu aria-label="${T.settings}">⚙</button></header>
+        <header class="dash-head"><div><div class="dash-eyebrow">${esc(languageName(lg))}</div><h2>${T.hello} 👋</h2><p>${T.sub}</p></div></header>
         <div class="dash-metrics">
           <article><span>${T.overall}</span>${circle(overall)}<b>${ls.learned} / ${ls.total}</b></article>
           <article><span>${T.mastered}</span><div class="dash-big dash-green">✓</div><b>${ls.learned}</b><small>${T.words}</small></article>
