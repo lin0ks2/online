@@ -129,7 +129,7 @@
         </div>
         <article class="dash-continue">
           <div class="dash-continue-copy"><span class="dash-section-label">${T.continue}</span><h3>${esc(A.Decks&&A.Decks.resolveNameByKey?A.Decks.resolveNameByKey(last):last)}</h3><div class="dash-progress"><i style="width:${lastS.pct}%"></i></div><p>${lastS.learned} / ${lastS.total} ${T.words} · ${lastS.pct}%</p></div>
-          <div class="dash-flashcards"><span>${esc((A.Decks.resolveDeckByKey(last)[0]||{}).word||'Wort')}</span><small>★ ${Math.round(lastS.stars)} / ${lastS.maxStars}</small></div>
+          <div class="dash-flashcards">${(()=>{ const __deck=A.Decks.resolveDeckByKey(last)||[]; const __word=__deck[0]||{}; const __mx=(A.Trainer&&A.Trainer.starsMax)?A.Trainer.starsMax():5; const __stars=Math.max(0,Math.min(__mx,starValue(last,__word))); return `<span>${esc(__word.word||'Wort')}</span><small>★ ${Math.round(__stars)} / ${__mx}</small>`; })()}</div>
           <button class="dash-primary" data-continue>${T.continueBtn} →</button>
         </article>
         <section class="dash-block"><div class="dash-title"><h3>${T.quick}</h3></div><div class="dash-quick"><button data-mode="auto"><i>▶</i><b>${T.auto}</b></button><button data-mode="reverse"><i>↔</i><b>${T.reverse}</b></button><button data-mode="focus"><i>◎</i><b>${T.focus}</b></button></div></section>
