@@ -320,3 +320,133 @@ html[data-theme="dark"] .desktop-settings__row--secondary,
 
   /* Old About page styles remain harmless but no longer render. */
 }
+
+
+/* ==========================================================
+ * 1.9.7 — Desktop dark theme normalization
+ * Removes light-theme "islands" without changing geometry.
+ * ========================================================== */
+@media (min-width:900px){
+  body.theme-dark .desktop-settings__card,
+  body.dark .desktop-settings__card,
+  [data-theme="dark"] .desktop-settings__card,
+  body.theme-dark .desktop-guide-card,
+  body.dark .desktop-guide-card,
+  [data-theme="dark"] .desktop-guide-card,
+  body.theme-dark .desktop-support-card,
+  body.dark .desktop-support-card,
+  [data-theme="dark"] .desktop-support-card,
+  body.theme-dark .desktop-settings__popover,
+  body.dark .desktop-settings__popover,
+  [data-theme="dark"] .desktop-settings__popover,
+  body.theme-dark .desktop-about__hero,
+  body.dark .desktop-about__hero,
+  [data-theme="dark"] .desktop-about__hero,
+  body.theme-dark .desktop-service-card,
+  body.dark .desktop-service-card,
+  [data-theme="dark"] .desktop-service-card{
+    background:#111f2d!important;
+    border-color:#2a3d50!important;
+    color:#eef6ff!important;
+  }
+
+  body.theme-dark .desktop-tool-btn,
+  body.dark .desktop-tool-btn,
+  [data-theme="dark"] .desktop-tool-btn,
+  body.theme-dark .desktop-settings__button,
+  body.dark .desktop-settings__button,
+  [data-theme="dark"] .desktop-settings__button{
+    background:#172638!important;
+    border-color:#30465d!important;
+    color:#edf6ff!important;
+  }
+
+  body.theme-dark .desktop-tool-btn:hover,
+  body.dark .desktop-tool-btn:hover,
+  [data-theme="dark"] .desktop-tool-btn:hover,
+  body.theme-dark .desktop-service-card:hover,
+  body.dark .desktop-service-card:hover,
+  [data-theme="dark"] .desktop-service-card:hover{
+    background:#1b2e42!important;
+    border-color:#3974b7!important;
+  }
+
+  body.theme-dark .desktop-settings__button--primary,
+  body.dark .desktop-settings__button--primary,
+  [data-theme="dark"] .desktop-settings__button--primary{
+    background:#1769e8!important;
+    border-color:#1769e8!important;
+    color:#fff!important;
+  }
+
+  body.theme-dark .desktop-settings__button--paypal,
+  body.dark .desktop-settings__button--paypal,
+  [data-theme="dark"] .desktop-settings__button--paypal{
+    background:#172638!important;
+    border-color:#2f80ff!important;
+    color:#65a5ff!important;
+  }
+
+  body.theme-dark .desktop-settings__button--viber,
+  body.dark .desktop-settings__button--viber,
+  [data-theme="dark"] .desktop-settings__button--viber{
+    background:#7360f2!important;
+    border-color:#7360f2!important;
+    color:#fff!important;
+  }
+
+  body.theme-dark .desktop-guide-card__copy strong,
+  body.dark .desktop-guide-card__copy strong,
+  [data-theme="dark"] .desktop-guide-card__copy strong,
+  body.theme-dark .desktop-support-card__copy strong,
+  body.dark .desktop-support-card__copy strong,
+  [data-theme="dark"] .desktop-support-card__copy strong,
+  body.theme-dark .desktop-about__hero strong,
+  body.dark .desktop-about__hero strong,
+  [data-theme="dark"] .desktop-about__hero strong{
+    color:#f3f8ff!important;
+  }
+
+  body.theme-dark .desktop-guide-card__copy span,
+  body.dark .desktop-guide-card__copy span,
+  [data-theme="dark"] .desktop-guide-card__copy span,
+  body.theme-dark .desktop-qr-popover span,
+  body.dark .desktop-qr-popover span,
+  [data-theme="dark"] .desktop-qr-popover span,
+  body.theme-dark .desktop-viber-popover p,
+  body.dark .desktop-viber-popover p,
+  [data-theme="dark"] .desktop-viber-popover p{
+    color:#8fa5bc!important;
+  }
+
+  /* Dashboard deck cards were still inheriting a hard-coded light surface. */
+  body.theme-dark .dash-deck-card,
+  body.dark .dash-deck-card,
+  [data-theme="dark"] .dash-deck-card,
+  body.theme-dark .dashboard .deck-card,
+  body.dark .dashboard .deck-card,
+  [data-theme="dark"] .dashboard .deck-card{
+    background:#172638!important;
+    border-color:#2b4055!important;
+    color:#edf6ff!important;
+  }
+
+  body.theme-dark .dash-deck-card *,
+  body.dark .dash-deck-card *,
+  [data-theme="dark"] .dash-deck-card *,
+  body.theme-dark .dashboard .deck-card *,
+  body.dark .dashboard .deck-card *,
+  [data-theme="dark"] .dashboard .deck-card *{
+    color:inherit;
+  }
+
+  body.theme-dark .dash-deck-card:hover,
+  body.dark .dash-deck-card:hover,
+  [data-theme="dark"] .dash-deck-card:hover,
+  body.theme-dark .dashboard .deck-card:hover,
+  body.dark .dashboard .deck-card:hover,
+  [data-theme="dark"] .dashboard .deck-card:hover{
+    background:#1b2e42!important;
+    border-color:#3974b7!important;
+  }
+}

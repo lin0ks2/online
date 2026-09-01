@@ -121,3 +121,20 @@ html[data-theme="dark"] .dashboard,.dark .dashboard{--db:#0d141d;--dc:#121c28;--
   .dash-side{width:232px;min-width:232px}
   .dash-main{max-width:1200px}
 }
+
+
+/* 1.9.7 — desktop dark deck surfaces */
+@media (min-width:900px){
+  body.theme-dark .dashboard .dashboard-deck,
+  body.dark .dashboard .dashboard-deck,
+  [data-theme="dark"] .dashboard .dashboard-deck,
+  body.theme-dark .dashboard .home-deck-card,
+  body.dark .dashboard .home-deck-card,
+  [data-theme="dark"] .dashboard .home-deck-card,
+  body.theme-dark .dashboard [data-deck-key],
+  body.dark .dashboard [data-deck-key],
+  [data-theme="dark"] .dashboard [data-deck-key]{
+    background:#172638!important;
+    border-color:#2b4055!important;
+  }
+}
