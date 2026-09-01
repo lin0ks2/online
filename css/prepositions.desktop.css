@@ -116,3 +116,16 @@
   }
 }
 @media(max-width:899px){.preps-desktop-head{display:none!important}}
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.7 — Prepositions navigation/TTS cleanup
+ * Desktop TTS is controlled only through the shared lower panel.
+ * ========================================================== */
+@media (min-width:900px){
+  .home--preps-trainer .trainer-audio-btn,
+  .home--preps-trainer .home-trainer .trainer-audio-btn,
+  .trainer-desktop-main .home--preps-trainer .trainer-audio-btn{
+    display:none!important;
+  }
+}

@@ -1558,7 +1558,7 @@ function activeDeckKey() {
       </div>
       ${(__isWordHome || __isArticlesHome || __isPrepsHome) ? `</main></div>` : ''}`;
 
-    if (__isWordHome || __isArticlesHome) {
+    if (__isWordHome || __isArticlesHome || __isPrepsHome) {
       app.querySelectorAll('[data-trainer-route]').forEach(btn => {
         btn.addEventListener('click', () => {
           const action = btn.getAttribute('data-trainer-route');
