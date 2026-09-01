@@ -45,7 +45,10 @@
   function route(action){
     try{
       const a=A();
-      if(a.Router&&typeof a.Router.routeTo==='function'){ a.Router.routeTo(action); return; }
+      if(a.Router&&typeof a.Router.routeTo==='function'){
+        a.Router.routeTo(action);
+        return;
+      }
     }catch(_){}
     try{
       const btn=document.querySelector('.app-footer .nav-btn[data-action="'+action+'"]');
