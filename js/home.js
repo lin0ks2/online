@@ -1475,7 +1475,6 @@ function activeDeckKey() {
           if (action) Router.routeTo(action);
         });
       });
-      grid.appendChild(btn);
     }
 
     // Desktop: one-line set strip. Arrows scroll the strip without changing
