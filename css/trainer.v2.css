@@ -682,3 +682,91 @@ html[data-theme="dark"] .trainer-desktop-shell,
     background:#1b2e42!important;border-color:#32b6f4!important;color:#fff!important
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.4 — unified desktop trainer utility strip
+ * Articles and regular trainer now share the same visual grammar.
+ * ========================================================== */
+@media (min-width:900px){
+  .trainer-desktop-main .trainer-quickbar{
+    min-height:74px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1px 74px 74px;
+    align-items:stretch;
+    gap:0;
+    margin-top:14px;
+    padding:0;
+    border:1px solid #294158;
+    border-radius:14px;
+    background:#0e1c2a;
+    box-shadow:none;
+    overflow:hidden;
+  }
+
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn{
+    width:auto;
+    height:74px;
+    min-width:0;
+    border:0;
+    border-right:1px solid #294158;
+    border-radius:0;
+    background:transparent;
+    color:#edf5ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:0 16px;
+    font-size:12px;
+    font-weight:650;
+    box-shadow:none;
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn:hover{
+    background:rgba(43,140,255,.06);
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn.is-active{
+    background:rgba(43,140,255,.08);
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qico{
+    width:30px;
+    height:30px;
+    flex:0 0 30px;
+    font-size:16px;
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn--audio{
+    width:74px;
+    padding:0;
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn--audio .trainer-qlabel{
+    display:none;
+  }
+  .trainer-desktop-main .trainer-quickbar .trainer-qsep{
+    width:1px;
+    height:auto;
+    align-self:stretch;
+    background:#294158;
+    justify-self:stretch;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main .trainer-quickbar{
+    background:#fff;
+    border-color:#dce6f0;
+    box-shadow:0 7px 24px rgba(31,51,73,.06);
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .trainer-quickbar .trainer-qbtn{
+    color:#182235;
+    border-color:#e1e8f0;
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .trainer-quickbar .trainer-qbtn:hover{
+    background:#f7faff;
+    color:#182235;
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .trainer-quickbar .trainer-qbtn.is-active{
+    background:#eef6ff;
+    color:#182235;
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .trainer-quickbar .trainer-qsep{
+    background:#e1e8f0;
+  }
+}

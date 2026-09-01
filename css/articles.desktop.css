@@ -174,3 +174,44 @@
   html:not([data-theme="dark"]) .articles-tool small{color:#8291a4}
   html:not([data-theme="dark"]) .articles-tool:hover{background:#f7faff}
 }
+
+
+/* 1.10.4 — light-theme answer hover must never mask feedback */
+@media (min-width:900px){
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn:hover:not(:disabled){
+    background:#eef5fc!important;
+    border-color:#9fc2e4!important;
+    color:#182235!important;
+    box-shadow:0 4px 14px rgba(31,51,73,.06)!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-correct,
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-correct:hover{
+    background:#e7f8ef!important;
+    border-color:#24b86b!important;
+    color:#127341!important;
+    box-shadow:0 0 0 2px rgba(36,184,107,.10)!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-wrong,
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-wrong:hover{
+    background:#fff0f1!important;
+    border-color:#ef4f62!important;
+    color:#b82d3d!important;
+    box-shadow:0 0 0 2px rgba(239,79,98,.08)!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-dim,
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles
+  .answers-grid .answer-btn.is-dim:hover{
+    background:#f8fbff!important;
+    border-color:#dce6f0!important;
+    color:#617188!important;
+  }
+}
