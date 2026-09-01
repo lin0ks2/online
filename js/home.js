@@ -1345,7 +1345,7 @@ function activeDeckKey() {
       : {home:'Главная',trainer:'Тренажёр',dicts:'Словари',errors:'Ошибки',fav:'Избранное',stats:'Статистика'};
 
     app.innerHTML = `
-      ${__isWordHome ? `
+      ${(__isWordHome || __isArticlesHome) ? `
       <div class="trainer-desktop-shell" data-lang="${__trainerLearnLang}">
         <aside class="dash-side trainer-side">
           <div class="dash-brand"><img src="./img/logo_64.png" alt=""><div><strong>MOYAMOVA</strong><span>${__trainerLangName}</span></div></div>
@@ -1356,8 +1356,16 @@ function activeDeckKey() {
             <button data-trainer-route="mistakes">△ <span>${__navT.errors}</span></button>
             <button data-trainer-route="fav">☆ <span>${__navT.fav}</span></button>
             <button data-trainer-route="stats">▥ <span>${__navT.stats}</span></button>
+            <button data-trainer-route="settings">⚙ <span>${getUiLang()==='uk' ? 'Налаштування' : 'Настройки'}</span></button>
           </nav>
-          <div class="dash-side-foot">v${A.APP_VER||'1.7.7'} · Offline <i></i></div>
+          <div class="trainer-side-bottom">
+            <button type="button" class="trainer-side-lang" id="trainerSideLang">
+              <img src="./img/flags/${getUiLang()==='uk' ? 'uk' : 'ru'}.svg" alt="">
+              <span>${getUiLang()==='uk' ? 'Українська' : 'Русский'}</span>
+              <b>⌄</b>
+            </button>
+            <div class="dash-side-foot">v${A.APP_VER||'1.7.7'} · Offline <i></i></div>
+          </div>
         </aside>
         <main class="trainer-desktop-main">
       ` : ''}
@@ -1462,9 +1470,9 @@ function activeDeckKey() {
         </div>
         ` : ''}
       </div>
-      ${__isWordHome ? `</main></div>` : ''}`;
+      ${(__isWordHome || __isArticlesHome) ? `</main></div>` : ''}`;
 
-    if (__isWordHome) {
+    if (__isWordHome || __isArticlesHome) {
       app.querySelectorAll('[data-trainer-route]').forEach(btn => {
         btn.addEventListener('click', () => {
           const action = btn.getAttribute('data-trainer-route');
@@ -1472,6 +1480,21 @@ function activeDeckKey() {
           // older shell router created before Home was initialised.
           if (action) Router.routeTo(action);
         });
+      });
+      const sideLangBtn = app.querySelector('#trainerSideLang');
+      if (sideLangBtn) sideLangBtn.addEventListener('click', () => {
+        try {
+          const cur = getUiLang()==='uk' ? 'uk' : 'ru';
+          const next = cur === 'uk' ? 'ru' : 'uk';
+          A.settings = A.settings || {};
+          A.settings.lang = next;
+          A.settings.uiLang = next;
+          try { A.saveSettings && A.saveSettings(A.settings); } catch(_){}
+          try { document.documentElement.dataset.lang = next; } catch(_){}
+          try { document.dispatchEvent(new CustomEvent('lexitron:ui-lang-changed',{detail:{lang:next}})); } catch(_){}
+          try { window.dispatchEvent(new CustomEvent('lexitron:ui-lang-changed',{detail:{lang:next}})); } catch(_){}
+          renderHome();
+        } catch(_){}
       });
     }
 

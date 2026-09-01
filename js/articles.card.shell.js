@@ -132,12 +132,59 @@
     } catch (_e) {}
   }
 
+
+  function ensureDesktopArticlesChrome(vm) {
+    try {
+      if (!rootEl || window.innerWidth < 900) return;
+      var home = rootEl.closest('.home');
+      if (!home) return;
+
+      var chrome = home.querySelector('.articles-desktop-head');
+      if (!chrome) {
+        chrome = document.createElement('section');
+        chrome.className = 'articles-desktop-head';
+        home.insertBefore(chrome, home.firstChild);
+      }
+
+      var uk = false;
+      try { uk = String((A.settings && (A.settings.uiLang || A.settings.lang)) || 'ru').toLowerCase() === 'uk'; } catch(_){}
+
+      var st = {answers:0,correct:0,wrong:0,bestStreak:0,totalMs:0};
+      try { if (A.ArticlesStats && A.ArticlesStats.export) st = A.ArticlesStats.export() || st; } catch(_){}
+
+      var ds = {withArticles:0,learned:0};
+      try { if (A.ArticlesTrainer && A.ArticlesTrainer.getDeckStats) ds = A.ArticlesTrainer.getDeckStats(vm.deckKey) || ds; } catch(_){}
+
+      var ss = {withArticles:0,learned:0,setIndex:0,totalSets:1};
+      try { if (A.ArticlesTrainer && A.ArticlesTrainer.getSetStats) ss = A.ArticlesTrainer.getSetStats(vm.deckKey) || ss; } catch(_){}
+
+      var pct = ds.withArticles ? Math.round((Number(ds.learned||0)/Number(ds.withArticles||1))*100) : 0;
+      var mins = Math.floor(Number(st.totalMs||0)/60000);
+      var time = String(Math.floor(mins/60)).padStart(2,'0') + ':' + String(mins%60).padStart(2,'0');
+
+      chrome.innerHTML =
+        '<div class="articles-desktop-titlebar">' +
+          '<div><h1>◎ <span>'+(uk?'Режим: ':'Режим: ')+'</span><b>'+(uk?'Артиклі':'Артикли')+'</b></h1>' +
+          '<p>'+(uk?'Оберіть правильний артикль для іменника':'Выберите правильный артикль для существительного')+'</p></div>' +
+          '<div class="articles-desktop-progress"><span>'+(uk?'Прогрес у режимі':'Прогресс в режиме')+'</span><div><i style="width:'+pct+'%"></i></div><b>'+pct+'%</b></div>' +
+        '</div>' +
+        '<div class="articles-desktop-kpis">' +
+          '<article><i class="ok">✓</i><span>'+(uk?'Правильно':'Правильно')+'</span><strong>'+Number(st.correct||0)+'</strong></article>' +
+          '<article><i class="bad">×</i><span>'+(uk?'Помилки':'Ошибки')+'</span><strong>'+Number(st.wrong||0)+'</strong></article>' +
+          '<article><i class="streak">◎</i><span>'+(uk?'Серія':'Серия')+'</span><strong>'+Number(st.bestStreak||0)+'</strong></article>' +
+          '<article><i class="time">◷</i><span>'+(uk?'Час':'Время')+'</span><strong>'+time+'</strong></article>' +
+          '<article><i class="total">☷</i><span>'+(uk?'Набір':'Сет')+'</span><strong>'+(Number(ss.setIndex||0)+1)+' / '+Number(ss.totalSets||1)+'</strong></article>' +
+        '</div>';
+    } catch(_){}
+  }
+
   function render(vm) {
     if (!mounted || !rootEl || !vm) return;
 
     // запоминаем последнее состояние, чтобы корректно переотрисовать строку статистики
     // при переключении языка интерфейса.
     uiState.lastVm = vm;
+    ensureDesktopArticlesChrome(vm);
 
     // На каркасе мы используем ту же разметку .home-trainer из home.js.
     var starsBox = qs('.trainer-stars', rootEl);

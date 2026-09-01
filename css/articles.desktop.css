@@ -1,0 +1,105 @@
+/* MOYAMOVA 1.10.0 — Articles Trainer desktop redesign */
+@media (min-width:900px){
+  .trainer-desktop-shell:has(.home-trainer.is-articles){
+    background:linear-gradient(135deg,#06101c 0%,#081524 55%,#06111e 100%);
+  }
+  .trainer-desktop-main:has(.home-trainer.is-articles){
+    padding:22px 26px 28px;
+  }
+  .trainer-desktop-main:has(.home-trainer.is-articles)>.home{
+    width:100%;max-width:none;display:flex;flex-direction:column;gap:14px;
+  }
+
+  /* Old auxiliary zones stay in DOM for trainer/set logic, but do not clutter desktop UI. */
+  .trainer-desktop-main:has(.home-trainer.is-articles) .home-sets,
+  .trainer-desktop-main:has(.home-trainer.is-articles) .home-hints,
+  .trainer-desktop-main:has(.home-trainer.is-articles) .home-filters{
+    display:none!important;
+  }
+
+  .articles-desktop-head{display:flex;flex-direction:column;gap:14px}
+  .articles-desktop-titlebar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:2px 4px 0}
+  .articles-desktop-titlebar h1{margin:0;color:#edf5ff;font:800 23px/1.2 system-ui,sans-serif}
+  .articles-desktop-titlebar h1>b{color:#2b8cff}
+  .articles-desktop-titlebar h1>span{font-weight:800}
+  .articles-desktop-titlebar p{margin:5px 0 0 36px;color:#91a4b9;font-size:12px}
+  .articles-desktop-progress{width:280px;display:grid;grid-template-columns:1fr 42px;gap:6px 12px;align-items:center;color:#91a4b9;font-size:11px}
+  .articles-desktop-progress>span{grid-column:1/-1}
+  .articles-desktop-progress>div{height:7px;border-radius:99px;background:#182a3d;overflow:hidden}
+  .articles-desktop-progress>div>i{display:block;height:100%;border-radius:99px;background:#2b8cff}
+  .articles-desktop-progress>b{color:#edf5ff;font-size:13px}
+
+  .articles-desktop-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+  .articles-desktop-kpis article{
+    min-height:76px;border:1px solid #24394d;border-radius:13px;background:#101e2c;
+    display:grid;grid-template-columns:48px 1fr;grid-template-rows:1fr 1fr;column-gap:10px;align-items:center;padding:10px 14px;box-sizing:border-box
+  }
+  .articles-desktop-kpis article>i{grid-row:1/3;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:24px;background:#12324a;color:#2b8cff}
+  .articles-desktop-kpis article>i.ok{background:#0c3c31;color:#2bdc8a}
+  .articles-desktop-kpis article>i.bad{background:#47242a;color:#ff5059}
+  .articles-desktop-kpis article>i.streak{background:#49351d;color:#ff991f}
+  .articles-desktop-kpis article>i.time{background:#33235c;color:#a678ff}
+  .articles-desktop-kpis article>span{align-self:end;color:#b5c2d0;font-size:11px}
+  .articles-desktop-kpis article>strong{align-self:start;color:#f4f8fd;font-size:19px;line-height:1.1}
+
+  .trainer-desktop-main .home-trainer.is-articles{
+    flex:1;min-height:500px;margin:0!important;padding:28px 30px 34px!important;
+    border:1px solid #294158!important;border-radius:15px!important;background:linear-gradient(145deg,#0e1c2a,#0a1724)!important;
+    box-shadow:none!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:13px!important;position:relative
+  }
+  .trainer-desktop-main .home-trainer.is-articles .trainer-top{
+    position:absolute;inset:18px 20px auto 20px;min-height:28px
+  }
+  .trainer-desktop-main .home-trainer.is-articles .trainer-stars{opacity:.82}
+  .trainer-desktop-main .home-trainer.is-articles .heart{font-size:30px;color:#8ea3b7}
+  .trainer-desktop-main .home-trainer.is-articles .trainer-word{
+    margin:10px 0 0!important;color:#f5f8fc!important;font-size:34px!important;font-weight:800!important;line-height:1.1!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .trainer-translation{
+    margin:0!important;color:#93a4b7!important;font-size:14px!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .trainer-subtitle{
+    margin:18px 0 3px!important;color:#a8b7c7!important;font-size:13px!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid{
+    width:min(100%,850px)!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;margin:14px auto 0!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn{
+    height:126px!important;min-height:126px!important;border:1px solid #2b4257!important;border-radius:14px!important;
+    background:#10202f!important;color:#f4f8fd!important;font-size:27px!important;font-weight:800!important;box-shadow:none!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn:hover:not(:disabled){
+    border-color:#3979b7!important;background:#12283b!important;transform:translateY(-1px)
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-correct{
+    background:#123c31!important;border-color:#25c17e!important;color:#56e6a6!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-wrong{
+    background:#48252b!important;border-color:#ff5059!important;color:#ff7b82!important
+  }
+  .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-dim{opacity:.42!important}
+
+  /* No extra bottom action panel. Existing IDK remains available to keyboard/logic but is visually removed on desktop. */
+  .trainer-desktop-main .home-trainer.is-articles .idk-btn,
+  .trainer-desktop-main .home-trainer.is-articles .dict-stats,
+  .trainer-desktop-main .home-trainer.is-articles .trainer-mode-indicator{display:none!important}
+
+  .trainer-side{position:relative}
+  .trainer-side-bottom{margin-top:auto;display:flex;flex-direction:column;gap:16px}
+  .trainer-side-lang{
+    width:100%;height:48px;padding:0 12px;border:1px solid #24394d;border-radius:11px;background:#0c1a28;color:#edf5ff;
+    display:grid;grid-template-columns:25px 1fr 18px;align-items:center;gap:9px;text-align:left;font:600 12px system-ui,sans-serif
+  }
+  .trainer-side-lang img{width:24px;height:16px;border-radius:3px;object-fit:cover}
+  .trainer-side-lang b{font-size:16px;color:#91a4b9;text-align:center}
+
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles{
+    background:#fff!important;border-color:#dce6f0!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .trainer-word{color:#182235!important}
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn{background:#f8fbff!important;color:#182235!important;border-color:#dce6f0!important}
+  html:not([data-theme="dark"]) .articles-desktop-titlebar h1,
+  html:not([data-theme="dark"]) .articles-desktop-kpis article>strong{color:#182235}
+  html:not([data-theme="dark"]) .articles-desktop-kpis article{background:#fff;border-color:#dce6f0}
+}
+@media(max-width:899px){.articles-desktop-head{display:none!important}}
