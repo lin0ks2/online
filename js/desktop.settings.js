@@ -27,9 +27,8 @@
       app:'Застосунок',updates:'Оновлення',check:'Перевірити оновлення',version:'Версія програми',
       share:'Поділитися',viber:'Viber-група',qr:'QR-код',support:'Підтримка проєкту',
       supportText:'Допоможіть розвивати MOYAMOVA',paypal:'Підтримати через PayPal',
-      about:'Про застосунок',guide:'Інструкція',guideText:'Як працюють тренування, режими та прогрес',
+      guide:'Інструкція',guideText:'Як працюють тренування, режими та прогрес',
       openGuide:'Відкрити інструкцію',copyDone:'Посилання скопійовано',shareTitle:'Поділитися MOYAMOVA',
-      aboutTitle:'Про MOYAMOVA',aboutText:'Офлайн-тренажер слів без реєстрації. Ваш прогрес зберігається тільки на цьому пристрої.'
     }:{
       settings:'Настройки',title:'Настройки',subtitle:'Основные параметры приложения',
       interface:'Интерфейс',language:'Язык приложения',ru:'Русский',ua:'Украинский',
@@ -39,9 +38,8 @@
       app:'Приложение',updates:'Обновления',check:'Проверить обновления',version:'Версия программы',
       share:'Поделиться',viber:'Viber-группа',qr:'QR-код',support:'Поддержка проекта',
       supportText:'Помогите развивать MOYAMOVA',paypal:'Поддержать через PayPal',
-      about:'О приложении',guide:'Инструкция',guideText:'Как работают тренировки, режимы и прогресс',
+      guide:'Инструкция',guideText:'Как работают тренировки, режимы и прогресс',
       openGuide:'Открыть инструкцию',copyDone:'Ссылка скопирована',shareTitle:'Поделиться MOYAMOVA',
-      aboutTitle:'О MOYAMOVA',aboutText:'Офлайн-тренажёр слов без регистрации. Ваш прогресс хранится только на этом устройстве.'
     };
 
     function currentShell(){
@@ -112,48 +110,6 @@
       }catch(_){}
     }
 
-    function renderAbout(shell){
-      const main=mainOf(shell);
-      if(!main) return;
-      settingsOpen=false;
-      const T=txt();
-      main.innerHTML=`
-        <div class="desktop-about">
-          <header class="desktop-settings__head">
-            <div class="desktop-settings__eyebrow">MOYAMOVA</div>
-            <h2>${T.aboutTitle}</h2>
-            <p>${T.aboutText}</p>
-          </header>
-          <section class="desktop-about__hero">
-            <div class="desktop-about__mark">M</div>
-            <div>
-              <strong>MOYAMOVA</strong>
-              <span>${T.version}: ${(A.APP_VER||'—')}</span>
-            </div>
-          </section>
-          <section class="desktop-settings__card desktop-about__guide">
-            <div>
-              <div class="desktop-settings__section-title">${T.guide}</div>
-              <strong>${T.guide}</strong>
-              <p>${T.guideText}</p>
-            </div>
-            <button type="button" class="desktop-settings__button desktop-settings__button--primary" data-about-guide>${T.openGuide}</button>
-          </section>
-          <div class="desktop-about__grid">
-            <button type="button" class="desktop-service-card" data-about-share><span>↗</span><strong>${T.share}</strong></button>
-            <button type="button" class="desktop-service-card" data-about-viber><span>◉</span><strong>${T.viber}</strong></button>
-            <button type="button" class="desktop-service-card" data-about-paypal><span>P</span><strong>PayPal</strong></button>
-          </div>
-        </div>`;
-      main.querySelector('[data-about-guide]').onclick=openGuide;
-      main.querySelector('[data-about-share]').onclick=shareApp;
-      main.querySelector('[data-about-viber]').onclick=()=>openExternal(VIBER_URL);
-      main.querySelector('[data-about-paypal]').onclick=()=>openExternal(PAYPAL_URL);
-      shell.querySelectorAll('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button').forEach(b=>b.classList.remove('is-active'));
-      const aboutBtn=shell.querySelector('[data-desktop-about]');
-      if(aboutBtn) aboutBtn.classList.add('is-active');
-    }
-
     function renderSettings(shell){
       if(settingsBusy) return;
       const main=mainOf(shell);
@@ -180,9 +136,15 @@
               <p>${T.subtitle}</p>
             </div>
             <div class="desktop-settings__tools">
-              <button type="button" class="desktop-tool-btn" data-settings-action="share" title="${T.share}">↗</button>
-              <button type="button" class="desktop-tool-btn" data-settings-action="viber" title="${T.viber}">◉</button>
-              <button type="button" class="desktop-tool-btn" data-settings-action="qr" title="${T.qr}">▦</button>
+              <button type="button" class="desktop-tool-btn desktop-tool-btn--share" data-settings-action="share" title="${T.share}">
+                <span class="desktop-tool-btn__icon">↗</span><span>${T.share}</span>
+              </button>
+              <button type="button" class="desktop-tool-btn desktop-tool-btn--viber" data-settings-action="viber" title="${T.viber}">
+                <span class="desktop-tool-btn__icon">V</span><span>${T.viber}</span>
+              </button>
+              <button type="button" class="desktop-tool-btn desktop-tool-btn--qr" data-settings-action="qr" title="${T.qr}">
+                <span class="desktop-tool-btn__icon">▦</span><span>${T.qr}</span>
+              </button>
             </div>
           </header>
 
@@ -247,8 +209,18 @@
             </section>
           </div>
 
+          <section class="desktop-guide-card">
+            <div class="desktop-guide-card__icon">?</div>
+            <div class="desktop-guide-card__copy">
+              <small>${T.guide}</small>
+              <strong>${T.guideText}</strong>
+              <span>${T.version}: ${(A.APP_VER||'—')}</span>
+            </div>
+            <button type="button" class="desktop-settings__button" data-settings-action="guide">${T.openGuide}</button>
+          </section>
+
           <section class="desktop-support-card">
-            <div class="desktop-support-card__paypal">P</div>
+            <div class="desktop-support-card__paypal">Pay</div>
             <div class="desktop-support-card__copy">
               <small>${T.support}</small>
               <strong>${T.supportText}</strong>
@@ -358,6 +330,7 @@
       main.querySelector('[data-settings-action="viber"]').onclick=()=>showPopover('viber');
       main.querySelector('[data-settings-action="qr"]').onclick=()=>showPopover('qr');
       main.querySelector('[data-settings-action="paypal"]').onclick=()=>openExternal(PAYPAL_URL);
+      main.querySelector('[data-settings-action="guide"]').onclick=openGuide;
 
       main.querySelector('[data-settings-action="export"]').onclick=()=>{
         try{ if(A.Backup&&A.Backup.export) A.Backup.export(); }catch(_){}
@@ -390,18 +363,9 @@
           btn.addEventListener('click',()=>renderSettings(side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell')));
           nav.appendChild(sep);
           nav.appendChild(btn);
-
-          const about=document.createElement('button');
-          about.type='button';
-          about.dataset.desktopAbout='1';
-          about.innerHTML='ⓘ <span>'+T.about+'</span>';
-          about.addEventListener('click',()=>renderAbout(side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell')));
-          nav.appendChild(about);
         }else{
           const span=btn.querySelector('span');
           if(span) span.textContent=txt().settings;
-          const about=nav.querySelector('[data-desktop-about] span');
-          if(about) about.textContent=txt().about;
         }
 
         const shell=side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell');
@@ -413,7 +377,7 @@
 
     document.addEventListener('click',e=>{
       const b=e.target&&e.target.closest&&e.target.closest('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button');
-      if(b && !b.hasAttribute('data-desktop-settings') && !b.hasAttribute('data-desktop-about')) settingsOpen=false;
+      if(b && !b.hasAttribute('data-desktop-settings')) settingsOpen=false;
     },true);
 
     let injectRaf=0;

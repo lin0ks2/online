@@ -188,3 +188,135 @@ html[data-theme="dark"] .desktop-settings__row--secondary,
   .desktop-service-card span{width:32px;height:32px;border-radius:9px;background:#edf5ff;color:#1769e8;display:grid;place-items:center;font-weight:900}
   .desktop-service-card strong{font-size:12px}
 }
+
+
+/* ==========================================================
+ * 1.9.6 — Settings consolidation
+ * No separate About page. Service actions are explicit.
+ * ========================================================== */
+@media (min-width:900px){
+  .desktop-settings__tools{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+    max-width:480px;
+  }
+
+  .desktop-tool-btn{
+    width:auto!important;
+    min-width:118px;
+    height:42px;
+    padding:0 12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+    border:1px solid #e0e8f1;
+    border-radius:11px;
+    background:#fff;
+    color:#263445;
+    font-size:11px;
+    font-weight:800;
+    cursor:pointer;
+  }
+
+  .desktop-tool-btn__icon{
+    width:24px;
+    height:24px;
+    flex:0 0 24px;
+    display:grid;
+    place-items:center;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:900;
+  }
+
+  .desktop-tool-btn--share .desktop-tool-btn__icon{
+    background:#edf5ff;
+    color:#1769e8;
+  }
+
+  .desktop-tool-btn--viber{
+    border-color:#dcd7ff;
+  }
+  .desktop-tool-btn--viber .desktop-tool-btn__icon{
+    background:#7360f2;
+    color:#fff;
+    font-family:Arial,sans-serif;
+  }
+
+  .desktop-tool-btn--qr .desktop-tool-btn__icon{
+    background:#f0f3f7;
+    color:#334155;
+  }
+
+  .desktop-tool-btn:hover{
+    background:#f8fbff;
+    border-color:#8fcaff;
+  }
+
+  .desktop-guide-card{
+    margin-top:13px;
+    padding:14px 16px;
+    display:grid;
+    grid-template-columns:44px minmax(0,1fr) auto;
+    gap:13px;
+    align-items:center;
+    border:1px solid #e4eaf3;
+    border-radius:14px;
+    background:#fff;
+  }
+
+  .desktop-guide-card__icon{
+    width:42px;height:42px;
+    border-radius:10px;
+    background:#edf5ff;
+    color:#1769e8;
+    display:grid;
+    place-items:center;
+    font:900 20px/1 system-ui;
+  }
+
+  .desktop-guide-card__copy{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+  }
+
+  .desktop-guide-card__copy small{
+    color:#1769e8;
+    font-size:10px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+  }
+
+  .desktop-guide-card__copy strong{
+    font-size:13px;
+    color:#182235;
+  }
+
+  .desktop-guide-card__copy span{
+    font-size:10px;
+    color:#7b8797;
+  }
+
+  .desktop-support-card__paypal{
+    width:42px!important;
+    height:42px!important;
+    border-radius:10px!important;
+    background:#edf5ff!important;
+    color:#1769e8!important;
+    display:grid!important;
+    place-items:center!important;
+    font:900 12px/1 system-ui!important;
+  }
+
+  .desktop-settings__button--paypal{
+    min-width:190px;
+    font-weight:800;
+  }
+
+  /* Old About page styles remain harmless but no longer render. */
+}
