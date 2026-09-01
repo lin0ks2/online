@@ -770,3 +770,45 @@ html[data-theme="dark"] .trainer-desktop-shell,
     background:#e1e8f0;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.5 — final desktop lower-panel unification
+ * IMPORTANT: word answer geometry remains permanent 1x4.
+ * ========================================================== */
+@media (min-width:900px){
+  .trainer-desktop-main .home-trainer--words .trainer-audio-btn,
+  .trainer-desktop-main .home-trainer.is-articles .trainer-audio-btn{
+    display:none!important;
+  }
+
+  .trainer-desktop-main .trainer-quickbar{
+    width:100%!important;
+    max-width:none!important;
+    height:74px!important;
+    min-height:74px!important;
+    margin:14px 0 0!important;
+    padding:0!important;
+    border-radius:14px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+
+  .trainer-desktop-main .trainer-quickbar .trainer-qbtn{
+    height:72px!important;
+    min-height:72px!important;
+    border-radius:0!important;
+    margin:0!important;
+  }
+
+  .trainer-desktop-main .trainer-quickbar .trainer-qsep{
+    height:72px!important;
+    margin:0!important;
+  }
+
+  .trainer-desktop-main .home-trainer--words .answers-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-rows:repeat(4,var(--trainer-answer-h))!important;
+  }
+}

@@ -215,3 +215,70 @@
     color:#617188!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.5 — Articles lower panel + light hover final
+ * ========================================================== */
+@media (min-width:900px){
+  .articles-desktop-tools{
+    width:100%!important;
+    max-width:none!important;
+    height:74px!important;
+    min-height:74px!important;
+    margin:14px 0 0!important;
+    padding:0!important;
+    border-radius:14px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+
+  .articles-desktop-tools .articles-tool{
+    height:72px!important;
+    min-height:72px!important;
+    margin:0!important;
+    border-radius:0!important;
+    box-sizing:border-box!important;
+  }
+
+  .trainer-desktop-main .home-trainer.is-articles .trainer-audio-btn{
+    display:none!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn:hover:not(:disabled):not(.is-correct):not(.is-wrong){
+    background:#eef5fc!important;
+    border-color:#9fc2e4!important;
+    color:#182235!important;
+    filter:none!important;
+    box-shadow:0 4px 14px rgba(31,51,73,.06)!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn.is-correct,
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn.is-correct:hover{
+    background:#e7f8ef!important;
+    border-color:#24b86b!important;
+    color:#127341!important;
+    filter:none!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn.is-wrong,
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn.is-wrong:hover{
+    background:#fff0f1!important;
+    border-color:#ef4f62!important;
+    color:#b82d3d!important;
+    filter:none!important;
+  }
+
+  html:not([data-theme="dark"]) .trainer-desktop-main
+  .home-trainer.is-articles .answers-grid .answer-btn.is-dim:hover{
+    background:#f8fbff!important;
+    border-color:#dce6f0!important;
+    color:#617188!important;
+    filter:none!important;
+  }
+}
