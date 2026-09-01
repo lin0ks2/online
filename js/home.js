@@ -1356,14 +1356,8 @@ function activeDeckKey() {
             <button data-trainer-route="mistakes">△ <span>${__navT.errors}</span></button>
             <button data-trainer-route="fav">☆ <span>${__navT.fav}</span></button>
             <button data-trainer-route="stats">▥ <span>${__navT.stats}</span></button>
-            <button data-trainer-route="settings">⚙ <span>${getUiLang()==='uk' ? 'Налаштування' : 'Настройки'}</span></button>
           </nav>
           <div class="trainer-side-bottom">
-            <button type="button" class="trainer-side-lang" id="trainerSideLang">
-              <img src="./img/flags/${getUiLang()==='uk' ? 'uk' : 'ru'}.svg" alt="">
-              <span>${getUiLang()==='uk' ? 'Українська' : 'Русский'}</span>
-              <b>⌄</b>
-            </button>
             <div class="dash-side-foot">v${A.APP_VER||'1.7.7'} · Offline <i></i></div>
           </div>
         </aside>
@@ -1481,82 +1475,6 @@ function activeDeckKey() {
           if (action) Router.routeTo(action);
         });
       });
-      const sideLangBtn = app.querySelector('#trainerSideLang');
-      if (sideLangBtn) sideLangBtn.addEventListener('click', () => {
-        try {
-          const cur = getUiLang()==='uk' ? 'uk' : 'ru';
-          const next = cur === 'uk' ? 'ru' : 'uk';
-          A.settings = A.settings || {};
-          A.settings.lang = next;
-          A.settings.uiLang = next;
-          try { A.saveSettings && A.saveSettings(A.settings); } catch(_){}
-          try { document.documentElement.dataset.lang = next; } catch(_){}
-          try { document.dispatchEvent(new CustomEvent('lexitron:ui-lang-changed',{detail:{lang:next}})); } catch(_){}
-          try { window.dispatchEvent(new CustomEvent('lexitron:ui-lang-changed',{detail:{lang:next}})); } catch(_){}
-          renderHome();
-        } catch(_){}
-      });
-    }
-
-    // Инициализация summary после отрисовки (если фильтры показаны)
-    try { if (showFilters) updateFiltersSummary(); } catch(_){ }
-  }
-
-  /* ------------------------------- Сеты ------------------------------- */
-  function renderSets() {
-    const key  = activeDeckKey();
-    const deck = getTrainableDeckForKey(key);
-
-    const grid    = document.getElementById('setsBar');
-    const statsEl = document.getElementById('setStats');
-    if (!grid) return;
-
-    const SZ = getSetSizeForKey(key);
-    const totalSets = Math.max(1, Math.ceil(deck.length / SZ));
-    const activeIdx = (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.getSetIndex === 'function')
-      ? Number(A.ArticlesTrainer.getSetIndex(key) || 0)
-      : Number(getActiveBatchIndex() || 0);
-    grid.innerHTML = '';
-
-    const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
-
-    const isArticles = !!(A.settings && A.settings.trainerKind === 'articles');
-
-    for (let i = 0; i < totalSets; i++) {
-      const from = i * SZ;
-      const to   = Math.min(deck.length, (i + 1) * SZ);
-      const sub  = deck.slice(from, to);
-      const done = sub.length > 0 && sub.every(w => {
-        if (isArticles) {
-          try {
-            const maxA = (A.ArticlesProgress && typeof A.ArticlesProgress.starsMax === 'function') ? A.ArticlesProgress.starsMax() : starsMax;
-            const haveA = (A.ArticlesProgress && typeof A.ArticlesProgress.getStars === 'function') ? (A.ArticlesProgress.getStars(key, w.id) || 0) : 0;
-            return Number(haveA || 0) >= Number(maxA || 5);
-          } catch(_) { return false; }
-        }
-        return (((A.state && A.state.stars && A.state.stars[starKey(w.id, key)]) || 0) >= starsMax);
-      });
-
-      const btn = document.createElement('button');
-      btn.className = 'set-pill' + (i === activeIdx ? ' is-active' : '') + (done ? ' is-done' : '');
-      const desktopSets = !!(window.matchMedia && window.matchMedia('(min-width: 900px)').matches);
-      btn.textContent = desktopSets ? `${getUiLang()==='uk' ? 'Набір' : 'Сет'} ${i + 1}` : String(i + 1);
-      btn.onclick = () => {
-        try {
-          if (isArticlesModeForKey(key) && A.ArticlesTrainer && typeof A.ArticlesTrainer.setSetIndex === 'function') {
-            A.ArticlesTrainer.setSetIndex(i, key);
-          } else if (A.Trainer && typeof A.Trainer.setBatchIndex === 'function') {
-            A.Trainer.setBatchIndex(i, key);
-          }
-        } catch (_){}
-        renderSets();
-        if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
-          try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
-        } else {
-          renderTrainer();
-        }
-        try { A.Stats && A.Stats.recomputeAndRender && A.Stats.recomputeAndRender(); } catch(_){}
-      };
       grid.appendChild(btn);
     }
 

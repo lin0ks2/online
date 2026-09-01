@@ -103,3 +103,74 @@
   html:not([data-theme="dark"]) .articles-desktop-kpis article{background:#fff;border-color:#dce6f0}
 }
 @media(max-width:899px){.articles-desktop-head{display:none!important}}
+
+
+/* 1.10.1 — light answer states + article colors + desktop utility strip */
+@media (min-width:900px){
+  /* article school colors: der blue, die red, das green */
+  .trainer-desktop-main .home-trainer.is-articles .article-answer__choice{
+    display:block;font:800 27px/1.1 system-ui,sans-serif
+  }
+  .trainer-desktop-main .home-trainer.is-articles .article-answer__gender{
+    display:block;margin-top:16px;font:600 12px/1.2 system-ui,sans-serif
+  }
+  .trainer-desktop-main .home-trainer.is-articles .article-answer--der .article-answer__gender{color:#258cff}
+  .trainer-desktop-main .home-trainer.is-articles .article-answer--die .article-answer__gender{color:#ef4f62}
+  .trainer-desktop-main .home-trainer.is-articles .article-answer--das .article-answer__gender{color:#25bd72}
+
+  /* Explicit light-theme feedback wins over the neutral light button rule. */
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-correct{
+    background:#e7f8ef!important;border-color:#24b86b!important;color:#127341!important;
+    box-shadow:0 0 0 2px rgba(36,184,107,.10)!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-wrong{
+    background:#fff0f1!important;border-color:#ef4f62!important;color:#b82d3d!important;
+    box-shadow:0 0 0 2px rgba(239,79,98,.08)!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answers-grid .answer-btn.is-dim{
+    opacity:.45!important;background:#f8fbff!important;color:#617188!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answer-btn:active{
+    background:#eef4fb!important;color:#182235!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answer-btn.is-correct:active{
+    background:#e7f8ef!important;color:#127341!important
+  }
+  html:not([data-theme="dark"]) .trainer-desktop-main .home-trainer.is-articles .answer-btn.is-wrong:active{
+    background:#fff0f1!important;color:#b82d3d!important
+  }
+
+  .articles-desktop-tools{
+    min-height:74px;display:grid;grid-template-columns:1fr 1.15fr 1.15fr;align-items:stretch;
+    border:1px solid #294158;border-radius:14px;background:#0e1c2a;overflow:hidden
+  }
+  .articles-tool{
+    position:relative;border:0;border-right:1px solid #294158;background:transparent;color:#edf5ff;
+    display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:10px;padding:12px 20px;text-align:left;cursor:pointer
+  }
+  .articles-tool:last-child{border-right:0}
+  .articles-tool>i{font-style:normal;font-size:22px;color:#8fa6bd;text-align:center}
+  .articles-tool>span{display:flex;flex-direction:column;gap:3px}
+  .articles-tool b{font-size:12px}.articles-tool small{font-size:9px;color:#8297ab;font-weight:500}
+  .articles-tool:hover{background:rgba(43,140,255,.06)}
+  .articles-tool--tts>em{
+    width:42px;height:23px;border-radius:99px;background:#26384a;position:relative;display:block
+  }
+  .articles-tool--tts>em:after{
+    content:"";position:absolute;left:3px;top:3px;width:17px;height:17px;border-radius:50%;background:#9aaaba;transition:.18s
+  }
+  .articles-tool--tts.is-active>i{color:#2b8cff}
+  .articles-tool--tts.is-active>em{background:#2b8cff}
+  .articles-tool--tts.is-active>em:after{left:22px;background:white}
+
+  /* Remove the transient language control entirely; keep only version/offline status. */
+  .trainer-side-lang{display:none!important}
+  .trainer-side-bottom{margin-top:auto}
+
+  html:not([data-theme="dark"]) .articles-desktop-tools{
+    background:#fff;border-color:#dce6f0;box-shadow:0 7px 24px rgba(31,51,73,.06)
+  }
+  html:not([data-theme="dark"]) .articles-tool{color:#182235;border-color:#e1e8f0}
+  html:not([data-theme="dark"]) .articles-tool small{color:#8291a4}
+  html:not([data-theme="dark"]) .articles-tool:hover{background:#f7faff}
+}

@@ -175,6 +175,29 @@
           '<article><i class="time">◷</i><span>'+(uk?'Час':'Время')+'</span><strong>'+time+'</strong></article>' +
           '<article><i class="total">☷</i><span>'+(uk?'Набір':'Сет')+'</span><strong>'+(Number(ss.setIndex||0)+1)+' / '+Number(ss.totalSets||1)+'</strong></article>' +
         '</div>';
+
+      var trainerCard = home.querySelector('.home-trainer.is-articles');
+      if (trainerCard) {
+        var tools = home.querySelector('.articles-desktop-tools');
+        if (!tools) {
+          tools = document.createElement('section');
+          tools.className = 'articles-desktop-tools';
+          if (trainerCard.nextSibling) trainerCard.parentNode.insertBefore(tools, trainerCard.nextSibling);
+          else trainerCard.parentNode.appendChild(tools);
+        }
+        var ttsOn = false;
+        try { ttsOn = window.localStorage.getItem('mm.tts.words') === '1'; } catch(_){}
+        tools.innerHTML =
+          '<button type="button" class="articles-tool articles-tool--tts'+(ttsOn?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(ttsOn)+'">' +
+            '<i>🔊</i><span><b>'+(uk?'Озвучення':'Озвучка')+'</b><small>'+(ttsOn?(uk?'увімкнено':'включена'):(uk?'вимкнено':'выключена'))+'</small></span><em></em>' +
+          '</button>' +
+          '<button type="button" class="articles-tool" data-articles-tool="skip">' +
+            '<i>⇄</i><span><b>'+(uk?'Пропустити слово':'Пропустить слово')+'</b><small>'+(uk?'перейти до наступного':'перейти к следующему')+'</small></span>' +
+          '</button>' +
+          '<button type="button" class="articles-tool" data-articles-tool="reveal">' +
+            '<i>?</i><span><b>'+(uk?'Показати відповідь':'Показать ответ')+'</b><small>'+(uk?'показати правильний артикль':'показать правильный артикль')+'</small></span>' +
+          '</button>';
+      }
     } catch(_){}
   }
 
@@ -324,8 +347,13 @@
       for (var j = 0; j < 3; j++) {
         var article = String(uiState.layout[j] || '');
         var b = document.createElement('button');
-        b.className = 'answer-btn';
-        b.textContent = article;
+        b.className = 'answer-btn article-answer--' + article;
+        b.innerHTML = '<span class="article-answer__choice">' + article + '</span>' +
+          '<small class="article-answer__gender">' +
+            (article === 'der' ? ((String((A.settings && (A.settings.uiLang || A.settings.lang)) || 'ru').toLowerCase()==='uk') ? 'чоловічий рід' : 'мужской род') :
+             article === 'die' ? ((String((A.settings && (A.settings.uiLang || A.settings.lang)) || 'ru').toLowerCase()==='uk') ? 'жіночий рід' : 'женский род') :
+             ((String((A.settings && (A.settings.uiLang || A.settings.lang)) || 'ru').toLowerCase()==='uk') ? 'середній рід' : 'средний род')) +
+          '</small>';
         b.setAttribute('data-article', article);
 
         // КЛИКИ обрабатываются единым делегированным слушателем (см. mount)
@@ -440,6 +468,67 @@
     unsubs.push(function () {
       try { if (rootEl) rootEl.removeEventListener('click', onRootClick); } catch (e) {}
     });
+
+    var homeEl = rootEl.closest('.home');
+    var onToolsClick = function(e) {
+      try {
+        var btn = e && e.target && e.target.closest ? e.target.closest('[data-articles-tool]') : null;
+        if (!btn) return;
+        var action = btn.getAttribute('data-articles-tool');
+
+        if (action === 'tts') {
+          var next = true;
+          try { next = window.localStorage.getItem('mm.tts.words') !== '1'; } catch(_){}
+          try { window.localStorage.setItem('mm.tts.words', next ? '1' : '0'); } catch(_){}
+          btn.classList.toggle('is-active', next);
+          btn.setAttribute('aria-pressed', String(next));
+          var small = btn.querySelector('small');
+          var uk = false; try { uk = String((A.settings && (A.settings.uiLang || A.settings.lang)) || 'ru').toLowerCase()==='uk'; } catch(_){}
+          if (small) small.textContent = next ? (uk?'увімкнено':'включена') : (uk?'вимкнено':'выключена');
+          try { if (A.AudioTTS && A.AudioTTS.refreshIndicators) A.AudioTTS.refreshIndicators(); } catch(_){}
+          if (next) {
+            try {
+              var vmT = A.ArticlesTrainer && A.ArticlesTrainer.getViewModel ? A.ArticlesTrainer.getViewModel() : null;
+              if (vmT && A.AudioTTS && typeof A.AudioTTS.speakText === 'function') A.AudioTTS.speakText(String(vmT.wordDisplay||''), false, {noVoice:true});
+            } catch(_){}
+          }
+          return;
+        }
+
+        if (action === 'skip') {
+          if (uiState.solved) return;
+          try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch(_){}
+          return;
+        }
+
+        if (action === 'reveal') {
+          if (uiState.solved) return;
+          var idk = rootEl.querySelector('.idk-btn');
+          if (idk) {
+            idk.click();
+          } else {
+            // Same semantics as the existing "Не знаю": count as wrong and reveal correct.
+            uiState.solved = true;
+            var vm0 = A.ArticlesTrainer && A.ArticlesTrainer.getViewModel ? A.ArticlesTrainer.getViewModel() : null;
+            var correct0 = vm0 ? String(vm0.correct||'').trim() : '';
+            try {
+              if (A.ArticlesTrainer && A.ArticlesTrainer.answerIdk) A.ArticlesTrainer.answerIdk();
+              else if (A.ArticlesTrainer && A.ArticlesTrainer.answer) A.ArticlesTrainer.answer('__idk__');
+            } catch(_){}
+            rootEl.querySelectorAll('.answers-grid .answer-btn').forEach(function(b){
+              b.disabled = true;
+              var a=String(b.getAttribute('data-article')||'').trim();
+              if (a===correct0) b.classList.add('is-correct'); else b.classList.add('is-dim');
+            });
+            setTimeout(function(){ try { A.ArticlesTrainer && A.ArticlesTrainer.next && A.ArticlesTrainer.next(); } catch(_){} }, ADV_DELAY);
+          }
+        }
+      } catch(_){}
+    };
+    if (homeEl) {
+      homeEl.addEventListener('click', onToolsClick);
+      unsubs.push(function(){ try { homeEl.removeEventListener('click', onToolsClick); } catch(_){} });
+    }
 
     // подписка на обновления от тренера
     var bus = ensureBusOn();
