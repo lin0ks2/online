@@ -6,12 +6,7 @@
  * Обновлено: 2025-11-17
  * ========================================================== */
 
-(function (root) {
-  const MONO_JAR_ID = '56HNLifwyr';                // Monobank Jar
-  const PAYPAL_BUTTON_ID = 'KFBR8BW5ZZTQ4';        // PayPal hosted button
-
-  const URL_MONO   = `https://send.monobank.ua/jar/${MONO_JAR_ID}`;
-  const URL_PAYPAL = `https://www.paypal.com/donate/?hosted_button_id=${PAYPAL_BUTTON_ID}`;
+(function (root) {  const PAYPAL_BUTTON_ID = 'KFBR8BW5ZZTQ4';        // PayPal hosted button  const URL_PAYPAL = `https://www.paypal.com/donate/?hosted_button_id=${PAYPAL_BUTTON_ID}`;
 
   let sheet, scroller, styleTag;
   let __backRoute = 'home';
@@ -160,18 +155,7 @@
       <div class="donate-note">
         <div class="emoji">⚖️</div>
         <div data-i18n="donateLegalNote">Ваше пожертвование является добровольным и не является оплатой товаров или услуг.</div>
-      </div>
-
-      <section class="donate-section">
-        <h3 data-i18n="donateMonoTitle">Поддержать через Monobank</h3>
-        <div class="donate-cta-wrap">
-          <a class="donate-cta donate-cta--mono" href="${URL_MONO}" target="_blank" rel="noopener" data-dc="mono" data-i18n="donateMonoOpen" data-i18n="donateMonoOpen">
-            Открыть Monobank
-          </a>
-        </div>
-      </section>
-
-      <section class="donate-section">
+      </div><section class="donate-section">
         <h3 data-i18n="donatePaypalTitle">Поддержать через PayPal</h3>
         <div class="donate-cta-wrap">
           <a class="donate-cta donate-cta--paypal" href="${URL_PAYPAL}" target="_blank" rel="noopener" data-dc="paypal" data-i18n="donatePaypalOpen" data-i18n="donatePaypalOpen">

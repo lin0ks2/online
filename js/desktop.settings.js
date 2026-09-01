@@ -13,6 +13,9 @@
 
     let settingsOpen=false;
     let settingsBusy=false;
+    const APP_URL='https://moyamova.online/';
+    const VIBER_URL='https://invite.viber.com/?g2=AQAitGq4muZQCVW44K1Z4aR%2FP9VDM2%2Bso14cyg3Ec1e7mt%2BTaLbs5S1UdHZCU%2Fy5';
+    const PAYPAL_URL='https://www.paypal.com/donate/?hosted_button_id=KFBR8BW5ZZTQ4';
 
     const uk=()=>String((A.settings&&(A.settings.uiLang||A.settings.lang))||document.documentElement.dataset.lang||'ru').toLowerCase()==='uk';
     const txt=()=>uk()?{
@@ -21,14 +24,24 @@
       theme:'Тема',light:'Світла',dark:'Темна',
       learning:'Навчання',level:'Режим складності',normal:'Звичайний',hard:'Складний',
       data:'Дані',backup:'Резервна копія',export:'Експорт',import:'Імпорт',
-      app:'Застосунок',updates:'Оновлення',check:'Перевірити оновлення',version:'Версія програми'
+      app:'Застосунок',updates:'Оновлення',check:'Перевірити оновлення',version:'Версія програми',
+      share:'Поділитися',viber:'Viber-група',qr:'QR-код',support:'Підтримка проєкту',
+      supportText:'Допоможіть розвивати MOYAMOVA',paypal:'Підтримати через PayPal',
+      about:'Про застосунок',guide:'Інструкція',guideText:'Як працюють тренування, режими та прогрес',
+      openGuide:'Відкрити інструкцію',copyDone:'Посилання скопійовано',shareTitle:'Поділитися MOYAMOVA',
+      aboutTitle:'Про MOYAMOVA',aboutText:'Офлайн-тренажер слів без реєстрації. Ваш прогрес зберігається тільки на цьому пристрої.'
     }:{
       settings:'Настройки',title:'Настройки',subtitle:'Основные параметры приложения',
       interface:'Интерфейс',language:'Язык приложения',ru:'Русский',ua:'Украинский',
       theme:'Тема',light:'Светлая',dark:'Тёмная',
       learning:'Обучение',level:'Режим сложности',normal:'Обычный',hard:'Сложный',
       data:'Данные',backup:'Резервная копия',export:'Экспорт',import:'Импорт',
-      app:'Приложение',updates:'Обновления',check:'Проверить обновления',version:'Версия программы'
+      app:'Приложение',updates:'Обновления',check:'Проверить обновления',version:'Версия программы',
+      share:'Поделиться',viber:'Viber-группа',qr:'QR-код',support:'Поддержка проекта',
+      supportText:'Помогите развивать MOYAMOVA',paypal:'Поддержать через PayPal',
+      about:'О приложении',guide:'Инструкция',guideText:'Как работают тренировки, режимы и прогресс',
+      openGuide:'Открыть инструкцию',copyDone:'Ссылка скопирована',shareTitle:'Поделиться MOYAMOVA',
+      aboutTitle:'О MOYAMOVA',aboutText:'Офлайн-тренажёр слов без регистрации. Ваш прогресс хранится только на этом устройстве.'
     };
 
     function currentShell(){
@@ -64,6 +77,83 @@
       if(sb) sb.textContent=T.settings;
     }
 
+
+    function notify(message){
+      try{
+        if(window.App&&App.Notify&&typeof App.Notify.show==='function') return App.Notify.show(message);
+      }catch(_){}
+      try{ alert(message); }catch(_){}
+    }
+
+    function openExternal(url){
+      try{ window.open(url,'_blank','noopener,noreferrer'); }catch(_){ location.href=url; }
+    }
+
+    async function shareApp(){
+      const T=txt();
+      try{
+        if(navigator.share){
+          await navigator.share({title:'MOYAMOVA',text:T.shareTitle,url:APP_URL});
+          return;
+        }
+      }catch(_){}
+      try{
+        await navigator.clipboard.writeText(APP_URL);
+        notify(T.copyDone);
+      }catch(_){
+        try{ window.prompt(T.shareTitle,APP_URL); }catch(__){}
+      }
+    }
+
+    function openGuide(){
+      try{
+        if(window.Guide&&typeof window.Guide.open==='function') return window.Guide.open();
+        if(window.App&&App.Guide&&typeof App.Guide.open==='function') return App.Guide.open();
+      }catch(_){}
+    }
+
+    function renderAbout(shell){
+      const main=mainOf(shell);
+      if(!main) return;
+      settingsOpen=false;
+      const T=txt();
+      main.innerHTML=`
+        <div class="desktop-about">
+          <header class="desktop-settings__head">
+            <div class="desktop-settings__eyebrow">MOYAMOVA</div>
+            <h2>${T.aboutTitle}</h2>
+            <p>${T.aboutText}</p>
+          </header>
+          <section class="desktop-about__hero">
+            <div class="desktop-about__mark">M</div>
+            <div>
+              <strong>MOYAMOVA</strong>
+              <span>${T.version}: ${(A.APP_VER||'—')}</span>
+            </div>
+          </section>
+          <section class="desktop-settings__card desktop-about__guide">
+            <div>
+              <div class="desktop-settings__section-title">${T.guide}</div>
+              <strong>${T.guide}</strong>
+              <p>${T.guideText}</p>
+            </div>
+            <button type="button" class="desktop-settings__button desktop-settings__button--primary" data-about-guide>${T.openGuide}</button>
+          </section>
+          <div class="desktop-about__grid">
+            <button type="button" class="desktop-service-card" data-about-share><span>↗</span><strong>${T.share}</strong></button>
+            <button type="button" class="desktop-service-card" data-about-viber><span>◉</span><strong>${T.viber}</strong></button>
+            <button type="button" class="desktop-service-card" data-about-paypal><span>P</span><strong>PayPal</strong></button>
+          </div>
+        </div>`;
+      main.querySelector('[data-about-guide]').onclick=openGuide;
+      main.querySelector('[data-about-share]').onclick=shareApp;
+      main.querySelector('[data-about-viber]').onclick=()=>openExternal(VIBER_URL);
+      main.querySelector('[data-about-paypal]').onclick=()=>openExternal(PAYPAL_URL);
+      shell.querySelectorAll('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button').forEach(b=>b.classList.remove('is-active'));
+      const aboutBtn=shell.querySelector('[data-desktop-about]');
+      if(aboutBtn) aboutBtn.classList.add('is-active');
+    }
+
     function renderSettings(shell){
       if(settingsBusy) return;
       const main=mainOf(shell);
@@ -83,13 +173,20 @@
 
       main.innerHTML=`
         <div class="desktop-settings">
-          <header class="desktop-settings__head">
+          <header class="desktop-settings__head desktop-settings__head--tools">
             <div>
               <div class="desktop-settings__eyebrow">MOYAMOVA</div>
               <h2>${T.title}</h2>
               <p>${T.subtitle}</p>
             </div>
+            <div class="desktop-settings__tools">
+              <button type="button" class="desktop-tool-btn" data-settings-action="share" title="${T.share}">↗</button>
+              <button type="button" class="desktop-tool-btn" data-settings-action="viber" title="${T.viber}">◉</button>
+              <button type="button" class="desktop-tool-btn" data-settings-action="qr" title="${T.qr}">▦</button>
+            </div>
           </header>
+
+          <div class="desktop-settings__popover" data-settings-popover hidden></div>
 
           <div class="desktop-settings__grid">
             <section class="desktop-settings__card">
@@ -149,6 +246,15 @@
               </div>
             </section>
           </div>
+
+          <section class="desktop-support-card">
+            <div class="desktop-support-card__paypal">P</div>
+            <div class="desktop-support-card__copy">
+              <small>${T.support}</small>
+              <strong>${T.supportText}</strong>
+            </div>
+            <button type="button" class="desktop-settings__button desktop-settings__button--paypal" data-settings-action="paypal">${T.paypal}</button>
+          </section>
         </div>`;
 
       shell.querySelectorAll('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button')
@@ -236,6 +342,23 @@
         };
       });
 
+
+      const popover=main.querySelector('[data-settings-popover]');
+      function showPopover(type){
+        if(!popover) return;
+        if(type==='qr'){
+          popover.innerHTML=`<div class="desktop-qr-popover"><strong>${T.qr}</strong><img src="./img/moyamova-share-qr.png" alt="QR"><span>${APP_URL}</span></div>`;
+        }else if(type==='viber'){
+          popover.innerHTML=`<div class="desktop-viber-popover"><strong>${T.viber}</strong><p>${uk()?'Приєднуйтесь до групи для спілкування та підтримки.':'Присоединяйтесь к группе для общения и поддержки.'}</p><button type="button" class="desktop-settings__button desktop-settings__button--viber">${uk()?'Перейти в групу':'Перейти в группу'}</button></div>`;
+          popover.querySelector('button').onclick=()=>openExternal(VIBER_URL);
+        }
+        popover.hidden=false;
+      }
+      main.querySelector('[data-settings-action="share"]').onclick=shareApp;
+      main.querySelector('[data-settings-action="viber"]').onclick=()=>showPopover('viber');
+      main.querySelector('[data-settings-action="qr"]').onclick=()=>showPopover('qr');
+      main.querySelector('[data-settings-action="paypal"]').onclick=()=>openExternal(PAYPAL_URL);
+
       main.querySelector('[data-settings-action="export"]').onclick=()=>{
         try{ if(A.Backup&&A.Backup.export) A.Backup.export(); }catch(_){}
       };
@@ -267,9 +390,18 @@
           btn.addEventListener('click',()=>renderSettings(side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell')));
           nav.appendChild(sep);
           nav.appendChild(btn);
+
+          const about=document.createElement('button');
+          about.type='button';
+          about.dataset.desktopAbout='1';
+          about.innerHTML='ⓘ <span>'+T.about+'</span>';
+          about.addEventListener('click',()=>renderAbout(side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell')));
+          nav.appendChild(about);
         }else{
           const span=btn.querySelector('span');
           if(span) span.textContent=txt().settings;
+          const about=nav.querySelector('[data-desktop-about] span');
+          if(about) about.textContent=txt().about;
         }
 
         const shell=side.closest('.dashboard,.trainer-desktop-shell,.desktop-pages-shell');
@@ -281,7 +413,7 @@
 
     document.addEventListener('click',e=>{
       const b=e.target&&e.target.closest&&e.target.closest('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button');
-      if(b && !b.hasAttribute('data-desktop-settings')) settingsOpen=false;
+      if(b && !b.hasAttribute('data-desktop-settings') && !b.hasAttribute('data-desktop-about')) settingsOpen=false;
     },true);
 
     let injectRaf=0;
