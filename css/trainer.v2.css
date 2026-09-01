@@ -670,3 +670,15 @@ html[data-theme="dark"] .trainer-desktop-shell,
   border-radius:3px;
   box-shadow:0 0 0 1px rgba(15,23,42,.12);
 }
+
+/* 1.9.8 — trainer set arrows in dark theme */
+@media (min-width:900px){
+  html[data-theme="dark"] .trainer-desktop-main .sets-arrow,
+  .dark .trainer-desktop-main .sets-arrow{
+    background:#172638!important;border-color:#30465d!important;color:#edf6ff!important
+  }
+  html[data-theme="dark"] .trainer-desktop-main .sets-arrow:hover:not(:disabled),
+  .dark .trainer-desktop-main .sets-arrow:hover:not(:disabled){
+    background:#1b2e42!important;border-color:#32b6f4!important;color:#fff!important
+  }
+}

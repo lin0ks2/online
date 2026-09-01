@@ -104,9 +104,17 @@
     }
 
     function openGuide(){
+      settingsOpen=false;
       try{
-        if(window.Guide&&typeof window.Guide.open==='function') return window.Guide.open();
-        if(window.App&&App.Guide&&typeof App.Guide.open==='function') return App.Guide.open();
+        if(A.Router&&typeof A.Router.routeTo==='function'){
+          A.Router.routeTo('guide');
+          return;
+        }
+        if(A.ViewGuide&&typeof A.ViewGuide.mount==='function'){
+          A.ViewGuide.mount();
+          return;
+        }
+        if(window.Guide&&typeof window.Guide.open==='function') window.Guide.open();
       }catch(_){}
     }
 
@@ -300,17 +308,22 @@
           // It performs the existing "progress in current set" check,
           // shows confirmModeChangeSet(), and clears the current set only
           // after explicit approval.
+          // Give immediate feedback in Settings, exactly like language switching.
+          main.querySelectorAll('[data-level-value]').forEach(x=>x.classList.toggle('active',x===btn));
           el.checked=wantHard;
           el.dispatchEvent(new Event('change',{bubbles:true}));
 
-          // The original handler is async. Reflect its final accepted/cancelled
-          // state after it settles rather than forcing the requested value.
-          setTimeout(()=>{
+          // Original handler remains authoritative: it owns progress confirmation.
+          // Sync back after it accepts/cancels the change.
+          const syncLevel=()=>{
             const actual=String((A.settings&&A.settings.level)||document.documentElement.dataset.level||'normal')==='hard';
             el.checked=actual;
-            const currentShell=currentShell();
-            if(settingsOpen && currentShell) renderSettings(currentShell);
-          },350);
+            document.documentElement.dataset.level=actual?'hard':'normal';
+            main.querySelectorAll('[data-level-value]').forEach(x=>x.classList.toggle('active',(x.dataset.levelValue==='hard')===actual));
+          };
+          setTimeout(syncLevel,80);
+          setTimeout(syncLevel,350);
+          setTimeout(syncLevel,800);
         };
       });
 
