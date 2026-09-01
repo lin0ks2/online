@@ -114,7 +114,7 @@
           <button data-route="trainer">▶ <span>${T.trainer}</span></button>
           <button data-route="dicts">▤ <span>${T.dicts}</span></button>
           <button data-route="mistakes">△ <span>${T.errors}</span><b>${mistakes||''}</b></button>
-          <button data-route="fav">☆ <span>${T.favorites}</span><b>${favs||''}</b></button>
+          <button data-route="fav">♡ <span>${T.favorites}</span><b>${favs||''}</b></button>
           <button data-route="stats">▥ <span>${T.stats}</span></button>
         </nav>
         <div class="dash-side-foot">v${esc(A.APP_VER||'1.7.0')} · Offline <i></i></div>
@@ -134,7 +134,7 @@
         </article>
         <section class="dash-block"><div class="dash-title"><h3>${T.quick}</h3></div><div class="dash-quick"><button data-mode="auto"><i>▶</i><b>${T.auto}</b></button><button data-mode="reverse"><i>↔</i><b>${T.reverse}</b></button><button data-mode="focus"><i>◎</i><b>${T.focus}</b></button></div></section>
         <section class="dash-block"><div class="dash-title"><h3>${T.decks}</h3><button data-route="dicts">${T.all} →</button></div><div class="dash-decks">${cards}</div></section>
-        <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>☆</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
+        <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
         <div class="dash-tip">💡 ${T.tip}</div>
       </section>
     </div>`;

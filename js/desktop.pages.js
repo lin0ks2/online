@@ -37,6 +37,24 @@
       return m?m[1].toLowerCase():'de';
     }catch(_){ return 'de'; }
   }
+
+  function navCounts(lg){
+    let mistakes=0, favs=0;
+    try {
+      const xs=(A.Mistakes&&A.Mistakes.listSummary?A.Mistakes.listSummary():[])||[];
+      mistakes=xs.filter(x=>{
+        try { return (A.Decks&&A.Decks.langOfKey?A.Decks.langOfKey(x.baseKey):String(x.baseKey||'').split('_')[0])===lg; } catch(_){ return false; }
+      }).reduce((n,x)=>n+Number(x.count||0),0);
+    } catch(_){}
+    try {
+      const xs=(A.Favorites&&A.Favorites.list?A.Favorites.list():[])||[];
+      favs=xs.filter(x=>{
+        try { return (A.Decks&&A.Decks.langOfKey?A.Decks.langOfKey(x.dictKey):String(x.dictKey||'').split('_')[0])===lg; } catch(_){ return false; }
+      }).length;
+    } catch(_){}
+    return {mistakes, favs};
+  }
+
   function flagLangFromKey(key){
     const x=String(key||'').toLowerCase();
     const m=x.match(/(?:^|:)(de|en|sr|es|fr)(?:_|:|$)/);
@@ -97,6 +115,7 @@
 
   function makeSide(active){
     const T=navText(), lg=currentLearnLang();
+    const counts=navCounts(lg);
     const side=document.createElement('aside');
     side.className='dash-side desktop-pages-side';
     side.innerHTML=
@@ -105,8 +124,8 @@
         '<button data-desktop-route="home">⌂ <span>'+T.home+'</span></button>'+
         '<button data-desktop-route="trainer">▶ <span>'+T.trainer+'</span></button>'+
         '<button data-desktop-route="dicts">▤ <span>'+T.dicts+'</span></button>'+
-        '<button data-desktop-route="mistakes">△ <span>'+T.mistakes+'</span></button>'+
-        '<button data-desktop-route="fav">☆ <span>'+T.fav+'</span></button>'+
+        '<button data-desktop-route="mistakes">△ <span>'+T.mistakes+'</span><b class="desktop-nav-count"'+(counts.mistakes?'>'+counts.mistakes+'</b>':' hidden></b>')+'</button>'+
+        '<button data-desktop-route="fav">♡ <span>'+T.fav+'</span><b class="desktop-nav-count"'+(counts.favs?'>'+counts.favs+'</b>':' hidden></b>')+'</button>'+
         '<button data-desktop-route="stats">▥ <span>'+T.stats+'</span></button>'+
       '</nav>'+
       '<div class="dash-side-foot">v'+(A.APP_VER||'1.7.9')+' · Offline <i></i></div>';

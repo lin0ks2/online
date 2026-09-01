@@ -18,6 +18,97 @@
   // set counts, stats, and "done" marking for *_lernpunkt decks.
   const SET_SIZE_DEFAULT = (A.Config && A.Config.setSizeDefault) || 40;
 
+  // Desktop-only visual session metrics for the prepositions trainer.
+  // Progress/stars remain owned by the existing trainer; this object only feeds KPI cards.
+  const __prepUiSession = { deckKey:'', correct:0, wrong:0, streak:0, bestStreak:0, startedAt:0 };
+
+  function __ensurePrepUiSession(key){
+    key = String(key || '');
+    if (__prepUiSession.deckKey !== key){
+      __prepUiSession.deckKey = key;
+      __prepUiSession.correct = 0;
+      __prepUiSession.wrong = 0;
+      __prepUiSession.streak = 0;
+      __prepUiSession.bestStreak = 0;
+      __prepUiSession.startedAt = Date.now();
+    }
+    if (!__prepUiSession.startedAt) __prepUiSession.startedAt = Date.now();
+    return __prepUiSession;
+  }
+
+  function __learnLangOfKey(key){
+    try { return (A.Decks && A.Decks.langOfKey) ? (A.Decks.langOfKey(key) || String(key||'').split('_')[0]) : String(key||'').split('_')[0]; }
+    catch(_){ return String(key||'').split('_')[0] || 'de'; }
+  }
+
+  function __sidebarCountsForLang(lang){
+    let mistakes = 0, favorites = 0;
+    try {
+      const list = (A.Mistakes && typeof A.Mistakes.listSummary === 'function') ? (A.Mistakes.listSummary() || []) : [];
+      mistakes = list.filter(x => __learnLangOfKey(x.baseKey) === lang).reduce((n,x)=>n + Number(x.count||0), 0);
+    } catch(_){}
+    try {
+      const list = (A.Favorites && typeof A.Favorites.list === 'function') ? (A.Favorites.list() || []) : [];
+      favorites = list.filter(x => __learnLangOfKey(x.dictKey) === lang).length;
+    } catch(_){}
+    return { mistakes, favorites };
+  }
+
+  function __syncTrainerSidebarCounts(){
+    try {
+      const shell = document.querySelector('.trainer-desktop-shell');
+      if (!shell) return;
+      const key = activeDeckKey();
+      const lang = __learnLangOfKey(key);
+      const c = __sidebarCountsForLang(lang);
+      const m = shell.querySelector('[data-trainer-route="mistakes"] .desktop-nav-count');
+      const f = shell.querySelector('[data-trainer-route="fav"] .desktop-nav-count');
+      if (m) { m.textContent = c.mistakes ? String(c.mistakes) : ''; m.hidden = !c.mistakes; }
+      if (f) { f.textContent = c.favorites ? String(c.favorites) : ''; f.hidden = !c.favorites; }
+    } catch(_){}
+  }
+
+  function __renderPrepsDesktopChrome(key){
+    try {
+      if (!isPrepositionsModeForKey(key) || window.innerWidth < 900) return;
+      const root = document.querySelector('.preps-desktop-head');
+      if (!root) return;
+
+      const uk = getUiLang() === 'uk';
+      const deckAll = getTrainableDeckForKey(key) || [];
+      const uniq = {};
+      deckAll.forEach(w=>{ if (w && w.id != null) uniq[String(w.id)] = true; });
+      const totalPatterns = Object.keys(uniq).length || 30;
+      let learned = 0;
+      Object.keys(uniq).forEach(pid=>{ try { if (isLearned({id:pid}, key)) learned++; } catch(_){} });
+      const pct = totalPatterns ? Math.round(learned * 100 / totalPatterns) : 0;
+
+      const sess = __ensurePrepUiSession(key);
+      const elapsed = Math.max(0, Date.now() - sess.startedAt);
+      const totalMin = Math.floor(elapsed / 60000);
+      const timeText = String(Math.floor(totalMin/60)).padStart(2,'0') + ':' + String(totalMin%60).padStart(2,'0');
+
+      const idx = getActiveBatchIndex();
+      const sz = getSetSizeForKey(key);
+      const totalSets = Math.max(1, Math.ceil(deckAll.length / sz));
+
+      root.innerHTML =
+        '<div class="preps-desktop-titlebar">' +
+          '<div><h1>◎ <span>'+(uk?'Режим: ':'Режим: ')+'</span><b>'+(uk?'Прийменники':'Предлоги')+'</b></h1>' +
+          '<p>'+(uk?'Оберіть правильний прийменник для речення':'Выберите правильный предлог для предложения')+'</p></div>' +
+          '<div class="preps-desktop-progress"><span>'+(uk?'Прогрес у режимі':'Прогресс в режиме')+'</span><div><i style="width:'+pct+'%"></i></div><b>'+pct+'%</b></div>' +
+        '</div>' +
+        '<div class="preps-desktop-kpis">' +
+          '<article><i class="ok">✓</i><span>'+(uk?'Правильно':'Правильно')+'</span><strong>'+sess.correct+'</strong></article>' +
+          '<article><i class="bad">×</i><span>'+(uk?'Помилки':'Ошибки')+'</span><strong>'+sess.wrong+'</strong></article>' +
+          '<article><i class="streak">◎</i><span>'+(uk?'Серія':'Серия')+'</span><strong>'+sess.bestStreak+'</strong></article>' +
+          '<article><i class="time">◷</i><span>'+(uk?'Час':'Время')+'</span><strong>'+timeText+'</strong></article>' +
+          '<article><i class="total">☷</i><span>'+(uk?'Сет':'Сет')+'</span><strong>'+(Number(idx||0)+1)+' / '+totalSets+'</strong></article>' +
+        '</div>';
+    } catch(_){}
+  }
+
+
   function getSetSizeForKey(key){
     const k = String(key || '').toLowerCase();
     try {
@@ -1345,7 +1436,7 @@ function activeDeckKey() {
       : {home:'Главная',trainer:'Тренажёр',dicts:'Словари',errors:'Ошибки',fav:'Избранное',stats:'Статистика'};
 
     app.innerHTML = `
-      ${(__isWordHome || __isArticlesHome) ? `
+      ${(__isWordHome || __isArticlesHome || __isPrepsHome) ? `
       <div class="trainer-desktop-shell" data-lang="${__trainerLearnLang}">
         <aside class="dash-side trainer-side">
           <div class="dash-brand"><img src="./img/logo_64.png" alt=""><div><strong>MOYAMOVA</strong><span>${__trainerLangName}</span></div></div>
@@ -1353,8 +1444,8 @@ function activeDeckKey() {
             <button data-trainer-route="home">⌂ <span>${__navT.home}</span></button>
             <button class="is-active" data-trainer-route="trainer">▶ <span>${__navT.trainer}</span></button>
             <button data-trainer-route="dicts">▤ <span>${__navT.dicts}</span></button>
-            <button data-trainer-route="mistakes">△ <span>${__navT.errors}</span></button>
-            <button data-trainer-route="fav">☆ <span>${__navT.fav}</span></button>
+            <button data-trainer-route="mistakes">△ <span>${__navT.errors}</span><b class="desktop-nav-count" hidden></b></button>
+            <button data-trainer-route="fav">♡ <span>${__navT.fav}</span><b class="desktop-nav-count" hidden></b></button>
             <button data-trainer-route="stats">▥ <span>${__navT.stats}</span></button>
           </nav>
           <div class="trainer-side-bottom">
@@ -1363,7 +1454,8 @@ function activeDeckKey() {
         </aside>
         <main class="trainer-desktop-main">
       ` : ''}
-      <div class="home${__isWordHome ? ' home--word-trainer' : ''}">
+      <div class="home${__isWordHome ? ' home--word-trainer' : ''}${__isPrepsHome ? ' home--preps-trainer' : ''}">
+        ${__isPrepsHome ? '<section class="preps-desktop-head"></section>' : ''}
         <!-- ЗОНА 1: Сеты -->
         <section class="card home-sets">
           <header class="sets-header">
@@ -1405,7 +1497,7 @@ function activeDeckKey() {
           <p class="dict-stats" id="dictStats"></p>
         </section>
 
-        ${__isWordHome ? `
+        ${(__isWordHome || __isPrepsHome) ? `
         <section class="trainer-quickbar" id="trainerQuickbar" aria-label="${getUiLang()==='uk' ? 'Швидкі налаштування тренування' : 'Быстрые настройки тренировки'}">
           <button type="button" class="trainer-qbtn" data-trainer-q="auto" aria-pressed="false" title="${getUiLang()==='uk' ? 'Автоперехід між сетами' : 'Автопереход между сетами'}">
             <span class="trainer-qico qico-auto" aria-hidden="true">↻</span>
@@ -1464,7 +1556,7 @@ function activeDeckKey() {
         </div>
         ` : ''}
       </div>
-      ${(__isWordHome || __isArticlesHome) ? `</main></div>` : ''}`;
+      ${(__isWordHome || __isArticlesHome || __isPrepsHome) ? `</main></div>` : ''}`;
 
     if (__isWordHome || __isArticlesHome) {
       app.querySelectorAll('[data-trainer-route]').forEach(btn => {
@@ -1475,6 +1567,9 @@ function activeDeckKey() {
           if (action) Router.routeTo(action);
         });
       });
+
+      try { __syncTrainerSidebarCounts(); } catch(_){}
+      try { if (__isPrepsHome) __renderPrepsDesktopChrome(key); } catch(_){}
     }
 
     // Инициализация summary после отрисовки (если фильтры показаны)
@@ -1905,10 +2000,22 @@ function activeDeckKey() {
       setState('focus', focus);
       setState('ttsWords', ttsWords);
       setState('ttsExamples', ttsExamples);
+
+      const reverseBtn = bar.querySelector('[data-trainer-q="reverse"]');
+      const preps = isPrepositionsModeForKey(activeDeckKey());
+      if (reverseBtn) {
+        reverseBtn.disabled = !!preps;
+        reverseBtn.classList.toggle('is-disabled', !!preps);
+        reverseBtn.setAttribute('aria-disabled', String(!!preps));
+      }
     }catch(_){}
   }
   function __applyTrainerQuickControl(name){
     try{
+      if (name === 'reverse' && isPrepositionsModeForKey(activeDeckKey())) {
+        __syncTrainerQuickbar();
+        return;
+      }
       if (name === 'auto'){
         const next = !__qReadBool('mm.train.autostep', true);
         __qWriteBool('mm.train.autostep', next);
@@ -1957,6 +2064,7 @@ function activeDeckKey() {
 
 function renderTrainer() {
     const key   = activeDeckKey();
+    try { if (isPrepositionsModeForKey(key)) __renderPrepsDesktopChrome(key); } catch(_){}
 
     // Trainer variant switching (words vs articles).
     // We must NOT fall back to the default trainer when the user interacts with
@@ -2163,6 +2271,7 @@ if (wantArticles) {
         favBtn.setAttribute('aria-pressed', String(now));
         favBtn.style.transform = 'scale(1.2)';
         setTimeout(() => { favBtn.style.transform = 'scale(1)'; }, 140);
+        try { __syncTrainerSidebarCounts(); } catch(_){}
       };
     }
 
@@ -2294,6 +2403,16 @@ answers.innerHTML = '';
             }
           } catch (_) {}
 
+          if (isPrepositionsModeForKey(key)) {
+            try {
+              const ps = __ensurePrepUiSession(key);
+              ps.correct += 1;
+              ps.streak += 1;
+              ps.bestStreak = Math.max(ps.bestStreak, ps.streak);
+              __renderPrepsDesktopChrome(key);
+            } catch(_){}
+          }
+
           b.classList.add('is-correct');
           answers.querySelectorAll('.answer-btn').forEach(btn => {
             if (btn !== b) btn.classList.add('is-dim');
@@ -2382,6 +2501,15 @@ answers.innerHTML = '';
             // во время тренировки "ошибок" и "избранного" — НЕ копим ошибки
             if (!isMistDeck && !isFavDeck && A.Mistakes && typeof A.Mistakes.push === 'function') {
               A.Mistakes.push(key, word.id);
+              try { __syncTrainerSidebarCounts(); } catch(_){}
+            }
+            if (isPrepositionsModeForKey(key)) {
+              try {
+                const ps = __ensurePrepUiSession(key);
+                ps.wrong += 1;
+                ps.streak = 0;
+                __renderPrepsDesktopChrome(key);
+              } catch(_){}
             }
           } catch (_){}
           afterAnswer(false);
