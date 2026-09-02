@@ -1,0 +1,64 @@
+/* ==========================================================
+ * MOYAMOVA 1.11.3 — Mobile Navigation
+ * New mobile shell is introduced page-by-page.
+ * Desktop and non-migrated mobile pages keep the legacy shell.
+ * ========================================================== */
+
+@media (max-width: 899px) {
+  /* Mobile Home is the first migrated screen: no legacy bottom tabbar. */
+  html[data-mobile-shell="home"] .app-footer {
+    display: none !important;
+  }
+
+  html[data-mobile-shell="home"] {
+    --footer-h-actual: 0px;
+  }
+
+  html[data-mobile-shell="home"] #app.content {
+    padding-bottom: calc(18px + var(--mobile-safe-bottom, 0px)) !important;
+  }
+
+  /* The old hamburger becomes a direct Settings action on migrated screens. */
+  html[data-mobile-shell="home"] .header {
+    min-height: 56px;
+    padding-left: max(14px, var(--mobile-safe-left, 0px));
+    padding-right: max(12px, var(--mobile-safe-right, 0px));
+  }
+
+  html[data-mobile-shell="home"] .brand-link {
+    min-height: 44px;
+  }
+
+  html[data-mobile-shell="home"] #btnMenu.burger {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(65, 84, 180, .12);
+    border-radius: 14px;
+    background: rgba(255,255,255,.76);
+    box-shadow: 0 5px 18px rgba(44, 55, 112, .08);
+    font-size: 0;
+    line-height: 1;
+  }
+
+  html[data-mobile-shell="home"] #btnMenu.burger::before {
+    content: "⚙";
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="home"] #btnMenu.burger,
+  html.dark[data-mobile-shell="home"] #btnMenu.burger {
+    background: rgba(24, 36, 52, .92);
+    border-color: rgba(142, 166, 215, .16);
+    box-shadow: none;
+  }
+
+  /* The off-canvas menu is not part of the migrated Home navigation. */
+  html[data-mobile-shell="home"] .oc-root {
+    pointer-events: none !important;
+  }
+}
