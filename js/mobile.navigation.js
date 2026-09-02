@@ -25,6 +25,7 @@
     const app = document.getElementById('app');
     if (!app || !isMobile()) return '';
     if (app.querySelector('.dashboard')) return 'home';
+    if (app.querySelector('.home-trainer.is-articles')) return 'articles';
     if (app.querySelector('.home.home--word-trainer')) return 'trainer';
     return '';
   }
@@ -98,7 +99,7 @@
     if (title) title.textContent = T.title;
 
     const button = document.getElementById('btnMenu');
-    if (button && (docEl.dataset.mobileShell === 'home' || docEl.dataset.mobileShell === 'trainer')) {
+    if (button && ['home','trainer','articles'].includes(docEl.dataset.mobileShell || '')) {
       button.setAttribute('aria-label', T.open);
       button.setAttribute('title', T.open);
     }
@@ -119,7 +120,7 @@
   // their authoritative legacy handlers untouched.
   document.addEventListener('click', function (e) {
     const btn = e.target && e.target.closest ? e.target.closest('[data-mobile-route]') : null;
-    if (!btn || !isMobile() || !['home','trainer'].includes(docEl.dataset.mobileShell || '')) return;
+    if (!btn || !isMobile() || !['home','trainer','articles'].includes(docEl.dataset.mobileShell || '')) return;
     e.preventDefault();
     routeTo(btn.getAttribute('data-mobile-route'));
   });
@@ -137,5 +138,6 @@
   document.addEventListener('DOMContentLoaded', syncShell);
   window.addEventListener('pageshow', syncShell);
   window.addEventListener('resize', syncShell);
+  window.MOYAMOVA_MobileNav = { sync: syncShell, ensure: ensureNavSheet, close: closeMenu };
   setTimeout(syncShell, 0);
 })();
