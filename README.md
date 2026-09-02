@@ -1,4 +1,4 @@
-# MOYAMOVA 1.10.18
+# MOYAMOVA 1.11.0
 
 **MOYAMOVA** — офлайн-тренажёр для изучения иностранных языков на карточках.  
 Работает прямо в браузере, без регистрации и без обязательного бэкенда.
@@ -200,3 +200,10 @@
 
 MOYAMOVA — это не просто словарь, а модульный офлайн-движок тренировки,
 ориентированный на устойчивый прогресс без регистрации, рекламы и лишней сложности.
+
+## 1.11.0 — Mobile Foundation
+- Desktop 1.10.18 remains the frozen visual baseline.
+- Added an isolated `<900px` mobile foundation layer.
+- Added VisualViewport CSS variables for Safari/Chrome dynamic browser UI and keyboard handling.
+- Added mobile safe-area, overflow and touch-normalization scaffolding.
+- No trainer engine, routing, progress or desktop layout logic changed.
