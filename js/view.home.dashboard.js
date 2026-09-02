@@ -60,6 +60,61 @@
     try { document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key}})); } catch(_){}
     route('trainer');
   }
+  function startTrainingKind(kind, lang){
+    const lg=String(lang||currentLang()||'de').toLowerCase();
+    if(kind==='words'){
+      startDeck(lastKeyForLang(lg));
+      return;
+    }
+
+    if(kind==='articles'){
+      if(lg!=='de' || !(A.ArticlesTrainer && A.ArticlesCard)) return;
+      const nounKey=baseKeys().find(k=>langOf(k)==='de' && String(k).toLowerCase().startsWith('de_nouns'));
+      if(!nounKey) return;
+      try{
+        A.settings=A.settings||{};
+        A.settings.trainerKind='articles';
+        A.settings.lastDeckKey=nounKey;
+        A.saveSettings&&A.saveSettings(A.settings);
+      }catch(_){}
+      try{ A.Trainer&&A.Trainer.setDeckKey&&A.Trainer.setDeckKey(nounKey); }catch(_){}
+      try{ document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key:nounKey}})); }catch(_){}
+      route('trainer');
+      return;
+    }
+
+    if(kind==='prepositions'){
+      const src=(window.prepositionsTrainer&&window.prepositionsTrainer[lg])||null;
+      const has=!!(src && (Array.isArray(src.patterns)?src.patterns.length:(Array.isArray(src)?src.length:(typeof src==='object'?Object.keys(src).length:0))));
+      if(!has) return;
+      const prepKey=lg+'_prepositions';
+      try{
+        A.settings=A.settings||{};
+        A.settings.trainerKind='prepositions';
+        A.settings.preferredReturnKey=A.settings.lastDeckKey||lastKeyForLang(lg);
+        A.settings.lastDeckKey=prepKey;
+        A.saveSettings&&A.saveSettings(A.settings);
+      }catch(_){}
+      try{ A.Trainer&&A.Trainer.setDeckKey&&A.Trainer.setDeckKey(prepKey); }catch(_){}
+      try{ document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key:prepKey}})); }catch(_){}
+      route('trainer');
+    }
+  }
+
+  function availableTrainingKinds(lang){
+    const lg=String(lang||'').toLowerCase();
+    const out=['words'];
+    try{
+      if(lg==='de' && A.ArticlesTrainer && A.ArticlesCard && baseKeys().some(k=>String(k).toLowerCase().startsWith('de_nouns'))) out.push('articles');
+    }catch(_){}
+    try{
+      const src=window.prepositionsTrainer&&window.prepositionsTrainer[lg];
+      const has=!!(src && (Array.isArray(src.patterns)?src.patterns.length:(Array.isArray(src)?src.length:(typeof src==='object'?Object.keys(src).length:0))));
+      if(has) out.push('prepositions');
+    }catch(_){}
+    return out;
+  }
+
   function quickMode(mode){
     try {
       const setChecked=(id,val)=>{
@@ -100,11 +155,18 @@
     const keys=baseKeys().filter(k=>langOf(k)===lg).sort((a,b)=>POS_ORDER.indexOf(posOf(a))-POS_ORDER.indexOf(posOf(b)));
     const POS=uk()?POS_UK:POS_RU;
     const T=uk()?{
-      hello:'Готові вчитися?',sub:'Послідовність важливіша за інтенсивність.',overall:'Загальний прогрес',mastered:'Освоєно',inprogress:'У процесі',stars:'Зірок зароблено',continue:'Продовжити навчання',quick:'Швидкий старт',auto:'Авто',reverse:'Зворотний',focus:'Фокус',decks:'Словники за частинами мови',all:'Усі словники',errors:'Помилки',favorites:'Вибране',stats:'Статистика',dicts:'Словники',home:'Головна',trainer:'Тренажер',settings:'Налаштування',words:'слів',continueBtn:'Продовжити',tip:'Порада: краще трохи щодня, ніж багато зрідка.'
+      hello:'Готові вчитися?',sub:'Послідовність важливіша за інтенсивність.',overall:'Загальний прогрес',mastered:'Освоєно',inprogress:'У процесі',stars:'Зірок зароблено',continue:'Продовжити навчання',quick:'Швидкий старт',auto:'Авто',reverse:'Зворотний',focus:'Фокус',decks:'Словники за частинами мови',all:'Усі словники',errors:'Помилки',favorites:'Вибране',stats:'Статистика',dicts:'Словники',home:'Головна',trainer:'Тренажер',settings:'Налаштування',words:'слів',continueBtn:'Продовжити',choose:'Що будемо вчити?',chooseSub:'Оберіть режим тренування',trainWords:'Слова',trainWordsSub:'Переклад і словниковий запас',trainArticles:'Артиклі',trainArticlesSub:'Рід німецьких іменників',trainPreps:'Прийменники',trainPrepsSub:'Прийменники в контексті',startBtn:'Почати',tip:'Порада: краще трохи щодня, ніж багато зрідка.'
     }:{
-      hello:'Готовы учиться?',sub:'Регулярность важнее интенсивности.',overall:'Общий прогресс',mastered:'Освоено',inprogress:'В процессе',stars:'Звёзд заработано',continue:'Продолжить обучение',quick:'Быстрый старт',auto:'Авто',reverse:'Обратный',focus:'Фокус',decks:'Словари по частям речи',all:'Все словари',errors:'Ошибки',favorites:'Избранное',stats:'Статистика',dicts:'Словари',home:'Главная',trainer:'Тренажёр',settings:'Настройки',words:'слов',continueBtn:'Продолжить',tip:'Совет: лучше понемногу каждый день, чем много изредка.'
+      hello:'Готовы учиться?',sub:'Регулярность важнее интенсивности.',overall:'Общий прогресс',mastered:'Освоено',inprogress:'В процессе',stars:'Звёзд заработано',continue:'Продолжить обучение',quick:'Быстрый старт',auto:'Авто',reverse:'Обратный',focus:'Фокус',decks:'Словари по частям речи',all:'Все словари',errors:'Ошибки',favorites:'Избранное',stats:'Статистика',dicts:'Словари',home:'Главная',trainer:'Тренажёр',settings:'Настройки',words:'слов',continueBtn:'Продолжить',choose:'Что будем учить?',chooseSub:'Выберите режим тренировки',trainWords:'Слова',trainWordsSub:'Перевод и словарный запас',trainArticles:'Артикли',trainArticlesSub:'Род немецких существительных',trainPreps:'Предлоги',trainPrepsSub:'Предлоги в контексте',startBtn:'Начать',tip:'Совет: лучше понемногу каждый день, чем много изредка.'
     };
     const cards=keys.map(k=>{ const s=statsForKey(k), p=posOf(k); return `<button class="dash-deck" data-deck="${esc(k)}"><div class="dash-deck-top"><span class="dash-pos-icon">${POS_ICON[p]||'•'}</span><strong>${esc(POS[p]||p)}</strong></div>${circle(s.pct)}<div class="dash-deck-count">${s.learned} / ${s.total}</div></button>`; }).join('');
+    const kindMeta={
+      words:{icon:'Aa',title:T.trainWords,sub:T.trainWordsSub},
+      articles:{icon:'der',title:T.trainArticles,sub:T.trainArticlesSub},
+      prepositions:{icon:'→',title:T.trainPreps,sub:T.trainPrepsSub}
+    };
+    const trainingKinds=availableTrainingKinds(lg);
+    const trainingCards=trainingKinds.map(kind=>{ const m=kindMeta[kind]; return `<button class="dash-training-card dash-training-card--${kind}" data-training-kind="${kind}"><i>${m.icon}</i><span><b>${m.title}</b><small>${m.sub}</small></span><em>${T.startBtn} →</em></button>`; }).join('');
 
     app.innerHTML=`<div class="dashboard" data-lang="${esc(lg)}">
       <aside class="dash-side">
@@ -132,6 +194,10 @@
           <div class="dash-flashcards">${(()=>{ const __deck=A.Decks.resolveDeckByKey(last)||[]; const __word=__deck[0]||{}; const __mx=(A.Trainer&&A.Trainer.starsMax)?A.Trainer.starsMax():5; const __stars=Math.max(0,Math.min(__mx,starValue(last,__word))); return `<span>${esc(__word.word||'Wort')}</span><small>★ ${Math.round(__stars)} / ${__mx}</small>`; })()}</div>
           <button class="dash-primary" data-continue>${T.continueBtn} →</button>
         </article>
+        <section class="dash-learning">
+          <div class="dash-learning-head"><div><h3>${T.choose}</h3><p>${T.chooseSub}</p></div></div>
+          <div class="dash-training-grid dash-training-grid--${trainingKinds.length}">${trainingCards}</div>
+        </section>
         <section class="dash-block"><div class="dash-title"><h3>${T.quick}</h3></div><div class="dash-quick"><button data-mode="auto"><i>▶</i><b>${T.auto}</b></button><button data-mode="reverse"><i>↔</i><b>${T.reverse}</b></button><button data-mode="focus"><i>◎</i><b>${T.focus}</b></button></div></section>
         <section class="dash-block"><div class="dash-title"><h3>${T.decks}</h3><button data-route="dicts">${T.all} →</button></div><div class="dash-decks">${cards}</div></section>
         <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
@@ -141,6 +207,7 @@
 
     app.querySelectorAll('[data-route]').forEach(el=>el.addEventListener('click',()=>route(el.getAttribute('data-route'))));
     app.querySelector('[data-continue]')?.addEventListener('click',()=>startDeck(last));
+    app.querySelectorAll('[data-training-kind]').forEach(el=>el.addEventListener('click',()=>startTrainingKind(el.getAttribute('data-training-kind'),lg)));
     app.querySelectorAll('[data-deck]').forEach(el=>el.addEventListener('click',()=>startDeck(el.getAttribute('data-deck'))));
     app.querySelectorAll('[data-mode]').forEach(el=>el.addEventListener('click',()=>quickMode(el.getAttribute('data-mode'))));
     app.querySelector('[data-open-menu]')?.addEventListener('click',()=>document.getElementById('btnMenu')?.click());

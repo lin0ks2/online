@@ -150,3 +150,38 @@ html[data-theme="dark"] .dashboard,.dark .dashboard{--db:#0d141d;--dc:#121c28;--
     background:#121c28!important;border-color:var(--dbd,#263447)!important;color:var(--dm,#9cabbc)!important
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.15 — Dashboard training chooser
+ * ========================================================== */
+@media (min-width:900px){
+  .dash-learning{margin-bottom:14px}
+  .dash-learning-head{display:flex;align-items:end;justify-content:space-between;margin:0 2px 10px}
+  .dash-learning-head h3{margin:0;font:700 15px Montserrat,sans-serif;color:var(--dt)}
+  .dash-learning-head p{margin:3px 0 0;font-size:10px;color:var(--dm)}
+  .dash-training-grid{display:grid;gap:10px}
+  .dash-training-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dash-training-grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dash-training-grid--1{grid-template-columns:minmax(0,1fr)}
+  .dash-training-card{
+    min-height:86px;padding:13px 14px;display:grid;grid-template-columns:42px minmax(0,1fr) auto;
+    gap:11px;align-items:center;text-align:left;cursor:pointer;color:var(--dt);
+    background:var(--dc);border:1px solid var(--dbd);border-radius:13px;
+    transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease;
+  }
+  .dash-training-card:hover{border-color:#aebcff;box-shadow:0 7px 18px rgba(82,96,155,.09);transform:translateY(-1px)}
+  .dash-training-card>i{
+    width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    background:#eef2ff;color:#6676dd;font-style:normal;font-weight:900;font-size:14px;
+  }
+  .dash-training-card--articles>i{background:#fff0f2;color:#d75c70;font-size:12px}
+  .dash-training-card--prepositions>i{background:#edf8f5;color:#38a17e;font-size:20px}
+  .dash-training-card>span{display:flex;flex-direction:column;min-width:0}
+  .dash-training-card b{font-size:12px}
+  .dash-training-card small{margin-top:4px;color:var(--dm);font-size:9.5px;line-height:1.25}
+  .dash-training-card em{font-style:normal;color:#6878dd;font-size:10px;font-weight:800;white-space:nowrap}
+  html[data-theme="dark"] .dash-training-card>i{background:#263756;color:#aab7ff}
+  html[data-theme="dark"] .dash-training-card--articles>i{background:#3c2936;color:#f1a2b1}
+  html[data-theme="dark"] .dash-training-card--prepositions>i{background:#203b39;color:#75c9ad}
+}
