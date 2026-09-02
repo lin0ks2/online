@@ -33,9 +33,9 @@
     const U=uk();
     let tts=false;try{tts=localStorage.getItem('mm.tts.words')==='1'}catch(_){}
     tools.innerHTML=
-      '<button type="button" class="articles-mobile-tool'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'"><i>🔊</i><b>'+(U?'Озвучення':'Озвучка')+'</b></button>'+
-      '<button type="button" class="articles-mobile-tool" data-articles-tool="skip"><i>⇄</i><b>'+(U?'Пропустити':'Пропустить')+'</b></button>'+
-      '<button type="button" class="articles-mobile-tool" data-articles-tool="reveal"><i>?</i><b>'+(U?'Показати':'Показать')+'</b></button>';
+      '<button type="button" class="articles-mobile-tool'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'" title="'+(U?'Увімкнути або вимкнути озвучення слів':'Включить или выключить озвучку слов')+'"><i>🔊</i><b>'+(U?'Озвучення':'Озвучка')+'</b></button>'+
+      '<button type="button" class="articles-mobile-tool" data-articles-tool="skip" title="'+(U?'Перейти до наступного слова':'Перейти к следующему слову')+'"><i>⇄</i><b>'+(U?'Пропустити слово':'Пропустить слово')+'</b></button>'+
+      '<button type="button" class="articles-mobile-tool" data-articles-tool="reveal" title="'+(U?'Показати правильний артикль':'Показать правильный артикль')+'"><i>?</i><b>'+(U?'Показати відповідь':'Показать ответ')+'</b></button>';
   }
   function mount(){
     if(!mobile()||!active())return;
@@ -47,12 +47,14 @@
       bar=document.createElement('div');bar.className='mobile-articles-bar';main.insertBefore(bar,main.firstChild);
     }
     const U=uk();
-    bar.innerHTML=
+    const barHtml=
       '<button type="button" class="mobile-articles-back" data-mobile-articles-home aria-label="'+(U?'На головну':'На главную')+'">'+
       '<span class="mobile-articles-back__arrow" aria-hidden="true">‹</span><span>'+(U?'Головна':'Главная')+'</span></button>'+
       '<strong class="mobile-articles-title">'+(U?'Тренажер артиклів':'Тренажёр артиклей')+'</strong>'+
       '<button type="button" class="mobile-articles-menu" data-mobile-articles-menu aria-label="'+(U?'Відкрити меню':'Открыть меню')+'">•••</button>';
-    ensureTools(main.querySelector('.home'));
+    if(bar.innerHTML!==barHtml)bar.innerHTML=barHtml;
+    const home=main.querySelector('.home');
+    if(home && !home.querySelector('.articles-mobile-tools')) ensureTools(home);
     try{if(window.MOYAMOVA_MobileNav&&typeof window.MOYAMOVA_MobileNav.sync==='function')window.MOYAMOVA_MobileNav.sync()}catch(_){}
   }
 
@@ -64,14 +66,17 @@
   });
 
   const app=document.getElementById('app');
+  function scheduleMount(){
+    [0,60,180,420].forEach(function(ms){setTimeout(mount,ms)});
+  }
   if(app&&window.MutationObserver){
-    new MutationObserver(function(){setTimeout(mount,0)}).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+    new MutationObserver(scheduleMount).observe(app,{childList:true,subtree:false});
   }
-  document.addEventListener('DOMContentLoaded',mount);
-  window.addEventListener('pageshow',mount);
+  document.addEventListener('DOMContentLoaded',scheduleMount);
+  window.addEventListener('pageshow',scheduleMount);
   if(mq){
-    if(typeof mq.addEventListener==='function')mq.addEventListener('change',mount);
-    else if(typeof mq.addListener==='function')mq.addListener(mount)
+    if(typeof mq.addEventListener==='function')mq.addEventListener('change',scheduleMount);
+    else if(typeof mq.addListener==='function')mq.addListener(scheduleMount)
   }
-  setTimeout(mount,0);
+  scheduleMount();
 })();

@@ -61,17 +61,17 @@
 
   html[data-mobile-shell="articles"] .trainer-desktop-main>.home{
     width:100%!important;max-width:none!important;min-width:0!important;
-    margin:0!important;padding:0!important;display:flex!important;flex-direction:column;gap:9px!important
+    margin:0!important;padding:0!important;display:flex!important;flex-direction:column;gap:7px!important
   }
 
   /* Sets match Words mobile geometry. */
   html[data-mobile-shell="articles"] .home-sets.card{
-    order:1;margin:0!important;padding:11px 12px 10px!important;
+    order:1;margin:0!important;padding:9px 11px 8px!important;
     border-radius:16px!important;box-shadow:0 6px 22px rgba(34,48,94,.055)!important
   }
   html[data-mobile-shell="articles"] .sets-header{
     display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:center;
-    gap:8px;margin:0 0 8px!important
+    gap:7px;margin:0 0 6px!important
   }
   html[data-mobile-shell="articles"] .sets-title{
     min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
@@ -87,22 +87,42 @@
     display:flex!important;flex-wrap:nowrap!important;gap:7px!important;width:max-content;min-width:100%
   }
   html[data-mobile-shell="articles"] .set-pill{
-    flex:0 0 42px!important;width:42px!important;min-width:42px!important;height:38px!important;
+    flex:0 0 42px!important;width:42px!important;min-width:42px!important;height:34px!important;
     padding:0!important;border-radius:11px!important;font-size:11px!important
   }
   html[data-mobile-shell="articles"] .sets-stats{
-    margin:7px 0 0!important;min-height:0!important;font-size:10px!important;line-height:1.2;opacity:.65
+    margin:5px 0 0!important;min-height:0!important;font-size:10px!important;line-height:1.2;opacity:.65
   }
 
-  /* Old hint zone is not useful in the article drill itself. */
-  html[data-mobile-shell="articles"] .home-hints,
+  /* Context/example is more useful than utility controls: keep it near the top. */
+  html[data-mobile-shell="articles"] .home-hints{
+    order:2;
+    display:block!important;
+    margin:0!important;
+    padding:10px 12px!important;
+    border-radius:16px!important;
+    box-shadow:0 5px 18px rgba(34,48,94,.04)!important
+  }
+  html[data-mobile-shell="articles"] .home-hints .hints-body{
+    display:block!important;
+    width:100%;
+    min-height:34px!important;
+    height:auto!important;
+    max-height:82px!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+    padding:0!important;
+    box-sizing:border-box;
+    font-size:11.5px!important;
+    line-height:1.34!important
+  }
   html[data-mobile-shell="articles"] .home-filters{display:none!important}
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles{
-    order:3;margin:0!important;padding:15px 12px 14px!important;
+    order:3;margin:0!important;padding:12px 11px 11px!important;
     min-height:0!important;border-radius:18px!important;
     display:flex!important;flex-direction:column!important;align-items:stretch!important;
-    gap:9px!important;box-shadow:0 10px 30px rgba(32,46,96,.075)!important
+    gap:7px!important;box-shadow:0 10px 30px rgba(32,46,96,.075)!important
   }
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-top{
@@ -119,12 +139,12 @@
   }
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-word{
-    margin:6px auto 0!important;min-height:1.2em!important;text-align:center!important;
-    font-size:clamp(29px,9vw,38px)!important;line-height:1.1!important;font-weight:800!important;
+    margin:2px auto 0!important;min-height:1.2em!important;text-align:center!important;
+    font-size:clamp(27px,8vw,35px)!important;line-height:1.1!important;font-weight:800!important;
     letter-spacing:-.025em
   }
   html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-subtitle{
-    margin:1px 0 4px!important;text-align:center!important;font-size:12px!important;opacity:.62
+    margin:0 0 2px!important;text-align:center!important;font-size:12px!important;opacity:.62
   }
 
   /* Three article choices stay in one row. */
@@ -133,7 +153,7 @@
     gap:8px!important;margin:5px 0 2px!important
   }
   html[data-mobile-shell="articles"] .home-trainer.is-articles .answers-grid .answer-btn{
-    width:100%!important;min-width:0!important;height:92px!important;min-height:92px!important;
+    width:100%!important;min-width:0!important;height:82px!important;min-height:82px!important;
     padding:10px 4px!important;border:1px solid #dfe7f0!important;border-radius:15px!important;
     background:#f8fbff!important;color:#1c2637!important;box-shadow:none!important;
     display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important
@@ -142,7 +162,7 @@
     display:block;font-size:24px!important;font-weight:850!important;line-height:1!important
   }
   html[data-mobile-shell="articles"] .article-answer__gender{
-    display:block;margin-top:10px;font-size:9px!important;font-weight:700!important;line-height:1.15
+    display:block;margin-top:7px;font-size:9px!important;font-weight:700!important;line-height:1.15
   }
   html[data-mobile-shell="articles"] .article-answer--der .article-answer__gender{color:#258cff!important}
   html[data-mobile-shell="articles"] .article-answer--die .article-answer__gender{color:#ef4f62!important}
@@ -157,7 +177,7 @@
   html[data-mobile-shell="articles"] .home-trainer.is-articles .answer-btn.is-dim{opacity:.42!important}
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles .idk-btn{
-    width:fit-content!important;min-width:118px!important;height:38px!important;min-height:38px!important;
+    width:fit-content!important;min-width:118px!important;height:34px!important;min-height:34px!important;
     margin:3px auto 0!important;padding:0 15px!important;border-radius:11px!important;font-size:12px!important
   }
   html[data-mobile-shell="articles"] .home-trainer.is-articles .dict-stats{
@@ -166,7 +186,7 @@
 
   /* Article controls use the same visual language and position as Words quickbar. */
   .articles-mobile-tools{
-    order:2;
+    order:4;
     width:100%;
     margin:0!important;
     box-sizing:border-box;
@@ -236,7 +256,7 @@
   /* Shared migrated bottom sheet. */
   html[data-mobile-shell="articles"] .oc-root{inset:0;max-height:var(--mobile-viewport-height)}
   html[data-mobile-shell="articles"] .oc-overlay{
-    inset:0!important;background:rgba(12,20,38,.30);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)
+    inset:0!important;background:rgba(12,20,38,.30);backdrop-filter:none!important;-webkit-backdrop-filter:none!important
   }
   html[data-mobile-shell="articles"] .oc-panel{
     left:8px!important;right:8px!important;top:auto!important;
