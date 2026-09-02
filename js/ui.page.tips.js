@@ -87,9 +87,10 @@
   }
 
   function mount(){
-    if(!window.matchMedia || !window.matchMedia('(min-width:900px)').matches) return;
     const info=locate();
     if(!info || !POOLS[info.key]) return;
+    const desktop=!window.matchMedia || window.matchMedia('(min-width:900px)').matches;
+    if(!desktop && info.key!=='home') return;
 
     const existing=info.root.querySelector(':scope > .mm-page-tip');
     if(existing){
