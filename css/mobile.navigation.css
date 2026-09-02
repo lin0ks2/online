@@ -125,7 +125,7 @@
     overflow-x: hidden !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
-    padding: 10px 12px calc(18px + var(--mobile-safe-bottom, 0px)) !important;
+    padding: 10px 12px calc(82px + var(--mobile-safe-bottom, 0px)) !important;
   }
 
   /* Primary navigation inside the sheet. */
@@ -224,5 +224,14 @@
 @media (max-width: 390px) {
   html[data-mobile-shell="home"] .mobile-nav-sheet {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 899px) {
+  html[data-mobile-shell="home"] .menu-item.app-version {
+    position:relative;
+    z-index:1;
+    margin-bottom:8px !important;
+    padding-bottom:12px !important;
   }
 }

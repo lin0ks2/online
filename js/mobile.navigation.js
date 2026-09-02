@@ -21,9 +21,12 @@
     }
   }
 
-  function isHomeMounted() {
+  function currentMobileShell() {
     const app = document.getElementById('app');
-    return !!(app && app.querySelector('.dashboard'));
+    if (!app || !isMobile()) return '';
+    if (app.querySelector('.dashboard')) return 'home';
+    if (app.querySelector('.home.home--word-trainer')) return 'trainer';
+    return '';
   }
 
   function closeMenu() {
@@ -95,18 +98,18 @@
     if (title) title.textContent = T.title;
 
     const button = document.getElementById('btnMenu');
-    if (button && docEl.dataset.mobileShell === 'home') {
+    if (button && (docEl.dataset.mobileShell === 'home' || docEl.dataset.mobileShell === 'trainer')) {
       button.setAttribute('aria-label', T.open);
       button.setAttribute('title', T.open);
     }
   }
 
   function syncShell() {
-    const home = isMobile() && isHomeMounted();
-    if (home) {
-      docEl.dataset.mobileShell = 'home';
+    const shell = currentMobileShell();
+    if (shell) {
+      docEl.dataset.mobileShell = shell;
       ensureNavSheet();
-    } else if (docEl.dataset.mobileShell === 'home') {
+    } else if (docEl.dataset.mobileShell) {
       delete docEl.dataset.mobileShell;
       closeMenu();
     }
@@ -116,7 +119,7 @@
   // their authoritative legacy handlers untouched.
   document.addEventListener('click', function (e) {
     const btn = e.target && e.target.closest ? e.target.closest('[data-mobile-route]') : null;
-    if (!btn || !isMobile() || docEl.dataset.mobileShell !== 'home') return;
+    if (!btn || !isMobile() || !['home','trainer'].includes(docEl.dataset.mobileShell || '')) return;
     e.preventDefault();
     routeTo(btn.getAttribute('data-mobile-route'));
   });
