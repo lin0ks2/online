@@ -172,14 +172,23 @@
   html:has(#app .home.home--word-trainer) .app-footer,
   html:has(#app .home-trainer.is-articles) .app-footer,
   html:has(#app .home-trainer.home-trainer--preps) .app-footer,
-  html:has(#app .dicts-card) .app-footer{
+  html:has(#app .home--dicts) .app-footer{
     display:none!important;
   }
 
   html:has(#app .home.home--word-trainer) .header,
   html:has(#app .home-trainer.is-articles) .header,
   html:has(#app .home-trainer.home-trainer--preps) .header,
-  html:has(#app .dicts-card) .header{
+  html:has(#app .home--dicts) .header{
+    display:none!important;
+  }
+}
+
+@media(max-width:899px){
+  html:has(#app .home--favorites) .header,
+  html:has(#app .home--favorites) .app-footer,
+  html:has(#app .home--mistakes) .header,
+  html:has(#app .home--mistakes) .app-footer{
     display:none!important;
   }
 }

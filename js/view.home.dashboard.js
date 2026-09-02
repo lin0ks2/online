@@ -60,6 +60,51 @@
     try { document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key}})); } catch(_){}
     route('trainer');
   }
+
+  function continueTraining(key, lang){
+    if(!key) return;
+    const kind=String((A.settings&&A.settings.trainerKind)||'words').toLowerCase();
+    const lg=String(lang||langOf(key)||currentLang()||'de').toLowerCase();
+
+    if(kind==='prepositions'){
+      try{
+        const base=String(key||'');
+        if(A.Prepositions&&typeof A.Prepositions.isAnyPrepositionsKey==='function'&&A.Prepositions.isAnyPrepositionsKey(base)){
+          A.settings=A.settings||{};
+          A.settings.trainerKind='prepositions';
+          A.settings.lastDeckKey=base;
+          A.saveSettings&&A.saveSettings(A.settings);
+          A.Trainer&&A.Trainer.setDeckKey&&A.Trainer.setDeckKey(base);
+          document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key:base}}));
+          route('trainer');
+          return;
+        }
+      }catch(_){}
+      startTrainingKind('prepositions',lg);
+      return;
+    }
+
+    if(kind==='articles'){
+      try{
+        const base=String(key||'').toLowerCase();
+        if(base.startsWith('de_nouns')&&A.ArticlesTrainer&&A.ArticlesCard){
+          A.settings=A.settings||{};
+          A.settings.trainerKind='articles';
+          A.settings.lastDeckKey=key;
+          A.saveSettings&&A.saveSettings(A.settings);
+          A.Trainer&&A.Trainer.setDeckKey&&A.Trainer.setDeckKey(key);
+          document.dispatchEvent(new CustomEvent('lexitron:deck-selected',{detail:{key:key}}));
+          route('trainer');
+          return;
+        }
+      }catch(_){}
+      startTrainingKind('articles',lg);
+      return;
+    }
+
+    startDeck(key);
+  }
+
   function startTrainingKind(kind, lang){
     const lg=String(lang||currentLang()||'de').toLowerCase();
     if(kind==='words'){
@@ -204,7 +249,7 @@
     </div>`;
 
     app.querySelectorAll('[data-route]').forEach(el=>el.addEventListener('click',()=>route(el.getAttribute('data-route'))));
-    app.querySelector('[data-continue]')?.addEventListener('click',()=>startDeck(last));
+    app.querySelector('[data-continue]')?.addEventListener('click',()=>continueTraining(last,lg));
     app.querySelectorAll('[data-training-kind]').forEach(el=>el.addEventListener('click',()=>startTrainingKind(el.getAttribute('data-training-kind'),lg)));
     app.querySelectorAll('[data-deck]').forEach(el=>el.addEventListener('click',()=>startDeck(el.getAttribute('data-deck'))));
     app.querySelectorAll('[data-mode]').forEach(el=>el.addEventListener('click',()=>quickMode(el.getAttribute('data-mode'))));

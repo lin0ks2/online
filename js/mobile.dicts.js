@@ -9,8 +9,7 @@
   function findView(){
     const app=document.getElementById('app');
     if(!app)return null;
-    const card=app.querySelector('.dicts-card');
-    return card ? card.closest('.home') : null;
+    return app.querySelector('.home--dicts');
   }
 
   function active(){return !!(mobile()&&findView())}

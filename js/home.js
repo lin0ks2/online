@@ -2578,9 +2578,7 @@ answers.innerHTML = '';
             try { if (!__lang && A.settings && A.settings.studyLang) __lang = A.settings.studyLang; } catch(_){}
             var __kind = 'words';
             try {
-              if (A.Prepositions && typeof A.Prepositions.isPrepositionsDeckKey === 'function' && A.Prepositions.isPrepositionsDeckKey(key)) {
-                __kind = 'prepositions';
-              } else if (String(key||'').indexOf('_prepositions_trainer') > -1) {
+              if (isPrepositionsModeForKey(key)) {
                 __kind = 'prepositions';
               }
             } catch(_){}
@@ -2609,6 +2607,27 @@ answers.innerHTML = '';
       A.Trainer.updateModeIndicator();
     }
   }
+
+
+  // Mobile action bridge: reuse the authoritative trainer renderer instead of
+  // duplicating prepositions logic in the mobile presentation layer.
+  A.MobileTrainerActions = A.MobileTrainerActions || {};
+  A.MobileTrainerActions.skipCurrent = function(){
+    try{
+      if(!isPrepositionsModeForKey(activeDeckKey())) return false;
+      renderTrainer();
+      return true;
+    }catch(_){ return false; }
+  };
+  A.MobileTrainerActions.revealCurrent = function(){
+    try{
+      if(!isPrepositionsModeForKey(activeDeckKey())) return false;
+      const btn=document.querySelector('.idk-btn');
+      if(!btn) return false;
+      btn.click();
+      return true;
+    }catch(_){ return false; }
+  };
 
   // Мягкая перерисовка звёзд при смене режима (без смены слова/ответов)
   function repaintStarsOnly(){

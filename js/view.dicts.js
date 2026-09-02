@@ -58,7 +58,7 @@
 const allKeys = (A.Decks?.builtinKeys?.() || []);
     if (!allKeys.length){
       app.innerHTML = `
-        <div class="home home--fixed-card">
+        <div class="home home--fixed-card home--dicts">
           <section class="card dicts-card dicts-card--fixed">
             <div class="dicts-header">
               <h3>${T.title}</h3>
@@ -86,7 +86,7 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
     const langs = Object.keys(byLang);
     if (!langs.length){
       app.innerHTML = `
-        <div class="home home--fixed-card">
+        <div class="home home--fixed-card home--dicts">
           <section class="card dicts-card dicts-card--fixed">
             <div class="dicts-header">
               <h3>${T.title}</h3>
@@ -217,7 +217,7 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
 
         const rows = rowsFor(keysAll, selectedKey);
         app.innerHTML = `
-          <div class="home home--fixed-card">
+          <div class="home home--fixed-card home--dicts">
             <section class="card dicts-card dicts-card--fixed">
               <div class="dicts-header">
                 <h3>${T.title}</h3>
@@ -245,7 +245,7 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
         if (!lpEnabled){
           const rows0 = mainKeys.length ? rowsFor(mainKeys, selectedMain) : '';
           app.innerHTML = `
-            <div class="home home--fixed-card">
+            <div class="home home--fixed-card home--dicts">
               <section class="card dicts-card dicts-card--fixed">
                 <div class="dicts-header">
                   <h3>${T.title}</h3>
@@ -273,7 +273,7 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
         const rows1 = lpKeys.length   ? rowsFor(lpKeys,   selectedLP)   : '';
 
         app.innerHTML = `
-          <div class="home home--fixed-card">
+          <div class="home home--fixed-card home--dicts">
             <section class="card dicts-card dicts-card--fixed">
               <div class="dicts-header">
                 <h3>${T.title}</h3>

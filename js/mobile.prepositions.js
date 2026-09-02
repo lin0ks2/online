@@ -118,9 +118,19 @@
   function nextViaTrainer(){
     try{
       const A=window.App||{};
-      if(A.Prepositions&&typeof A.Prepositions.next==='function'){A.Prepositions.next();return true}
-      if(A.PrepositionsTrainer&&typeof A.PrepositionsTrainer.next==='function'){A.PrepositionsTrainer.next();return true}
-      if(A.Trainer&&typeof A.Trainer.next==='function'){A.Trainer.next();return true}
+      if(A.MobileTrainerActions&&typeof A.MobileTrainerActions.skipCurrent==='function'){
+        return !!A.MobileTrainerActions.skipCurrent();
+      }
+    }catch(_){}
+    return false;
+  }
+
+  function revealViaTrainer(){
+    try{
+      const A=window.App||{};
+      if(A.MobileTrainerActions&&typeof A.MobileTrainerActions.revealCurrent==='function'){
+        return !!A.MobileTrainerActions.revealCurrent();
+      }
     }catch(_){}
     return false;
   }
@@ -164,7 +174,7 @@
 
     if(action==='reveal'){
       e.preventDefault();
-      // Existing prepositions IDK/reveal semantics are reused.
+      if(revealViaTrainer())return;
       clickExistingIdk();
       return;
     }
