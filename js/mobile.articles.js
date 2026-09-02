@@ -20,6 +20,16 @@
       const oc=document.querySelector('.oc-root');if(oc)oc.setAttribute('aria-hidden','false')
     }catch(_){}
   }
+
+  function syncTtsButton(){
+    const btn=document.querySelector('.articles-mobile-tools [data-articles-tool="tts"]');
+    if(!btn)return;
+    let on=false;
+    try{on=localStorage.getItem('mm.tts.words')==='1'}catch(_){}
+    btn.classList.toggle('is-active',on);
+    btn.setAttribute('aria-pressed',String(on));
+  }
+
   function ensureTools(home){
     if(!home)return;
     let tools=home.querySelector('.articles-mobile-tools');
@@ -55,6 +65,7 @@
     if(bar.innerHTML!==barHtml)bar.innerHTML=barHtml;
     const home=main.querySelector('.home');
     if(home && !home.querySelector('.articles-mobile-tools')) ensureTools(home);
+    syncTtsButton();
     try{if(window.MOYAMOVA_MobileNav&&typeof window.MOYAMOVA_MobileNav.sync==='function')window.MOYAMOVA_MobileNav.sync()}catch(_){}
   }
 
@@ -63,6 +74,8 @@
     if(h&&mobile()){e.preventDefault();goHome();return}
     const m=e.target&&e.target.closest?e.target.closest('[data-mobile-articles-menu]'):null;
     if(m&&mobile()){e.preventDefault();openMenu()}
+    const t=e.target&&e.target.closest?e.target.closest('[data-articles-tool="tts"]'):null;
+    if(t&&mobile())setTimeout(syncTtsButton,0);
   });
 
   const app=document.getElementById('app');
