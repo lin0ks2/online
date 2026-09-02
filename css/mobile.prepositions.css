@@ -50,6 +50,12 @@
     display:none!important;
   }
 
+  /* Hide only the legacy Auto / Reverse / Focus / TTS bar above the card.
+     The new .preps-mobile-tools bar below the card remains visible. */
+  html[data-mobile-shell="prepositions"] .trainer-quickbar:not(.preps-mobile-tools){
+    display:none!important;
+  }
+
   html[data-mobile-shell="prepositions"] .trainer-desktop-main{
     width:100%!important;
     max-width:560px!important;
