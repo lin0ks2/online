@@ -1,5 +1,5 @@
 /* ==========================================================
- * MOYAMOVA 1.10.8 — Guide / Instruction V3
+ * MOYAMOVA 1.10.10 — Guide / Instruction V3
  * Desktop: unified MOYAMOVA shell. Mobile: clean standalone guide.
  * ========================================================== */
 (function(root){
@@ -45,7 +45,10 @@
   function route(action){
     try{
       const a=A();
-      if(a.Router&&typeof a.Router.routeTo==='function'){ a.Router.routeTo(action); return; }
+      if(a.Router&&typeof a.Router.routeTo==='function'){
+        a.Router.routeTo(action);
+        return;
+      }
     }catch(_){}
     try{
       const btn=document.querySelector('.app-footer .nav-btn[data-action="'+action+'"]');
@@ -115,7 +118,7 @@
   }
 
   function sideHtml(t,lg,c){
-    const ver=(A().APP_VER||'1.10.8');
+    const ver=(A().APP_VER||'1.10.10');
     return '<aside class="dash-side guide-side">'+
       '<div class="dash-brand"><img src="./img/logo_64.png" alt=""><div><strong>MOYAMOVA</strong><span>'+languageName(lg)+'</span></div></div>'+
       '<nav>'+
@@ -136,7 +139,7 @@
     return t.cards.map((c,i)=>
       '<details class="guide-v3-card"'+(i===0?' open':'')+'>'+
         '<summary><i>'+c[0]+'</i><span><b>'+c[1]+'</b><small>'+c[2]+'</small></span><em>⌄</em></summary>'+
-        '<div class="guide-v3-body"><p>'+c[2]+'</p><p>'+c[3]+'</p></div>'+
+        '<div class="guide-v3-body"><p>'+c[3]+'</p></div>'+
       '</details>'
     ).join('');
   }

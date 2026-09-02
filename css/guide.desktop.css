@@ -90,3 +90,24 @@
   .guide-v3-mobile .guide-v3-body{padding:0 14px 14px 60px}.guide-v3-mobile .guide-v3-body p{font-size:12px;line-height:1.55;color:#586a80}
   .guide-v3-mobile .guide-v3-note{margin-top:11px;padding:12px;border-radius:11px;background:#f8fbff;border:1px solid #dbe8f3;font-size:11px;color:#53647a}
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.10 — Guide shell isolation
+ * ========================================================== */
+@media (min-width:900px){
+  #moya-shell-root:has(#app .guide-v3-shell) > .header,
+  #moya-shell-root:has(#app .guide-v3-shell) > .app-footer{
+    display:none!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-shell) > #app.content{
+    padding-top:0!important;
+    padding-bottom:0!important;
+    min-height:100vh!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-shell) .guide-v3-shell{
+    min-height:calc(100vh - 28px)!important;
+  }
+}
