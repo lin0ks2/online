@@ -1045,7 +1045,7 @@ function renderDesktopStatsDashboard(langStat, allLangStats, texts) {
     var names={de:'Deutsch',en:'English',sr:'Srpski',fr:'Français',es:'Español'};
     langRows.push('<div class="stats-v3-lang-row"><span class="stats-v3-lang-dot" style="background:'+color+'"></span><strong>'+escText(names[ls.lang]||String(ls.lang||'').toUpperCase())+'</strong><span>'+fmt(val)+' ('+share+'%)</span></div>');
   });
-  if(acc<100) gradient.push('#24364a '+acc+'% 100%');
+  if(acc<100) gradient.push((document.documentElement.dataset.theme==='dark'?'#2b4054':'#e8eef8')+' '+acc+'% 100%');
 
   var learnedArticles = langCode==='de' ? countLearnedArticlesByLang(langCode) : 0;
   var learnedTranslations = countLearnedWordsByLang(langCode);

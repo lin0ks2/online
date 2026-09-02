@@ -89,3 +89,26 @@
   .stats-v3-row--middle,.stats-v3-row--bottom{grid-template-columns:1fr}
   .stats-v3-pos-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+
+
+/* MOYAMOVA 1.10.14 — Statistics light palette mini polish */
+@media (min-width:900px){
+  html:not([data-theme="dark"]) .desktop-pages-main--stats .stats-v3-progress-ring{
+    background:conic-gradient(#6f7cff var(--p),#e8eef8 0)!important;
+  }
+  html:not([data-theme="dark"]) .desktop-pages-main--stats .dicts-flags{
+    background:#f7f9ff!important;
+    border-color:#dce5f2!important;
+    box-shadow:0 3px 12px rgba(72,94,140,.06)!important;
+  }
+  html:not([data-theme="dark"]) .desktop-pages-main--stats .dict-flag{
+    background:#fff!important;
+    border-color:#e3e9f3!important;
+    box-shadow:none!important;
+  }
+  html:not([data-theme="dark"]) .desktop-pages-main--stats .dict-flag.active{
+    background:#eef2ff!important;
+    border-color:#aebcff!important;
+    box-shadow:0 0 0 2px rgba(111,124,255,.10)!important;
+  }
+}
