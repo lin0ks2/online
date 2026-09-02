@@ -104,7 +104,7 @@
     const all = gatherMistakeDecks();
     if (!all.length){
       app.innerHTML = `
-        <div class="home home--fixed-card">
+        <div class="home home--fixed-card home--mistakes">
           <section class="card dicts-card dicts-card--fixed">
             <div class="dicts-header">
               <h3 style="margin:0;">${T.title}</h3>
@@ -174,7 +174,7 @@
       const data = byLang[activeLang] || [];
       if (!data.length){
         app.innerHTML = `
-          <div class="home home--fixed-card">
+          <div class="home home--fixed-card home--mistakes">
             <section class="card dicts-card dicts-card--fixed">
               <div class="dicts-header">
                 <h3>${T.title}</h3>
@@ -204,7 +204,7 @@
       }).join('');
 
       app.innerHTML = `
-        <div class="home home--fixed-card">
+        <div class="home home--fixed-card home--mistakes">
           <section class="card dicts-card dicts-card--fixed">
             <div class="dicts-header">
               <h3>${T.title}</h3>

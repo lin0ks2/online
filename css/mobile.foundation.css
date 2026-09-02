@@ -192,3 +192,12 @@
     display:none!important;
   }
 }
+
+@media(max-width:899px){
+  html:has(#app .home--favorites) .header,
+  html:has(#app .home--favorites) .app-footer,
+  html:has(#app .home--mistakes) .header,
+  html:has(#app .home--mistakes) .app-footer{
+    display:none!important;
+  }
+}
