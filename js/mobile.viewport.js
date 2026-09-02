@@ -51,7 +51,8 @@
   window.addEventListener('orientationchange', schedule, { passive: true });
   if (window.visualViewport) {
     window.visualViewport.addEventListener('resize', schedule, { passive: true });
-    window.visualViewport.addEventListener('scroll', schedule, { passive: true });
+    // Do not write root CSS variables on every VisualViewport scroll frame.
+    // iOS Safari toolbar/keyboard geometry changes are covered by resize.
   }
 
   try { mq.addEventListener('change', schedule); }

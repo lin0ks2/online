@@ -25,7 +25,7 @@
     let tools=home.querySelector('.articles-mobile-tools');
     if(!tools){
       tools=document.createElement('section');
-      tools.className='articles-mobile-tools';
+      tools.className='articles-mobile-tools trainer-quickbar';
       const card=home.querySelector('.home-trainer.is-articles');
       if(card&&card.nextSibling)home.insertBefore(tools,card.nextSibling);
       else if(card)home.appendChild(tools);
@@ -33,9 +33,9 @@
     const U=uk();
     let tts=false;try{tts=localStorage.getItem('mm.tts.words')==='1'}catch(_){}
     tools.innerHTML=
-      '<button type="button" class="articles-mobile-tool'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'" title="'+(U?'Увімкнути або вимкнути озвучення слів':'Включить или выключить озвучку слов')+'"><i>🔊</i><b>'+(U?'Озвучення':'Озвучка')+'</b></button>'+
-      '<button type="button" class="articles-mobile-tool" data-articles-tool="skip" title="'+(U?'Перейти до наступного слова':'Перейти к следующему слову')+'"><i>⇄</i><b>'+(U?'Пропустити слово':'Пропустить слово')+'</b></button>'+
-      '<button type="button" class="articles-mobile-tool" data-articles-tool="reveal" title="'+(U?'Показати правильний артикль':'Показать правильный артикль')+'"><i>?</i><b>'+(U?'Показати відповідь':'Показать ответ')+'</b></button>';
+      '<button type="button" class="trainer-qbtn'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'" title="'+(U?'Увімкнути або вимкнути озвучення слів':'Включить или выключить озвучку слов')+'"><span class="trainer-qico qico-word" aria-hidden="true">🔊</span><span class="trainer-qlabel">'+(U?'Озвучення':'Озвучка')+'</span></button>'+
+      '<button type="button" class="trainer-qbtn" data-articles-tool="skip" title="'+(U?'Перейти до наступного слова':'Перейти к следующему слову')+'"><span class="trainer-qico qico-reverse" aria-hidden="true">⇄</span><span class="trainer-qlabel">'+(U?'Пропустити':'Пропустить')+'</span></button>'+
+      '<button type="button" class="trainer-qbtn" data-articles-tool="reveal" title="'+(U?'Показати правильний артикль':'Показать правильный артикль')+'"><span class="trainer-qico qico-focus" aria-hidden="true">?</span><span class="trainer-qlabel">'+(U?'Показати':'Показать')+'</span></button>';
   }
   function mount(){
     if(!mobile()||!active())return;

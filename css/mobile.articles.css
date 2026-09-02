@@ -94,28 +94,8 @@
     margin:5px 0 0!important;min-height:0!important;font-size:10px!important;line-height:1.2;opacity:.65
   }
 
-  /* Context/example is more useful than utility controls: keep it near the top. */
-  html[data-mobile-shell="articles"] .home-hints{
-    order:2;
-    display:block!important;
-    margin:0!important;
-    padding:10px 12px!important;
-    border-radius:16px!important;
-    box-shadow:0 5px 18px rgba(34,48,94,.04)!important
-  }
-  html[data-mobile-shell="articles"] .home-hints .hints-body{
-    display:block!important;
-    width:100%;
-    min-height:34px!important;
-    height:auto!important;
-    max-height:82px!important;
-    overflow-y:auto!important;
-    -webkit-overflow-scrolling:touch;
-    padding:0!important;
-    box-sizing:border-box;
-    font-size:11.5px!important;
-    line-height:1.34!important
-  }
+  /* Articles has no useful context payload: do not reserve an empty card. */
+  html[data-mobile-shell="articles"] .home-hints,
   html[data-mobile-shell="articles"] .home-filters{display:none!important}
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles{
@@ -184,74 +164,30 @@
     margin:0!important;text-align:center;font-size:10px!important;line-height:1.2;opacity:.62
   }
 
-  /* Article controls use the same visual language and position as Words quickbar. */
-  .articles-mobile-tools{
+  /* Same component language as Words quickbar; only the 3-column layout differs. */
+  html[data-mobile-shell="articles"] .articles-mobile-tools.trainer-quickbar{
     order:4;
     width:100%;
     margin:0!important;
     box-sizing:border-box;
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    align-items:center;
-    gap:4px;
-    padding:7px;
-    border:1px solid var(--border,#e5e7eb);
-    border-radius:15px;
-    background:var(--surface-1,#fff);
-    box-shadow:0 5px 18px rgba(34,48,94,.045)
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:4px!important;
+    padding:7px!important;
+    border-radius:15px!important;
+    box-shadow:0 5px 18px rgba(34,48,94,.045)!important
   }
-  .articles-mobile-tool{
-    min-width:0;
-    height:38px;
-    padding:0 6px;
-    border:0;
-    border-radius:11px;
-    background:transparent;
-    color:var(--text,#111827);
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:5px;
-    font:inherit;
-    font-size:10px;
-    font-weight:600;
-    text-align:center
+  html[data-mobile-shell="articles"] .articles-mobile-tools .trainer-qbtn{
+    height:38px!important;
+    min-width:0!important;
+    padding:0 4px!important;
+    gap:5px!important;
+    font-size:10px!important
   }
-  .articles-mobile-tool:active{transform:scale(.97)}
-  .articles-mobile-tool>i{
-    width:24px;
-    height:24px;
-    flex:0 0 24px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:999px;
-    font-style:normal;
-    font-size:13px;
-    font-weight:800;
-    line-height:1
-  }
-  .articles-mobile-tool[data-articles-tool="tts"]>i{
-    background:rgba(14,165,233,.13);
-    color:#0ea5e9
-  }
-  .articles-mobile-tool[data-articles-tool="skip"]>i{
-    background:rgba(16,185,129,.14);
-    color:#10b981
-  }
-  .articles-mobile-tool[data-articles-tool="reveal"]>i{
-    background:rgba(139,92,246,.14);
-    color:#8b5cf6
-  }
-  .articles-mobile-tool.is-active{
-    background:color-mix(in srgb,var(--brand,#35b6ff) 8%,transparent)
-  }
-  .articles-mobile-tool.is-active>i{
-    box-shadow:inset 0 0 0 1px currentColor
+  html[data-mobile-shell="articles"] .articles-mobile-tools .trainer-qico{
+    width:24px!important;height:24px!important;flex-basis:24px!important;font-size:13px!important
   }
 
   /* Main article card follows the quickbar, same hierarchy as Words. */
-  html[data-mobile-shell="articles"] .home-trainer.is-articles{order:3}
 
   /* Shared migrated bottom sheet. */
   html[data-mobile-shell="articles"] .oc-root{inset:0;max-height:var(--mobile-viewport-height)}
@@ -310,8 +246,8 @@
 }
 @media(max-width:390px){
   html[data-mobile-shell="articles"] .mobile-articles-title{display:none}
-  html[data-mobile-shell="articles"] .articles-mobile-tool>b{display:none}
-  html[data-mobile-shell="articles"] .articles-mobile-tool{padding:0}
+  html[data-mobile-shell="articles"] .articles-mobile-tools .trainer-qlabel{display:none}
+  html[data-mobile-shell="articles"] .articles-mobile-tools .trainer-qbtn{padding:0!important}
   html[data-mobile-shell="articles"] .mobile-articles-bar{grid-template-columns:minmax(0,1fr) 44px}
   html[data-mobile-shell="articles"] .mobile-nav-sheet{grid-template-columns:1fr}
 }

@@ -201,9 +201,9 @@
     opacity:.65;
   }
 
-  /* Quick controls live above the learning card on mobile. */
+  /* Context is more useful during learning, so it sits before the card. */
   html[data-mobile-shell="trainer"] .home--word-trainer .trainer-quickbar {
-    order:2;
+    order:4;
     width:100%;
     margin:0 !important;
     box-sizing:border-box;
@@ -315,9 +315,9 @@
     line-height:1.2;
   }
 
-  /* Example/context follows the question and is allowed to grow naturally. */
+  /* Example/context is shown before the question; utility controls go below it. */
   html[data-mobile-shell="trainer"] .home--word-trainer .home-hints {
-    order:4;
+    order:2;
     margin:0 !important;
     padding:11px 13px !important;
     border-radius:16px !important;
@@ -329,8 +329,8 @@
     width:100%;
     min-height:42px !important;
     height:auto !important;
-    max-height:118px !important;
-    overflow-y:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
     padding:0 !important;
     box-sizing:border-box;
     font-size:12px !important;
@@ -351,8 +351,8 @@
   html[data-mobile-shell="trainer"] .oc-overlay {
     inset:0 !important;
     background:rgba(12,20,38,.30);
-    backdrop-filter:blur(2px);
-    -webkit-backdrop-filter:blur(2px);
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
   }
 
   html[data-mobile-shell="trainer"] .oc-panel {
@@ -462,43 +462,5 @@
   }
   html[data-mobile-shell="trainer"] .mobile-nav-sheet {
     grid-template-columns:1fr;
-  }
-}
-
-
-/* 1.11.7 — mobile difficulty indicator mirrors the approved desktop control.
-   It still proxies the canonical #levelToggle handler from home.js. */
-@media (max-width:899px) {
-  html[data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator {
-    display:grid !important;
-    grid-column:1 !important;
-    justify-self:start !important;
-    position:static !important;
-    width:38px !important;
-    height:38px !important;
-    margin:0 !important;
-    padding:0 !important;
-    place-items:center;
-    border:1px solid #dbe3f0 !important;
-    border-radius:11px !important;
-    background:#f4f7ff !important;
-    color:#273855 !important;
-    font-size:20px !important;
-    line-height:1 !important;
-    opacity:1 !important;
-    box-shadow:none !important;
-  }
-  html[data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator[data-level="hard"] {
-    background:#fff5e8 !important;
-    border-color:#f1d6ad !important;
-  }
-  html[data-theme="dark"][data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator {
-    background:#22354a !important;
-    border-color:#38516b !important;
-    color:#f3f7fb !important;
-  }
-  html[data-theme="dark"][data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator[data-level="hard"] {
-    background:#4a3927 !important;
-    border-color:#725c3e !important;
   }
 }
