@@ -25,6 +25,7 @@
     const app = document.getElementById('app');
     if (!app || !isMobile()) return '';
     if (app.querySelector('.dashboard')) return 'home';
+    if (app.querySelector('.dicts-view, [data-view="dicts"], .view-dicts')) return 'dicts';
     if (app.querySelector('.home-trainer.is-articles')) return 'articles';
     if (app.querySelector('.home-trainer.home-trainer--preps')) return 'prepositions';
     if (app.querySelector('.home.home--word-trainer')) return 'trainer';
@@ -100,7 +101,7 @@
     if (title) title.textContent = T.title;
 
     const button = document.getElementById('btnMenu');
-    if (button && ['home','trainer','articles','prepositions'].includes(docEl.dataset.mobileShell || '')) {
+    if (button && ['home','trainer','articles','prepositions','dicts'].includes(docEl.dataset.mobileShell || '')) {
       button.setAttribute('aria-label', T.open);
       button.setAttribute('title', T.open);
     }
@@ -121,7 +122,7 @@
   // their authoritative legacy handlers untouched.
   document.addEventListener('click', function (e) {
     const btn = e.target && e.target.closest ? e.target.closest('[data-mobile-route]') : null;
-    if (!btn || !isMobile() || !['home','trainer','articles','prepositions'].includes(docEl.dataset.mobileShell || '')) return;
+    if (!btn || !isMobile() || !['home','trainer','articles','prepositions','dicts'].includes(docEl.dataset.mobileShell || '')) return;
     e.preventDefault();
     routeTo(btn.getAttribute('data-mobile-route'));
   });
