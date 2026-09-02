@@ -111,3 +111,40 @@
     min-height:calc(100vh - 28px)!important;
   }
 }
+
+
+/* MOYAMOVA 1.10.11 — structured Guide copy */
+.guide-v3-start-copy{
+  margin:0 0 14px;color:#53647a;font-size:11.5px;line-height:1.55;
+}
+.guide-v3-body ul{
+  list-style:none;margin:12px 0 0;padding:0;display:grid;gap:7px;
+}
+.guide-v3-body li{
+  position:relative;padding-left:20px;
+}
+.guide-v3-body li::before{
+  content:"✓";position:absolute;left:0;top:0;color:#25ad70;font-weight:900;
+}
+.guide-v3-body dl{
+  margin:12px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:8px 10px;
+}
+.guide-v3-body dt{
+  color:#2b8cff;font-weight:900;
+}
+.guide-v3-body dd{
+  margin:0;color:inherit;
+}
+.guide-v3-body aside{
+  margin:13px 0 0;padding:10px 12px;border-radius:9px;background:#eef7ff;
+  border-left:3px solid #2b8cff;color:#43566d;font-weight:650;
+}
+html[data-theme="dark"] .guide-v3-start-copy{color:#91a4b9}
+html[data-theme="dark"] .guide-v3-body aside{
+  background:#10283a;color:#b8c8d8;border-left-color:#4ba5ff;
+}
+@media(max-width:899px){
+  .guide-v3-start-copy{font-size:12px}
+  .guide-v3-mobile .guide-v3-body dl{grid-template-columns:1fr;gap:3px}
+  .guide-v3-mobile .guide-v3-body dd{margin-bottom:6px}
+}
