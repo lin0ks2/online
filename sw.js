@@ -2,15 +2,15 @@
  * Проект: MOYAMOVA
  * Файл: sw.js
  * Назначение: Service Worker (PWA, офлайн, обновления)
- * Версия SW: 1.10.12
+ * Версия SW: 1.10.13
  * Обновлено: 2026-01-08
  * ========================================================== */
 
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.10.12';
-const CACHE_NAME = 'moyamova-cache-v1.10.12';
+const SW_VERSION = '1.10.13';
+const CACHE_NAME = 'moyamova-cache-v1.10.13';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -40,6 +40,7 @@ const APP_SHELL = [
   'css/articles.desktop.css',
   'css/prepositions.desktop.css',
   'css/guide.desktop.css',
+  'css/desktop.palette.css',
   'css/home.dashboard.css',
   'css/dicts.v2.css',
   'css/desktop.pages.css',

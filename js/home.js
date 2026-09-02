@@ -1398,6 +1398,40 @@ function activeDeckKey() {
     return (lang === 'uk') ? 'Дієслова' : 'Глаголы';
   }
 
+  function syncDifficultyControl(){
+    try{
+      const btn=document.getElementById('trainerModeIndicator');
+      if(!btn) return;
+      const hard=getMode()==='hard';
+      const isUk=getUiLang()==='uk';
+      btn.textContent=hard?'🦅':'🐣';
+      btn.setAttribute('aria-pressed',String(hard));
+      const title=hard
+        ? (isUk?'Складний режим — натисніть, щоб увімкнути звичайний':'Сложный режим — нажмите, чтобы включить обычный')
+        : (isUk?'Звичайний режим — натисніть, щоб увімкнути складний':'Обычный режим — нажмите, чтобы включить сложный');
+      btn.title=title;
+      btn.setAttribute('aria-label',title);
+      btn.dataset.level=hard?'hard':'normal';
+    }catch(_){}
+  }
+
+  function bindDifficultyControl(){
+    const btn=document.getElementById('trainerModeIndicator');
+    if(!btn) return;
+    syncDifficultyControl();
+    btn.onclick=function(){
+      try{
+        const toggle=document.getElementById('levelToggle');
+        if(!toggle || toggle.disabled) return;
+        toggle.checked=!toggle.checked;
+        toggle.dispatchEvent(new Event('change',{bubbles:true}));
+        // The canonical levelToggle handler may show an async confirmation.
+        // Resync after both immediate and modal-confirmed paths.
+        [80,350,900].forEach(ms=>setTimeout(syncDifficultyControl,ms));
+      }catch(_){}
+    };
+  }
+
   function mountMarkup() {
     const app = document.getElementById('app');
     if (!app) return;
@@ -1486,6 +1520,7 @@ function activeDeckKey() {
         <!-- ЗОНА 3: Тренер -->
         <section class="card home-trainer${__isWordHome ? ' home-trainer--words' : ''}">
           <div class="trainer-top">
+            <button type="button" class="trainer-mode-indicator" id="trainerModeIndicator" aria-pressed="false"></button>
             <div class="trainer-stars" aria-hidden="true"></div>
             <button aria-label="${T.fav}" class="heart" data-title-key="tt_favorites" id="favBtn">♡</button>
           </div>
@@ -1493,7 +1528,6 @@ function activeDeckKey() {
           <p class="trainer-subtitle">${T.choose}</p>
           <div class="answers-grid"></div>
           <button class="btn-ghost idk-btn">${T.idk}</button>
-          <span class="trainer-mode-indicator" id="trainerModeIndicator" aria-hidden="true"></span>
           <p class="dict-stats" id="dictStats"></p>
         </section>
 
@@ -1570,6 +1604,7 @@ function activeDeckKey() {
 
       try { __syncTrainerSidebarCounts(); } catch(_){}
       try { if (__isPrepsHome) __renderPrepsDesktopChrome(key); } catch(_){}
+      try { bindDifficultyControl(); } catch(_){}
     }
 
     // Инициализация summary после отрисовки (если фильтры показаны)
