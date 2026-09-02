@@ -106,15 +106,19 @@
     function openGuide(){
       settingsOpen=false;
       try{
-        if(A.Router&&typeof A.Router.routeTo==='function'){
-          A.Router.routeTo('guide');
-          return;
-        }
+        // Guide is a standalone app view. Mount it directly so opening the
+        // instruction does not depend on which Router instance is currently live.
         if(A.ViewGuide&&typeof A.ViewGuide.mount==='function'){
           A.ViewGuide.mount();
           return;
         }
-        if(window.Guide&&typeof window.Guide.open==='function') window.Guide.open();
+        if(window.Guide&&typeof window.Guide.open==='function'){
+          window.Guide.open();
+          return;
+        }
+        if(A.Router&&typeof A.Router.routeTo==='function'){
+          A.Router.routeTo('guide');
+        }
       }catch(_){}
     }
 

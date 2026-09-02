@@ -2652,6 +2652,31 @@ answers.innerHTML = '';
         } catch(_) {}
       }
 
+      if (action === 'guide') {
+        if (A.ViewGuide && typeof A.ViewGuide.mount === 'function') {
+          A.ViewGuide.mount();
+        } else if (window.Guide && typeof window.Guide.open === 'function') {
+          window.Guide.open();
+        }
+        return;
+      }
+      if (action === 'settings') {
+        // Settings is a desktop overlay, not a legacy content view.
+        // Rebuild Home first so desktop.settings.js can inject its nav button,
+        // then open that button through the normal authoritative handler.
+        if (A.HomeDashboard && typeof A.HomeDashboard.mount === 'function') A.HomeDashboard.mount();
+        else { mountMarkup(); renderSets(); renderTrainer(); }
+        const openDesktopSettings = () => {
+          const btn = document.querySelector('[data-desktop-settings]');
+          if (btn) btn.click();
+          else setTimeout(() => {
+            const retry = document.querySelector('[data-desktop-settings]');
+            if (retry) retry.click();
+          }, 80);
+        };
+        requestAnimationFrame(openDesktopSettings);
+        return;
+      }
       if (action === 'home') {
         if (A.HomeDashboard && typeof A.HomeDashboard.mount === 'function') A.HomeDashboard.mount();
         else { mountMarkup(); renderSets(); renderTrainer(); }
