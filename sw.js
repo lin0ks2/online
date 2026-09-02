@@ -2,15 +2,15 @@
  * Проект: MOYAMOVA
  * Файл: sw.js
  * Назначение: Service Worker (PWA, офлайн, обновления)
- * Версия SW: 1.10.17
+ * Версия SW: 1.10.18
  * Обновлено: 2026-01-08
  * ========================================================== */
 
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.10.17';
-const CACHE_NAME = 'moyamova-cache-v1.10.17';
+const SW_VERSION = '1.10.18';
+const CACHE_NAME = 'moyamova-cache-v1.10.18';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -45,6 +45,7 @@ const APP_SHELL = [
   'css/dicts.v2.css',
   'css/desktop.pages.css',
   'css/desktop.settings.css',
+  'css/page.tips.css',
   'img/flags/de.svg',
   'img/flags/en.svg',
   'img/flags/sr.svg',
@@ -68,6 +69,7 @@ const APP_SHELL = [
   'js/home.js',
   'js/desktop.pages.js',
   'js/desktop.settings.js',
+  'js/ui.page.tips.js',
   'js/dicts.js',
   'js/app.decks.js',
   'js/app.trainer.js',
@@ -105,6 +107,12 @@ const APP_SHELL = [
   'js/ga.consent.js',
   'js/analytics.js',
   'js/legal.js',
+  'legal/terms.ru.html',
+  'legal/terms.uk.html',
+  'legal/privacy.ru.html',
+  'legal/privacy.uk.html',
+  'legal/impressum.ru.html',
+  'legal/impressum.uk.html',
   // JSON data layer + словари – обязательно для первого офлайн-запуска
   'js/deck.loader.js',
   'dicts/decks.manifest.json',
