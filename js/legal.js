@@ -105,6 +105,81 @@ const Legal = (() => {
       .legal-content a{ color:#0b57d0; text-decoration:none; }
       .legal-content a:hover{ text-decoration:underline; }
       .legal-content :target{ scroll-margin-top: 72px; }
+
+      @media (min-width:900px){
+        .legal-sheet{
+          inset:0;
+          background:#f5f7fc;
+          color:#1d2a3d;
+          z-index:2500;
+        }
+        .legal-top{
+          width:min(100% - 48px,900px);
+          margin:22px auto 0;
+          padding:13px 16px;
+          border:1px solid #e1e7f0;
+          border-radius:14px 14px 0 0;
+          background:#fff;
+          box-shadow:0 8px 28px rgba(30,48,82,.055);
+        }
+        .legal-tabs{gap:6px;flex-wrap:wrap}
+        .legal-tab{
+          padding:8px 12px;
+          border-color:#e1e7f0;
+          border-radius:9px;
+          color:#58667a;
+          font-size:12px;
+          font-weight:700;
+        }
+        .legal-tab[aria-selected="true"]{
+          border-color:#b6c0ff;
+          background:#eef2ff;
+          color:#5e6fd8;
+          box-shadow:none;
+        }
+        .legal-close-desktop{
+          border:0;background:transparent;color:#6676dd;font-weight:800;
+          font-size:12px;cursor:pointer;white-space:nowrap
+        }
+        .legal-content{
+          width:min(100% - 48px,900px);
+          margin:0 auto 22px;
+          padding:30px 54px 40px;
+          background:#fff;
+          border:1px solid #e1e7f0;
+          border-top:0;
+          border-radius:0 0 14px 14px;
+          box-shadow:0 8px 28px rgba(30,48,82,.055);
+          color:#27364b;
+          font-size:15px;
+          line-height:1.72;
+        }
+        .legal-content h1{
+          margin:0 0 22px;
+          color:#17243a;
+          font:700 28px/1.15 Montserrat,system-ui,sans-serif;
+        }
+        .legal-content h2{
+          margin:26px 0 8px;
+          color:#26364d;
+          font:700 16px/1.3 Montserrat,system-ui,sans-serif;
+        }
+        .legal-content p{margin:0 0 13px}
+        .legal-content em{color:#77859a}
+        .legal-content>.legal-tabs{
+          margin-top:32px!important;padding-top:18px!important;border-top-color:#e6ebf2!important
+        }
+        html[data-theme="dark"] .legal-sheet{background:#1f2c3d;color:#e5ebf4}
+        html[data-theme="dark"] .legal-top,
+        html[data-theme="dark"] .legal-content{
+          background:#263548;border-color:#3b4d63;color:#cdd7e4
+        }
+        html[data-theme="dark"] .legal-content h1,
+        html[data-theme="dark"] .legal-content h2{color:#f3f6fb}
+        html[data-theme="dark"] .legal-tab{background:#2c3d52;border-color:#42556d;color:#b9c5d5}
+        html[data-theme="dark"] .legal-tab[aria-selected="true"]{background:#35466a;border-color:#687bd6;color:#d8deff}
+        html[data-theme="dark"] .legal-close-desktop{color:#aab7ff}
+      }
     `;
     styleTag = document.createElement('style');
     styleTag.id = 'legal-sheet-styles';
@@ -135,6 +210,14 @@ const Legal = (() => {
     `;
 
     top.appendChild(tabs);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'legal-close-desktop';
+    closeBtn.setAttribute('data-legal-close','1');
+    closeBtn.textContent = currentLang()==='uk' ? '← Налаштування' : '← Настройки';
+    closeBtn.addEventListener('click', close);
+    top.appendChild(closeBtn);
 
     content = document.createElement('div');
     content.className = 'legal-content';
@@ -307,6 +390,8 @@ const Legal = (() => {
       document.querySelector('.oc-root')?.setAttribute('aria-hidden','true');
     }
     setActiveTab(section);
+    const backBtn=sheet.querySelector('[data-legal-close]');
+    if(backBtn) backBtn.textContent=currentLang()==='uk' ? '← Налаштування' : '← Настройки';
     sheet.style.display = 'flex';
     try{ window.applyI18n && window.applyI18n(sheet); }catch(_){}
     document.body.classList.add('legal-open');

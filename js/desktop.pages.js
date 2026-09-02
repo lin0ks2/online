@@ -163,6 +163,7 @@
       main.appendChild(home);
       home.classList.add('desktop-page-home');
       decorateFlags(shell);
+      try{ if(A.PageTips&&A.PageTips.mount) requestAnimationFrame(()=>A.PageTips.mount()); }catch(_){}
     } finally { busy=false; }
   }
 

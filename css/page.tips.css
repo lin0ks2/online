@@ -1,0 +1,24 @@
+/* ==========================================================
+ * MOYAMOVA 1.10.17 — Shared contextual page tip
+ * ========================================================== */
+@media (min-width:900px){
+  .mm-page-tip{
+    margin-top:14px;
+    border:1px solid var(--dbd,#dfe6f0);
+    background:rgba(255,255,255,.72);
+    border-radius:12px;
+    padding:10px 14px;
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    color:var(--dm,#6e7c8f);
+    font-size:11px;
+    line-height:1.45;
+  }
+  .mm-page-tip i{font-style:normal;flex:0 0 auto}
+  html[data-theme="dark"] .mm-page-tip{
+    background:rgba(40,55,78,.72);
+    border-color:#3d5069;
+    color:#aab7c8;
+  }
+}

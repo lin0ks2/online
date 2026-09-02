@@ -200,7 +200,6 @@
         </section>
         <section class="dash-block"><div class="dash-title"><h3>${T.decks}</h3><button data-route="dicts">${T.all} →</button></div><div class="dash-decks">${cards}</div></section>
         <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
-        <div class="dash-tip">💡 ${T.tip}</div>
       </section>
     </div>`;
 
@@ -211,6 +210,7 @@
     app.querySelectorAll('[data-mode]').forEach(el=>el.addEventListener('click',()=>quickMode(el.getAttribute('data-mode'))));
     app.querySelector('[data-open-menu]')?.addEventListener('click',()=>document.getElementById('btnMenu')?.click());
     setFooterActive('home');
+    try{ if(A.PageTips&&A.PageTips.mount) requestAnimationFrame(()=>A.PageTips.mount()); }catch(_){}
   }
 
   A.HomeDashboard={mount,startDeck};

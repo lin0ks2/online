@@ -163,6 +163,7 @@
 
     if(desktop){
       el.innerHTML='<div class="guide-v3-shell">'+sideHtml(t,lg,counts)+'<main class="guide-v3-main">'+contentHtml(t)+'</main></div>';
+      try{ if(A().PageTips&&A().PageTips.mount) requestAnimationFrame(()=>A().PageTips.mount()); }catch(_){}
     }else{
       el.innerHTML='<main class="guide-v3-mobile">'+contentHtml(t)+'</main>';
     }

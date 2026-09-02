@@ -28,7 +28,7 @@
       share:'Поділитися',viber:'Viber-група',qr:'QR-код',support:'Підтримка проєкту',
       supportText:'Допоможіть розвивати MOYAMOVA',paypal:'Підтримати через PayPal',
       guide:'Інструкція',guideText:'Як працюють тренування, режими та прогрес',
-      openGuide:'Відкрити інструкцію',copyDone:'Посилання скопійовано',shareTitle:'Поділитися MOYAMOVA',
+      openGuide:'Відкрити інструкцію',copyDone:'Посилання скопійовано',shareTitle:'Поділитися MOYAMOVA',privacy:'Конфіденційність',terms:'Умови використання',offlineNote:'Працює локально та без реєстрації',
     }:{
       settings:'Настройки',title:'Настройки',subtitle:'Основные параметры приложения',
       interface:'Интерфейс',language:'Язык приложения',ru:'Русский',ua:'Украинский',
@@ -39,7 +39,7 @@
       share:'Поделиться',viber:'Viber-группа',qr:'QR-код',support:'Поддержка проекта',
       supportText:'Помогите развивать MOYAMOVA',paypal:'Поддержать через PayPal',
       guide:'Инструкция',guideText:'Как работают тренировки, режимы и прогресс',
-      openGuide:'Открыть инструкцию',copyDone:'Ссылка скопирована',shareTitle:'Поделиться MOYAMOVA',
+      openGuide:'Открыть инструкцию',copyDone:'Ссылка скопирована',shareTitle:'Поделиться MOYAMOVA',privacy:'Конфиденциальность',terms:'Условия использования',offlineNote:'Работает локально и без регистрации',
     };
 
     function currentShell(){
@@ -101,6 +101,19 @@
       }catch(_){
         try{ window.prompt(T.shareTitle,APP_URL); }catch(__){}
       }
+    }
+
+    async function openLegal(section){
+      settingsOpen=true;
+      try{
+        if(window.Legal&&typeof window.Legal.open==='function'){
+          window.Legal.open(section);
+          return;
+        }
+        const mod=await import('./legal.js');
+        const legal=(mod&&mod.Legal)||window.Legal;
+        if(legal&&typeof legal.open==='function') legal.open(section);
+      }catch(_){}
     }
 
     function openGuide(){
@@ -239,6 +252,19 @@
             </div>
             <button type="button" class="desktop-settings__button desktop-settings__button--paypal" data-settings-action="paypal">${T.paypal}</button>
           </section>
+
+          <footer class="desktop-settings__legal">
+            <div class="desktop-settings__legal-copy">
+              <strong>MOYAMOVA · v${(A.APP_VER||'—')} · Offline</strong>
+              <span>${T.offlineNote}</span>
+            </div>
+            <nav aria-label="Legal">
+              <button type="button" data-settings-action="privacy">${T.privacy}</button>
+              <span>·</span>
+              <button type="button" data-settings-action="terms">${T.terms}</button>
+            </nav>
+            <small>© 2026 MOYAMOVA</small>
+          </footer>
         </div>`;
 
       shell.querySelectorAll('.dash-side nav button,.trainer-side nav button,.desktop-pages-side nav button')
@@ -348,6 +374,9 @@
       main.querySelector('[data-settings-action="qr"]').onclick=()=>showPopover('qr');
       main.querySelector('[data-settings-action="paypal"]').onclick=()=>openExternal(PAYPAL_URL);
       main.querySelector('[data-settings-action="guide"]').onclick=openGuide;
+      main.querySelector('[data-settings-action="privacy"]').onclick=()=>openLegal('privacy');
+      main.querySelector('[data-settings-action="terms"]').onclick=()=>openLegal('terms');
+      try{ if(A.PageTips&&A.PageTips.mount) requestAnimationFrame(()=>A.PageTips.mount()); }catch(_){}
 
       main.querySelector('[data-settings-action="export"]').onclick=()=>{
         try{ if(A.Backup&&A.Backup.export) A.Backup.export(); }catch(_){}

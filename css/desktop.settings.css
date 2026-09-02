@@ -450,3 +450,31 @@ html[data-theme="dark"] .desktop-settings__row--secondary,
     border-color:#3974b7!important;
   }
 }
+
+
+/* MOYAMOVA 1.10.17 — compact legal footer */
+@media (min-width:900px){
+  .desktop-settings__legal{
+    margin-top:14px;
+    padding:16px 4px 2px;
+    border-top:1px solid #e3e9f3;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:7px 18px;
+    align-items:center;
+    color:#7b8798;
+  }
+  .desktop-settings__legal-copy{display:flex;flex-direction:column;gap:3px}
+  .desktop-settings__legal-copy strong{font-size:11px;color:#536176}
+  .desktop-settings__legal-copy span,.desktop-settings__legal small{font-size:10px}
+  .desktop-settings__legal nav{display:flex;align-items:center;gap:7px}
+  .desktop-settings__legal nav button{
+    border:0;background:transparent;padding:3px 0;color:#6676dd;font-size:10px;
+    font-weight:750;cursor:pointer
+  }
+  .desktop-settings__legal nav button:hover{text-decoration:underline}
+  .desktop-settings__legal>small{grid-column:1/-1}
+  html[data-theme="dark"] .desktop-settings__legal{border-top-color:#3d5069;color:#93a3b8}
+  html[data-theme="dark"] .desktop-settings__legal-copy strong{color:#c2ccda}
+  html[data-theme="dark"] .desktop-settings__legal nav button{color:#aab7ff}
+}
