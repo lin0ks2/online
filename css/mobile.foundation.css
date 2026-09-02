@@ -98,3 +98,65 @@
     scroll-margin-bottom: calc(var(--footer-h-actual, 60px) + var(--mobile-safe-bottom) + 12px);
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.11.2 — iOS Safari Setup viewport fix
+ * The setup wizard must scroll as one visual-viewport sheet.
+ * Desktop remains governed by ui.setup.modal.css.
+ * ========================================================== */
+@media (max-width: 899px) {
+  .setup-overlay {
+    box-sizing: border-box;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+    height: var(--mobile-viewport-height);
+    max-height: var(--mobile-viewport-height);
+    padding:
+      max(8px, var(--mobile-safe-top))
+      max(8px, var(--mobile-safe-right))
+      max(8px, var(--mobile-safe-bottom))
+      max(8px, var(--mobile-safe-left));
+    overflow: hidden;
+  }
+
+  .setup-backdrop {
+    height: var(--mobile-viewport-height);
+  }
+
+  .setup-modal {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .setup-modal__inner {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    scroll-padding-top: 12px;
+    scroll-padding-bottom: calc(20px + var(--mobile-safe-bottom));
+  }
+
+  .setup-header,
+  .setup-footer {
+    position: static;
+  }
+
+  .setup-footer {
+    padding-bottom: max(20px, calc(12px + var(--mobile-safe-bottom)));
+  }
+
+  .setup-start-btn {
+    min-height: var(--mobile-tap-size);
+    touch-action: manipulation;
+  }
+}
