@@ -148,3 +148,44 @@ html[data-theme="dark"] .guide-v3-body aside{
   .guide-v3-mobile .guide-v3-body dl{grid-template-columns:1fr;gap:3px}
   .guide-v3-mobile .guide-v3-body dd{margin-bottom:6px}
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.10.12 — Guide desktop vertical scroll repair
+ * The guide may be taller than the viewport after expanding cards.
+ * ========================================================== */
+@media (min-width:900px){
+  #moya-shell-root:has(#app .guide-v3-shell){
+    height:auto!important;
+    min-height:100vh!important;
+    overflow:visible!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-shell) > #app.content{
+    height:auto!important;
+    min-height:100vh!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-shell) .guide-v3-shell{
+    height:auto!important;
+    min-height:calc(100vh - 28px)!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-shell) .guide-v3-main{
+    height:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html:has(#app .guide-v3-shell),
+  body:has(#app .guide-v3-shell){
+    height:auto!important;
+    min-height:100%!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+}
