@@ -99,7 +99,7 @@
   html[data-mobile-shell="articles"] .home-filters{display:none!important}
 
   html[data-mobile-shell="articles"] .home-trainer.is-articles{
-    order:2;margin:0!important;padding:15px 12px 14px!important;
+    order:3;margin:0!important;padding:15px 12px 14px!important;
     min-height:0!important;border-radius:18px!important;
     display:flex!important;flex-direction:column!important;align-items:stretch!important;
     gap:9px!important;box-shadow:0 10px 30px rgba(32,46,96,.075)!important
@@ -109,15 +109,7 @@
     display:grid!important;grid-template-columns:38px minmax(0,1fr) 38px!important;
     align-items:center!important;min-height:30px!important;gap:8px!important
   }
-  html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator{
-    display:grid!important;grid-column:1!important;justify-self:start!important;position:static!important;
-    width:38px!important;height:38px!important;margin:0!important;padding:0!important;place-items:center;
-    border:1px solid #dbe3f0!important;border-radius:11px!important;background:#f4f7ff!important;
-    color:#273855!important;font-size:20px!important;line-height:1!important;opacity:1!important;box-shadow:none!important
-  }
-  html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator[data-level="hard"]{
-    background:#fff5e8!important;border-color:#f1d6ad!important
-  }
+  html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator{display:none!important}
   html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-stars{
     grid-column:2;justify-self:center;font-size:17px!important;gap:3px!important
   }
@@ -172,19 +164,74 @@
     margin:0!important;text-align:center;font-size:10px!important;line-height:1.2;opacity:.62
   }
 
+  /* Article controls use the same visual language and position as Words quickbar. */
   .articles-mobile-tools{
-    order:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:7px;margin:0;padding:7px;border:1px solid var(--border,#e5e7eb);
-    border-radius:15px;background:var(--surface-1,#fff);box-shadow:0 5px 18px rgba(34,48,94,.045)
+    order:2;
+    width:100%;
+    margin:0!important;
+    box-sizing:border-box;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:center;
+    gap:4px;
+    padding:7px;
+    border:1px solid var(--border,#e5e7eb);
+    border-radius:15px;
+    background:var(--surface-1,#fff);
+    box-shadow:0 5px 18px rgba(34,48,94,.045)
   }
   .articles-mobile-tool{
-    min-width:0;min-height:54px;padding:7px 5px;border:0;border-radius:11px;background:transparent;
-    color:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-    font:inherit;text-align:center
+    min-width:0;
+    height:38px;
+    padding:0 6px;
+    border:0;
+    border-radius:11px;
+    background:transparent;
+    color:var(--text,#111827);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    font:inherit;
+    font-size:10px;
+    font-weight:600;
+    text-align:center
   }
-  .articles-mobile-tool>i{font-style:normal;font-size:18px;line-height:1}
-  .articles-mobile-tool>b{font-size:9.5px;line-height:1.15}
-  .articles-mobile-tool.is-active{background:color-mix(in srgb,var(--brand,#35b6ff) 9%,transparent)}
+  .articles-mobile-tool:active{transform:scale(.97)}
+  .articles-mobile-tool>i{
+    width:24px;
+    height:24px;
+    flex:0 0 24px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    font-style:normal;
+    font-size:13px;
+    font-weight:800;
+    line-height:1
+  }
+  .articles-mobile-tool[data-articles-tool="tts"]>i{
+    background:rgba(14,165,233,.13);
+    color:#0ea5e9
+  }
+  .articles-mobile-tool[data-articles-tool="skip"]>i{
+    background:rgba(16,185,129,.14);
+    color:#10b981
+  }
+  .articles-mobile-tool[data-articles-tool="reveal"]>i{
+    background:rgba(139,92,246,.14);
+    color:#8b5cf6
+  }
+  .articles-mobile-tool.is-active{
+    background:color-mix(in srgb,var(--brand,#35b6ff) 8%,transparent)
+  }
+  .articles-mobile-tool.is-active>i{
+    box-shadow:inset 0 0 0 1px currentColor
+  }
+
+  /* Main article card follows the quickbar, same hierarchy as Words. */
+  html[data-mobile-shell="articles"] .home-trainer.is-articles{order:3}
 
   /* Shared migrated bottom sheet. */
   html[data-mobile-shell="articles"] .oc-root{inset:0;max-height:var(--mobile-viewport-height)}
@@ -243,19 +290,8 @@
 }
 @media(max-width:390px){
   html[data-mobile-shell="articles"] .mobile-articles-title{display:none}
+  html[data-mobile-shell="articles"] .articles-mobile-tool>b{display:none}
+  html[data-mobile-shell="articles"] .articles-mobile-tool{padding:0}
   html[data-mobile-shell="articles"] .mobile-articles-bar{grid-template-columns:minmax(0,1fr) 44px}
   html[data-mobile-shell="articles"] .mobile-nav-sheet{grid-template-columns:1fr}
-}
-
-@media (max-width:899px){
-  /* TTS is already in articles-mobile-tools; remove the legacy floating speaker. */
-  html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-audio-btn{
-    display:none!important;
-  }
-  html[data-theme="dark"][data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator{
-    background:#22354a!important;border-color:#38516b!important;color:#f3f7fb!important
-  }
-  html[data-theme="dark"][data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator[data-level="hard"]{
-    background:#4a3927!important;border-color:#725c3e!important
-  }
 }

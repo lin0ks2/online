@@ -32,13 +32,10 @@
     }
     const U=uk();
     let tts=false;try{tts=localStorage.getItem('mm.tts.words')==='1'}catch(_){}
-    if (!tools.dataset.mobileReady) {
-      tools.innerHTML=
-        '<button type="button" class="articles-mobile-tool'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'"><i>🔊</i><b>'+(U?'Озвучення':'Озвучка')+'</b></button>'+
-        '<button type="button" class="articles-mobile-tool" data-articles-tool="skip"><i>⇄</i><b>'+(U?'Пропустити':'Пропустить')+'</b></button>'+
-        '<button type="button" class="articles-mobile-tool" data-articles-tool="reveal"><i>?</i><b>'+(U?'Показати':'Показать')+'</b></button>';
-      tools.dataset.mobileReady='1';
-    }
+    tools.innerHTML=
+      '<button type="button" class="articles-mobile-tool'+(tts?' is-active':'')+'" data-articles-tool="tts" aria-pressed="'+String(tts)+'"><i>🔊</i><b>'+(U?'Озвучення':'Озвучка')+'</b></button>'+
+      '<button type="button" class="articles-mobile-tool" data-articles-tool="skip"><i>⇄</i><b>'+(U?'Пропустити':'Пропустить')+'</b></button>'+
+      '<button type="button" class="articles-mobile-tool" data-articles-tool="reveal"><i>?</i><b>'+(U?'Показати':'Показать')+'</b></button>';
   }
   function mount(){
     if(!mobile()||!active())return;
@@ -50,14 +47,11 @@
       bar=document.createElement('div');bar.className='mobile-articles-bar';main.insertBefore(bar,main.firstChild);
     }
     const U=uk();
-    if (!bar.dataset.mobileReady) {
-      bar.innerHTML=
-        '<button type="button" class="mobile-articles-back" data-mobile-articles-home aria-label="'+(U?'На головну':'На главную')+'">'+
-        '<span class="mobile-articles-back__arrow" aria-hidden="true">‹</span><span>'+(U?'Головна':'Главная')+'</span></button>'+
-        '<strong class="mobile-articles-title">'+(U?'Тренажер артиклів':'Тренажёр артиклей')+'</strong>'+
-        '<button type="button" class="mobile-articles-menu" data-mobile-articles-menu aria-label="'+(U?'Відкрити меню':'Открыть меню')+'">•••</button>';
-      bar.dataset.mobileReady='1';
-    }
+    bar.innerHTML=
+      '<button type="button" class="mobile-articles-back" data-mobile-articles-home aria-label="'+(U?'На головну':'На главную')+'">'+
+      '<span class="mobile-articles-back__arrow" aria-hidden="true">‹</span><span>'+(U?'Головна':'Главная')+'</span></button>'+
+      '<strong class="mobile-articles-title">'+(U?'Тренажер артиклів':'Тренажёр артиклей')+'</strong>'+
+      '<button type="button" class="mobile-articles-menu" data-mobile-articles-menu aria-label="'+(U?'Відкрити меню':'Открыть меню')+'">•••</button>';
     ensureTools(main.querySelector('.home'));
     try{if(window.MOYAMOVA_MobileNav&&typeof window.MOYAMOVA_MobileNav.sync==='function')window.MOYAMOVA_MobileNav.sync()}catch(_){}
   }
@@ -71,12 +65,7 @@
 
   const app=document.getElementById('app');
   if(app&&window.MutationObserver){
-    let queued=false;
-    new MutationObserver(function(){
-      if(queued)return;
-      queued=true;
-      setTimeout(function(){queued=false;mount()},0);
-    }).observe(app,{childList:true,subtree:true});
+    new MutationObserver(function(){setTimeout(mount,0)}).observe(app,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
   }
   document.addEventListener('DOMContentLoaded',mount);
   window.addEventListener('pageshow',mount);
