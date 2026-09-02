@@ -1,6 +1,6 @@
-/* MOYAMOVA 1.11.3 — Mobile navigation migration layer.
- * Home is migrated first. Other screens keep the legacy mobile shell until
- * their dedicated mobile redesign is approved.
+/* MOYAMOVA 1.11.4 — Mobile Home navigation sheet.
+ * Reuses the existing off-canvas menu controls/handlers, but on migrated Home
+ * presents them as a bottom sheet and adds primary SPA navigation.
  */
 (function () {
   'use strict';
@@ -8,70 +8,122 @@
   const mq = window.matchMedia ? window.matchMedia('(max-width: 899px)') : null;
   const docEl = document.documentElement;
 
-  function uiLang() {
+  function isMobile() {
+    return !!(mq && mq.matches);
+  }
+
+  function lang() {
     try {
-      if (window.App && App.settings && App.settings.uiLang) return App.settings.uiLang;
-      return localStorage.getItem('uiLang') || localStorage.getItem('mm.uiLang') || 'ru';
+      const v = String((window.App && App.settings && (App.settings.uiLang || App.settings.lang)) || document.documentElement.lang || 'ru').toLowerCase();
+      return v.startsWith('uk') ? 'uk' : 'ru';
     } catch (_) {
       return 'ru';
     }
   }
 
-  function isMobile() {
-    return !!(mq && mq.matches);
-  }
-
   function isHomeMounted() {
     const app = document.getElementById('app');
-    if (!app) return false;
-    return !!app.querySelector('.dashboard');
+    return !!(app && app.querySelector('.dashboard'));
+  }
+
+  function closeMenu() {
+    document.body.classList.remove('menu-open');
+    const root = document.querySelector('.oc-root');
+    if (root) root.setAttribute('aria-hidden', 'true');
+  }
+
+  function routeTo(action) {
+    closeMenu();
+    try {
+      if (window.App && App.Router && typeof App.Router.routeTo === 'function') {
+        App.Router.routeTo(action);
+      }
+    } catch (_) {}
+  }
+
+  function labels() {
+    return lang() === 'uk' ? {
+      title:'Меню',
+      open:'Відкрити меню',
+      home:['Головна','Огляд навчання'],
+      dicts:['Словники','Вибір матеріалу'],
+      fav:['Обране','Збережені слова'],
+      mistakes:['Помилки','Повторити складне'],
+      stats:['Статистика','Ваш прогрес'],
+      guide:['Інструкція','Як усе працює']
+    } : {
+      title:'Меню',
+      open:'Открыть меню',
+      home:['Главная','Обзор обучения'],
+      dicts:['Словари','Выбор материала'],
+      fav:['Избранное','Сохранённые слова'],
+      mistakes:['Ошибки','Повторить сложное'],
+      stats:['Статистика','Ваш прогресс'],
+      guide:['Инструкция','Как всё работает']
+    };
+  }
+
+  function ensureNavSheet() {
+    const body = document.querySelector('.oc-body');
+    if (!body) return;
+    let sheet = body.querySelector('.mobile-nav-sheet');
+    if (!sheet) {
+      sheet = document.createElement('nav');
+      sheet.className = 'mobile-nav-sheet';
+      sheet.setAttribute('aria-label', 'Mobile navigation');
+      body.insertBefore(sheet, body.firstChild);
+    }
+
+    const T = labels();
+    const items = [
+      ['home','⌂',T.home],
+      ['dicts','▤',T.dicts],
+      ['fav','♡',T.fav],
+      ['mistakes','△',T.mistakes],
+      ['stats','▥',T.stats],
+      ['guide','?',T.guide]
+    ];
+
+    sheet.innerHTML = items.map(function (x) {
+      return '<button type="button" class="mobile-nav-sheet__item" data-mobile-route="' + x[0] + '">' +
+        '<span class="mobile-nav-sheet__icon" aria-hidden="true">' + x[1] + '</span>' +
+        '<span class="mobile-nav-sheet__copy"><strong>' + x[2][0] + '</strong><small>' + x[2][1] + '</small></span>' +
+      '</button>';
+    }).join('');
+
+    const title = document.querySelector('.oc-title');
+    if (title) title.textContent = T.title;
+
+    const button = document.getElementById('btnMenu');
+    if (button && docEl.dataset.mobileShell === 'home') {
+      button.setAttribute('aria-label', T.open);
+      button.setAttribute('title', T.open);
+    }
   }
 
   function syncShell() {
     const home = isMobile() && isHomeMounted();
-    if (home) docEl.dataset.mobileShell = 'home';
-    else if (docEl.dataset.mobileShell === 'home') delete docEl.dataset.mobileShell;
-
-    const btn = document.getElementById('btnMenu');
-    if (btn) {
-      if (home) {
-        const uk = uiLang() === 'uk';
-        btn.setAttribute('aria-label', uk ? 'Налаштування' : 'Настройки');
-        btn.setAttribute('title', uk ? 'Налаштування' : 'Настройки');
-      } else {
-        btn.removeAttribute('title');
-      }
-    }
-
-    // Close a legacy drawer if Home was mounted while it was open.
-    if (home && document.body.classList.contains('menu-open')) {
-      document.body.classList.remove('menu-open');
-      const oc = document.querySelector('.oc-root');
-      if (oc) oc.setAttribute('aria-hidden', 'true');
+    if (home) {
+      docEl.dataset.mobileShell = 'home';
+      ensureNavSheet();
+    } else if (docEl.dataset.mobileShell === 'home') {
+      delete docEl.dataset.mobileShell;
+      closeMenu();
     }
   }
 
-  // Capture before the legacy burger listener. On migrated Home the same
-  // physical control opens Settings directly instead of the side drawer.
+  // Route buttons are new; all existing settings/tools inside .oc-body keep
+  // their authoritative legacy handlers untouched.
   document.addEventListener('click', function (e) {
-    if (!isMobile() || docEl.dataset.mobileShell !== 'home') return;
-    const btn = e.target && e.target.closest ? e.target.closest('#btnMenu') : null;
-    if (!btn) return;
-
+    const btn = e.target && e.target.closest ? e.target.closest('[data-mobile-route]') : null;
+    if (!btn || !isMobile() || docEl.dataset.mobileShell !== 'home') return;
     e.preventDefault();
-    e.stopPropagation();
-    if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
-
-    try {
-      if (window.App && App.Router && typeof App.Router.routeTo === 'function') {
-        App.Router.routeTo('settings');
-      }
-    } catch (_) {}
-  }, true);
+    routeTo(btn.getAttribute('data-mobile-route'));
+  });
 
   const app = document.getElementById('app');
   if (app && window.MutationObserver) {
-    new MutationObserver(syncShell).observe(app, { childList: true, subtree: false });
+    new MutationObserver(syncShell).observe(app, { childList:true, subtree:false });
   }
 
   if (mq) {
@@ -79,8 +131,8 @@
     else if (typeof mq.addListener === 'function') mq.addListener(syncShell);
   }
 
+  document.addEventListener('DOMContentLoaded', syncShell);
   window.addEventListener('pageshow', syncShell);
   window.addEventListener('resize', syncShell);
-  document.addEventListener('DOMContentLoaded', syncShell);
   setTimeout(syncShell, 0);
 })();
