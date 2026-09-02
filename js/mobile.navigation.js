@@ -25,7 +25,7 @@
     const app = document.getElementById('app');
     if (!app || !isMobile()) return '';
     if (app.querySelector('.dashboard')) return 'home';
-    if (app.querySelector('.dicts-view, [data-view="dicts"], .view-dicts')) return 'dicts';
+    if (app.querySelector('.dicts-card')) return 'dicts';
     if (app.querySelector('.home-trainer.is-articles')) return 'articles';
     if (app.querySelector('.home-trainer.home-trainer--preps')) return 'prepositions';
     if (app.querySelector('.home.home--word-trainer')) return 'trainer';
@@ -128,8 +128,20 @@
   });
 
   const app = document.getElementById('app');
+  let shellRaf1 = 0, shellRaf2 = 0;
+  function scheduleShellSync() {
+    if (shellRaf1) cancelAnimationFrame(shellRaf1);
+    if (shellRaf2) cancelAnimationFrame(shellRaf2);
+    shellRaf1 = requestAnimationFrame(function () {
+      shellRaf1 = 0;
+      shellRaf2 = requestAnimationFrame(function () {
+        shellRaf2 = 0;
+        syncShell();
+      });
+    });
+  }
   if (app && window.MutationObserver) {
-    new MutationObserver(syncShell).observe(app, { childList:true, subtree:false });
+    new MutationObserver(scheduleShellSync).observe(app, { childList:true, subtree:false });
   }
 
   if (mq) {
@@ -138,8 +150,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', syncShell);
-  window.addEventListener('pageshow', syncShell);
-  window.addEventListener('resize', syncShell);
+  window.addEventListener('pageshow', scheduleShellSync);
+  window.addEventListener('resize', scheduleShellSync);
   window.MOYAMOVA_MobileNav = { sync: syncShell, ensure: ensureNavSheet, close: closeMenu };
   setTimeout(syncShell, 0);
 })();

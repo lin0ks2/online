@@ -160,3 +160,26 @@
     touch-action: manipulation;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.6 — migrated shell anti-flicker
+ * Hide legacy chrome synchronously from actual mounted DOM, avoiding
+ * one-frame flashes while JS updates data-mobile-shell after SPA routing.
+ * ========================================================== */
+@media (max-width:899px){
+  html:has(#app .dashboard) .app-footer,
+  html:has(#app .home.home--word-trainer) .app-footer,
+  html:has(#app .home-trainer.is-articles) .app-footer,
+  html:has(#app .home-trainer.home-trainer--preps) .app-footer,
+  html:has(#app .dicts-card) .app-footer{
+    display:none!important;
+  }
+
+  html:has(#app .home.home--word-trainer) .header,
+  html:has(#app .home-trainer.is-articles) .header,
+  html:has(#app .home-trainer.home-trainer--preps) .header,
+  html:has(#app .dicts-card) .header{
+    display:none!important;
+  }
+}

@@ -9,7 +9,8 @@
   function findView(){
     const app=document.getElementById('app');
     if(!app)return null;
-    return app.querySelector('.dicts-view, [data-view="dicts"], .view-dicts');
+    const card=app.querySelector('.dicts-card');
+    return card ? card.closest('.home') : null;
   }
 
   function active(){return !!(mobile()&&findView())}
@@ -44,22 +45,11 @@
     const view=findView();
     if(!app||!view)return;
 
-    let wrap=view.parentElement&&view.parentElement.classList.contains('mobile-dicts-wrap')
-      ? view.parentElement
-      : null;
-
-    if(!wrap){
-      wrap=document.createElement('div');
-      wrap.className='mobile-dicts-wrap';
-      view.parentNode.insertBefore(wrap,view);
-      wrap.appendChild(view);
-    }
-
-    let bar=wrap.querySelector('.mobile-dicts-bar');
+    let bar=app.querySelector(':scope > .mobile-dicts-bar');
     if(!bar){
       bar=document.createElement('div');
       bar.className='mobile-dicts-bar';
-      wrap.insertBefore(bar,wrap.firstChild);
+      app.insertBefore(bar,view);
     }
 
     const U=uk();
