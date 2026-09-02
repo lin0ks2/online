@@ -198,7 +198,6 @@
           <div class="dash-learning-head"><div><h3>${T.choose}</h3><p>${T.chooseSub}</p></div></div>
           <div class="dash-training-grid dash-training-grid--${trainingKinds.length}">${trainingCards}</div>
         </section>
-        <section class="dash-block"><div class="dash-title"><h3>${T.quick}</h3></div><div class="dash-quick"><button data-mode="auto"><i>▶</i><b>${T.auto}</b></button><button data-mode="reverse"><i>↔</i><b>${T.reverse}</b></button><button data-mode="focus"><i>◎</i><b>${T.focus}</b></button></div></section>
         <section class="dash-block"><div class="dash-title"><h3>${T.decks}</h3><button data-route="dicts">${T.all} →</button></div><div class="dash-decks">${cards}</div></section>
         <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
         <div class="dash-tip">💡 ${T.tip}</div>
