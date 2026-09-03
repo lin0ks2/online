@@ -6,7 +6,9 @@
  * Обновлено: 2025-11-17
  * ========================================================== */
 
-(function (root) {  const PAYPAL_BUTTON_ID = 'KFBR8BW5ZZTQ4';        // PayPal hosted button  const URL_PAYPAL = `https://www.paypal.com/donate/?hosted_button_id=${PAYPAL_BUTTON_ID}`;
+(function (root) {
+  const PAYPAL_BUTTON_ID = 'KFBR8BW5ZZTQ4';
+  const URL_PAYPAL = `https://www.paypal.com/donate/?hosted_button_id=${PAYPAL_BUTTON_ID}`;
 
   let sheet, scroller, styleTag;
   let __backRoute = 'home';
