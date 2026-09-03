@@ -18,6 +18,75 @@
   // set counts, stats, and "done" marking for *_lernpunkt decks.
   const SET_SIZE_DEFAULT = (A.Config && A.Config.setSizeDefault) || 40;
 
+
+  /* ----------------------- Answer feedback sounds -----------------------
+   * 1.12.24 — shared by Words / Articles / Prepositions and virtual
+   * Favorites / Mistakes decks on both mobile and desktop.
+   * Files are local, so feedback works offline as well.
+   * -------------------------------------------------------------------- */
+  A.AnswerSfx = A.AnswerSfx || (function(){
+    const sources = {
+      correct: './audio/answer-correct.wav',
+      wrong: './audio/answer-wrong.wav'
+    };
+    const pool = {};
+
+    function get(kind){
+      if (!pool[kind]) {
+        const el = new Audio(sources[kind]);
+        el.preload = 'auto';
+        el.volume = 1;
+        pool[kind] = el;
+      }
+      return pool[kind];
+    }
+
+    function play(kind){
+      return new Promise(resolve => {
+        try {
+          const el = get(kind);
+          try { el.pause(); } catch(_){}
+          try { el.currentTime = 0; } catch(_){}
+
+          let done = false;
+          const finish = () => {
+            if (done) return;
+            done = true;
+            try { el.removeEventListener('ended', finish); } catch(_){}
+            try { el.removeEventListener('error', finish); } catch(_){}
+            resolve();
+          };
+
+          try { el.addEventListener('ended', finish, { once:true }); } catch(_){}
+          try { el.addEventListener('error', finish, { once:true }); } catch(_){}
+
+          const p = el.play();
+          if (p && typeof p.catch === 'function') p.catch(finish);
+
+          // Never let audio block trainer progression on a problematic browser.
+          setTimeout(finish, kind === 'correct' ? 500 : 420);
+        } catch(_) {
+          resolve();
+        }
+      });
+    }
+
+    // Warm the files after the first real user gesture without autoplaying them.
+    function warm(){
+      try { get('correct').load(); } catch(_){}
+      try { get('wrong').load(); } catch(_){}
+    }
+    try {
+      document.addEventListener('pointerdown', warm, { once:true, passive:true });
+      document.addEventListener('touchstart', warm, { once:true, passive:true });
+    } catch(_){}
+
+    return {
+      correct: () => play('correct'),
+      wrong: () => play('wrong')
+    };
+  })();
+
   // Desktop-only visual session metrics for the prepositions trainer.
   // Progress/stars remain owned by the existing trainer; this object only feeds KPI cards.
   const __prepUiSession = { deckKey:'', correct:0, wrong:0, streak:0, bestStreak:0, startedAt:0 };
@@ -2527,12 +2596,22 @@ answers.innerHTML = '';
             }
           } catch(_){ }
 
-          // TTS: in reverse mode auto-speaks after correct answer (manual speaks always)
+          // 1.12.24: short answer feedback first, then the existing TTS.
+          // Sequencing avoids the confirmation sound colliding with pronunciation.
           let __ttsAfterCorrectPromise = null;
           try {
-            if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
-              __ttsAfterCorrectPromise = A.AudioTTS.onCorrect();
-            }
+            const __sfx = (A.AnswerSfx && A.AnswerSfx.correct)
+              ? A.AnswerSfx.correct()
+              : Promise.resolve();
+
+            __ttsAfterCorrectPromise = Promise.resolve(__sfx).then(function(){
+              try {
+                if (!(A.settings && A.settings.trainerKind==='articles') && A.AudioTTS && A.AudioTTS.onCorrect) {
+                  return A.AudioTTS.onCorrect();
+                }
+              } catch(_eTTSInner){}
+              return null;
+            });
           } catch(_eTTS) { __ttsAfterCorrectPromise = null; }
 
 
@@ -2626,6 +2705,7 @@ answers.innerHTML = '';
           return;
         }
 
+        try { if (A.AnswerSfx && A.AnswerSfx.wrong) A.AnswerSfx.wrong(); } catch(_){}
         b.classList.add('is-wrong');
         b.disabled = true;
 
