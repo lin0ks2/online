@@ -1184,10 +1184,10 @@ function renderMobileStatsDashboard(langStat, allLangStats, texts) {
         '<div><i>✓</i><small>'+(uk?'Завершено словників':'Завершено словарей')+'</small><strong>'+completed+' / '+(langStat.decks||[]).length+'</strong></div>'+
       '</div>'+
     '</article>'+
-    '<article class="stats-mobile-panel">'+
-      '<h3>'+(uk?'Прогрес за частинами мови':'Прогресс по частям речи')+'</h3>'+
+    '<details class="stats-mobile-panel stats-mobile-pos-details">'+
+      '<summary><span>'+(uk?'Прогрес за частинами мови':'Прогресс по частям речи')+'</span><i aria-hidden="true">⌄</i></summary>'+
       '<div class="stats-mobile-pos-list">'+posRows+'</div>'+
-    '</article>'+
+    '</details>'+
     '<article class="stats-mobile-panel stats-mobile-modes">'+
       '<div class="stats-mobile-modes-head"><h3>'+(uk?'Режими навчання':'Режимы обучения')+'</h3><span>'+(uk?'Вивчено':'Выучено')+' · '+(uk?'Час':'Время')+'</span></div>'+
       '<div class="stats-mobile-mode-list">'+modes+'</div>'+

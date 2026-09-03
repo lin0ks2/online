@@ -28,6 +28,7 @@
     if (app.querySelector('.home--favorites')) return 'favorites';
     if (app.querySelector('.home--mistakes')) return 'mistakes';
     if (app.querySelector('.home--dicts')) return 'dicts';
+    if (app.querySelector('.stats-card')) return 'stats';
     if (app.querySelector('.home-trainer.is-articles')) return 'articles';
     if (app.querySelector('.home-trainer.home-trainer--preps')) return 'prepositions';
     if (app.querySelector('.home.home--word-trainer')) return 'trainer';
@@ -103,7 +104,7 @@
     if (title) title.textContent = T.title;
 
     const button = document.getElementById('btnMenu');
-    if (button && ['home','trainer','articles','prepositions','dicts','favorites','mistakes'].includes(docEl.dataset.mobileShell || '')) {
+    if (button && ['home','trainer','articles','prepositions','dicts','favorites','mistakes','stats'].includes(docEl.dataset.mobileShell || '')) {
       button.setAttribute('aria-label', T.open);
       button.setAttribute('title', T.open);
     }
@@ -124,7 +125,7 @@
   // their authoritative legacy handlers untouched.
   document.addEventListener('click', function (e) {
     const btn = e.target && e.target.closest ? e.target.closest('[data-mobile-route]') : null;
-    if (!btn || !isMobile() || !['home','trainer','articles','prepositions','dicts','favorites','mistakes'].includes(docEl.dataset.mobileShell || '')) return;
+    if (!btn || !isMobile() || !['home','trainer','articles','prepositions','dicts','favorites','mistakes','stats'].includes(docEl.dataset.mobileShell || '')) return;
     e.preventDefault();
     routeTo(btn.getAttribute('data-mobile-route'));
   });
