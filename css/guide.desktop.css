@@ -227,3 +227,78 @@ html[data-theme="dark"] .guide-v3-body aside{
     overflow-x:hidden!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.22 — complete dark theme for mobile Guide
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-theme="dark"] .guide-v3-mobile,
+  html.dark .guide-v3-mobile{
+    background:#020617!important;
+    color:#e5e7eb!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-head h1,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-start-title b,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-flow>div,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-card summary b,
+  html.dark .guide-v3-mobile .guide-v3-head h1,
+  html.dark .guide-v3-mobile .guide-v3-start-title b,
+  html.dark .guide-v3-mobile .guide-v3-flow>div,
+  html.dark .guide-v3-mobile .guide-v3-card summary b{
+    color:#edf5ff!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-head p,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-start-title span,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-card summary small,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-body p,
+  html.dark .guide-v3-mobile .guide-v3-head p,
+  html.dark .guide-v3-mobile .guide-v3-start-title span,
+  html.dark .guide-v3-mobile .guide-v3-card summary small,
+  html.dark .guide-v3-mobile .guide-v3-body p{
+    color:#9fb0c3!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-back,
+  html.dark .guide-v3-mobile .guide-v3-back{
+    background:#101e2c!important;
+    border-color:#263d52!important;
+    color:#edf5ff!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-start,
+  html.dark .guide-v3-mobile .guide-v3-start{
+    background:#0e2030!important;
+    border-color:#29445d!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-flow>div,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-card,
+  html.dark .guide-v3-mobile .guide-v3-flow>div,
+  html.dark .guide-v3-mobile .guide-v3-card{
+    background:#101e2c!important;
+    border-color:#263d52!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-flow i,
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-card summary>i,
+  html.dark .guide-v3-mobile .guide-v3-flow i,
+  html.dark .guide-v3-mobile .guide-v3-card summary>i{
+    background:#142a3d!important;
+    color:#59a8ff!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-card[open] summary,
+  html.dark .guide-v3-mobile .guide-v3-card[open] summary{
+    border-color:#24384b!important;
+  }
+
+  html[data-theme="dark"] .guide-v3-mobile .guide-v3-note,
+  html.dark .guide-v3-mobile .guide-v3-note{
+    background:#0f1e2c!important;
+    border-color:#263d52!important;
+    color:#9fb0c3!important;
+  }
+}

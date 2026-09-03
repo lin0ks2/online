@@ -261,3 +261,33 @@
     grid-template-columns:minmax(0,1fr) 44px;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.22 — dark mobile Favorites / Mistakes selection
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-theme="dark"][data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected,
+  html[data-theme="dark"][data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected,
+  html.dark[data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected,
+  html.dark[data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected{
+    border-color:#21b7f4!important;
+    background:#102334!important;
+    color:#edf5ff!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected>td,
+  html[data-theme="dark"][data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected>td,
+  html.dark[data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected>td,
+  html.dark[data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected>td{
+    color:#edf5ff!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected>td:nth-child(3),
+  html[data-theme="dark"][data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected>td:nth-child(3),
+  html.dark[data-mobile-shell="favorites"] .dicts-table tr.dict-row.is-selected>td:nth-child(3),
+  html.dark[data-mobile-shell="mistakes"] .dicts-table tr.dict-row.is-selected>td:nth-child(3){
+    background:#16293a!important;
+    color:#59b8ff!important;
+  }
+}

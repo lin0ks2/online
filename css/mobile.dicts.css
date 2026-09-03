@@ -399,3 +399,28 @@
     justify-content:center!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.22 — dark mobile Dictionaries selection
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dict-row.is-active,
+  html[data-theme="dark"][data-mobile-shell="dicts"] .deck-row.is-active,
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dicts-item.is-active,
+  html[data-theme="dark"][data-mobile-shell="dicts"] .is-selected,
+  html.dark[data-mobile-shell="dicts"] .dict-row.is-active,
+  html.dark[data-mobile-shell="dicts"] .deck-row.is-active,
+  html.dark[data-mobile-shell="dicts"] .dicts-item.is-active,
+  html.dark[data-mobile-shell="dicts"] .is-selected{
+    border-color:#2bb4f3!important;
+    background:#102334!important;
+    color:#edf5ff!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected>td:nth-child(3),
+  html.dark[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected>td:nth-child(3){
+    background:#16293a!important;
+    color:#59b8ff!important;
+  }
+}
