@@ -195,6 +195,7 @@ function setUiLang(code){
     const lang = (code === 'uk') ? 'uk' : 'ru';
     A.settings = A.settings || {};
     A.settings.lang = lang;
+    A.settings.uiLang = lang;
     if (typeof A.saveSettings === 'function') { try { A.saveSettings(A.settings); } catch(_){} }
     document.documentElement.dataset.lang = lang;
     document.documentElement.setAttribute('lang', lang);

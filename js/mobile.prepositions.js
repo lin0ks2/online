@@ -155,10 +155,7 @@
       try{
         const A=window.App||{};
         if(A.AudioTTS&&typeof A.AudioTTS.refreshIndicators==='function')A.AudioTTS.refreshIndicators();
-        if(next&&A.AudioTTS&&typeof A.AudioTTS.speakText==='function'){
-          const sentence=document.querySelector('.home-trainer.home-trainer--preps .trainer-word');
-          if(sentence)A.AudioTTS.speakText(String(sentence.textContent||''),false,{noVoice:true});
-        }
+        else if(A.AudioTTS&&typeof A.AudioTTS.refresh==='function')A.AudioTTS.refresh();
       }catch(_){}
       syncTtsButton();
       return;

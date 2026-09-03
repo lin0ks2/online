@@ -199,7 +199,7 @@
   const langToggle = document.getElementById('langToggle');
   if(langToggle){
     langToggle.addEventListener('change', e=>{
-      document.documentElement.dataset.lang = e.target.checked ? 'ru' : 'uk';
+      document.documentElement.dataset.lang = e.target.checked ? 'uk' : 'ru';
     });
   }
   const levelToggle = document.getElementById('levelToggle');

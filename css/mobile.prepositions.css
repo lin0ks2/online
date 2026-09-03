@@ -409,3 +409,12 @@
     grid-template-columns:minmax(0,1fr) 44px;
   }
 }
+
+
+/* MOYAMOVA 1.12.10 — match the vertical rhythm of Words / Articles.
+   Their sets panel occupies this visual band; Prepositions intentionally leaves it calm. */
+@media (max-width:899px){
+  html[data-mobile-shell="prepositions"] .trainer-desktop-main>.home{
+    padding-top:58px!important;
+  }
+}

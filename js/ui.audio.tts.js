@@ -303,7 +303,11 @@
       if (isPrepositionsMode()) {
         var el = document.querySelector('.trainer-word');
         var t = el ? (el.textContent || '') : '';
-        return String(t || '').replace(/\s+/g, ' ').trim();
+        t = String(t || '').replace(/\s+/g, ' ').trim();
+        // An unresolved preposition blank is not speech content.
+        // Auto TTS is triggered after a correct answer, when the blank is filled.
+        if (/_{2,}/.test(t)) return '';
+        return t;
       }
     } catch (e) {}
 

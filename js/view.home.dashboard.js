@@ -243,11 +243,19 @@
           <div class="dash-learning-head"><div><h3>${T.choose}</h3><p>${T.chooseSub}</p></div></div>
           <div class="dash-training-grid dash-training-grid--${trainingKinds.length}">${trainingCards}</div>
         </section>
-        <section class="dash-block"><div class="dash-title"><h3>${T.decks}</h3><button data-route="dicts">${T.all} →</button></div><div class="dash-decks">${cards}</div></section>
+        <section class="dash-block dash-block--decks"><div class="dash-title"><button type="button" class="dash-decks-toggle" data-mobile-decks-toggle aria-expanded="false"><span>${T.decks}</span><i aria-hidden="true">⌄</i></button><button data-route="dicts">${T.all} →</button></div><div class="dash-decks" data-mobile-decks-panel>${cards}</div></section>
         <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
       </section>
     </div>`;
 
+    app.querySelector('[data-mobile-decks-toggle]')?.addEventListener('click',(e)=>{
+      if(!(window.matchMedia&&window.matchMedia('(max-width:899px)').matches)) return;
+      const btn=e.currentTarget;
+      const block=btn.closest('.dash-block--decks');
+      const open=!block.classList.contains('is-open');
+      block.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',String(open));
+    });
     app.querySelectorAll('[data-route]').forEach(el=>el.addEventListener('click',()=>route(el.getAttribute('data-route'))));
     app.querySelector('[data-continue]')?.addEventListener('click',()=>continueTraining(last,lg));
     app.querySelectorAll('[data-training-kind]').forEach(el=>el.addEventListener('click',()=>startTrainingKind(el.getAttribute('data-training-kind'),lg)));

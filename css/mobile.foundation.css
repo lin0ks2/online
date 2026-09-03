@@ -193,11 +193,26 @@
   }
 }
 
-@media(max-width:899px){
-  html:has(#app .home--favorites) .header,
-  html:has(#app .home--favorites) .app-footer,
-  html:has(#app .home--mistakes) .header,
-  html:has(#app .home--mistakes) .app-footer{
-    display:none!important;
+
+/* MOYAMOVA 1.12.10 — one mobile difficulty badge surface across all trainers */
+@media (max-width:899px){
+  html[data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator,
+  html[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator,
+  html[data-mobile-shell="prepositions"] .home-trainer--preps .trainer-mode-indicator{
+    background:rgba(247,249,255,.92)!important;
+    border:1px solid rgba(69,88,165,.14)!important;
+    box-shadow:none!important;
+    color:inherit!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator,
+  html.dark[data-mobile-shell="trainer"] .home-trainer--words .trainer-mode-indicator,
+  html[data-theme="dark"][data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator,
+  html.dark[data-mobile-shell="articles"] .home-trainer.is-articles .trainer-mode-indicator,
+  html[data-theme="dark"][data-mobile-shell="prepositions"] .home-trainer--preps .trainer-mode-indicator,
+  html.dark[data-mobile-shell="prepositions"] .home-trainer--preps .trainer-mode-indicator{
+    background:#162231!important;
+    border-color:rgba(135,157,204,.16)!important;
+    box-shadow:none!important;
   }
 }
