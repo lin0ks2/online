@@ -396,6 +396,7 @@
           var correct0 = vm0 ? String(vm0.correct || '').trim() : '';
 
           // "Не знаю" должно учитываться как неправильный ответ (прогресс/статистика).
+          try { if (A.AnswerSfx && A.AnswerSfx.wrong) A.AnswerSfx.wrong(); } catch(_){}
           try {
             if (A.ArticlesTrainer && typeof A.ArticlesTrainer.answerIdk === 'function') {
               A.ArticlesTrainer.answerIdk();
@@ -444,11 +445,30 @@
             b.disabled = true;
             if (b !== btn) b.classList.add('is-dim');
           });
+          var __articleFeedback = null;
           if (vm) {
             paintStars(vm.deckKey, vm.wordId);
             updateBottomDictStats(vm);
-            try { if (A.AudioTTS && A.AudioTTS.onCorrect) A.AudioTTS.onCorrect(); } catch (_eTTS) {}
           }
+
+          // 1.12.25: Articles use their own delegated answer handler, so they
+          // need the shared answer feedback explicitly here.
+          try {
+            var __articleSfx = (A.AnswerSfx && A.AnswerSfx.correct)
+              ? A.AnswerSfx.correct()
+              : Promise.resolve();
+            __articleFeedback = Promise.resolve(__articleSfx).then(function(){
+              try {
+                if (A.AudioTTS && A.AudioTTS.onCorrect) return A.AudioTTS.onCorrect();
+              } catch(_eTTS){}
+              return null;
+            });
+          } catch(_eFeedback) {
+            __articleFeedback = null;
+          }
+
+          // Preserve the existing article cadence. Audio feedback must never
+          // block moving to the next card.
           setTimeout(function () {
             try { if (A.ArticlesTrainer && A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (e) {}
           }, ADV_DELAY);
@@ -456,6 +476,7 @@
         }
 
         // wrong
+        try { if (A.AnswerSfx && A.AnswerSfx.wrong) A.AnswerSfx.wrong(); } catch(_){}
         btn.classList.add('is-wrong');
         btn.disabled = true;
         if (res.applied && vm) {
