@@ -25,32 +25,8 @@
     ? '<button class="action-btn action-btn--stub" type="button" disabled aria-label="🙂">🙂</button>'
     : '<button class="action-btn" data-action="donate" aria-label="Поддержать проект">💰</button>';
 
-  // Показываем расширенные настройки только в установленном режиме (PWA/TWA).
-  // В браузере места меньше, и UX становится хрупким.
-  function isPwaOrTwaRunmode(){
-    // Android TWA: start_url adds ?twa=1
-    if (isTwa) return true;
-    try {
-      // Современный способ
-      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
-    } catch(_){ }
-    try {
-      // iOS-специфика (старые версии)
-      if (typeof window.navigator !== 'undefined' && window.navigator.standalone === true) return true;
-    } catch(_){ }
-    try {
-      // Фолбэк: если ядро уже проставило атрибут
-      var rm = String(document.documentElement.getAttribute('data-runmode') || document.documentElement.dataset.runmode || '').toLowerCase();
-      if (rm === 'pwa') return true;
-    } catch(_){ }
-    return false;
-  }
-
-  var showPwaMenuTools = isPwaOrTwaRunmode();
-
-  // PWA/TWA: показываем расширенную "карточку" prefs (включая backup/updates/version).
-  // WEB: prefs-карточка скрыта, но инструменты (backup/updates/version) должны оставаться видимыми как раньше.
-
+  // 1.12.18 — единое меню для браузера, PWA и TWA.
+  // Настройки тренировки находятся в самих тренажёрах; здесь остаются только общие инструменты.
   // Общие инструменты (markup можно использовать и внутри карточки, и как отдельные пункты в web-версии).
   var commonToolsHtml = '' +
     '<div class="menu-item backup-tools">' +
@@ -73,47 +49,8 @@
       '<div class="app-version-value" id="appVersion">—</div>' +
     '</div>';
 
-  // PWA/TWA prefs card (включает общие инструменты внутри карточки)
-  var pwaMenuHtml = showPwaMenuTools ? (
-    '' +
-    '<div class="mm-prefs-wrap">' +
-      // Focus
-      '<div class="menu-item mm-prefs mm-prefs-focus">' +
-        '<div class="menu-label mm-prefs-title" data-i18n="menuFocus">Концентрация</div>' +
-        '<div class="mm-prefs-grid mm-prefs-grid-2">' +
-          '<label class="mm-check"><input type="checkbox" id="focusSets"><span data-i18n="focusSets">Сеты</span></label>' +
-          '<label class="mm-check"><input type="checkbox" id="focusContext"><span data-i18n="focusContext">Контекст</span></label>' +
-        '</div>' +
-      '</div>' +
+  var menuToolsHtml = commonToolsHtml;
 
-      // Training
-      '<div class="menu-item mm-prefs mm-prefs-training">' +
-        '<div class="mm-prefs-grid">' +
-          '<div class="mm-prefs-row">' +
-            '<div class="mm-prefs-left" data-i18n="trainReverseFull">Обратный перевод</div>' +
-            '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainReverse"><span data-i18n="trainReverse">Обратный</span></label>' +
-          '</div>' +
-          '<div class="mm-prefs-row">' +
-            '<div class="mm-prefs-left" data-i18n="trainAutostepFull">Авто переход по сетам</div>' +
-            '<label class="mm-check mm-check-compact mm-check-nolabel"><input type="checkbox" id="trainAutostep"><span data-i18n="trainAuto">Авто</span></label>' +
-          '</div>' +
-          '<div class="mm-prefs-row mm-prefs-row-sound">' +
-            '<div class="mm-prefs-left" data-i18n="ttsLabel">Звук</div>' +
-            '<div class="mm-tts-pills" role="group" aria-label="TTS">' +
-              '<button type="button" class="mm-pill" id="ttsOff" data-tts="off" data-i18n="ttsOff" aria-pressed="true">Выкл</button>' +
-              '<button type="button" class="mm-pill" id="ttsWords" data-tts="words" data-i18n="ttsWords" aria-pressed="false">Слова</button>' +
-              '<button type="button" class="mm-pill" id="ttsExamples" data-tts="examples" data-i18n="ttsExamples" aria-pressed="false">Примеры</button>' +
-            '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
-
-      commonToolsHtml +
-    '</div>'
-  ) : '';
-
-  // WEB-only tools (без prefs-карточки)
-  var webMenuToolsHtml = !showPwaMenuTools ? commonToolsHtml : '';
   root.innerHTML =
     '<header class="header">' +
       '<div class="brand">' +
@@ -174,9 +111,7 @@
             '</div>' +
           '</div>' +
 
-          pwaMenuHtml +
-
-          webMenuToolsHtml +
+          menuToolsHtml +
         '</div>' +
 
         '<div class="actions-row-bottom" role="group" aria-label="Быстрые действия">' +
