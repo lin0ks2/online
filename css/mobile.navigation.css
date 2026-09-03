@@ -341,3 +341,54 @@
   html[data-mobile-shell="favorites"] .mobile-nav-sheet,
   html[data-mobile-shell="mistakes"] .mobile-nav-sheet { grid-template-columns:1fr; }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.26 — Dictionaries quick-navigation cards
+ * + desktop guard for mobile-only navigation sheet.
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    margin:0 0 14px;
+    padding:0;
+  }
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__item{
+    width:100%;min-width:0;min-height:52px;
+    display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;align-items:center;
+    padding:7px 9px;border:1px solid #dfe5ee;border-radius:14px;
+    background:#fff;color:#182235;text-align:left;font:inherit;box-sizing:border-box;
+  }
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__item:active{transform:scale(.985)}
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__icon{
+    width:34px;height:34px;display:grid;place-items:center;border-radius:10px;
+    background:#eef2ff;color:#6576dd;font-size:16px;line-height:1;
+  }
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__copy{
+    min-width:0;display:flex;flex-direction:column;gap:2px;
+  }
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__copy strong{
+    font-size:11px;line-height:1.15;color:inherit;
+  }
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet__copy small{
+    font-size:9px;line-height:1.2;color:#788498;white-space:normal;
+  }
+  html[data-theme="dark"][data-mobile-shell="dicts"] .mobile-nav-sheet__item,
+  html.dark[data-mobile-shell="dicts"] .mobile-nav-sheet__item{
+    background:#101e2c;border-color:#263d52;color:#edf5ff;
+  }
+  html[data-theme="dark"][data-mobile-shell="dicts"] .mobile-nav-sheet__icon,
+  html.dark[data-mobile-shell="dicts"] .mobile-nav-sheet__icon{
+    background:rgba(121,147,255,.12);
+  }
+  html[data-theme="dark"][data-mobile-shell="dicts"] .mobile-nav-sheet__copy small,
+  html.dark[data-mobile-shell="dicts"] .mobile-nav-sheet__copy small{color:#9aa9bb}
+}
+@media (max-width:390px){
+  html[data-mobile-shell="dicts"] .mobile-nav-sheet{grid-template-columns:1fr}
+}
+@media (min-width:900px){
+  .mobile-nav-sheet{display:none!important}
+}
