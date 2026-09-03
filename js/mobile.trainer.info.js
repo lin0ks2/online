@@ -42,7 +42,7 @@
     if(!mobile())return;
     const el=ensure(); if(!el)return;
     let d=null; try{d=A.MobileTrainerInfoData&&A.MobileTrainerInfoData();}catch(_){}
-    if(!d){el.hidden=true;return;} el.hidden=false;
+    if(!d){el.hidden=true;return;} el.hidden=false; el.classList.remove('mobile-trainer-info--boot'); el.removeAttribute('aria-hidden');
     const L=labels(), pct=Math.max(0,Math.min(100,Number(d.pct||0)));
     el.innerHTML=
       '<div class="mti-head"><div><span>◎</span><b>'+escapeHtml(d.title||'')+'</b></div><strong>'+pct+'%</strong></div>'+ 
@@ -70,6 +70,7 @@
 
   const mo=new MutationObserver(function(){schedule();});
   function start(){
+    render();
     try{mo.observe(document.getElementById('app')||document.body,{childList:true,subtree:true});}catch(_){}
     schedule();
     timer=window.setInterval(schedule,30000);

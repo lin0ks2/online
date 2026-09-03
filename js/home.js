@@ -1586,6 +1586,17 @@ function activeDeckKey() {
       <div class="home${__isWordHome ? ' home--word-trainer' : ''}${__isPrepsHome ? ' home--preps-trainer' : ''}">
         ${__isPrepsHome ? '<section class="preps-desktop-head"></section>' : ''}
         ${__isWordHome ? '<section class="words-desktop-head"></section>' : ''}
+        <section class="mobile-trainer-info mobile-trainer-info--boot" aria-live="polite" aria-hidden="true">
+          <div class="mti-head"><div><span>◎</span><b>${__isPrepsHome ? (getUiLang()==='uk'?'Прийменники':'Предлоги') : (__isArticlesHome ? (getUiLang()==='uk'?'Артиклі':'Артикли') : 'Слова')}</b></div><strong>0%</strong></div>
+          <div class="mti-progress"><i style="width:0%"></i></div>
+          <div class="mti-kpis">
+            <div class="mti-kpi ok"><i>✓</i><span>${getUiLang()==='uk'?'Правильно':'Правильно'}</span><b>0</b></div>
+            <div class="mti-kpi bad"><i>×</i><span>${getUiLang()==='uk'?'Помилки':'Ошибки'}</span><b>0</b></div>
+            <div class="mti-kpi streak"><i>◎</i><span>${getUiLang()==='uk'?'Серія':'Серия'}</span><b>0</b></div>
+            <div class="mti-kpi time"><i>◷</i><span>${getUiLang()==='uk'?'Час':'Время'}</span><b>00:00</b></div>
+            <div class="mti-kpi set"><i>☷</i><span>Сет</span><b>—</b></div>
+          </div>
+        </section>
         <!-- ЗОНА 1: Сеты -->
         <section class="card home-sets">
           <header class="sets-header">
