@@ -347,3 +347,87 @@
     padding:4px 13px 10px;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.29 — Mobile Statistics legacy-shell cleanup
+ * The new mobile statistics is a normal scrolling page.
+ * Remove the old fixed-card/page-navigation geometry that was
+ * still sitting underneath it and colliding with the new cards.
+ * ========================================================== */
+@media (max-width:899px){
+  /* Statistics no longer uses the legacy permanent bottom tab bar. */
+  html[data-mobile-shell="stats"] .app-footer{
+    display:none!important;
+  }
+  html[data-mobile-shell="stats"]{
+    --footer-h-actual:0px;
+  }
+
+  /* Give the real page its own scroll space instead of the old fixed card. */
+  html[data-mobile-shell="stats"] #app.content{
+    height:auto!important;
+    max-height:none!important;
+    min-height:100dvh!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding-bottom:calc(22px + var(--mobile-safe-bottom,0px))!important;
+  }
+
+  html[data-mobile-shell="stats"] .home.home--fixed-card{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="stats"] .stats-card.dicts-card--fixed{
+    display:block!important;
+    flex:none!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="stats"] .stats-card.dicts-card--fixed .dicts-scroll{
+    display:block!important;
+    flex:none!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="stats"] .stats-lang-list,
+  html[data-mobile-shell="stats"] .stats-lang-card,
+  html[data-mobile-shell="stats"] .stats-lang-card.is-active{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+
+  /* Old pager/footer is no longer part of the mobile statistics UI. */
+  html[data-mobile-shell="stats"] .dicts-footer,
+  html[data-mobile-shell="stats"] .stats-pages-dots,
+  html[data-mobile-shell="stats"] .stats-page-dots,
+  html[data-mobile-shell="stats"] .stats-lang-card__footer{
+    display:none!important;
+  }
+
+  /* Make sure expanded spoilers push later cards down naturally. */
+  html[data-mobile-shell="stats"] .stats-mobile-dashboard,
+  html[data-mobile-shell="stats"] .stats-mobile-panel,
+  html[data-mobile-shell="stats"] .stats-mobile-pos-details{
+    position:relative!important;
+    float:none!important;
+    clear:both!important;
+  }
+}
