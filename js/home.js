@@ -22,6 +22,43 @@
   // Progress/stars remain owned by the existing trainer; this object only feeds KPI cards.
   const __prepUiSession = { deckKey:'', correct:0, wrong:0, streak:0, bestStreak:0, startedAt:0 };
 
+  // Desktop-only visual session metrics for the regular Words trainer.
+  const __wordsUiSession = { deckKey:'', correct:0, wrong:0, streak:0, bestStreak:0, startedAt:0 };
+  function __ensureWordsUiSession(key){
+    key=String(key||'');
+    if(__wordsUiSession.deckKey!==key){
+      __wordsUiSession.deckKey=key; __wordsUiSession.correct=0; __wordsUiSession.wrong=0;
+      __wordsUiSession.streak=0; __wordsUiSession.bestStreak=0; __wordsUiSession.startedAt=Date.now();
+    }
+    if(!__wordsUiSession.startedAt)__wordsUiSession.startedAt=Date.now();
+    return __wordsUiSession;
+  }
+
+  function __renderWordsDesktopChrome(key){
+    try{
+      if(window.innerWidth<900 || isPrepositionsModeForKey(key) || isArticlesModeForKey(key)) return;
+      const root=document.querySelector('.words-desktop-head'); if(!root)return;
+      const uk=getUiLang()==='uk';
+      const deckAll=getTrainableDeckForKey(key)||[];
+      let learned=0; deckAll.forEach(w=>{try{if(isLearned(w,key))learned++;}catch(_){}});
+      const pct=deckAll.length?Math.round(learned*100/deckAll.length):0;
+      const sess=__ensureWordsUiSession(key);
+      const elapsed=Math.max(0,Date.now()-sess.startedAt), mins=Math.floor(elapsed/60000);
+      const timeText=String(Math.floor(mins/60)).padStart(2,'0')+':'+String(mins%60).padStart(2,'0');
+      const idx=getActiveBatchIndex(), sz=getSetSizeForKey(key), totalSets=Math.max(1,Math.ceil(deckAll.length/sz));
+      root.innerHTML=
+        '<div class="words-desktop-titlebar"><div><h1>◎ <span>'+(uk?'Режим: ':'Режим: ')+'</span><b>'+(uk?'Слова':'Слова')+'</b></h1>'+
+        '<p>'+(uk?'Оберіть правильний переклад для слова':'Выберите правильный перевод для слова')+'</p></div>'+
+        '<div class="words-desktop-progress"><span>'+(uk?'Прогрес у режимі':'Прогресс в режиме')+'</span><div><i style="width:'+pct+'%"></i></div><b>'+pct+'%</b></div></div>'+
+        '<div class="words-desktop-kpis">'+
+        '<article><i class="ok">✓</i><span>'+(uk?'Правильно':'Правильно')+'</span><strong>'+sess.correct+'</strong></article>'+
+        '<article><i class="bad">×</i><span>'+(uk?'Помилки':'Ошибки')+'</span><strong>'+sess.wrong+'</strong></article>'+
+        '<article><i class="streak">◎</i><span>'+(uk?'Серія':'Серия')+'</span><strong>'+sess.bestStreak+'</strong></article>'+
+        '<article><i class="time">◷</i><span>'+(uk?'Час':'Время')+'</span><strong>'+timeText+'</strong></article>'+
+        '<article><i class="total">☷</i><span>'+(uk?'Сет':'Сет')+'</span><strong>'+(Number(idx||0)+1)+' / '+totalSets+'</strong></article></div>';
+    }catch(_){}
+  }
+
   function __ensurePrepUiSession(key){
     key = String(key || '');
     if (__prepUiSession.deckKey !== key){
@@ -1491,6 +1528,7 @@ function activeDeckKey() {
       ` : ''}
       <div class="home${__isWordHome ? ' home--word-trainer' : ''}${__isPrepsHome ? ' home--preps-trainer' : ''}">
         ${__isPrepsHome ? '<section class="preps-desktop-head"></section>' : ''}
+        ${__isWordHome ? '<section class="words-desktop-head"></section>' : ''}
         <!-- ЗОНА 1: Сеты -->
         <section class="card home-sets">
           <header class="sets-header">
@@ -2100,7 +2138,7 @@ function activeDeckKey() {
 
 function renderTrainer() {
     const key   = activeDeckKey();
-    try { if (isPrepositionsModeForKey(key)) __renderPrepsDesktopChrome(key); } catch(_){}
+    try { if (isPrepositionsModeForKey(key)) __renderPrepsDesktopChrome(key); else if (!isArticlesModeForKey(key)) __renderWordsDesktopChrome(key); } catch(_){}
 
     // Trainer variant switching (words vs articles).
     // We must NOT fall back to the default trainer when the user interacts with
@@ -2448,6 +2486,13 @@ answers.innerHTML = '';
               __renderPrepsDesktopChrome(key);
             } catch(_){}
           }
+          else if (!(A.settings && A.settings.trainerKind==='articles')) {
+            try {
+              const ws=__ensureWordsUiSession(key);
+              ws.correct+=1; ws.streak+=1; ws.bestStreak=Math.max(ws.bestStreak,ws.streak);
+              __renderWordsDesktopChrome(key);
+            } catch(_){}
+          }
 
           b.classList.add('is-correct');
           answers.querySelectorAll('.answer-btn').forEach(btn => {
@@ -2545,6 +2590,12 @@ answers.innerHTML = '';
                 ps.wrong += 1;
                 ps.streak = 0;
                 __renderPrepsDesktopChrome(key);
+              } catch(_){}
+            }
+            else if (!(A.settings && A.settings.trainerKind==='articles')) {
+              try {
+                const ws=__ensureWordsUiSession(key);
+                ws.wrong+=1; ws.streak=0; __renderWordsDesktopChrome(key);
               } catch(_){}
             }
           } catch (_){}
