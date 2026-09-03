@@ -1193,9 +1193,6 @@ function renderMobileStatsDashboard(langStat, allLangStats, texts) {
       '<div class="stats-mobile-mode-list">'+modes+'</div>'+
     '</article>'+
     activityHtml+
-    '<div class="stats-mobile-tip">💡 '+(uk
-      ? 'Регулярні короткі заняття допомагають утримувати прогрес.'
-      : 'Регулярные короткие занятия помогают удерживать прогресс.')+'</div>'+
   '</div>';
 }
 

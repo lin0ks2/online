@@ -62,11 +62,27 @@
     const settings=document.querySelector('.desktop-settings');
     if(settings) return {key:'settings', root:settings.closest('.desktop-pages-main,.trainer-desktop-main,.dash-main') || settings.parentElement};
 
-    const guide=document.querySelector('.guide-v3-main');
+    const guide=document.querySelector('.guide-v3-main,.guide-v3-mobile');
     if(guide) return {key:'guide',root:guide};
 
     const dash=document.querySelector('.dashboard .dash-main');
     if(dash) return {key:'home',root:dash};
+
+    /* Mobile pages do not get wrapped in .desktop-pages-main.
+       Detect their real content roots so tips match desktop coverage. */
+    if(window.matchMedia && window.matchMedia('(max-width:899px)').matches){
+      const stats=document.querySelector('.stats-mobile-dashboard');
+      if(stats) return {key:'stats',root:stats};
+
+      const dicts=document.querySelector('.home--dicts');
+      if(dicts) return {key:'dicts',root:dicts};
+
+      const mistakes=document.querySelector('.home--mistakes');
+      if(mistakes) return {key:'mistakes',root:mistakes};
+
+      const fav=document.querySelector('.home--favorites');
+      if(fav) return {key:'fav',root:fav};
+    }
 
     const page=document.querySelector('.desktop-pages-main');
     if(page){
@@ -89,9 +105,6 @@
   function mount(){
     const info=locate();
     if(!info || !POOLS[info.key]) return;
-    const desktop=!window.matchMedia || window.matchMedia('(min-width:900px)').matches;
-    if(!desktop && info.key!=='home') return;
-
     const existing=info.root.querySelector(':scope > .mm-page-tip');
     if(existing){
       if(info.root===activeRoot && info.key===activeKey){
