@@ -71,7 +71,6 @@
         ? ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд']
         : ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
       placeholderTitle: uk ? 'Активність і якість' : 'Активность и качество',
-      placeholderTitle: uk ? 'Активність і якість' : 'Активность и качество',
       placeholderText: uk
         ? 'Тут пізніше з’явиться статистика за часом у застосунку, регулярністю та якістю запам’ятовування.'
         : 'Здесь позже появится статистика по времени в приложении, регулярности и качеству запоминания.',
@@ -1086,6 +1085,120 @@ function renderDesktopStatsDashboard(langStat, allLangStats, texts) {
   '</div>';
 }
 
+
+function renderMobileStatsDashboard(langStat, allLangStats, texts) {
+  var uk = getUiLang() === 'uk';
+  var langCode = langStat.lang || 'de';
+  var total = Number(langStat.totalWords || 0);
+  var learned = Number(langStat.learnedWords || 0);
+  var pct = total ? Math.round(learned * 100 / total) : 0;
+
+  var started = 0;
+  var completed = 0;
+  (langStat.decks || []).forEach(function(d){
+    if (Number(d.learnedWords || 0) > 0) started++;
+    if (Number(d.totalWords || 0) > 0 && Number(d.learnedWords || 0) >= Number(d.totalWords || 0)) completed++;
+  });
+
+  var splitTime = sumSplitSecondsByLang(langCode);
+  var totalSeconds = Number(splitTime.total || splitTime.words || 0);
+  var totalMinutes = Math.round(totalSeconds / 60);
+  var totalTime = totalMinutes >= 60
+    ? (Math.floor(totalMinutes / 60) + ' ' + (uk ? 'год' : 'ч') + ' ' + (totalMinutes % 60) + ' ' + (uk ? 'хв' : 'мин'))
+    : (totalMinutes + ' ' + (uk ? 'хв' : 'мин'));
+
+  var activityKey = (allLangStats && allLangStats.length > 1) ? '__all__' : langCode;
+  var activity = getDailyActivitySeries(activityKey) || [];
+  var activeDays = activity.filter(function(d){
+    return Number(d.learned || 0) + Number(d.reviewed || 0) + Number(d.seconds || 0) > 0;
+  }).length;
+
+  function fmt(n){ return Number(n || 0).toLocaleString('ru-RU'); }
+  function esc(v){
+    return String(v == null ? '' : v).replace(/[&<>"']/g,function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  var posBuckets = Object.keys(langStat.byPos || {}).map(function(k){ return langStat.byPos[k]; });
+  posBuckets.sort(function(a,b){
+    var order = CORE_POS.concat(OTHER_POS_ORDER);
+    var ai = order.indexOf(a.pos), bi = order.indexOf(b.pos);
+    if (ai < 0) ai = 99;
+    if (bi < 0) bi = 99;
+    return ai - bi;
+  });
+
+  var posRows = posBuckets.map(function(bucket){
+    var p = percent(bucket.learned, bucket.total);
+    var color = POS_COLORS[bucket.pos] || POS_COLORS.other;
+    return '<div class="stats-mobile-pos-row" style="--stats-pos-color:'+color+'">'+
+      '<div class="stats-mobile-pos-top"><span class="stats-mobile-pos-dot"></span><strong>'+esc(resolvePosLabel(bucket,texts))+'</strong><b>'+p+'%</b></div>'+
+      '<div class="stats-mobile-pos-bar"><i style="width:'+p+'%"></i></div>'+
+      '<small>'+fmt(bucket.learned)+' / '+fmt(bucket.total)+'</small>'+
+    '</div>';
+  }).join('');
+
+  var learnedWords = countLearnedWordsByLang(langCode);
+  var learnedArticles = langCode === 'de' ? countLearnedArticlesByLang(langCode) : 0;
+  var learnedPreps = countLearnedPrepositionsByLang(langCode);
+
+  function modeRow(kind, label, learnedValue, learnedUnit, seconds){
+    return '<div class="stats-mobile-mode-row stats-mobile-mode-row--'+kind+'">'+
+      '<span class="stats-mobile-mode-icon">'+(kind==='words'?'Aa':kind==='articles'?'der':'→')+'</span>'+
+      '<strong>'+esc(label)+'</strong>'+
+      '<span class="stats-mobile-mode-learned">'+fmt(learnedValue)+' <small>'+esc(learnedUnit)+'</small></span>'+
+      '<span class="stats-mobile-mode-time">'+esc(formatMinutes(seconds))+'</span>'+
+    '</div>';
+  }
+
+  var modes =
+    modeRow('words', texts.splitCardWords, learnedWords, uk?'слів':'слов', splitTime.words) +
+    (langCode === 'de' ? modeRow('articles', texts.splitCardArticles, learnedArticles, uk?'артиклів':'артиклей', splitTime.articles) : '') +
+    modeRow('prepositions', texts.splitCardPreps, learnedPreps, uk?'патернів':'паттернов', splitTime.prepositions);
+
+  var activityHtml = '';
+  var proAllowed = true;
+  try { proAllowed = !A.isPro || !!A.isPro(); } catch(_) { proAllowed = true; }
+  if (proAllowed) {
+    activityHtml = '<article class="stats-mobile-panel stats-mobile-activity">'+renderActivitySection(activityKey, texts)+'</article>';
+  } else {
+    activityHtml =
+      '<article class="stats-mobile-panel stats-mobile-pro-gate">'+
+        '<h3>'+esc(texts.activityTitle)+'</h3>'+
+        '<p>'+(uk
+          ? 'Детальна активність доступна у версії MOYAMOVA PRO.'
+          : 'Подробная активность доступна в версии MOYAMOVA PRO.')+'</p>'+
+      '</article>';
+  }
+
+  return '<div class="stats-mobile-dashboard">'+
+    '<article class="stats-mobile-progress">'+
+      '<div class="stats-mobile-progress-main">'+
+        '<div class="stats-mobile-progress-ring" style="--p:'+pct+'%"><b>'+pct+'%</b></div>'+
+        '<div class="stats-mobile-progress-copy"><small>'+(uk?'Загальний прогрес':'Общий прогресс')+'</small><strong>'+fmt(learned)+' / '+fmt(total)+'</strong><span>'+(uk?'слів вивчено':'слов выучено')+'</span></div>'+
+      '</div>'+
+      '<div class="stats-mobile-kpis">'+
+        '<div><i>◷</i><small>'+(uk?'Час у тренажері':'Время в тренажёре')+'</small><strong>'+esc(totalTime)+'</strong></div>'+
+        '<div><i>▣</i><small>'+(uk?'Активні дні':'Активные дни')+'</small><strong>'+activeDays+'</strong></div>'+
+        '<div><i>✓</i><small>'+(uk?'Завершено словників':'Завершено словарей')+'</small><strong>'+completed+' / '+(langStat.decks||[]).length+'</strong></div>'+
+      '</div>'+
+    '</article>'+
+    '<article class="stats-mobile-panel">'+
+      '<h3>'+(uk?'Прогрес за частинами мови':'Прогресс по частям речи')+'</h3>'+
+      '<div class="stats-mobile-pos-list">'+posRows+'</div>'+
+    '</article>'+
+    '<article class="stats-mobile-panel stats-mobile-modes">'+
+      '<div class="stats-mobile-modes-head"><h3>'+(uk?'Режими навчання':'Режимы обучения')+'</h3><span>'+(uk?'Вивчено':'Выучено')+' · '+(uk?'Час':'Время')+'</span></div>'+
+      '<div class="stats-mobile-mode-list">'+modes+'</div>'+
+    '</article>'+
+    activityHtml+
+    '<div class="stats-mobile-tip">💡 '+(uk
+      ? 'Регулярні короткі заняття допомагають утримувати прогрес.'
+      : 'Регулярные короткие занятия помогают удерживать прогресс.')+'</div>'+
+  '</div>';
+}
+
 function renderLangCards(langStats, texts, activeLangCode) {
     if (!langStats.length) {
       return '<p class="stats-placeholder">—</p>';
@@ -1195,6 +1308,7 @@ function renderLangCards(langStats, texts, activeLangCode) {
           langCode +
           '">' +
           '<div class="stats-v3-desktop-only">' + renderDesktopStatsDashboard(langStat, langStats, texts) + '</div>' +
+          '<div class="stats-mobile-only">' + renderMobileStatsDashboard(langStat, langStats, texts) + '</div>' +
           overviewHtml +
           '<div class="stats-lang-card__body">' +
             pagesHtml +
