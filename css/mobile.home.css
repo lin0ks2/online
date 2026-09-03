@@ -438,3 +438,47 @@
     transform:rotate(180deg);
   }
 }
+
+/* ==========================================================
+ * MOYAMOVA 1.12.23 — Home training cards
+ * Gentle color-coded fills for Words / Articles / Prepositions.
+ * Mobile only. Keeps the cards subtle in both light and dark themes.
+ * ========================================================== */
+@media (max-width:899px){
+  .dashboard .dash-training-card--words{
+    background:linear-gradient(135deg,rgba(103,118,221,.085),rgba(103,118,221,.035));
+    border-color:rgba(103,118,221,.18);
+  }
+
+  .dashboard .dash-training-card--articles{
+    background:linear-gradient(135deg,rgba(215,92,112,.085),rgba(215,92,112,.035));
+    border-color:rgba(215,92,112,.18);
+  }
+
+  .dashboard .dash-training-card--prepositions{
+    background:linear-gradient(135deg,rgba(56,161,126,.085),rgba(56,161,126,.035));
+    border-color:rgba(56,161,126,.18);
+  }
+
+  .dashboard .dash-training-card--words em{color:#6878dd}
+  .dashboard .dash-training-card--articles em{color:#d75c70}
+  .dashboard .dash-training-card--prepositions em{color:#38a17e}
+
+  html[data-theme="dark"] .dashboard .dash-training-card--words,
+  .dark .dashboard .dash-training-card--words{
+    background:linear-gradient(135deg,rgba(103,118,221,.20),rgba(103,118,221,.08));
+    border-color:rgba(118,133,235,.34);
+  }
+
+  html[data-theme="dark"] .dashboard .dash-training-card--articles,
+  .dark .dashboard .dash-training-card--articles{
+    background:linear-gradient(135deg,rgba(215,92,112,.20),rgba(215,92,112,.08));
+    border-color:rgba(226,111,130,.34);
+  }
+
+  html[data-theme="dark"] .dashboard .dash-training-card--prepositions,
+  .dark .dashboard .dash-training-card--prepositions{
+    background:linear-gradient(135deg,rgba(56,161,126,.20),rgba(56,161,126,.08));
+    border-color:rgba(74,181,144,.34);
+  }
+}
