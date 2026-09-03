@@ -189,3 +189,41 @@ html[data-theme="dark"] .guide-v3-body aside{
     overflow-x:hidden!important;
   }
 }
+
+/* ==========================================================
+ * MOYAMOVA 1.12.21 — mobile Guide shell cleanup
+ * The Guide is a standalone mobile page: no legacy global
+ * header/footer around it. Desktop behavior remains unchanged.
+ * ========================================================== */
+@media (max-width:899px){
+  #moya-shell-root:has(#app .guide-v3-mobile) > .header,
+  #moya-shell-root:has(#app .guide-v3-mobile) > .app-footer{
+    display:none!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-mobile) > #app.content{
+    padding-top:0!important;
+    padding-bottom:0!important;
+    min-height:100dvh!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-mobile) .guide-v3-mobile{
+    min-height:100dvh!important;
+    box-sizing:border-box;
+    padding-top:max(18px, env(safe-area-inset-top))!important;
+    padding-bottom:max(30px, env(safe-area-inset-bottom))!important;
+  }
+
+  html:has(#app .guide-v3-mobile),
+  body:has(#app .guide-v3-mobile){
+    height:auto!important;
+    min-height:100%!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+}
