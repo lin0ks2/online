@@ -146,6 +146,63 @@
   }
 
 
+  // 1.12.12 — read-only bridge for the mobile trainer information panel.
+  // It exposes existing trainer/session data without moving any learning logic
+  // into the mobile presentation layer.
+  A.MobileTrainerInfoData = function(){
+    try {
+      const key = activeDeckKey();
+      const uk = getUiLang() === 'uk';
+      const kind = isPrepositionsModeForKey(key) ? 'prepositions'
+        : (isArticlesModeForKey(key) ? 'articles' : 'words');
+
+      if (kind === 'articles') {
+        let st = {correct:0,wrong:0,bestStreak:0,totalMs:0};
+        let ds = {withArticles:0,learned:0};
+        let ss = {setIndex:0,totalSets:1};
+        try { if (A.ArticlesStats && A.ArticlesStats.export) st = A.ArticlesStats.export() || st; } catch(_){}
+        try { if (A.ArticlesTrainer && A.ArticlesTrainer.getDeckStats) ds = A.ArticlesTrainer.getDeckStats(key) || ds; } catch(_){}
+        try { if (A.ArticlesTrainer && A.ArticlesTrainer.getSetStats) ss = A.ArticlesTrainer.getSetStats(key) || ss; } catch(_){}
+        return {
+          kind, title: uk ? 'Артиклі' : 'Артикли',
+          correct:Number(st.correct||0), wrong:Number(st.wrong||0), streak:Number(st.bestStreak||0),
+          elapsedMs:Number(st.totalMs||0), setIndex:Number(ss.setIndex||0), totalSets:Math.max(1,Number(ss.totalSets||1)),
+          pct: ds.withArticles ? Math.round(Number(ds.learned||0)*100/Number(ds.withArticles||1)) : 0
+        };
+      }
+
+      const deckAll = getTrainableDeckForKey(key) || [];
+      const idx = getActiveBatchIndex();
+      const sz = getSetSizeForKey(key);
+      const totalSets = Math.max(1, Math.ceil(deckAll.length / sz));
+
+      if (kind === 'prepositions') {
+        const uniq = {};
+        deckAll.forEach(w=>{ if (w && w.id != null) uniq[String(w.id)] = true; });
+        let learned = 0;
+        Object.keys(uniq).forEach(pid=>{ try { if (isLearned({id:pid}, key)) learned++; } catch(_){} });
+        const total = Object.keys(uniq).length || 30;
+        const sess = __ensurePrepUiSession(key);
+        return {
+          kind, title: uk ? 'Прийменники' : 'Предлоги',
+          correct:sess.correct, wrong:sess.wrong, streak:sess.bestStreak,
+          elapsedMs:Math.max(0,Date.now()-sess.startedAt), setIndex:Number(idx||0), totalSets,
+          pct:total ? Math.round(learned*100/total) : 0
+        };
+      }
+
+      let learned = 0;
+      deckAll.forEach(w=>{ try { if (isLearned(w,key)) learned++; } catch(_){} });
+      const sess = __ensureWordsUiSession(key);
+      return {
+        kind, title: uk ? 'Слова' : 'Слова',
+        correct:sess.correct, wrong:sess.wrong, streak:sess.bestStreak,
+        elapsedMs:Math.max(0,Date.now()-sess.startedAt), setIndex:Number(idx||0), totalSets,
+        pct:deckAll.length ? Math.round(learned*100/deckAll.length) : 0
+      };
+    } catch(_) { return null; }
+  };
+
   function getSetSizeForKey(key){
     const k = String(key || '').toLowerCase();
     try {
