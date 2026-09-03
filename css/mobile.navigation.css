@@ -392,3 +392,135 @@
 @media (min-width:900px){
   .mobile-nav-sheet{display:none!important}
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.28 — Statistics mobile menu
+ * Same off-canvas presentation and navigation-card language as Home.
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-mobile-shell="stats"] .oc-root{
+    position:fixed!important;
+    inset:0!important;
+    z-index:9500!important;
+    pointer-events:none;
+  }
+  html[data-mobile-shell="stats"] body.menu-open .oc-root{pointer-events:auto}
+
+  html[data-mobile-shell="stats"] .oc-backdrop{
+    position:absolute!important;
+    inset:0!important;
+    background:rgba(5,12,24,.44)!important;
+    opacity:0!important;
+    transition:opacity .2s ease!important;
+  }
+  html[data-mobile-shell="stats"] body.menu-open .oc-backdrop{opacity:1!important}
+
+  html[data-mobile-shell="stats"] .oc-panel{
+    position:absolute!important;
+    left:10px!important;
+    right:10px!important;
+    bottom:calc(10px + var(--mobile-safe-bottom,0px))!important;
+    top:auto!important;
+    width:auto!important;
+    max-width:none!important;
+    max-height:min(78dvh,680px)!important;
+    border:1px solid rgba(73,94,169,.14)!important;
+    border-radius:22px!important;
+    background:#fff!important;
+    box-shadow:0 20px 55px rgba(18,28,58,.22)!important;
+    overflow:hidden!important;
+    transform:translateY(calc(100% + 28px))!important;
+    transition:transform .22s ease!important;
+  }
+  html[data-mobile-shell="stats"] body.menu-open .oc-panel{
+    transform:translateY(0)!important;
+  }
+
+  html[data-mobile-shell="stats"] .oc-header{
+    min-height:52px!important;
+    padding:7px 12px!important;
+    background:rgba(255,255,255,.97)!important;
+  }
+  html[data-mobile-shell="stats"] .oc-back{display:none!important}
+  html[data-mobile-shell="stats"] .oc-title{
+    text-align:left!important;
+    padding-left:4px!important;
+    font-size:16px!important;
+  }
+  html[data-mobile-shell="stats"] .oc-close{
+    width:40px!important;height:40px!important;
+    display:grid!important;place-items:center!important;
+    border-radius:12px!important;
+  }
+  html[data-mobile-shell="stats"] .oc-body{
+    display:block!important;
+    min-height:0!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    padding:10px 12px calc(82px + var(--mobile-safe-bottom,0px))!important;
+  }
+
+  html[data-mobile-shell="stats"] .mobile-nav-sheet{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    padding:2px 0 12px!important;
+    margin-bottom:8px!important;
+    border-bottom:1px solid rgba(78,96,144,.12)!important;
+  }
+  html[data-mobile-shell="stats"] .mobile-nav-sheet__item{
+    min-width:0!important;
+    min-height:52px!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:10px!important;
+    padding:10px 11px!important;
+    border:1px solid rgba(73,94,169,.12)!important;
+    border-radius:14px!important;
+    background:rgba(247,249,255,.92)!important;
+    color:inherit!important;
+    text-align:left!important;
+    font:inherit!important;
+  }
+  html[data-mobile-shell="stats"] .mobile-nav-sheet__icon{
+    width:30px!important;height:30px!important;flex:0 0 30px!important;
+    display:grid!important;place-items:center!important;border-radius:9px!important;
+    background:rgba(97,118,235,.10)!important;font-size:16px!important;
+  }
+  html[data-mobile-shell="stats"] .mobile-nav-sheet__copy{
+    min-width:0!important;display:flex!important;flex-direction:column!important;gap:1px!important;
+  }
+  html[data-mobile-shell="stats"] .mobile-nav-sheet__copy strong{
+    overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;
+    font-size:12px!important;line-height:1.15!important;
+  }
+  html[data-mobile-shell="stats"] .mobile-nav-sheet__copy small{
+    color:#788498!important;font-size:9.5px!important;line-height:1.15!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="stats"] .oc-panel,
+  html.dark[data-mobile-shell="stats"] .oc-panel{
+    background:#121c28!important;
+    border-color:rgba(135,157,204,.14)!important;
+  }
+  html[data-theme="dark"][data-mobile-shell="stats"] .oc-header,
+  html.dark[data-mobile-shell="stats"] .oc-header{background:#121c28!important}
+  html[data-theme="dark"][data-mobile-shell="stats"] .mobile-nav-sheet{
+    border-bottom-color:rgba(135,157,204,.13)!important;
+  }
+  html[data-theme="dark"][data-mobile-shell="stats"] .mobile-nav-sheet__item,
+  html.dark[data-mobile-shell="stats"] .mobile-nav-sheet__item{
+    background:#162231!important;border-color:rgba(135,157,204,.14)!important;
+  }
+  html[data-theme="dark"][data-mobile-shell="stats"] .mobile-nav-sheet__icon,
+  html.dark[data-mobile-shell="stats"] .mobile-nav-sheet__icon{
+    background:rgba(121,147,255,.12)!important;
+  }
+  html[data-theme="dark"][data-mobile-shell="stats"] .mobile-nav-sheet__copy small,
+  html.dark[data-mobile-shell="stats"] .mobile-nav-sheet__copy small{color:#9aa9bb!important}
+}
+@media (max-width:390px){
+  html[data-mobile-shell="stats"] .mobile-nav-sheet{grid-template-columns:1fr!important}
+}

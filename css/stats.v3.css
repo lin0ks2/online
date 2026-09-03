@@ -303,3 +303,47 @@
   .stats-mobile-mode-row{grid-template-columns:34px minmax(0,1fr) auto}
   .stats-mobile-mode-time{grid-column:2/4;font-size:8.5px;margin-top:-7px;padding-bottom:6px}
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.28 — Mobile Statistics compact POS spoiler
+ * ========================================================== */
+@media (max-width:899px){
+  .stats-mobile-pos-details{
+    padding:0!important;
+    overflow:hidden;
+  }
+  .stats-mobile-pos-details>summary{
+    min-height:54px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:0 13px;
+    cursor:pointer;
+    list-style:none;
+    user-select:none;
+    color:var(--sm-text);
+  }
+  .stats-mobile-pos-details>summary::-webkit-details-marker{display:none}
+  .stats-mobile-pos-details>summary span{
+    font:700 14px/1.2 Montserrat,system-ui,sans-serif;
+  }
+  .stats-mobile-pos-details>summary i{
+    width:28px;height:28px;display:grid;place-items:center;
+    border-radius:9px;
+    background:var(--sm-card-soft);
+    border:1px solid var(--sm-border);
+    color:var(--sm-muted);
+    font-style:normal;
+    font-size:16px;
+    transition:transform .18s ease;
+  }
+  .stats-mobile-pos-details[open]>summary i{transform:rotate(180deg)}
+  .stats-mobile-pos-details[open]>summary{
+    border-bottom:1px solid var(--sm-border);
+  }
+  .stats-mobile-pos-details>.stats-mobile-pos-list{
+    padding:4px 13px 10px;
+  }
+}
