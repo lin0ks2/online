@@ -1,19 +1,7 @@
-/* MOYAMOVA 1.12.14 — mobile Prepositions only: remove inherited vertical reserve. */
+/* MOYAMOVA 1.12.15 — mobile Prepositions only.
+   Cancels the legacy 58px spacer left from 1.12.10. */
 @media (max-width:899px){
-  html[data-mobile-shell="prepositions"] .trainer-desktop-main{
-    height:auto!important;
-    min-height:0!important;
-    align-content:start!important;
-    justify-content:flex-start!important;
-  }
-  html[data-mobile-shell="prepositions"] .trainer-desktop-main>.mobile-preps-bar{
-    margin-bottom:10px!important;
-  }
   html[data-mobile-shell="prepositions"] .trainer-desktop-main>.home{
-    height:auto!important;
-    min-height:0!important;
-    flex:0 0 auto!important;
-    align-content:start!important;
-    justify-content:flex-start!important;
+    padding-top:0!important;
   }
 }
