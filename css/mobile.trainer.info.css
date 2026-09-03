@@ -1,5 +1,5 @@
 /* ==========================================================
- * MOYAMOVA 1.12.12 — Shared Mobile Trainer Info
+ * MOYAMOVA 1.12.13 — Shared Mobile Trainer Info
  * max-width only: desktop 1.12.11 remains frozen.
  * ========================================================== */
 @media (max-width:899px){
@@ -63,4 +63,25 @@
   html.dark .mobile-trainer-info .mti-kpi.streak>i{background:#49351d;color:#ff991f}
   html[data-theme="dark"] .mobile-trainer-info .mti-kpi.time>i,
   html.dark .mobile-trainer-info .mti-kpi.time>i{background:#33235c;color:#a678ff}
+}
+
+
+/* 1.12.13 — Prepositions no longer reserves the old empty top slot.
+   The shared info panel is now the first real content block. */
+@media (max-width:899px){
+  html[data-mobile-shell="prepositions"] .home--preps-trainer>.mobile-trainer-info{
+    order:1!important;
+  }
+  html[data-mobile-shell="prepositions"] .home--preps-trainer .home-trainer.home-trainer--preps{
+    order:2!important;
+  }
+  html[data-mobile-shell="prepositions"] .home--preps-trainer{
+    gap:8px!important;
+  }
+
+  /* Keep the pre-rendered panel at full size while its live values are filled,
+     preventing a visible layout jump on Words/Articles/Prepositions. */
+  .mobile-trainer-info--boot{
+    visibility:visible!important;
+  }
 }
