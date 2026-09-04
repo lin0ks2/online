@@ -22,7 +22,7 @@
       settings:'Налаштування',title:'Налаштування',subtitle:'Основні параметри застосунку',
       interface:'Інтерфейс',language:'Мова застосунку',ru:'Російська',ua:'Українська',
       theme:'Тема',light:'Світла',dark:'Темна',
-      learning:'Навчання',level:'Режим складності',normal:'Звичайний',hard:'Складний',
+      learning:'Навчання',level:'Режим складності',normal:'Звичайний',hard:'Складний',answerSounds:'Звуки відповідей',answerSoundsHint:'Правильні та неправильні відповіді',on:'Увімк',off:'Вимк',
       data:'Дані',backup:'Резервна копія',export:'Експорт',import:'Імпорт',
       app:'Застосунок',updates:'Оновлення',check:'Перевірити оновлення',version:'Версія програми',
       share:'Поділитися',viber:'Viber-група',qr:'QR-код',support:'Підтримка проєкту',
@@ -33,7 +33,7 @@
       settings:'Настройки',title:'Настройки',subtitle:'Основные параметры приложения',
       interface:'Интерфейс',language:'Язык приложения',ru:'Русский',ua:'Украинский',
       theme:'Тема',light:'Светлая',dark:'Тёмная',
-      learning:'Обучение',level:'Режим сложности',normal:'Обычный',hard:'Сложный',
+      learning:'Обучение',level:'Режим сложности',normal:'Обычный',hard:'Сложный',answerSounds:'Звуки ответов',answerSoundsHint:'Правильные и неправильные ответы',on:'Вкл',off:'Выкл',
       data:'Данные',backup:'Резервная копия',export:'Экспорт',import:'Импорт',
       app:'Приложение',updates:'Обновления',check:'Проверить обновления',version:'Версия программы',
       share:'Поделиться',viber:'Viber-группа',qr:'QR-код',support:'Поддержка проекта',
@@ -151,6 +151,7 @@
       const lang=String(document.documentElement.dataset.lang || (A.settings&&(A.settings.lang||A.settings.uiLang)) || 'ru').toLowerCase();
       const hard=String(document.documentElement.dataset.level||'normal')==='hard';
       const dark=document.documentElement.getAttribute('data-theme')==='dark';
+      let answerSounds=true; try{ const v=localStorage.getItem('mm.answerSounds.enabled'); answerSounds=(v===null||v===''||v==='1'||v==='true'); }catch(_){}
 
       main.innerHTML=`
         <div class="desktop-settings">
@@ -205,6 +206,13 @@
                 <div class="desktop-segment" data-setting="level">
                   <button type="button" data-level-value="normal" class="${!hard?'active':''}">${T.normal}</button>
                   <button type="button" data-level-value="hard" class="${hard?'active':''}">${T.hard}</button>
+                </div>
+              </div>
+              <div class="desktop-settings__row desktop-settings__row--secondary">
+                <div><strong>${T.answerSounds}</strong><small>${T.answerSoundsHint}</small></div>
+                <div class="desktop-segment" data-setting="answerSounds">
+                  <button type="button" data-answer-sounds-value="1" class="${answerSounds?'active':''}">${T.on}</button>
+                  <button type="button" data-answer-sounds-value="0" class="${!answerSounds?'active':''}">${T.off}</button>
                 </div>
               </div>
             </section>
@@ -321,6 +329,16 @@
             }catch(_){}
           }
           renderSettings(shell);
+        };
+      });
+
+      main.querySelectorAll('[data-answer-sounds-value]').forEach(btn=>{
+        btn.onclick=()=>{
+          const on=btn.dataset.answerSoundsValue==='1';
+          try{ localStorage.setItem('mm.answerSounds.enabled',on?'1':'0'); }catch(_){}
+          const legacy=document.getElementById('answerSoundsToggle');
+          if(legacy) legacy.checked=on;
+          main.querySelectorAll('[data-answer-sounds-value]').forEach(x=>x.classList.toggle('active',x===btn));
         };
       });
 

@@ -111,6 +111,17 @@
             '</div>' +
           '</div>' +
 
+          '<div class="menu-item answer-sound-toggle">' +
+            '<div class="menu-label">' +
+              '<span data-i18n="menuAnswerSounds">Звуки ответов</span>' +
+              '<small data-i18n="menuAnswerSoundsHint">Звуковая обратная связь</small>' +
+            '</div>' +
+            '<label class="switch">' +
+              '<input type="checkbox" id="answerSoundsToggle" aria-label="Звуки ответов" data-i18n-aria="ariaAnswerSounds">' +
+              '<span class="slider"></span>' +
+            '</label>' +
+          '</div>' +
+
           menuToolsHtml +
         '</div>' +
 
@@ -145,10 +156,10 @@
     '<div class="rotate-lock" role="dialog" aria-modal="true" aria-live="polite">' +
       '<div class="rotate-card">' +
         '<div class="rotate-emoji" aria-hidden="true">📱</div>' +
-        '<div class="rotate-title" data-i18n="rotateToPortraitTitle" data-title-key="rotateToPortraitTitle" data-title-fallback="Поверните устройство">' +
+        '<div class="rotate-title" data-title-key="rotateToPortraitTitle" data-title-fallback="Поверните устройство">' +
           'Поверните устройство' +
         '</div>' +
-        '<div class="rotate-text" data-i18n="rotateToPortraitText" data-title-key="rotateToPortraitText" data-title-fallback="Доступен только портретный режим. Пожалуйста, используйте приложение вертикально.">' +
+        '<div class="rotate-text" data-title-key="rotateToPortraitText" data-title-fallback="Доступен только портретный режим. Пожалуйста, используйте приложение вертикально.">' +
           'Доступен только портретный режим. Пожалуйста, используйте приложение вертикально.' +
         '</div>' +
       '</div>' +

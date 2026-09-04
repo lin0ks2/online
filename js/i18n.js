@@ -37,8 +37,6 @@
       ariaMenu: "Меню",
       ariaMistakes: "Мои ошибки",
       ariaStats: "Статистика",
-      rotateToPortraitTitle: "Поверните устройство",
-      rotateToPortraitText: "Доступен только портретный режим. Пожалуйста, используйте приложение вертикально.",
       btnCheckUpdates: "Проверить обновления",
       btnExport: "Экспорт",
       btnImport: "Импорт",
@@ -48,6 +46,9 @@
       menuTheme: "Тема",
       menuUiLang: "Язык интерфейса",
       menuUpdates: "Обновления",
+      menuAnswerSounds: "Звуки ответов",
+      menuAnswerSoundsHint: "Звуковая обратная связь",
+      ariaAnswerSounds: "Включить или выключить звуки правильных и неправильных ответов",
       // === training prefs (PWA/TWA) ===
       menuFocus: "Концентрация",
       focusSets: "Сеты",
@@ -104,8 +105,6 @@
       ariaMenu: "Меню",
       ariaMistakes: "Мої помилки",
       ariaStats: "Статистика",
-      rotateToPortraitTitle: "Поверніть пристрій",
-      rotateToPortraitText: "Доступний лише портретний режим. Будь ласка, використовуйте застосунок вертикально.",
       btnCheckUpdates: "Перевірити оновлення",
       btnExport: "Експорт",
       btnImport: "Імпорт",
@@ -115,6 +114,9 @@
       menuTheme: "Тема",
       menuUiLang: "Мова інтерфейсу",
       menuUpdates: "Оновлення",
+      menuAnswerSounds: "Звуки відповідей",
+      menuAnswerSoundsHint: "Звуковий зворотний зв’язок",
+      ariaAnswerSounds: "Увімкнути або вимкнути звуки правильних і неправильних відповідей",
 
       // === training prefs (PWA/TWA) ===
       menuFocus: "Концентрація",

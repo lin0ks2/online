@@ -41,9 +41,17 @@
       return pool[kind];
     }
 
+    function enabled(){
+      try {
+        const v = window.localStorage.getItem('mm.answerSounds.enabled');
+        return v === null || v === '' ? true : (v === '1' || v === 'true');
+      } catch(_) { return true; }
+    }
+
     function play(kind){
       return new Promise(resolve => {
         try {
+          if (!enabled()) { resolve(); return; }
           const el = get(kind);
           try { el.pause(); } catch(_){}
           try { el.currentTime = 0; } catch(_){}

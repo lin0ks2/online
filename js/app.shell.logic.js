@@ -218,12 +218,13 @@
     const elFocusContext = document.getElementById('focusContext');
     const elTrainReverse = document.getElementById('trainReverse');
     const elTrainAutostep= document.getElementById('trainAutostep');
+    const elAnswerSounds = document.getElementById('answerSoundsToggle');
     const elTtsOff      = document.getElementById('ttsOff');
     const elTtsWords    = document.getElementById('ttsWords');
     const elTtsExamples = document.getElementById('ttsExamples');
 
     // Ничего не делаем, если секция не отрисована.
-    if (!elFocusSets && !elFocusContext && !elTrainReverse && !elTrainAutostep) return;
+    if (!elFocusSets && !elFocusContext && !elTrainReverse && !elTrainAutostep && !elAnswerSounds) return;
 
     const LS = {
       focusSets: 'mm.focus.hideSets',
@@ -232,7 +233,8 @@
       trainAutostep: 'mm.train.autostep',
       ttsWords: 'mm.tts.words',
       ttsExamples: 'mm.tts.examples',
-      ttsLegacy: 'mm.audioEnabled.v2'
+      ttsLegacy: 'mm.audioEnabled.v2',
+      answerSounds: 'mm.answerSounds.enabled'
     };
 
     function readBool(key, fallback){
@@ -255,6 +257,7 @@
     const sHideContext = readBool(LS.focusContext, false);
     const sReverse     = readBool(LS.trainReverse, false);
     const sAutostep    = readBool(LS.trainAutostep, true);
+    const sAnswerSounds = readBool(LS.answerSounds, true);
 
     // TTS pills (default: OFF/OFF).
     // Legacy migration: if mm.audioEnabled.v2 == 1 → words=ON, examples=OFF
@@ -278,6 +281,7 @@
     if (elFocusContext) elFocusContext.checked = !sHideContext;
     if (elTrainReverse) elTrainReverse.checked = sReverse;
     if (elTrainAutostep)elTrainAutostep.checked= sAutostep;
+    if (elAnswerSounds) elAnswerSounds.checked = sAnswerSounds;
 
     function applyTtsUi(){
       const any = !!ttsWords || !!ttsExamples;
@@ -327,6 +331,11 @@
     if (elTrainAutostep) {
       elTrainAutostep.addEventListener('change', (e)=>{
         writeBool(LS.trainAutostep, !!e.target.checked);
+      });
+    }
+    if (elAnswerSounds) {
+      elAnswerSounds.addEventListener('change', (e)=>{
+        writeBool(LS.answerSounds, !!e.target.checked);
       });
     }
 
