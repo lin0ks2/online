@@ -57,24 +57,6 @@
 .setup-intro{
   max-width:450px;margin:0 auto;color:var(--setup-muted);font-size:11px;line-height:1.4;
 }
-.setup-feature-row{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;
-  margin-top:14px;
-}
-.setup-feature{
-  min-width:0;min-height:44px;padding:6px 8px;
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  border:1px solid var(--setup-line);border-radius:12px;
-  background:var(--setup-soft);box-sizing:border-box;
-}
-.setup-feature i{
-  width:27px;height:27px;display:grid;place-items:center;border-radius:8px;
-  font-style:normal;font-size:10px;font-weight:900;
-}
-.setup-feature b{font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.setup-feature--words i{background:#eef2ff;color:#6676dd}
-.setup-feature--articles i{background:#fff0f2;color:#d75c70}
-.setup-feature--preps i{background:#edf8f5;color:#38a17e;font-size:16px}
 
 .setup-choices{padding:13px 16px 8px}
 .setup-choice-section{
@@ -192,12 +174,6 @@ html[data-theme="dark"] .setup-checkbox__box,
 html.dark .setup-checkbox__box{background:#0f1823;border-color:#33465c}
 html[data-theme="dark"] .setup-checkbox__label,
 html.dark .setup-checkbox__label{color:#aebbc9}
-html[data-theme="dark"] .setup-feature--words i,
-html.dark .setup-feature--words i{background:rgba(103,118,221,.16)}
-html[data-theme="dark"] .setup-feature--articles i,
-html.dark .setup-feature--articles i{background:rgba(215,92,112,.16)}
-html[data-theme="dark"] .setup-feature--preps i,
-html.dark .setup-feature--preps i{background:rgba(56,161,126,.16)}
 
 /* ---------- Mobile: intentionally one screen, no scrolling ---------- */
 @media(max-width:760px){
@@ -205,10 +181,16 @@ html.dark .setup-feature--preps i{background:rgba(56,161,126,.16)}
     padding:max(7px,env(safe-area-inset-top)) 8px max(7px,env(safe-area-inset-bottom));
     place-items:center;
   }
-  .setup-modal{width:100%;max-height:100dvh}
+  .setup-modal{
+    width:100%;
+    height:auto;
+    max-height:none;
+  }
   .setup-modal__inner{
-    max-height:calc(100dvh - 14px);
-    overflow:hidden;
+    height:auto;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
     border-radius:20px;
   }
   .setup-header{padding:12px 13px 10px}
@@ -218,11 +200,6 @@ html.dark .setup-feature--preps i{background:rgba(56,161,126,.16)}
   .setup-title{font-size:20px;margin-bottom:3px}
   .setup-subtitle{font-size:10.5px;margin-bottom:2px}
   .setup-intro{font-size:9px;line-height:1.3;max-width:340px}
-  .setup-feature-row{margin-top:8px;gap:5px}
-  .setup-feature{min-height:36px;padding:4px 5px;border-radius:10px;gap:5px}
-  .setup-feature i{width:23px;height:23px;border-radius:7px;font-size:8px}
-  .setup-feature--preps i{font-size:14px}
-  .setup-feature b{font-size:8.5px}
 
   .setup-choices{padding:8px 11px 4px}
   .setup-choice-section{padding:6px 0}
@@ -251,8 +228,6 @@ html.dark .setup-feature--preps i{background:rgba(56,161,126,.16)}
   .setup-header{padding-top:9px}
   .setup-brand-compact{margin-bottom:5px}
   .setup-title{font-size:18px}
-  .setup-feature-row{margin-top:6px}
-  .setup-feature{min-height:32px}
   .setup-choices{padding-top:6px}
   .setup-flags-row:has(.setup-flag-btn:nth-child(3)){
     grid-template-columns:repeat(2,minmax(0,1fr));
@@ -262,5 +237,9 @@ html.dark .setup-feature--preps i{background:rgba(56,161,126,.16)}
 /* Low-height landscape / compact browser viewport fallback:
    only then allow internal scrolling rather than losing the Start button. */
 @media(max-height:570px){
-  .setup-modal__inner{overflow:auto}
+  .setup-modal{max-height:calc(100dvh - 14px)}
+  .setup-modal__inner{
+    max-height:calc(100dvh - 14px);
+    overflow:auto;
+  }
 }
