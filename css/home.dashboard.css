@@ -185,3 +185,44 @@ html[data-theme="dark"] .dashboard,.dark .dashboard{--db:#0d141d;--dc:#121c28;--
   html[data-theme="dark"] .dash-training-card--articles>i{background:#3c2936;color:#f1a2b1}
   html[data-theme="dark"] .dash-training-card--prepositions>i{background:#203b39;color:#75c9ad}
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.38 — Desktop Home training cards
+ * Match the approved mobile Words / Articles / Prepositions palette.
+ * Desktop only.
+ * ========================================================== */
+@media (min-width:900px){
+  .dashboard .dash-training-card--words{
+    background:linear-gradient(135deg,rgba(103,118,221,.085),rgba(103,118,221,.035));
+    border-color:rgba(103,118,221,.18);
+  }
+  .dashboard .dash-training-card--articles{
+    background:linear-gradient(135deg,rgba(215,92,112,.085),rgba(215,92,112,.035));
+    border-color:rgba(215,92,112,.18);
+  }
+  .dashboard .dash-training-card--prepositions{
+    background:linear-gradient(135deg,rgba(56,161,126,.085),rgba(56,161,126,.035));
+    border-color:rgba(56,161,126,.18);
+  }
+
+  .dashboard .dash-training-card--words em{color:#6878dd}
+  .dashboard .dash-training-card--articles em{color:#d75c70}
+  .dashboard .dash-training-card--prepositions em{color:#38a17e}
+
+  html[data-theme="dark"] .dashboard .dash-training-card--words,
+  html.dark .dashboard .dash-training-card--words{
+    background:linear-gradient(135deg,rgba(103,118,221,.20),rgba(103,118,221,.08));
+    border-color:rgba(118,133,235,.34);
+  }
+  html[data-theme="dark"] .dashboard .dash-training-card--articles,
+  html.dark .dashboard .dash-training-card--articles{
+    background:linear-gradient(135deg,rgba(215,92,112,.20),rgba(215,92,112,.08));
+    border-color:rgba(226,111,130,.34);
+  }
+  html[data-theme="dark"] .dashboard .dash-training-card--prepositions,
+  html.dark .dashboard .dash-training-card--prepositions{
+    background:linear-gradient(135deg,rgba(56,161,126,.20),rgba(56,161,126,.08));
+    border-color:rgba(74,181,144,.34);
+  }
+}
