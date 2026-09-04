@@ -451,3 +451,132 @@
     color:#59b8ff!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.31 — Mobile Dictionaries layout hardening
+ * 1.12.30 enabled shared page tips, exposing the legacy fixed-card
+ * geometry that still lived under Dictionaries. Mobile Dictionaries
+ * is now one natural document flow: header -> rows -> action -> tip.
+ * ========================================================== */
+@media (max-width:899px){
+  html[data-mobile-shell="dicts"] #app.content{
+    height:auto!important;
+    max-height:none!important;
+    min-height:100dvh!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+
+  html[data-mobile-shell="dicts"] .home.home--fixed-card{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-card.dicts-card--fixed{
+    display:block!important;
+    flex:none!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-card.dicts-card--fixed .dicts-scroll{
+    display:block!important;
+    flex:none!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-footer{
+    position:relative!important;
+    inset:auto!important;
+    z-index:auto!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    margin:10px 0 0!important;
+    padding:0!important;
+    transform:none!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-actions{
+    position:relative!important;
+    inset:auto!important;
+    z-index:auto!important;
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    transform:none!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-actions .btn-primary{
+    position:static!important;
+    inset:auto!important;
+    z-index:auto!important;
+    width:100%!important;
+    min-height:48px!important;
+    margin:0!important;
+    transform:none!important;
+  }
+
+  /* The shared contextual tip is a normal block after the dictionary card. */
+  html[data-mobile-shell="dicts"] .home--dicts>.mm-page-tip{
+    position:static!important;
+    inset:auto!important;
+    width:100%!important;
+    margin:10px 0 0!important;
+    transform:none!important;
+  }
+
+  /* Remove the bright white "holes" from count pills in the light UI. */
+  html[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row>td:nth-child(3){
+    background:#f3f6fa!important;
+    color:#596577!important;
+    border:1px solid #e4e9f0!important;
+  }
+
+  html[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected>td:nth-child(3){
+    background:#e6f6fd!important;
+    color:#159edc!important;
+    border-color:#bfe8fa!important;
+  }
+
+  /* Selected row stays a soft tint rather than a near-white slab. */
+  html[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected{
+    background:#eef9fd!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row>td:nth-child(3),
+  html.dark[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row>td:nth-child(3){
+    background:#16293a!important;
+    color:#aab8c8!important;
+    border-color:#263d52!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected,
+  html.dark[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected{
+    background:#102334!important;
+    border-color:#2bb4f3!important;
+  }
+
+  html[data-theme="dark"][data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected>td:nth-child(3),
+  html.dark[data-mobile-shell="dicts"] .dicts-table tbody tr.dict-row.is-selected>td:nth-child(3){
+    background:#162f43!important;
+    color:#59b8ff!important;
+    border-color:#28516d!important;
+  }
+}
