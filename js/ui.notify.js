@@ -94,7 +94,7 @@
   App.Msg.text = msg;
 
   // Тост: показывает краткое уведомление в едином стиле
-  App.Msg.toast = function(keyOrText, ms){
+  App.Msg.toast = function(keyOrText, ms, type){
     var text;
     if (typeof keyOrText === 'string' && (DICT.ru[keyOrText] || DICT.uk[keyOrText] || DICT.en[keyOrText])) {
       text = msg(keyOrText);
@@ -104,7 +104,7 @@
 
     try {
       if (window.MoyaUpdates && typeof MoyaUpdates.setToast === 'function') {
-        MoyaUpdates.setToast(text, ms || 2600);
+        MoyaUpdates.setToast(text, ms || 2600, type || 'info');
         return;
       }
     } catch(_){}
