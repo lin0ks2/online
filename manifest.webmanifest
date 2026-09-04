@@ -68,5 +68,6 @@
       "type": "image/png",
       "sizes": "64x64"
     }
-  ]
+  ],
+  "orientation": "portrait"
 }
