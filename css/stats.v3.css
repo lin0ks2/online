@@ -286,7 +286,6 @@
   .stats-mobile-activity .stats-activity-history__month{font-size:10px;font-weight:800;color:var(--sm-text)}
   .stats-mobile-activity .stats-activity-history__line{font-size:9px;color:var(--sm-muted);opacity:1}
 
-  .stats-mobile-pro-gate p{margin:0;font-size:10px;line-height:1.45;color:var(--sm-muted)}
   .stats-mobile-tip{padding:10px 11px;font-size:9.5px;line-height:1.4;color:var(--sm-muted)}
 
   /* Keep the existing language selector visually aligned with Dictionaries. */
