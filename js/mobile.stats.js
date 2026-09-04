@@ -1,4 +1,4 @@
-/* MOYAMOVA 1.12.43 — Mobile Statistics shell
+/* MOYAMOVA 1.12.45 — Mobile Statistics shell
  * Adds the same compact Home / title / menu bar used by other mobile pages.
  * Statistics rendering and routing logic remain untouched.
  */
@@ -73,6 +73,10 @@
 
   const app=document.getElementById('app');
   function schedule(){[0,60,180,420].forEach(function(ms){setTimeout(mount,ms)})}
+
+  // Public hook for the Statistics view. This makes the mobile shell mount
+  // deterministic immediately after the stats DOM is rendered.
+  window.MOYAMOVA_MobileStats={mount:mount,schedule:schedule};
 
   if(app&&window.MutationObserver){
     new MutationObserver(schedule).observe(app,{childList:true,subtree:false});

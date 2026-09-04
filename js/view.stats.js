@@ -1565,6 +1565,19 @@ function renderLangCards(langStats, texts, activeLangCode) {
       '</div>';
 
     app.innerHTML = html;
+
+    // 1.12.45 — Statistics uses the same compact mobile chrome as the trainers.
+    // Set the shell synchronously and mount its Home/title/menu row immediately,
+    // so the legacy logo header never remains visible on the mobile stats page.
+    try {
+      if (window.matchMedia && window.matchMedia('(max-width: 899px)').matches) {
+        document.documentElement.dataset.mobileShell = 'stats';
+        if (window.MOYAMOVA_MobileStats && typeof window.MOYAMOVA_MobileStats.mount === 'function') {
+          window.MOYAMOVA_MobileStats.mount();
+        }
+      }
+    } catch (_) {}
+
     setupLangFlags(app, stats.byLang, activeLang);
     setupStatsPager(app);
 
