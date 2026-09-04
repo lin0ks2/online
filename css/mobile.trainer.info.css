@@ -85,3 +85,15 @@
     visibility:visible!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.37 — Desktop guard for mobile trainer info
+ * The shared mobile KPI panel must never render on desktop.
+ * Mobile rules above remain untouched.
+ * ========================================================== */
+@media (min-width:900px){
+  .mobile-trainer-info{
+    display:none!important;
+  }
+}
