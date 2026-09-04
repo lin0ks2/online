@@ -220,3 +220,77 @@
     box-shadow:none!important;
   }
 }
+
+
+/* ==========================================================
+ * MOYAMOVA 1.12.38 — iOS standalone long-page scrolling
+ * Dictionaries / Statistics / Guide must use the document as the
+ * vertical scroller in installed PWA mode. Nested #app scrolling can
+ * stop at the visual-viewport edge on iOS and clip long content.
+ * Browser mode and desktop geometry remain unchanged.
+ * ========================================================== */
+@media (max-width:899px) and (display-mode: standalone) {
+  html[data-mobile-shell="dicts"],
+  html[data-mobile-shell="stats"],
+  html:has(#app .guide-v3-mobile),
+  html[data-mobile-shell="dicts"] body,
+  html[data-mobile-shell="stats"] body,
+  body:has(#app .guide-v3-mobile) {
+    height:auto!important;
+    min-height:var(--mobile-viewport-height,100dvh)!important;
+    max-height:none!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    overscroll-behavior-y:auto!important;
+  }
+
+  html[data-mobile-shell="dicts"] #moya-shell-root,
+  html[data-mobile-shell="stats"] #moya-shell-root,
+  #moya-shell-root:has(#app .guide-v3-mobile) {
+    height:auto!important;
+    min-height:var(--mobile-viewport-height,100dvh)!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+
+  html[data-mobile-shell="dicts"] #app.content,
+  html[data-mobile-shell="stats"] #app.content,
+  #moya-shell-root:has(#app .guide-v3-mobile) > #app.content {
+    display:block!important;
+    height:auto!important;
+    min-height:var(--mobile-viewport-height,100dvh)!important;
+    max-height:none!important;
+    overflow:visible!important;
+    -webkit-overflow-scrolling:auto!important;
+  }
+
+  html[data-mobile-shell="dicts"] #app.content,
+  html[data-mobile-shell="stats"] #app.content {
+    padding-bottom:calc(28px + var(--mobile-safe-bottom,0px))!important;
+  }
+
+  #moya-shell-root:has(#app .guide-v3-mobile) > #app.content,
+  #moya-shell-root:has(#app .guide-v3-mobile) .guide-v3-mobile {
+    padding-bottom:max(34px, calc(18px + var(--mobile-safe-bottom,0px)))!important;
+  }
+
+  /* Preserve existing interaction locks while these pages use document scrolling. */
+  html[data-mobile-shell="dicts"]:has(body.menu-open),
+  html[data-mobile-shell="stats"]:has(body.menu-open),
+  html[data-mobile-shell="dicts"]:has(body.modal-open),
+  html[data-mobile-shell="stats"]:has(body.modal-open),
+  html[data-mobile-shell="dicts"]:has(body.landscape),
+  html[data-mobile-shell="stats"]:has(body.landscape),
+  html:has(#app .guide-v3-mobile):has(body.landscape),
+  html[data-mobile-shell="dicts"] body.menu-open,
+  html[data-mobile-shell="stats"] body.menu-open,
+  html[data-mobile-shell="dicts"] body.modal-open,
+  html[data-mobile-shell="stats"] body.modal-open,
+  html[data-mobile-shell="dicts"] body.landscape,
+  html[data-mobile-shell="stats"] body.landscape,
+  body.landscape:has(#app .guide-v3-mobile) {
+    overflow:hidden!important;
+    touch-action:none!important;
+  }
+}
