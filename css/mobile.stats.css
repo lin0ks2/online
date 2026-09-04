@@ -1,8 +1,37 @@
 /* ==========================================================
- * MOYAMOVA 1.12.43 — Mobile Statistics navigation bar
- * Matches Dictionaries / Favorites / Mistakes mobile chrome.
+ * MOYAMOVA 1.12.44 — Mobile Statistics shell
+ * Same top-level mobile chrome as Words / Articles / Prepositions:
+ * no legacy app header/footer, compact Home / title / menu row.
+ * Statistics content and rendering are untouched.
  * ========================================================== */
 @media(max-width:899px){
+  html[data-mobile-shell="stats"]{
+    --footer-h-actual:0px;
+  }
+
+  /* Statistics is a full mobile page, like the trainers. */
+  html[data-mobile-shell="stats"] .header,
+  html[data-mobile-shell="stats"] .app-footer,
+  html:has(#app .stats-card) .header,
+  html:has(#app .stats-card) .app-footer{
+    display:none!important;
+  }
+
+  html[data-mobile-shell="stats"] #app.content{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:var(--mobile-viewport-height,100dvh)!important;
+    padding:
+      max(8px,var(--mobile-safe-top,0px))
+      max(10px,var(--mobile-safe-right,0px))
+      calc(18px + var(--mobile-safe-bottom,0px))
+      max(10px,var(--mobile-safe-left,0px))!important;
+    overflow:visible!important;
+    box-sizing:border-box;
+  }
+
   .mobile-stats-bar{
     width:100%;
     max-width:560px;
@@ -61,13 +90,11 @@
     letter-spacing:1px;
   }
 
-  /* The page title is already represented in the mobile bar. */
+  /* The title is already shown in the compact mobile top row. */
   html[data-mobile-shell="stats"] .stats-card>.dicts-header h3{display:none!important}
 
   html[data-theme="dark"][data-mobile-shell="stats"] .mobile-stats-back,
-  html[data-theme="dark"][data-mobile-shell="stats"] .mobile-stats-menu,
-  html.dark[data-mobile-shell="stats"] .mobile-stats-back,
-  html.dark[data-mobile-shell="stats"] .mobile-stats-menu{
+  html.dark[data-mobile-shell="stats"] .mobile-stats-back{
     background:rgba(16,30,44,.88);
     border-color:rgba(132,159,192,.16);
     box-shadow:none;

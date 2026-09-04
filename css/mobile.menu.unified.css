@@ -12,7 +12,8 @@
   html[data-mobile-shell] .mobile-articles-menu,
   html[data-mobile-shell] .mobile-preps-menu,
   html[data-mobile-shell] .mobile-dicts-menu,
-  html[data-mobile-shell] .mobile-collection-menu{
+  html[data-mobile-shell] .mobile-collection-menu,
+  html[data-mobile-shell] .mobile-stats-menu{
     width:44px!important;
     height:44px!important;
     min-width:44px!important;
@@ -37,7 +38,8 @@
   html[data-mobile-shell] .mobile-articles-menu::before,
   html[data-mobile-shell] .mobile-preps-menu::before,
   html[data-mobile-shell] .mobile-dicts-menu::before,
-  html[data-mobile-shell] .mobile-collection-menu::before{
+  html[data-mobile-shell] .mobile-collection-menu::before,
+  html[data-mobile-shell] .mobile-stats-menu::before{
     content:"☰"!important;
     display:block!important;
     font-size:29px!important;
@@ -52,7 +54,8 @@
   html[data-mobile-shell] .mobile-articles-menu:active,
   html[data-mobile-shell] .mobile-preps-menu:active,
   html[data-mobile-shell] .mobile-dicts-menu:active,
-  html[data-mobile-shell] .mobile-collection-menu:active{
+  html[data-mobile-shell] .mobile-collection-menu:active,
+  html[data-mobile-shell] .mobile-stats-menu:active{
     transform:scale(.96)!important;
   }
 
