@@ -1007,3 +1007,24 @@ html[data-theme="dark"] .oc-panel .menu-item.app-version{
     display:none !important;
   }
 }
+
+
+/* 1.12.40 — compact global settings rows + answer feedback sound */
+.oc-body > .menu-item.theme-toggle,
+.oc-body > .menu-item.lang-toggle,
+.oc-body > .menu-item.level-toggle,
+.oc-body > .menu-item.answer-sound-toggle{
+  min-height:52px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.oc-body > .menu-item.answer-sound-toggle{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.answer-sound-toggle .menu-label{display:flex;flex-direction:column;gap:2px;min-width:0}
+.answer-sound-toggle .menu-label small{font-size:11px;line-height:1.25;opacity:.62;font-weight:500}
+.answer-sound-toggle .switch{flex:0 0 auto}
+html[data-theme="dark"] .answer-sound-toggle .menu-label small{opacity:.7}
