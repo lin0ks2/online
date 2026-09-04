@@ -559,7 +559,7 @@ const allKeys = (A.Decks?.builtinKeys?.() || []);
             const __src = (typeof window !== 'undefined') ? (window.prepositionsTrainer && window.prepositionsTrainer[prepLang]) : null;
             const __has = !!(__src && (Array.isArray(__src.patterns) ? __src.patterns.length : (Array.isArray(__src) ? __src.length : (typeof __src === 'object' ? Object.keys(__src).length : 0))));
             if (!__has) {
-              try { if (typeof A.toast === 'function') A.toast((getUiLang()==='uk') ? 'Немає датасету тренера прийменників для цієї мови.' : 'Нет датасета тренера предлогов для этого языка.'); } catch(_){ }
+              try { if (typeof A.toast === 'function') A.toast((getUiLang()==='uk') ? 'Немає датасету тренера прийменників для цієї мови.' : 'Нет датасета тренера предлогов для этого языка.', 2800, 'warning'); } catch(_){ }
               return;
             }
 

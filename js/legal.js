@@ -487,7 +487,7 @@ const Legal = (() => {
             try {
               const title = App.Msg.text('legal.reset_confirm');
               const text  = App.Msg.text('legal.reset_warning');
-              ok = await App.Msg.openConfirmModal({ title: title, text: text, icon: '⚠️' });
+              ok = await App.Msg.openConfirmModal({ title: title, text: text, type: 'warning' });
             } catch(_) {}
           } else {
             const fallbackMsg = (lang === 'uk')

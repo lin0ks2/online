@@ -127,7 +127,7 @@
   }
 
   async function activateAndReload(reg){
-    setToast(t('found'));
+    setToast(t('found'), null, 'info');
     showOverlay(true);
     try {
       sessionStorage.setItem('moya_upgrading', '1');
@@ -139,7 +139,7 @@
     }
     // Ждём либо controllerchange, либо таймаут
     await waitForControllerChange(8000);
-    setToast(t('reloading'));
+    setToast(t('reloading'), null, 'info');
     setTimeout(function(){ location.reload(); }, 200);
   }
 
@@ -149,7 +149,7 @@
   async function checkForUpdates() {
     if (inFlight) return;
     inFlight = true;
-    setToast(t('checking')); // no auto-hide yet
+    setToast(t('checking'), null, 'info'); // no auto-hide yet
     try{
       if (!('serviceWorker' in navigator)) { location.reload(); return; }
       var reg = await navigator.serviceWorker.getRegistration();
