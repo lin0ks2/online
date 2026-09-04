@@ -203,11 +203,6 @@
       '      <h2 class="setup-title" data-setup-title></h2>',
       '      <p class="setup-subtitle" data-setup-subtitle></p>',
       '      <p class="setup-intro" data-setup-intro></p>',
-      '      <div class="setup-feature-row" aria-hidden="true">',
-      '        <span class="setup-feature setup-feature--words"><i>Aa</i><b data-setup-feature-words></b></span>',
-      '        <span class="setup-feature setup-feature--articles"><i>der</i><b data-setup-feature-articles></b></span>',
-      '        <span class="setup-feature setup-feature--preps"><i>→</i><b data-setup-feature-preps></b></span>',
-      '      </div>',
       '    </div>',
       '    <div class="setup-choices">',
       '      <section class="setup-choice-section">',
@@ -519,14 +514,6 @@
     overlay.querySelector('[data-setup-ui-label]').textContent  = msgs.uiLabel;
     overlay.querySelector('[data-setup-study-label]').textContent = msgs.studyLabel;
     overlay.querySelector('[data-setup-note]').textContent      = msgs.note;
-
-    var ukUi = state.uiLang === 'uk';
-    var fw = overlay.querySelector('[data-setup-feature-words]');
-    var fa = overlay.querySelector('[data-setup-feature-articles]');
-    var fp = overlay.querySelector('[data-setup-feature-preps]');
-    if (fw) fw.textContent = ukUi ? 'Слова' : 'Слова';
-    if (fa) fa.textContent = ukUi ? 'Артиклі' : 'Артикли';
-    if (fp) fp.textContent = ukUi ? 'Прийменники' : 'Предлоги';
 
     var startBtn = overlay.querySelector('[data-setup-start]');
     startBtn.innerHTML = msgs.start + ' <span aria-hidden="true">→</span>';
