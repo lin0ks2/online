@@ -203,9 +203,10 @@
   }
   const levelToggle = document.getElementById('levelToggle');
   if(levelToggle){
-    levelToggle.addEventListener('change', e=>{
-      document.documentElement.dataset.level = e.target.checked ? 'hard' : 'normal';
-    });
+    // Difficulty is committed by the canonical handler in home.js only after
+    // any required confirmation succeeds. Do not mirror the checkbox into
+    // <html data-level> here: on Cancel that would leave the visual mode
+    // indicator out of sync with the actually saved setting.
   }
 
   // ------------------------------------------------------------

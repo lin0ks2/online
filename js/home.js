@@ -3123,7 +3123,19 @@ answers.innerHTML = '';
       } catch(_) {}
 if (hasProgress) {
         const ok = await confirmModeChangeSet();
-        if (!ok) { t.checked = (before === 'hard'); return; }
+        if (!ok) {
+          // Restore every visual source of truth on Cancel. The saved
+          // difficulty has not changed, so the trainer icon must not change.
+          t.checked = (before === 'hard');
+          document.documentElement.dataset.level = before;
+          try { syncDifficultyControl(); } catch(_) {}
+          try {
+            if (A.Trainer && typeof A.Trainer.updateModeIndicator === 'function') {
+              A.Trainer.updateModeIndicator();
+            }
+          } catch(_) {}
+          return;
+        }
 
         // Очистка ТЕКУЩЕГО СЕТА — по нормализованному ключу deckKeyStorage
         try {
