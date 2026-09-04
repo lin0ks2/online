@@ -134,8 +134,9 @@
     });
   });
 
-  // 100vh fix + orientation guard only for installed mobile PWA/TWA.
-  // Desktop/browser layouts are allowed in landscape.
+  // 100vh fix + portrait-only guard for mobile phones.
+  // Applies both to normal mobile browsers and installed PWA/TWA.
+  // Desktop/tablet-sized layouts remain allowed in landscape.
   (function(){
     function setVhUnit(){
       document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
@@ -143,25 +144,23 @@
 
     const mqLandscape = window.matchMedia('(orientation: landscape)');
 
-    function isInstalledMobileRunmode(){
+    function isMobilePhoneLayout(){
       try {
-        const isTwa = String(location.search || '').indexOf('twa=1') !== -1;
-        const isStandalone = !!(
-          (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
-          (typeof navigator !== 'undefined' && navigator.standalone === true) ||
-          document.documentElement.dataset.runmode === 'pwa' ||
-          document.documentElement.dataset.runmode === 'twa'
-        );
         const coarse = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
-        const narrow = Math.min(window.innerWidth || 9999, window.innerHeight || 9999) < 900;
-        return (isTwa || isStandalone) && coarse && narrow;
+        const shortSide = Math.min(window.innerWidth || 9999, window.innerHeight || 9999);
+        const mobileUa = /Android|iPhone|iPod|Mobile/i.test(String(navigator.userAgent || ''));
+
+        // Keep desktop and large/tablet layouts untouched. A real phone may report
+        // pointer:coarse or a mobile UA; short-side threshold keeps the guard scoped
+        // to the same <900px mobile layout used by the application.
+        return shortSide < 900 && (coarse || mobileUa);
       } catch(_) {
         return false;
       }
     }
 
     function applyOrientation(){
-      const shouldLock = isInstalledMobileRunmode() && mqLandscape.matches;
+      const shouldLock = isMobilePhoneLayout() && mqLandscape.matches;
       document.body.classList.toggle('landscape', shouldLock);
       const app = document.getElementById('app');
       if (app) app.setAttribute('aria-hidden', shouldLock ? 'true' : 'false');
