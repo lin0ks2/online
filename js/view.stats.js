@@ -1157,20 +1157,7 @@ function renderMobileStatsDashboard(langStat, allLangStats, texts) {
     (langCode === 'de' ? modeRow('articles', texts.splitCardArticles, learnedArticles, uk?'артиклів':'артиклей', splitTime.articles) : '') +
     modeRow('prepositions', texts.splitCardPreps, learnedPreps, uk?'патернів':'паттернов', splitTime.prepositions);
 
-  var activityHtml = '';
-  var proAllowed = true;
-  try { proAllowed = !A.isPro || !!A.isPro(); } catch(_) { proAllowed = true; }
-  if (proAllowed) {
-    activityHtml = '<article class="stats-mobile-panel stats-mobile-activity">'+renderActivitySection(activityKey, texts)+'</article>';
-  } else {
-    activityHtml =
-      '<article class="stats-mobile-panel stats-mobile-pro-gate">'+
-        '<h3>'+esc(texts.activityTitle)+'</h3>'+
-        '<p>'+(uk
-          ? 'Детальна активність доступна у версії MOYAMOVA PRO.'
-          : 'Подробная активность доступна в версии MOYAMOVA PRO.')+'</p>'+
-      '</article>';
-  }
+  var activityHtml = '<article class="stats-mobile-panel stats-mobile-activity">'+renderActivitySection(activityKey, texts)+'</article>';
 
   return '<div class="stats-mobile-dashboard">'+
     '<article class="stats-mobile-progress">'+
@@ -1263,7 +1250,7 @@ function renderLangCards(langStats, texts, activeLangCode) {
         const activityHtml = renderActivitySection(activityKey, texts);
 
         // Страница "Время: слова vs артикли" показывается только для немецкого языка (de).
-        // Пейджер и PRO-гейт должны работать независимо от количества страниц.
+        // Пейджер должен работать независимо от количества страниц.
         const activityPage = hasSplitPage ? 3 : 2;
 
         const pagesHtml =
@@ -1521,29 +1508,6 @@ function renderLangCards(langStats, texts, activeLangCode) {
         if (pageNum < minPage) pageNum = minPage;
         if (pageNum > maxPage) pageNum = maxPage;
         current = pageNum;
-
-        // PRO-gate: аналитика доступна только в PRO (независимо от индекса)
-        var targetPage = null;
-        pagesList.forEach(function (pageEl) {
-          var pIdx = parseInt(pageEl.getAttribute('data-page') || '0', 10) || 0;
-          if (pIdx === current) targetPage = pageEl;
-        });
-
-        if (targetPage && targetPage.classList.contains('stats-page--analytics') && (!A.isPro || !A.isPro())) {
-          try {
-            var lang = getUiLang();
-            var bodyText = (lang === 'uk')
-              ? 'Статистика доступна у версії MOYAMOVA PRO. Натисніть кнопку 💎 у меню, щоб розблокувати.'
-              : 'Статистика доступна в версии MOYAMOVA PRO. Нажмите кнопку 💎 в меню, чтобы разблокировать.';
-
-            var stubHtml =
-              '<div class="stats-pro-gate" style="padding:16px 12px 18px;text-align:center;font-size:14px;opacity:.9;">' +
-                '<p style="margin-bottom:10px;">' + bodyText + '</p>' +
-              '</div>';
-
-            targetPage.innerHTML = stubHtml;
-          } catch (_) {}
-        }
 
         // Активные классы
         pagesList.forEach(function (pageEl) {

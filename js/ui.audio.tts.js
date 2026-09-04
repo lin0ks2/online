@@ -323,7 +323,6 @@
   // Used to delay UI transitions until the user has heard the audio.
   
 function speakText(text, force, opts) {
-    if (!A.isPro || !A.isPro()) return null; // озвучка только в PRO
     // Gate by pills.
     if (!force) {
       var isEx = !!(opts && opts.isExample);
@@ -467,7 +466,7 @@ function speakText(text, force, opts) {
   function updateButtonIcon(btn) {
     if (!btn) return;
 
-    if (!hasTTS() || !A.isPro || !A.isPro()) {
+    if (!hasTTS()) {
       btn.textContent = '🔇';
       btn.setAttribute('aria-label', 'Озвучка недоступна');
       btn.disabled = true;
@@ -513,7 +512,6 @@ function speakText(text, force, opts) {
       // одиночный клик — озвучка (если звук включён)
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        if (!A.isPro || !A.isPro()) return;
         // Ручная озвучка уважает пилюли.
         try {
           var wOn = ttsWordsEnabled();
@@ -672,7 +670,6 @@ function speakText(text, force, opts) {
     // - word trainer: только в режиме обратного перевода (чтобы не было подсказки при показе вопроса)
     A.AudioTTS.onCorrect = function () {
       if (!isArticlesMode() && !isReverseMode() && !isPrepositionsMode()) return;
-      if (!A.isPro || !A.isPro()) return;
       if (!ttsWordsEnabled()) return;
       try {
         var w = getCurrentWord();

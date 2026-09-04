@@ -12,10 +12,6 @@
   // Локализованный словарь сообщений
   var DICT = {
     ru: {
-      // PRO
-      'pro.already': 'Функция уже активирована ✨',
-      'pro.purchased': 'Спасибо за поддержку! ✨',
-
       // Legal / factory reset
       'legal.reset_warning': 'Все данные (прогресс, настройки, избранное) будут удалены, приложение вернётся к начальной настройке.',
       'legal.reset_confirm': 'Сбросить данные и начать заново?',
@@ -31,9 +27,6 @@
       'common.cancel': 'Отмена'
     },
     uk: {
-      'pro.already': 'Функція вже активована ✨',
-      'pro.purchased': 'Дякуємо за підтримку! ✨',
-
       'legal.reset_warning': 'Усі дані (прогрес, налаштування, обране) будуть видалені, застосунок повернеться до початкового стану.',
       'legal.reset_confirm': 'Скинути дані й почати заново?',
 
@@ -46,9 +39,6 @@
       'common.cancel': 'Скасувати'
     },
     en: {
-      'pro.already': 'PRO version is already active ✨',
-      'pro.purchased': 'PRO version activated, thank you for your support! ✨',
-
       'legal.reset_warning': 'All data (progress, settings, favorites) will be erased and the app will be reset.',
       'legal.reset_confirm': 'Reset data and start over?',
 

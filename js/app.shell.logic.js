@@ -353,43 +353,7 @@
   })();
 
   
-  // Кнопка PRO/донат внизу меню
-  function applyProButtonState(){
-    try {
-      var hasApp = !!window.App && typeof App.isPro === 'function';
-      var isPro = hasApp && App.isPro && App.isPro() ? true : false;
-
-      // нижняя кнопка ПРО/донат
-      var btn = document.querySelector(
-        '.actions-row-bottom .action-btn[data-action="pro"], ' +
-        '.actions-row-bottom .action-btn[data-action="donate"]'
-      );
-      if (btn && hasApp) {
-        if (isPro) {
-          // PRO уже куплена → показываем донат
-          btn.dataset.action = 'donate';
-          btn.textContent = '💰';
-          btn.setAttribute('aria-label', 'Поддержать проект');
-        } else {
-          // Free-версия → предлагаем купить PRO
-          btn.dataset.action = 'pro';
-          btn.textContent = '💎';
-          btn.setAttribute('aria-label', 'Купить PRO');
-        }
-      }
-
-      // бейдж PRO в шапке
-      var badge = document.querySelector('.header-pro-badge');
-      if (badge) {
-        if (isPro) {
-          badge.classList.add('is-visible');
-        } else {
-          badge.classList.remove('is-visible');
-        }
-      }
-    } catch(_) {}
-  }
-
+  // Поддержка проекта — обычное добровольное пожертвование; paywall отсутствует.
 
 // Версия приложения (app.core.js → App.APP_VER)
   (function(){
@@ -399,8 +363,6 @@
         var v = (window.App && App.APP_VER) || null;
         if (v) el.textContent = v;
       }
-      // после загрузки App обновляем состояние кнопки PRO/донат
-      applyProButtonState();
     }
     if (!(window.App && App.APP_VER)) {
       var s = document.createElement('script');
@@ -465,9 +427,6 @@
     document.addEventListener('click', onDocClick, false);
   })();
 
-// Попробуем применить состояние кнопки сразу (если App уже инициализирован)
-  applyProButtonState();
-
   const actionsMap = {
     guide() {
       // Экран "Инструкция" реализован в js/view.guide.js (объект Guide)
@@ -484,12 +443,6 @@
       }
       // закрываем меню так же, как для остальных действий
       try { closeMenu(); } catch (_) {}
-    },
-
-    
-    pro() {
-      // PRO временно отключён. Точка сохранена для будущего Google Play Billing.
-      return;
     },
 
     donate() {
