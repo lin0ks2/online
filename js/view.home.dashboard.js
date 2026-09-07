@@ -95,7 +95,19 @@
     try { return (A.Mistakes&&A.Mistakes.listSummary?A.Mistakes.listSummary():[]).filter(x=>langOf(x.baseKey)===lg).reduce((n,x)=>n+(x.count||0),0); } catch(_){ return 0; }
   }
   function favoriteCount(lg){
-    try { return (A.Favorites&&A.Favorites.list?A.Favorites.list():[]).filter(x=>langOf(x.dictKey)===lg).length; } catch(_){ return 0; }
+    // Home only needs a counter. Reading Favorites.list() validates every saved
+    // id against its source deck and therefore may lazy-load dictionaries during
+    // first paint. Count the persisted v3 buckets directly instead.
+    try {
+      const tl=(String((A.settings&&(A.settings.lang||A.settings.uiLang))||'ru').toLowerCase()==='uk')?'uk':'ru';
+      const v3=A.ensureFavoritesV3?A.ensureFavoritesV3():((A.state&&A.state.favorites_v3)||{});
+      const scoped=v3[tl]||{};
+      return Object.keys(scoped).reduce((n,key)=>{
+        if(langOf(key)!==lg) return n;
+        const map=scoped[key]||{};
+        return n+Object.keys(map).reduce((m,id)=>m+(map[id]?1:0),0);
+      },0);
+    } catch(_){ return 0; }
   }
   function lastKeyForLang(lg){
     let k=(A.settings&&A.settings.lastDeckKey)||'';
