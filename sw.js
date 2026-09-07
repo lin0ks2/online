@@ -9,8 +9,8 @@
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.12.64';
-const CACHE_NAME = 'moyamova-cache-v1.12.64';
+const SW_VERSION = '1.12.65';
+const CACHE_NAME = 'moyamova-cache-v1.12.65';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -43,6 +43,7 @@ const FULL_OFFLINE_SHELL = [
   'css/guide.desktop.css',
   'css/desktop.palette.css',
   'css/home.dashboard.css',
+  'css/daily.session.css',
   'css/dicts.v2.css',
   'css/desktop.pages.css',
   'css/desktop.settings.css',
@@ -123,6 +124,7 @@ const FULL_OFFLINE_SHELL = [
   'js/view.favorites.js',
   'js/view.mistakes.js',
   'js/view.guide.js',
+  'js/daily.session.js',
   'js/view.home.dashboard.js',
   'js/donate.js',
 
