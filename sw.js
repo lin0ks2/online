@@ -2,15 +2,15 @@
  * Проект: MOYAMOVA
  * Файл: sw.js
  * Назначение: Service Worker (PWA, офлайн, обновления)
- * Версия SW: 1.12.50
+ * Версия SW: 1.12.59
  * Обновлено: 2026-01-08
  * ========================================================== */
 
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.12.50';
-const CACHE_NAME = 'moyamova-cache-v1.12.50';
+const SW_VERSION = '1.12.60';
+const CACHE_NAME = 'moyamova-cache-v1.12.60';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -77,6 +77,7 @@ const APP_SHELL = [
   'css/ui.filters.css',
 
   // Базовое ядро приложения
+  'js/cold.start.profiler.js',
   'js/app.core.js',
   'js/app.shell.view.js',
   'js/app.shell.logic.js',
@@ -138,45 +139,10 @@ const APP_SHELL = [
   'legal/privacy.uk.html',
   'legal/impressum.ru.html',
   'legal/impressum.uk.html',
-  // JSON data layer + словари – обязательно для первого офлайн-запуска
+  // JSON data layer. Deck payloads are intentionally NOT precached: they are
+  // cached by the normal runtime cache on first use (lazy dictionaries).
   'js/deck.loader.js',
   'dicts/decks.manifest.json',
-  'dicts/data/de/nouns.json',
-  'dicts/data/de/verbs.json',
-  'dicts/data/de/adjectives.json',
-  'dicts/data/de/adverbs.json',
-  'dicts/data/de/prepositions.json',
-  'dicts/data/de/conjunctions.json',
-  'dicts/data/de/particles.json',
-  'dicts/data/de/pronouns.json',
-  'dicts/data/de/numbers.json',
-  'dicts/data/en/nouns.json',
-  'dicts/data/en/adjectives.json',
-  'dicts/data/en/verbs.json',
-  'dicts/data/en/adverbs.json',
-  'dicts/data/en/pronouns.json',
-  'dicts/data/en/prepositions.json',
-  'dicts/data/en/conjunctions.json',
-  'dicts/data/en/particles.json',
-  'dicts/data/en/numbers.json',
-  'dicts/data/de/nouns.lernpunkt.json',
-  'dicts/data/de/verbs.lernpunkt.json',
-  'dicts/data/de/adjectives.lernpunkt.json',
-  'dicts/data/de/adverbs.lernpunkt.json',
-  'dicts/data/de/pronouns.lernpunkt.json',
-  'dicts/data/de/prepositions.lernpunkt.json',
-  'dicts/data/de/numbers.lernpunkt.json',
-  'dicts/data/de/conjunctions.lernpunkt.json',
-  'dicts/data/de/particles.lernpunkt.json',
-  'dicts/data/sr/verbs.json',
-  'dicts/data/sr/nouns.json',
-  'dicts/data/sr/adverbs.json',
-  'dicts/data/sr/adjectives.json',
-  'dicts/data/sr/prepositions.json',
-  'dicts/data/sr/pronouns.json',
-  'dicts/data/sr/numbers.json',
-  'dicts/data/sr/conjunctions.json',
-  'dicts/data/sr/particles.json',
   'dicts/trainer.prepositions.en.js',
   'dicts/trainer.prepositions.de.js',
   'js/prepositions.trainer.logic.js',

@@ -2,7 +2,7 @@
      Проект: MOYAMOVA
      Файл: index.html
      Назначение: Основной HTML-шаблон приложения
-     Версия: 1.12.38
+     Версия: 1.12.60
      Обновлено: 2025-11-17
      ========================================================== -->
 <!doctype html>
@@ -11,8 +11,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <title>MOYAMOVA — офлайн-тренажёр немецкого и английского | 2500+ слов</title>
-  <meta name="description" content="MOYAMOVA — офлайн-тренажёр немецкого и английского. 2500+ слов для каждого языка с примерами, синонимами и антонимами. Карточки слов, прогресс без рекламы и регистрации.">
+  <title>Тренажёр немецкого языка A1–B2 — слова, артикли и предлоги | MOYAMOVA</title>
+  <meta name="description" content="Бесплатный тренажёр немецкого языка MOYAMOVA: слова A1–B2, der/die/das, немецкие предлоги, произношение и прогресс. Работает в браузере и офлайн.">
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow">
   <meta name="theme-color" content="#ffffff">
@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="./css/mobile.prepositions.compact-gap.css">
   <link rel="stylesheet" href="./css/mobile.dicts.css">
   <link rel="stylesheet" href="./css/mobile.collections.css">
+  <link rel="stylesheet" href="./css/mobile.stats.css">
   <link rel="stylesheet" href="./css/mobile.menu.unified.css">
   
   <link rel="manifest" href="./manifest.webmanifest">
@@ -79,14 +80,14 @@
   <link rel="canonical" href="https://moyamova.online/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MOYAMOVA">
-  <meta property="og:title" content="MOYAMOVA — офлайн-тренажёр немецкого и английского | 2500+ слов">
-  <meta property="og:description" content="MOYAMOVA — офлайн-тренажёр немецкого и английского. 2500+ слов для каждого языка с примерами, синонимами и антонимами. Карточки слов, прогресс без рекламы и регистрации.">
+  <meta property="og:title" content="Тренажёр немецкого языка A1–B2 — слова, артикли и предлоги | MOYAMOVA">
+  <meta property="og:description" content="Бесплатный тренажёр немецкого языка MOYAMOVA: слова A1–B2, der/die/das, немецкие предлоги, произношение и прогресс. Работает в браузере и офлайн.">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://moyamova.online/">
   <meta property="og:image" content="https://moyamova.online/img/og-cover.PNG">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MOYAMOVA — офлайн-тренажёр немецкого и английского | 2500+ слов">
-  <meta name="twitter:description" content="MOYAMOVA — офлайн-тренажёр немецкого и английского. 2500+ слов для каждого языка с примерами, синонимами и антонимами. Карточки слов, прогресс без рекламы и регистрации.">
+  <meta name="twitter:title" content="Тренажёр немецкого языка A1–B2 — слова, артикли и предлоги | MOYAMOVA">
+  <meta name="twitter:description" content="Бесплатный тренажёр немецкого языка MOYAMOVA: слова A1–B2, der/die/das, немецкие предлоги, произношение и прогресс. Работает в браузере и офлайн.">
   <meta name="twitter:image" content="https://moyamova.online/img/og-cover.PNG">
 
   <meta name="apple-mobile-web-app-title" content="MOYAMOVA">
@@ -106,8 +107,9 @@
       "priceCurrency": "CHF"
     },
     "url": "https://moyamova.online/",
-    "inLanguage": ["ru", "uk", "de", "en" ],
-    "description": "MOYAMOVA — офлайн-тренажёр немецкого и английского | 2500+ слов.",
+    "inLanguage": ["ru", "uk", "de"],
+    "description": "Бесплатный тренажёр немецкого языка A1–B2: слова, артикли der/die/das, предлоги, произношение и отслеживание прогресса.",
+    "featureList": ["Немецкая лексика A1–B2", "Тренажёр артиклей der, die, das", "Тренажёр немецких предлогов", "Произношение", "Статистика прогресса", "Офлайн-работа"],
     "publisher": {
       "@type": "Organization",
       "name": "MOYAMOVA"
@@ -139,6 +141,9 @@
   <!-- Минимальный корневой контейнер. Весь shell рисуем из JS -->
   <div id="moya-shell-root"></div>
 
+  <!-- Temporary QA profiler: enabled only with ?perf=1 -->
+  <script src="./js/cold.start.profiler.js" defer></script>
+
   <!-- === SHELL (верстка + логика) === -->
   <script src="./js/app.shell.view.js" defer></script>
   <script src="./js/app.shell.logic.js" defer></script>
@@ -150,6 +155,7 @@
   <script src="./js/mobile.trainer.info.js" defer></script>
   <script src="./js/mobile.dicts.js" defer></script>
   <script src="./js/mobile.collections.js" defer></script>
+  <script src="./js/mobile.stats.js" defer></script>
 
   <!-- === CORE + I18N === -->
   <script src="./js/app.core.js" defer></script>
