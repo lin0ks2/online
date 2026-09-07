@@ -259,8 +259,13 @@
     function gate() {
       var initial = readSettings();
 
-      // Если настроек нет/нужно выбрать — показываем SetupModal
+      // Если настроек нет/нужно выбрать — показываем SetupModal.
+      // На первом запуске Home не должен монтироваться под модалкой: в PWA это
+      // вызывало серию layout/blur repaint и визуально выглядело как циклическое
+      // сворачивание/разворачивание экрана.
       if (shouldShowSetup(initial) && window.SetupModal && typeof SetupModal.build === 'function') {
+        window.__MOYAMOVA_SETUP_PENDING__ = true;
+        document.documentElement.classList.add('setup-pending');
         document.addEventListener('lexitron:setup:done', function () {
           var after = readSettings();
           var fixed = validateAndFix(after);
@@ -274,6 +279,8 @@
       }
 
       // Обычный путь
+      window.__MOYAMOVA_SETUP_PENDING__ = false;
+      document.documentElement.classList.remove('setup-pending');
       var fixed = validateAndFix(initial);
       persist(fixed);
       applyFilters(fixed);

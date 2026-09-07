@@ -3237,6 +3237,11 @@ if (hasProgress) {
   }
 
   async function mountApp() {
+    // First-run setup owns the screen. Do not mount/route Home underneath it:
+    // the setup flow finishes with a reload after persisting settings.
+    if (window.__MOYAMOVA_SETUP_PENDING__ === true || document.documentElement.classList.contains('setup-pending')) {
+      return;
+    }
     document.documentElement.dataset.level = getMode();
     setUiLang(getUiLang());
 

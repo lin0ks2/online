@@ -111,6 +111,7 @@
   }
 
   function syncShell() {
+    if (window.__MOYAMOVA_SETUP_PENDING__ === true || document.documentElement.classList.contains('setup-pending')) return;
     const shell = currentMobileShell();
     if (shell) {
       docEl.dataset.mobileShell = shell;
