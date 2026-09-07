@@ -2458,15 +2458,15 @@ if (wantArticles) {
           const uk=getUiLang()==='uk';
           const n=plan&&Number(plan.total||0);
           const msg=uk
-            ? ('Денну норму виконано! '+(n?('Опрацьовано '+n+' слів. '):'')+'Чудова робота — так тримати ⭐')
-            : ('Дневная норма выполнена! '+(n?('Проработано '+n+' слов. '):'')+'Отличная работа — так держать ⭐');
+            ? ('🎉 Денну норму виконано! '+(n?('Опрацьовано '+n+' слів. '):'')+'Чудова робота — так тримати ⭐')
+            : ('🎉 Дневная норма выполнена! '+(n?('Проработано '+n+' слов. '):'')+'Отличная работа — так держать ⭐');
           if(A.Msg&&typeof A.Msg.toast==='function'){
-            A.Msg.toast(msg,4800);
+            A.Msg.toast(msg,5600);
             try{
               const root=document.querySelector('.toast-root');
               if(root){
                 root.classList.add('toast-root--daily-complete');
-                setTimeout(()=>root.classList.remove('toast-root--daily-complete'),5000);
+                setTimeout(()=>root.classList.remove('toast-root--daily-complete'),5800);
               }
             }catch(_){}
           } else if(A.toast&&A.toast.show) A.toast.show(msg);

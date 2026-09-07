@@ -13,6 +13,21 @@
 
   const MAX_UNIQUE = 24;
   const TARGET_CONTACTS = 28;
+  const COMPLETED_DATE_KEY = 'mm.daily.completedDate';
+
+  function localDateKey(){
+    const d=new Date();
+    const y=d.getFullYear();
+    const m=String(d.getMonth()+1).padStart(2,'0');
+    const day=String(d.getDate()).padStart(2,'0');
+    return y+'-'+m+'-'+day;
+  }
+  function isCompletedToday(){
+    try{ return localStorage.getItem(COMPLETED_DATE_KEY)===localDateKey(); }catch(_){ return false; }
+  }
+  function markCompletedToday(){
+    try{ localStorage.setItem(COMPLETED_DATE_KEY,localDateKey()); }catch(_){}
+  }
   const MAX_CONTACTS = 32;
   let active = null;
 
@@ -370,6 +385,7 @@
   function finish(){
     if(!active) return null;
     const old=active; active=null;
+    markCompletedToday();
     try{ if(A.Trainer&&typeof A.Trainer.setDeckKey==='function'&&old.returnKey) A.Trainer.setDeckKey(old.returnKey,{silent:true}); }catch(_){}
     try{ document.dispatchEvent(new CustomEvent('lexitron:daily-finish',{detail:old.plan})); }catch(_){}
     return old.plan;
@@ -378,6 +394,6 @@
 
   A.DailySession={
     preview,build,start,isDailyKey,resolve,sourceKey,sourceId,sampleNextIndex,
-    markDone,markCorrect,markWrong,markDontKnow,progress,isComplete,finish,current
+    markDone,markCorrect,markWrong,markDontKnow,progress,isComplete,finish,current,isCompletedToday
   };
 })();
