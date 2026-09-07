@@ -295,22 +295,21 @@
       </aside>
       <section class="dash-main">
         ${dailyCard}
-        <header class="dash-head"><div><div class="dash-eyebrow">${esc(languageName(lg))}</div><h2>${T.hello} 👋</h2><p>${T.sub}</p></div></header>
+        <section class="dash-learning">
+          <div class="dash-learning-head"><div><h3>${T.choose}</h3><p>${T.chooseSub}</p></div></div>
+          <div class="dash-training-grid dash-training-grid--${trainingKinds.length}">${trainingCards}</div>
+        </section>
+        <article class="dash-continue">
+          <div class="dash-continue-copy"><span class="dash-section-label">${T.continue}</span><h3>${esc(A.Decks&&A.Decks.resolveNameByKey?A.Decks.resolveNameByKey(last):last)}</h3><div class="dash-progress"><i style="width:${lastS.pct}%"></i></div><p>${lastS.learned} / ${lastS.total} ${T.words} · ${lastS.pct}%</p></div>
+          <div class="dash-flashcards">${(()=>{ const __deck=A.Decks.resolveDeckByKey(last)||[]; const __word=__deck[0]||{}; const __mx=(A.Trainer&&A.Trainer.starsMax)?A.Trainer.starsMax():5; const __stars=Math.max(0,Math.min(__mx,starValue(last,__word))); return `<span>${esc(__word.word||'Wort')}</span><small>★ ${Math.round(__stars)} / ${__mx}</small>`; })()}</div>
+          <button class="dash-primary" data-continue>${T.continueBtn} →</button>
+        </article>
         <div class="dash-metrics">
           <article><span>${T.overall}</span>${circle(overall)}<b>${ls.learned} / ${ls.total}</b></article>
           <article><span>${T.mastered}</span><div class="dash-big dash-green">✓</div><b>${ls.learned}</b><small>${T.words}</small></article>
           <article><span>${T.inprogress}</span><div class="dash-big dash-blue">◫</div><b>${started}</b><small>${T.words}</small></article>
           <article><span>${T.stars}</span><div class="dash-big dash-gold">★</div><b>${Math.round(ls.stars)}</b><small>${ls.maxStars?Math.round(ls.stars*100/ls.maxStars):0}%</small></article>
         </div>
-        <article class="dash-continue">
-          <div class="dash-continue-copy"><span class="dash-section-label">${T.continue}</span><h3>${esc(A.Decks&&A.Decks.resolveNameByKey?A.Decks.resolveNameByKey(last):last)}</h3><div class="dash-progress"><i style="width:${lastS.pct}%"></i></div><p>${lastS.learned} / ${lastS.total} ${T.words} · ${lastS.pct}%</p></div>
-          <div class="dash-flashcards">${(()=>{ const __deck=A.Decks.resolveDeckByKey(last)||[]; const __word=__deck[0]||{}; const __mx=(A.Trainer&&A.Trainer.starsMax)?A.Trainer.starsMax():5; const __stars=Math.max(0,Math.min(__mx,starValue(last,__word))); return `<span>${esc(__word.word||'Wort')}</span><small>★ ${Math.round(__stars)} / ${__mx}</small>`; })()}</div>
-          <button class="dash-primary" data-continue>${T.continueBtn} →</button>
-        </article>
-        <section class="dash-learning">
-          <div class="dash-learning-head"><div><h3>${T.choose}</h3><p>${T.chooseSub}</p></div></div>
-          <div class="dash-training-grid dash-training-grid--${trainingKinds.length}">${trainingCards}</div>
-        </section>
         <section class="dash-block dash-block--decks"><div class="dash-title"><button type="button" class="dash-decks-toggle" data-mobile-decks-toggle aria-expanded="false"><span>${T.decks}</span><i aria-hidden="true">⌄</i></button><button data-route="dicts">${T.all} →</button></div><div class="dash-decks" data-mobile-decks-panel>${cards}</div></section>
         <div class="dash-bottom"><button data-route="mistakes"><span>△</span><div><b>${T.errors}</b><small>${mistakes} ${T.words}</small></div><em>→</em></button><button data-route="fav"><span>♡</span><div><b>${T.favorites}</b><small>${favs} ${T.words}</small></div><em>→</em></button></div>
       </section>
