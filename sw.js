@@ -9,8 +9,8 @@
 'use strict';
 
 // Текущая версия SW / кэша
-const SW_VERSION = '1.12.60';
-const CACHE_NAME = 'moyamova-cache-v1.12.60';
+const SW_VERSION = '1.12.61';
+const CACHE_NAME = 'moyamova-cache-v1.12.61';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
@@ -22,7 +22,7 @@ const toUrl = (path) => new URL(path, self.registration.scope).toString();
  * Если добавишь новые критичные файлы — расширяй этот список
  * и (желательно) увеличивай CACHE_NAME.
  */
-const APP_SHELL = [
+const FULL_OFFLINE_SHELL = [
   // HTML + манифест
   'index.html',
   'manifest.webmanifest',
@@ -208,18 +208,26 @@ const APP_SHELL = [
   'img/og-cover.PNG'
 ].map(toUrl);
 
+// Минимальный install-cache: не конкурирует с первым отображением страницы.
+// Полный офлайн-набор догревается после события window.load по сообщению WARM_OFFLINE_CACHE.
+const INSTALL_SHELL = [
+  'index.html',
+  'manifest.webmanifest',
+  'dicts/decks.manifest.json'
+].map(toUrl);
+
 // ========================================
-// Установка SW: кэшируем APP_SHELL
+// Установка SW: кэшируем только минимальный INSTALL_SHELL
 // ========================================
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        return cache.addAll(APP_SHELL);
+        return cache.addAll(INSTALL_SHELL);
       })
       .catch((err) => {
         // Чтобы из-за одной ошибки не упасть насмерть
-        console.warn('[SW] Failed to precache APP_SHELL:', err);
+        console.warn('[SW] Failed to precache INSTALL_SHELL:', err);
       })
   );
 
@@ -340,12 +348,45 @@ async function handleStaticRequest(request) {
 }
 
 // ========================================
-// Сообщения от страницы (SKIP_WAITING)
+// Фоновый догрев полного офлайн-кэша
+// ========================================
+async function warmOfflineCache() {
+  const cache = await caches.open(CACHE_NAME);
+  const pending = [];
+
+  for (const url of FULL_OFFLINE_SHELL) {
+    const hit = await cache.match(url);
+    if (!hit) pending.push(url);
+  }
+
+  // Небольшие пачки: догрев не должен снова душить UI/сеть.
+  const BATCH_SIZE = 4;
+  for (let i = 0; i < pending.length; i += BATCH_SIZE) {
+    const batch = pending.slice(i, i + BATCH_SIZE);
+    await Promise.all(batch.map(async (url) => {
+      try {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (response && response.ok) {
+          await cache.put(url, response.clone());
+        }
+      } catch (_) {
+        // Догрев best-effort: отдельный ресурс не должен ломать SW.
+      }
+    }));
+  }
+}
+
+// ========================================
+// Сообщения от страницы
 // ========================================
 self.addEventListener('message', (event) => {
   const data = event.data || {};
   if (data && data.type === 'SKIP_WAITING') {
     self.skipWaiting();
+    return;
+  }
+  if (data && data.type === 'WARM_OFFLINE_CACHE') {
+    event.waitUntil(warmOfflineCache());
   }
 });
 
