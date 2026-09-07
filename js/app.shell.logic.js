@@ -138,7 +138,15 @@
   // Applies both to normal mobile browsers and installed PWA/TWA.
   // Desktop/tablet-sized layouts remain allowed in landscape.
   (function(){
+    const standalonePwa = !!((window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true);
     function setVhUnit(){
+      // In an installed iOS PWA, innerHeight can pass through transient values
+      // while the native window opens. Modern mobile CSS already uses dvh/svh,
+      // so avoid rewriting the legacy --vh bridge during that presentation.
+      if (standalonePwa) {
+        document.documentElement.style.removeProperty('--vh');
+        return;
+      }
       document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
     }
 
