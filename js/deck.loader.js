@@ -54,20 +54,32 @@
     return list;
   }
 
-  function preloadAllSync(){
-    var m = getJsonSync(MANIFEST_URL);
-    var list = indexManifest(m);
+  function ensureManifestSync(){
+    if (manifest) return manifest;
+    indexManifest(getJsonSync(MANIFEST_URL));
+    return manifest;
+  }
 
-    // Keep insertion order identical to the 1.5.1 script loading order.
-    for (var i = 0; i < list.length; i++) {
-      var entry = list[i];
-      var payload = getJsonSync('./' + String(entry.file).replace(/^\.\//, ''));
-      var words = normalizeDeckPayload(payload, entry);
-      if (typeof entry.count === 'number' && words.length !== entry.count) {
-        throw new Error('Deck count mismatch for ' + entry.key + ': expected ' + entry.count + ', got ' + words.length);
-      }
-      decks[entry.key] = words;
+  function loadSync(key){
+    if (Array.isArray(decks[key])) return decks[key];
+    ensureManifestSync();
+    var entry = byKey[key];
+    if (!entry) return [];
+    var url = './' + String(entry.file).replace(/^\.\//, '');
+    var payload = getJsonSync(url);
+    var words = normalizeDeckPayload(payload, entry);
+    if (typeof entry.count === 'number' && words.length !== entry.count) {
+      throw new Error('Deck count mismatch for ' + key + ': expected ' + entry.count + ', got ' + words.length);
     }
+    decks[key] = words;
+    return words;
+  }
+
+  function preloadAllSync(){
+    ensureManifestSync();
+    var list = Array.isArray(manifest.decks) ? manifest.decks : [];
+    // Compatibility/debug helper. Normal startup no longer calls this method.
+    for (var i = 0; i < list.length; i++) loadSync(list[i].key);
     return decks;
   }
 
@@ -107,6 +119,7 @@
   root.DeckLoader = {
     manifestUrl: MANIFEST_URL,
     preloadAllSync: preloadAllSync,
+    loadSync: loadSync,
     load: load,
     has: has,
     keys: keys,
@@ -116,11 +129,11 @@
     getManifest: getManifest
   };
 
-  // Compatibility bootstrap for the 1.5.x synchronous application lifecycle.
-  // New screens may use DeckLoader.load(key) asynchronously; once all callers are
-  // migrated, this preload can be removed to enable true on-demand loading.
+  // Stage 2 lazy bootstrap: load only the tiny registry at startup.
+  // Actual deck JSON is fetched synchronously on first resolveDeckByKey(key),
+  // preserving the legacy synchronous application API while avoiding bulk startup I/O.
   try {
-    preloadAllSync();
+    ensureManifestSync();
     root.__MOYA_DECKS_READY = true;
   } catch (err) {
     root.__MOYA_DECKS_READY = false;

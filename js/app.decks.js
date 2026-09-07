@@ -97,6 +97,21 @@
     var canon = normalizeKey(key);
     if (canon && canon !== key && window.decks && Array.isArray(window.decks[canon])) return window.decks[canon];
 
+    // Lazy built-in deck load. Keep the public resolver synchronous so the existing
+    // trainer/UI code does not need an async rewrite in this migration stage.
+    try {
+      if (window.DeckLoader && typeof window.DeckLoader.loadSync === 'function') {
+        if (window.DeckLoader.hasAvailable && window.DeckLoader.hasAvailable(key)) {
+          return window.DeckLoader.loadSync(key) || [];
+        }
+        if (canon && canon !== key && window.DeckLoader.hasAvailable && window.DeckLoader.hasAvailable(canon)) {
+          return window.DeckLoader.loadSync(canon) || [];
+        }
+      }
+    } catch (e) {
+      console.error('[MOYAMOVA] Cannot lazy-load deck ' + key + ':', e);
+    }
+
     return [];
   }
 
@@ -155,8 +170,17 @@
     if (fav && fav.length >= 4) return 'fav';
     var built = builtinKeys();
     for (var i=0;i<built.length;i++){
-      var arr = resolveDeckByKey(built[i]);
-      if (arr && arr.length >= 4) return built[i];
+      // Prefer manifest metadata so choosing a default does not eagerly download decks.
+      try {
+        if (window.DeckLoader && typeof window.DeckLoader.getEntry === 'function') {
+          var entry = window.DeckLoader.getEntry(built[i]);
+          if (entry && Number(entry.count || 0) >= 4) return built[i];
+        }
+      } catch (_) {}
+      if (!window.DeckLoader || typeof window.DeckLoader.getEntry !== 'function') {
+        var arr = resolveDeckByKey(built[i]);
+        if (arr && arr.length >= 4) return built[i];
+      }
     }
     var users = Object.keys(App.dictRegistry.user || {});
     for (var j=0;j<users.length;j++){
