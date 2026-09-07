@@ -276,6 +276,9 @@
     };
     const trainingKinds=availableTrainingKinds(lg);
     const trainingCards=trainingKinds.map(kind=>{ const m=kindMeta[kind]; return `<button class="dash-training-card dash-training-card--${kind}" data-training-kind="${kind}"><i>${m.icon}</i><span><b>${m.title}</b><small>${m.sub}</small></span><em>${T.startBtn} →</em></button>`; }).join('');
+    const daily=(A.DailySession&&A.DailySession.preview)?A.DailySession.preview(lg):{review:12,newWords:8,mistakes:Math.min(5,mistakes),total:25,minutes:7};
+    const DT=uk()?{title:'Сьогодні',sub:'Персональне тренування для вас',review:'на повторення',fresh:'нових слів',mist:'з помилок',time:'хвилин',based:'На основі вашого прогресу',start:'Почати заняття'}:{title:'Сегодня',sub:'Персональная тренировка для вас',review:'на повторение',fresh:'новых слов',mist:'из ошибок',time:'минут',based:'На основе вашего прогресса',start:'Начать занятие'};
+    const dailyCard=`<article class="dash-daily" data-daily-card><div class="dash-daily__head"><div class="dash-daily__icon">▣</div><div><h3>${DT.title}</h3><p class="dash-daily__sub">${DT.sub}</p></div></div><div class="dash-daily__stats"><div class="dash-daily__stat"><div class="dash-daily__num"><span class="dash-daily__badge dash-daily__badge--review">↻</span>${daily.review}</div><span class="dash-daily__label">${DT.review}</span></div><div class="dash-daily__stat"><div class="dash-daily__num"><span class="dash-daily__badge dash-daily__badge--new">+</span>${daily.newWords}</div><span class="dash-daily__label">${DT.fresh}</span></div><div class="dash-daily__stat"><div class="dash-daily__num"><span class="dash-daily__badge dash-daily__badge--mist">!</span>${daily.mistakes}</div><span class="dash-daily__label">${DT.mist}</span></div></div><div class="dash-daily__meta"><b>◷ ≈ ${daily.minutes} ${DT.time}</b><span>${DT.based}</span></div><button class="dash-daily__start" data-daily-start>▶&nbsp;&nbsp; ${DT.start}</button></article>`;
 
     app.innerHTML=`<div class="dashboard" data-lang="${esc(lg)}">
       <aside class="dash-side">
@@ -291,6 +294,7 @@
         <div class="dash-side-foot">v${esc(A.APP_VER||'1.7.0')} · Offline <i></i></div>
       </aside>
       <section class="dash-main">
+        ${dailyCard}
         <header class="dash-head"><div><div class="dash-eyebrow">${esc(languageName(lg))}</div><h2>${T.hello} 👋</h2><p>${T.sub}</p></div></header>
         <div class="dash-metrics">
           <article><span>${T.overall}</span>${circle(overall)}<b>${ls.learned} / ${ls.total}</b></article>
@@ -321,6 +325,16 @@
       btn.setAttribute('aria-expanded',String(open));
     });
     app.querySelectorAll('[data-route]').forEach(el=>el.addEventListener('click',()=>route(el.getAttribute('data-route'))));
+    app.querySelector('[data-daily-start]')?.addEventListener('click',async(e)=>{
+      const btn=e.currentTarget; const old=btn.textContent; btn.disabled=true;
+      btn.textContent=uk()?'Готуємо заняття…':'Готовим занятие…';
+      try{
+        const ok=await (A.DailySession&&A.DailySession.start?A.DailySession.start(lg):false);
+        if(ok){ route('trainer'); return; }
+        try{ A.toast&&A.toast.show&&A.toast.show(uk()?'Поки немає слів для заняття':'Пока нет слов для занятия'); }catch(_){}
+      }catch(err){ console.error('[MOYAMOVA Daily]',err); }
+      btn.disabled=false; btn.textContent=old;
+    });
     app.querySelector('[data-continue]')?.addEventListener('click',()=>continueTraining(last,lg));
     app.querySelectorAll('[data-training-kind]').forEach(el=>el.addEventListener('click',()=>startTrainingKind(el.getAttribute('data-training-kind'),lg)));
     app.querySelectorAll('[data-deck]').forEach(el=>el.addEventListener('click',()=>startDeck(el.getAttribute('data-deck'))));

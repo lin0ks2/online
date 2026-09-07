@@ -1443,13 +1443,17 @@ function firstAvailableBaseDeckKey(){
 
   // MOYAMOVA: virtual decks (favorites / mistakes)
   function isVirtualDeckKey(key){
-    return /^(favorites|mistakes):(ru|uk):/i.test(String(key||''));
+    return /^(favorites|mistakes):(ru|uk):/i.test(String(key||'')) || /^daily:[a-z]{2}$/i.test(String(key||''));
   }
 
 
   function setDictStatsText(statsEl, deckKey){
     try{
       if (!statsEl) return;
+      if (A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(deckKey)) {
+        const p=A.DailySession.progress&&A.DailySession.progress();
+        if(p){ const uk=getUiLang()==='uk'; statsEl.style.display=''; statsEl.textContent=(uk?'Сьогодні: ':'Сегодня: ')+p.done+' / '+p.total; return; }
+      }
       const full = (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') ? (A.Decks.resolveDeckByKey(deckKey) || []) : [];
       const starsMax = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
 
@@ -1480,6 +1484,10 @@ function activeDeckKey() {
   var A = window.App || {};
 
   try {
+    try {
+      var tk=(A.Trainer&&typeof A.Trainer.getDeckKey==='function')?A.Trainer.getDeckKey():null;
+      if (A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(tk)) return tk;
+    } catch(_){}
     // 1) последний реально использованный словарь — главный источник истины
     var last = (A.settings && A.settings.lastDeckKey) || null;
     if (isValidDeckKey(last)) return last;
@@ -1588,6 +1596,13 @@ function activeDeckKey() {
     } catch(_) {}
     return key;
   }
+  function dailySourceKey(word,key){
+    try { return (A.DailySession&&A.DailySession.sourceKey)?A.DailySession.sourceKey(word,key):((word&&word._dailySourceKey)||key); } catch(_){ return key; }
+  }
+  function dailySourceId(word,id){
+    try { return (A.DailySession&&A.DailySession.sourceId)?A.DailySession.sourceId(word,id):((word&&word._dailyOriginalId!=null)?word._dailyOriginalId:id); } catch(_){ return id; }
+  }
+
   function isFav(key, id) {
     const storageKey = favoriteStorageKey(key);
     try { if (typeof App.isFavorite === 'function') return !!App.isFavorite(storageKey, id); } catch(_) {}
@@ -1966,9 +1981,11 @@ function activeDeckKey() {
   }
 
   /* ------------------------------ Звёзды ------------------------------- */
-  function getStars(wordId) {
-    const key = activeDeckKey();
-    const v = (A.state && A.state.stars && A.state.stars[starKey(wordId, key)]) || 0;
+  function getStars(wordId, wordObj) {
+    const active = activeDeckKey();
+    const key = dailySourceKey(wordObj || A.__currentWord, active);
+    const id = dailySourceId(wordObj || A.__currentWord, wordId);
+    const v = (A.state && A.state.stars && A.state.stars[starKey(id, key)]) || 0;
     return Number(v) || 0;
   }
 
@@ -1998,7 +2015,7 @@ function activeDeckKey() {
     const box = document.querySelector('.trainer-stars');
     if (!box || !word) return;
     const max  = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
-    const have = getStars(word.id);
+    const have = getStars(word.id, word);
     drawStarsTwoPhase(box, have, max);
   }
 
@@ -2420,6 +2437,14 @@ if (wantArticles) {
     try { if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === 'function' && A.ArticlesTrainer.isActive()) A.ArticlesTrainer.stop(); } catch (_){ }
     try { if (A.ArticlesCard && typeof A.ArticlesCard.unmount === 'function') A.ArticlesCard.unmount(); } catch (_){ }
 
+    try {
+      if (A.DailySession && A.DailySession.isDailyKey && A.DailySession.isDailyKey(key) && A.DailySession.isComplete && A.DailySession.isComplete()) {
+        const plan=A.DailySession.finish();
+        try { if (A.toast&&A.toast.show) A.toast.show(getUiLang()==='uk'?'Заняття на сьогодні завершено':'Занятие на сегодня завершено'); } catch(_){}
+        try { if (A.Router&&A.Router.routeTo) A.Router.routeTo('home'); } catch(_){}
+        return;
+      }
+    } catch(_){}
     const slice = (A.Trainer && typeof A.Trainer.getDeckSlice === 'function') ? (A.Trainer.getDeckSlice(key) || []) : [];
     if (!slice.length) return;
 
@@ -2492,7 +2517,9 @@ if (wantArticles) {
     try { __syncTrainerQuickbar(); } catch(_){}
 
     if (favBtn) {
-      const favNow = isFav(key, word.id);
+      const __sourceKey = dailySourceKey(word,key);
+      const __sourceId = dailySourceId(word,word.id);
+      const favNow = isFav(__sourceKey, __sourceId);
       favBtn.textContent = favNow ? '♥' : '♡';
       favBtn.classList.toggle('is-fav', favNow);
       favBtn.setAttribute('aria-pressed', String(favNow));
@@ -2535,8 +2562,8 @@ if (wantArticles) {
           }
         } catch(__e) {}
 
-        try { toggleFav(key, word.id); } catch (_){}
-        const now = isFav(key, word.id);
+        try { toggleFav(__sourceKey, __sourceId); } catch (_){}
+        const now = isFav(__sourceKey, __sourceId);
         favBtn.textContent = now ? '♥' : '♡';
         favBtn.classList.toggle('is-fav', now);
         favBtn.setAttribute('aria-pressed', String(now));
@@ -2644,7 +2671,8 @@ answers.innerHTML = '';
 
         if (ok) {
           solved = true;
-          try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, true); } catch (_){}
+          try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(dailySourceKey(word,key), dailySourceId(word,word.id), true); } catch (_){}
+          try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markDone) A.DailySession.markDone(word); } catch(_){}
           try { renderStarsFor(word); } catch(_){}
 
           // Prepositions trainer: reveal the correct answer inside the sentence placeholder.
@@ -2771,7 +2799,7 @@ answers.innerHTML = '';
 
         if (!penalized) {
           penalized = true;
-          try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(key, word.id, false); } catch (_){}
+          try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(dailySourceKey(word,key), dailySourceId(word,word.id), false); } catch (_){}
           try { renderStarsFor(word); } catch(_){}
 
           // аналитика: ответ в тренере (штраф/зачёт только 1 раз)
@@ -2793,14 +2821,14 @@ answers.innerHTML = '';
               // mistakes of the xx_prepositions dictionary. Both trainers use
               // the same source key, so persist the trainer contour under its
               // dedicated virtual base key.
-              let mistakesBaseKey = key;
+              let mistakesBaseKey = dailySourceKey(word,key);
               try {
                 if (isPrepositionsModeForKey(key)) {
                   const pm = String(key || '').match(/^([a-z]{2})_prepositions$/i);
                   if (pm) mistakesBaseKey = String(pm[1]).toLowerCase() + '_prepositions_trainer';
                 }
               } catch(_){}
-              A.Mistakes.push(mistakesBaseKey, word.id);
+              A.Mistakes.push(mistakesBaseKey, dailySourceId(word,word.id));
               try { __syncTrainerSidebarCounts(); } catch(_){}
             }
             if (isPrepositionsModeForKey(key)) {
@@ -2857,6 +2885,8 @@ answers.innerHTML = '';
           }
         } catch (_) {}
 
+        try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markDone) A.DailySession.markDone(word); } catch(_){}
+
         setTimeout(() => { renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {
           try { if (A.ArticlesTrainer.next) A.ArticlesTrainer.next(); } catch (_){}
@@ -2908,7 +2938,7 @@ answers.innerHTML = '';
       const box = document.querySelector('.trainer-stars');
       if (!box) return;
       const max  = (A.Trainer && typeof A.Trainer.starsMax === 'function') ? A.Trainer.starsMax() : 5;
-      const have = getStars(word.id);
+      const have = getStars(word.id, word);
       drawStarsTwoPhase(box, have, max);
     } catch(_){}
   }
