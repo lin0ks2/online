@@ -2,7 +2,7 @@
      Проект: MOYAMOVA
      Файл: index.html
      Назначение: Основной HTML-шаблон приложения
-     Версия: 1.12.57
+     Версия: 1.12.59
      Обновлено: 2025-11-17
      ========================================================== -->
 <!doctype html>
@@ -140,6 +140,9 @@
 
   <!-- Минимальный корневой контейнер. Весь shell рисуем из JS -->
   <div id="moya-shell-root"></div>
+
+  <!-- Temporary QA profiler: enabled only with ?perf=1 -->
+  <script src="./js/cold.start.profiler.js" defer></script>
 
   <!-- === SHELL (верстка + логика) === -->
   <script src="./js/app.shell.view.js" defer></script>
