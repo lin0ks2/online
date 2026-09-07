@@ -305,10 +305,18 @@
       const t0 = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
       (function tick(){
         try{
-          if (A.Decks && typeof A.Decks.resolveDeckByKey === 'function') {
-            const decks = (window.decks && typeof window.decks === 'object') ? window.decks : {};
-            const ok = Object.keys(decks).some(k => Array.isArray(decks[k]) && decks[k].length > 0);
-            if (ok) return resolve(true);
+          // Lazy-deck architecture: startup readiness means the manifest registry is
+          // available, not that at least one payload has already been downloaded.
+          // Waiting for window.decks to become non-empty adds an unnecessary ~2 s
+          // delay on a true cold start and partially defeats on-demand loading.
+          if (window.DeckLoader && typeof window.DeckLoader.availableKeys === 'function') {
+            const keys = window.DeckLoader.availableKeys();
+            if (Array.isArray(keys) && keys.length > 0) return resolve(true);
+          }
+          // Compatibility fallback for environments where DeckLoader is unavailable.
+          if (A.Decks && typeof A.Decks.builtinKeys === 'function') {
+            const keys = A.Decks.builtinKeys() || [];
+            if (keys.length > 0) return resolve(true);
           }
         }catch(_){}
         const now = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
