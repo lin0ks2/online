@@ -17,6 +17,13 @@ const TRAINER_DEFAULT_LEARNED_REPEAT = 'never';
 
   function difficulty() {
     try {
+      // Daily Session deliberately uses the normal scoring curve. This keeps
+      // the daily quota predictable and short, while the user's saved global
+      // difficulty remains untouched for ordinary training.
+      try {
+        const dk = currentDeckKey();
+        if (/^daily:[a-z]{2}$/i.test(String(dk || ''))) return 'normal';
+      } catch (_dailyMode) {}
       const domLvl =
         (document &&
           document.documentElement &&

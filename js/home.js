@@ -1641,16 +1641,21 @@ function activeDeckKey() {
     try{
       const btn=document.getElementById('trainerModeIndicator');
       if(!btn) return;
-      const hard=getMode()==='hard';
       const isUk=getUiLang()==='uk';
+      const daily=!!(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(activeDeckKey()));
+      const hard=!daily && getMode()==='hard';
       btn.textContent=hard?'🦅':'🐣';
       btn.setAttribute('aria-pressed',String(hard));
-      const title=hard
-        ? (isUk?'Складний режим — натисніть, щоб увімкнути звичайний':'Сложный режим — нажмите, чтобы включить обычный')
-        : (isUk?'Звичайний режим — натисніть, щоб увімкнути складний':'Обычный режим — нажмите, чтобы включить сложный');
+      const title=daily
+        ? (isUk?'Денне заняття завжди проходить у звичайному режимі':'Дневное занятие всегда проходит в обычном режиме')
+        : (hard
+          ? (isUk?'Складний режим — натисніть, щоб увімкнути звичайний':'Сложный режим — нажмите, чтобы включить обычный')
+          : (isUk?'Звичайний режим — натисніть, щоб увімкнути складний':'Обычный режим — нажмите, чтобы включить сложный'));
       btn.title=title;
       btn.setAttribute('aria-label',title);
       btn.dataset.level=hard?'hard':'normal';
+      btn.dataset.dailyLocked=daily?'1':'0';
+      btn.classList.toggle('is-daily-locked',daily);
     }catch(_){}
   }
 
@@ -1660,6 +1665,15 @@ function activeDeckKey() {
     syncDifficultyControl();
     btn.onclick=function(){
       try{
+        const daily=!!(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(activeDeckKey()));
+        if(daily){
+          const msg=getUiLang()==='uk'
+            ? 'Для заняття «Сьогодні» використовується звичайний режим'
+            : 'Для занятия «Сегодня» используется обычный режим';
+          try { if(A.Msg&&typeof A.Msg.toast==='function') A.Msg.toast(msg,3000); else if(A.toast&&A.toast.show) A.toast.show(msg); } catch(_){}
+          syncDifficultyControl();
+          return;
+        }
         const toggle=document.getElementById('levelToggle');
         if(!toggle || toggle.disabled) return;
         toggle.checked=!toggle.checked;
@@ -2440,7 +2454,15 @@ if (wantArticles) {
     try {
       if (A.DailySession && A.DailySession.isDailyKey && A.DailySession.isDailyKey(key) && A.DailySession.isComplete && A.DailySession.isComplete()) {
         const plan=A.DailySession.finish();
-        try { if (A.toast&&A.toast.show) A.toast.show(getUiLang()==='uk'?'Заняття на сьогодні завершено':'Занятие на сегодня завершено'); } catch(_){}
+        try {
+          const uk=getUiLang()==='uk';
+          const n=plan&&Number(plan.total||0);
+          const msg=uk
+            ? ('Денну норму виконано! '+(n?('Опрацьовано '+n+' слів. '):'')+'Чудова робота — так тримати ⭐')
+            : ('Дневная норма выполнена! '+(n?('Проработано '+n+' слов. '):'')+'Отличная работа — так держать ⭐');
+          if(A.Msg&&typeof A.Msg.toast==='function') A.Msg.toast(msg,4800);
+          else if(A.toast&&A.toast.show) A.toast.show(msg);
+        } catch(_){}
         try { if (A.Router&&A.Router.routeTo) A.Router.routeTo('home'); } catch(_){}
         return;
       }
