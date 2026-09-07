@@ -2672,7 +2672,7 @@ answers.innerHTML = '';
         if (ok) {
           solved = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(dailySourceKey(word,key), dailySourceId(word,word.id), true); } catch (_){}
-          try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markDone) A.DailySession.markDone(word); } catch(_){}
+          try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markCorrect) A.DailySession.markCorrect(word); } catch(_){}
           try { renderStarsFor(word); } catch(_){}
 
           // Prepositions trainer: reveal the correct answer inside the sentence placeholder.
@@ -2800,6 +2800,7 @@ answers.innerHTML = '';
         if (!penalized) {
           penalized = true;
           try { A.Trainer && A.Trainer.handleAnswer && A.Trainer.handleAnswer(dailySourceKey(word,key), dailySourceId(word,word.id), false); } catch (_){}
+          try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markWrong) A.DailySession.markWrong(word); } catch(_){}
           try { renderStarsFor(word); } catch(_){}
 
           // аналитика: ответ в тренере (штраф/зачёт только 1 раз)
@@ -2885,7 +2886,7 @@ answers.innerHTML = '';
           }
         } catch (_) {}
 
-        try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markDone) A.DailySession.markDone(word); } catch(_){}
+        try { if(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key)&&A.DailySession.markDontKnow) A.DailySession.markDontKnow(word); } catch(_){}
 
         setTimeout(() => { renderSets();
         if (A.ArticlesTrainer && typeof A.ArticlesTrainer.isActive === "function" && A.ArticlesTrainer.isActive()) {

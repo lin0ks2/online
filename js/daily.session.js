@@ -1,13 +1,19 @@
 /* ==========================================================
  * MOYAMOVA — Daily Session / «Сегодня»
- * First production-safe iteration: builds a short adaptive queue
- * from existing progress + mistakes and reuses the existing trainer.
+ * Adaptive short session over the existing trainer/progress model.
+ * Daily completion is intentionally separate from global 5-star mastery:
+ *   NEW      -> 2 spaced correct contacts today
+ *   REVIEW   -> 1 correct contact today
+ *   MISTAKE  -> 2 spaced correct contacts today
+ * Any wrong / "don't know" forces the card to return later.
  * ========================================================== */
 (function(){
   'use strict';
   const A = window.App || (window.App = {});
-  const MAX = 30;
-  const TARGET = 25;
+
+  const MAX_UNIQUE = 24;
+  const TARGET_CONTACTS = 28;
+  const MAX_CONTACTS = 32;
   let active = null;
 
   function uiLang(){
@@ -33,6 +39,10 @@
     }catch(_){ return []; }
   }
   function starKey(id,key){ return A.starKey ? A.starKey(id,key) : `${key}:${id}`; }
+  function starsMax(){
+    try { return (A.Trainer&&A.Trainer.starsMax)?Number(A.Trainer.starsMax()||5):5; }
+    catch(_){ return 5; }
+  }
   function starOf(key,w){
     try { return Number((A.state&&A.state.stars&&A.state.stars[starKey(w.id,key)])||0)||0; }
     catch(_){ return 0; }
@@ -53,14 +63,18 @@
     c._dailySourceKey=key;
     c._dailySourceType=type;
     c._dailyOriginalId=w.id;
+    c._dailyInitialStars=starOf(key,w);
     // Daily mixes several source decks; make UI ids collision-proof while
     // keeping the canonical id for progress/mistakes/favorites.
     c.id=key+'::'+String(w.id);
     return c;
   }
+  function tokenOf(w){
+    return String((w&&w._dailySourceKey)||'')+'::'+String((w&&w.id)||'');
+  }
   function uniquePush(out,seen,item){
     if(!item) return false;
-    const k=String(item._dailySourceKey||'')+'::'+String(item.id);
+    const k=tokenOf(item);
     if(seen.has(k)) return false;
     seen.add(k); out.push(item); return true;
   }
@@ -69,13 +83,27 @@
     for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=a[i];a[i]=a[j];a[j]=t; }
     return a;
   }
+  function randomGap(min,max){
+    min=Math.max(1,Number(min||1)); max=Math.max(min,Number(max||min));
+    return min+Math.floor(Math.random()*(max-min+1));
+  }
+  function targetForType(type){ return type==='review' ? 1 : 2; }
+  function expectedContacts(plan){
+    return (Number(plan.review||0)) + 2*(Number(plan.newWords||0)+Number(plan.mistakes||0));
+  }
 
+  /*
+   * Daily quota is based on expected answer contacts rather than only unique
+   * cards. This keeps the session short after NEW/MISTAKE cards began requiring
+   * a second spaced success.
+   */
   function preview(lg){
     lg=lg||currentLang();
     const tl=uiLang();
     const keys=baseKeys(lg);
     let started=0, learned=0, mistakes=0, total=0;
-    const mx=(A.Trainer&&A.Trainer.starsMax)?A.Trainer.starsMax():5;
+    const mx=starsMax();
+
     keys.forEach(key=>{
       try{
         const e=window.DeckLoader&&DeckLoader.getEntry?DeckLoader.getEntry(key):null;
@@ -95,18 +123,44 @@
         mistakes+=b&&b.ids?b.ids.size:0;
       }catch(_){}
     });
+
     const newAvail=Math.max(0,total-started);
-    const reviewAvail=Math.max(0,started-learned);
-    let m=Math.min(5,mistakes);
-    let n=newAvail?Math.min(started===0?12:8,newAvail):0;
-    if(newAvail && started>0) n=Math.max(Math.min(5,newAvail),n);
-    let r=Math.min(15,Math.max(0,TARGET-m-n),reviewAvail);
-    let sum=m+n+r;
-    if(sum<TARGET && newAvail>n){ const add=Math.min(TARGET-sum,newAvail-n,12-n); n+=Math.max(0,add); sum=m+n+r; }
-    if(sum<TARGET && reviewAvail>r){ const add=Math.min(TARGET-sum,reviewAvail-r,15-r); r+=Math.max(0,add); sum=m+n+r; }
-    if(sum===0 && total>0){ n=Math.min(12,total); sum=n; }
-    const minutes=Math.max(3,Math.round(sum*0.28));
-    return {lang:lg,review:r,newWords:n,mistakes:m,total:Math.min(MAX,sum),minutes};
+    // 5-star words remain valid review material (oldest first in build()).
+    // This prevents Daily Session from shrinking to zero after a deck is mastered.
+    const reviewAvail=Math.max(0,started);
+
+    let m=Math.min(4,mistakes);
+    let n=0;
+    if(newAvail>0){
+      n=Math.min(newAvail, started===0 ? 10 : 6);
+      if(started>0) n=Math.max(Math.min(5,newAvail),n);
+    }
+
+    let contacts=2*(m+n);
+    let r=Math.min(reviewAvail,Math.max(0,TARGET_CONTACTS-contacts));
+    contacts+=r;
+
+    // If there is no/too little review material, grow the fresh slice carefully.
+    while(contacts<TARGET_CONTACTS && n<newAvail && n<10 && (contacts+2)<=MAX_CONTACTS){
+      n++; contacts+=2;
+    }
+    // Then use additional reviews up to the unique-card ceiling.
+    while(contacts<TARGET_CONTACTS && r<reviewAvail && (m+n+r)<MAX_UNIQUE){
+      r++; contacts++;
+    }
+
+    // Brand-new/small dictionaries should not be padded artificially.
+    if(started===0 && mistakes===0 && newAvail>0){
+      m=0; r=0; n=Math.min(10,newAvail); contacts=2*n;
+    }
+
+    let unique=Math.min(MAX_UNIQUE,m+n+r);
+    if(unique===0 && total>0){ n=Math.min(10,total); unique=n; contacts=2*n; }
+    const minutes=Math.max(3,Math.round(contacts*0.25));
+    return {
+      lang:lg,review:r,newWords:n,mistakes:m,total:unique,
+      expectedContacts:contacts,minutes,learned
+    };
   }
 
   async function loadDeck(key){
@@ -122,6 +176,7 @@
     const plan=preview(lg);
     const keys=baseKeys(lg);
     const last=(A.settings&&A.settings.lastDeckKey)||'';
+    const mx=starsMax();
     keys.sort((a,b)=>(a===last?-1:b===last?1:0));
 
     const mistakes=[]; const reviews=[]; const fresh=[];
@@ -131,13 +186,15 @@
         if(!w||w.id==null) continue;
         const mi=mistakeInfo(tl,key,w.id);
         const s=starOf(key,w);
-        if(mi){ mistakes.push({w,key,count:Number(mi.count||1),last:Number(mi.last||0)}); continue; }
-        if(s>0 && s<5) reviews.push({w,key,s,last:seenOf(key,w)});
-        else if(s<=0) fresh.push({w,key,last:seenOf(key,w)});
+        if(mi){ mistakes.push({w,key,count:Number(mi.count||1),last:Number(mi.last||0),s}); continue; }
+        if(s>0) reviews.push({w,key,s,last:seenOf(key,w),mastered:s>=mx});
+        else fresh.push({w,key,last:seenOf(key,w)});
       }
     }
+
     mistakes.sort((a,b)=>(b.count-a.count)||(b.last-a.last));
-    reviews.sort((a,b)=>(a.last-b.last)||(a.s-b.s));
+    // First strengthen unfinished words, then recycle mastered words by oldest lastSeen.
+    reviews.sort((a,b)=>(Number(a.mastered)-Number(b.mastered))||(a.last-b.last)||(a.s-b.s));
     fresh.sort((a,b)=>((a.key===last?-1:0)-(b.key===last?-1:0))||(a.last-b.last));
 
     const out=[]; const seen=new Set();
@@ -145,14 +202,15 @@
     reviews.slice(0,plan.review).forEach(x=>uniquePush(out,seen,cloneForDaily(x.w,x.key,'review')));
     fresh.slice(0,plan.newWords).forEach(x=>uniquePush(out,seen,cloneForDaily(x.w,x.key,'new')));
 
-    // Fill a short session without violating the 30-card ceiling.
+    // Fill only if metadata under-estimated availability; respect the compact ceiling.
     const fill=[...reviews.slice(plan.review),...fresh.slice(plan.newWords),...mistakes.slice(plan.mistakes)];
+    const wanted=Math.min(MAX_UNIQUE,Math.max(out.length,plan.total));
     for(const x of fill){
-      if(out.length>=Math.min(MAX,Math.max(12,plan.total))) break;
+      if(out.length>=wanted) break;
       uniquePush(out,seen,cloneForDaily(x.w,x.key,x.s!=null?'review':(x.count!=null?'mistake':'new')));
     }
 
-    // Interleave categories so new words are present throughout the session.
+    // Interleave categories so fresh words do not appear as one solid block.
     const groups={mistake:[],review:[],new:[]};
     out.forEach(w=>(groups[w._dailySourceType]||groups.review).push(w));
     groups.mistake=shuffle(groups.mistake); groups.review=shuffle(groups.review); groups.new=shuffle(groups.new);
@@ -164,7 +222,31 @@
       if(groups.mistake.length) mixed.push(groups.mistake.shift());
       if(groups.new.length) mixed.push(groups.new.shift());
     }
-    return {queue:mixed.slice(0,MAX),plan:{lang:lg,review:mixed.filter(w=>w._dailySourceType==='review').length,newWords:mixed.filter(w=>w._dailySourceType==='new').length,mistakes:mixed.filter(w=>w._dailySourceType==='mistake').length,total:mixed.length,minutes:Math.max(3,Math.round(mixed.length*0.28))}};
+
+    const finalPlan={
+      lang:lg,
+      review:mixed.filter(w=>w._dailySourceType==='review').length,
+      newWords:mixed.filter(w=>w._dailySourceType==='new').length,
+      mistakes:mixed.filter(w=>w._dailySourceType==='mistake').length,
+      total:mixed.length
+    };
+    finalPlan.expectedContacts=expectedContacts(finalPlan);
+    finalPlan.minutes=Math.max(3,Math.round(finalPlan.expectedContacts*0.25));
+    return {queue:mixed.slice(0,MAX_UNIQUE),plan:finalPlan};
+  }
+
+  function initItemState(queue){
+    const items=new Map();
+    queue.forEach((w,idx)=>{
+      const token=tokenOf(w);
+      const type=w._dailySourceType||'review';
+      items.set(token,{
+        token,type,index:idx,target:targetForType(type),credit:0,
+        complete:false,dueAt:0,wrongThisTurn:false,wrongCount:0,
+        lastAnswered:-1
+      });
+    });
+    return items;
   }
 
   async function start(lg){
@@ -172,7 +254,14 @@
     const built=await build(lg||currentLang());
     if(!built.queue.length) return false;
     const returnKey=(A.settings&&A.settings.lastDeckKey)||built.queue[0]._dailySourceKey;
-    active={key:'daily:'+built.plan.lang,queue:built.queue,done:new Set(),returnKey,plan:built.plan,startedAt:Date.now()};
+    active={
+      key:'daily:'+built.plan.lang,
+      queue:built.queue,
+      done:new Set(),
+      items:initItemState(built.queue),
+      returnKey,plan:built.plan,startedAt:Date.now(),
+      turn:0,lastToken:null,cursor:0
+    };
     try{
       A.settings=A.settings||{}; A.settings.trainerKind='words';
       if(typeof A.saveSettings==='function') A.saveSettings(A.settings);
@@ -181,23 +270,102 @@
     try{ document.dispatchEvent(new CustomEvent('lexitron:daily-start',{detail:built.plan})); }catch(_){}
     return true;
   }
+
   function isDailyKey(k){ return /^daily:[a-z]{2}$/i.test(String(k||'')); }
   function resolve(k){ return active&&String(k)===active.key ? active.queue : []; }
   function sourceKey(word,fallback){ return (word&&word._dailySourceKey)||fallback; }
   function sourceId(word,fallback){ return (word&&word._dailyOriginalId!=null)?word._dailyOriginalId:fallback; }
+
+  function stateFor(word){
+    if(!active||!word) return null;
+    return active.items.get(tokenOf(word))||null;
+  }
+
   function sampleNextIndex(deck){
     if(!active||!deck||!deck.length) return 0;
-    for(let i=0;i<deck.length;i++){
-      const w=deck[i]; const token=String(w._dailySourceKey||'')+'::'+String(w.id);
-      if(!active.done.has(token)) return i;
+    const turn=active.turn|0;
+    const n=deck.length;
+    const start=Math.max(0,active.cursor|0)%n;
+    let fallback=-1, fallbackDue=Infinity;
+
+    for(let off=0;off<n;off++){
+      const i=(start+off)%n;
+      const w=deck[i]; const st=stateFor(w);
+      if(!st||st.complete) continue;
+      if(st.dueAt<fallbackDue){ fallback=i; fallbackDue=st.dueAt; }
+      if(st.dueAt<=turn && st.token!==active.lastToken){
+        active.cursor=(i+1)%n;
+        return i;
+      }
     }
+    // If only one card remains, or every pending card is intentionally delayed,
+    // choose the earliest-due item instead of stalling the trainer.
+    if(fallback>=0){ active.cursor=(fallback+1)%n; return fallback; }
     return 0;
   }
-  function markDone(word){
-    if(!active||!word) return;
-    active.done.add(String(word._dailySourceKey||'')+'::'+String(word.id));
+
+  function schedule(st,min,max){
+    if(!active||!st) return;
+    st.dueAt=(active.turn|0)+randomGap(min,max);
   }
-  function progress(){ return active?{done:active.done.size,total:active.queue.length,plan:active.plan}:null; }
+
+  function markWrong(word){
+    const st=stateFor(word);
+    if(!st||st.complete) return;
+    st.credit=0;
+    st.wrongThisTurn=true;
+    st.wrongCount++;
+    active.done.delete(st.token);
+  }
+
+  function markCorrect(word){
+    const st=stateFor(word);
+    if(!st||st.complete) return;
+    active.turn++;
+    active.lastToken=st.token;
+    st.lastAnswered=active.turn;
+
+    if(st.wrongThisTurn){
+      // The immediate correction on the same card is useful feedback but is not
+      // counted as a spaced successful contact. The word must return later.
+      st.wrongThisTurn=false;
+      st.credit=0;
+      schedule(st,3,6);
+      return;
+    }
+
+    st.credit++;
+    if(st.credit>=st.target){
+      st.complete=true;
+      active.done.add(st.token);
+      return;
+    }
+    // NEW/MISTAKE require another correct contact, separated by other cards.
+    schedule(st,2,4);
+  }
+
+  function markDontKnow(word){
+    const st=stateFor(word);
+    if(!st||st.complete) return;
+    active.turn++;
+    active.lastToken=st.token;
+    st.lastAnswered=active.turn;
+    st.credit=0;
+    st.wrongThisTurn=false;
+    st.wrongCount++;
+    active.done.delete(st.token);
+    schedule(st,3,6);
+  }
+
+  // Backward-compatible alias: older UI patches called markDone() on a correct answer.
+  function markDone(word){ markCorrect(word); }
+
+  function progress(){
+    if(!active) return null;
+    let contactsDone=0,contactsTarget=0;
+    active.items.forEach(st=>{ contactsDone+=Math.min(st.credit,st.target); contactsTarget+=st.target; });
+    return {done:active.done.size,total:active.queue.length,plan:active.plan,contactsDone,contactsTarget};
+  }
   function isComplete(){ return !!(active&&active.queue.length&&active.done.size>=active.queue.length); }
   function finish(){
     if(!active) return null;
@@ -208,5 +376,8 @@
   }
   function current(){ return active; }
 
-  A.DailySession={preview,build,start,isDailyKey,resolve,sourceKey,sourceId,sampleNextIndex,markDone,progress,isComplete,finish,current};
+  A.DailySession={
+    preview,build,start,isDailyKey,resolve,sourceKey,sourceId,sampleNextIndex,
+    markDone,markCorrect,markWrong,markDontKnow,progress,isComplete,finish,current
+  };
 })();
