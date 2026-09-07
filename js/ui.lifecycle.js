@@ -84,6 +84,7 @@
     function builtinKeys() {
       return safe(function () {
         if (window.App && App.Decks && typeof App.Decks.builtinKeys === 'function') return App.Decks.builtinKeys();
+        if (window.DeckLoader && typeof window.DeckLoader.availableKeys === 'function') return window.DeckLoader.availableKeys();
         return Object.keys(window.decks || {});
       }) || [];
     }
@@ -98,9 +99,10 @@
       if (!key) return false;
       if (key === 'fav' || key === 'favorites' || key === 'mistakes') return true;
       return !!safe(function () {
+        if (window.DeckLoader && typeof window.DeckLoader.hasAvailable === 'function' && window.DeckLoader.hasAvailable(key)) return true;
         if (window.App && App.Decks && typeof App.Decks.resolveDeckByKey === 'function') {
           var arr = App.Decks.resolveDeckByKey(key);
-          return Array.isArray(arr); // существование достаточно
+          return Array.isArray(arr); // compatibility fallback
         }
         return key && window.decks && Array.isArray(window.decks[key]);
       });

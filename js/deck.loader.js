@@ -99,6 +99,9 @@
 
   function has(key){ return Array.isArray(decks[key]); }
   function keys(){ return Object.keys(decks).filter(function(k){ return Array.isArray(decks[k]); }); }
+  function availableKeys(){ return Object.keys(byKey); }
+  function hasAvailable(key){ return !!(key && byKey[key]); }
+  function getEntry(key){ return (key && byKey[key]) ? byKey[key] : null; }
   function getManifest(){ return manifest; }
 
   root.DeckLoader = {
@@ -107,6 +110,9 @@
     load: load,
     has: has,
     keys: keys,
+    availableKeys: availableKeys,
+    hasAvailable: hasAvailable,
+    getEntry: getEntry,
     getManifest: getManifest
   };
 

@@ -33,7 +33,15 @@
 
   function builtinKeys(){
     var out = [];
-    if (window.decks && typeof window.decks === 'object'){
+    // Registry-first: built-in deck discovery must not depend on the deck payload
+    // already being present in window.decks. This is the compatibility foundation
+    // for on-demand loading; preloadAllSync still keeps current behaviour unchanged.
+    try {
+      if (window.DeckLoader && typeof window.DeckLoader.availableKeys === 'function') {
+        out = window.DeckLoader.availableKeys().slice();
+      }
+    } catch (_) {}
+    if (!out.length && window.decks && typeof window.decks === 'object') {
       for (var k in window.decks){
         if (!window.decks.hasOwnProperty(k)) continue;
         var arr = window.decks[k];
@@ -41,15 +49,14 @@
       }
     }
     var POS_ORDER = ['verbs','nouns','adjectives','adverbs','pronouns','prepositions','numbers','conjunctions','particles'];
-out.sort(function(a,b){
-  var pa = POS_ORDER.indexOf(posOfKey(a));
-  var pb = POS_ORDER.indexOf(posOfKey(b));
-  if (pa !== -1 && pb !== -1) return pa - pb;
-  if (pa !== -1) return -1;
-  if (pb !== -1) return 1;
-  return String(a).localeCompare(String(b));
-});
-
+    out.sort(function(a,b){
+      var pa = POS_ORDER.indexOf(posOfKey(a));
+      var pb = POS_ORDER.indexOf(posOfKey(b));
+      if (pa !== -1 && pb !== -1) return pa - pb;
+      if (pa !== -1) return -1;
+      if (pb !== -1) return 1;
+      return String(a).localeCompare(String(b));
+    });
     return out;
   }
 
