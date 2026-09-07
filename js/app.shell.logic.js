@@ -513,7 +513,18 @@
   // Service worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('./sw.js').catch(console.warn);
+      navigator.serviceWorker.register('./sw.js')
+        .then(function() {
+          // Полный офлайн-кэш догреваем только ПОСЛЕ первого отображения страницы.
+          // Это убирает конкуренцию install-cache с CSS/JS на холодном старте.
+          setTimeout(function() {
+            navigator.serviceWorker.ready.then(function(reg) {
+              var worker = navigator.serviceWorker.controller || reg.active;
+              if (worker) worker.postMessage({ type: 'WARM_OFFLINE_CACHE' });
+            }).catch(function() {});
+          }, 3000);
+        })
+        .catch(console.warn);
     });
   }
 })();
