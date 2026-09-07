@@ -61,10 +61,17 @@
   }
 
   function loadSync(key){
-    if (Array.isArray(decks[key])) return decks[key];
     ensureManifestSync();
     var entry = byKey[key];
     if (!entry) return [];
+
+    // Legacy dicts.js used to seed de_verbs/de_nouns with empty arrays.
+    // Under lazy loading an empty placeholder is NOT a loaded deck when the
+    // manifest says the deck contains words. Only reuse a real payload (or a
+    // genuinely empty manifest deck).
+    if (Array.isArray(decks[key]) && (decks[key].length > 0 || Number(entry.count || 0) === 0)) {
+      return decks[key];
+    }
     var url = './' + String(entry.file).replace(/^\.\//, '');
     var payload = getJsonSync(url);
     var words = normalizeDeckPayload(payload, entry);
@@ -93,10 +100,12 @@
   }
 
   async function load(key){
-    if (Array.isArray(decks[key])) return decks[key];
     await ensureManifest();
     var entry = byKey[key];
     if (!entry) return [];
+    if (Array.isArray(decks[key]) && (decks[key].length > 0 || Number(entry.count || 0) === 0)) {
+      return decks[key];
+    }
     var url = './' + String(entry.file).replace(/^\.\//, '');
     var res = await fetch(url, { cache: 'default' });
     if (!res.ok) throw new Error('Cannot load deck ' + key + ': HTTP ' + res.status);

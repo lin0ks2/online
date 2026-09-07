@@ -92,10 +92,23 @@
       return Array.isArray(d) ? d : [];
     }
 
-    if (window.decks && Array.isArray(window.decks[key])) return window.decks[key];
+    function canReuseLoadedArray(deckKey){
+      if (!window.decks || !Array.isArray(window.decks[deckKey])) return false;
+      var arr = window.decks[deckKey];
+      if (arr.length > 0) return true;
+      try {
+        if (window.DeckLoader && typeof window.DeckLoader.getEntry === 'function') {
+          var entry = window.DeckLoader.getEntry(deckKey);
+          if (entry && Number(entry.count || 0) > 0) return false;
+        }
+      } catch (_) {}
+      return true;
+    }
+
+    if (canReuseLoadedArray(key)) return window.decks[key];
 
     var canon = normalizeKey(key);
-    if (canon && canon !== key && window.decks && Array.isArray(window.decks[canon])) return window.decks[canon];
+    if (canon && canon !== key && canReuseLoadedArray(canon)) return window.decks[canon];
 
     // Lazy built-in deck load. Keep the public resolver synchronous so the existing
     // trainer/UI code does not need an async rewrite in this migration stage.
