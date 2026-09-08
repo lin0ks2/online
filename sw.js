@@ -10,7 +10,7 @@
 
 // Текущая версия SW / кэша
 const SW_VERSION = '1.12.67';
-const CACHE_NAME = 'moyamova-cache-v1.12.70';
+const CACHE_NAME = 'moyamova-cache-v1.12.71';
 
 // Преобразуем относительные пути в абсолютные URL на основе scope SW
 const toUrl = (path) => new URL(path, self.registration.scope).toString();
