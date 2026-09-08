@@ -2491,7 +2491,7 @@ if (wantArticles) {
             ? ('Денну норму виконано'+(n||mins?'\n':'')+(n?(n+' слів'):'')+(n&&mins?' · ':'')+(mins?(mins+' хв'):'')+'\nГарний результат. Продовжуйте у своєму темпі.')
             : ('Дневная норма выполнена'+(n||mins?'\n':'')+(n?(n+' слов'):'')+(n&&mins?' · ':'')+(mins?(mins+' мин'):'')+'\nХороший результат. Продолжайте в своём темпе.');
           if(A.Msg&&typeof A.Msg.toast==='function'){
-            A.Msg.toast(msg,5600);
+            A.Msg.toast(msg,3600);
             try{
               const root=document.querySelector('.toast-root');
               if(root){
