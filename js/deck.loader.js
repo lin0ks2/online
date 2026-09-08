@@ -61,6 +61,7 @@
   }
 
   function loadSync(key){
+    try { if (typeof window.__MOYA_COLD_START_DECK__ === 'function') window.__MOYA_COLD_START_DECK__(key, 'loadSync'); } catch (_) {}
     ensureManifestSync();
     var entry = byKey[key];
     if (!entry) return [];

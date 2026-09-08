@@ -22,6 +22,7 @@
   var deckObserved = false;
   var manifestObserved = false;
   var panel = null;
+  var deckTrace = [];
   var refreshTimer = null;
 
   function ms(v){ return (typeof v === 'number' && isFinite(v)) ? Math.round(v) + ' ms' : '—'; }
@@ -29,6 +30,12 @@
 
   window.__MOYA_COLD_START_REPORT__ = function(){ return buildReport(); };
   window.__MOYA_COLD_START_MARK__ = mark;
+  window.__MOYA_COLD_START_DECK__ = function(key, phase){
+    try {
+      deckTrace.push({ key:String(key||''), phase:String(phase||'resolve'), t:Math.round(performance.now()), stack:(new Error()).stack||'' });
+      if (deckTrace.length > 100) deckTrace.shift();
+    } catch(_){}
+  };
   mark('profiler');
 
   try {
@@ -126,7 +133,8 @@
         domInteractive: Math.round(n.domInteractive), domContentLoaded: Math.round(n.domContentLoadedEventEnd),
         loadEventEnd: Math.round(n.loadEventEnd), workerStart: Math.round(n.workerStart||0)
       } : null,
-      marks: Object.assign({},marks)
+      marks: Object.assign({},marks),
+      deckTrace: deckTrace.slice()
     };
   }
 
