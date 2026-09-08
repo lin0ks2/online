@@ -11,8 +11,8 @@
   'use strict';
   const A = window.App || (window.App = {});
 
-  const MAX_UNIQUE = 24;
-  const TARGET_CONTACTS = 28;
+  const MAX_UNIQUE = 25;
+  const TARGET_CONTACTS = 35;
   const COMPLETED_DATE_KEY = 'mm.daily.completedDate';
 
   function localDateKey(){
@@ -28,7 +28,7 @@
   function markCompletedToday(){
     try{ localStorage.setItem(COMPLETED_DATE_KEY,localDateKey()); }catch(_){}
   }
-  const MAX_CONTACTS = 32;
+  const MAX_CONTACTS = 42;
   let active = null;
 
   function uiLang(){
@@ -144,34 +144,37 @@
     // This prevents Daily Session from shrinking to zero after a deck is mastered.
     const reviewAvail=Math.max(0,started);
 
-    let m=Math.min(4,mistakes);
+    let m=Math.min(5,mistakes);
     let n=0;
     if(newAvail>0){
-      n=Math.min(newAvail, started===0 ? 10 : 6);
-      if(started>0) n=Math.max(Math.min(5,newAvail),n);
+      // Daily should feel like a real short lesson, not a 10-click checklist.
+      // Established learners get 7–8 fresh words; a brand-new learner gets 15.
+      n=Math.min(newAvail, started===0 ? 15 : 8);
+      if(started>0) n=Math.max(Math.min(7,newAvail),n);
     }
 
     let contacts=2*(m+n);
-    let r=Math.min(reviewAvail,Math.max(0,TARGET_CONTACTS-contacts));
+    let room=Math.max(0,MAX_UNIQUE-m-n);
+    let r=Math.min(reviewAvail,room,Math.max(0,TARGET_CONTACTS-contacts));
     contacts+=r;
 
-    // If there is no/too little review material, grow the fresh slice carefully.
-    while(contacts<TARGET_CONTACTS && n<newAvail && n<10 && (contacts+2)<=MAX_CONTACTS){
+    // If review is scarce, add a couple more fresh words (still capped at 10).
+    while(contacts<TARGET_CONTACTS && n<newAvail && n<10 && (m+n+r)<MAX_UNIQUE && (contacts+2)<=MAX_CONTACTS){
       n++; contacts+=2;
     }
-    // Then use additional reviews up to the unique-card ceiling.
+    // Then use any remaining unique-card slots for reviews.
     while(contacts<TARGET_CONTACTS && r<reviewAvail && (m+n+r)<MAX_UNIQUE){
       r++; contacts++;
     }
 
     // Brand-new/small dictionaries should not be padded artificially.
     if(started===0 && mistakes===0 && newAvail>0){
-      m=0; r=0; n=Math.min(10,newAvail); contacts=2*n;
+      m=0; r=0; n=Math.min(15,newAvail); contacts=2*n;
     }
 
     let unique=Math.min(MAX_UNIQUE,m+n+r);
-    if(unique===0 && total>0){ n=Math.min(10,total); unique=n; contacts=2*n; }
-    const minutes=Math.max(3,Math.round(contacts*0.25));
+    if(unique===0 && total>0){ n=Math.min(15,total); unique=n; contacts=2*n; }
+    const minutes=Math.max(3,Math.round(contacts*0.17));
     return {
       lang:lg,review:r,newWords:n,mistakes:m,total:unique,
       expectedContacts:contacts,minutes,learned
@@ -238,16 +241,17 @@
       if(groups.new.length) mixed.push(groups.new.shift());
     }
 
+    const finalQueue=mixed.slice(0,MAX_UNIQUE);
     const finalPlan={
       lang:lg,
-      review:mixed.filter(w=>w._dailySourceType==='review').length,
-      newWords:mixed.filter(w=>w._dailySourceType==='new').length,
-      mistakes:mixed.filter(w=>w._dailySourceType==='mistake').length,
-      total:mixed.length
+      review:finalQueue.filter(w=>w._dailySourceType==='review').length,
+      newWords:finalQueue.filter(w=>w._dailySourceType==='new').length,
+      mistakes:finalQueue.filter(w=>w._dailySourceType==='mistake').length,
+      total:finalQueue.length
     };
     finalPlan.expectedContacts=expectedContacts(finalPlan);
-    finalPlan.minutes=Math.max(3,Math.round(finalPlan.expectedContacts*0.25));
-    return {queue:mixed.slice(0,MAX_UNIQUE),plan:finalPlan};
+    finalPlan.minutes=Math.max(3,Math.round(finalPlan.expectedContacts*0.17));
+    return {queue:finalQueue,plan:finalPlan};
   }
 
   function initItemState(queue){
@@ -385,10 +389,13 @@
   function finish(){
     if(!active) return null;
     const old=active; active=null;
+    const result=Object.assign({},old.plan,{
+      elapsedMinutes:Math.max(1,Math.ceil(Math.max(0,Date.now()-Number(old.startedAt||Date.now()))/60000))
+    });
     markCompletedToday();
     try{ if(A.Trainer&&typeof A.Trainer.setDeckKey==='function'&&old.returnKey) A.Trainer.setDeckKey(old.returnKey,{silent:true}); }catch(_){}
-    try{ document.dispatchEvent(new CustomEvent('lexitron:daily-finish',{detail:old.plan})); }catch(_){}
-    return old.plan;
+    try{ document.dispatchEvent(new CustomEvent('lexitron:daily-finish',{detail:result})); }catch(_){}
+    return result;
   }
   function current(){ return active; }
 

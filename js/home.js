@@ -123,6 +123,22 @@
       const elapsed=Math.max(0,Date.now()-sess.startedAt), mins=Math.floor(elapsed/60000);
       const timeText=String(Math.floor(mins/60)).padStart(2,'0')+':'+String(mins%60).padStart(2,'0');
       const idx=getActiveBatchIndex(), sz=getSetSizeForKey(key), totalSets=Math.max(1,Math.ceil(deckAll.length/sz));
+      const isDaily=!!(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key));
+      if(isDaily){
+        const dp=(A.DailySession.progress&&A.DailySession.progress())||{done:0,total:deckAll.length};
+        const done=Math.max(0,Number(dp.done||0)), total=Math.max(1,Number(dp.total||deckAll.length||1));
+        const dailyPct=Math.round(done*100/total);
+        root.innerHTML=
+          '<div class="words-desktop-titlebar words-desktop-titlebar--daily"><div><h1>◎ <span>'+(uk?'Режим: ':'Режим: ')+'</span><b>'+(uk?'Сьогодні · Денне тренування':'Сегодня · Дневная тренировка')+'</b></h1>'+ 
+          '<p>'+(uk?'Коротке персональне заняття на сьогодні':'Короткое персональное занятие на сегодня')+'</p></div>'+ 
+          '<div class="words-desktop-progress"><span>'+(uk?'Виконано':'Выполнено')+' '+done+' / '+total+'</span><div><i style="width:'+dailyPct+'%"></i></div><b>'+dailyPct+'%</b></div></div>'+ 
+          '<div class="words-desktop-kpis words-desktop-kpis--daily">'+
+          '<article><i class="ok">✓</i><span>'+(uk?'Правильно':'Правильно')+'</span><strong>'+sess.correct+'</strong></article>'+ 
+          '<article><i class="bad">×</i><span>'+(uk?'Помилки':'Ошибки')+'</span><strong>'+sess.wrong+'</strong></article>'+ 
+          '<article><i class="streak">◫</i><span>'+(uk?'Залишилось':'Осталось')+'</span><strong>'+Math.max(0,total-done)+'</strong></article>'+ 
+          '<article><i class="time">◷</i><span>'+(uk?'Час':'Время')+'</span><strong>'+timeText+'</strong></article></div>';
+        return;
+      }
       root.innerHTML=
         '<div class="words-desktop-titlebar"><div><h1>◎ <span>'+(uk?'Режим: ':'Режим: ')+'</span><b>'+(uk?'Слова':'Слова')+'</b></h1>'+
         '<p>'+(uk?'Оберіть правильний переклад для слова':'Выберите правильный перевод для слова')+'</p></div>'+
@@ -268,9 +284,22 @@
         };
       }
 
+      const sess = __ensureWordsUiSession(key);
+      const isDaily=!!(A.DailySession&&A.DailySession.isDailyKey&&A.DailySession.isDailyKey(key));
+      if(isDaily){
+        const dp=(A.DailySession.progress&&A.DailySession.progress())||{done:0,total:deckAll.length};
+        const done=Math.max(0,Number(dp.done||0));
+        const total=Math.max(1,Number(dp.total||deckAll.length||1));
+        return {
+          kind:'words', daily:true,
+          title:uk?'Сьогодні · Денне тренування':'Сегодня · Дневная тренировка',
+          correct:sess.correct, wrong:sess.wrong,
+          elapsedMs:Math.max(0,Date.now()-sess.startedAt),
+          done,total,left:Math.max(0,total-done),pct:Math.round(done*100/total)
+        };
+      }
       let learned = 0;
       deckAll.forEach(w=>{ try { if (isLearned(w,key)) learned++; } catch(_){} });
-      const sess = __ensureWordsUiSession(key);
       return {
         kind, title: uk ? 'Слова' : 'Слова',
         correct:sess.correct, wrong:sess.wrong, streak:sess.bestStreak,
@@ -2457,9 +2486,10 @@ if (wantArticles) {
         try {
           const uk=getUiLang()==='uk';
           const n=plan&&Number(plan.total||0);
+          const mins=plan&&Number(plan.elapsedMinutes||plan.minutes||0);
           const msg=uk
-            ? ('🎉 Денну норму виконано! '+(n?('Опрацьовано '+n+' слів. '):'')+'Чудова робота — так тримати ⭐')
-            : ('🎉 Дневная норма выполнена! '+(n?('Проработано '+n+' слов. '):'')+'Отличная работа — так держать ⭐');
+            ? ('Денну норму виконано'+(n||mins?'\n':'')+(n?(n+' слів'):'')+(n&&mins?' · ':'')+(mins?(mins+' хв'):'')+'\nГарний результат. Продовжуйте у своєму темпі.')
+            : ('Дневная норма выполнена'+(n||mins?'\n':'')+(n?(n+' слов'):'')+(n&&mins?' · ':'')+(mins?(mins+' мин'):'')+'\nХороший результат. Продолжайте в своём темпе.');
           if(A.Msg&&typeof A.Msg.toast==='function'){
             A.Msg.toast(msg,5600);
             try{
