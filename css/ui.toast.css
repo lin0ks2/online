@@ -64,7 +64,7 @@ html.dark .toast-root.toast-root--daily-complete .toast{
 
 .toast{
   --toast-accent:#5b7cfa;
-  pointer-events:auto;
+  pointer-events:none;
   position:relative;
   width:auto;
   max-width:min(520px,92vw);
